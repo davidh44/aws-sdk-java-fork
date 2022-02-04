@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * SNS has responded that there is a problem with the SND topic specified.
+ * SNS has responded that there is a problem with the SNS topic specified.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

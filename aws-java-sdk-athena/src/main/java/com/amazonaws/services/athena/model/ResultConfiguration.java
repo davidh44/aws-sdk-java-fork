@@ -54,6 +54,23 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * This is a client-side setting. If workgroup settings override client-side settings, then the query uses the
+     * <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>
+     * and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     * Override Client-Side Settings</a>.
+     * </p>
+     */
+    private String expectedBucketOwner;
 
     /**
      * <p>
@@ -211,6 +228,112 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * This is a client-side setting. If workgroup settings override client-side settings, then the query uses the
+     * <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>
+     * and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     * Override Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param expectedBucketOwner
+     *        The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     *        <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for
+     *        <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the
+     *        <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the
+     *        Amazon S3 bucket, the call fails with a permissions error.</p>
+     *        <p>
+     *        This is a client-side setting. If workgroup settings override client-side settings, then the query uses
+     *        the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the
+     *        location for storing query results specified in the workgroup. See
+     *        <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     */
+
+    public void setExpectedBucketOwner(String expectedBucketOwner) {
+        this.expectedBucketOwner = expectedBucketOwner;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * This is a client-side setting. If workgroup settings override client-side settings, then the query uses the
+     * <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>
+     * and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     * Override Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     *         <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for
+     *         <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the
+     *         <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the
+     *         Amazon S3 bucket, the call fails with a permissions error.</p>
+     *         <p>
+     *         This is a client-side setting. If workgroup settings override client-side settings, then the query uses
+     *         the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the
+     *         location for storing query results specified in the workgroup. See
+     *         <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
+     */
+
+    public String getExpectedBucketOwner() {
+        return this.expectedBucketOwner;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * This is a client-side setting. If workgroup settings override client-side settings, then the query uses the
+     * <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>
+     * and <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     * Override Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param expectedBucketOwner
+     *        The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     *        <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for
+     *        <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the
+     *        <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the
+     *        Amazon S3 bucket, the call fails with a permissions error.</p>
+     *        <p>
+     *        This is a client-side setting. If workgroup settings override client-side settings, then the query uses
+     *        the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the
+     *        location for storing query results specified in the workgroup. See
+     *        <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResultConfiguration withExpectedBucketOwner(String expectedBucketOwner) {
+        setExpectedBucketOwner(expectedBucketOwner);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -225,7 +348,9 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
         if (getOutputLocation() != null)
             sb.append("OutputLocation: ").append(getOutputLocation()).append(",");
         if (getEncryptionConfiguration() != null)
-            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
+        if (getExpectedBucketOwner() != null)
+            sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner());
         sb.append("}");
         return sb.toString();
     }
@@ -248,6 +373,10 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
             return false;
+        if (other.getExpectedBucketOwner() == null ^ this.getExpectedBucketOwner() == null)
+            return false;
+        if (other.getExpectedBucketOwner() != null && other.getExpectedBucketOwner().equals(this.getExpectedBucketOwner()) == false)
+            return false;
         return true;
     }
 
@@ -258,6 +387,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
 
         hashCode = prime * hashCode + ((getOutputLocation() == null) ? 0 : getOutputLocation().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getExpectedBucketOwner() == null) ? 0 : getExpectedBucketOwner().hashCode());
         return hashCode;
     }
 

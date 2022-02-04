@@ -126,7 +126,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -366,8 +366,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private String domain;
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance. By
-     * default, tags are not copied.
+     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance.
+     * </p>
+     * <p>
+     * In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot, RDS
+     * checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If there are no
+     * new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then adds those tags to the
+     * restored DB instance.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags"> Copying
+     * tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private Boolean copyTagsToSnapshot;
@@ -521,7 +531,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -1168,7 +1178,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1177,7 +1187,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -1192,7 +1202,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return The DB subnet group name to use for the new instance.</p>
@@ -1200,7 +1210,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -1215,7 +1225,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1224,7 +1234,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2821,13 +2831,33 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance. By
-     * default, tags are not copied.
+     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance.
+     * </p>
+     * <p>
+     * In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot, RDS
+     * checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If there are no
+     * new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then adds those tags to the
+     * restored DB instance.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags"> Copying
+     * tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyTagsToSnapshot
      *        A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB
-     *        instance. By default, tags are not copied.
+     *        instance.</p>
+     *        <p>
+     *        In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot,
+     *        RDS checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If
+     *        there are no new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then
+     *        adds those tags to the restored DB instance.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags">
+     *        Copying tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
@@ -2836,12 +2866,32 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance. By
-     * default, tags are not copied.
+     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance.
+     * </p>
+     * <p>
+     * In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot, RDS
+     * checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If there are no
+     * new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then adds those tags to the
+     * restored DB instance.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags"> Copying
+     * tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB
-     *         instance. By default, tags are not copied.
+     *         instance.</p>
+     *         <p>
+     *         In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot,
+     *         RDS checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If
+     *         there are no new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then
+     *         adds those tags to the restored DB instance.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags">
+     *         Copying tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public Boolean getCopyTagsToSnapshot() {
@@ -2850,13 +2900,33 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance. By
-     * default, tags are not copied.
+     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance.
+     * </p>
+     * <p>
+     * In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot, RDS
+     * checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If there are no
+     * new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then adds those tags to the
+     * restored DB instance.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags"> Copying
+     * tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyTagsToSnapshot
      *        A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB
-     *        instance. By default, tags are not copied.
+     *        instance.</p>
+     *        <p>
+     *        In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot,
+     *        RDS checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If
+     *        there are no new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then
+     *        adds those tags to the restored DB instance.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags">
+     *        Copying tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2867,12 +2937,32 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance. By
-     * default, tags are not copied.
+     * A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB instance.
+     * </p>
+     * <p>
+     * In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot, RDS
+     * checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If there are no
+     * new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then adds those tags to the
+     * restored DB instance.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags"> Copying
+     * tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return A value that indicates whether to copy all tags from the restored DB instance to snapshots of the DB
-     *         instance. By default, tags are not copied.
+     *         instance.</p>
+     *         <p>
+     *         In most cases, tags aren't copied by default. However, when you restore a DB instance from a DB snapshot,
+     *         RDS checks whether you specify new tags. If yes, the new tags are added to the restored DB instance. If
+     *         there are no new tags, RDS looks for the tags from the source DB instance for the DB snapshot, and then
+     *         adds those tags to the restored DB instance.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.CopyTags">
+     *         Copying tags to DB instance snapshots</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public Boolean isCopyTagsToSnapshot() {
@@ -3874,7 +3964,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -3904,7 +3994,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.
@@ -3939,7 +4029,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -3968,7 +4058,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         <p>
      *         For the list of permissions required for the IAM role, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
-     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         > Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting is required for RDS Custom.
@@ -4003,7 +4093,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4033,7 +4123,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.

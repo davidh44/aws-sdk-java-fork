@@ -179,7 +179,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1414,7 +1414,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1426,7 +1426,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1444,7 +1444,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1455,7 +1455,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1473,7 +1473,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1485,7 +1485,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters

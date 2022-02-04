@@ -891,8 +891,20 @@ public interface AmazonRDSAsync extends AmazonRDS {
     /**
      * <p>
      * Creates a custom DB engine version (CEV). A CEV is a binary volume snapshot of a database engine and specific
-     * AMI. The only supported engine is Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR.
+     * AMI. The supported engines are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Oracle Database 12.1 Enterprise Edition with the January 2021 or later RU/RUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Amazon RDS, which is a fully managed service, supplies the Amazon Machine Image (AMI) and database software. The
      * Amazon RDS database software is preinstalled, so you need only select a DB engine and version, and create your
@@ -939,8 +951,20 @@ public interface AmazonRDSAsync extends AmazonRDS {
     /**
      * <p>
      * Creates a custom DB engine version (CEV). A CEV is a binary volume snapshot of a database engine and specific
-     * AMI. The only supported engine is Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR.
+     * AMI. The supported engines are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Oracle Database 12.1 Enterprise Edition with the January 2021 or later RU/RUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Amazon RDS, which is a fully managed service, supplies the Amazon Machine Image (AMI) and database software. The
      * Amazon RDS database software is preinstalled, so you need only select a DB engine and version, and create your

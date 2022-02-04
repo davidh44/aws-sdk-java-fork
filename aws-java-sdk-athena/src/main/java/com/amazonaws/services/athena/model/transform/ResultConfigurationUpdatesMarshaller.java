@@ -35,6 +35,10 @@ public class ResultConfigurationUpdatesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionConfiguration").build();
     private static final MarshallingInfo<Boolean> REMOVEENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoveEncryptionConfiguration").build();
+    private static final MarshallingInfo<String> EXPECTEDBUCKETOWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExpectedBucketOwner").build();
+    private static final MarshallingInfo<Boolean> REMOVEEXPECTEDBUCKETOWNER_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoveExpectedBucketOwner").build();
 
     private static final ResultConfigurationUpdatesMarshaller instance = new ResultConfigurationUpdatesMarshaller();
 
@@ -56,6 +60,8 @@ public class ResultConfigurationUpdatesMarshaller {
             protocolMarshaller.marshall(resultConfigurationUpdates.getRemoveOutputLocation(), REMOVEOUTPUTLOCATION_BINDING);
             protocolMarshaller.marshall(resultConfigurationUpdates.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(resultConfigurationUpdates.getRemoveEncryptionConfiguration(), REMOVEENCRYPTIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(resultConfigurationUpdates.getExpectedBucketOwner(), EXPECTEDBUCKETOWNER_BINDING);
+            protocolMarshaller.marshall(resultConfigurationUpdates.getRemoveExpectedBucketOwner(), REMOVEEXPECTEDBUCKETOWNER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

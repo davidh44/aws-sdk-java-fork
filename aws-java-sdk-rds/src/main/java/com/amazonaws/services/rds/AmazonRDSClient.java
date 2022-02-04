@@ -1523,8 +1523,20 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     /**
      * <p>
      * Creates a custom DB engine version (CEV). A CEV is a binary volume snapshot of a database engine and specific
-     * AMI. The only supported engine is Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR.
+     * AMI. The supported engines are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Oracle Database 12.1 Enterprise Edition with the January 2021 or later RU/RUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * Amazon RDS, which is a fully managed service, supplies the Amazon Machine Image (AMI) and database software. The
      * Amazon RDS database software is preinstalled, so you need only select a DB engine and version, and create your
@@ -2645,7 +2657,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws SubscriptionAlreadyExistException
      *         The supplied subscription name already exists.
      * @throws SNSInvalidTopicException
-     *         SNS has responded that there is a problem with the SND topic specified.
+     *         SNS has responded that there is a problem with the SNS topic specified.
      * @throws SNSNoAuthorizationException
      *         You do not have permission to publish to the SNS topic ARN.
      * @throws SNSTopicArnNotFoundException
@@ -8348,7 +8360,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws SubscriptionNotFoundException
      *         The subscription name does not exist.
      * @throws SNSInvalidTopicException
-     *         SNS has responded that there is a problem with the SND topic specified.
+     *         SNS has responded that there is a problem with the SNS topic specified.
      * @throws SNSNoAuthorizationException
      *         You do not have permission to publish to the SNS topic ARN.
      * @throws SNSTopicArnNotFoundException

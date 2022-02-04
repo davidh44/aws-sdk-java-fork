@@ -282,7 +282,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * </ul>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -2187,7 +2187,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * </ul>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -2235,7 +2235,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        </li>
      *        </ul>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -2287,7 +2287,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * </ul>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return Specifies a DB subnet group for the DB instance. The new DB instance is created in the VPC associated
@@ -2334,7 +2334,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         </li>
      *         </ul>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -2386,7 +2386,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * </ul>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -2434,7 +2434,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        </li>
      *        </ul>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

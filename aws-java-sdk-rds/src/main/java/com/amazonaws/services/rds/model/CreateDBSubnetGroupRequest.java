@@ -31,11 +31,27 @@ public class CreateDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * The name for the DB subnet group. This value is stored as a lowercase string.
      * </p>
      * <p>
-     * Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens. Must not
-     * be default.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not be default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * First character must be a letter.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -63,21 +79,53 @@ public class CreateDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * The name for the DB subnet group. This value is stored as a lowercase string.
      * </p>
      * <p>
-     * Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens. Must not
-     * be default.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not be default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * First character must be a letter.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
      *        The name for the DB subnet group. This value is stored as a lowercase string.</p>
      *        <p>
-     *        Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        Must not be default.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        First character must be a letter.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -89,20 +137,52 @@ public class CreateDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * The name for the DB subnet group. This value is stored as a lowercase string.
      * </p>
      * <p>
-     * Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens. Must not
-     * be default.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not be default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * First character must be a letter.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return The name for the DB subnet group. This value is stored as a lowercase string.</p>
      *         <p>
-     *         Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         Must not be default.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         First character must be a letter.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -114,21 +194,53 @@ public class CreateDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * The name for the DB subnet group. This value is stored as a lowercase string.
      * </p>
      * <p>
-     * Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens. Must not
-     * be default.
+     * Constraints:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not be default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * First character must be a letter.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
      *        The name for the DB subnet group. This value is stored as a lowercase string.</p>
      *        <p>
-     *        Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        Must not be default.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        First character must be a letter.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

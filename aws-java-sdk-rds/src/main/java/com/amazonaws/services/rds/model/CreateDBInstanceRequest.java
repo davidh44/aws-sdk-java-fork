@@ -705,7 +705,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A DB subnet group to associate with this DB instance.
      * </p>
      * <p>
-     * If there is no DB subnet group, then it is a non-VPC DB instance.
+     * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -6099,13 +6102,19 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A DB subnet group to associate with this DB instance.
      * </p>
      * <p>
-     * If there is no DB subnet group, then it is a non-VPC DB instance.
+     * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
      *        A DB subnet group to associate with this DB instance.</p>
      *        <p>
-     *        If there is no DB subnet group, then it is a non-VPC DB instance.
+     *        Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     *        </p>
+     *        <p>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -6117,12 +6126,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A DB subnet group to associate with this DB instance.
      * </p>
      * <p>
-     * If there is no DB subnet group, then it is a non-VPC DB instance.
+     * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return A DB subnet group to associate with this DB instance.</p>
      *         <p>
-     *         If there is no DB subnet group, then it is a non-VPC DB instance.
+     *         Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     *         </p>
+     *         <p>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -6134,13 +6149,19 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A DB subnet group to associate with this DB instance.
      * </p>
      * <p>
-     * If there is no DB subnet group, then it is a non-VPC DB instance.
+     * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
      *        A DB subnet group to associate with this DB instance.</p>
      *        <p>
-     *        If there is no DB subnet group, then it is a non-VPC DB instance.
+     *        Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
+     *        </p>
+     *        <p>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

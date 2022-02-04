@@ -35,7 +35,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -61,7 +61,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -71,7 +71,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      *        Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -87,7 +87,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return The name for the DB subnet group. This value is stored as a lowercase string. You can't modify the
@@ -96,7 +96,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      *         Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -112,7 +112,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -122,7 +122,7 @@ public class ModifyDBSubnetGroupRequest extends com.amazonaws.AmazonWebServiceRe
      *        Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

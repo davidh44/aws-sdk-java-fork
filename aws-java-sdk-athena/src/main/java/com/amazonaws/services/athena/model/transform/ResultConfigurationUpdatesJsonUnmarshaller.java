@@ -64,6 +64,14 @@ public class ResultConfigurationUpdatesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     resultConfigurationUpdates.setRemoveEncryptionConfiguration(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("ExpectedBucketOwner", targetDepth)) {
+                    context.nextToken();
+                    resultConfigurationUpdates.setExpectedBucketOwner(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("RemoveExpectedBucketOwner", targetDepth)) {
+                    context.nextToken();
+                    resultConfigurationUpdates.setRemoveExpectedBucketOwner(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

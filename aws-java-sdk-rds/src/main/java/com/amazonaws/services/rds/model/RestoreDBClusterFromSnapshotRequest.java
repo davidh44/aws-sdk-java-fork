@@ -200,7 +200,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * Constraints: If supplied, must match the name of an existing DB subnet group.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1593,7 +1593,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * Constraints: If supplied, must match the name of an existing DB subnet group.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1605,7 +1605,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        Constraints: If supplied, must match the name of an existing DB subnet group.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1623,7 +1623,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * Constraints: If supplied, must match the name of an existing DB subnet group.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1634,7 +1634,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         Constraints: If supplied, must match the name of an existing DB subnet group.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1652,7 +1652,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * Constraints: If supplied, must match the name of an existing DB subnet group.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1664,7 +1664,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        Constraints: If supplied, must match the name of an existing DB subnet group.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters

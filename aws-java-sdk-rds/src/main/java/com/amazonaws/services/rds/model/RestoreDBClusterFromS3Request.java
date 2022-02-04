@@ -124,7 +124,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -1074,7 +1074,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1083,7 +1083,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -1098,7 +1098,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return A DB subnet group to associate with the restored DB cluster.</p>
@@ -1106,7 +1106,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -1121,7 +1121,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1130,7 +1130,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

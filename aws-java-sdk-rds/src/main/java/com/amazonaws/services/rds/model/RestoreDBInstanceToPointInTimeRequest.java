@@ -154,7 +154,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -1404,7 +1404,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1413,7 +1413,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -1428,7 +1428,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return The DB subnet group name to use for the new instance.</p>
@@ -1436,7 +1436,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -1451,7 +1451,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1460,7 +1460,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

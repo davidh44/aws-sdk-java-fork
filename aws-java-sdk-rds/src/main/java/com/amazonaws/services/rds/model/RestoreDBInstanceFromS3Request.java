@@ -170,6 +170,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * A DB subnet group to associate with this DB instance.
      * </p>
+     * <p>
+     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
+     * </p>
      */
     private String dBSubnetGroupName;
     /**
@@ -1485,9 +1491,20 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * A DB subnet group to associate with this DB instance.
      * </p>
+     * <p>
+     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
+     * </p>
      * 
      * @param dBSubnetGroupName
-     *        A DB subnet group to associate with this DB instance.
+     *        A DB subnet group to associate with this DB instance.</p>
+     *        <p>
+     *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     *        </p>
+     *        <p>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -1498,8 +1515,19 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * A DB subnet group to associate with this DB instance.
      * </p>
+     * <p>
+     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
+     * </p>
      * 
-     * @return A DB subnet group to associate with this DB instance.
+     * @return A DB subnet group to associate with this DB instance.</p>
+     *         <p>
+     *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     *         </p>
+     *         <p>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -1510,9 +1538,20 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * A DB subnet group to associate with this DB instance.
      * </p>
+     * <p>
+     * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     * </p>
+     * <p>
+     * Example: <code>mydbsubnetgroup</code>
+     * </p>
      * 
      * @param dBSubnetGroupName
-     *        A DB subnet group to associate with this DB instance.
+     *        A DB subnet group to associate with this DB instance.</p>
+     *        <p>
+     *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
+     *        </p>
+     *        <p>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

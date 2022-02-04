@@ -1,3 +1,16 @@
+# __1.12.153__ __2022-02-04__
+## __AWS Lake Formation__
+  - ### Features
+    - Add support for calling Update Table Objects without a TransactionId.
+
+## __Amazon Athena__
+  - ### Features
+    - You can now optionally specify the account ID that you expect to be the owner of your query results output location bucket in Athena. If the account ID of the query results bucket owner does not match the specified account ID, attempts to output to the bucket will fail with an S3 permissions error.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - updates for RDS Custom for Oracle 12.1 support
+
 # __1.12.152__ __2022-02-03__
 ## __AWS RoboMaker__
   - ### Features

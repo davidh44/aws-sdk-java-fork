@@ -153,7 +153,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1773,7 +1773,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1788,7 +1788,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1809,7 +1809,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1823,7 +1823,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetgroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1844,7 +1844,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      * </p>
      * <p>
-     * Example: <code>mySubnetgroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -1859,7 +1859,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        Constraints: Must match the name of an existing DBSubnetGroup. Must not be default.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetgroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters

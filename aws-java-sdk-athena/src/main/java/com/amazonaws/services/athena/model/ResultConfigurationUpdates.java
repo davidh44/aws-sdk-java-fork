@@ -45,8 +45,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * If set to "true", indicates that the previously-specified query results location (also known as a client-side
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>OutputLocation</code> in <code>ResultConfigurationUpdates</code> (the client-side
-     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     * with the new value. For more information, see <a
+     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> is updated with the
+     * new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -64,12 +64,41 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>EncryptionConfiguration</code> in <code>ResultConfigurationUpdates</code> (the
      * client-side setting), the <code>EncryptionConfiguration</code> in the workgroup's
-     * <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a
+     * <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
      */
     private Boolean removeEncryptionConfiguration;
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for storing query results specified in
+     * the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     */
+    private String expectedBucketOwner;
+    /**
+     * <p>
+     * If set to "true", removes the Amazon Web Services account ID previously specified for
+     * <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in the
+     * <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the
+     * <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     * value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     */
+    private Boolean removeExpectedBucketOwner;
 
     /**
      * <p>
@@ -149,8 +178,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * If set to "true", indicates that the previously-specified query results location (also known as a client-side
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>OutputLocation</code> in <code>ResultConfigurationUpdates</code> (the client-side
-     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     * with the new value. For more information, see <a
+     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> is updated with the
+     * new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -160,9 +189,9 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *        client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false" or
      *        not set, and a value is present in the <code>OutputLocation</code> in
      *        <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>OutputLocation</code> in the
-     *        workgroup's <code>ResultConfiguration</code> will be updated with the new value. For more information, see
-     *        <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
-     *        Settings Override Client-Side Settings</a>.
+     *        workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
      */
 
     public void setRemoveOutputLocation(Boolean removeOutputLocation) {
@@ -174,8 +203,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * If set to "true", indicates that the previously-specified query results location (also known as a client-side
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>OutputLocation</code> in <code>ResultConfigurationUpdates</code> (the client-side
-     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     * with the new value. For more information, see <a
+     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> is updated with the
+     * new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -184,9 +213,9 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *         client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false"
      *         or not set, and a value is present in the <code>OutputLocation</code> in
      *         <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>OutputLocation</code> in the
-     *         workgroup's <code>ResultConfiguration</code> will be updated with the new value. For more information,
-     *         see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
-     *         Settings Override Client-Side Settings</a>.
+     *         workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
      */
 
     public Boolean getRemoveOutputLocation() {
@@ -198,8 +227,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * If set to "true", indicates that the previously-specified query results location (also known as a client-side
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>OutputLocation</code> in <code>ResultConfigurationUpdates</code> (the client-side
-     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     * with the new value. For more information, see <a
+     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> is updated with the
+     * new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -209,9 +238,9 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *        client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false" or
      *        not set, and a value is present in the <code>OutputLocation</code> in
      *        <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>OutputLocation</code> in the
-     *        workgroup's <code>ResultConfiguration</code> will be updated with the new value. For more information, see
-     *        <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
-     *        Settings Override Client-Side Settings</a>.
+     *        workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,8 +254,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * If set to "true", indicates that the previously-specified query results location (also known as a client-side
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>OutputLocation</code> in <code>ResultConfigurationUpdates</code> (the client-side
-     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     * with the new value. For more information, see <a
+     * setting), the <code>OutputLocation</code> in the workgroup's <code>ResultConfiguration</code> is updated with the
+     * new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -235,9 +264,9 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *         client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false"
      *         or not set, and a value is present in the <code>OutputLocation</code> in
      *         <code>ResultConfigurationUpdates</code> (the client-side setting), the <code>OutputLocation</code> in the
-     *         workgroup's <code>ResultConfiguration</code> will be updated with the new value. For more information,
-     *         see <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
-     *         Settings Override Client-Side Settings</a>.
+     *         workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
      */
 
     public Boolean isRemoveOutputLocation() {
@@ -290,7 +319,7 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>EncryptionConfiguration</code> in <code>ResultConfigurationUpdates</code> (the
      * client-side setting), the <code>EncryptionConfiguration</code> in the workgroup's
-     * <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a
+     * <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -300,8 +329,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *        client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false" or
      *        not set, and a value is present in the <code>EncryptionConfiguration</code> in
      *        <code>ResultConfigurationUpdates</code> (the client-side setting), the
-     *        <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     *        with the new value. For more information, see <a
+     *        <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with
+     *        the new value. For more information, see <a
      *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
      *        Override Client-Side Settings</a>.
      */
@@ -316,7 +345,7 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>EncryptionConfiguration</code> in <code>ResultConfigurationUpdates</code> (the
      * client-side setting), the <code>EncryptionConfiguration</code> in the workgroup's
-     * <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a
+     * <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -325,8 +354,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *         client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false"
      *         or not set, and a value is present in the <code>EncryptionConfiguration</code> in
      *         <code>ResultConfigurationUpdates</code> (the client-side setting), the
-     *         <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     *         with the new value. For more information, see <a
+     *         <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with
+     *         the new value. For more information, see <a
      *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
      *         Override Client-Side Settings</a>.
      */
@@ -341,7 +370,7 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>EncryptionConfiguration</code> in <code>ResultConfigurationUpdates</code> (the
      * client-side setting), the <code>EncryptionConfiguration</code> in the workgroup's
-     * <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a
+     * <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -351,8 +380,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *        client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false" or
      *        not set, and a value is present in the <code>EncryptionConfiguration</code> in
      *        <code>ResultConfigurationUpdates</code> (the client-side setting), the
-     *        <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     *        with the new value. For more information, see <a
+     *        <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with
+     *        the new value. For more information, see <a
      *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
      *        Override Client-Side Settings</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -369,7 +398,7 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * setting) for queries in this workgroup should be ignored and set to null. If set to "false" or not set, and a
      * value is present in the <code>EncryptionConfiguration</code> in <code>ResultConfigurationUpdates</code> (the
      * client-side setting), the <code>EncryptionConfiguration</code> in the workgroup's
-     * <code>ResultConfiguration</code> will be updated with the new value. For more information, see <a
+     * <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
      * Client-Side Settings</a>.
      * </p>
@@ -378,14 +407,220 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      *         client-side setting) for queries in this workgroup should be ignored and set to null. If set to "false"
      *         or not set, and a value is present in the <code>EncryptionConfiguration</code> in
      *         <code>ResultConfigurationUpdates</code> (the client-side setting), the
-     *         <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> will be updated
-     *         with the new value. For more information, see <a
+     *         <code>EncryptionConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with
+     *         the new value. For more information, see <a
      *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
      *         Override Client-Side Settings</a>.
      */
 
     public Boolean isRemoveEncryptionConfiguration() {
         return this.removeEncryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for storing query results specified in
+     * the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param expectedBucketOwner
+     *        The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     *        <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for
+     *        <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the
+     *        <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the
+     *        Amazon S3 bucket, the call fails with a permissions error.</p>
+     *        <p>
+     *        If workgroup settings override client-side settings, then the query uses the
+     *        <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location
+     *        for storing query results specified in the workgroup. See
+     *        <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     */
+
+    public void setExpectedBucketOwner(String expectedBucketOwner) {
+        this.expectedBucketOwner = expectedBucketOwner;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for storing query results specified in
+     * the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     *         <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for
+     *         <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the
+     *         <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the
+     *         Amazon S3 bucket, the call fails with a permissions error.</p>
+     *         <p>
+     *         If workgroup settings override client-side settings, then the query uses the
+     *         <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location
+     *         for storing query results specified in the workgroup. See
+     *         <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
+     */
+
+    public String getExpectedBucketOwner() {
+        return this.expectedBucketOwner;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     * <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code>
+     * when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon
+     * Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a
+     * permissions error.
+     * </p>
+     * <p>
+     * If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for storing query results specified in
+     * the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param expectedBucketOwner
+     *        The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by
+     *        <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for
+     *        <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the
+     *        <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the
+     *        Amazon S3 bucket, the call fails with a permissions error.</p>
+     *        <p>
+     *        If workgroup settings override client-side settings, then the query uses the
+     *        <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location
+     *        for storing query results specified in the workgroup. See
+     *        <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResultConfigurationUpdates withExpectedBucketOwner(String expectedBucketOwner) {
+        setExpectedBucketOwner(expectedBucketOwner);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If set to "true", removes the Amazon Web Services account ID previously specified for
+     * <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in the
+     * <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the
+     * <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     * value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param removeExpectedBucketOwner
+     *        If set to "true", removes the Amazon Web Services account ID previously specified for
+     *        <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in
+     *        the <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting),
+     *        the <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with
+     *        the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     */
+
+    public void setRemoveExpectedBucketOwner(Boolean removeExpectedBucketOwner) {
+        this.removeExpectedBucketOwner = removeExpectedBucketOwner;
+    }
+
+    /**
+     * <p>
+     * If set to "true", removes the Amazon Web Services account ID previously specified for
+     * <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in the
+     * <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the
+     * <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     * value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return If set to "true", removes the Amazon Web Services account ID previously specified for
+     *         <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in
+     *         the <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side
+     *         setting), the <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is
+     *         updated with the new value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
+     */
+
+    public Boolean getRemoveExpectedBucketOwner() {
+        return this.removeExpectedBucketOwner;
+    }
+
+    /**
+     * <p>
+     * If set to "true", removes the Amazon Web Services account ID previously specified for
+     * <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in the
+     * <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the
+     * <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     * value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param removeExpectedBucketOwner
+     *        If set to "true", removes the Amazon Web Services account ID previously specified for
+     *        <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in
+     *        the <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting),
+     *        the <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with
+     *        the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResultConfigurationUpdates withRemoveExpectedBucketOwner(Boolean removeExpectedBucketOwner) {
+        setRemoveExpectedBucketOwner(removeExpectedBucketOwner);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If set to "true", removes the Amazon Web Services account ID previously specified for
+     * <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in the
+     * <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side setting), the
+     * <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     * value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return If set to "true", removes the Amazon Web Services account ID previously specified for
+     *         <a>ResultConfiguration$ExpectedBucketOwner</a>. If set to "false" or not set, and a value is present in
+     *         the <code>ExpectedBucketOwner</code> in <code>ResultConfigurationUpdates</code> (the client-side
+     *         setting), the <code>ExpectedBucketOwner</code> in the workgroup's <code>ResultConfiguration</code> is
+     *         updated with the new value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
+     */
+
+    public Boolean isRemoveExpectedBucketOwner() {
+        return this.removeExpectedBucketOwner;
     }
 
     /**
@@ -407,7 +642,11 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
         if (getEncryptionConfiguration() != null)
             sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
         if (getRemoveEncryptionConfiguration() != null)
-            sb.append("RemoveEncryptionConfiguration: ").append(getRemoveEncryptionConfiguration());
+            sb.append("RemoveEncryptionConfiguration: ").append(getRemoveEncryptionConfiguration()).append(",");
+        if (getExpectedBucketOwner() != null)
+            sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner()).append(",");
+        if (getRemoveExpectedBucketOwner() != null)
+            sb.append("RemoveExpectedBucketOwner: ").append(getRemoveExpectedBucketOwner());
         sb.append("}");
         return sb.toString();
     }
@@ -439,6 +678,14 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
         if (other.getRemoveEncryptionConfiguration() != null
                 && other.getRemoveEncryptionConfiguration().equals(this.getRemoveEncryptionConfiguration()) == false)
             return false;
+        if (other.getExpectedBucketOwner() == null ^ this.getExpectedBucketOwner() == null)
+            return false;
+        if (other.getExpectedBucketOwner() != null && other.getExpectedBucketOwner().equals(this.getExpectedBucketOwner()) == false)
+            return false;
+        if (other.getRemoveExpectedBucketOwner() == null ^ this.getRemoveExpectedBucketOwner() == null)
+            return false;
+        if (other.getRemoveExpectedBucketOwner() != null && other.getRemoveExpectedBucketOwner().equals(this.getRemoveExpectedBucketOwner()) == false)
+            return false;
         return true;
     }
 
@@ -451,6 +698,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getRemoveOutputLocation() == null) ? 0 : getRemoveOutputLocation().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRemoveEncryptionConfiguration() == null) ? 0 : getRemoveEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getExpectedBucketOwner() == null) ? 0 : getExpectedBucketOwner().hashCode());
+        hashCode = prime * hashCode + ((getRemoveExpectedBucketOwner() == null) ? 0 : getRemoveExpectedBucketOwner().hashCode());
         return hashCode;
     }
 

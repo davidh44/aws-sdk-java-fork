@@ -95,7 +95,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetGroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      */
     private String dBSubnetGroupName;
@@ -1355,7 +1355,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetGroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1375,7 +1375,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetGroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      */
 
     public void setDBSubnetGroupName(String dBSubnetGroupName) {
@@ -1401,7 +1401,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetGroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @return The new DB subnet group for the DB instance. You can use this parameter to move your DB instance to a
@@ -1420,7 +1420,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *         </p>
      *         <p>
-     *         Example: <code>mySubnetGroup</code>
+     *         Example: <code>mydbsubnetgroup</code>
      */
 
     public String getDBSubnetGroupName() {
@@ -1446,7 +1446,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      * </p>
      * <p>
-     * Example: <code>mySubnetGroup</code>
+     * Example: <code>mydbsubnetgroup</code>
      * </p>
      * 
      * @param dBSubnetGroupName
@@ -1466,7 +1466,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Constraints: If supplied, must match the name of an existing DBSubnetGroup.
      *        </p>
      *        <p>
-     *        Example: <code>mySubnetGroup</code>
+     *        Example: <code>mydbsubnetgroup</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
