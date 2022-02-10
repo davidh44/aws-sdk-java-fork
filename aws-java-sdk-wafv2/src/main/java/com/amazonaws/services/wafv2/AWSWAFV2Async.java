@@ -679,6 +679,47 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Generates a presigned download URL for the specified release of the mobile SDK.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param generateMobileSdkReleaseUrlRequest
+     * @return A Java Future containing the result of the GenerateMobileSdkReleaseUrl operation returned by the service.
+     * @sample AWSWAFV2Async.GenerateMobileSdkReleaseUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GenerateMobileSdkReleaseUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateMobileSdkReleaseUrlResult> generateMobileSdkReleaseUrlAsync(
+            GenerateMobileSdkReleaseUrlRequest generateMobileSdkReleaseUrlRequest);
+
+    /**
+     * <p>
+     * Generates a presigned download URL for the specified release of the mobile SDK.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param generateMobileSdkReleaseUrlRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GenerateMobileSdkReleaseUrl operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.GenerateMobileSdkReleaseUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GenerateMobileSdkReleaseUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateMobileSdkReleaseUrlResult> generateMobileSdkReleaseUrlAsync(
+            GenerateMobileSdkReleaseUrlRequest generateMobileSdkReleaseUrlRequest,
+            com.amazonaws.handlers.AsyncHandler<GenerateMobileSdkReleaseUrlRequest, GenerateMobileSdkReleaseUrlResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the specified <a>IPSet</a>.
      * </p>
      * 
@@ -791,6 +832,45 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
      */
     java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest getManagedRuleSetRequest,
             com.amazonaws.handlers.AsyncHandler<GetManagedRuleSetRequest, GetManagedRuleSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves information for the specified mobile SDK release, including release notes and tags.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param getMobileSdkReleaseRequest
+     * @return A Java Future containing the result of the GetMobileSdkRelease operation returned by the service.
+     * @sample AWSWAFV2Async.GetMobileSdkRelease
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetMobileSdkRelease" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMobileSdkReleaseResult> getMobileSdkReleaseAsync(GetMobileSdkReleaseRequest getMobileSdkReleaseRequest);
+
+    /**
+     * <p>
+     * Retrieves information for the specified mobile SDK release, including release notes and tags.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param getMobileSdkReleaseRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMobileSdkRelease operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.GetMobileSdkRelease
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetMobileSdkRelease" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMobileSdkReleaseResult> getMobileSdkReleaseAsync(GetMobileSdkReleaseRequest getMobileSdkReleaseRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMobileSdkReleaseRequest, GetMobileSdkReleaseResult> asyncHandler);
 
     /**
      * <p>
@@ -1251,6 +1331,45 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
      */
     java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest listManagedRuleSetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListManagedRuleSetsRequest, ListManagedRuleSetsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of the available releases for the mobile SDK and the specified device platform.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param listMobileSdkReleasesRequest
+     * @return A Java Future containing the result of the ListMobileSdkReleases operation returned by the service.
+     * @sample AWSWAFV2Async.ListMobileSdkReleases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListMobileSdkReleases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMobileSdkReleasesResult> listMobileSdkReleasesAsync(ListMobileSdkReleasesRequest listMobileSdkReleasesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the available releases for the mobile SDK and the specified device platform.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param listMobileSdkReleasesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMobileSdkReleases operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.ListMobileSdkReleases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListMobileSdkReleases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMobileSdkReleasesResult> listMobileSdkReleasesAsync(ListMobileSdkReleasesRequest listMobileSdkReleasesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMobileSdkReleasesRequest, ListMobileSdkReleasesResult> asyncHandler);
 
     /**
      * <p>

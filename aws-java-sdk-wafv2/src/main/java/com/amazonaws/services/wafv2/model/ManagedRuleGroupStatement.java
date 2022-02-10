@@ -72,6 +72,16 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      * </p>
      */
     private Statement scopeDownStatement;
+    /**
+     * <p>
+     * Additional information that's used by a managed rule group. Most managed rule groups don't require this.
+     * </p>
+     * <p>
+     * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     * provide information about the sign-in page of your application.
+     * </p>
+     */
+    private java.util.List<ManagedRuleGroupConfig> managedRuleGroupConfigs;
 
     /**
      * <p>
@@ -356,6 +366,108 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Additional information that's used by a managed rule group. Most managed rule groups don't require this.
+     * </p>
+     * <p>
+     * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     * provide information about the sign-in page of your application.
+     * </p>
+     * 
+     * @return Additional information that's used by a managed rule group. Most managed rule groups don't require
+     *         this.</p>
+     *         <p>
+     *         Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>,
+     *         to provide information about the sign-in page of your application.
+     */
+
+    public java.util.List<ManagedRuleGroupConfig> getManagedRuleGroupConfigs() {
+        return managedRuleGroupConfigs;
+    }
+
+    /**
+     * <p>
+     * Additional information that's used by a managed rule group. Most managed rule groups don't require this.
+     * </p>
+     * <p>
+     * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     * provide information about the sign-in page of your application.
+     * </p>
+     * 
+     * @param managedRuleGroupConfigs
+     *        Additional information that's used by a managed rule group. Most managed rule groups don't require
+     *        this.</p>
+     *        <p>
+     *        Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     *        provide information about the sign-in page of your application.
+     */
+
+    public void setManagedRuleGroupConfigs(java.util.Collection<ManagedRuleGroupConfig> managedRuleGroupConfigs) {
+        if (managedRuleGroupConfigs == null) {
+            this.managedRuleGroupConfigs = null;
+            return;
+        }
+
+        this.managedRuleGroupConfigs = new java.util.ArrayList<ManagedRuleGroupConfig>(managedRuleGroupConfigs);
+    }
+
+    /**
+     * <p>
+     * Additional information that's used by a managed rule group. Most managed rule groups don't require this.
+     * </p>
+     * <p>
+     * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     * provide information about the sign-in page of your application.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setManagedRuleGroupConfigs(java.util.Collection)} or
+     * {@link #withManagedRuleGroupConfigs(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param managedRuleGroupConfigs
+     *        Additional information that's used by a managed rule group. Most managed rule groups don't require
+     *        this.</p>
+     *        <p>
+     *        Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     *        provide information about the sign-in page of your application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ManagedRuleGroupStatement withManagedRuleGroupConfigs(ManagedRuleGroupConfig... managedRuleGroupConfigs) {
+        if (this.managedRuleGroupConfigs == null) {
+            setManagedRuleGroupConfigs(new java.util.ArrayList<ManagedRuleGroupConfig>(managedRuleGroupConfigs.length));
+        }
+        for (ManagedRuleGroupConfig ele : managedRuleGroupConfigs) {
+            this.managedRuleGroupConfigs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Additional information that's used by a managed rule group. Most managed rule groups don't require this.
+     * </p>
+     * <p>
+     * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     * provide information about the sign-in page of your application.
+     * </p>
+     * 
+     * @param managedRuleGroupConfigs
+     *        Additional information that's used by a managed rule group. Most managed rule groups don't require
+     *        this.</p>
+     *        <p>
+     *        Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
+     *        provide information about the sign-in page of your application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ManagedRuleGroupStatement withManagedRuleGroupConfigs(java.util.Collection<ManagedRuleGroupConfig> managedRuleGroupConfigs) {
+        setManagedRuleGroupConfigs(managedRuleGroupConfigs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -376,7 +488,9 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
         if (getExcludedRules() != null)
             sb.append("ExcludedRules: ").append(getExcludedRules()).append(",");
         if (getScopeDownStatement() != null)
-            sb.append("ScopeDownStatement: ").append(getScopeDownStatement());
+            sb.append("ScopeDownStatement: ").append(getScopeDownStatement()).append(",");
+        if (getManagedRuleGroupConfigs() != null)
+            sb.append("ManagedRuleGroupConfigs: ").append(getManagedRuleGroupConfigs());
         sb.append("}");
         return sb.toString();
     }
@@ -411,6 +525,10 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
             return false;
         if (other.getScopeDownStatement() != null && other.getScopeDownStatement().equals(this.getScopeDownStatement()) == false)
             return false;
+        if (other.getManagedRuleGroupConfigs() == null ^ this.getManagedRuleGroupConfigs() == null)
+            return false;
+        if (other.getManagedRuleGroupConfigs() != null && other.getManagedRuleGroupConfigs().equals(this.getManagedRuleGroupConfigs()) == false)
+            return false;
         return true;
     }
 
@@ -424,6 +542,7 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getExcludedRules() == null) ? 0 : getExcludedRules().hashCode());
         hashCode = prime * hashCode + ((getScopeDownStatement() == null) ? 0 : getScopeDownStatement().hashCode());
+        hashCode = prime * hashCode + ((getManagedRuleGroupConfigs() == null) ? 0 : getManagedRuleGroupConfigs().hashCode());
         return hashCode;
     }
 

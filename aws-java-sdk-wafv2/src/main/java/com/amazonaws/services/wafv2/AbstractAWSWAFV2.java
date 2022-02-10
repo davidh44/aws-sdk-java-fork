@@ -103,6 +103,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public GenerateMobileSdkReleaseUrlResult generateMobileSdkReleaseUrl(GenerateMobileSdkReleaseUrlRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetIPSetResult getIPSet(GetIPSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +119,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
 
     @Override
     public GetManagedRuleSetResult getManagedRuleSet(GetManagedRuleSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetMobileSdkReleaseResult getMobileSdkRelease(GetMobileSdkReleaseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -174,6 +184,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
 
     @Override
     public ListManagedRuleSetsResult listManagedRuleSets(ListManagedRuleSetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMobileSdkReleasesResult listMobileSdkReleases(ListMobileSdkReleasesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

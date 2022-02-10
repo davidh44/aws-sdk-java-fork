@@ -1,3 +1,24 @@
+# __1.12.157__ __2022-02-10__
+## __AWS CloudFormation__
+  - ### Features
+    - This SDK release adds AWS CloudFormation Hooks HandlerErrorCodes
+
+## __AWS WAFV2__
+  - ### Features
+    - Adds support for AWS WAF Fraud Control account takeover prevention (ATP), with configuration options for the new managed rule group AWSManagedRulesATPRuleSet and support for application integration SDKs for Android and iOS mobile apps.
+
+## __Amazon Lookout for Vision__
+  - ### Features
+    - This release makes CompilerOptions in Lookout for Vision's StartModelPackagingJob's Configuration object optional.
+
+## __Amazon Pinpoint__
+  - ### Features
+    - This SDK release adds a new paramater creation date for GetApp and GetApps Api call
+
+## __Amazon Simple Notification Service__
+  - ### Features
+    - Customer requested typo fix in API documentation.
+
 # __1.12.156__ __2022-02-09__
 ## __AWS CloudFormation__
   - ### Features

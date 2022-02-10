@@ -38,6 +38,8 @@ public class ManagedRuleGroupStatementMarshaller {
             .marshallLocationName("ExcludedRules").build();
     private static final MarshallingInfo<StructuredPojo> SCOPEDOWNSTATEMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScopeDownStatement").build();
+    private static final MarshallingInfo<List> MANAGEDRULEGROUPCONFIGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManagedRuleGroupConfigs").build();
 
     private static final ManagedRuleGroupStatementMarshaller instance = new ManagedRuleGroupStatementMarshaller();
 
@@ -60,6 +62,7 @@ public class ManagedRuleGroupStatementMarshaller {
             protocolMarshaller.marshall(managedRuleGroupStatement.getVersion(), VERSION_BINDING);
             protocolMarshaller.marshall(managedRuleGroupStatement.getExcludedRules(), EXCLUDEDRULES_BINDING);
             protocolMarshaller.marshall(managedRuleGroupStatement.getScopeDownStatement(), SCOPEDOWNSTATEMENT_BINDING);
+            protocolMarshaller.marshall(managedRuleGroupStatement.getManagedRuleGroupConfigs(), MANAGEDRULEGROUPCONFIGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

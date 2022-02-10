@@ -989,6 +989,55 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
+     * Generates a presigned download URL for the specified release of the mobile SDK.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param generateMobileSdkReleaseUrlRequest
+     * @return Result of the GenerateMobileSdkReleaseUrl operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.GenerateMobileSdkReleaseUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GenerateMobileSdkReleaseUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GenerateMobileSdkReleaseUrlResult generateMobileSdkReleaseUrl(GenerateMobileSdkReleaseUrlRequest generateMobileSdkReleaseUrlRequest);
+
+    /**
+     * <p>
      * Retrieves the specified <a>IPSet</a>.
      * </p>
      * 
@@ -1132,6 +1181,55 @@ public interface AWSWAFV2 {
      *      Documentation</a>
      */
     GetManagedRuleSetResult getManagedRuleSet(GetManagedRuleSetRequest getManagedRuleSetRequest);
+
+    /**
+     * <p>
+     * Retrieves information for the specified mobile SDK release, including release notes and tags.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param getMobileSdkReleaseRequest
+     * @return Result of the GetMobileSdkRelease operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.GetMobileSdkRelease
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetMobileSdkRelease" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetMobileSdkReleaseResult getMobileSdkRelease(GetMobileSdkReleaseRequest getMobileSdkReleaseRequest);
 
     /**
      * <p>
@@ -1698,6 +1796,53 @@ public interface AWSWAFV2 {
      *      Documentation</a>
      */
     ListManagedRuleSetsResult listManagedRuleSets(ListManagedRuleSetsRequest listManagedRuleSetsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the available releases for the mobile SDK and the specified device platform.
+     * </p>
+     * <p>
+     * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
+     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
+     * </p>
+     * 
+     * @param listMobileSdkReleasesRequest
+     * @return Result of the ListMobileSdkReleases operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.ListMobileSdkReleases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListMobileSdkReleases" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListMobileSdkReleasesResult listMobileSdkReleases(ListMobileSdkReleasesRequest listMobileSdkReleasesRequest);
 
     /**
      * <p>

@@ -86,6 +86,7 @@ public class IdleConnectionReaperTest {
     }
 
     @Test
+    @Retryable
     public void maxIdle_HonoredOnClose() throws InterruptedException {
         HttpClientConnectionManager connectionManager = mock(HttpClientConnectionManager.class);
         final long idleTime = 10 * 1000;

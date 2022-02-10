@@ -34,7 +34,10 @@ public enum HandlerErrorCode {
     ServiceInternalError("ServiceInternalError"),
     NetworkFailure("NetworkFailure"),
     InternalFailure("InternalFailure"),
-    InvalidTypeConfiguration("InvalidTypeConfiguration");
+    InvalidTypeConfiguration("InvalidTypeConfiguration"),
+    HandlerInternalFailure("HandlerInternalFailure"),
+    NonCompliant("NonCompliant"),
+    Unknown("Unknown");
 
     private String value;
 

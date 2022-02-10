@@ -37,6 +37,8 @@ public class ApplicationResponseMarshaller {
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> CREATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationDate").build();
 
     private static final ApplicationResponseMarshaller instance = new ApplicationResponseMarshaller();
 
@@ -58,6 +60,7 @@ public class ApplicationResponseMarshaller {
             protocolMarshaller.marshall(applicationResponse.getId(), ID_BINDING);
             protocolMarshaller.marshall(applicationResponse.getName(), NAME_BINDING);
             protocolMarshaller.marshall(applicationResponse.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(applicationResponse.getCreationDate(), CREATIONDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

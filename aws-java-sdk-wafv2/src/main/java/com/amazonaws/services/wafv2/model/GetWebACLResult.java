@@ -41,6 +41,17 @@ public class GetWebACLResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      */
     private String lockToken;
+    /**
+     * <p>
+     * The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use the
+     * integration SDKs with the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>.
+     * This is only populated if you are using a rule group in your web ACL that integrates with your applications in
+     * this way. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF application
+     * integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     */
+    private String applicationIntegrationURL;
 
     /**
      * <p>
@@ -162,6 +173,76 @@ public class GetWebACLResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p>
+     * The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use the
+     * integration SDKs with the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>.
+     * This is only populated if you are using a rule group in your web ACL that integrates with your applications in
+     * this way. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF application
+     * integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     * 
+     * @param applicationIntegrationURL
+     *        The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use
+     *        the integration SDKs with the account takeover prevention managed rule group
+     *        <code>AWSManagedRulesATPRuleSet</code>. This is only populated if you are using a rule group in your web
+     *        ACL that integrates with your applications in this way. For more information, see <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF
+     *        application integration</a> in the <i>WAF Developer Guide</i>.
+     */
+
+    public void setApplicationIntegrationURL(String applicationIntegrationURL) {
+        this.applicationIntegrationURL = applicationIntegrationURL;
+    }
+
+    /**
+     * <p>
+     * The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use the
+     * integration SDKs with the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>.
+     * This is only populated if you are using a rule group in your web ACL that integrates with your applications in
+     * this way. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF application
+     * integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     * 
+     * @return The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use
+     *         the integration SDKs with the account takeover prevention managed rule group
+     *         <code>AWSManagedRulesATPRuleSet</code>. This is only populated if you are using a rule group in your web
+     *         ACL that integrates with your applications in this way. For more information, see <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF
+     *         application integration</a> in the <i>WAF Developer Guide</i>.
+     */
+
+    public String getApplicationIntegrationURL() {
+        return this.applicationIntegrationURL;
+    }
+
+    /**
+     * <p>
+     * The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use the
+     * integration SDKs with the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>.
+     * This is only populated if you are using a rule group in your web ACL that integrates with your applications in
+     * this way. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF application
+     * integration</a> in the <i>WAF Developer Guide</i>.
+     * </p>
+     * 
+     * @param applicationIntegrationURL
+     *        The URL to use in SDK integrations with Amazon Web Services managed rule groups. For example, you can use
+     *        the integration SDKs with the account takeover prevention managed rule group
+     *        <code>AWSManagedRulesATPRuleSet</code>. This is only populated if you are using a rule group in your web
+     *        ACL that integrates with your applications in this way. For more information, see <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF
+     *        application integration</a> in the <i>WAF Developer Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetWebACLResult withApplicationIntegrationURL(String applicationIntegrationURL) {
+        setApplicationIntegrationURL(applicationIntegrationURL);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -176,7 +257,9 @@ public class GetWebACLResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (getWebACL() != null)
             sb.append("WebACL: ").append(getWebACL()).append(",");
         if (getLockToken() != null)
-            sb.append("LockToken: ").append(getLockToken());
+            sb.append("LockToken: ").append(getLockToken()).append(",");
+        if (getApplicationIntegrationURL() != null)
+            sb.append("ApplicationIntegrationURL: ").append(getApplicationIntegrationURL());
         sb.append("}");
         return sb.toString();
     }
@@ -199,6 +282,10 @@ public class GetWebACLResult extends com.amazonaws.AmazonWebServiceResult<com.am
             return false;
         if (other.getLockToken() != null && other.getLockToken().equals(this.getLockToken()) == false)
             return false;
+        if (other.getApplicationIntegrationURL() == null ^ this.getApplicationIntegrationURL() == null)
+            return false;
+        if (other.getApplicationIntegrationURL() != null && other.getApplicationIntegrationURL().equals(this.getApplicationIntegrationURL()) == false)
+            return false;
         return true;
     }
 
@@ -209,6 +296,7 @@ public class GetWebACLResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
         hashCode = prime * hashCode + ((getWebACL() == null) ? 0 : getWebACL().hashCode());
         hashCode = prime * hashCode + ((getLockToken() == null) ? 0 : getLockToken().hashCode());
+        hashCode = prime * hashCode + ((getApplicationIntegrationURL() == null) ? 0 : getApplicationIntegrationURL().hashCode());
         return hashCode;
     }
 

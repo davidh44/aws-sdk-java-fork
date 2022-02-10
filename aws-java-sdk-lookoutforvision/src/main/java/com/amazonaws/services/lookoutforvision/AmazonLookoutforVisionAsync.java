@@ -891,7 +891,7 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
      * <ul>
      * <li>
      * <p>
-     * <code>lookoutvision:StartModelPackagingJobs</code>
+     * <code>lookoutvision:StartModelPackagingJob</code>
      * </p>
      * </li>
      * <li>
@@ -954,7 +954,7 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
      * <ul>
      * <li>
      * <p>
-     * <code>lookoutvision:StartModelPackagingJobs</code>
+     * <code>lookoutvision:StartModelPackagingJob</code>
      * </p>
      * </li>
      * <li>

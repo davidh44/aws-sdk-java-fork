@@ -1495,7 +1495,7 @@ public class AmazonLookoutforVisionClient extends AmazonWebServiceClient impleme
      * <ul>
      * <li>
      * <p>
-     * <code>lookoutvision:StartModelPackagingJobs</code>
+     * <code>lookoutvision:StartModelPackagingJob</code>
      * </p>
      * </li>
      * <li>

@@ -70,6 +70,13 @@ public class ManagedRuleGroupStatementJsonUnmarshaller implements Unmarshaller<M
                     context.nextToken();
                     managedRuleGroupStatement.setScopeDownStatement(StatementJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ManagedRuleGroupConfigs", targetDepth)) {
+                    context.nextToken();
+                    managedRuleGroupStatement.setManagedRuleGroupConfigs(new ListUnmarshaller<ManagedRuleGroupConfig>(ManagedRuleGroupConfigJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

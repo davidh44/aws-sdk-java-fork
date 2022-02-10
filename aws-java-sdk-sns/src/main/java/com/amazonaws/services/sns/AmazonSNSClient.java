@@ -2379,7 +2379,7 @@ public class AmazonSNSClient extends AmazonWebServiceClient implements AmazonSNS
      * topic. The format of the message depends on the notification protocol for each subscribed endpoint.
      * </p>
      * <p>
-     * When a <code>messageId</code> is returned, the message is saved and Amazon SNS immediately deliverers it to
+     * When a <code>messageId</code> is returned, the message is saved and Amazon SNS immediately delivers it to
      * subscribers.
      * </p>
      * <p>

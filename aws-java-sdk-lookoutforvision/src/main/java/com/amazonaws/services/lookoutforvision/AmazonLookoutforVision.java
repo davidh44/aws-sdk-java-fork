@@ -670,7 +670,7 @@ public interface AmazonLookoutforVision {
      * <ul>
      * <li>
      * <p>
-     * <code>lookoutvision:StartModelPackagingJobs</code>
+     * <code>lookoutvision:StartModelPackagingJob</code>
      * </p>
      * </li>
      * <li>

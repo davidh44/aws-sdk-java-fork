@@ -224,6 +224,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateMobileSdkReleaseUrlResult> generateMobileSdkReleaseUrlAsync(GenerateMobileSdkReleaseUrlRequest request) {
+
+        return generateMobileSdkReleaseUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateMobileSdkReleaseUrlResult> generateMobileSdkReleaseUrlAsync(GenerateMobileSdkReleaseUrlRequest request,
+            com.amazonaws.handlers.AsyncHandler<GenerateMobileSdkReleaseUrlRequest, GenerateMobileSdkReleaseUrlResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIPSetResult> getIPSetAsync(GetIPSetRequest request) {
 
         return getIPSetAsync(request, null);
@@ -258,6 +271,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     @Override
     public java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest request,
             com.amazonaws.handlers.AsyncHandler<GetManagedRuleSetRequest, GetManagedRuleSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMobileSdkReleaseResult> getMobileSdkReleaseAsync(GetMobileSdkReleaseRequest request) {
+
+        return getMobileSdkReleaseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMobileSdkReleaseResult> getMobileSdkReleaseAsync(GetMobileSdkReleaseRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMobileSdkReleaseRequest, GetMobileSdkReleaseResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -418,6 +444,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     @Override
     public java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListManagedRuleSetsRequest, ListManagedRuleSetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMobileSdkReleasesResult> listMobileSdkReleasesAsync(ListMobileSdkReleasesRequest request) {
+
+        return listMobileSdkReleasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMobileSdkReleasesResult> listMobileSdkReleasesAsync(ListMobileSdkReleasesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMobileSdkReleasesRequest, ListMobileSdkReleasesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

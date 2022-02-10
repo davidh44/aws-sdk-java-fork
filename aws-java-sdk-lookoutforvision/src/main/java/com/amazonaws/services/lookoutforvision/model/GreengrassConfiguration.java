@@ -38,7 +38,8 @@ public class GreengrassConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU)
-     * are supported.
+     * are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you
+     * specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.
      * </p>
      * <p>
      * For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
@@ -94,7 +95,8 @@ public class GreengrassConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU)
-     * are supported.
+     * are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you
+     * specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.
      * </p>
      * <p>
      * For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
@@ -102,7 +104,9 @@ public class GreengrassConfiguration implements Serializable, Cloneable, Structu
      * 
      * @param compilerOptions
      *        Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units
-     *        (GPU) are supported.</p>
+     *        (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify
+     *        <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify
+     *        <code>CompilerOptions</code>.</p>
      *        <p>
      *        For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
      */
@@ -114,14 +118,17 @@ public class GreengrassConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU)
-     * are supported.
+     * are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you
+     * specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.
      * </p>
      * <p>
      * For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
      * </p>
      * 
      * @return Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing
-     *         Units (GPU) are supported.</p>
+     *         Units (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify
+     *         <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify
+     *         <code>CompilerOptions</code>.</p>
      *         <p>
      *         For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
      */
@@ -133,7 +140,8 @@ public class GreengrassConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units (GPU)
-     * are supported.
+     * are supported. If you specify <code>TargetPlatform</code>, you must specify <code>CompilerOptions</code>. If you
+     * specify <code>TargetDevice</code>, don't specify <code>CompilerOptions</code>.
      * </p>
      * <p>
      * For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
@@ -141,7 +149,9 @@ public class GreengrassConfiguration implements Serializable, Cloneable, Structu
      * 
      * @param compilerOptions
      *        Additional compiler options for the Greengrass component. Currently, only NVIDIA Graphics Processing Units
-     *        (GPU) are supported.</p>
+     *        (GPU) are supported. If you specify <code>TargetPlatform</code>, you must specify
+     *        <code>CompilerOptions</code>. If you specify <code>TargetDevice</code>, don't specify
+     *        <code>CompilerOptions</code>.</p>
      *        <p>
      *        For more information, see <i>Compiler options</i> in the Amazon Lookout for Vision Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.

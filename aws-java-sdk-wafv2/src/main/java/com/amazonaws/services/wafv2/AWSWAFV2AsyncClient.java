@@ -645,6 +645,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateMobileSdkReleaseUrlResult> generateMobileSdkReleaseUrlAsync(GenerateMobileSdkReleaseUrlRequest request) {
+
+        return generateMobileSdkReleaseUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateMobileSdkReleaseUrlResult> generateMobileSdkReleaseUrlAsync(final GenerateMobileSdkReleaseUrlRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GenerateMobileSdkReleaseUrlRequest, GenerateMobileSdkReleaseUrlResult> asyncHandler) {
+        final GenerateMobileSdkReleaseUrlRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GenerateMobileSdkReleaseUrlResult>() {
+            @Override
+            public GenerateMobileSdkReleaseUrlResult call() throws Exception {
+                GenerateMobileSdkReleaseUrlResult result = null;
+
+                try {
+                    result = executeGenerateMobileSdkReleaseUrl(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIPSetResult> getIPSetAsync(GetIPSetRequest request) {
 
         return getIPSetAsync(request, null);
@@ -728,6 +761,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
 
                 try {
                     result = executeGetManagedRuleSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMobileSdkReleaseResult> getMobileSdkReleaseAsync(GetMobileSdkReleaseRequest request) {
+
+        return getMobileSdkReleaseAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMobileSdkReleaseResult> getMobileSdkReleaseAsync(final GetMobileSdkReleaseRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMobileSdkReleaseRequest, GetMobileSdkReleaseResult> asyncHandler) {
+        final GetMobileSdkReleaseRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMobileSdkReleaseResult>() {
+            @Override
+            public GetMobileSdkReleaseResult call() throws Exception {
+                GetMobileSdkReleaseResult result = null;
+
+                try {
+                    result = executeGetMobileSdkRelease(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1129,6 +1195,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
 
                 try {
                     result = executeListManagedRuleSets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMobileSdkReleasesResult> listMobileSdkReleasesAsync(ListMobileSdkReleasesRequest request) {
+
+        return listMobileSdkReleasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMobileSdkReleasesResult> listMobileSdkReleasesAsync(final ListMobileSdkReleasesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMobileSdkReleasesRequest, ListMobileSdkReleasesResult> asyncHandler) {
+        final ListMobileSdkReleasesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMobileSdkReleasesResult>() {
+            @Override
+            public ListMobileSdkReleasesResult call() throws Exception {
+                ListMobileSdkReleasesResult result = null;
+
+                try {
+                    result = executeListMobileSdkReleases(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

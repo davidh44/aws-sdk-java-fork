@@ -55,6 +55,12 @@ public class ApplicationResponse implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The date and time when the Application was created.
+     * </p>
+     */
+    private String creationDate;
 
     /**
      * <p>
@@ -263,6 +269,46 @@ public class ApplicationResponse implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The date and time when the Application was created.
+     * </p>
+     * 
+     * @param creationDate
+     *        The date and time when the Application was created.
+     */
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    /**
+     * <p>
+     * The date and time when the Application was created.
+     * </p>
+     * 
+     * @return The date and time when the Application was created.
+     */
+
+    public String getCreationDate() {
+        return this.creationDate;
+    }
+
+    /**
+     * <p>
+     * The date and time when the Application was created.
+     * </p>
+     * 
+     * @param creationDate
+     *        The date and time when the Application was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationResponse withCreationDate(String creationDate) {
+        setCreationDate(creationDate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -281,7 +327,9 @@ public class ApplicationResponse implements Serializable, Cloneable, StructuredP
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getCreationDate() != null)
+            sb.append("CreationDate: ").append(getCreationDate());
         sb.append("}");
         return sb.toString();
     }
@@ -312,6 +360,10 @@ public class ApplicationResponse implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getCreationDate() == null ^ this.getCreationDate() == null)
+            return false;
+        if (other.getCreationDate() != null && other.getCreationDate().equals(this.getCreationDate()) == false)
+            return false;
         return true;
     }
 
@@ -324,6 +376,7 @@ public class ApplicationResponse implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         return hashCode;
     }
 
