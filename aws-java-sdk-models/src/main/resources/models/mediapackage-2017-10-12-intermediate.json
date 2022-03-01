@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -39884,6 +39884,9 @@
       }, {
         "name" : "HBBTV_1_5",
         "value" : "HBBTV_1_5"
+      }, {
+        "name" : "HYBRIDCAST",
+        "value" : "HYBRIDCAST"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mediapackage.enum.Profile",

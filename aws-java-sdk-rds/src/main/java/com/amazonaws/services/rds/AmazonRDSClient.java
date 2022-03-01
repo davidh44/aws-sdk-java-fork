@@ -1180,11 +1180,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param copyDBClusterSnapshotRequest
      * @return Result of the CopyDBClusterSnapshot operation returned by the service.
@@ -1648,11 +1643,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterRequest
      * @return Result of the CreateDBCluster operation returned by the service.
@@ -1860,11 +1850,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterParameterGroupRequest
      * @return Result of the CreateDBClusterParameterGroup operation returned by the service.
@@ -1935,11 +1920,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterSnapshotRequest
      * @return Result of the CreateDBClusterSnapshot operation returned by the service.
@@ -3026,11 +3006,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterRequest
      * @return Result of the DeleteDBCluster operation returned by the service.
@@ -3174,11 +3149,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterParameterGroupRequest
      * @return Result of the DeleteDBClusterParameterGroup operation returned by the service.
@@ -3255,11 +3225,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterSnapshotRequest
      * @return Result of the DeleteDBClusterSnapshot operation returned by the service.
@@ -4515,11 +4480,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterParameterGroupsRequest
      * @return Result of the DescribeDBClusterParameterGroups operation returned by the service.
@@ -4594,11 +4554,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterParametersRequest
      * @return Result of the DescribeDBClusterParameters operation returned by the service.
@@ -4739,11 +4694,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterSnapshotsRequest
      * @return Result of the DescribeDBClusterSnapshots operation returned by the service.
@@ -4817,11 +4767,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * <p>
      * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB instances.
      * </p>
@@ -6877,11 +6822,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param failoverDBClusterRequest
      * @return Result of the FailoverDBCluster operation returned by the service.
@@ -7431,11 +7371,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param modifyDBClusterRequest
      * @return Result of the ModifyDBCluster operation returned by the service.
@@ -7616,11 +7551,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param modifyDBClusterParameterGroupRequest
      * @return Result of the ModifyDBClusterParameterGroup operation returned by the service.
@@ -8754,8 +8684,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * outage, during which the DB cluster status is set to rebooting.
      * </p>
      * <p>
-     * Use this operation only for a non-Aurora Multi-AZ DB cluster. The Multi-AZ DB clusters feature is in preview and
-     * is subject to change.
+     * Use this operation only for a non-Aurora Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -9052,11 +8981,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param removeRoleFromDBClusterRequest
      * @return Result of the RemoveRoleFromDBCluster operation returned by the service.
@@ -9334,11 +9258,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param resetDBClusterParameterGroupRequest
      * @return Result of the ResetDBClusterParameterGroup operation returned by the service.
@@ -9598,11 +9517,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param restoreDBClusterFromSnapshotRequest
      * @return Result of the RestoreDBClusterFromSnapshot operation returned by the service.
@@ -9721,11 +9635,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param restoreDBClusterToPointInTimeRequest
      * @return Result of the RestoreDBClusterToPointInTime operation returned by the service.

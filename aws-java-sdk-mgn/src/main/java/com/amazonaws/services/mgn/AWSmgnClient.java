@@ -159,7 +159,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param changeServerLifeCycleStateRequest
      * @return Result of the ChangeServerLifeCycleState operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -224,7 +224,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param createReplicationConfigurationTemplateRequest
      * @return Result of the CreateReplicationConfigurationTemplate operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @throws AccessDeniedException
@@ -288,7 +288,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param deleteJobRequest
      * @return Result of the DeleteJob operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ConflictException
@@ -349,7 +349,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param deleteReplicationConfigurationTemplateRequest
      * @return Result of the DeleteReplicationConfigurationTemplate operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ConflictException
@@ -413,7 +413,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param deleteSourceServerRequest
      * @return Result of the DeleteSourceServer operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ConflictException
@@ -468,13 +468,13 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
-     * Deletes a single vCenter client by ID.
+     * Deletes a given vCenter client by ID.
      * </p>
      * 
      * @param deleteVcenterClientRequest
      * @return Result of the DeleteVcenterClient operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -529,13 +529,13 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
-     * Retrieves detailed Job log with paging.
+     * Retrieves detailed job log items with paging.
      * </p>
      * 
      * @param describeJobLogItemsRequest
      * @return Result of the DescribeJobLogItems operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @sample AWSmgn.DescribeJobLogItems
@@ -589,7 +589,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
     /**
      * <p>
      * Returns a list of Jobs. Use the JobsID and fromDate and toData filters to limit which jobs are returned. The
-     * response is sorted by creationDataTime - latest date first. Jobs are normaly created by the StartTest,
+     * response is sorted by creationDataTime - latest date first. Jobs are normally created by the StartTest,
      * StartCutover, and TerminateTargetInstances APIs. Jobs are also created by DiagnosticLaunch and
      * TerminateDiagnosticInstances, which are APIs available only to *Support* and only used in response to relevant
      * support tickets.
@@ -598,7 +598,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param describeJobsRequest
      * @return Result of the DescribeJobs operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @sample AWSmgn.DescribeJobs
@@ -657,7 +657,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param describeReplicationConfigurationTemplatesRequest
      * @return Result of the DescribeReplicationConfigurationTemplates operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -721,7 +721,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param describeSourceServersRequest
      * @return Result of the DescribeSourceServers operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @sample AWSmgn.DescribeSourceServers
@@ -775,13 +775,13 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
-     * Lists all vCenter clients.
+     * Returns a list of the installed vCenter clients.
      * </p>
      * 
      * @param describeVcenterClientsRequest
      * @return Result of the DescribeVcenterClients operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -840,17 +840,17 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * Disconnects specific Source Servers from Application Migration Service. Data replication is stopped immediately.
      * All AWS resources created by Application Migration Service for enabling the replication of these source servers
      * will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. If the
-     * agent on the source server has not been prevented from communciating with the Application Migration Service
+     * agent on the source server has not been prevented from communicating with the Application Migration Service
      * service, then it will receive a command to uninstall itself (within approximately 10 minutes). The following
      * properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be set
      * to DISCONNECTED; The totalStorageBytes property for each of dataReplicationInfo.replicatedDisks will be set to
-     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
      * </p>
      * 
      * @param disconnectFromServiceRequest
      * @return Result of the DisconnectFromService operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ConflictException
@@ -910,15 +910,15 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes.
      * Launched Test or Cutover instances will NOT be terminated. The AWS Replication Agent will receive a command to
      * uninstall itself (within 10 minutes). The following properties of the SourceServer will be changed immediately:
-     * dataReplicationInfo.dataReplicationState will be to DISCONNECTED; The SourceServer.lifeCycle.state will be
-     * changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set to
-     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+     * dataReplicationInfo.dataReplicationState will be changed to DISCONNECTED; The SourceServer.lifeCycle.state will
+     * be changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set
+     * to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
      * </p>
      * 
      * @param finalizeCutoverRequest
      * @return Result of the FinalizeCutover operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -981,7 +981,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param getLaunchConfigurationRequest
      * @return Result of the GetLaunchConfiguration operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @sample AWSmgn.GetLaunchConfiguration
@@ -1041,7 +1041,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param getReplicationConfigurationRequest
      * @return Result of the GetReplicationConfiguration operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @sample AWSmgn.GetReplicationConfiguration
@@ -1221,14 +1221,14 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
     /**
      * <p>
      * Archives specific Source Servers by setting the SourceServer.isArchived property to true for specified
-     * SourceServers by ID. This command only works for SourceServers with a lifecycle.state which equals DISCONNECTED
+     * SourceServers by ID. This command only works for SourceServers with a lifecycle. state which equals DISCONNECTED
      * or CUTOVER.
      * </p>
      * 
      * @param markAsArchivedRequest
      * @return Result of the MarkAsArchived operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ConflictException
@@ -1291,7 +1291,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param retryDataReplicationRequest
      * @return Result of the RetryDataReplication operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -1353,7 +1353,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param startCutoverRequest
      * @return Result of the StartCutover operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @throws ConflictException
@@ -1408,13 +1408,13 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
-     * Starts replication on source server by ID.
+     * Starts replication for SNAPSHOT_SHIPPING agents.
      * </p>
      * 
      * @param startReplicationRequest
      * @return Result of the StartReplication operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -1473,14 +1473,14 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
-     * Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
+     * Launches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
      * is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
      * </p>
      * 
      * @param startTestRequest
      * @return Result of the StartTest operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @throws ConflictException
@@ -1609,7 +1609,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param terminateTargetInstancesRequest
      * @return Result of the TerminateTargetInstances operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ValidationException
      *         Validate exception.
      * @throws ConflictException
@@ -1737,7 +1737,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param updateLaunchConfigurationRequest
      * @return Result of the UpdateLaunchConfiguration operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -1802,7 +1802,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param updateReplicationConfigurationRequest
      * @return Result of the UpdateReplicationConfiguration operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -1869,7 +1869,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * @param updateReplicationConfigurationTemplateRequest
      * @return Result of the UpdateReplicationConfigurationTemplate operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException
@@ -1929,13 +1929,13 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
 
     /**
      * <p>
-     * Updates source server Replication Type by ID.
+     * Allows you to change between the AGENT_BASED replication type and the SNAPSHOT_SHIPPING replication type.
      * </p>
      * 
      * @param updateSourceServerReplicationTypeRequest
      * @return Result of the UpdateSourceServerReplicationType operation returned by the service.
      * @throws UninitializedAccountException
-     *         Unitialized account exception.
+     *         Uninitialized account exception.
      * @throws ResourceNotFoundException
      *         Resource not found exception.
      * @throws ValidationException

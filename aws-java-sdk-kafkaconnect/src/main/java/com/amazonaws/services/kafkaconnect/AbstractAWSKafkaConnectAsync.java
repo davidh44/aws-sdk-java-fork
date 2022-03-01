@@ -80,6 +80,19 @@ public class AbstractAWSKafkaConnectAsync extends AbstractAWSKafkaConnect implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteCustomPluginResult> deleteCustomPluginAsync(DeleteCustomPluginRequest request) {
+
+        return deleteCustomPluginAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomPluginResult> deleteCustomPluginAsync(DeleteCustomPluginRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomPluginRequest, DeleteCustomPluginResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest request) {
 
         return describeConnectorAsync(request, null);

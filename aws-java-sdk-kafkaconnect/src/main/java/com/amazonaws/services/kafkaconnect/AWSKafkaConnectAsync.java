@@ -158,6 +158,37 @@ public interface AWSKafkaConnectAsync extends AWSKafkaConnect {
 
     /**
      * <p>
+     * Deletes a custom plugin.
+     * </p>
+     * 
+     * @param deleteCustomPluginRequest
+     * @return A Java Future containing the result of the DeleteCustomPlugin operation returned by the service.
+     * @sample AWSKafkaConnectAsync.DeleteCustomPlugin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafkaconnect-2021-09-14/DeleteCustomPlugin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomPluginResult> deleteCustomPluginAsync(DeleteCustomPluginRequest deleteCustomPluginRequest);
+
+    /**
+     * <p>
+     * Deletes a custom plugin.
+     * </p>
+     * 
+     * @param deleteCustomPluginRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCustomPlugin operation returned by the service.
+     * @sample AWSKafkaConnectAsyncHandler.DeleteCustomPlugin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafkaconnect-2021-09-14/DeleteCustomPlugin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomPluginResult> deleteCustomPluginAsync(DeleteCustomPluginRequest deleteCustomPluginRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomPluginRequest, DeleteCustomPluginResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns summary information about the connector.
      * </p>
      * 

@@ -35,6 +35,8 @@ public class ReplicationConfigurationReplicatedDiskMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isBootDisk").build();
     private static final MarshallingInfo<String> STAGINGDISKTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stagingDiskType").build();
+    private static final MarshallingInfo<Long> THROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("throughput").build();
 
     private static final ReplicationConfigurationReplicatedDiskMarshaller instance = new ReplicationConfigurationReplicatedDiskMarshaller();
 
@@ -56,6 +58,7 @@ public class ReplicationConfigurationReplicatedDiskMarshaller {
             protocolMarshaller.marshall(replicationConfigurationReplicatedDisk.getIops(), IOPS_BINDING);
             protocolMarshaller.marshall(replicationConfigurationReplicatedDisk.getIsBootDisk(), ISBOOTDISK_BINDING);
             protocolMarshaller.marshall(replicationConfigurationReplicatedDisk.getStagingDiskType(), STAGINGDISKTYPE_BINDING);
+            protocolMarshaller.marshall(replicationConfigurationReplicatedDisk.getThroughput(), THROUGHPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

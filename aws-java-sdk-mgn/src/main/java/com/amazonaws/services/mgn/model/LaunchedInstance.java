@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configure launced instance.
+ * Launched instance.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/LaunchedInstance" target="_top">AWS API
@@ -30,30 +30,30 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance EC2 ID.
+     * Launched instance EC2 ID.
      * </p>
      */
     private String ec2InstanceID;
     /**
      * <p>
-     * Configure launced instance first boot.
+     * Launched instance first boot.
      * </p>
      */
     private String firstBoot;
     /**
      * <p>
-     * Configure launced instance Job ID.
+     * Launched instance Job ID.
      * </p>
      */
     private String jobID;
 
     /**
      * <p>
-     * Configure launced instance EC2 ID.
+     * Launched instance EC2 ID.
      * </p>
      * 
      * @param ec2InstanceID
-     *        Configure launced instance EC2 ID.
+     *        Launched instance EC2 ID.
      */
 
     public void setEc2InstanceID(String ec2InstanceID) {
@@ -62,10 +62,10 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance EC2 ID.
+     * Launched instance EC2 ID.
      * </p>
      * 
-     * @return Configure launced instance EC2 ID.
+     * @return Launched instance EC2 ID.
      */
 
     public String getEc2InstanceID() {
@@ -74,11 +74,11 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance EC2 ID.
+     * Launched instance EC2 ID.
      * </p>
      * 
      * @param ec2InstanceID
-     *        Configure launced instance EC2 ID.
+     *        Launched instance EC2 ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance first boot.
+     * Launched instance first boot.
      * </p>
      * 
      * @param firstBoot
-     *        Configure launced instance first boot.
+     *        Launched instance first boot.
      * @see FirstBoot
      */
 
@@ -103,10 +103,10 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance first boot.
+     * Launched instance first boot.
      * </p>
      * 
-     * @return Configure launced instance first boot.
+     * @return Launched instance first boot.
      * @see FirstBoot
      */
 
@@ -116,11 +116,11 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance first boot.
+     * Launched instance first boot.
      * </p>
      * 
      * @param firstBoot
-     *        Configure launced instance first boot.
+     *        Launched instance first boot.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FirstBoot
      */
@@ -132,11 +132,11 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance first boot.
+     * Launched instance first boot.
      * </p>
      * 
      * @param firstBoot
-     *        Configure launced instance first boot.
+     *        Launched instance first boot.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FirstBoot
      */
@@ -148,11 +148,11 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance Job ID.
+     * Launched instance Job ID.
      * </p>
      * 
      * @param jobID
-     *        Configure launced instance Job ID.
+     *        Launched instance Job ID.
      */
 
     public void setJobID(String jobID) {
@@ -161,10 +161,10 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance Job ID.
+     * Launched instance Job ID.
      * </p>
      * 
-     * @return Configure launced instance Job ID.
+     * @return Launched instance Job ID.
      */
 
     public String getJobID() {
@@ -173,11 +173,11 @@ public class LaunchedInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configure launced instance Job ID.
+     * Launched instance Job ID.
      * </p>
      * 
      * @param jobID
-     *        Configure launced instance Job ID.
+     *        Launched instance Job ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

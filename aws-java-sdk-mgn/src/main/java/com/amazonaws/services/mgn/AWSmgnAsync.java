@@ -203,7 +203,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Deletes a single vCenter client by ID.
+     * Deletes a given vCenter client by ID.
      * </p>
      * 
      * @param deleteVcenterClientRequest
@@ -216,7 +216,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Deletes a single vCenter client by ID.
+     * Deletes a given vCenter client by ID.
      * </p>
      * 
      * @param deleteVcenterClientRequest
@@ -234,7 +234,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Retrieves detailed Job log with paging.
+     * Retrieves detailed job log items with paging.
      * </p>
      * 
      * @param describeJobLogItemsRequest
@@ -247,7 +247,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Retrieves detailed Job log with paging.
+     * Retrieves detailed job log items with paging.
      * </p>
      * 
      * @param describeJobLogItemsRequest
@@ -266,7 +266,7 @@ public interface AWSmgnAsync extends AWSmgn {
     /**
      * <p>
      * Returns a list of Jobs. Use the JobsID and fromDate and toData filters to limit which jobs are returned. The
-     * response is sorted by creationDataTime - latest date first. Jobs are normaly created by the StartTest,
+     * response is sorted by creationDataTime - latest date first. Jobs are normally created by the StartTest,
      * StartCutover, and TerminateTargetInstances APIs. Jobs are also created by DiagnosticLaunch and
      * TerminateDiagnosticInstances, which are APIs available only to *Support* and only used in response to relevant
      * support tickets.
@@ -283,7 +283,7 @@ public interface AWSmgnAsync extends AWSmgn {
     /**
      * <p>
      * Returns a list of Jobs. Use the JobsID and fromDate and toData filters to limit which jobs are returned. The
-     * response is sorted by creationDataTime - latest date first. Jobs are normaly created by the StartTest,
+     * response is sorted by creationDataTime - latest date first. Jobs are normally created by the StartTest,
      * StartCutover, and TerminateTargetInstances APIs. Jobs are also created by DiagnosticLaunch and
      * TerminateDiagnosticInstances, which are APIs available only to *Support* and only used in response to relevant
      * support tickets.
@@ -370,7 +370,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Lists all vCenter clients.
+     * Returns a list of the installed vCenter clients.
      * </p>
      * 
      * @param describeVcenterClientsRequest
@@ -383,7 +383,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Lists all vCenter clients.
+     * Returns a list of the installed vCenter clients.
      * </p>
      * 
      * @param describeVcenterClientsRequest
@@ -404,11 +404,11 @@ public interface AWSmgnAsync extends AWSmgn {
      * Disconnects specific Source Servers from Application Migration Service. Data replication is stopped immediately.
      * All AWS resources created by Application Migration Service for enabling the replication of these source servers
      * will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. If the
-     * agent on the source server has not been prevented from communciating with the Application Migration Service
+     * agent on the source server has not been prevented from communicating with the Application Migration Service
      * service, then it will receive a command to uninstall itself (within approximately 10 minutes). The following
      * properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be set
      * to DISCONNECTED; The totalStorageBytes property for each of dataReplicationInfo.replicatedDisks will be set to
-     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
      * </p>
      * 
      * @param disconnectFromServiceRequest
@@ -424,11 +424,11 @@ public interface AWSmgnAsync extends AWSmgn {
      * Disconnects specific Source Servers from Application Migration Service. Data replication is stopped immediately.
      * All AWS resources created by Application Migration Service for enabling the replication of these source servers
      * will be terminated / deleted within 90 minutes. Launched Test or Cutover instances will NOT be terminated. If the
-     * agent on the source server has not been prevented from communciating with the Application Migration Service
+     * agent on the source server has not been prevented from communicating with the Application Migration Service
      * service, then it will receive a command to uninstall itself (within approximately 10 minutes). The following
      * properties of the SourceServer will be changed immediately: dataReplicationInfo.dataReplicationState will be set
      * to DISCONNECTED; The totalStorageBytes property for each of dataReplicationInfo.replicatedDisks will be set to
-     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
      * </p>
      * 
      * @param disconnectFromServiceRequest
@@ -450,9 +450,9 @@ public interface AWSmgnAsync extends AWSmgn {
      * Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes.
      * Launched Test or Cutover instances will NOT be terminated. The AWS Replication Agent will receive a command to
      * uninstall itself (within 10 minutes). The following properties of the SourceServer will be changed immediately:
-     * dataReplicationInfo.dataReplicationState will be to DISCONNECTED; The SourceServer.lifeCycle.state will be
-     * changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set to
-     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+     * dataReplicationInfo.dataReplicationState will be changed to DISCONNECTED; The SourceServer.lifeCycle.state will
+     * be changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set
+     * to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
      * </p>
      * 
      * @param finalizeCutoverRequest
@@ -469,9 +469,9 @@ public interface AWSmgnAsync extends AWSmgn {
      * Service for enabling the replication of these source servers will be terminated / deleted within 90 minutes.
      * Launched Test or Cutover instances will NOT be terminated. The AWS Replication Agent will receive a command to
      * uninstall itself (within 10 minutes). The following properties of the SourceServer will be changed immediately:
-     * dataReplicationInfo.dataReplicationState will be to DISCONNECTED; The SourceServer.lifeCycle.state will be
-     * changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set to
-     * zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDurationwill be nullified.
+     * dataReplicationInfo.dataReplicationState will be changed to DISCONNECTED; The SourceServer.lifeCycle.state will
+     * be changed to CUTOVER; The totalStorageBytes property fo each of dataReplicationInfo.replicatedDisks will be set
+     * to zero; dataReplicationInfo.lagDuration and dataReplicationInfo.lagDuration will be nullified.
      * </p>
      * 
      * @param finalizeCutoverRequest
@@ -616,7 +616,7 @@ public interface AWSmgnAsync extends AWSmgn {
     /**
      * <p>
      * Archives specific Source Servers by setting the SourceServer.isArchived property to true for specified
-     * SourceServers by ID. This command only works for SourceServers with a lifecycle.state which equals DISCONNECTED
+     * SourceServers by ID. This command only works for SourceServers with a lifecycle. state which equals DISCONNECTED
      * or CUTOVER.
      * </p>
      * 
@@ -631,7 +631,7 @@ public interface AWSmgnAsync extends AWSmgn {
     /**
      * <p>
      * Archives specific Source Servers by setting the SourceServer.isArchived property to true for specified
-     * SourceServers by ID. This command only works for SourceServers with a lifecycle.state which equals DISCONNECTED
+     * SourceServers by ID. This command only works for SourceServers with a lifecycle. state which equals DISCONNECTED
      * or CUTOVER.
      * </p>
      * 
@@ -718,7 +718,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Starts replication on source server by ID.
+     * Starts replication for SNAPSHOT_SHIPPING agents.
      * </p>
      * 
      * @param startReplicationRequest
@@ -731,7 +731,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Starts replication on source server by ID.
+     * Starts replication for SNAPSHOT_SHIPPING agents.
      * </p>
      * 
      * @param startReplicationRequest
@@ -749,7 +749,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
+     * Launches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
      * is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
      * </p>
      * 
@@ -763,7 +763,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Lauches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
+     * Launches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property
      * is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
      * </p>
      * 
@@ -984,7 +984,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Updates source server Replication Type by ID.
+     * Allows you to change between the AGENT_BASED replication type and the SNAPSHOT_SHIPPING replication type.
      * </p>
      * 
      * @param updateSourceServerReplicationTypeRequest
@@ -999,7 +999,7 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
-     * Updates source server Replication Type by ID.
+     * Allows you to change between the AGENT_BASED replication type and the SNAPSHOT_SHIPPING replication type.
      * </p>
      * 
      * @param updateSourceServerReplicationTypeRequest

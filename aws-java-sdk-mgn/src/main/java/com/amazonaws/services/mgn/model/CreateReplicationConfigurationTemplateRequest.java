@@ -52,19 +52,20 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
     private String dataPlaneRouting;
     /**
      * <p>
-     * Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template creation.
+     * Request to configure the default large staging disk EBS volume type during Replication Settings template
+     * creation.
      * </p>
      */
     private String defaultLargeStagingDiskType;
     /**
      * <p>
-     * Request to configure EBS enryption during Replication Settings template creation.
+     * Request to configure EBS encryption during Replication Settings template creation.
      * </p>
      */
     private String ebsEncryption;
     /**
      * <p>
-     * Request to configure an EBS enryption key during Replication Settings template creation.
+     * Request to configure an EBS encryption key during Replication Settings template creation.
      * </p>
      */
     private String ebsEncryptionKeyArn;
@@ -76,7 +77,7 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
     private String replicationServerInstanceType;
     /**
      * <p>
-     * Request to configure the Replication Server Secuirity group ID during Replication Settings template creation.
+     * Request to configure the Replication Server Security group ID during Replication Settings template creation.
      * </p>
      */
     private java.util.List<String> replicationServersSecurityGroupsIDs;
@@ -88,7 +89,7 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
     private String stagingAreaSubnetId;
     /**
      * <p>
-     * Request to configure Staiging Area tags during Replication Settings template creation.
+     * Request to configure Staging Area tags during Replication Settings template creation.
      * </p>
      */
     private java.util.Map<String, String> stagingAreaTags;
@@ -318,11 +319,12 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template creation.
+     * Request to configure the default large staging disk EBS volume type during Replication Settings template
+     * creation.
      * </p>
      * 
      * @param defaultLargeStagingDiskType
-     *        Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template
+     *        Request to configure the default large staging disk EBS volume type during Replication Settings template
      *        creation.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
      */
@@ -333,10 +335,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template creation.
+     * Request to configure the default large staging disk EBS volume type during Replication Settings template
+     * creation.
      * </p>
      * 
-     * @return Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template
+     * @return Request to configure the default large staging disk EBS volume type during Replication Settings template
      *         creation.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
      */
@@ -347,11 +350,12 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template creation.
+     * Request to configure the default large staging disk EBS volume type during Replication Settings template
+     * creation.
      * </p>
      * 
      * @param defaultLargeStagingDiskType
-     *        Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template
+     *        Request to configure the default large staging disk EBS volume type during Replication Settings template
      *        creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
@@ -364,11 +368,12 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template creation.
+     * Request to configure the default large staging disk EBS volume type during Replication Settings template
+     * creation.
      * </p>
      * 
      * @param defaultLargeStagingDiskType
-     *        Request to configure the Staging Disk EBS volume type to "gp2" during Replication Settings template
+     *        Request to configure the default large staging disk EBS volume type during Replication Settings template
      *        creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
@@ -382,11 +387,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure EBS enryption during Replication Settings template creation.
+     * Request to configure EBS encryption during Replication Settings template creation.
      * </p>
      * 
      * @param ebsEncryption
-     *        Request to configure EBS enryption during Replication Settings template creation.
+     *        Request to configure EBS encryption during Replication Settings template creation.
      * @see ReplicationConfigurationEbsEncryption
      */
 
@@ -396,10 +401,10 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure EBS enryption during Replication Settings template creation.
+     * Request to configure EBS encryption during Replication Settings template creation.
      * </p>
      * 
-     * @return Request to configure EBS enryption during Replication Settings template creation.
+     * @return Request to configure EBS encryption during Replication Settings template creation.
      * @see ReplicationConfigurationEbsEncryption
      */
 
@@ -409,11 +414,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure EBS enryption during Replication Settings template creation.
+     * Request to configure EBS encryption during Replication Settings template creation.
      * </p>
      * 
      * @param ebsEncryption
-     *        Request to configure EBS enryption during Replication Settings template creation.
+     *        Request to configure EBS encryption during Replication Settings template creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationConfigurationEbsEncryption
      */
@@ -425,11 +430,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure EBS enryption during Replication Settings template creation.
+     * Request to configure EBS encryption during Replication Settings template creation.
      * </p>
      * 
      * @param ebsEncryption
-     *        Request to configure EBS enryption during Replication Settings template creation.
+     *        Request to configure EBS encryption during Replication Settings template creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationConfigurationEbsEncryption
      */
@@ -441,11 +446,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure an EBS enryption key during Replication Settings template creation.
+     * Request to configure an EBS encryption key during Replication Settings template creation.
      * </p>
      * 
      * @param ebsEncryptionKeyArn
-     *        Request to configure an EBS enryption key during Replication Settings template creation.
+     *        Request to configure an EBS encryption key during Replication Settings template creation.
      */
 
     public void setEbsEncryptionKeyArn(String ebsEncryptionKeyArn) {
@@ -454,10 +459,10 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure an EBS enryption key during Replication Settings template creation.
+     * Request to configure an EBS encryption key during Replication Settings template creation.
      * </p>
      * 
-     * @return Request to configure an EBS enryption key during Replication Settings template creation.
+     * @return Request to configure an EBS encryption key during Replication Settings template creation.
      */
 
     public String getEbsEncryptionKeyArn() {
@@ -466,11 +471,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure an EBS enryption key during Replication Settings template creation.
+     * Request to configure an EBS encryption key during Replication Settings template creation.
      * </p>
      * 
      * @param ebsEncryptionKeyArn
-     *        Request to configure an EBS enryption key during Replication Settings template creation.
+     *        Request to configure an EBS encryption key during Replication Settings template creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -521,10 +526,10 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Replication Server Secuirity group ID during Replication Settings template creation.
+     * Request to configure the Replication Server Security group ID during Replication Settings template creation.
      * </p>
      * 
-     * @return Request to configure the Replication Server Secuirity group ID during Replication Settings template
+     * @return Request to configure the Replication Server Security group ID during Replication Settings template
      *         creation.
      */
 
@@ -534,11 +539,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Replication Server Secuirity group ID during Replication Settings template creation.
+     * Request to configure the Replication Server Security group ID during Replication Settings template creation.
      * </p>
      * 
      * @param replicationServersSecurityGroupsIDs
-     *        Request to configure the Replication Server Secuirity group ID during Replication Settings template
+     *        Request to configure the Replication Server Security group ID during Replication Settings template
      *        creation.
      */
 
@@ -553,7 +558,7 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Replication Server Secuirity group ID during Replication Settings template creation.
+     * Request to configure the Replication Server Security group ID during Replication Settings template creation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -563,7 +568,7 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
      * </p>
      * 
      * @param replicationServersSecurityGroupsIDs
-     *        Request to configure the Replication Server Secuirity group ID during Replication Settings template
+     *        Request to configure the Replication Server Security group ID during Replication Settings template
      *        creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -580,11 +585,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure the Replication Server Secuirity group ID during Replication Settings template creation.
+     * Request to configure the Replication Server Security group ID during Replication Settings template creation.
      * </p>
      * 
      * @param replicationServersSecurityGroupsIDs
-     *        Request to configure the Replication Server Secuirity group ID during Replication Settings template
+     *        Request to configure the Replication Server Security group ID during Replication Settings template
      *        creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -637,10 +642,10 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure Staiging Area tags during Replication Settings template creation.
+     * Request to configure Staging Area tags during Replication Settings template creation.
      * </p>
      * 
-     * @return Request to configure Staiging Area tags during Replication Settings template creation.
+     * @return Request to configure Staging Area tags during Replication Settings template creation.
      */
 
     public java.util.Map<String, String> getStagingAreaTags() {
@@ -649,11 +654,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure Staiging Area tags during Replication Settings template creation.
+     * Request to configure Staging Area tags during Replication Settings template creation.
      * </p>
      * 
      * @param stagingAreaTags
-     *        Request to configure Staiging Area tags during Replication Settings template creation.
+     *        Request to configure Staging Area tags during Replication Settings template creation.
      */
 
     public void setStagingAreaTags(java.util.Map<String, String> stagingAreaTags) {
@@ -662,11 +667,11 @@ public class CreateReplicationConfigurationTemplateRequest extends com.amazonaws
 
     /**
      * <p>
-     * Request to configure Staiging Area tags during Replication Settings template creation.
+     * Request to configure Staging Area tags during Replication Settings template creation.
      * </p>
      * 
      * @param stagingAreaTags
-     *        Request to configure Staiging Area tags during Replication Settings template creation.
+     *        Request to configure Staging Area tags during Replication Settings template creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

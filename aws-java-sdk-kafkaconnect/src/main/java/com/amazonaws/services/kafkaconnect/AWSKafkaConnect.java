@@ -158,6 +158,33 @@ public interface AWSKafkaConnect {
 
     /**
      * <p>
+     * Deletes a custom plugin.
+     * </p>
+     * 
+     * @param deleteCustomPluginRequest
+     * @return Result of the DeleteCustomPlugin operation returned by the service.
+     * @throws NotFoundException
+     *         HTTP Status Code 404: Resource not found due to incorrect input. Correct your request and then retry it.
+     * @throws BadRequestException
+     *         HTTP Status Code 400: Bad request due to incorrect input. Correct your request and then retry it.
+     * @throws ForbiddenException
+     *         HTTP Status Code 403: Access forbidden. Correct your credentials and then retry your request.
+     * @throws ServiceUnavailableException
+     *         HTTP Status Code 503: Service Unavailable. Retrying your request in some time might resolve the issue.
+     * @throws TooManyRequestsException
+     *         HTTP Status Code 429: Limit exceeded. Resource limit reached.
+     * @throws UnauthorizedException
+     *         HTTP Status Code 401: Unauthorized request. The provided credentials couldn't be validated.
+     * @throws InternalServerErrorException
+     *         HTTP Status Code 500: Unexpected internal server error. Retrying your request might resolve the issue.
+     * @sample AWSKafkaConnect.DeleteCustomPlugin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafkaconnect-2021-09-14/DeleteCustomPlugin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCustomPluginResult deleteCustomPlugin(DeleteCustomPluginRequest deleteCustomPluginRequest);
+
+    /**
+     * <p>
      * Returns summary information about the connector.
      * </p>
      * 

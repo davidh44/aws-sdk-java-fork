@@ -42,11 +42,6 @@ import javax.annotation.Generated;
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
  * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
  * </p>
- * <note>
- * <p>
- * The Multi-AZ DB clusters feature is in preview and is subject to change.
- * </p>
- * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DBCluster" target="_top">AWS API
  *      Documentation</a>

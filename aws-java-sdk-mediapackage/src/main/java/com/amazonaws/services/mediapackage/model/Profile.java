@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum Profile {
 
     NONE("NONE"),
-    HBBTV_1_5("HBBTV_1_5");
+    HBBTV_1_5("HBBTV_1_5"),
+    HYBRIDCAST("HYBRIDCAST");
 
     private String value;
 

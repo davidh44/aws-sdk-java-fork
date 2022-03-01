@@ -210,9 +210,6 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
@@ -1685,9 +1682,6 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
@@ -1695,9 +1689,6 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * 
      * @param supportsClusters
      *        Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
-     *        <p>
-     *        The Multi-AZ DB clusters feature is in preview and is subject to change.
-     *        </p>
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
@@ -1713,18 +1704,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @return Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
-     *         <p>
-     *         The Multi-AZ DB clusters feature is in preview and is subject to change.
-     *         </p>
      *         <p>
      *         For more information on Multi-AZ DB clusters, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
@@ -1740,9 +1725,6 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
@@ -1750,9 +1732,6 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * 
      * @param supportsClusters
      *        Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
-     *        <p>
-     *        The Multi-AZ DB clusters feature is in preview and is subject to change.
-     *        </p>
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
@@ -1770,18 +1749,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * Whether DB instances can be configured as a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @return Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
-     *         <p>
-     *         The Multi-AZ DB clusters feature is in preview and is subject to change.
-     *         </p>
      *         <p>
      *         For more information on Multi-AZ DB clusters, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">

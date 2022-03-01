@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateLaunchConfigurationRequestMarshaller {
 
+    private static final MarshallingInfo<String> BOOTMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("bootMode").build();
     private static final MarshallingInfo<Boolean> COPYPRIVATEIP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("copyPrivateIp").build();
     private static final MarshallingInfo<Boolean> COPYTAGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -58,6 +60,7 @@ public class UpdateLaunchConfigurationRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateLaunchConfigurationRequest.getBootMode(), BOOTMODE_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getCopyPrivateIp(), COPYPRIVATEIP_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getCopyTags(), COPYTAGS_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationRequest.getLaunchDisposition(), LAUNCHDISPOSITION_BINDING);

@@ -27,18 +27,18 @@ public class FinalizeCutoverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Request to finalize Cutover by Soure Server ID.
+     * Request to finalize Cutover by Source Server ID.
      * </p>
      */
     private String sourceServerID;
 
     /**
      * <p>
-     * Request to finalize Cutover by Soure Server ID.
+     * Request to finalize Cutover by Source Server ID.
      * </p>
      * 
      * @param sourceServerID
-     *        Request to finalize Cutover by Soure Server ID.
+     *        Request to finalize Cutover by Source Server ID.
      */
 
     public void setSourceServerID(String sourceServerID) {
@@ -47,10 +47,10 @@ public class FinalizeCutoverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Request to finalize Cutover by Soure Server ID.
+     * Request to finalize Cutover by Source Server ID.
      * </p>
      * 
-     * @return Request to finalize Cutover by Soure Server ID.
+     * @return Request to finalize Cutover by Source Server ID.
      */
 
     public String getSourceServerID() {
@@ -59,11 +59,11 @@ public class FinalizeCutoverRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Request to finalize Cutover by Soure Server ID.
+     * Request to finalize Cutover by Source Server ID.
      * </p>
      * 
      * @param sourceServerID
-     *        Request to finalize Cutover by Soure Server ID.
+     *        Request to finalize Cutover by Source Server ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

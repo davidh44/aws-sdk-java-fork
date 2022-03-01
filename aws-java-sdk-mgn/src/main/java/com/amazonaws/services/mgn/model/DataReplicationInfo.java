@@ -54,7 +54,7 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
     private String etaDateTime;
     /**
      * <p>
-     * Request to query data replication lag durating.
+     * Request to query data replication lag duration.
      * </p>
      */
     private String lagDuration;
@@ -252,11 +252,11 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Request to query data replication lag durating.
+     * Request to query data replication lag duration.
      * </p>
      * 
      * @param lagDuration
-     *        Request to query data replication lag durating.
+     *        Request to query data replication lag duration.
      */
 
     public void setLagDuration(String lagDuration) {
@@ -265,10 +265,10 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Request to query data replication lag durating.
+     * Request to query data replication lag duration.
      * </p>
      * 
-     * @return Request to query data replication lag durating.
+     * @return Request to query data replication lag duration.
      */
 
     public String getLagDuration() {
@@ -277,11 +277,11 @@ public class DataReplicationInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Request to query data replication lag durating.
+     * Request to query data replication lag duration.
      * </p>
      * 
      * @param lagDuration
-     *        Request to query data replication lag durating.
+     *        Request to query data replication lag duration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

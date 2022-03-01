@@ -25,6 +25,12 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
+     * Launch configuration boot mode.
+     * </p>
+     */
+    private String bootMode;
+    /**
+     * <p>
      * Copy Private IP during Launch Configuration.
      * </p>
      */
@@ -37,40 +43,99 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
     private Boolean copyTags;
     /**
      * <p>
-     * Configure EC2 lauch configuration template ID.
+     * Launch configuration EC2 Launch template ID.
      * </p>
      */
     private String ec2LaunchTemplateID;
     /**
      * <p>
-     * Configure launch dispostion for launch configuration.
+     * Launch disposition for launch configuration.
      * </p>
      */
     private String launchDisposition;
     /**
      * <p>
-     * Configure launch configuration OS licensing.
+     * Launch configuration OS licensing.
      * </p>
      */
     private Licensing licensing;
     /**
      * <p>
-     * Configure launch configuration name.
+     * Launch configuration name.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Configure launch configuration Source Server ID.
+     * Launch configuration Source Server ID.
      * </p>
      */
     private String sourceServerID;
     /**
      * <p>
-     * Configure launch configuration Target instance type right sizing method.
+     * Launch configuration Target instance type right sizing method.
      * </p>
      */
     private String targetInstanceTypeRightSizingMethod;
+
+    /**
+     * <p>
+     * Launch configuration boot mode.
+     * </p>
+     * 
+     * @param bootMode
+     *        Launch configuration boot mode.
+     * @see BootMode
+     */
+
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+    /**
+     * <p>
+     * Launch configuration boot mode.
+     * </p>
+     * 
+     * @return Launch configuration boot mode.
+     * @see BootMode
+     */
+
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    /**
+     * <p>
+     * Launch configuration boot mode.
+     * </p>
+     * 
+     * @param bootMode
+     *        Launch configuration boot mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootMode
+     */
+
+    public UpdateLaunchConfigurationResult withBootMode(String bootMode) {
+        setBootMode(bootMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Launch configuration boot mode.
+     * </p>
+     * 
+     * @param bootMode
+     *        Launch configuration boot mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootMode
+     */
+
+    public UpdateLaunchConfigurationResult withBootMode(BootMode bootMode) {
+        this.bootMode = bootMode.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -178,11 +243,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure EC2 lauch configuration template ID.
+     * Launch configuration EC2 Launch template ID.
      * </p>
      * 
      * @param ec2LaunchTemplateID
-     *        Configure EC2 lauch configuration template ID.
+     *        Launch configuration EC2 Launch template ID.
      */
 
     public void setEc2LaunchTemplateID(String ec2LaunchTemplateID) {
@@ -191,10 +256,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure EC2 lauch configuration template ID.
+     * Launch configuration EC2 Launch template ID.
      * </p>
      * 
-     * @return Configure EC2 lauch configuration template ID.
+     * @return Launch configuration EC2 Launch template ID.
      */
 
     public String getEc2LaunchTemplateID() {
@@ -203,11 +268,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure EC2 lauch configuration template ID.
+     * Launch configuration EC2 Launch template ID.
      * </p>
      * 
      * @param ec2LaunchTemplateID
-     *        Configure EC2 lauch configuration template ID.
+     *        Launch configuration EC2 Launch template ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +283,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch dispostion for launch configuration.
+     * Launch disposition for launch configuration.
      * </p>
      * 
      * @param launchDisposition
-     *        Configure launch dispostion for launch configuration.
+     *        Launch disposition for launch configuration.
      * @see LaunchDisposition
      */
 
@@ -232,10 +297,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch dispostion for launch configuration.
+     * Launch disposition for launch configuration.
      * </p>
      * 
-     * @return Configure launch dispostion for launch configuration.
+     * @return Launch disposition for launch configuration.
      * @see LaunchDisposition
      */
 
@@ -245,11 +310,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch dispostion for launch configuration.
+     * Launch disposition for launch configuration.
      * </p>
      * 
      * @param launchDisposition
-     *        Configure launch dispostion for launch configuration.
+     *        Launch disposition for launch configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LaunchDisposition
      */
@@ -261,11 +326,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch dispostion for launch configuration.
+     * Launch disposition for launch configuration.
      * </p>
      * 
      * @param launchDisposition
-     *        Configure launch dispostion for launch configuration.
+     *        Launch disposition for launch configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LaunchDisposition
      */
@@ -277,11 +342,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration OS licensing.
+     * Launch configuration OS licensing.
      * </p>
      * 
      * @param licensing
-     *        Configure launch configuration OS licensing.
+     *        Launch configuration OS licensing.
      */
 
     public void setLicensing(Licensing licensing) {
@@ -290,10 +355,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration OS licensing.
+     * Launch configuration OS licensing.
      * </p>
      * 
-     * @return Configure launch configuration OS licensing.
+     * @return Launch configuration OS licensing.
      */
 
     public Licensing getLicensing() {
@@ -302,11 +367,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration OS licensing.
+     * Launch configuration OS licensing.
      * </p>
      * 
      * @param licensing
-     *        Configure launch configuration OS licensing.
+     *        Launch configuration OS licensing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -317,11 +382,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration name.
+     * Launch configuration name.
      * </p>
      * 
      * @param name
-     *        Configure launch configuration name.
+     *        Launch configuration name.
      */
 
     public void setName(String name) {
@@ -330,10 +395,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration name.
+     * Launch configuration name.
      * </p>
      * 
-     * @return Configure launch configuration name.
+     * @return Launch configuration name.
      */
 
     public String getName() {
@@ -342,11 +407,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration name.
+     * Launch configuration name.
      * </p>
      * 
      * @param name
-     *        Configure launch configuration name.
+     *        Launch configuration name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,11 +422,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Source Server ID.
+     * Launch configuration Source Server ID.
      * </p>
      * 
      * @param sourceServerID
-     *        Configure launch configuration Source Server ID.
+     *        Launch configuration Source Server ID.
      */
 
     public void setSourceServerID(String sourceServerID) {
@@ -370,10 +435,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Source Server ID.
+     * Launch configuration Source Server ID.
      * </p>
      * 
-     * @return Configure launch configuration Source Server ID.
+     * @return Launch configuration Source Server ID.
      */
 
     public String getSourceServerID() {
@@ -382,11 +447,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Source Server ID.
+     * Launch configuration Source Server ID.
      * </p>
      * 
      * @param sourceServerID
-     *        Configure launch configuration Source Server ID.
+     *        Launch configuration Source Server ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -397,11 +462,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Target instance type right sizing method.
+     * Launch configuration Target instance type right sizing method.
      * </p>
      * 
      * @param targetInstanceTypeRightSizingMethod
-     *        Configure launch configuration Target instance type right sizing method.
+     *        Launch configuration Target instance type right sizing method.
      * @see TargetInstanceTypeRightSizingMethod
      */
 
@@ -411,10 +476,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Target instance type right sizing method.
+     * Launch configuration Target instance type right sizing method.
      * </p>
      * 
-     * @return Configure launch configuration Target instance type right sizing method.
+     * @return Launch configuration Target instance type right sizing method.
      * @see TargetInstanceTypeRightSizingMethod
      */
 
@@ -424,11 +489,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Target instance type right sizing method.
+     * Launch configuration Target instance type right sizing method.
      * </p>
      * 
      * @param targetInstanceTypeRightSizingMethod
-     *        Configure launch configuration Target instance type right sizing method.
+     *        Launch configuration Target instance type right sizing method.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetInstanceTypeRightSizingMethod
      */
@@ -440,11 +505,11 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Configure launch configuration Target instance type right sizing method.
+     * Launch configuration Target instance type right sizing method.
      * </p>
      * 
      * @param targetInstanceTypeRightSizingMethod
-     *        Configure launch configuration Target instance type right sizing method.
+     *        Launch configuration Target instance type right sizing method.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetInstanceTypeRightSizingMethod
      */
@@ -466,6 +531,8 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getBootMode() != null)
+            sb.append("BootMode: ").append(getBootMode()).append(",");
         if (getCopyPrivateIp() != null)
             sb.append("CopyPrivateIp: ").append(getCopyPrivateIp()).append(",");
         if (getCopyTags() != null)
@@ -496,6 +563,10 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
         if (obj instanceof UpdateLaunchConfigurationResult == false)
             return false;
         UpdateLaunchConfigurationResult other = (UpdateLaunchConfigurationResult) obj;
+        if (other.getBootMode() == null ^ this.getBootMode() == null)
+            return false;
+        if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
+            return false;
         if (other.getCopyPrivateIp() == null ^ this.getCopyPrivateIp() == null)
             return false;
         if (other.getCopyPrivateIp() != null && other.getCopyPrivateIp().equals(this.getCopyPrivateIp()) == false)
@@ -537,6 +608,7 @@ public class UpdateLaunchConfigurationResult extends com.amazonaws.AmazonWebServ
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
         hashCode = prime * hashCode + ((getCopyPrivateIp() == null) ? 0 : getCopyPrivateIp().hashCode());
         hashCode = prime * hashCode + ((getCopyTags() == null) ? 0 : getCopyTags().hashCode());
         hashCode = prime * hashCode + ((getEc2LaunchTemplateID() == null) ? 0 : getEc2LaunchTemplateID().hashCode());

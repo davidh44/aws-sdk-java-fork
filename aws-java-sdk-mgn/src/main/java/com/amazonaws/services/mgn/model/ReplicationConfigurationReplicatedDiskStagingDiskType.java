@@ -25,7 +25,9 @@ public enum ReplicationConfigurationReplicatedDiskStagingDiskType {
     IO1("IO1"),
     SC1("SC1"),
     ST1("ST1"),
-    STANDARD("STANDARD");
+    STANDARD("STANDARD"),
+    GP3("GP3"),
+    IO2("IO2");
 
     private String value;
 

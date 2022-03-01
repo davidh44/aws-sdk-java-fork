@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Unitialized account exception.
+ * Uninitialized account exception.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

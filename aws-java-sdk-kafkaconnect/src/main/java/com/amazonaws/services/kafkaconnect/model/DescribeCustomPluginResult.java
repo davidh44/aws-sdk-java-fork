@@ -60,6 +60,12 @@ public class DescribeCustomPluginResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Details about the state of a custom plugin.
+     * </p>
+     */
+    private StateDescription stateDescription;
 
     /**
      * <p>
@@ -327,6 +333,46 @@ public class DescribeCustomPluginResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Details about the state of a custom plugin.
+     * </p>
+     * 
+     * @param stateDescription
+     *        Details about the state of a custom plugin.
+     */
+
+    public void setStateDescription(StateDescription stateDescription) {
+        this.stateDescription = stateDescription;
+    }
+
+    /**
+     * <p>
+     * Details about the state of a custom plugin.
+     * </p>
+     * 
+     * @return Details about the state of a custom plugin.
+     */
+
+    public StateDescription getStateDescription() {
+        return this.stateDescription;
+    }
+
+    /**
+     * <p>
+     * Details about the state of a custom plugin.
+     * </p>
+     * 
+     * @param stateDescription
+     *        Details about the state of a custom plugin.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeCustomPluginResult withStateDescription(StateDescription stateDescription) {
+        setStateDescription(stateDescription);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -349,7 +395,9 @@ public class DescribeCustomPluginResult extends com.amazonaws.AmazonWebServiceRe
         if (getLatestRevision() != null)
             sb.append("LatestRevision: ").append(getLatestRevision()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getStateDescription() != null)
+            sb.append("StateDescription: ").append(getStateDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -388,6 +436,10 @@ public class DescribeCustomPluginResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getStateDescription() == null ^ this.getStateDescription() == null)
+            return false;
+        if (other.getStateDescription() != null && other.getStateDescription().equals(this.getStateDescription()) == false)
+            return false;
         return true;
     }
 
@@ -402,6 +454,7 @@ public class DescribeCustomPluginResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getLatestRevision() == null) ? 0 : getLatestRevision().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getStateDescription() == null) ? 0 : getStateDescription().hashCode());
         return hashCode;
     }
 

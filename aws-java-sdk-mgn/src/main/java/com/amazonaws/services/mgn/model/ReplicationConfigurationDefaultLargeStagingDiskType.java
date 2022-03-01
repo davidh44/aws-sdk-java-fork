@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ReplicationConfigurationDefaultLargeStagingDiskType {
 
     GP2("GP2"),
-    ST1("ST1");
+    ST1("ST1"),
+    GP3("GP3");
 
     private String value;
 

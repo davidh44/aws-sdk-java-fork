@@ -230,7 +230,7 @@ public class WorkerConfigurationRevisionDescription implements Serializable, Clo
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getPropertiesFileContent() != null)
-            sb.append("PropertiesFileContent: ").append(getPropertiesFileContent()).append(",");
+            sb.append("PropertiesFileContent: ").append("***Sensitive Data Redacted***").append(",");
         if (getRevision() != null)
             sb.append("Revision: ").append(getRevision());
         sb.append("}");

@@ -64,6 +64,10 @@ public class ReplicationConfigurationReplicatedDiskJsonUnmarshaller implements U
                     context.nextToken();
                     replicationConfigurationReplicatedDisk.setStagingDiskType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("throughput", targetDepth)) {
+                    context.nextToken();
+                    replicationConfigurationReplicatedDisk.setThroughput(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

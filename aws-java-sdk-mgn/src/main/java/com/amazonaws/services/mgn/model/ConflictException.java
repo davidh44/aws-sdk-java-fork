@@ -26,13 +26,13 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
     private String code;
     /**
      * <p>
-     * A conflict occured when prompting for the Resource ID.
+     * A conflict occurred when prompting for the Resource ID.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * A conflict occured when prompting for resource type.
+     * A conflict occurred when prompting for resource type.
      * </p>
      */
     private String resourceType;
@@ -77,11 +77,11 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
 
     /**
      * <p>
-     * A conflict occured when prompting for the Resource ID.
+     * A conflict occurred when prompting for the Resource ID.
      * </p>
      * 
      * @param resourceId
-     *        A conflict occured when prompting for the Resource ID.
+     *        A conflict occurred when prompting for the Resource ID.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceId")
@@ -91,10 +91,10 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
 
     /**
      * <p>
-     * A conflict occured when prompting for the Resource ID.
+     * A conflict occurred when prompting for the Resource ID.
      * </p>
      * 
-     * @return A conflict occured when prompting for the Resource ID.
+     * @return A conflict occurred when prompting for the Resource ID.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceId")
@@ -104,11 +104,11 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
 
     /**
      * <p>
-     * A conflict occured when prompting for the Resource ID.
+     * A conflict occurred when prompting for the Resource ID.
      * </p>
      * 
      * @param resourceId
-     *        A conflict occured when prompting for the Resource ID.
+     *        A conflict occurred when prompting for the Resource ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,11 +119,11 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
 
     /**
      * <p>
-     * A conflict occured when prompting for resource type.
+     * A conflict occurred when prompting for resource type.
      * </p>
      * 
      * @param resourceType
-     *        A conflict occured when prompting for resource type.
+     *        A conflict occurred when prompting for resource type.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceType")
@@ -133,10 +133,10 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
 
     /**
      * <p>
-     * A conflict occured when prompting for resource type.
+     * A conflict occurred when prompting for resource type.
      * </p>
      * 
-     * @return A conflict occured when prompting for resource type.
+     * @return A conflict occurred when prompting for resource type.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceType")
@@ -146,11 +146,11 @@ public class ConflictException extends com.amazonaws.services.mgn.model.AWSmgnEx
 
     /**
      * <p>
-     * A conflict occured when prompting for resource type.
+     * A conflict occurred when prompting for resource type.
      * </p>
      * 
      * @param resourceType
-     *        A conflict occured when prompting for resource type.
+     *        A conflict occurred when prompting for resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

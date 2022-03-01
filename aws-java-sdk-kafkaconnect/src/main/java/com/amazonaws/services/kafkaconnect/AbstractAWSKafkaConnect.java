@@ -48,6 +48,11 @@ public class AbstractAWSKafkaConnect implements AWSKafkaConnect {
     }
 
     @Override
+    public DeleteCustomPluginResult deleteCustomPlugin(DeleteCustomPluginRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeConnectorResult describeConnector(DescribeConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

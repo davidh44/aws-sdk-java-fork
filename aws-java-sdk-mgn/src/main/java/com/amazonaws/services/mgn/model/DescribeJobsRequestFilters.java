@@ -42,7 +42,7 @@ public class DescribeJobsRequestFilters implements Serializable, Cloneable, Stru
     private java.util.List<String> jobIDs;
     /**
      * <p>
-     * Request to describe Job log by last date.
+     * Request to describe job log items by last date.
      * </p>
      */
     private String toDate;
@@ -159,11 +159,11 @@ public class DescribeJobsRequestFilters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Request to describe Job log by last date.
+     * Request to describe job log items by last date.
      * </p>
      * 
      * @param toDate
-     *        Request to describe Job log by last date.
+     *        Request to describe job log items by last date.
      */
 
     public void setToDate(String toDate) {
@@ -172,10 +172,10 @@ public class DescribeJobsRequestFilters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Request to describe Job log by last date.
+     * Request to describe job log items by last date.
      * </p>
      * 
-     * @return Request to describe Job log by last date.
+     * @return Request to describe job log items by last date.
      */
 
     public String getToDate() {
@@ -184,11 +184,11 @@ public class DescribeJobsRequestFilters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Request to describe Job log by last date.
+     * Request to describe job log items by last date.
      * </p>
      * 
      * @param toDate
-     *        Request to describe Job log by last date.
+     *        Request to describe job log items by last date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

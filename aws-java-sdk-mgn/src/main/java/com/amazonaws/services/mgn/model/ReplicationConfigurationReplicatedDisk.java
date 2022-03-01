@@ -52,6 +52,12 @@ public class ReplicationConfigurationReplicatedDisk implements Serializable, Clo
      * </p>
      */
     private String stagingDiskType;
+    /**
+     * <p>
+     * Replication Configuration replicated disk throughput.
+     * </p>
+     */
+    private Long throughput;
 
     /**
      * <p>
@@ -245,6 +251,46 @@ public class ReplicationConfigurationReplicatedDisk implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * Replication Configuration replicated disk throughput.
+     * </p>
+     * 
+     * @param throughput
+     *        Replication Configuration replicated disk throughput.
+     */
+
+    public void setThroughput(Long throughput) {
+        this.throughput = throughput;
+    }
+
+    /**
+     * <p>
+     * Replication Configuration replicated disk throughput.
+     * </p>
+     * 
+     * @return Replication Configuration replicated disk throughput.
+     */
+
+    public Long getThroughput() {
+        return this.throughput;
+    }
+
+    /**
+     * <p>
+     * Replication Configuration replicated disk throughput.
+     * </p>
+     * 
+     * @param throughput
+     *        Replication Configuration replicated disk throughput.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicationConfigurationReplicatedDisk withThroughput(Long throughput) {
+        setThroughput(throughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -263,7 +309,9 @@ public class ReplicationConfigurationReplicatedDisk implements Serializable, Clo
         if (getIsBootDisk() != null)
             sb.append("IsBootDisk: ").append(getIsBootDisk()).append(",");
         if (getStagingDiskType() != null)
-            sb.append("StagingDiskType: ").append(getStagingDiskType());
+            sb.append("StagingDiskType: ").append(getStagingDiskType()).append(",");
+        if (getThroughput() != null)
+            sb.append("Throughput: ").append(getThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -294,6 +342,10 @@ public class ReplicationConfigurationReplicatedDisk implements Serializable, Clo
             return false;
         if (other.getStagingDiskType() != null && other.getStagingDiskType().equals(this.getStagingDiskType()) == false)
             return false;
+        if (other.getThroughput() == null ^ this.getThroughput() == null)
+            return false;
+        if (other.getThroughput() != null && other.getThroughput().equals(this.getThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -306,6 +358,7 @@ public class ReplicationConfigurationReplicatedDisk implements Serializable, Clo
         hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode());
         hashCode = prime * hashCode + ((getIsBootDisk() == null) ? 0 : getIsBootDisk().hashCode());
         hashCode = prime * hashCode + ((getStagingDiskType() == null) ? 0 : getStagingDiskType().hashCode());
+        hashCode = prime * hashCode + ((getThroughput() == null) ? 0 : getThroughput().hashCode());
         return hashCode;
     }
 

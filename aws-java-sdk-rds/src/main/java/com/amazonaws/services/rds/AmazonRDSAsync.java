@@ -579,11 +579,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param copyDBClusterSnapshotRequest
      * @return A Java Future containing the result of the CopyDBClusterSnapshot operation returned by the service.
@@ -699,11 +694,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param copyDBClusterSnapshotRequest
      * @param asyncHandler
@@ -1033,11 +1023,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterRequest
      * @return A Java Future containing the result of the CreateDBCluster operation returned by the service.
@@ -1067,11 +1052,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterRequest
      * @param asyncHandler
@@ -1170,11 +1150,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterParameterGroupRequest
      * @return A Java Future containing the result of the CreateDBClusterParameterGroup operation returned by the
@@ -1229,11 +1204,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterParameterGroupRequest
      * @param asyncHandler
@@ -1264,11 +1234,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterSnapshotRequest
      * @return A Java Future containing the result of the CreateDBClusterSnapshot operation returned by the service.
@@ -1292,11 +1257,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param createDBClusterSnapshotRequest
      * @param asyncHandler
@@ -1982,11 +1942,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterRequest
      * @return A Java Future containing the result of the DeleteDBCluster operation returned by the service.
@@ -2012,11 +1967,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterRequest
      * @param asyncHandler
@@ -2087,11 +2037,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterParameterGroupRequest
      * @return A Java Future containing the result of the DeleteDBClusterParameterGroup operation returned by the
@@ -2118,11 +2063,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterParameterGroupRequest
      * @param asyncHandler
@@ -2158,11 +2098,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterSnapshotRequest
      * @return A Java Future containing the result of the DeleteDBClusterSnapshot operation returned by the service.
@@ -2191,11 +2126,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param deleteDBClusterSnapshotRequest
      * @param asyncHandler
@@ -3006,11 +2936,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterParameterGroupsRequest
      * @return A Java Future containing the result of the DescribeDBClusterParameterGroups operation returned by the
@@ -3038,11 +2963,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterParameterGroupsRequest
      * @param asyncHandler
@@ -3089,11 +3009,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterParametersRequest
      * @return A Java Future containing the result of the DescribeDBClusterParameters operation returned by the service.
@@ -3118,11 +3033,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterParametersRequest
      * @param asyncHandler
@@ -3211,11 +3121,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterSnapshotsRequest
      * @return A Java Future containing the result of the DescribeDBClusterSnapshots operation returned by the service.
@@ -3240,11 +3145,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param describeDBClusterSnapshotsRequest
      * @param asyncHandler
@@ -3289,11 +3189,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * <p>
      * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB instances.
      * </p>
@@ -3320,11 +3215,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * <p>
      * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB instances.
      * </p>
@@ -4760,11 +4650,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param failoverDBClusterRequest
      * @return A Java Future containing the result of the FailoverDBCluster operation returned by the service.
@@ -4806,11 +4691,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param failoverDBClusterRequest
      * @param asyncHandler
@@ -5246,11 +5126,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param modifyDBClusterRequest
      * @return A Java Future containing the result of the ModifyDBCluster operation returned by the service.
@@ -5275,11 +5150,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param modifyDBClusterRequest
      * @param asyncHandler
@@ -5368,11 +5238,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param modifyDBClusterParameterGroupRequest
      * @return A Java Future containing the result of the ModifyDBClusterParameterGroup operation returned by the
@@ -5417,11 +5282,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param modifyDBClusterParameterGroupRequest
      * @param asyncHandler
@@ -6120,8 +5980,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * outage, during which the DB cluster status is set to rebooting.
      * </p>
      * <p>
-     * Use this operation only for a non-Aurora Multi-AZ DB cluster. The Multi-AZ DB clusters feature is in preview and
-     * is subject to change.
+     * Use this operation only for a non-Aurora Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6148,8 +6007,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * outage, during which the DB cluster status is set to rebooting.
      * </p>
      * <p>
-     * Use this operation only for a non-Aurora Multi-AZ DB cluster. The Multi-AZ DB clusters feature is in preview and
-     * is subject to change.
+     * Use this operation only for a non-Aurora Multi-AZ DB cluster.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6319,11 +6177,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param removeRoleFromDBClusterRequest
      * @return A Java Future containing the result of the RemoveRoleFromDBCluster operation returned by the service.
@@ -6347,11 +6200,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param removeRoleFromDBClusterRequest
      * @param asyncHandler
@@ -6496,11 +6344,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param resetDBClusterParameterGroupRequest
      * @return A Java Future containing the result of the ResetDBClusterParameterGroup operation returned by the
@@ -6535,11 +6378,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param resetDBClusterParameterGroupRequest
      * @param asyncHandler
@@ -6698,11 +6536,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param restoreDBClusterFromSnapshotRequest
      * @return A Java Future containing the result of the RestoreDBClusterFromSnapshot operation returned by the
@@ -6739,11 +6572,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param restoreDBClusterFromSnapshotRequest
      * @param asyncHandler
@@ -6784,11 +6612,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param restoreDBClusterToPointInTimeRequest
      * @return A Java Future containing the result of the RestoreDBClusterToPointInTime operation returned by the
@@ -6824,11 +6647,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
      * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
-     * <note>
-     * <p>
-     * The Multi-AZ DB clusters feature is in preview and is subject to change.
-     * </p>
-     * </note>
      * 
      * @param restoreDBClusterToPointInTimeRequest
      * @param asyncHandler

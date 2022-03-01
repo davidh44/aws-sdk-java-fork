@@ -71,7 +71,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * Tags associated with spcific Job.
+     * Tags associated with specific Job.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -432,10 +432,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Tags associated with spcific Job.
+     * Tags associated with specific Job.
      * </p>
      * 
-     * @return Tags associated with spcific Job.
+     * @return Tags associated with specific Job.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -444,11 +444,11 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Tags associated with spcific Job.
+     * Tags associated with specific Job.
      * </p>
      * 
      * @param tags
-     *        Tags associated with spcific Job.
+     *        Tags associated with specific Job.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -457,11 +457,11 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Tags associated with spcific Job.
+     * Tags associated with specific Job.
      * </p>
      * 
      * @param tags
-     *        Tags associated with spcific Job.
+     *        Tags associated with specific Job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

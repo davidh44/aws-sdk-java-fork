@@ -30,7 +30,7 @@ public class LifeCycleLastTest implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lifecycle last Test finlized.
+     * Lifecycle last Test finalized.
      * </p>
      */
     private LifeCycleLastTestFinalized finalized;
@@ -49,11 +49,11 @@ public class LifeCycleLastTest implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lifecycle last Test finlized.
+     * Lifecycle last Test finalized.
      * </p>
      * 
      * @param finalized
-     *        Lifecycle last Test finlized.
+     *        Lifecycle last Test finalized.
      */
 
     public void setFinalized(LifeCycleLastTestFinalized finalized) {
@@ -62,10 +62,10 @@ public class LifeCycleLastTest implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lifecycle last Test finlized.
+     * Lifecycle last Test finalized.
      * </p>
      * 
-     * @return Lifecycle last Test finlized.
+     * @return Lifecycle last Test finalized.
      */
 
     public LifeCycleLastTestFinalized getFinalized() {
@@ -74,11 +74,11 @@ public class LifeCycleLastTest implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Lifecycle last Test finlized.
+     * Lifecycle last Test finalized.
      * </p>
      * 
      * @param finalized
-     *        Lifecycle last Test finlized.
+     *        Lifecycle last Test finalized.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

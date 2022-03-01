@@ -32,7 +32,7 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.mgn.mo
     private String quotaCode;
     /**
      * <p>
-     * Exceeded the service quota resource Id.
+     * Exceeded the service quota resource ID.
      * </p>
      */
     private String resourceId;
@@ -131,11 +131,11 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.mgn.mo
 
     /**
      * <p>
-     * Exceeded the service quota resource Id.
+     * Exceeded the service quota resource ID.
      * </p>
      * 
      * @param resourceId
-     *        Exceeded the service quota resource Id.
+     *        Exceeded the service quota resource ID.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceId")
@@ -145,10 +145,10 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.mgn.mo
 
     /**
      * <p>
-     * Exceeded the service quota resource Id.
+     * Exceeded the service quota resource ID.
      * </p>
      * 
-     * @return Exceeded the service quota resource Id.
+     * @return Exceeded the service quota resource ID.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceId")
@@ -158,11 +158,11 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.mgn.mo
 
     /**
      * <p>
-     * Exceeded the service quota resource Id.
+     * Exceeded the service quota resource ID.
      * </p>
      * 
      * @param resourceId
-     *        Exceeded the service quota resource Id.
+     *        Exceeded the service quota resource ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

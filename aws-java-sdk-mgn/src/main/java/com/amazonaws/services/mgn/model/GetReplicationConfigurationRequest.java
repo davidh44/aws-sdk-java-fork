@@ -27,18 +27,18 @@ public class GetReplicationConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Request to get Replication Configuaration by Source Server ID.
+     * Request to get Replication Configuration by Source Server ID.
      * </p>
      */
     private String sourceServerID;
 
     /**
      * <p>
-     * Request to get Replication Configuaration by Source Server ID.
+     * Request to get Replication Configuration by Source Server ID.
      * </p>
      * 
      * @param sourceServerID
-     *        Request to get Replication Configuaration by Source Server ID.
+     *        Request to get Replication Configuration by Source Server ID.
      */
 
     public void setSourceServerID(String sourceServerID) {
@@ -47,10 +47,10 @@ public class GetReplicationConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Request to get Replication Configuaration by Source Server ID.
+     * Request to get Replication Configuration by Source Server ID.
      * </p>
      * 
-     * @return Request to get Replication Configuaration by Source Server ID.
+     * @return Request to get Replication Configuration by Source Server ID.
      */
 
     public String getSourceServerID() {
@@ -59,11 +59,11 @@ public class GetReplicationConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Request to get Replication Configuaration by Source Server ID.
+     * Request to get Replication Configuration by Source Server ID.
      * </p>
      * 
      * @param sourceServerID
-     *        Request to get Replication Configuaration by Source Server ID.
+     *        Request to get Replication Configuration by Source Server ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -204,6 +204,39 @@ public class AWSKafkaConnectAsyncClient extends AWSKafkaConnectClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteCustomPluginResult> deleteCustomPluginAsync(DeleteCustomPluginRequest request) {
+
+        return deleteCustomPluginAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomPluginResult> deleteCustomPluginAsync(final DeleteCustomPluginRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCustomPluginRequest, DeleteCustomPluginResult> asyncHandler) {
+        final DeleteCustomPluginRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCustomPluginResult>() {
+            @Override
+            public DeleteCustomPluginResult call() throws Exception {
+                DeleteCustomPluginResult result = null;
+
+                try {
+                    result = executeDeleteCustomPlugin(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest request) {
 
         return describeConnectorAsync(request, null);

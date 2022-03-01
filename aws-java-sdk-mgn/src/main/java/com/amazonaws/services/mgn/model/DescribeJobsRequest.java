@@ -33,13 +33,13 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private DescribeJobsRequestFilters filters;
     /**
      * <p>
-     * Request to describe Job log by max results.
+     * Request to describe job log items by max results.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * Request to describe Job logby next token.
+     * Request to describe job log items by next token.
      * </p>
      */
     private String nextToken;
@@ -86,11 +86,11 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Request to describe Job log by max results.
+     * Request to describe job log items by max results.
      * </p>
      * 
      * @param maxResults
-     *        Request to describe Job log by max results.
+     *        Request to describe job log items by max results.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -99,10 +99,10 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Request to describe Job log by max results.
+     * Request to describe job log items by max results.
      * </p>
      * 
-     * @return Request to describe Job log by max results.
+     * @return Request to describe job log items by max results.
      */
 
     public Integer getMaxResults() {
@@ -111,11 +111,11 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Request to describe Job log by max results.
+     * Request to describe job log items by max results.
      * </p>
      * 
      * @param maxResults
-     *        Request to describe Job log by max results.
+     *        Request to describe job log items by max results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Request to describe Job logby next token.
+     * Request to describe job log items by next token.
      * </p>
      * 
      * @param nextToken
-     *        Request to describe Job logby next token.
+     *        Request to describe job log items by next token.
      */
 
     public void setNextToken(String nextToken) {
@@ -139,10 +139,10 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Request to describe Job logby next token.
+     * Request to describe job log items by next token.
      * </p>
      * 
-     * @return Request to describe Job logby next token.
+     * @return Request to describe job log items by next token.
      */
 
     public String getNextToken() {
@@ -151,11 +151,11 @@ public class DescribeJobsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Request to describe Job logby next token.
+     * Request to describe job log items by next token.
      * </p>
      * 
      * @param nextToken
-     *        Request to describe Job logby next token.
+     *        Request to describe job log items by next token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

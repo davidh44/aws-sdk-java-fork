@@ -1,3 +1,20 @@
+# __1.12.169__ __2022-03-01__
+## __AWS Elemental MediaPackage__
+  - ### Features
+    - This release adds Hybridcast as an available profile option for Dash Origin Endpoints.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Documentation updates for Multi-AZ DB clusters.
+
+## __Application Migration Service__
+  - ### Features
+    - Add support for GP3 and IO2 volume types. Add bootMode to LaunchConfiguration object (and as a parameter to UpdateLaunchConfigurationRequest).
+
+## __Managed Streaming for Kafka Connect__
+  - ### Features
+    - Adds operation for custom plugin deletion (DeleteCustomPlugin) and adds new StateDescription field to DescribeCustomPlugin and DescribeConnector responses to return errors from asynchronous resource creation.
+
 # __1.12.168__ __2022-02-28__
 ## __AWS Amplify__
   - ### Features

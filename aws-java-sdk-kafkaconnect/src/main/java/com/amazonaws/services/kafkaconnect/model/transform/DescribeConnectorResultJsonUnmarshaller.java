@@ -113,6 +113,10 @@ public class DescribeConnectorResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeConnectorResult.setServiceExecutionRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("stateDescription", targetDepth)) {
+                    context.nextToken();
+                    describeConnectorResult.setStateDescription(StateDescriptionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("workerConfiguration", targetDepth)) {
                     context.nextToken();
                     describeConnectorResult.setWorkerConfiguration(WorkerConfigurationDescriptionJsonUnmarshaller.getInstance().unmarshall(context));

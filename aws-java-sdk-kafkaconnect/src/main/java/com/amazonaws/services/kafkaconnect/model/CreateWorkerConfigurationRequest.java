@@ -181,7 +181,7 @@ public class CreateWorkerConfigurationRequest extends com.amazonaws.AmazonWebSer
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getPropertiesFileContent() != null)
-            sb.append("PropertiesFileContent: ").append(getPropertiesFileContent());
+            sb.append("PropertiesFileContent: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

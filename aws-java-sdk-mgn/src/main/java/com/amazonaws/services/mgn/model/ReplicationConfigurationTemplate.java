@@ -39,7 +39,7 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
     private Boolean associateDefaultSecurityGroup;
     /**
      * <p>
-     * Replication Configuration template bandwidth throtting.
+     * Replication Configuration template bandwidth throttling.
      * </p>
      */
     private Long bandwidthThrottling;
@@ -57,7 +57,7 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
     private String dataPlaneRouting;
     /**
      * <p>
-     * Replication Configuration template use dedault large Staging Disk type.
+     * Replication Configuration template use default large Staging Disk type.
      * </p>
      */
     private String defaultLargeStagingDiskType;
@@ -75,7 +75,7 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
     private String ebsEncryptionKeyArn;
     /**
      * <p>
-     * Replication Configuration template template ID.
+     * Replication Configuration template ID.
      * </p>
      */
     private String replicationConfigurationTemplateID;
@@ -210,11 +210,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template bandwidth throtting.
+     * Replication Configuration template bandwidth throttling.
      * </p>
      * 
      * @param bandwidthThrottling
-     *        Replication Configuration template bandwidth throtting.
+     *        Replication Configuration template bandwidth throttling.
      */
 
     public void setBandwidthThrottling(Long bandwidthThrottling) {
@@ -223,10 +223,10 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template bandwidth throtting.
+     * Replication Configuration template bandwidth throttling.
      * </p>
      * 
-     * @return Replication Configuration template bandwidth throtting.
+     * @return Replication Configuration template bandwidth throttling.
      */
 
     public Long getBandwidthThrottling() {
@@ -235,11 +235,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template bandwidth throtting.
+     * Replication Configuration template bandwidth throttling.
      * </p>
      * 
      * @param bandwidthThrottling
-     *        Replication Configuration template bandwidth throtting.
+     *        Replication Configuration template bandwidth throttling.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,11 +361,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template use dedault large Staging Disk type.
+     * Replication Configuration template use default large Staging Disk type.
      * </p>
      * 
      * @param defaultLargeStagingDiskType
-     *        Replication Configuration template use dedault large Staging Disk type.
+     *        Replication Configuration template use default large Staging Disk type.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
      */
 
@@ -375,10 +375,10 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template use dedault large Staging Disk type.
+     * Replication Configuration template use default large Staging Disk type.
      * </p>
      * 
-     * @return Replication Configuration template use dedault large Staging Disk type.
+     * @return Replication Configuration template use default large Staging Disk type.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
      */
 
@@ -388,11 +388,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template use dedault large Staging Disk type.
+     * Replication Configuration template use default large Staging Disk type.
      * </p>
      * 
      * @param defaultLargeStagingDiskType
-     *        Replication Configuration template use dedault large Staging Disk type.
+     *        Replication Configuration template use default large Staging Disk type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
      */
@@ -404,11 +404,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template use dedault large Staging Disk type.
+     * Replication Configuration template use default large Staging Disk type.
      * </p>
      * 
      * @param defaultLargeStagingDiskType
-     *        Replication Configuration template use dedault large Staging Disk type.
+     *        Replication Configuration template use default large Staging Disk type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationConfigurationDefaultLargeStagingDiskType
      */
@@ -519,11 +519,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template template ID.
+     * Replication Configuration template ID.
      * </p>
      * 
      * @param replicationConfigurationTemplateID
-     *        Replication Configuration template template ID.
+     *        Replication Configuration template ID.
      */
 
     public void setReplicationConfigurationTemplateID(String replicationConfigurationTemplateID) {
@@ -532,10 +532,10 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template template ID.
+     * Replication Configuration template ID.
      * </p>
      * 
-     * @return Replication Configuration template template ID.
+     * @return Replication Configuration template ID.
      */
 
     public String getReplicationConfigurationTemplateID() {
@@ -544,11 +544,11 @@ public class ReplicationConfigurationTemplate implements Serializable, Cloneable
 
     /**
      * <p>
-     * Replication Configuration template template ID.
+     * Replication Configuration template ID.
      * </p>
      * 
      * @param replicationConfigurationTemplateID
-     *        Replication Configuration template template ID.
+     *        Replication Configuration template ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,6 +27,12 @@ public class UpdateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * Update Launch configuration boot mode request.
+     * </p>
+     */
+    private String bootMode;
+    /**
+     * <p>
      * Update Launch configuration copy Private IP request.
      * </p>
      */
@@ -67,6 +73,65 @@ public class UpdateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private String targetInstanceTypeRightSizingMethod;
+
+    /**
+     * <p>
+     * Update Launch configuration boot mode request.
+     * </p>
+     * 
+     * @param bootMode
+     *        Update Launch configuration boot mode request.
+     * @see BootMode
+     */
+
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+    /**
+     * <p>
+     * Update Launch configuration boot mode request.
+     * </p>
+     * 
+     * @return Update Launch configuration boot mode request.
+     * @see BootMode
+     */
+
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    /**
+     * <p>
+     * Update Launch configuration boot mode request.
+     * </p>
+     * 
+     * @param bootMode
+     *        Update Launch configuration boot mode request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootMode
+     */
+
+    public UpdateLaunchConfigurationRequest withBootMode(String bootMode) {
+        setBootMode(bootMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Update Launch configuration boot mode request.
+     * </p>
+     * 
+     * @param bootMode
+     *        Update Launch configuration boot mode request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootMode
+     */
+
+    public UpdateLaunchConfigurationRequest withBootMode(BootMode bootMode) {
+        this.bootMode = bootMode.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -422,6 +487,8 @@ public class UpdateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getBootMode() != null)
+            sb.append("BootMode: ").append(getBootMode()).append(",");
         if (getCopyPrivateIp() != null)
             sb.append("CopyPrivateIp: ").append(getCopyPrivateIp()).append(",");
         if (getCopyTags() != null)
@@ -450,6 +517,10 @@ public class UpdateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
         if (obj instanceof UpdateLaunchConfigurationRequest == false)
             return false;
         UpdateLaunchConfigurationRequest other = (UpdateLaunchConfigurationRequest) obj;
+        if (other.getBootMode() == null ^ this.getBootMode() == null)
+            return false;
+        if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
+            return false;
         if (other.getCopyPrivateIp() == null ^ this.getCopyPrivateIp() == null)
             return false;
         if (other.getCopyPrivateIp() != null && other.getCopyPrivateIp().equals(this.getCopyPrivateIp()) == false)
@@ -487,6 +558,7 @@ public class UpdateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
         hashCode = prime * hashCode + ((getCopyPrivateIp() == null) ? 0 : getCopyPrivateIp().hashCode());
         hashCode = prime * hashCode + ((getCopyTags() == null) ? 0 : getCopyTags().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());

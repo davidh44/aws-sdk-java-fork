@@ -117,6 +117,12 @@ public class DescribeConnectorResult extends com.amazonaws.AmazonWebServiceResul
     private String serviceExecutionRoleArn;
     /**
      * <p>
+     * Details about the state of a connector.
+     * </p>
+     */
+    private StateDescription stateDescription;
+    /**
+     * <p>
      * Specifies which worker configuration was used for the connector.
      * </p>
      */
@@ -816,6 +822,46 @@ public class DescribeConnectorResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * Details about the state of a connector.
+     * </p>
+     * 
+     * @param stateDescription
+     *        Details about the state of a connector.
+     */
+
+    public void setStateDescription(StateDescription stateDescription) {
+        this.stateDescription = stateDescription;
+    }
+
+    /**
+     * <p>
+     * Details about the state of a connector.
+     * </p>
+     * 
+     * @return Details about the state of a connector.
+     */
+
+    public StateDescription getStateDescription() {
+        return this.stateDescription;
+    }
+
+    /**
+     * <p>
+     * Details about the state of a connector.
+     * </p>
+     * 
+     * @param stateDescription
+     *        Details about the state of a connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeConnectorResult withStateDescription(StateDescription stateDescription) {
+        setStateDescription(stateDescription);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies which worker configuration was used for the connector.
      * </p>
      * 
@@ -871,7 +917,7 @@ public class DescribeConnectorResult extends com.amazonaws.AmazonWebServiceResul
         if (getConnectorArn() != null)
             sb.append("ConnectorArn: ").append(getConnectorArn()).append(",");
         if (getConnectorConfiguration() != null)
-            sb.append("ConnectorConfiguration: ").append(getConnectorConfiguration()).append(",");
+            sb.append("ConnectorConfiguration: ").append("***Sensitive Data Redacted***").append(",");
         if (getConnectorDescription() != null)
             sb.append("ConnectorDescription: ").append(getConnectorDescription()).append(",");
         if (getConnectorName() != null)
@@ -896,6 +942,8 @@ public class DescribeConnectorResult extends com.amazonaws.AmazonWebServiceResul
             sb.append("Plugins: ").append(getPlugins()).append(",");
         if (getServiceExecutionRoleArn() != null)
             sb.append("ServiceExecutionRoleArn: ").append(getServiceExecutionRoleArn()).append(",");
+        if (getStateDescription() != null)
+            sb.append("StateDescription: ").append(getStateDescription()).append(",");
         if (getWorkerConfiguration() != null)
             sb.append("WorkerConfiguration: ").append(getWorkerConfiguration());
         sb.append("}");
@@ -974,6 +1022,10 @@ public class DescribeConnectorResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getServiceExecutionRoleArn() != null && other.getServiceExecutionRoleArn().equals(this.getServiceExecutionRoleArn()) == false)
             return false;
+        if (other.getStateDescription() == null ^ this.getStateDescription() == null)
+            return false;
+        if (other.getStateDescription() != null && other.getStateDescription().equals(this.getStateDescription()) == false)
+            return false;
         if (other.getWorkerConfiguration() == null ^ this.getWorkerConfiguration() == null)
             return false;
         if (other.getWorkerConfiguration() != null && other.getWorkerConfiguration().equals(this.getWorkerConfiguration()) == false)
@@ -1001,6 +1053,7 @@ public class DescribeConnectorResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getLogDelivery() == null) ? 0 : getLogDelivery().hashCode());
         hashCode = prime * hashCode + ((getPlugins() == null) ? 0 : getPlugins().hashCode());
         hashCode = prime * hashCode + ((getServiceExecutionRoleArn() == null) ? 0 : getServiceExecutionRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getStateDescription() == null) ? 0 : getStateDescription().hashCode());
         hashCode = prime * hashCode + ((getWorkerConfiguration() == null) ? 0 : getWorkerConfiguration().hashCode());
         return hashCode;
     }

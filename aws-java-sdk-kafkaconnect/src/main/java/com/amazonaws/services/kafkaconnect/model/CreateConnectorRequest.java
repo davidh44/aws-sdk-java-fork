@@ -678,7 +678,7 @@ public class CreateConnectorRequest extends com.amazonaws.AmazonWebServiceReques
         if (getCapacity() != null)
             sb.append("Capacity: ").append(getCapacity()).append(",");
         if (getConnectorConfiguration() != null)
-            sb.append("ConnectorConfiguration: ").append(getConnectorConfiguration()).append(",");
+            sb.append("ConnectorConfiguration: ").append("***Sensitive Data Redacted***").append(",");
         if (getConnectorDescription() != null)
             sb.append("ConnectorDescription: ").append(getConnectorDescription()).append(",");
         if (getConnectorName() != null)

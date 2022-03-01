@@ -48,6 +48,10 @@ public class UpdateLaunchConfigurationResultJsonUnmarshaller implements Unmarsha
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("bootMode", targetDepth)) {
+                    context.nextToken();
+                    updateLaunchConfigurationResult.setBootMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("copyPrivateIp", targetDepth)) {
                     context.nextToken();
                     updateLaunchConfigurationResult.setCopyPrivateIp(context.getUnmarshaller(Boolean.class).unmarshall(context));
