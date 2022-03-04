@@ -98,7 +98,7 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet request
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
      * types</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
@@ -551,7 +551,7 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet request
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
      * types</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -580,8 +580,8 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet
-     *        request types</a> in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see FleetType
      */
 
@@ -616,7 +616,7 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet request
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
      * types</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -644,8 +644,8 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      *         </ul>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet
-     *         request types</a> in the <i>Amazon EC2 User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
+     *         types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see FleetType
      */
 
@@ -680,7 +680,7 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet request
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
      * types</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -709,8 +709,8 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet
-     *        request types</a> in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetType
      */
@@ -747,7 +747,7 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet request
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
      * types</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -776,8 +776,8 @@ public class CreateFleetRequest extends AmazonWebServiceRequest implements Seria
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/ec2-fleet-request-type.html">EC2 Fleet
-     *        request types</a> in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-request-type.html">EC2 Fleet request
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetType
      */

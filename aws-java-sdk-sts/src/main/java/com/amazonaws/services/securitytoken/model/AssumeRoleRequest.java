@@ -177,8 +177,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * transitive session tags from the calling session. If you pass a session tag with the same key as an inherited
      * tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing Session
-     * Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs">Viewing
+     * Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -1095,8 +1095,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * transitive session tags from the calling session. If you pass a session tag with the same key as an inherited
      * tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing Session
-     * Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs">Viewing
+     * Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @return A list of session tags that you want to pass. Each session tag consists of a key name and an associated
@@ -1134,8 +1134,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         transitive session tags from the calling session. If you pass a session tag with the same key as an
      *         inherited tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs.
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing
-     *         Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs"
+     *         >Viewing Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1179,8 +1179,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * transitive session tags from the calling session. If you pass a session tag with the same key as an inherited
      * tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing Session
-     * Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs">Viewing
+     * Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param tags
@@ -1219,8 +1219,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        transitive session tags from the calling session. If you pass a session tag with the same key as an
      *        inherited tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing
-     *        Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs"
+     *        >Viewing Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1269,8 +1269,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * transitive session tags from the calling session. If you pass a session tag with the same key as an inherited
      * tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing Session
-     * Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs">Viewing
+     * Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1314,8 +1314,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        transitive session tags from the calling session. If you pass a session tag with the same key as an
      *        inherited tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing
-     *        Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs"
+     *        >Viewing Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1366,8 +1366,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * transitive session tags from the calling session. If you pass a session tag with the same key as an inherited
      * tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing Session
-     * Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs">Viewing
+     * Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param tags
@@ -1406,8 +1406,8 @@ public class AssumeRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        transitive session tags from the calling session. If you pass a session tag with the same key as an
      *        inherited tag, the operation fails. To view the inherited tags for a session, see the CloudTrail logs. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/session-tags.html#id_session-tags_ctlogs">Viewing
-     *        Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html#id_session-tags_ctlogs"
+     *        >Viewing Session Tags in CloudTrail</a> in the <i>IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

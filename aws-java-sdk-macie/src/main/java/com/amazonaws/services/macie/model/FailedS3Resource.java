@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Includes details about the failed S3 resources.
+ * (Discontinued) Includes details about the failed S3 resources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/FailedS3Resource" target="_top">AWS API
@@ -30,30 +30,30 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The failed S3 resources.
+     * (Discontinued) The failed S3 resources.
      * </p>
      */
     private S3Resource failedItem;
     /**
      * <p>
-     * The status code of a failed item.
+     * (Discontinued) The status code of a failed item.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * The error message of a failed item.
+     * (Discontinued) The error message of a failed item.
      * </p>
      */
     private String errorMessage;
 
     /**
      * <p>
-     * The failed S3 resources.
+     * (Discontinued) The failed S3 resources.
      * </p>
      * 
      * @param failedItem
-     *        The failed S3 resources.
+     *        (Discontinued) The failed S3 resources.
      */
 
     public void setFailedItem(S3Resource failedItem) {
@@ -62,10 +62,10 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The failed S3 resources.
+     * (Discontinued) The failed S3 resources.
      * </p>
      * 
-     * @return The failed S3 resources.
+     * @return (Discontinued) The failed S3 resources.
      */
 
     public S3Resource getFailedItem() {
@@ -74,11 +74,11 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The failed S3 resources.
+     * (Discontinued) The failed S3 resources.
      * </p>
      * 
      * @param failedItem
-     *        The failed S3 resources.
+     *        (Discontinued) The failed S3 resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status code of a failed item.
+     * (Discontinued) The status code of a failed item.
      * </p>
      * 
      * @param errorCode
-     *        The status code of a failed item.
+     *        (Discontinued) The status code of a failed item.
      */
 
     public void setErrorCode(String errorCode) {
@@ -102,10 +102,10 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status code of a failed item.
+     * (Discontinued) The status code of a failed item.
      * </p>
      * 
-     * @return The status code of a failed item.
+     * @return (Discontinued) The status code of a failed item.
      */
 
     public String getErrorCode() {
@@ -114,11 +114,11 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The status code of a failed item.
+     * (Discontinued) The status code of a failed item.
      * </p>
      * 
      * @param errorCode
-     *        The status code of a failed item.
+     *        (Discontinued) The status code of a failed item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The error message of a failed item.
+     * (Discontinued) The error message of a failed item.
      * </p>
      * 
      * @param errorMessage
-     *        The error message of a failed item.
+     *        (Discontinued) The error message of a failed item.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -142,10 +142,10 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The error message of a failed item.
+     * (Discontinued) The error message of a failed item.
      * </p>
      * 
-     * @return The error message of a failed item.
+     * @return (Discontinued) The error message of a failed item.
      */
 
     public String getErrorMessage() {
@@ -154,11 +154,11 @@ public class FailedS3Resource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The error message of a failed item.
+     * (Discontinued) The error message of a failed item.
      * </p>
      * 
      * @param errorMessage
-     *        The error message of a failed item.
+     *        (Discontinued) The error message of a failed item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

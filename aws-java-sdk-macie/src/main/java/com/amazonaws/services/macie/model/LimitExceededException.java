@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because it attempted to create resources beyond the current AWS account limits. The error
- * code describes the limit exceeded.
+ * (Discontinued) The request was rejected because it attempted to create resources beyond the current Amazon Web
+ * Services account quotas. The error code describes the quota exceeded.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

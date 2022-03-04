@@ -16,6 +16,7 @@ import javax.annotation.Generated;
 
 import com.amazonaws.services.transfer.model.*;
 import com.amazonaws.*;
+import com.amazonaws.services.transfer.waiters.AWSTransferWaiters;
 
 /**
  * Abstract implementation of {@code AWSTransfer}. Convenient method forms pass through to the corresponding overload
@@ -194,6 +195,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
 
     @Override
     public com.amazonaws.ResponseMetadata getCachedResponseMetadata(com.amazonaws.AmazonWebServiceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AWSTransferWaiters waiters() {
         throw new java.lang.UnsupportedOperationException();
     }
 

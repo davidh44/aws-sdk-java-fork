@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.devopsguru.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -49,6 +50,10 @@ public class ProactiveAnomalySummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceCollection").build();
     private static final MarshallingInfo<Double> LIMIT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Limit").build();
+    private static final MarshallingInfo<StructuredPojo> SOURCEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceMetadata").build();
+    private static final MarshallingInfo<List> ANOMALYRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnomalyResources").build();
 
     private static final ProactiveAnomalySummaryMarshaller instance = new ProactiveAnomalySummaryMarshaller();
 
@@ -77,6 +82,8 @@ public class ProactiveAnomalySummaryMarshaller {
             protocolMarshaller.marshall(proactiveAnomalySummary.getAssociatedInsightId(), ASSOCIATEDINSIGHTID_BINDING);
             protocolMarshaller.marshall(proactiveAnomalySummary.getResourceCollection(), RESOURCECOLLECTION_BINDING);
             protocolMarshaller.marshall(proactiveAnomalySummary.getLimit(), LIMIT_BINDING);
+            protocolMarshaller.marshall(proactiveAnomalySummary.getSourceMetadata(), SOURCEMETADATA_BINDING);
+            protocolMarshaller.marshall(proactiveAnomalySummary.getAnomalyResources(), ANOMALYRESOURCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

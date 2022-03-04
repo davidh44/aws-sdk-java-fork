@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about the S3 resource. This data type is used as a request parameter in the
- * DisassociateS3Resources action and can be used as a response parameter in the AssociateS3Resources and
- * UpdateS3Resources actions.
+ * (Discontinued) Contains information about the S3 resource. This data type is used as a request parameter in the
+ * <code>DisassociateS3Resources</code> action and can be used as a response parameter in the
+ * <code>AssociateS3Resources</code> and <code>UpdateS3Resources</code> actions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/S3Resource" target="_top">AWS API
@@ -32,24 +32,24 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the S3 bucket.
+     * (Discontinued) The name of the S3 bucket.
      * </p>
      */
     private String bucketName;
     /**
      * <p>
-     * The prefix of the S3 bucket.
+     * (Discontinued) The prefix of the S3 bucket.
      * </p>
      */
     private String prefix;
 
     /**
      * <p>
-     * The name of the S3 bucket.
+     * (Discontinued) The name of the S3 bucket.
      * </p>
      * 
      * @param bucketName
-     *        The name of the S3 bucket.
+     *        (Discontinued) The name of the S3 bucket.
      */
 
     public void setBucketName(String bucketName) {
@@ -58,10 +58,10 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the S3 bucket.
+     * (Discontinued) The name of the S3 bucket.
      * </p>
      * 
-     * @return The name of the S3 bucket.
+     * @return (Discontinued) The name of the S3 bucket.
      */
 
     public String getBucketName() {
@@ -70,11 +70,11 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the S3 bucket.
+     * (Discontinued) The name of the S3 bucket.
      * </p>
      * 
      * @param bucketName
-     *        The name of the S3 bucket.
+     *        (Discontinued) The name of the S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,11 +85,11 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The prefix of the S3 bucket.
+     * (Discontinued) The prefix of the S3 bucket.
      * </p>
      * 
      * @param prefix
-     *        The prefix of the S3 bucket.
+     *        (Discontinued) The prefix of the S3 bucket.
      */
 
     public void setPrefix(String prefix) {
@@ -98,10 +98,10 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The prefix of the S3 bucket.
+     * (Discontinued) The prefix of the S3 bucket.
      * </p>
      * 
-     * @return The prefix of the S3 bucket.
+     * @return (Discontinued) The prefix of the S3 bucket.
      */
 
     public String getPrefix() {
@@ -110,11 +110,11 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The prefix of the S3 bucket.
+     * (Discontinued) The prefix of the S3 bucket.
      * </p>
      * 
      * @param prefix
-     *        The prefix of the S3 bucket.
+     *        (Discontinued) The prefix of the S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

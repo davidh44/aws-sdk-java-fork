@@ -54,12 +54,12 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
     private String webIdentityToken;
     /**
      * <p>
-     * The fully qualified host component of the domain name of the identity provider.
+     * The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify this
+     * value for an OpenID Connect identity provider.
      * </p>
      * <p>
-     * Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     * <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do not
-     * include URL schemes and port numbers.
+     * Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     * providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      * </p>
      * <p>
      * Do not specify this value for OpenID Connect ID tokens.
@@ -327,23 +327,23 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The fully qualified host component of the domain name of the identity provider.
+     * The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify this
+     * value for an OpenID Connect identity provider.
      * </p>
      * <p>
-     * Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     * <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do not
-     * include URL schemes and port numbers.
+     * Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     * providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      * </p>
      * <p>
      * Do not specify this value for OpenID Connect ID tokens.
      * </p>
      * 
      * @param providerId
-     *        The fully qualified host component of the domain name of the identity provider.</p>
+     *        The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify
+     *        this value for an OpenID Connect identity provider.</p>
      *        <p>
-     *        Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     *        <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do
-     *        not include URL schemes and port numbers.
+     *        Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     *        providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      *        </p>
      *        <p>
      *        Do not specify this value for OpenID Connect ID tokens.
@@ -355,22 +355,22 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The fully qualified host component of the domain name of the identity provider.
+     * The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify this
+     * value for an OpenID Connect identity provider.
      * </p>
      * <p>
-     * Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     * <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do not
-     * include URL schemes and port numbers.
+     * Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     * providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      * </p>
      * <p>
      * Do not specify this value for OpenID Connect ID tokens.
      * </p>
      * 
-     * @return The fully qualified host component of the domain name of the identity provider.</p>
+     * @return The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify
+     *         this value for an OpenID Connect identity provider.</p>
      *         <p>
-     *         Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     *         <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do
-     *         not include URL schemes and port numbers.
+     *         Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     *         providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      *         </p>
      *         <p>
      *         Do not specify this value for OpenID Connect ID tokens.
@@ -382,23 +382,23 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The fully qualified host component of the domain name of the identity provider.
+     * The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify this
+     * value for an OpenID Connect identity provider.
      * </p>
      * <p>
-     * Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     * <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do not
-     * include URL schemes and port numbers.
+     * Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     * providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      * </p>
      * <p>
      * Do not specify this value for OpenID Connect ID tokens.
      * </p>
      * 
      * @param providerId
-     *        The fully qualified host component of the domain name of the identity provider.</p>
+     *        The fully qualified host component of the domain name of the OAuth 2.0 identity provider. Do not specify
+     *        this value for an OpenID Connect identity provider.</p>
      *        <p>
-     *        Specify this value only for OAuth 2.0 access tokens. Currently <code>www.amazon.com</code> and
-     *        <code>graph.facebook.com</code> are the only supported identity providers for OAuth 2.0 access tokens. Do
-     *        not include URL schemes and port numbers.
+     *        Currently <code>www.amazon.com</code> and <code>graph.facebook.com</code> are the only supported identity
+     *        providers for OAuth 2.0 access tokens. Do not include URL schemes and port numbers.
      *        </p>
      *        <p>
      *        Do not specify this value for OpenID Connect ID tokens.

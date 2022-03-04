@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Internal server error.
+ * (Discontinued) Internal server error.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

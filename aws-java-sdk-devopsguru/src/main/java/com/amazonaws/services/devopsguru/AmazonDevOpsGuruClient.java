@@ -457,6 +457,74 @@ public class AmazonDevOpsGuruClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * </p>
+     * 
+     * @param describeEventSourcesConfigRequest
+     * @return Result of the DescribeEventSourcesConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.DescribeEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeEventSourcesConfigResult describeEventSourcesConfig(DescribeEventSourcesConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeEventSourcesConfig(request);
+    }
+
+    @SdkInternalApi
+    final DescribeEventSourcesConfigResult executeDescribeEventSourcesConfig(DescribeEventSourcesConfigRequest describeEventSourcesConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeEventSourcesConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeEventSourcesConfigRequest> request = null;
+        Response<DescribeEventSourcesConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeEventSourcesConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeEventSourcesConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DevOps Guru");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeEventSourcesConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeEventSourcesConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeEventSourcesConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the most recent feedback submitted in the current Amazon Web Services account and Region.
      * </p>
      * 
@@ -1852,6 +1920,74 @@ public class AmazonDevOpsGuruClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<StartCostEstimationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartCostEstimationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the event source configuration.
+     * </p>
+     * 
+     * @param updateEventSourcesConfigRequest
+     * @return Result of the UpdateEventSourcesConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.UpdateEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateEventSourcesConfigResult updateEventSourcesConfig(UpdateEventSourcesConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEventSourcesConfig(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEventSourcesConfigResult executeUpdateEventSourcesConfig(UpdateEventSourcesConfigRequest updateEventSourcesConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEventSourcesConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEventSourcesConfigRequest> request = null;
+        Response<UpdateEventSourcesConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEventSourcesConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateEventSourcesConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DevOps Guru");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEventSourcesConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEventSourcesConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateEventSourcesConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

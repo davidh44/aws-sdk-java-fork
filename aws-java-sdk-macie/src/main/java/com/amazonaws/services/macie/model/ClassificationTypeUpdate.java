@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The classification type that Amazon Macie Classic applies to the associated S3 resources. At least one of the
- * classification types (oneTime or continuous) must be specified.
+ * (Discontinued) The classification type that Amazon Macie Classic applies to the associated S3 resources. At least one
+ * of the classification types (<code>oneTime</code> or <code>continuous</code>) must be specified.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/ClassificationTypeUpdate" target="_top">AWS API
@@ -31,25 +31,25 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A one-time classification of all of the existing objects in a specified S3 bucket.
+     * (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * </p>
      */
     private String oneTime;
     /**
      * <p>
-     * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic begins
-     * performing continuous classification after a bucket is successfully associated with Macie Classic.
+     * (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie
+     * Classic begins performing continuous classification after a bucket is successfully associated with Macie Classic.
      * </p>
      */
     private String continuous;
 
     /**
      * <p>
-     * A one-time classification of all of the existing objects in a specified S3 bucket.
+     * (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * </p>
      * 
      * @param oneTime
-     *        A one-time classification of all of the existing objects in a specified S3 bucket.
+     *        (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * @see S3OneTimeClassificationType
      */
 
@@ -59,10 +59,10 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A one-time classification of all of the existing objects in a specified S3 bucket.
+     * (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * </p>
      * 
-     * @return A one-time classification of all of the existing objects in a specified S3 bucket.
+     * @return (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * @see S3OneTimeClassificationType
      */
 
@@ -72,11 +72,11 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A one-time classification of all of the existing objects in a specified S3 bucket.
+     * (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * </p>
      * 
      * @param oneTime
-     *        A one-time classification of all of the existing objects in a specified S3 bucket.
+     *        (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3OneTimeClassificationType
      */
@@ -88,11 +88,11 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A one-time classification of all of the existing objects in a specified S3 bucket.
+     * (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * </p>
      * 
      * @param oneTime
-     *        A one-time classification of all of the existing objects in a specified S3 bucket.
+     *        (Discontinued) A one-time classification of all of the existing objects in a specified S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3OneTimeClassificationType
      */
@@ -104,13 +104,14 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic begins
-     * performing continuous classification after a bucket is successfully associated with Macie Classic.
+     * (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie
+     * Classic begins performing continuous classification after a bucket is successfully associated with Macie Classic.
      * </p>
      * 
      * @param continuous
-     *        A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic
-     *        begins performing continuous classification after a bucket is successfully associated with Macie Classic.
+     *        (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon
+     *        Macie Classic begins performing continuous classification after a bucket is successfully associated with
+     *        Macie Classic.
      * @see S3ContinuousClassificationType
      */
 
@@ -120,12 +121,13 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic begins
-     * performing continuous classification after a bucket is successfully associated with Macie Classic.
+     * (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie
+     * Classic begins performing continuous classification after a bucket is successfully associated with Macie Classic.
      * </p>
      * 
-     * @return A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic
-     *         begins performing continuous classification after a bucket is successfully associated with Macie Classic.
+     * @return (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon
+     *         Macie Classic begins performing continuous classification after a bucket is successfully associated with
+     *         Macie Classic.
      * @see S3ContinuousClassificationType
      */
 
@@ -135,13 +137,14 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic begins
-     * performing continuous classification after a bucket is successfully associated with Macie Classic.
+     * (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie
+     * Classic begins performing continuous classification after a bucket is successfully associated with Macie Classic.
      * </p>
      * 
      * @param continuous
-     *        A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic
-     *        begins performing continuous classification after a bucket is successfully associated with Macie Classic.
+     *        (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon
+     *        Macie Classic begins performing continuous classification after a bucket is successfully associated with
+     *        Macie Classic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ContinuousClassificationType
      */
@@ -153,13 +156,14 @@ public class ClassificationTypeUpdate implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic begins
-     * performing continuous classification after a bucket is successfully associated with Macie Classic.
+     * (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie
+     * Classic begins performing continuous classification after a bucket is successfully associated with Macie Classic.
      * </p>
      * 
      * @param continuous
-     *        A continuous classification of the objects that are added to a specified S3 bucket. Amazon Macie Classic
-     *        begins performing continuous classification after a bucket is successfully associated with Macie Classic.
+     *        (Discontinued) A continuous classification of the objects that are added to a specified S3 bucket. Amazon
+     *        Macie Classic begins performing continuous classification after a bucket is successfully associated with
+     *        Macie Classic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ContinuousClassificationType
      */

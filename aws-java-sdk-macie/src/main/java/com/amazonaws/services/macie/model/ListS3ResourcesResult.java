@@ -25,25 +25,25 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of the associated S3 resources returned by the action.
+     * (Discontinued) A list of the associated S3 resources returned by the action.
      * </p>
      */
     private java.util.List<S3ResourceClassification> s3Resources;
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * A list of the associated S3 resources returned by the action.
+     * (Discontinued) A list of the associated S3 resources returned by the action.
      * </p>
      * 
-     * @return A list of the associated S3 resources returned by the action.
+     * @return (Discontinued) A list of the associated S3 resources returned by the action.
      */
 
     public java.util.List<S3ResourceClassification> getS3Resources() {
@@ -52,11 +52,11 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of the associated S3 resources returned by the action.
+     * (Discontinued) A list of the associated S3 resources returned by the action.
      * </p>
      * 
      * @param s3Resources
-     *        A list of the associated S3 resources returned by the action.
+     *        (Discontinued) A list of the associated S3 resources returned by the action.
      */
 
     public void setS3Resources(java.util.Collection<S3ResourceClassification> s3Resources) {
@@ -70,7 +70,7 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of the associated S3 resources returned by the action.
+     * (Discontinued) A list of the associated S3 resources returned by the action.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +79,7 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param s3Resources
-     *        A list of the associated S3 resources returned by the action.
+     *        (Discontinued) A list of the associated S3 resources returned by the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +95,11 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A list of the associated S3 resources returned by the action.
+     * (Discontinued) A list of the associated S3 resources returned by the action.
      * </p>
      * 
      * @param s3Resources
-     *        A list of the associated S3 resources returned by the action.
+     *        (Discontinued) A list of the associated S3 resources returned by the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,15 +110,15 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      * 
      * @param nextToken
-     *        When a response is generated, if there is more data to be listed, this parameter is present in the
-     *        response and contains the value to use for the nextToken parameter in a subsequent pagination request. If
-     *        there is no more data to be listed, this parameter is set to null.
+     *        (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present
+     *        in the response and contains the value to use for the <code>nextToken</code> parameter in a subsequent
+     *        pagination request. If there is no more data to be listed, this parameter is set to null.
      */
 
     public void setNextToken(String nextToken) {
@@ -127,14 +127,14 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      * 
-     * @return When a response is generated, if there is more data to be listed, this parameter is present in the
-     *         response and contains the value to use for the nextToken parameter in a subsequent pagination request. If
-     *         there is no more data to be listed, this parameter is set to null.
+     * @return (Discontinued) When a response is generated, if there is more data to be listed, this parameter is
+     *         present in the response and contains the value to use for the <code>nextToken</code> parameter in a
+     *         subsequent pagination request. If there is no more data to be listed, this parameter is set to null.
      */
 
     public String getNextToken() {
@@ -143,15 +143,15 @@ public class ListS3ResourcesResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      * 
      * @param nextToken
-     *        When a response is generated, if there is more data to be listed, this parameter is present in the
-     *        response and contains the value to use for the nextToken parameter in a subsequent pagination request. If
-     *        there is no more data to be listed, this parameter is set to null.
+     *        (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present
+     *        in the response and contains the value to use for the <code>nextToken</code> parameter in a subsequent
+     *        pagination request. If there is no more data to be listed, this parameter is set to null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

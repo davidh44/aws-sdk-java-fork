@@ -80,6 +80,19 @@ public class AbstractAmazonDevOpsGuruAsync extends AbstractAmazonDevOpsGuru impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEventSourcesConfigResult> describeEventSourcesConfigAsync(DescribeEventSourcesConfigRequest request) {
+
+        return describeEventSourcesConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEventSourcesConfigResult> describeEventSourcesConfigAsync(DescribeEventSourcesConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeEventSourcesConfigRequest, DescribeEventSourcesConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFeedbackResult> describeFeedbackAsync(DescribeFeedbackRequest request) {
 
         return describeFeedbackAsync(request, null);
@@ -339,6 +352,19 @@ public class AbstractAmazonDevOpsGuruAsync extends AbstractAmazonDevOpsGuru impl
     @Override
     public java.util.concurrent.Future<StartCostEstimationResult> startCostEstimationAsync(StartCostEstimationRequest request,
             com.amazonaws.handlers.AsyncHandler<StartCostEstimationRequest, StartCostEstimationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventSourcesConfigResult> updateEventSourcesConfigAsync(UpdateEventSourcesConfigRequest request) {
+
+        return updateEventSourcesConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventSourcesConfigResult> updateEventSourcesConfigAsync(UpdateEventSourcesConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventSourcesConfigRequest, UpdateEventSourcesConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

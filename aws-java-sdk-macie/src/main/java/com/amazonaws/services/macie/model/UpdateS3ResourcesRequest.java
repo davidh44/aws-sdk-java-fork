@@ -27,27 +27,27 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want to
-     * update.
+     * (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3 resources'
+     * classification types you want to update.
      * </p>
      */
     private String memberAccountId;
     /**
      * <p>
-     * The S3 resources whose classification types you want to update.
+     * (Discontinued) The S3 resources whose classification types you want to update.
      * </p>
      */
     private java.util.List<S3ResourceClassificationUpdate> s3ResourcesUpdate;
 
     /**
      * <p>
-     * The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want to
-     * update.
+     * (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3 resources'
+     * classification types you want to update.
      * </p>
      * 
      * @param memberAccountId
-     *        The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want to
-     *        update.
+     *        (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3
+     *        resources' classification types you want to update.
      */
 
     public void setMemberAccountId(String memberAccountId) {
@@ -56,12 +56,12 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want to
-     * update.
+     * (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3 resources'
+     * classification types you want to update.
      * </p>
      * 
-     * @return The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want
-     *         to update.
+     * @return (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3
+     *         resources' classification types you want to update.
      */
 
     public String getMemberAccountId() {
@@ -70,13 +70,13 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want to
-     * update.
+     * (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3 resources'
+     * classification types you want to update.
      * </p>
      * 
      * @param memberAccountId
-     *        The AWS ID of the Amazon Macie Classic member account whose S3 resources' classification types you want to
-     *        update.
+     *        (Discontinued) The Amazon Web Services account ID of the Amazon Macie Classic member account whose S3
+     *        resources' classification types you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,10 +87,10 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The S3 resources whose classification types you want to update.
+     * (Discontinued) The S3 resources whose classification types you want to update.
      * </p>
      * 
-     * @return The S3 resources whose classification types you want to update.
+     * @return (Discontinued) The S3 resources whose classification types you want to update.
      */
 
     public java.util.List<S3ResourceClassificationUpdate> getS3ResourcesUpdate() {
@@ -99,11 +99,11 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The S3 resources whose classification types you want to update.
+     * (Discontinued) The S3 resources whose classification types you want to update.
      * </p>
      * 
      * @param s3ResourcesUpdate
-     *        The S3 resources whose classification types you want to update.
+     *        (Discontinued) The S3 resources whose classification types you want to update.
      */
 
     public void setS3ResourcesUpdate(java.util.Collection<S3ResourceClassificationUpdate> s3ResourcesUpdate) {
@@ -117,7 +117,7 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The S3 resources whose classification types you want to update.
+     * (Discontinued) The S3 resources whose classification types you want to update.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -126,7 +126,7 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param s3ResourcesUpdate
-     *        The S3 resources whose classification types you want to update.
+     *        (Discontinued) The S3 resources whose classification types you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,11 +142,11 @@ public class UpdateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The S3 resources whose classification types you want to update.
+     * (Discontinued) The S3 resources whose classification types you want to update.
      * </p>
      * 
      * @param s3ResourcesUpdate
-     *        The S3 resources whose classification types you want to update.
+     *        (Discontinued) The S3 resources whose classification types you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

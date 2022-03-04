@@ -27,33 +27,33 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     * (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      * </p>
      */
     private String memberAccountId;
     /**
      * <p>
-     * Use this parameter when paginating results. Set its value to null on your first call to the ListS3Resources
-     * action. Subsequent calls to the action fill nextToken in the request with the value of nextToken from the
-     * previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to the
+     * <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in the request
+     * with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     * (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      * </p>
      * 
      * @param memberAccountId
-     *        The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     *        (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      */
 
     public void setMemberAccountId(String memberAccountId) {
@@ -62,10 +62,10 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     * (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      * </p>
      * 
-     * @return The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     * @return (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      */
 
     public String getMemberAccountId() {
@@ -74,11 +74,11 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     * (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      * </p>
      * 
      * @param memberAccountId
-     *        The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
+     *        (Discontinued) The Amazon Macie Classic member account ID whose associated S3 resources you want to list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,15 +89,15 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set its value to null on your first call to the ListS3Resources
-     * action. Subsequent calls to the action fill nextToken in the request with the value of nextToken from the
-     * previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to the
+     * <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in the request
+     * with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      * 
      * @param nextToken
-     *        Use this parameter when paginating results. Set its value to null on your first call to the
-     *        ListS3Resources action. Subsequent calls to the action fill nextToken in the request with the value of
-     *        nextToken from the previous response to continue listing data.
+     *        (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to the
+     *        <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in the
+     *        request with the value of <code>nextToken</code> from the previous response to continue listing data.
      */
 
     public void setNextToken(String nextToken) {
@@ -106,14 +106,14 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set its value to null on your first call to the ListS3Resources
-     * action. Subsequent calls to the action fill nextToken in the request with the value of nextToken from the
-     * previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to the
+     * <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in the request
+     * with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      * 
-     * @return Use this parameter when paginating results. Set its value to null on your first call to the
-     *         ListS3Resources action. Subsequent calls to the action fill nextToken in the request with the value of
-     *         nextToken from the previous response to continue listing data.
+     * @return (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to
+     *         the <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in
+     *         the request with the value of <code>nextToken</code> from the previous response to continue listing data.
      */
 
     public String getNextToken() {
@@ -122,15 +122,15 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set its value to null on your first call to the ListS3Resources
-     * action. Subsequent calls to the action fill nextToken in the request with the value of nextToken from the
-     * previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to the
+     * <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in the request
+     * with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      * 
      * @param nextToken
-     *        Use this parameter when paginating results. Set its value to null on your first call to the
-     *        ListS3Resources action. Subsequent calls to the action fill nextToken in the request with the value of
-     *        nextToken from the previous response to continue listing data.
+     *        (Discontinued) Use this parameter when paginating results. Set its value to null on your first call to the
+     *        <code>ListS3Resources</code> action. Subsequent calls to the action fill <code>nextToken</code> in the
+     *        request with the value of <code>nextToken</code> from the previous response to continue listing data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,13 +141,13 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      * 
      * @param maxResults
-     *        Use this parameter to indicate the maximum number of items that you want in the response. The default
-     *        value is 250.
+     *        (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response.
+     *        The default value is 250.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -156,12 +156,12 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      * 
-     * @return Use this parameter to indicate the maximum number of items that you want in the response. The default
-     *         value is 250.
+     * @return (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response.
+     *         The default value is 250.
      */
 
     public Integer getMaxResults() {
@@ -170,13 +170,13 @@ public class ListS3ResourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      * 
      * @param maxResults
-     *        Use this parameter to indicate the maximum number of items that you want in the response. The default
-     *        value is 250.
+     *        (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response.
+     *        The default value is 250.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

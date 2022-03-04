@@ -40,6 +40,7 @@ import com.amazonaws.client.AwsSyncClientParams;
 import com.amazonaws.client.builder.AdvancedConfig;
 
 import com.amazonaws.services.transfer.AWSTransferClientBuilder;
+import com.amazonaws.services.transfer.waiters.AWSTransferWaiters;
 
 import com.amazonaws.AmazonServiceException;
 
@@ -72,6 +73,8 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /** Default signing name for the service. */
     private static final String DEFAULT_SIGNING_NAME = "transfer";
+
+    private volatile AWSTransferWaiters waiters;
 
     /** Client configuration factory providing ClientConfigurations tailored to this client */
     protected static final ClientConfigurationFactory configFactory = new ClientConfigurationFactory();
@@ -2456,8 +2459,23 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
     }
 
     @Override
+    public AWSTransferWaiters waiters() {
+        if (waiters == null) {
+            synchronized (this) {
+                if (waiters == null) {
+                    waiters = new AWSTransferWaiters(this);
+                }
+            }
+        }
+        return waiters;
+    }
+
+    @Override
     public void shutdown() {
         super.shutdown();
+        if (waiters != null) {
+            waiters.shutdown();
+        }
     }
 
 }

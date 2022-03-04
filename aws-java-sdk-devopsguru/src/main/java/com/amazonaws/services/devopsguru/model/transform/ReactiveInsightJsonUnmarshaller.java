@@ -76,6 +76,10 @@ public class ReactiveInsightJsonUnmarshaller implements Unmarshaller<ReactiveIns
                     context.nextToken();
                     reactiveInsight.setSsmOpsItemId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Description", targetDepth)) {
+                    context.nextToken();
+                    reactiveInsight.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

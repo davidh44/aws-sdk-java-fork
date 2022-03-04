@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because an invalid or out-of-range value was supplied for an input parameter.
+ * (Discontinued) The request was rejected because an invalid or out-of-range value was supplied for an input parameter.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

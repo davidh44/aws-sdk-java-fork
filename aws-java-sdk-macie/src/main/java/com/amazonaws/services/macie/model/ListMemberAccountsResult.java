@@ -25,28 +25,28 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     * administrator account is also included in this list.
+     * (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current Macie
+     * Classic administrator account is also included in this list.
      * </p>
      */
     private java.util.List<MemberAccount> memberAccounts;
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     * administrator account is also included in this list.
+     * (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current Macie
+     * Classic administrator account is also included in this list.
      * </p>
      * 
-     * @return A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     *         administrator account is also included in this list.
+     * @return (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current
+     *         Macie Classic administrator account is also included in this list.
      */
 
     public java.util.List<MemberAccount> getMemberAccounts() {
@@ -55,13 +55,13 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     * administrator account is also included in this list.
+     * (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current Macie
+     * Classic administrator account is also included in this list.
      * </p>
      * 
      * @param memberAccounts
-     *        A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     *        administrator account is also included in this list.
+     *        (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current
+     *        Macie Classic administrator account is also included in this list.
      */
 
     public void setMemberAccounts(java.util.Collection<MemberAccount> memberAccounts) {
@@ -75,8 +75,8 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     * administrator account is also included in this list.
+     * (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current Macie
+     * Classic administrator account is also included in this list.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,8 +85,8 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param memberAccounts
-     *        A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     *        administrator account is also included in this list.
+     *        (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current
+     *        Macie Classic administrator account is also included in this list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,13 +102,13 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     * administrator account is also included in this list.
+     * (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current Macie
+     * Classic administrator account is also included in this list.
      * </p>
      * 
      * @param memberAccounts
-     *        A list of the Amazon Macie Classic member accounts returned by the action. The current Macie Classic
-     *        administrator account is also included in this list.
+     *        (Discontinued) A list of the Amazon Macie Classic member accounts returned by the action. The current
+     *        Macie Classic administrator account is also included in this list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,15 +119,15 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      * 
      * @param nextToken
-     *        When a response is generated, if there is more data to be listed, this parameter is present in the
-     *        response and contains the value to use for the nextToken parameter in a subsequent pagination request. If
-     *        there is no more data to be listed, this parameter is set to null.
+     *        (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present
+     *        in the response and contains the value to use for the <code>nextToken</code> parameter in a subsequent
+     *        pagination request. If there is no more data to be listed, this parameter is set to null.
      */
 
     public void setNextToken(String nextToken) {
@@ -136,14 +136,14 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      * 
-     * @return When a response is generated, if there is more data to be listed, this parameter is present in the
-     *         response and contains the value to use for the nextToken parameter in a subsequent pagination request. If
-     *         there is no more data to be listed, this parameter is set to null.
+     * @return (Discontinued) When a response is generated, if there is more data to be listed, this parameter is
+     *         present in the response and contains the value to use for the <code>nextToken</code> parameter in a
+     *         subsequent pagination request. If there is no more data to be listed, this parameter is set to null.
      */
 
     public String getNextToken() {
@@ -152,15 +152,15 @@ public class ListMemberAccountsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * When a response is generated, if there is more data to be listed, this parameter is present in the response and
-     * contains the value to use for the nextToken parameter in a subsequent pagination request. If there is no more
-     * data to be listed, this parameter is set to null.
+     * (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present in the
+     * response and contains the value to use for the <code>nextToken</code> parameter in a subsequent pagination
+     * request. If there is no more data to be listed, this parameter is set to null.
      * </p>
      * 
      * @param nextToken
-     *        When a response is generated, if there is more data to be listed, this parameter is present in the
-     *        response and contains the value to use for the nextToken parameter in a subsequent pagination request. If
-     *        there is no more data to be listed, this parameter is set to null.
+     *        (Discontinued) When a response is generated, if there is more data to be listed, this parameter is present
+     *        in the response and contains the value to use for the <code>nextToken</code> parameter in a subsequent
+     *        pagination request. If there is no more data to be listed, this parameter is set to null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

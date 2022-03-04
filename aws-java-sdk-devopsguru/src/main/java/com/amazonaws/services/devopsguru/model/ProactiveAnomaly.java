@@ -88,6 +88,18 @@ public class ProactiveAnomaly implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Double limit;
+    /**
+     * <p>
+     * The metadata for the anomaly.
+     * </p>
+     */
+    private AnomalySourceMetadata sourceMetadata;
+    /**
+     * <p>
+     * Information about a resource in which DevOps Guru detected anomalous behavior.
+     * </p>
+     */
+    private java.util.List<AnomalyResource> anomalyResources;
 
     /**
      * <p>
@@ -568,6 +580,116 @@ public class ProactiveAnomaly implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The metadata for the anomaly.
+     * </p>
+     * 
+     * @param sourceMetadata
+     *        The metadata for the anomaly.
+     */
+
+    public void setSourceMetadata(AnomalySourceMetadata sourceMetadata) {
+        this.sourceMetadata = sourceMetadata;
+    }
+
+    /**
+     * <p>
+     * The metadata for the anomaly.
+     * </p>
+     * 
+     * @return The metadata for the anomaly.
+     */
+
+    public AnomalySourceMetadata getSourceMetadata() {
+        return this.sourceMetadata;
+    }
+
+    /**
+     * <p>
+     * The metadata for the anomaly.
+     * </p>
+     * 
+     * @param sourceMetadata
+     *        The metadata for the anomaly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProactiveAnomaly withSourceMetadata(AnomalySourceMetadata sourceMetadata) {
+        setSourceMetadata(sourceMetadata);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about a resource in which DevOps Guru detected anomalous behavior.
+     * </p>
+     * 
+     * @return Information about a resource in which DevOps Guru detected anomalous behavior.
+     */
+
+    public java.util.List<AnomalyResource> getAnomalyResources() {
+        return anomalyResources;
+    }
+
+    /**
+     * <p>
+     * Information about a resource in which DevOps Guru detected anomalous behavior.
+     * </p>
+     * 
+     * @param anomalyResources
+     *        Information about a resource in which DevOps Guru detected anomalous behavior.
+     */
+
+    public void setAnomalyResources(java.util.Collection<AnomalyResource> anomalyResources) {
+        if (anomalyResources == null) {
+            this.anomalyResources = null;
+            return;
+        }
+
+        this.anomalyResources = new java.util.ArrayList<AnomalyResource>(anomalyResources);
+    }
+
+    /**
+     * <p>
+     * Information about a resource in which DevOps Guru detected anomalous behavior.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAnomalyResources(java.util.Collection)} or {@link #withAnomalyResources(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param anomalyResources
+     *        Information about a resource in which DevOps Guru detected anomalous behavior.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProactiveAnomaly withAnomalyResources(AnomalyResource... anomalyResources) {
+        if (this.anomalyResources == null) {
+            setAnomalyResources(new java.util.ArrayList<AnomalyResource>(anomalyResources.length));
+        }
+        for (AnomalyResource ele : anomalyResources) {
+            this.anomalyResources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about a resource in which DevOps Guru detected anomalous behavior.
+     * </p>
+     * 
+     * @param anomalyResources
+     *        Information about a resource in which DevOps Guru detected anomalous behavior.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProactiveAnomaly withAnomalyResources(java.util.Collection<AnomalyResource> anomalyResources) {
+        setAnomalyResources(anomalyResources);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -600,7 +722,11 @@ public class ProactiveAnomaly implements Serializable, Cloneable, StructuredPojo
         if (getResourceCollection() != null)
             sb.append("ResourceCollection: ").append(getResourceCollection()).append(",");
         if (getLimit() != null)
-            sb.append("Limit: ").append(getLimit());
+            sb.append("Limit: ").append(getLimit()).append(",");
+        if (getSourceMetadata() != null)
+            sb.append("SourceMetadata: ").append(getSourceMetadata()).append(",");
+        if (getAnomalyResources() != null)
+            sb.append("AnomalyResources: ").append(getAnomalyResources());
         sb.append("}");
         return sb.toString();
     }
@@ -659,6 +785,14 @@ public class ProactiveAnomaly implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getLimit() != null && other.getLimit().equals(this.getLimit()) == false)
             return false;
+        if (other.getSourceMetadata() == null ^ this.getSourceMetadata() == null)
+            return false;
+        if (other.getSourceMetadata() != null && other.getSourceMetadata().equals(this.getSourceMetadata()) == false)
+            return false;
+        if (other.getAnomalyResources() == null ^ this.getAnomalyResources() == null)
+            return false;
+        if (other.getAnomalyResources() != null && other.getAnomalyResources().equals(this.getAnomalyResources()) == false)
+            return false;
         return true;
     }
 
@@ -678,6 +812,8 @@ public class ProactiveAnomaly implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getAssociatedInsightId() == null) ? 0 : getAssociatedInsightId().hashCode());
         hashCode = prime * hashCode + ((getResourceCollection() == null) ? 0 : getResourceCollection().hashCode());
         hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
+        hashCode = prime * hashCode + ((getSourceMetadata() == null) ? 0 : getSourceMetadata().hashCode());
+        hashCode = prime * hashCode + ((getAnomalyResources() == null) ? 0 : getAnomalyResources().hashCode());
         return hashCode;
     }
 

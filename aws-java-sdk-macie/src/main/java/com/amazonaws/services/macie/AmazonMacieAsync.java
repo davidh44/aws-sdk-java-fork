@@ -27,11 +27,14 @@ import com.amazonaws.services.macie.model.*;
  * <p>
  * <fullname>Amazon Macie Classic</fullname>
  * <p>
- * Amazon Macie Classic is a security service that uses machine learning to automatically discover, classify, and
- * protect sensitive data in AWS. Macie Classic recognizes sensitive data such as personally identifiable information
- * (PII) or intellectual property, and provides you with dashboards and alerts that give visibility into how this data
- * is being accessed or moved. For more information, see the <a
- * href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Amazon Macie Classic User Guide</a>.
+ * Amazon Macie Classic has been discontinued and is no longer available.
+ * </p>
+ * <p>
+ * A new Amazon Macie is now available with significant design improvements and additional features, at a lower price
+ * and in most Amazon Web Services Regions. We encourage you to take advantage of the new and improved features, and
+ * benefit from the reduced cost. To learn about features and pricing for the new Macie, see <a
+ * href="http://aws.amazon.com/macie/">Amazon Macie</a>. To learn how to use the new Macie, see the <a
+ * href="https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html">Amazon Macie User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -39,7 +42,7 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Associates a specified AWS account with Amazon Macie Classic as a member account.
+     * (Discontinued) Associates a specified Amazon Web Services account with Amazon Macie Classic as a member account.
      * </p>
      * 
      * @param associateMemberAccountRequest
@@ -52,7 +55,7 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Associates a specified AWS account with Amazon Macie Classic as a member account.
+     * (Discontinued) Associates a specified Amazon Web Services account with Amazon Macie Classic as a member account.
      * </p>
      * 
      * @param associateMemberAccountRequest
@@ -70,10 +73,10 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Associates specified S3 resources with Amazon Macie Classic for monitoring and data classification. If
-     * memberAccountId isn't specified, the action associates specified S3 resources with Macie Classic for the current
-     * Macie Classic administrator account. If memberAccountId is specified, the action associates specified S3
-     * resources with Macie Classic for the specified member account.
+     * (Discontinued) Associates specified S3 resources with Amazon Macie Classic for monitoring and data
+     * classification. If <code>memberAccountId</code> isn't specified, the action associates specified S3 resources
+     * with Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is
+     * specified, the action associates specified S3 resources with Macie Classic for the specified member account.
      * </p>
      * 
      * @param associateS3ResourcesRequest
@@ -86,10 +89,10 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Associates specified S3 resources with Amazon Macie Classic for monitoring and data classification. If
-     * memberAccountId isn't specified, the action associates specified S3 resources with Macie Classic for the current
-     * Macie Classic administrator account. If memberAccountId is specified, the action associates specified S3
-     * resources with Macie Classic for the specified member account.
+     * (Discontinued) Associates specified S3 resources with Amazon Macie Classic for monitoring and data
+     * classification. If <code>memberAccountId</code> isn't specified, the action associates specified S3 resources
+     * with Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is
+     * specified, the action associates specified S3 resources with Macie Classic for the specified member account.
      * </p>
      * 
      * @param associateS3ResourcesRequest
@@ -107,7 +110,7 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Removes the specified member account from Amazon Macie Classic.
+     * (Discontinued) Removes the specified member account from Amazon Macie Classic.
      * </p>
      * 
      * @param disassociateMemberAccountRequest
@@ -121,7 +124,7 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Removes the specified member account from Amazon Macie Classic.
+     * (Discontinued) Removes the specified member account from Amazon Macie Classic.
      * </p>
      * 
      * @param disassociateMemberAccountRequest
@@ -140,10 +143,10 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Removes specified S3 resources from being monitored by Amazon Macie Classic. If memberAccountId isn't specified,
-     * the action removes specified S3 resources from Macie Classic for the current Macie Classic administrator account.
-     * If memberAccountId is specified, the action removes specified S3 resources from Macie Classic for the specified
-     * member account.
+     * (Discontinued) Removes specified S3 resources from being monitored by Amazon Macie Classic. If
+     * <code>memberAccountId</code> isn't specified, the action removes specified S3 resources from Macie Classic for
+     * the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action removes
+     * specified S3 resources from Macie Classic for the specified member account.
      * </p>
      * 
      * @param disassociateS3ResourcesRequest
@@ -156,10 +159,10 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Removes specified S3 resources from being monitored by Amazon Macie Classic. If memberAccountId isn't specified,
-     * the action removes specified S3 resources from Macie Classic for the current Macie Classic administrator account.
-     * If memberAccountId is specified, the action removes specified S3 resources from Macie Classic for the specified
-     * member account.
+     * (Discontinued) Removes specified S3 resources from being monitored by Amazon Macie Classic. If
+     * <code>memberAccountId</code> isn't specified, the action removes specified S3 resources from Macie Classic for
+     * the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action removes
+     * specified S3 resources from Macie Classic for the specified member account.
      * </p>
      * 
      * @param disassociateS3ResourcesRequest
@@ -177,7 +180,8 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator account.
+     * (Discontinued) Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator
+     * account.
      * </p>
      * 
      * @param listMemberAccountsRequest
@@ -190,7 +194,8 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator account.
+     * (Discontinued) Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator
+     * account.
      * </p>
      * 
      * @param listMemberAccountsRequest
@@ -208,10 +213,10 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Lists all the S3 resources associated with Amazon Macie Classic. If memberAccountId isn't specified, the action
-     * lists the S3 resources associated with Macie Classic for the current Macie Classic administrator account. If
-     * memberAccountId is specified, the action lists the S3 resources associated with Macie Classic for the specified
-     * member account.
+     * (Discontinued) Lists all the S3 resources associated with Amazon Macie Classic. If <code>memberAccountId</code>
+     * isn't specified, the action lists the S3 resources associated with Macie Classic for the current Macie Classic
+     * administrator account. If <code>memberAccountId</code> is specified, the action lists the S3 resources associated
+     * with Macie Classic for the specified member account.
      * </p>
      * 
      * @param listS3ResourcesRequest
@@ -224,10 +229,10 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Lists all the S3 resources associated with Amazon Macie Classic. If memberAccountId isn't specified, the action
-     * lists the S3 resources associated with Macie Classic for the current Macie Classic administrator account. If
-     * memberAccountId is specified, the action lists the S3 resources associated with Macie Classic for the specified
-     * member account.
+     * (Discontinued) Lists all the S3 resources associated with Amazon Macie Classic. If <code>memberAccountId</code>
+     * isn't specified, the action lists the S3 resources associated with Macie Classic for the current Macie Classic
+     * administrator account. If <code>memberAccountId</code> is specified, the action lists the S3 resources associated
+     * with Macie Classic for the specified member account.
      * </p>
      * 
      * @param listS3ResourcesRequest
@@ -245,10 +250,11 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Updates the classification types for the specified S3 resources. If memberAccountId isn't specified, the action
-     * updates the classification types of the S3 resources associated with Amazon Macie Classic for the current Macie
-     * Classic administrator account. If memberAccountId is specified, the action updates the classification types of
-     * the S3 resources associated with Macie Classic for the specified member account.
+     * (Discontinued) Updates the classification types for the specified S3 resources. If <code>memberAccountId</code>
+     * isn't specified, the action updates the classification types of the S3 resources associated with Amazon Macie
+     * Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the
+     * action updates the classification types of the S3 resources associated with Macie Classic for the specified
+     * member account.
      * </p>
      * 
      * @param updateS3ResourcesRequest
@@ -261,10 +267,11 @@ public interface AmazonMacieAsync extends AmazonMacie {
 
     /**
      * <p>
-     * Updates the classification types for the specified S3 resources. If memberAccountId isn't specified, the action
-     * updates the classification types of the S3 resources associated with Amazon Macie Classic for the current Macie
-     * Classic administrator account. If memberAccountId is specified, the action updates the classification types of
-     * the S3 resources associated with Macie Classic for the specified member account.
+     * (Discontinued) Updates the classification types for the specified S3 resources. If <code>memberAccountId</code>
+     * isn't specified, the action updates the classification types of the S3 resources associated with Amazon Macie
+     * Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the
+     * action updates the classification types of the S3 resources associated with Macie Classic for the specified
+     * member account.
      * </p>
      * 
      * @param updateS3ResourcesRequest

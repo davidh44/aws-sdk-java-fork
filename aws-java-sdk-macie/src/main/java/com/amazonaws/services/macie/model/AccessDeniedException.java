@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You do not have required permissions to access the requested resource.
+ * (Discontinued) You do not have required permissions to access the requested resource.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -153,6 +153,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>100</code>
      * </p>
@@ -177,6 +183,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>20</code>
      * </p>
@@ -1342,6 +1354,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>100</code>
      * </p>
@@ -1364,6 +1382,13 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      *        >GetInstanceTypesFromInstanceRequirements</a>.
      *        </p>
+     *        <note>
+     *        <p>
+     *        If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *        protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     *        price.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default: <code>100</code>
      */
@@ -1391,6 +1416,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>100</code>
      * </p>
@@ -1412,6 +1443,13 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *         "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      *         >GetInstanceTypesFromInstanceRequirements</a>.
      *         </p>
+     *         <note>
+     *         <p>
+     *         If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *         protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     *         price.
+     *         </p>
+     *         </note>
      *         <p>
      *         Default: <code>100</code>
      */
@@ -1439,6 +1477,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>100</code>
      * </p>
@@ -1461,6 +1505,13 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      *        >GetInstanceTypesFromInstanceRequirements</a>.
      *        </p>
+     *        <note>
+     *        <p>
+     *        If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *        protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     *        price.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default: <code>100</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1490,6 +1541,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>20</code>
      * </p>
@@ -1512,6 +1569,13 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      *        >GetInstanceTypesFromInstanceRequirements</a>.
      *        </p>
+     *        <note>
+     *        <p>
+     *        If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *        protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     *        price.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default: <code>20</code>
      */
@@ -1539,6 +1603,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>20</code>
      * </p>
@@ -1560,6 +1630,13 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *         "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      *         >GetInstanceTypesFromInstanceRequirements</a>.
      *         </p>
+     *         <note>
+     *         <p>
+     *         If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *         protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     *         price.
+     *         </p>
+     *         </note>
      *         <p>
      *         Default: <code>20</code>
      */
@@ -1587,6 +1664,12 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      * >GetInstanceTypesFromInstanceRequirements</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance price.
+     * </p>
+     * </note>
      * <p>
      * Default: <code>20</code>
      * </p>
@@ -1609,6 +1692,13 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      *        "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html"
      *        >GetInstanceTypesFromInstanceRequirements</a>.
      *        </p>
+     *        <note>
+     *        <p>
+     *        If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *        protection threshold is applied based on the per-vCPU or per-memory price instead of the per-instance
+     *        price.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default: <code>20</code>
      * @return Returns a reference to this object so that method calls can be chained together.

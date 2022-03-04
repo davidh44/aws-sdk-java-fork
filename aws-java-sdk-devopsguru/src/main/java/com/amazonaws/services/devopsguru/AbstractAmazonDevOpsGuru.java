@@ -48,6 +48,11 @@ public class AbstractAmazonDevOpsGuru implements AmazonDevOpsGuru {
     }
 
     @Override
+    public DescribeEventSourcesConfigResult describeEventSourcesConfig(DescribeEventSourcesConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeFeedbackResult describeFeedback(DescribeFeedbackRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -145,6 +150,11 @@ public class AbstractAmazonDevOpsGuru implements AmazonDevOpsGuru {
 
     @Override
     public StartCostEstimationResult startCostEstimation(StartCostEstimationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEventSourcesConfigResult updateEventSourcesConfig(UpdateEventSourcesConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -180,6 +180,30 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
+     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * </p>
+     * 
+     * @param describeEventSourcesConfigRequest
+     * @return Result of the DescribeEventSourcesConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.DescribeEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeEventSourcesConfigResult describeEventSourcesConfig(DescribeEventSourcesConfigRequest describeEventSourcesConfigRequest);
+
+    /**
+     * <p>
      * Returns the most recent feedback submitted in the current Amazon Web Services account and Region.
      * </p>
      * 
@@ -721,6 +745,30 @@ public interface AmazonDevOpsGuru {
      *      target="_top">AWS API Documentation</a>
      */
     StartCostEstimationResult startCostEstimation(StartCostEstimationRequest startCostEstimationRequest);
+
+    /**
+     * <p>
+     * Updates the event source configuration.
+     * </p>
+     * 
+     * @param updateEventSourcesConfigRequest
+     * @return Result of the UpdateEventSourcesConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.UpdateEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEventSourcesConfigResult updateEventSourcesConfig(UpdateEventSourcesConfigRequest updateEventSourcesConfigRequest);
 
     /**
      * <p>

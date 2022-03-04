@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The S3 resources whose classification types you want to update. This data type is used as a request parameter in the
- * UpdateS3Resources action.
+ * (Discontinued) The S3 resources whose classification types you want to update. This data type is used as a request
+ * parameter in the <code>UpdateS3Resources</code> action.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie-2017-12-19/S3ResourceClassificationUpdate"
@@ -31,30 +31,31 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The name of the S3 bucket whose classification types you want to update.
      * </p>
      */
     private String bucketName;
     /**
      * <p>
-     * The prefix of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      * </p>
      */
     private String prefix;
     /**
      * <p>
-     * The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     * (Discontinued) The classification type that you want to update for the resource associated with Amazon Macie
+     * Classic.
      * </p>
      */
     private ClassificationTypeUpdate classificationTypeUpdate;
 
     /**
      * <p>
-     * The name of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The name of the S3 bucket whose classification types you want to update.
      * </p>
      * 
      * @param bucketName
-     *        The name of the S3 bucket whose classification types you want to update.
+     *        (Discontinued) The name of the S3 bucket whose classification types you want to update.
      */
 
     public void setBucketName(String bucketName) {
@@ -63,10 +64,10 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The name of the S3 bucket whose classification types you want to update.
      * </p>
      * 
-     * @return The name of the S3 bucket whose classification types you want to update.
+     * @return (Discontinued) The name of the S3 bucket whose classification types you want to update.
      */
 
     public String getBucketName() {
@@ -75,11 +76,11 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The name of the S3 bucket whose classification types you want to update.
      * </p>
      * 
      * @param bucketName
-     *        The name of the S3 bucket whose classification types you want to update.
+     *        (Discontinued) The name of the S3 bucket whose classification types you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +91,11 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The prefix of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      * </p>
      * 
      * @param prefix
-     *        The prefix of the S3 bucket whose classification types you want to update.
+     *        (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      */
 
     public void setPrefix(String prefix) {
@@ -103,10 +104,10 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The prefix of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      * </p>
      * 
-     * @return The prefix of the S3 bucket whose classification types you want to update.
+     * @return (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      */
 
     public String getPrefix() {
@@ -115,11 +116,11 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The prefix of the S3 bucket whose classification types you want to update.
+     * (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      * </p>
      * 
      * @param prefix
-     *        The prefix of the S3 bucket whose classification types you want to update.
+     *        (Discontinued) The prefix of the S3 bucket whose classification types you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +131,13 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     * (Discontinued) The classification type that you want to update for the resource associated with Amazon Macie
+     * Classic.
      * </p>
      * 
      * @param classificationTypeUpdate
-     *        The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     *        (Discontinued) The classification type that you want to update for the resource associated with Amazon
+     *        Macie Classic.
      */
 
     public void setClassificationTypeUpdate(ClassificationTypeUpdate classificationTypeUpdate) {
@@ -143,10 +146,12 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     * (Discontinued) The classification type that you want to update for the resource associated with Amazon Macie
+     * Classic.
      * </p>
      * 
-     * @return The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     * @return (Discontinued) The classification type that you want to update for the resource associated with Amazon
+     *         Macie Classic.
      */
 
     public ClassificationTypeUpdate getClassificationTypeUpdate() {
@@ -155,11 +160,13 @@ public class S3ResourceClassificationUpdate implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     * (Discontinued) The classification type that you want to update for the resource associated with Amazon Macie
+     * Classic.
      * </p>
      * 
      * @param classificationTypeUpdate
-     *        The classification type that you want to update for the resource associated with Amazon Macie Classic.
+     *        (Discontinued) The classification type that you want to update for the resource associated with Amazon
+     *        Macie Classic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

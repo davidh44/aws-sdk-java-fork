@@ -66,6 +66,12 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<RecommendationRelatedAnomaly> relatedAnomalies;
+    /**
+     * <p>
+     * The category type of the recommendation.
+     * </p>
+     */
+    private String category;
 
     /**
      * <p>
@@ -384,6 +390,46 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The category type of the recommendation.
+     * </p>
+     * 
+     * @param category
+     *        The category type of the recommendation.
+     */
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    /**
+     * <p>
+     * The category type of the recommendation.
+     * </p>
+     * 
+     * @return The category type of the recommendation.
+     */
+
+    public String getCategory() {
+        return this.category;
+    }
+
+    /**
+     * <p>
+     * The category type of the recommendation.
+     * </p>
+     * 
+     * @param category
+     *        The category type of the recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Recommendation withCategory(String category) {
+        setCategory(category);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -406,7 +452,9 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
         if (getRelatedEvents() != null)
             sb.append("RelatedEvents: ").append(getRelatedEvents()).append(",");
         if (getRelatedAnomalies() != null)
-            sb.append("RelatedAnomalies: ").append(getRelatedAnomalies());
+            sb.append("RelatedAnomalies: ").append(getRelatedAnomalies()).append(",");
+        if (getCategory() != null)
+            sb.append("Category: ").append(getCategory());
         sb.append("}");
         return sb.toString();
     }
@@ -445,6 +493,10 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRelatedAnomalies() != null && other.getRelatedAnomalies().equals(this.getRelatedAnomalies()) == false)
             return false;
+        if (other.getCategory() == null ^ this.getCategory() == null)
+            return false;
+        if (other.getCategory() != null && other.getCategory().equals(this.getCategory()) == false)
+            return false;
         return true;
     }
 
@@ -459,6 +511,7 @@ public class Recommendation implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
         hashCode = prime * hashCode + ((getRelatedEvents() == null) ? 0 : getRelatedEvents().hashCode());
         hashCode = prime * hashCode + ((getRelatedAnomalies() == null) ? 0 : getRelatedAnomalies().hashCode());
+        hashCode = prime * hashCode + ((getCategory() == null) ? 0 : getCategory().hashCode());
         return hashCode;
     }
 

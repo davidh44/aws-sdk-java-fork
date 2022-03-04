@@ -92,6 +92,16 @@ public class ProactiveAnomalyJsonUnmarshaller implements Unmarshaller<ProactiveA
                     context.nextToken();
                     proactiveAnomaly.setLimit(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("SourceMetadata", targetDepth)) {
+                    context.nextToken();
+                    proactiveAnomaly.setSourceMetadata(AnomalySourceMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AnomalyResources", targetDepth)) {
+                    context.nextToken();
+                    proactiveAnomaly.setAnomalyResources(new ListUnmarshaller<AnomalyResource>(AnomalyResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

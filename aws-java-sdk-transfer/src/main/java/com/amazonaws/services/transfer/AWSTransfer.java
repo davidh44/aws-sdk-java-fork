@@ -18,6 +18,7 @@ import com.amazonaws.*;
 import com.amazonaws.regions.*;
 
 import com.amazonaws.services.transfer.model.*;
+import com.amazonaws.services.transfer.waiters.AWSTransferWaiters;
 
 /**
  * Interface for accessing AWS Transfer.
@@ -945,5 +946,7 @@ public interface AWSTransfer {
      * @return The response metadata for the specified request, or null if none is available.
      */
     ResponseMetadata getCachedResponseMetadata(AmazonWebServiceRequest request);
+
+    AWSTransferWaiters waiters();
 
 }

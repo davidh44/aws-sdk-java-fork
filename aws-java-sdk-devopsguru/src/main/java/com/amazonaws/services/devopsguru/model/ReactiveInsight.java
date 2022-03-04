@@ -65,6 +65,12 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String ssmOpsItemId;
+    /**
+     * <p>
+     * Describes the reactive insight.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -379,6 +385,46 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Describes the reactive insight.
+     * </p>
+     * 
+     * @param description
+     *        Describes the reactive insight.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * Describes the reactive insight.
+     * </p>
+     * 
+     * @return Describes the reactive insight.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * Describes the reactive insight.
+     * </p>
+     * 
+     * @param description
+     *        Describes the reactive insight.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReactiveInsight withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -403,7 +449,9 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
         if (getResourceCollection() != null)
             sb.append("ResourceCollection: ").append(getResourceCollection()).append(",");
         if (getSsmOpsItemId() != null)
-            sb.append("SsmOpsItemId: ").append(getSsmOpsItemId());
+            sb.append("SsmOpsItemId: ").append(getSsmOpsItemId()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -446,6 +494,10 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getSsmOpsItemId() != null && other.getSsmOpsItemId().equals(this.getSsmOpsItemId()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         return true;
     }
 
@@ -461,6 +513,7 @@ public class ReactiveInsight implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getInsightTimeRange() == null) ? 0 : getInsightTimeRange().hashCode());
         hashCode = prime * hashCode + ((getResourceCollection() == null) ? 0 : getResourceCollection().hashCode());
         hashCode = prime * hashCode + ((getSsmOpsItemId() == null) ? 0 : getSsmOpsItemId().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

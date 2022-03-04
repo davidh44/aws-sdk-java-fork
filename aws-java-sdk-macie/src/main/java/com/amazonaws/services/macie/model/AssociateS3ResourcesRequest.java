@@ -27,25 +27,28 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie Classic.
+     * (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
+     * Classic.
      * </p>
      */
     private String memberAccountId;
     /**
      * <p>
-     * The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data classification.
+     * (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
+     * classification.
      * </p>
      */
     private java.util.List<S3ResourceClassification> s3Resources;
 
     /**
      * <p>
-     * The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie Classic.
+     * (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
+     * Classic.
      * </p>
      * 
      * @param memberAccountId
-     *        The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
-     *        Classic.
+     *        (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate
+     *        with Macie Classic.
      */
 
     public void setMemberAccountId(String memberAccountId) {
@@ -54,11 +57,12 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie Classic.
+     * (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
+     * Classic.
      * </p>
      * 
-     * @return The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
-     *         Classic.
+     * @return (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate
+     *         with Macie Classic.
      */
 
     public String getMemberAccountId() {
@@ -67,12 +71,13 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie Classic.
+     * (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
+     * Classic.
      * </p>
      * 
      * @param memberAccountId
-     *        The ID of the Amazon Macie Classic member account whose resources you want to associate with Macie
-     *        Classic.
+     *        (Discontinued) The ID of the Amazon Macie Classic member account whose resources you want to associate
+     *        with Macie Classic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +88,12 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data classification.
+     * (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
+     * classification.
      * </p>
      * 
-     * @return The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
-     *         classification.
+     * @return (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and
+     *         data classification.
      */
 
     public java.util.List<S3ResourceClassification> getS3Resources() {
@@ -96,12 +102,13 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data classification.
+     * (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
+     * classification.
      * </p>
      * 
      * @param s3Resources
-     *        The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
-     *        classification.
+     *        (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and
+     *        data classification.
      */
 
     public void setS3Resources(java.util.Collection<S3ResourceClassification> s3Resources) {
@@ -115,7 +122,8 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data classification.
+     * (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
+     * classification.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -124,8 +132,8 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param s3Resources
-     *        The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
-     *        classification.
+     *        (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and
+     *        data classification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,12 +149,13 @@ public class AssociateS3ResourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data classification.
+     * (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
+     * classification.
      * </p>
      * 
      * @param s3Resources
-     *        The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data
-     *        classification.
+     *        (Discontinued) The S3 resources that you want to associate with Amazon Macie Classic for monitoring and
+     *        data classification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,31 +27,32 @@ public class ListMemberAccountsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set the value of this parameter to null on your first call to the
-     * ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the value of
-     * nextToken from the previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on your first
+     * call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill <code>nextToken</code> in
+     * the request with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set the value of this parameter to null on your first call to the
-     * ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the value of
-     * nextToken from the previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on your first
+     * call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill <code>nextToken</code> in
+     * the request with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      * 
      * @param nextToken
-     *        Use this parameter when paginating results. Set the value of this parameter to null on your first call to
-     *        the ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the value
-     *        of nextToken from the previous response to continue listing data.
+     *        (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on your
+     *        first call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill
+     *        <code>nextToken</code> in the request with the value of <code>nextToken</code> from the previous response
+     *        to continue listing data.
      */
 
     public void setNextToken(String nextToken) {
@@ -60,14 +61,15 @@ public class ListMemberAccountsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set the value of this parameter to null on your first call to the
-     * ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the value of
-     * nextToken from the previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on your first
+     * call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill <code>nextToken</code> in
+     * the request with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      * 
-     * @return Use this parameter when paginating results. Set the value of this parameter to null on your first call to
-     *         the ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the
-     *         value of nextToken from the previous response to continue listing data.
+     * @return (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on
+     *         your first call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill
+     *         <code>nextToken</code> in the request with the value of <code>nextToken</code> from the previous response
+     *         to continue listing data.
      */
 
     public String getNextToken() {
@@ -76,15 +78,16 @@ public class ListMemberAccountsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Use this parameter when paginating results. Set the value of this parameter to null on your first call to the
-     * ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the value of
-     * nextToken from the previous response to continue listing data.
+     * (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on your first
+     * call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill <code>nextToken</code> in
+     * the request with the value of <code>nextToken</code> from the previous response to continue listing data.
      * </p>
      * 
      * @param nextToken
-     *        Use this parameter when paginating results. Set the value of this parameter to null on your first call to
-     *        the ListMemberAccounts action. Subsequent calls to the action fill nextToken in the request with the value
-     *        of nextToken from the previous response to continue listing data.
+     *        (Discontinued) Use this parameter when paginating results. Set the value of this parameter to null on your
+     *        first call to the <code>ListMemberAccounts</code> action. Subsequent calls to the action fill
+     *        <code>nextToken</code> in the request with the value of <code>nextToken</code> from the previous response
+     *        to continue listing data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,13 +98,13 @@ public class ListMemberAccountsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      * 
      * @param maxResults
-     *        Use this parameter to indicate the maximum number of items that you want in the response. The default
-     *        value is 250.
+     *        (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response.
+     *        The default value is 250.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -110,12 +113,12 @@ public class ListMemberAccountsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      * 
-     * @return Use this parameter to indicate the maximum number of items that you want in the response. The default
-     *         value is 250.
+     * @return (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response.
+     *         The default value is 250.
      */
 
     public Integer getMaxResults() {
@@ -124,13 +127,13 @@ public class ListMemberAccountsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Use this parameter to indicate the maximum number of items that you want in the response. The default value is
-     * 250.
+     * (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response. The
+     * default value is 250.
      * </p>
      * 
      * @param maxResults
-     *        Use this parameter to indicate the maximum number of items that you want in the response. The default
-     *        value is 250.
+     *        (Discontinued) Use this parameter to indicate the maximum number of items that you want in the response.
+     *        The default value is 250.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

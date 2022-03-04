@@ -224,6 +224,39 @@ public class AmazonDevOpsGuruAsyncClient extends AmazonDevOpsGuruClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEventSourcesConfigResult> describeEventSourcesConfigAsync(DescribeEventSourcesConfigRequest request) {
+
+        return describeEventSourcesConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEventSourcesConfigResult> describeEventSourcesConfigAsync(final DescribeEventSourcesConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEventSourcesConfigRequest, DescribeEventSourcesConfigResult> asyncHandler) {
+        final DescribeEventSourcesConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEventSourcesConfigResult>() {
+            @Override
+            public DescribeEventSourcesConfigResult call() throws Exception {
+                DescribeEventSourcesConfigResult result = null;
+
+                try {
+                    result = executeDescribeEventSourcesConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFeedbackResult> describeFeedbackAsync(DescribeFeedbackRequest request) {
 
         return describeFeedbackAsync(request, null);
@@ -872,6 +905,39 @@ public class AmazonDevOpsGuruAsyncClient extends AmazonDevOpsGuruClient implemen
 
                 try {
                     result = executeStartCostEstimation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventSourcesConfigResult> updateEventSourcesConfigAsync(UpdateEventSourcesConfigRequest request) {
+
+        return updateEventSourcesConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventSourcesConfigResult> updateEventSourcesConfigAsync(final UpdateEventSourcesConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEventSourcesConfigRequest, UpdateEventSourcesConfigResult> asyncHandler) {
+        final UpdateEventSourcesConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEventSourcesConfigResult>() {
+            @Override
+            public UpdateEventSourcesConfigResult call() throws Exception {
+                UpdateEventSourcesConfigResult result = null;
+
+                try {
+                    result = executeUpdateEventSourcesConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

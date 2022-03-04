@@ -208,6 +208,39 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
 
     /**
      * <p>
+     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * </p>
+     * 
+     * @param describeEventSourcesConfigRequest
+     * @return A Java Future containing the result of the DescribeEventSourcesConfig operation returned by the service.
+     * @sample AmazonDevOpsGuruAsync.DescribeEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEventSourcesConfigResult> describeEventSourcesConfigAsync(
+            DescribeEventSourcesConfigRequest describeEventSourcesConfigRequest);
+
+    /**
+     * <p>
+     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * </p>
+     * 
+     * @param describeEventSourcesConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEventSourcesConfig operation returned by the service.
+     * @sample AmazonDevOpsGuruAsyncHandler.DescribeEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEventSourcesConfigResult> describeEventSourcesConfigAsync(
+            DescribeEventSourcesConfigRequest describeEventSourcesConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEventSourcesConfigRequest, DescribeEventSourcesConfigResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the most recent feedback submitted in the current Amazon Web Services account and Region.
      * </p>
      * 
@@ -919,6 +952,37 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
      */
     java.util.concurrent.Future<StartCostEstimationResult> startCostEstimationAsync(StartCostEstimationRequest startCostEstimationRequest,
             com.amazonaws.handlers.AsyncHandler<StartCostEstimationRequest, StartCostEstimationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the event source configuration.
+     * </p>
+     * 
+     * @param updateEventSourcesConfigRequest
+     * @return A Java Future containing the result of the UpdateEventSourcesConfig operation returned by the service.
+     * @sample AmazonDevOpsGuruAsync.UpdateEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventSourcesConfigResult> updateEventSourcesConfigAsync(UpdateEventSourcesConfigRequest updateEventSourcesConfigRequest);
+
+    /**
+     * <p>
+     * Updates the event source configuration.
+     * </p>
+     * 
+     * @param updateEventSourcesConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEventSourcesConfig operation returned by the service.
+     * @sample AmazonDevOpsGuruAsyncHandler.UpdateEventSourcesConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventSourcesConfigResult> updateEventSourcesConfigAsync(UpdateEventSourcesConfigRequest updateEventSourcesConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventSourcesConfigRequest, UpdateEventSourcesConfigResult> asyncHandler);
 
     /**
      * <p>
