@@ -163,6 +163,58 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private Boolean enableExecuteCommand;
+    /**
+     * <p>
+     * Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
+     * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     */
+    private Boolean enableECSManagedTags;
+    /**
+     * <p>
+     * A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container name,
+     * and the container port to access from the load balancer. The container name is as it appears in a container
+     * definition.
+     * </p>
+     * <p>
+     * When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the updated
+     * Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<LoadBalancer> loadBalancers;
+    /**
+     * <p>
+     * Determines whether to propagate the tags from the task definition or the service to the task. If no value is
+     * specified, the tags aren't propagated.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     */
+    private String propagateTags;
+    /**
+     * <p>
+     * The details for the service discovery registries to assign to this service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a>.
+     * </p>
+     * <p>
+     * When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     * updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<ServiceRegistry> serviceRegistries;
 
     /**
      * <p>
@@ -1257,6 +1309,485 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
+     * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @param enableECSManagedTags
+     *        Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
+     *        Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     *        <p>
+     *        Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *        <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated
+     *        tags.
+     */
+
+    public void setEnableECSManagedTags(Boolean enableECSManagedTags) {
+        this.enableECSManagedTags = enableECSManagedTags;
+    }
+
+    /**
+     * <p>
+     * Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
+     * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @return Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
+     *         Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     *         <p>
+     *         Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *         <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the
+     *         updated tags.
+     */
+
+    public Boolean getEnableECSManagedTags() {
+        return this.enableECSManagedTags;
+    }
+
+    /**
+     * <p>
+     * Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
+     * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @param enableECSManagedTags
+     *        Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
+     *        Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     *        <p>
+     *        Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *        <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated
+     *        tags.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServiceRequest withEnableECSManagedTags(Boolean enableECSManagedTags) {
+        setEnableECSManagedTags(enableECSManagedTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
+     * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @return Determines whether to turn on Amazon ECS managed tags for the tasks in the service. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
+     *         Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     *         <p>
+     *         Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *         <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the
+     *         updated tags.
+     */
+
+    public Boolean isEnableECSManagedTags() {
+        return this.enableECSManagedTags;
+    }
+
+    /**
+     * <p>
+     * A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container name,
+     * and the container port to access from the load balancer. The container name is as it appears in a container
+     * definition.
+     * </p>
+     * <p>
+     * When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the updated
+     * Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * </p>
+     * 
+     * @return A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container
+     *         name, and the container port to access from the load balancer. The container name is as it appears in a
+     *         container definition.</p>
+     *         <p>
+     *         When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the
+     *         updated Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are
+     *         running.
+     *         </p>
+     *         <p>
+     *         You can remove existing <code>loadBalancers</code> by passing an empty list.
+     */
+
+    public java.util.List<LoadBalancer> getLoadBalancers() {
+        if (loadBalancers == null) {
+            loadBalancers = new com.amazonaws.internal.SdkInternalList<LoadBalancer>();
+        }
+        return loadBalancers;
+    }
+
+    /**
+     * <p>
+     * A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container name,
+     * and the container port to access from the load balancer. The container name is as it appears in a container
+     * definition.
+     * </p>
+     * <p>
+     * When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the updated
+     * Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * </p>
+     * 
+     * @param loadBalancers
+     *        A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container
+     *        name, and the container port to access from the load balancer. The container name is as it appears in a
+     *        container definition.</p>
+     *        <p>
+     *        When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the
+     *        updated Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     *        </p>
+     *        <p>
+     *        You can remove existing <code>loadBalancers</code> by passing an empty list.
+     */
+
+    public void setLoadBalancers(java.util.Collection<LoadBalancer> loadBalancers) {
+        if (loadBalancers == null) {
+            this.loadBalancers = null;
+            return;
+        }
+
+        this.loadBalancers = new com.amazonaws.internal.SdkInternalList<LoadBalancer>(loadBalancers);
+    }
+
+    /**
+     * <p>
+     * A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container name,
+     * and the container port to access from the load balancer. The container name is as it appears in a container
+     * definition.
+     * </p>
+     * <p>
+     * When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the updated
+     * Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLoadBalancers(java.util.Collection)} or {@link #withLoadBalancers(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param loadBalancers
+     *        A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container
+     *        name, and the container port to access from the load balancer. The container name is as it appears in a
+     *        container definition.</p>
+     *        <p>
+     *        When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the
+     *        updated Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     *        </p>
+     *        <p>
+     *        You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServiceRequest withLoadBalancers(LoadBalancer... loadBalancers) {
+        if (this.loadBalancers == null) {
+            setLoadBalancers(new com.amazonaws.internal.SdkInternalList<LoadBalancer>(loadBalancers.length));
+        }
+        for (LoadBalancer ele : loadBalancers) {
+            this.loadBalancers.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container name,
+     * and the container port to access from the load balancer. The container name is as it appears in a container
+     * definition.
+     * </p>
+     * <p>
+     * When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the updated
+     * Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * </p>
+     * 
+     * @param loadBalancers
+     *        A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the container
+     *        name, and the container port to access from the load balancer. The container name is as it appears in a
+     *        container definition.</p>
+     *        <p>
+     *        When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks with the
+     *        updated Elastic Load Balancing configuration, and then stops the old tasks when the new tasks are running.
+     *        </p>
+     *        <p>
+     *        You can remove existing <code>loadBalancers</code> by passing an empty list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServiceRequest withLoadBalancers(java.util.Collection<LoadBalancer> loadBalancers) {
+        setLoadBalancers(loadBalancers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines whether to propagate the tags from the task definition or the service to the task. If no value is
+     * specified, the tags aren't propagated.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @param propagateTags
+     *        Determines whether to propagate the tags from the task definition or the service to the task. If no value
+     *        is specified, the tags aren't propagated.</p>
+     *        <p>
+     *        Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *        <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated
+     *        tags.
+     * @see PropagateTags
+     */
+
+    public void setPropagateTags(String propagateTags) {
+        this.propagateTags = propagateTags;
+    }
+
+    /**
+     * <p>
+     * Determines whether to propagate the tags from the task definition or the service to the task. If no value is
+     * specified, the tags aren't propagated.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @return Determines whether to propagate the tags from the task definition or the service to the task. If no value
+     *         is specified, the tags aren't propagated.</p>
+     *         <p>
+     *         Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *         <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the
+     *         updated tags.
+     * @see PropagateTags
+     */
+
+    public String getPropagateTags() {
+        return this.propagateTags;
+    }
+
+    /**
+     * <p>
+     * Determines whether to propagate the tags from the task definition or the service to the task. If no value is
+     * specified, the tags aren't propagated.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @param propagateTags
+     *        Determines whether to propagate the tags from the task definition or the service to the task. If no value
+     *        is specified, the tags aren't propagated.</p>
+     *        <p>
+     *        Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *        <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated
+     *        tags.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PropagateTags
+     */
+
+    public UpdateServiceRequest withPropagateTags(String propagateTags) {
+        setPropagateTags(propagateTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines whether to propagate the tags from the task definition or the service to the task. If no value is
+     * specified, the tags aren't propagated.
+     * </p>
+     * <p>
+     * Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     * <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated tags.
+     * </p>
+     * 
+     * @param propagateTags
+     *        Determines whether to propagate the tags from the task definition or the service to the task. If no value
+     *        is specified, the tags aren't propagated.</p>
+     *        <p>
+     *        Only tasks launched after the update will reflect the update. To update the tags on all tasks, set
+     *        <code>forceNewDeployment</code> to <code>true</code>, so that Amazon ECS starts new tasks with the updated
+     *        tags.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PropagateTags
+     */
+
+    public UpdateServiceRequest withPropagateTags(PropagateTags propagateTags) {
+        this.propagateTags = propagateTags.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The details for the service discovery registries to assign to this service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a>.
+     * </p>
+     * <p>
+     * When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     * updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * </p>
+     * 
+     * @return The details for the service discovery registries to assign to this service. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     *         Discovery</a>.</p>
+     *         <p>
+     *         When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with
+     *         the updated service registries configuration, and then stops the old tasks when the new tasks are
+     *         running.
+     *         </p>
+     *         <p>
+     *         You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     */
+
+    public java.util.List<ServiceRegistry> getServiceRegistries() {
+        if (serviceRegistries == null) {
+            serviceRegistries = new com.amazonaws.internal.SdkInternalList<ServiceRegistry>();
+        }
+        return serviceRegistries;
+    }
+
+    /**
+     * <p>
+     * The details for the service discovery registries to assign to this service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a>.
+     * </p>
+     * <p>
+     * When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     * updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * </p>
+     * 
+     * @param serviceRegistries
+     *        The details for the service discovery registries to assign to this service. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     *        Discovery</a>.</p>
+     *        <p>
+     *        When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     *        updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     *        </p>
+     *        <p>
+     *        You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     */
+
+    public void setServiceRegistries(java.util.Collection<ServiceRegistry> serviceRegistries) {
+        if (serviceRegistries == null) {
+            this.serviceRegistries = null;
+            return;
+        }
+
+        this.serviceRegistries = new com.amazonaws.internal.SdkInternalList<ServiceRegistry>(serviceRegistries);
+    }
+
+    /**
+     * <p>
+     * The details for the service discovery registries to assign to this service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a>.
+     * </p>
+     * <p>
+     * When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     * updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setServiceRegistries(java.util.Collection)} or {@link #withServiceRegistries(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param serviceRegistries
+     *        The details for the service discovery registries to assign to this service. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     *        Discovery</a>.</p>
+     *        <p>
+     *        When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     *        updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     *        </p>
+     *        <p>
+     *        You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServiceRequest withServiceRegistries(ServiceRegistry... serviceRegistries) {
+        if (this.serviceRegistries == null) {
+            setServiceRegistries(new com.amazonaws.internal.SdkInternalList<ServiceRegistry>(serviceRegistries.length));
+        }
+        for (ServiceRegistry ele : serviceRegistries) {
+            this.serviceRegistries.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The details for the service discovery registries to assign to this service. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a>.
+     * </p>
+     * <p>
+     * When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     * updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     * </p>
+     * <p>
+     * You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * </p>
+     * 
+     * @param serviceRegistries
+     *        The details for the service discovery registries to assign to this service. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     *        Discovery</a>.</p>
+     *        <p>
+     *        When you add, update, or remove the service registries configuration, Amazon ECS starts new tasks with the
+     *        updated service registries configuration, and then stops the old tasks when the new tasks are running.
+     *        </p>
+     *        <p>
+     *        You can remove existing <code>serviceRegistries</code> by passing an empty list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServiceRequest withServiceRegistries(java.util.Collection<ServiceRegistry> serviceRegistries) {
+        setServiceRegistries(serviceRegistries);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1293,7 +1824,15 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getHealthCheckGracePeriodSeconds() != null)
             sb.append("HealthCheckGracePeriodSeconds: ").append(getHealthCheckGracePeriodSeconds()).append(",");
         if (getEnableExecuteCommand() != null)
-            sb.append("EnableExecuteCommand: ").append(getEnableExecuteCommand());
+            sb.append("EnableExecuteCommand: ").append(getEnableExecuteCommand()).append(",");
+        if (getEnableECSManagedTags() != null)
+            sb.append("EnableECSManagedTags: ").append(getEnableECSManagedTags()).append(",");
+        if (getLoadBalancers() != null)
+            sb.append("LoadBalancers: ").append(getLoadBalancers()).append(",");
+        if (getPropagateTags() != null)
+            sb.append("PropagateTags: ").append(getPropagateTags()).append(",");
+        if (getServiceRegistries() != null)
+            sb.append("ServiceRegistries: ").append(getServiceRegistries());
         sb.append("}");
         return sb.toString();
     }
@@ -1361,6 +1900,22 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getEnableExecuteCommand() != null && other.getEnableExecuteCommand().equals(this.getEnableExecuteCommand()) == false)
             return false;
+        if (other.getEnableECSManagedTags() == null ^ this.getEnableECSManagedTags() == null)
+            return false;
+        if (other.getEnableECSManagedTags() != null && other.getEnableECSManagedTags().equals(this.getEnableECSManagedTags()) == false)
+            return false;
+        if (other.getLoadBalancers() == null ^ this.getLoadBalancers() == null)
+            return false;
+        if (other.getLoadBalancers() != null && other.getLoadBalancers().equals(this.getLoadBalancers()) == false)
+            return false;
+        if (other.getPropagateTags() == null ^ this.getPropagateTags() == null)
+            return false;
+        if (other.getPropagateTags() != null && other.getPropagateTags().equals(this.getPropagateTags()) == false)
+            return false;
+        if (other.getServiceRegistries() == null ^ this.getServiceRegistries() == null)
+            return false;
+        if (other.getServiceRegistries() != null && other.getServiceRegistries().equals(this.getServiceRegistries()) == false)
+            return false;
         return true;
     }
 
@@ -1382,6 +1937,10 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getForceNewDeployment() == null) ? 0 : getForceNewDeployment().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckGracePeriodSeconds() == null) ? 0 : getHealthCheckGracePeriodSeconds().hashCode());
         hashCode = prime * hashCode + ((getEnableExecuteCommand() == null) ? 0 : getEnableExecuteCommand().hashCode());
+        hashCode = prime * hashCode + ((getEnableECSManagedTags() == null) ? 0 : getEnableECSManagedTags().hashCode());
+        hashCode = prime * hashCode + ((getLoadBalancers() == null) ? 0 : getLoadBalancers().hashCode());
+        hashCode = prime * hashCode + ((getPropagateTags() == null) ? 0 : getPropagateTags().hashCode());
+        hashCode = prime * hashCode + ((getServiceRegistries() == null) ? 0 : getServiceRegistries().hashCode());
         return hashCode;
     }
 

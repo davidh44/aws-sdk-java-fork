@@ -42,7 +42,7 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     private String applicationId;
     /**
      * <p>
-     * he Amazon Resource Name (ARN) of the application.
+     * The Amazon Resource Name (ARN) of the application.
      * </p>
      */
     private String arn;
@@ -84,7 +84,8 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     private String name;
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      */
     private String ownerAccountId;
@@ -195,11 +196,11 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * he Amazon Resource Name (ARN) of the application.
+     * The Amazon Resource Name (ARN) of the application.
      * </p>
      * 
      * @param arn
-     *        he Amazon Resource Name (ARN) of the application.
+     *        The Amazon Resource Name (ARN) of the application.
      */
 
     public void setArn(String arn) {
@@ -208,10 +209,10 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * he Amazon Resource Name (ARN) of the application.
+     * The Amazon Resource Name (ARN) of the application.
      * </p>
      * 
-     * @return he Amazon Resource Name (ARN) of the application.
+     * @return The Amazon Resource Name (ARN) of the application.
      */
 
     public String getArn() {
@@ -220,11 +221,11 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * he Amazon Resource Name (ARN) of the application.
+     * The Amazon Resource Name (ARN) of the application.
      * </p>
      * 
      * @param arn
-     *        he Amazon Resource Name (ARN) of the application.
+     *        The Amazon Resource Name (ARN) of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -475,11 +476,13 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      * 
      * @param ownerAccountId
-     *        The Amazon Web Services account ID of the application owner.
+     *        The Amazon Web Services account ID of the application owner (which is always the same as the environment
+     *        owner account ID).
      */
 
     public void setOwnerAccountId(String ownerAccountId) {
@@ -488,10 +491,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      * 
-     * @return The Amazon Web Services account ID of the application owner.
+     * @return The Amazon Web Services account ID of the application owner (which is always the same as the environment
+     *         owner account ID).
      */
 
     public String getOwnerAccountId() {
@@ -500,11 +505,13 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      * 
      * @param ownerAccountId
-     *        The Amazon Web Services account ID of the application owner.
+     *        The Amazon Web Services account ID of the application owner (which is always the same as the environment
+     *        owner account ID).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

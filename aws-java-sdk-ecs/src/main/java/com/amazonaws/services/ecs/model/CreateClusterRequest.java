@@ -85,7 +85,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a
+     * The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container Insights for a
      * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
@@ -613,12 +613,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a
+     * The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container Insights for a
      * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * 
-     * @return The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container
+     * @return The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container
      *         Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
      *         set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      */
@@ -632,15 +632,15 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a
+     * The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container Insights for a
      * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * 
      * @param settings
-     *        The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights
-     *        for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
-     *        <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
+     *        The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container
+     *        Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
+     *        set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      */
 
     public void setSettings(java.util.Collection<ClusterSetting> settings) {
@@ -654,7 +654,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a
+     * The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container Insights for a
      * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
@@ -665,9 +665,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param settings
-     *        The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights
-     *        for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
-     *        <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
+     *        The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container
+     *        Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
+     *        set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -683,15 +683,15 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a
+     * The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container Insights for a
      * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * 
      * @param settings
-     *        The setting to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights
-     *        for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
-     *        <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
+     *        The setting to use when creating a cluster. This parameter is used to turn on CloudWatch Container
+     *        Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
+     *        set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

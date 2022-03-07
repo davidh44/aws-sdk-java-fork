@@ -58,7 +58,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private Integer count;
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -66,8 +66,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private Boolean enableECSManagedTags;
     /**
      * <p>
-     * Determines whether to enable the execute command functionality for the containers in this task. If
-     * <code>true</code>, this enables execute command functionality on all containers in the task.
+     * Determines whether to use the execute command functionality for the containers in this task. If <code>true</code>
+     * , this enables execute command functionality on all containers in the task.
      * </p>
      */
     private Boolean enableExecuteCommand;
@@ -515,13 +515,13 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     *        Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon
      *        ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -532,12 +532,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * @return Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -548,13 +548,13 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     *        Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon
      *        ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -567,12 +567,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * @return Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -583,12 +583,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Determines whether to enable the execute command functionality for the containers in this task. If
-     * <code>true</code>, this enables execute command functionality on all containers in the task.
+     * Determines whether to use the execute command functionality for the containers in this task. If <code>true</code>
+     * , this enables execute command functionality on all containers in the task.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether to enable the execute command functionality for the containers in this task. If
+     *        Determines whether to use the execute command functionality for the containers in this task. If
      *        <code>true</code>, this enables execute command functionality on all containers in the task.
      */
 
@@ -598,11 +598,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Determines whether to enable the execute command functionality for the containers in this task. If
-     * <code>true</code>, this enables execute command functionality on all containers in the task.
+     * Determines whether to use the execute command functionality for the containers in this task. If <code>true</code>
+     * , this enables execute command functionality on all containers in the task.
      * </p>
      * 
-     * @return Determines whether to enable the execute command functionality for the containers in this task. If
+     * @return Determines whether to use the execute command functionality for the containers in this task. If
      *         <code>true</code>, this enables execute command functionality on all containers in the task.
      */
 
@@ -612,12 +612,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Determines whether to enable the execute command functionality for the containers in this task. If
-     * <code>true</code>, this enables execute command functionality on all containers in the task.
+     * Determines whether to use the execute command functionality for the containers in this task. If <code>true</code>
+     * , this enables execute command functionality on all containers in the task.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether to enable the execute command functionality for the containers in this task. If
+     *        Determines whether to use the execute command functionality for the containers in this task. If
      *        <code>true</code>, this enables execute command functionality on all containers in the task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -629,11 +629,11 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Determines whether to enable the execute command functionality for the containers in this task. If
-     * <code>true</code>, this enables execute command functionality on all containers in the task.
+     * Determines whether to use the execute command functionality for the containers in this task. If <code>true</code>
+     * , this enables execute command functionality on all containers in the task.
      * </p>
      * 
-     * @return Determines whether to enable the execute command functionality for the containers in this task. If
+     * @return Determines whether to use the execute command functionality for the containers in this task. If
      *         <code>true</code>, this enables execute command functionality on all containers in the task.
      */
 

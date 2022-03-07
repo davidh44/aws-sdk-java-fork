@@ -355,7 +355,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For tasks hosted on Amazon EC2 instances, the container instances require at least version <code>1.26.0</code> of
-     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to enable a
+     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to use a
      * proxy configuration. If your container instances are launched from the Amazon ECS-optimized AMI version
      * <code>20190301</code> or later, then they contain the required versions of the container agent and
      * <code>ecs-init</code>. For more information, see <a
@@ -3159,7 +3159,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For tasks hosted on Amazon EC2 instances, the container instances require at least version <code>1.26.0</code> of
-     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to enable a
+     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to use a
      * proxy configuration. If your container instances are launched from the Amazon ECS-optimized AMI version
      * <code>20190301</code> or later, then they contain the required versions of the container agent and
      * <code>ecs-init</code>. For more information, see <a
@@ -3172,8 +3172,8 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For tasks hosted on Amazon EC2 instances, the container instances require at least version
      *        <code>1.26.0</code> of the container agent and at least version <code>1.26.0-1</code> of the
-     *        <code>ecs-init</code> package to enable a proxy configuration. If your container instances are launched
-     *        from the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required
+     *        <code>ecs-init</code> package to use a proxy configuration. If your container instances are launched from
+     *        the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required
      *        versions of the container agent and <code>ecs-init</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-ami-versions.html">Amazon
      *        ECS-optimized AMI versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -3189,7 +3189,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For tasks hosted on Amazon EC2 instances, the container instances require at least version <code>1.26.0</code> of
-     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to enable a
+     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to use a
      * proxy configuration. If your container instances are launched from the Amazon ECS-optimized AMI version
      * <code>20190301</code> or later, then they contain the required versions of the container agent and
      * <code>ecs-init</code>. For more information, see <a
@@ -3201,8 +3201,8 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *         <p>
      *         For tasks hosted on Amazon EC2 instances, the container instances require at least version
      *         <code>1.26.0</code> of the container agent and at least version <code>1.26.0-1</code> of the
-     *         <code>ecs-init</code> package to enable a proxy configuration. If your container instances are launched
-     *         from the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required
+     *         <code>ecs-init</code> package to use a proxy configuration. If your container instances are launched from
+     *         the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required
      *         versions of the container agent and <code>ecs-init</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-ami-versions.html">Amazon
      *         ECS-optimized AMI versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -3218,7 +3218,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * For tasks hosted on Amazon EC2 instances, the container instances require at least version <code>1.26.0</code> of
-     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to enable a
+     * the container agent and at least version <code>1.26.0-1</code> of the <code>ecs-init</code> package to use a
      * proxy configuration. If your container instances are launched from the Amazon ECS-optimized AMI version
      * <code>20190301</code> or later, then they contain the required versions of the container agent and
      * <code>ecs-init</code>. For more information, see <a
@@ -3231,8 +3231,8 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For tasks hosted on Amazon EC2 instances, the container instances require at least version
      *        <code>1.26.0</code> of the container agent and at least version <code>1.26.0-1</code> of the
-     *        <code>ecs-init</code> package to enable a proxy configuration. If your container instances are launched
-     *        from the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required
+     *        <code>ecs-init</code> package to use a proxy configuration. If your container instances are launched from
+     *        the Amazon ECS-optimized AMI version <code>20190301</code> or later, then they contain the required
      *        versions of the container agent and <code>ecs-init</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-ami-versions.html">Amazon
      *        ECS-optimized AMI versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.

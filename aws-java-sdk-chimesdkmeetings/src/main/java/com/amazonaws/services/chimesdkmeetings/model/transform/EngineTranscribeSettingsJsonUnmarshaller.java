@@ -92,6 +92,18 @@ public class EngineTranscribeSettingsJsonUnmarshaller implements Unmarshaller<En
                     context.nextToken();
                     engineTranscribeSettings.setLanguageModelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("IdentifyLanguage", targetDepth)) {
+                    context.nextToken();
+                    engineTranscribeSettings.setIdentifyLanguage(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("LanguageOptions", targetDepth)) {
+                    context.nextToken();
+                    engineTranscribeSettings.setLanguageOptions(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PreferredLanguage", targetDepth)) {
+                    context.nextToken();
+                    engineTranscribeSettings.setPreferredLanguage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

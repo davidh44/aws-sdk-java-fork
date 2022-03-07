@@ -25,7 +25,7 @@ public class DeleteRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he ID of the application that the route belongs to.
+     * The ID of the application that the route belongs to.
      * </p>
      */
     private String applicationId;
@@ -62,11 +62,11 @@ public class DeleteRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he ID of the application that the route belongs to.
+     * The ID of the application that the route belongs to.
      * </p>
      * 
      * @param applicationId
-     *        he ID of the application that the route belongs to.
+     *        The ID of the application that the route belongs to.
      */
 
     public void setApplicationId(String applicationId) {
@@ -75,10 +75,10 @@ public class DeleteRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he ID of the application that the route belongs to.
+     * The ID of the application that the route belongs to.
      * </p>
      * 
-     * @return he ID of the application that the route belongs to.
+     * @return The ID of the application that the route belongs to.
      */
 
     public String getApplicationId() {
@@ -87,11 +87,11 @@ public class DeleteRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he ID of the application that the route belongs to.
+     * The ID of the application that the route belongs to.
      * </p>
      * 
      * @param applicationId
-     *        he ID of the application that the route belongs to.
+     *        The ID of the application that the route belongs to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

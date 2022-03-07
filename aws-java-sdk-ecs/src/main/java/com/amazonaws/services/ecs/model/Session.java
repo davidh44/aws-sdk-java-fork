@@ -35,8 +35,8 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
     private String sessionId;
     /**
      * <p>
-     * A URL back to managed agent on the container that the SSM Session Manager client uses to send commands and
-     * receive output from the container.
+     * A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and receive
+     * output from the container.
      * </p>
      */
     private String streamUrl;
@@ -90,12 +90,12 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A URL back to managed agent on the container that the SSM Session Manager client uses to send commands and
-     * receive output from the container.
+     * A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and receive
+     * output from the container.
      * </p>
      * 
      * @param streamUrl
-     *        A URL back to managed agent on the container that the SSM Session Manager client uses to send commands and
+     *        A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and
      *        receive output from the container.
      */
 
@@ -105,12 +105,12 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A URL back to managed agent on the container that the SSM Session Manager client uses to send commands and
-     * receive output from the container.
+     * A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and receive
+     * output from the container.
      * </p>
      * 
-     * @return A URL back to managed agent on the container that the SSM Session Manager client uses to send commands
-     *         and receive output from the container.
+     * @return A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and
+     *         receive output from the container.
      */
 
     public String getStreamUrl() {
@@ -119,12 +119,12 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A URL back to managed agent on the container that the SSM Session Manager client uses to send commands and
-     * receive output from the container.
+     * A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and receive
+     * output from the container.
      * </p>
      * 
      * @param streamUrl
-     *        A URL back to managed agent on the container that the SSM Session Manager client uses to send commands and
+     *        A URL to the managed agent on the container that the SSM Session Manager client uses to send commands and
      *        receive output from the container.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

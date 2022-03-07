@@ -33,8 +33,8 @@ public class UpdateClusterSettingsRequest extends com.amazonaws.AmazonWebService
     private String cluster;
     /**
      * <p>
-     * The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container Insights for a
-     * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
+     * The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container Insights for
+     * a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      */
@@ -82,12 +82,12 @@ public class UpdateClusterSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container Insights for a
-     * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
+     * The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container Insights for
+     * a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * 
-     * @return The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container
+     * @return The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container
      *         Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
      *         set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      */
@@ -101,13 +101,13 @@ public class UpdateClusterSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container Insights for a
-     * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
+     * The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container Insights for
+     * a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * 
      * @param settings
-     *        The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container
+     *        The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container
      *        Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
      *        set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      */
@@ -123,8 +123,8 @@ public class UpdateClusterSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container Insights for a
-     * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
+     * The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container Insights for
+     * a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * <p>
@@ -134,7 +134,7 @@ public class UpdateClusterSettingsRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param settings
-     *        The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container
+     *        The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container
      *        Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
      *        set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -152,13 +152,13 @@ public class UpdateClusterSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container Insights for a
-     * cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
+     * The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container Insights for
+     * a cluster. If this value is specified, it overrides the <code>containerInsights</code> value set with
      * <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * </p>
      * 
      * @param settings
-     *        The setting to use by default for a cluster. This parameter is used to enable CloudWatch Container
+     *        The setting to use by default for a cluster. This parameter is used to turn on CloudWatch Container
      *        Insights for a cluster. If this value is specified, it overrides the <code>containerInsights</code> value
      *        set with <a>PutAccountSetting</a> or <a>PutAccountSettingDefault</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

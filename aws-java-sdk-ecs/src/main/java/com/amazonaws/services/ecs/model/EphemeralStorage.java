@@ -26,20 +26,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+ * This parameter is only supported for tasks hosted on Fargate using Linux platform version <code>1.4.0</code> or
+ * later. This parameter is not supported for Windows containers on Fargate.
  * </p>
- * <ul>
- * <li>
- * <p>
- * Linux platform version <code>1.4.0</code> or later.
- * </p>
- * </li>
- * <li>
- * <p>
- * Windows platform version <code>1.0.0</code> or later.
- * </p>
- * </li>
- * </ul>
  * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/EphemeralStorage" target="_top">AWS API

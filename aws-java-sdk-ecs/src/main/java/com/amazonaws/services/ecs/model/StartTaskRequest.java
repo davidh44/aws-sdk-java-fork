@@ -41,7 +41,7 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private com.amazonaws.internal.SdkInternalList<String> containerInstances;
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -299,13 +299,13 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     *        Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon
      *        ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -316,12 +316,12 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * @return Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -332,13 +332,13 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     *        Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon
      *        ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -351,12 +351,12 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon ECS managed tags for the task. For more information, see <a
+     * @return Specifies whether to use Amazon ECS managed tags for the task. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */

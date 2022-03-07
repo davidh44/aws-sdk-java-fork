@@ -31,7 +31,7 @@ import com.amazonaws.services.migrationhubrefactorspaces.model.*;
  * </p>
  * 
  * <pre>
- * <code> &lt;p&gt;This API reference provides descriptions, syntax, and other details about each of the actions and data types for Amazon Web Services Migration Hub Refactor Spaces (Refactor Spaces). The topic for each action shows the API request parameters and the response. Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you're using. For more information, see &lt;a href=&quot;http://aws.amazon.com/tools/#SDKs&quot;&gt;Amazon Web Services SDKs&lt;/a&gt;.&lt;/p&gt; </code>
+ * <code> &lt;p&gt;This API reference provides descriptions, syntax, and other details about each of the actions and data types for Amazon Web Services Migration Hub Refactor Spaces (Refactor Spaces). The topic for each action shows the API request parameters and the response. Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you're using. For more information, see &lt;a href=&quot;http://aws.amazon.com/tools/#SDKs&quot;&gt;Amazon Web Services SDKs&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To share Refactor Spaces environments with other Amazon Web Services accounts or with Organizations and their OUs, use Resource Access Manager's &lt;code&gt;CreateResourceShare&lt;/code&gt; API. See &lt;a href=&quot;https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html&quot;&gt;CreateResourceShare&lt;/a&gt; in the &lt;i&gt;Amazon Web Services RAM API Reference&lt;/i&gt;.&lt;/p&gt; </code>
  * </pre>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -49,8 +49,8 @@ public interface AWSMigrationHubRefactorSpaces {
      * <p>
      * Creates an Amazon Web Services Migration Hub Refactor Spaces application. The account that owns the environment
      * also owns the applications created inside the environment, regardless of the account that creates the
-     * application. Refactor Spaces provisions the Amazon API Gateway and Network Load Balancer for the application
-     * proxy inside your account.
+     * application. Refactor Spaces provisions an Amazon API Gateway, API Gateway VPC link, and Network Load Balancer
+     * for the application proxy inside your account.
      * </p>
      * 
      * @param createApplicationRequest
@@ -78,10 +78,10 @@ public interface AWSMigrationHubRefactorSpaces {
     /**
      * <p>
      * Creates an Amazon Web Services Migration Hub Refactor Spaces environment. The caller owns the environment
-     * resource, and they are referred to as the <i>environment owner</i>. The environment owner has cross-account
-     * visibility and control of Refactor Spaces resources that are added to the environment by other accounts that the
-     * environment is shared with. When creating an environment, Refactor Spaces provisions a transit gateway in your
-     * account.
+     * resource, and all Refactor Spaces applications, services, and routes created within the environment. They are
+     * referred to as the <i>environment owner</i>. The environment owner has cross-account visibility and control of
+     * Refactor Spaces resources that are added to the environment by other accounts that the environment is shared
+     * with. When creating an environment, Refactor Spaces provisions a transit gateway in your account.
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -132,13 +132,14 @@ public interface AWSMigrationHubRefactorSpaces {
      * </li>
      * <li>
      * <p>
-     * If the service has an Lambda function endpoint, then Refactor Spaces uses the API Gateway Lambda integration.
+     * If the service has an Lambda function endpoint, then Refactor Spaces configures the Lambda function's resource
+     * policy to allow the application's API Gateway to invoke the function.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * A health check is performed on the service when the route is created. If the health check fails, the route
-     * transitions to <code>FAILED</code>, and no traffic is sent to the service.
+     * A one-time health check is performed on the service when the route is created. If the health check fails, the
+     * route transitions to <code>FAILED</code>, and no traffic is sent to the service.
      * </p>
      * <p>
      * For Lambda functions, the Lambda function state is checked. If the function is not active, the function
@@ -158,6 +159,10 @@ public interface AWSMigrationHubRefactorSpaces {
      * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html">Health
      * checks for your target groups</a>. The health check is considered successful if at least one target within the
      * target group transitions to a healthy state.
+     * </p>
+     * <p>
+     * Services can have HTTP or HTTPS URL endpoints. For HTTPS URLs, publicly-signed certificates are supported.
+     * Private Certificate Authorities (CAs) are permitted only if the CA's domain is publicly resolvable.
      * </p>
      * 
      * @param createRouteRequest
@@ -190,7 +195,7 @@ public interface AWSMigrationHubRefactorSpaces {
      * </p>
      * <important>
      * <p>
-     * If an Amazon Web Services resourceis launched in a service VPC, and you want it to be accessible to all of an
+     * If an Amazon Web Services resource is launched in a service VPC, and you want it to be accessible to all of an
      * environment’s services with VPCs and routes, apply the <code>RefactorSpacesSecurityGroup</code> to the resource.
      * Alternatively, to add more cross-account constraints, apply your own security group.
      * </p>
@@ -488,8 +493,8 @@ public interface AWSMigrationHubRefactorSpaces {
 
     /**
      * <p>
-     * Lists all the virtual private clouds (VPCs) that are part of an Amazon Web Services Migration Hub Refactor Spaces
-     * environment.
+     * Lists all Amazon Web Services Migration Hub Refactor Spaces service virtual private clouds (VPCs) that are part
+     * of the environment.
      * </p>
      * 
      * @param listEnvironmentVpcsRequest

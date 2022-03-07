@@ -40,7 +40,7 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable managed scaling for the capacity provider.
+     * Determines whether to use managed scaling for the capacity provider.
      * </p>
      */
     private String status;
@@ -76,11 +76,11 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable managed scaling for the capacity provider.
+     * Determines whether to use managed scaling for the capacity provider.
      * </p>
      * 
      * @param status
-     *        Determines whether to enable managed scaling for the capacity provider.
+     *        Determines whether to use managed scaling for the capacity provider.
      * @see ManagedScalingStatus
      */
 
@@ -90,10 +90,10 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable managed scaling for the capacity provider.
+     * Determines whether to use managed scaling for the capacity provider.
      * </p>
      * 
-     * @return Determines whether to enable managed scaling for the capacity provider.
+     * @return Determines whether to use managed scaling for the capacity provider.
      * @see ManagedScalingStatus
      */
 
@@ -103,11 +103,11 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable managed scaling for the capacity provider.
+     * Determines whether to use managed scaling for the capacity provider.
      * </p>
      * 
      * @param status
-     *        Determines whether to enable managed scaling for the capacity provider.
+     *        Determines whether to use managed scaling for the capacity provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagedScalingStatus
      */
@@ -119,11 +119,11 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable managed scaling for the capacity provider.
+     * Determines whether to use managed scaling for the capacity provider.
      * </p>
      * 
      * @param status
-     *        Determines whether to enable managed scaling for the capacity provider.
+     *        Determines whether to use managed scaling for the capacity provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagedScalingStatus
      */

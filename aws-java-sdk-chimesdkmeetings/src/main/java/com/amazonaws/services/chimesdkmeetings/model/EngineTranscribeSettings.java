@@ -96,7 +96,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.
      * </p>
      * <p>
-     * PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
+     * <code>PIIEntityTypes</code> must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
      * <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>,
      * <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>,
      * <code>SSN</code>, and <code>ALL</code>.
@@ -112,6 +112,24 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * </p>
      */
     private String languageModelName;
+    /**
+     * <p>
+     * Automatically identifies the language spoken in media files.
+     * </p>
+     */
+    private Boolean identifyLanguage;
+    /**
+     * <p>
+     * Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     * </p>
+     */
+    private String languageOptions;
+    /**
+     * <p>
+     * Language code for the preferred language.
+     * </p>
+     */
+    private String preferredLanguage;
 
     /**
      * <p>
@@ -669,7 +687,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.
      * </p>
      * <p>
-     * PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
+     * <code>PIIEntityTypes</code> must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
      * <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>,
      * <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>,
      * <code>SSN</code>, and <code>ALL</code>.
@@ -682,10 +700,10 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      *        Lists the PII entity types you want to identify or redact. To specify entity types, you must enable
      *        <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.</p>
      *        <p>
-     *        PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
-     *        <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>,
-     *        <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>,
-     *        <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.
+     *        <code>PIIEntityTypes</code> must be comma-separated. The available values are:
+     *        <code>BANK_ACCOUNT_NUMBER</code>, <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>,
+     *        <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>,
+     *        <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.
      *        </p>
      *        <p>
      *        <code>PiiEntityTypes</code> is an optional parameter with a default value of <code>ALL</code>.
@@ -701,7 +719,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.
      * </p>
      * <p>
-     * PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
+     * <code>PIIEntityTypes</code> must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
      * <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>,
      * <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>,
      * <code>SSN</code>, and <code>ALL</code>.
@@ -713,10 +731,10 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * @return Lists the PII entity types you want to identify or redact. To specify entity types, you must enable
      *         <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.</p>
      *         <p>
-     *         PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
-     *         <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>,
-     *         <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>,
-     *         <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.
+     *         <code>PIIEntityTypes</code> must be comma-separated. The available values are:
+     *         <code>BANK_ACCOUNT_NUMBER</code>, <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>,
+     *         <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>,
+     *         <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.
      *         </p>
      *         <p>
      *         <code>PiiEntityTypes</code> is an optional parameter with a default value of <code>ALL</code>.
@@ -732,7 +750,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      * <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.
      * </p>
      * <p>
-     * PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
+     * <code>PIIEntityTypes</code> must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
      * <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>,
      * <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>,
      * <code>SSN</code>, and <code>ALL</code>.
@@ -745,10 +763,10 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
      *        Lists the PII entity types you want to identify or redact. To specify entity types, you must enable
      *        <code>ContentIdentificationType</code> or <code>ContentRedactionType</code>.</p>
      *        <p>
-     *        PIIEntityTypes must be comma-separated. The available values are: <code>BANK_ACCOUNT_NUMBER</code>,
-     *        <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>, <code>CREDIT_DEBIT_CVV</code>,
-     *        <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>, <code>ADDRESS</code>,
-     *        <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.
+     *        <code>PIIEntityTypes</code> must be comma-separated. The available values are:
+     *        <code>BANK_ACCOUNT_NUMBER</code>, <code>BANK_ROUTING, CREDIT_DEBIT_NUMBER</code>,
+     *        <code>CREDIT_DEBIT_CVV</code>, <code>CREDIT_DEBIT_EXPIRY</code>, <code>PIN</code>, <code>EMAIL</code>,
+     *        <code>ADDRESS</code>, <code>NAME</code>, <code>PHONE</code>, <code>SSN</code>, and <code>ALL</code>.
      *        </p>
      *        <p>
      *        <code>PiiEntityTypes</code> is an optional parameter with a default value of <code>ALL</code>.
@@ -801,6 +819,157 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Automatically identifies the language spoken in media files.
+     * </p>
+     * 
+     * @param identifyLanguage
+     *        Automatically identifies the language spoken in media files.
+     */
+
+    public void setIdentifyLanguage(Boolean identifyLanguage) {
+        this.identifyLanguage = identifyLanguage;
+    }
+
+    /**
+     * <p>
+     * Automatically identifies the language spoken in media files.
+     * </p>
+     * 
+     * @return Automatically identifies the language spoken in media files.
+     */
+
+    public Boolean getIdentifyLanguage() {
+        return this.identifyLanguage;
+    }
+
+    /**
+     * <p>
+     * Automatically identifies the language spoken in media files.
+     * </p>
+     * 
+     * @param identifyLanguage
+     *        Automatically identifies the language spoken in media files.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EngineTranscribeSettings withIdentifyLanguage(Boolean identifyLanguage) {
+        setIdentifyLanguage(identifyLanguage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Automatically identifies the language spoken in media files.
+     * </p>
+     * 
+     * @return Automatically identifies the language spoken in media files.
+     */
+
+    public Boolean isIdentifyLanguage() {
+        return this.identifyLanguage;
+    }
+
+    /**
+     * <p>
+     * Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     * </p>
+     * 
+     * @param languageOptions
+     *        Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     */
+
+    public void setLanguageOptions(String languageOptions) {
+        this.languageOptions = languageOptions;
+    }
+
+    /**
+     * <p>
+     * Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     * </p>
+     * 
+     * @return Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     */
+
+    public String getLanguageOptions() {
+        return this.languageOptions;
+    }
+
+    /**
+     * <p>
+     * Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     * </p>
+     * 
+     * @param languageOptions
+     *        Language codes for the languages that you want to identify. You must provide at least 2 codes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EngineTranscribeSettings withLanguageOptions(String languageOptions) {
+        setLanguageOptions(languageOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Language code for the preferred language.
+     * </p>
+     * 
+     * @param preferredLanguage
+     *        Language code for the preferred language.
+     * @see TranscribeLanguageCode
+     */
+
+    public void setPreferredLanguage(String preferredLanguage) {
+        this.preferredLanguage = preferredLanguage;
+    }
+
+    /**
+     * <p>
+     * Language code for the preferred language.
+     * </p>
+     * 
+     * @return Language code for the preferred language.
+     * @see TranscribeLanguageCode
+     */
+
+    public String getPreferredLanguage() {
+        return this.preferredLanguage;
+    }
+
+    /**
+     * <p>
+     * Language code for the preferred language.
+     * </p>
+     * 
+     * @param preferredLanguage
+     *        Language code for the preferred language.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TranscribeLanguageCode
+     */
+
+    public EngineTranscribeSettings withPreferredLanguage(String preferredLanguage) {
+        setPreferredLanguage(preferredLanguage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Language code for the preferred language.
+     * </p>
+     * 
+     * @param preferredLanguage
+     *        Language code for the preferred language.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TranscribeLanguageCode
+     */
+
+    public EngineTranscribeSettings withPreferredLanguage(TranscribeLanguageCode preferredLanguage) {
+        this.preferredLanguage = preferredLanguage.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -833,7 +1002,13 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
         if (getPiiEntityTypes() != null)
             sb.append("PiiEntityTypes: ").append(getPiiEntityTypes()).append(",");
         if (getLanguageModelName() != null)
-            sb.append("LanguageModelName: ").append(getLanguageModelName());
+            sb.append("LanguageModelName: ").append(getLanguageModelName()).append(",");
+        if (getIdentifyLanguage() != null)
+            sb.append("IdentifyLanguage: ").append(getIdentifyLanguage()).append(",");
+        if (getLanguageOptions() != null)
+            sb.append("LanguageOptions: ").append(getLanguageOptions()).append(",");
+        if (getPreferredLanguage() != null)
+            sb.append("PreferredLanguage: ").append(getPreferredLanguage());
         sb.append("}");
         return sb.toString();
     }
@@ -893,6 +1068,18 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
             return false;
         if (other.getLanguageModelName() != null && other.getLanguageModelName().equals(this.getLanguageModelName()) == false)
             return false;
+        if (other.getIdentifyLanguage() == null ^ this.getIdentifyLanguage() == null)
+            return false;
+        if (other.getIdentifyLanguage() != null && other.getIdentifyLanguage().equals(this.getIdentifyLanguage()) == false)
+            return false;
+        if (other.getLanguageOptions() == null ^ this.getLanguageOptions() == null)
+            return false;
+        if (other.getLanguageOptions() != null && other.getLanguageOptions().equals(this.getLanguageOptions()) == false)
+            return false;
+        if (other.getPreferredLanguage() == null ^ this.getPreferredLanguage() == null)
+            return false;
+        if (other.getPreferredLanguage() != null && other.getPreferredLanguage().equals(this.getPreferredLanguage()) == false)
+            return false;
         return true;
     }
 
@@ -912,6 +1099,9 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getContentRedactionType() == null) ? 0 : getContentRedactionType().hashCode());
         hashCode = prime * hashCode + ((getPiiEntityTypes() == null) ? 0 : getPiiEntityTypes().hashCode());
         hashCode = prime * hashCode + ((getLanguageModelName() == null) ? 0 : getLanguageModelName().hashCode());
+        hashCode = prime * hashCode + ((getIdentifyLanguage() == null) ? 0 : getIdentifyLanguage().hashCode());
+        hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
+        hashCode = prime * hashCode + ((getPreferredLanguage() == null) ? 0 : getPreferredLanguage().hashCode());
         return hashCode;
     }
 

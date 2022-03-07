@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The settings to use when creating a cluster. This parameter is used to enable CloudWatch Container Insights for a
+ * The settings to use when creating a cluster. This parameter is used to turn on CloudWatch Container Insights for a
  * cluster.
  * </p>
  * 

@@ -218,8 +218,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container instance.
-     * This taskmeets all of the task placement constraints that you specify in your cluster. The service scheduler also
-     * evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
+     * This task meets all of the task placement constraints that you specify in your cluster. The service scheduler
+     * also evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
      * constraints.
      * </p>
      * <note>
@@ -296,7 +296,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private String createdBy;
     /**
      * <p>
-     * Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -1765,8 +1765,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container instance.
-     * This taskmeets all of the task placement constraints that you specify in your cluster. The service scheduler also
-     * evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
+     * This task meets all of the task placement constraints that you specify in your cluster. The service scheduler
+     * also evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
      * constraints.
      * </p>
      * <note>
@@ -1793,7 +1793,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container
-     *        instance. This taskmeets all of the task placement constraints that you specify in your cluster. The
+     *        instance. This task meets all of the task placement constraints that you specify in your cluster. The
      *        service scheduler also evaluates the task placement constraints for running tasks. It stop tasks that
      *        don't meet the placement constraints.
      *        </p>
@@ -1828,8 +1828,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container instance.
-     * This taskmeets all of the task placement constraints that you specify in your cluster. The service scheduler also
-     * evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
+     * This task meets all of the task placement constraints that you specify in your cluster. The service scheduler
+     * also evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
      * constraints.
      * </p>
      * <note>
@@ -1855,7 +1855,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container
-     *         instance. This taskmeets all of the task placement constraints that you specify in your cluster. The
+     *         instance. This task meets all of the task placement constraints that you specify in your cluster. The
      *         service scheduler also evaluates the task placement constraints for running tasks. It stop tasks that
      *         don't meet the placement constraints.
      *         </p>
@@ -1890,8 +1890,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container instance.
-     * This taskmeets all of the task placement constraints that you specify in your cluster. The service scheduler also
-     * evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
+     * This task meets all of the task placement constraints that you specify in your cluster. The service scheduler
+     * also evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
      * constraints.
      * </p>
      * <note>
@@ -1918,7 +1918,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container
-     *        instance. This taskmeets all of the task placement constraints that you specify in your cluster. The
+     *        instance. This task meets all of the task placement constraints that you specify in your cluster. The
      *        service scheduler also evaluates the task placement constraints for running tasks. It stop tasks that
      *        don't meet the placement constraints.
      *        </p>
@@ -1955,8 +1955,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container instance.
-     * This taskmeets all of the task placement constraints that you specify in your cluster. The service scheduler also
-     * evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
+     * This task meets all of the task placement constraints that you specify in your cluster. The service scheduler
+     * also evaluates the task placement constraints for running tasks. It stop tasks that don't meet the placement
      * constraints.
      * </p>
      * <note>
@@ -1983,7 +1983,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on each active container
-     *        instance. This taskmeets all of the task placement constraints that you specify in your cluster. The
+     *        instance. This task meets all of the task placement constraints that you specify in your cluster. The
      *        service scheduler also evaluates the task placement constraints for running tasks. It stop tasks that
      *        don't meet the placement constraints.
      *        </p>
@@ -2519,14 +2519,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information,
-     *        see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
+     *        Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *        Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
@@ -2536,14 +2536,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information,
-     *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
-     *         Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * @return Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
+     *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public Boolean getEnableECSManagedTags() {
@@ -2552,14 +2552,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information,
-     *        see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
+     *        Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *        Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2571,14 +2571,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information, see <a
+     * Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Determines whether to enable Amazon ECS managed tags for the tasks in the service. For more information,
-     *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
-     *         Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * @return Determines whether to use Amazon ECS managed tags for the tasks in the service. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
+     *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public Boolean isEnableECSManagedTags() {

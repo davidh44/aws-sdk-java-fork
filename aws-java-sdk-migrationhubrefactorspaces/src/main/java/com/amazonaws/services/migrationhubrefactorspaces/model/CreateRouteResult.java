@@ -76,13 +76,13 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String routeType;
     /**
      * <p>
-     * The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this service.
+     * The ID of service in which the route is created. Traffic that matches this route is forwarded to this service.
      * </p>
      */
     private String serviceId;
     /**
      * <p>
-     * he current state of the route.
+     * The current state of the route.
      * </p>
      */
     private String state;
@@ -462,11 +462,11 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this service.
+     * The ID of service in which the route is created. Traffic that matches this route is forwarded to this service.
      * </p>
      * 
      * @param serviceId
-     *        The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this
+     *        The ID of service in which the route is created. Traffic that matches this route is forwarded to this
      *        service.
      */
 
@@ -476,10 +476,10 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this service.
+     * The ID of service in which the route is created. Traffic that matches this route is forwarded to this service.
      * </p>
      * 
-     * @return The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this
+     * @return The ID of service in which the route is created. Traffic that matches this route is forwarded to this
      *         service.
      */
 
@@ -489,11 +489,11 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this service.
+     * The ID of service in which the route is created. Traffic that matches this route is forwarded to this service.
      * </p>
      * 
      * @param serviceId
-     *        The ID of service in which the rute iscreated. Traffic that matches this route is forwarded to this
+     *        The ID of service in which the route is created. Traffic that matches this route is forwarded to this
      *        service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -505,11 +505,11 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he current state of the route.
+     * The current state of the route.
      * </p>
      * 
      * @param state
-     *        he current state of the route.
+     *        The current state of the route.
      * @see RouteState
      */
 
@@ -519,10 +519,10 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he current state of the route.
+     * The current state of the route.
      * </p>
      * 
-     * @return he current state of the route.
+     * @return The current state of the route.
      * @see RouteState
      */
 
@@ -532,11 +532,11 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he current state of the route.
+     * The current state of the route.
      * </p>
      * 
      * @param state
-     *        he current state of the route.
+     *        The current state of the route.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RouteState
      */
@@ -548,11 +548,11 @@ public class CreateRouteResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * he current state of the route.
+     * The current state of the route.
      * </p>
      * 
      * @param state
-     *        he current state of the route.
+     *        The current state of the route.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RouteState
      */

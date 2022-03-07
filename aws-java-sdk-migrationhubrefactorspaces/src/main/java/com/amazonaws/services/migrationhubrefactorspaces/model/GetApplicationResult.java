@@ -79,7 +79,8 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     private String name;
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      */
     private String ownerAccountId;
@@ -471,11 +472,13 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      * 
      * @param ownerAccountId
-     *        The Amazon Web Services account ID of the application owner.
+     *        The Amazon Web Services account ID of the application owner (which is always the same as the environment
+     *        owner account ID).
      */
 
     public void setOwnerAccountId(String ownerAccountId) {
@@ -484,10 +487,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      * 
-     * @return The Amazon Web Services account ID of the application owner.
+     * @return The Amazon Web Services account ID of the application owner (which is always the same as the environment
+     *         owner account ID).
      */
 
     public String getOwnerAccountId() {
@@ -496,11 +501,13 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the application owner.
+     * The Amazon Web Services account ID of the application owner (which is always the same as the environment owner
+     * account ID).
      * </p>
      * 
      * @param ownerAccountId
-     *        The Amazon Web Services account ID of the application owner.
+     *        The Amazon Web Services account ID of the application owner (which is always the same as the environment
+     *        owner account ID).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

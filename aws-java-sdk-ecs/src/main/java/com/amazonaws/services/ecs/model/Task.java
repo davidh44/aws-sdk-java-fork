@@ -305,6 +305,41 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional details.
      * </p>
+     * <p>
+     * The following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TaskFailedToStart</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EssentialContainerExited</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UserInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TerminationNotice</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ServiceSchedulerInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SpotInterruption</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String stopCode;
     /**
@@ -2386,10 +2421,79 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional details.
      * </p>
+     * <p>
+     * The following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TaskFailedToStart</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EssentialContainerExited</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UserInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TerminationNotice</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ServiceSchedulerInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SpotInterruption</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param stopCode
      *        The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
-     *        details.
+     *        details.</p>
+     *        <p>
+     *        The following are valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>TaskFailedToStart</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>EssentialContainerExited</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>UserInitiated</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TerminationNotice</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ServiceSchedulerInitiated</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SpotInterruption</code>
+     *        </p>
+     *        </li>
      * @see TaskStopCode
      */
 
@@ -2401,9 +2505,78 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional details.
      * </p>
+     * <p>
+     * The following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TaskFailedToStart</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EssentialContainerExited</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UserInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TerminationNotice</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ServiceSchedulerInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SpotInterruption</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
-     *         details.
+     *         details.</p>
+     *         <p>
+     *         The following are valid values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>TaskFailedToStart</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>EssentialContainerExited</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>UserInitiated</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>TerminationNotice</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ServiceSchedulerInitiated</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SpotInterruption</code>
+     *         </p>
+     *         </li>
      * @see TaskStopCode
      */
 
@@ -2415,10 +2588,79 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional details.
      * </p>
+     * <p>
+     * The following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TaskFailedToStart</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EssentialContainerExited</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UserInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TerminationNotice</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ServiceSchedulerInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SpotInterruption</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param stopCode
      *        The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
-     *        details.
+     *        details.</p>
+     *        <p>
+     *        The following are valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>TaskFailedToStart</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>EssentialContainerExited</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>UserInitiated</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TerminationNotice</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ServiceSchedulerInitiated</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SpotInterruption</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStopCode
      */
@@ -2432,10 +2674,79 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional details.
      * </p>
+     * <p>
+     * The following are valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TaskFailedToStart</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EssentialContainerExited</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UserInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TerminationNotice</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ServiceSchedulerInitiated</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SpotInterruption</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param stopCode
      *        The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
-     *        details.
+     *        details.</p>
+     *        <p>
+     *        The following are valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>TaskFailedToStart</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>EssentialContainerExited</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>UserInitiated</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TerminationNotice</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ServiceSchedulerInitiated</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SpotInterruption</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStopCode
      */

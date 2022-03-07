@@ -75,9 +75,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * validation tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
-     * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
-     * group ARN, container name, and container port that's specified in the service definition are immutable. If you
-     * use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the service.
+     * If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the
+     * service.
      * </p>
      * <p>
      * For Application Load Balancers and Network Load Balancers, this object must contain the load balancer target
@@ -252,6 +251,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value, the default value of <code>0</code> is used.
      * </p>
      * <p>
+     * If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the task
+     * definition healtch check parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     * </p>
+     * <p>
      * If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can
      * specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the Amazon
      * ECS service scheduler ignores health check status. This grace period can prevent the service scheduler from
@@ -353,7 +357,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more information, see
+     * Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -570,9 +574,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * validation tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
-     * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
-     * group ARN, container name, and container port that's specified in the service definition are immutable. If you
-     * use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the service.
+     * If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the
+     * service.
      * </p>
      * <p>
      * For Application Load Balancers and Network Load Balancers, this object must contain the load balancer target
@@ -618,10 +621,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         functions before routing production traffic to it.
      *         </p>
      *         <p>
-     *         After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
-     *         target group ARN, container name, and container port that's specified in the service definition are
-     *         immutable. If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed
-     *         when updating the service.
+     *         If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating
+     *         the service.
      *         </p>
      *         <p>
      *         For Application Load Balancers and Network Load Balancers, this object must contain the load balancer
@@ -675,9 +676,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * validation tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
-     * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
-     * group ARN, container name, and container port that's specified in the service definition are immutable. If you
-     * use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the service.
+     * If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the
+     * service.
      * </p>
      * <p>
      * For Application Load Balancers and Network Load Balancers, this object must contain the load balancer target
@@ -723,10 +723,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        production traffic to it.
      *        </p>
      *        <p>
-     *        After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
-     *        target group ARN, container name, and container port that's specified in the service definition are
-     *        immutable. If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when
-     *        updating the service.
+     *        If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating
+     *        the service.
      *        </p>
      *        <p>
      *        For Application Load Balancers and Network Load Balancers, this object must contain the load balancer
@@ -782,9 +780,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * validation tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
-     * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
-     * group ARN, container name, and container port that's specified in the service definition are immutable. If you
-     * use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the service.
+     * If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the
+     * service.
      * </p>
      * <p>
      * For Application Load Balancers and Network Load Balancers, this object must contain the load balancer target
@@ -835,10 +832,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        production traffic to it.
      *        </p>
      *        <p>
-     *        After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
-     *        target group ARN, container name, and container port that's specified in the service definition are
-     *        immutable. If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when
-     *        updating the service.
+     *        If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating
+     *        the service.
      *        </p>
      *        <p>
      *        For Application Load Balancers and Network Load Balancers, this object must contain the load balancer
@@ -896,9 +891,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * validation tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
-     * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
-     * group ARN, container name, and container port that's specified in the service definition are immutable. If you
-     * use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the service.
+     * If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating the
+     * service.
      * </p>
      * <p>
      * For Application Load Balancers and Network Load Balancers, this object must contain the load balancer target
@@ -944,10 +938,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        production traffic to it.
      *        </p>
      *        <p>
-     *        After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
-     *        target group ARN, container name, and container port that's specified in the service definition are
-     *        immutable. If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when
-     *        updating the service.
+     *        If you use the <code>CODE_DEPLOY</code> deployment controller, these values can be changed when updating
+     *        the service.
      *        </p>
      *        <p>
      *        For Application Load Balancers and Network Load Balancers, this object must contain the load balancer
@@ -2109,6 +2101,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value, the default value of <code>0</code> is used.
      * </p>
      * <p>
+     * If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the task
+     * definition healtch check parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     * </p>
+     * <p>
      * If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can
      * specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the Amazon
      * ECS service scheduler ignores health check status. This grace period can prevent the service scheduler from
@@ -2120,6 +2117,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Balancing target health checks after a task has first started. This is only used when your service is
      *        configured to use a load balancer. If your service has a load balancer defined and you don't specify a
      *        health check grace period value, the default value of <code>0</code> is used.</p>
+     *        <p>
+     *        If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the
+     *        task definition healtch check parameters. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     *        </p>
      *        <p>
      *        If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can
      *        specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
@@ -2139,6 +2141,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value, the default value of <code>0</code> is used.
      * </p>
      * <p>
+     * If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the task
+     * definition healtch check parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     * </p>
+     * <p>
      * If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can
      * specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the Amazon
      * ECS service scheduler ignores health check status. This grace period can prevent the service scheduler from
@@ -2149,6 +2156,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         Balancing target health checks after a task has first started. This is only used when your service is
      *         configured to use a load balancer. If your service has a load balancer defined and you don't specify a
      *         health check grace period value, the default value of <code>0</code> is used.</p>
+     *         <p>
+     *         If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the
+     *         task definition healtch check parameters. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     *         </p>
      *         <p>
      *         If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you
      *         can specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that
@@ -2168,6 +2180,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value, the default value of <code>0</code> is used.
      * </p>
      * <p>
+     * If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the task
+     * definition healtch check parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     * </p>
+     * <p>
      * If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can
      * specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the Amazon
      * ECS service scheduler ignores health check status. This grace period can prevent the service scheduler from
@@ -2179,6 +2196,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Balancing target health checks after a task has first started. This is only used when your service is
      *        configured to use a load balancer. If your service has a load balancer defined and you don't specify a
      *        health check grace period value, the default value of <code>0</code> is used.</p>
+     *        <p>
+     *        If you do not use an Elastic Load Balancing, we recomend that you use the <code>startPeriod</code> in the
+     *        task definition healtch check parameters. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html">Health check</a>.
+     *        </p>
      *        <p>
      *        If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can
      *        specify a health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
@@ -2957,13 +2979,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more information, see
+     * Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more
+     *        Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon
      *        ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -2975,12 +2997,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more information, see
+     * Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more
+     * @return Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -2992,13 +3014,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more information, see
+     * Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param enableECSManagedTags
-     *        Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more
+     *        Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon
      *        ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
@@ -3012,12 +3034,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more information, see
+     * Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your Amazon ECS
      * Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more
+     * @return Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging Your
      *         Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.

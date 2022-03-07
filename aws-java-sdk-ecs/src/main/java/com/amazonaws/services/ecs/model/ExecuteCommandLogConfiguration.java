@@ -42,7 +42,7 @@ public class ExecuteCommandLogConfiguration implements Serializable, Cloneable, 
     private String cloudWatchLogGroupName;
     /**
      * <p>
-     * Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * </p>
      */
     private Boolean cloudWatchEncryptionEnabled;
@@ -136,11 +136,11 @@ public class ExecuteCommandLogConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * </p>
      * 
      * @param cloudWatchEncryptionEnabled
-     *        Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be
+     *        Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be
      *        disabled.
      */
 
@@ -150,10 +150,10 @@ public class ExecuteCommandLogConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * </p>
      * 
-     * @return Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be
+     * @return Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be
      *         disabled.
      */
 
@@ -163,11 +163,11 @@ public class ExecuteCommandLogConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * </p>
      * 
      * @param cloudWatchEncryptionEnabled
-     *        Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be
+     *        Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be
      *        disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -179,10 +179,10 @@ public class ExecuteCommandLogConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
+     * Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * </p>
      * 
-     * @return Determines whether to enable encryption on the CloudWatch logs. If not specified, encryption will be
+     * @return Determines whether to use encryption on the CloudWatch logs. If not specified, encryption will be
      *         disabled.
      */
 

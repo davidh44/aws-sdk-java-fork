@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum PropagateTags {
 
     TASK_DEFINITION("TASK_DEFINITION"),
-    SERVICE("SERVICE");
+    SERVICE("SERVICE"),
+    NONE("NONE");
 
     private String value;
 

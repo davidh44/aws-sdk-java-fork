@@ -54,6 +54,14 @@ public class UpdateServiceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("healthCheckGracePeriodSeconds").build();
     private static final MarshallingInfo<Boolean> ENABLEEXECUTECOMMAND_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableExecuteCommand").build();
+    private static final MarshallingInfo<Boolean> ENABLEECSMANAGEDTAGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableECSManagedTags").build();
+    private static final MarshallingInfo<List> LOADBALANCERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("loadBalancers").build();
+    private static final MarshallingInfo<String> PROPAGATETAGS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("propagateTags").build();
+    private static final MarshallingInfo<List> SERVICEREGISTRIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceRegistries").build();
 
     private static final UpdateServiceRequestMarshaller instance = new UpdateServiceRequestMarshaller();
 
@@ -84,6 +92,10 @@ public class UpdateServiceRequestMarshaller {
             protocolMarshaller.marshall(updateServiceRequest.getForceNewDeployment(), FORCENEWDEPLOYMENT_BINDING);
             protocolMarshaller.marshall(updateServiceRequest.getHealthCheckGracePeriodSeconds(), HEALTHCHECKGRACEPERIODSECONDS_BINDING);
             protocolMarshaller.marshall(updateServiceRequest.getEnableExecuteCommand(), ENABLEEXECUTECOMMAND_BINDING);
+            protocolMarshaller.marshall(updateServiceRequest.getEnableECSManagedTags(), ENABLEECSMANAGEDTAGS_BINDING);
+            protocolMarshaller.marshall(updateServiceRequest.getLoadBalancers(), LOADBALANCERS_BINDING);
+            protocolMarshaller.marshall(updateServiceRequest.getPropagateTags(), PROPAGATETAGS_BINDING);
+            protocolMarshaller.marshall(updateServiceRequest.getServiceRegistries(), SERVICEREGISTRIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
