@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -48981,6 +48981,9 @@
       }, {
         "name" : "ClusterUnreachable",
         "value" : "ClusterUnreachable"
+      }, {
+        "name" : "Ec2SubnetMissingIpv6Assignment",
+        "value" : "Ec2SubnetMissingIpv6Assignment"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.eks.enum.NodegroupIssueCode",

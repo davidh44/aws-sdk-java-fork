@@ -79,6 +79,10 @@ public class HlsGroupSettingsJsonUnmarshaller implements Unmarshaller<HlsGroupSe
                     context.nextToken();
                     hlsGroupSettings.setCaptionLanguageSetting(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("captionSegmentLengthControl", targetDepth)) {
+                    context.nextToken();
+                    hlsGroupSettings.setCaptionSegmentLengthControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("clientCache", targetDepth)) {
                     context.nextToken();
                     hlsGroupSettings.setClientCache(context.getUnmarshaller(String.class).unmarshall(context));

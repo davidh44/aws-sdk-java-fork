@@ -15,7 +15,9 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Indicates ID3 frame that has the timecode.
+ * Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in your
+ * output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata) to
+ * Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum HlsTimedMetadataId3Frame {

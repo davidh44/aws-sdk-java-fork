@@ -54,6 +54,13 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
      */
     private String colorSpaceUsage;
     /**
+     * Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input contains
+     * timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend you also set
+     * Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode override blank, or set to
+     * None (NONE), when your input does not contain MDPM timecode.
+     */
+    private String embeddedTimecodeOverride;
+    /**
      * Use these settings to provide HDR 10 metadata that is missing or inaccurate in your input video. Appropriate
      * values vary depending on the input video and must be provided by a color grader. The color grader generates these
      * values during the HDR 10 mastering process. The valid range for each of these settings is 0 to 50,000. Each
@@ -361,6 +368,81 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
 
     public VideoSelector withColorSpaceUsage(ColorSpaceUsage colorSpaceUsage) {
         this.colorSpaceUsage = colorSpaceUsage.toString();
+        return this;
+    }
+
+    /**
+     * Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input contains
+     * timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend you also set
+     * Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode override blank, or set to
+     * None (NONE), when your input does not contain MDPM timecode.
+     * 
+     * @param embeddedTimecodeOverride
+     *        Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input
+     *        contains timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend
+     *        you also set Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode
+     *        override blank, or set to None (NONE), when your input does not contain MDPM timecode.
+     * @see EmbeddedTimecodeOverride
+     */
+
+    public void setEmbeddedTimecodeOverride(String embeddedTimecodeOverride) {
+        this.embeddedTimecodeOverride = embeddedTimecodeOverride;
+    }
+
+    /**
+     * Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input contains
+     * timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend you also set
+     * Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode override blank, or set to
+     * None (NONE), when your input does not contain MDPM timecode.
+     * 
+     * @return Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input
+     *         contains timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend
+     *         you also set Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode
+     *         override blank, or set to None (NONE), when your input does not contain MDPM timecode.
+     * @see EmbeddedTimecodeOverride
+     */
+
+    public String getEmbeddedTimecodeOverride() {
+        return this.embeddedTimecodeOverride;
+    }
+
+    /**
+     * Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input contains
+     * timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend you also set
+     * Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode override blank, or set to
+     * None (NONE), when your input does not contain MDPM timecode.
+     * 
+     * @param embeddedTimecodeOverride
+     *        Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input
+     *        contains timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend
+     *        you also set Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode
+     *        override blank, or set to None (NONE), when your input does not contain MDPM timecode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EmbeddedTimecodeOverride
+     */
+
+    public VideoSelector withEmbeddedTimecodeOverride(String embeddedTimecodeOverride) {
+        setEmbeddedTimecodeOverride(embeddedTimecodeOverride);
+        return this;
+    }
+
+    /**
+     * Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input contains
+     * timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend you also set
+     * Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode override blank, or set to
+     * None (NONE), when your input does not contain MDPM timecode.
+     * 
+     * @param embeddedTimecodeOverride
+     *        Set Embedded timecode override (embeddedTimecodeOverride) to Use MDPM (USE_MDPM) when your AVCHD input
+     *        contains timecode tag data in the Modified Digital Video Pack Metadata (MDPM). When you do, we recommend
+     *        you also set Timecode source (inputTimecodeSource) to Embedded (EMBEDDED). Leave Embedded timecode
+     *        override blank, or set to None (NONE), when your input does not contain MDPM timecode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EmbeddedTimecodeOverride
+     */
+
+    public VideoSelector withEmbeddedTimecodeOverride(EmbeddedTimecodeOverride embeddedTimecodeOverride) {
+        this.embeddedTimecodeOverride = embeddedTimecodeOverride.toString();
         return this;
     }
 
@@ -737,6 +819,8 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
             sb.append("ColorSpace: ").append(getColorSpace()).append(",");
         if (getColorSpaceUsage() != null)
             sb.append("ColorSpaceUsage: ").append(getColorSpaceUsage()).append(",");
+        if (getEmbeddedTimecodeOverride() != null)
+            sb.append("EmbeddedTimecodeOverride: ").append(getEmbeddedTimecodeOverride()).append(",");
         if (getHdr10Metadata() != null)
             sb.append("Hdr10Metadata: ").append(getHdr10Metadata()).append(",");
         if (getPid() != null)
@@ -773,6 +857,10 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getColorSpaceUsage() != null && other.getColorSpaceUsage().equals(this.getColorSpaceUsage()) == false)
             return false;
+        if (other.getEmbeddedTimecodeOverride() == null ^ this.getEmbeddedTimecodeOverride() == null)
+            return false;
+        if (other.getEmbeddedTimecodeOverride() != null && other.getEmbeddedTimecodeOverride().equals(this.getEmbeddedTimecodeOverride()) == false)
+            return false;
         if (other.getHdr10Metadata() == null ^ this.getHdr10Metadata() == null)
             return false;
         if (other.getHdr10Metadata() != null && other.getHdr10Metadata().equals(this.getHdr10Metadata()) == false)
@@ -804,6 +892,7 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAlphaBehavior() == null) ? 0 : getAlphaBehavior().hashCode());
         hashCode = prime * hashCode + ((getColorSpace() == null) ? 0 : getColorSpace().hashCode());
         hashCode = prime * hashCode + ((getColorSpaceUsage() == null) ? 0 : getColorSpaceUsage().hashCode());
+        hashCode = prime * hashCode + ((getEmbeddedTimecodeOverride() == null) ? 0 : getEmbeddedTimecodeOverride().hashCode());
         hashCode = prime * hashCode + ((getHdr10Metadata() == null) ? 0 : getHdr10Metadata().hashCode());
         hashCode = prime * hashCode + ((getPid() == null) ? 0 : getPid().hashCode());
         hashCode = prime * hashCode + ((getProgramNumber() == null) ? 0 : getProgramNumber().hashCode());

@@ -28,16 +28,16 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Id3Insertion implements Serializable, Cloneable, StructuredPojo {
 
-    /** Use ID3 tag (Id3) to provide a tag value in base64-encode format. */
+    /** Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format. */
     private String id3;
     /** Provide a Timecode (TimeCode) in HH:MM:SS:FF or HH:MM:SS;FF format. */
     private String timecode;
 
     /**
-     * Use ID3 tag (Id3) to provide a tag value in base64-encode format.
+     * Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
      * 
      * @param id3
-     *        Use ID3 tag (Id3) to provide a tag value in base64-encode format.
+     *        Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
      */
 
     public void setId3(String id3) {
@@ -45,9 +45,9 @@ public class Id3Insertion implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Use ID3 tag (Id3) to provide a tag value in base64-encode format.
+     * Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
      * 
-     * @return Use ID3 tag (Id3) to provide a tag value in base64-encode format.
+     * @return Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
      */
 
     public String getId3() {
@@ -55,10 +55,10 @@ public class Id3Insertion implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Use ID3 tag (Id3) to provide a tag value in base64-encode format.
+     * Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
      * 
      * @param id3
-     *        Use ID3 tag (Id3) to provide a tag value in base64-encode format.
+     *        Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

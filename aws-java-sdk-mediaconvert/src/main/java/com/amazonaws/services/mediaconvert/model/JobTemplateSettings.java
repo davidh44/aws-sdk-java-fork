@@ -92,9 +92,8 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
      */
     private TimecodeConfig timecodeConfig;
     /**
-     * Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To include timed
-     * metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3
-     * insertion (Id3Insertion) objects.
+     * Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you
+     * want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
      */
     private TimedMetadataInsertion timedMetadataInsertion;
 
@@ -699,14 +698,13 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To include timed
-     * metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3
-     * insertion (Id3Insertion) objects.
+     * Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you
+     * want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
      * 
      * @param timedMetadataInsertion
-     *        Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To
-     *        include timed metadata, you must enable it here, enable it in each output container, and specify tags and
-     *        timecodes in ID3 insertion (Id3Insertion) objects.
+     *        Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output
+     *        that you want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough
+     *        (PASSTHROUGH).
      */
 
     public void setTimedMetadataInsertion(TimedMetadataInsertion timedMetadataInsertion) {
@@ -714,13 +712,12 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To include timed
-     * metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3
-     * insertion (Id3Insertion) objects.
+     * Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you
+     * want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
      * 
-     * @return Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To
-     *         include timed metadata, you must enable it here, enable it in each output container, and specify tags and
-     *         timecodes in ID3 insertion (Id3Insertion) objects.
+     * @return Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output
+     *         that you want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough
+     *         (PASSTHROUGH).
      */
 
     public TimedMetadataInsertion getTimedMetadataInsertion() {
@@ -728,14 +725,13 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To include timed
-     * metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3
-     * insertion (Id3Insertion) objects.
+     * Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you
+     * want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
      * 
      * @param timedMetadataInsertion
-     *        Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To
-     *        include timed metadata, you must enable it here, enable it in each output container, and specify tags and
-     *        timecodes in ID3 insertion (Id3Insertion) objects.
+     *        Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output
+     *        that you want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough
+     *        (PASSTHROUGH).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

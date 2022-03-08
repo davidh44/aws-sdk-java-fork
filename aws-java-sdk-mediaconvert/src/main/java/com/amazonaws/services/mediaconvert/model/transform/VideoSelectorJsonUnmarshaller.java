@@ -60,6 +60,10 @@ public class VideoSelectorJsonUnmarshaller implements Unmarshaller<VideoSelector
                     context.nextToken();
                     videoSelector.setColorSpaceUsage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("embeddedTimecodeOverride", targetDepth)) {
+                    context.nextToken();
+                    videoSelector.setEmbeddedTimecodeOverride(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("hdr10Metadata", targetDepth)) {
                     context.nextToken();
                     videoSelector.setHdr10Metadata(Hdr10MetadataJsonUnmarshaller.getInstance().unmarshall(context));

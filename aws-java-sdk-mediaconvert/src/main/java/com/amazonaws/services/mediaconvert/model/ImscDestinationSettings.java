@@ -31,11 +31,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class ImscDestinationSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
-     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
-     * ENABLED, MediaConvert includes the parameters
+     * Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is intended
+     * to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert
+     * adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track:
      * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
-     * leaves this parameter out.
+     * AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to provide
+     * such accessibility. MediaConvert will not add the above attributes.
      */
     private String accessibility;
     /**
@@ -46,18 +47,21 @@ public class ImscDestinationSettings implements Serializable, Cloneable, Structu
     private String stylePassthrough;
 
     /**
-     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
-     * ENABLED, MediaConvert includes the parameters
+     * Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is intended
+     * to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert
+     * adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track:
      * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
-     * leaves this parameter out.
+     * AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to provide
+     * such accessibility. MediaConvert will not add the above attributes.
      * 
      * @param accessibility
-     *        Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
-     *        choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *        Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is
+     *        intended to provide accessibility for people who are deaf or hard of hearing. When you enable this
+     *        feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this
+     *        track: CHARACTERISTICS=
      *        "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     *        AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
-     *        MediaConvert leaves this parameter out.
+     *        AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to
+     *        provide such accessibility. MediaConvert will not add the above attributes.
      * @see ImscAccessibilitySubs
      */
 
@@ -66,17 +70,20 @@ public class ImscDestinationSettings implements Serializable, Cloneable, Structu
     }
 
     /**
-     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
-     * ENABLED, MediaConvert includes the parameters
+     * Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is intended
+     * to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert
+     * adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track:
      * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
-     * leaves this parameter out.
+     * AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to provide
+     * such accessibility. MediaConvert will not add the above attributes.
      * 
-     * @return Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
-     *         choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     * @return Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is
+     *         intended to provide accessibility for people who are deaf or hard of hearing. When you enable this
+     *         feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for
+     *         this track: CHARACTERISTICS=
      *         "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     *         AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
-     *         MediaConvert leaves this parameter out.
+     *         AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to
+     *         provide such accessibility. MediaConvert will not add the above attributes.
      * @see ImscAccessibilitySubs
      */
 
@@ -85,18 +92,21 @@ public class ImscDestinationSettings implements Serializable, Cloneable, Structu
     }
 
     /**
-     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
-     * ENABLED, MediaConvert includes the parameters
+     * Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is intended
+     * to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert
+     * adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track:
      * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
-     * leaves this parameter out.
+     * AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to provide
+     * such accessibility. MediaConvert will not add the above attributes.
      * 
      * @param accessibility
-     *        Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
-     *        choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *        Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is
+     *        intended to provide accessibility for people who are deaf or hard of hearing. When you enable this
+     *        feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this
+     *        track: CHARACTERISTICS=
      *        "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     *        AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
-     *        MediaConvert leaves this parameter out.
+     *        AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to
+     *        provide such accessibility. MediaConvert will not add the above attributes.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImscAccessibilitySubs
      */
@@ -107,18 +117,21 @@ public class ImscDestinationSettings implements Serializable, Cloneable, Structu
     }
 
     /**
-     * Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you choose
-     * ENABLED, MediaConvert includes the parameters
+     * Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is intended
+     * to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert
+     * adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track:
      * CHARACTERISTICS="public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     * AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED, MediaConvert
-     * leaves this parameter out.
+     * AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to provide
+     * such accessibility. MediaConvert will not add the above attributes.
      * 
      * @param accessibility
-     *        Specify whether to flag this caption track as accessibility in your HLS/CMAF parent manifest. When you
-     *        choose ENABLED, MediaConvert includes the parameters CHARACTERISTICS=
+     *        Set Accessibility subtitles (Accessibility) to Enabled (ENABLED) if the ISMC or WebVTT captions track is
+     *        intended to provide accessibility for people who are deaf or hard of hearing. When you enable this
+     *        feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this
+     *        track: CHARACTERISTICS=
      *        "public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound" and
-     *        AUTOSELECT="YES" in the EXT-X-MEDIA entry for this track. When you keep the default choice, DISABLED,
-     *        MediaConvert leaves this parameter out.
+     *        AUTOSELECT="YES". Keep the default value, Disabled (DISABLED), if the captions track is not intended to
+     *        provide such accessibility. MediaConvert will not add the above attributes.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImscAccessibilitySubs
      */

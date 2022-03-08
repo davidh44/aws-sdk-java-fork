@@ -63,6 +63,13 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
      */
     private String captionLanguageSetting;
     /**
+     * Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create caption
+     * segments that align with the video segments from the first video output in this output group. For example, if the
+     * video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting,
+     * Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     */
+    private String captionSegmentLengthControl;
+    /**
      * Disable this setting only when your workflow requires the #EXT-X-ALLOW-CACHE:no tag. Otherwise, keep the default
      * value Enabled (ENABLED) and control caching in your video distribution set up. For example, use the Cache-Control
      * http header.
@@ -159,9 +166,19 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
      * a track in a segment is longer than the target duration.
      */
     private String targetDurationCompatibilityMode;
-    /** Indicates ID3 frame that has the timecode. */
+    /**
+     * Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in
+     * your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata)
+     * to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
+     */
     private String timedMetadataId3Frame;
-    /** Timed Metadata interval in seconds. */
+    /**
+     * Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the output
+     * timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval of 10
+     * seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type
+     * (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough
+     * (PASSTHROUGH).
+     */
     private Integer timedMetadataId3Period;
     /** Provides an extra millisecond delta offset to fine tune the timestamps. */
     private Integer timestampDeltaMilliseconds;
@@ -603,6 +620,82 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
 
     public HlsGroupSettings withCaptionLanguageSetting(HlsCaptionLanguageSetting captionLanguageSetting) {
         this.captionLanguageSetting = captionLanguageSetting.toString();
+        return this;
+    }
+
+    /**
+     * Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create caption
+     * segments that align with the video segments from the first video output in this output group. For example, if the
+     * video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting,
+     * Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * 
+     * @param captionSegmentLengthControl
+     *        Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create
+     *        caption segments that align with the video segments from the first video output in this output group. For
+     *        example, if the video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep
+     *        the default setting, Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * @see HlsCaptionSegmentLengthControl
+     */
+
+    public void setCaptionSegmentLengthControl(String captionSegmentLengthControl) {
+        this.captionSegmentLengthControl = captionSegmentLengthControl;
+    }
+
+    /**
+     * Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create caption
+     * segments that align with the video segments from the first video output in this output group. For example, if the
+     * video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting,
+     * Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * 
+     * @return Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create
+     *         caption segments that align with the video segments from the first video output in this output group. For
+     *         example, if the video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep
+     *         the default setting, Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds
+     *         long.
+     * @see HlsCaptionSegmentLengthControl
+     */
+
+    public String getCaptionSegmentLengthControl() {
+        return this.captionSegmentLengthControl;
+    }
+
+    /**
+     * Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create caption
+     * segments that align with the video segments from the first video output in this output group. For example, if the
+     * video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting,
+     * Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * 
+     * @param captionSegmentLengthControl
+     *        Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create
+     *        caption segments that align with the video segments from the first video output in this output group. For
+     *        example, if the video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep
+     *        the default setting, Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsCaptionSegmentLengthControl
+     */
+
+    public HlsGroupSettings withCaptionSegmentLengthControl(String captionSegmentLengthControl) {
+        setCaptionSegmentLengthControl(captionSegmentLengthControl);
+        return this;
+    }
+
+    /**
+     * Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create caption
+     * segments that align with the video segments from the first video output in this output group. For example, if the
+     * video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting,
+     * Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * 
+     * @param captionSegmentLengthControl
+     *        Set Caption segment length control (CaptionSegmentLengthControl) to Match video (MATCH_VIDEO) to create
+     *        caption segments that align with the video segments from the first video output in this output group. For
+     *        example, if the video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep
+     *        the default setting, Large segments (LARGE_SEGMENTS) to create caption segments that are 300 seconds long.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsCaptionSegmentLengthControl
+     */
+
+    public HlsGroupSettings withCaptionSegmentLengthControl(HlsCaptionSegmentLengthControl captionSegmentLengthControl) {
+        this.captionSegmentLengthControl = captionSegmentLengthControl.toString();
         return this;
     }
 
@@ -1768,10 +1861,15 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Indicates ID3 frame that has the timecode.
+     * Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in
+     * your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata)
+     * to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
      * 
      * @param timedMetadataId3Frame
-     *        Indicates ID3 frame that has the timecode.
+     *        Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps
+     *        (timedMetadataId3Period) in your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and
+     *        set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3
+     *        timestamp frame type to None (NONE).
      * @see HlsTimedMetadataId3Frame
      */
 
@@ -1780,9 +1878,14 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Indicates ID3 frame that has the timecode.
+     * Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in
+     * your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata)
+     * to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
      * 
-     * @return Indicates ID3 frame that has the timecode.
+     * @return Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps
+     *         (timedMetadataId3Period) in your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL)
+     *         and set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3
+     *         timestamp frame type to None (NONE).
      * @see HlsTimedMetadataId3Frame
      */
 
@@ -1791,10 +1894,15 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Indicates ID3 frame that has the timecode.
+     * Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in
+     * your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata)
+     * to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
      * 
      * @param timedMetadataId3Frame
-     *        Indicates ID3 frame that has the timecode.
+     *        Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps
+     *        (timedMetadataId3Period) in your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and
+     *        set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3
+     *        timestamp frame type to None (NONE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HlsTimedMetadataId3Frame
      */
@@ -1805,10 +1913,15 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Indicates ID3 frame that has the timecode.
+     * Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps (timedMetadataId3Period) in
+     * your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and set ID3 metadata (timedMetadata)
+     * to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3 timestamp frame type to None (NONE).
      * 
      * @param timedMetadataId3Frame
-     *        Indicates ID3 frame that has the timecode.
+     *        Specify the type of the ID3 frame (timedMetadataId3Frame) to use for ID3 timestamps
+     *        (timedMetadataId3Period) in your output. To include ID3 timestamps: Specify PRIV (PRIV) or TDRL (TDRL) and
+     *        set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). To exclude ID3 timestamps: Set ID3
+     *        timestamp frame type to None (NONE).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HlsTimedMetadataId3Frame
      */
@@ -1819,10 +1932,18 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Timed Metadata interval in seconds.
+     * Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the output
+     * timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval of 10
+     * seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type
+     * (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough
+     * (PASSTHROUGH).
      * 
      * @param timedMetadataId3Period
-     *        Timed Metadata interval in seconds.
+     *        Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the
+     *        output timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval
+     *        of 10 seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type
+     *        (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough
+     *        (PASSTHROUGH).
      */
 
     public void setTimedMetadataId3Period(Integer timedMetadataId3Period) {
@@ -1830,9 +1951,17 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Timed Metadata interval in seconds.
+     * Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the output
+     * timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval of 10
+     * seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type
+     * (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough
+     * (PASSTHROUGH).
      * 
-     * @return Timed Metadata interval in seconds.
+     * @return Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the
+     *         output timecode and date, and increases incrementally with each ID3 timestamp. To use the default
+     *         interval of 10 seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame
+     *         type (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to
+     *         Passthrough (PASSTHROUGH).
      */
 
     public Integer getTimedMetadataId3Period() {
@@ -1840,10 +1969,18 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Timed Metadata interval in seconds.
+     * Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the output
+     * timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval of 10
+     * seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type
+     * (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough
+     * (PASSTHROUGH).
      * 
      * @param timedMetadataId3Period
-     *        Timed Metadata interval in seconds.
+     *        Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the
+     *        output timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval
+     *        of 10 seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type
+     *        (timedMetadataId3Frame) to PRIV (PRIV) or TDRL (TDRL), and set ID3 metadata (timedMetadata) to Passthrough
+     *        (PASSTHROUGH).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1910,6 +2047,8 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             sb.append("CaptionLanguageMappings: ").append(getCaptionLanguageMappings()).append(",");
         if (getCaptionLanguageSetting() != null)
             sb.append("CaptionLanguageSetting: ").append(getCaptionLanguageSetting()).append(",");
+        if (getCaptionSegmentLengthControl() != null)
+            sb.append("CaptionSegmentLengthControl: ").append(getCaptionSegmentLengthControl()).append(",");
         if (getClientCache() != null)
             sb.append("ClientCache: ").append(getClientCache()).append(",");
         if (getCodecSpecification() != null)
@@ -1995,6 +2134,10 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
         if (other.getCaptionLanguageSetting() == null ^ this.getCaptionLanguageSetting() == null)
             return false;
         if (other.getCaptionLanguageSetting() != null && other.getCaptionLanguageSetting().equals(this.getCaptionLanguageSetting()) == false)
+            return false;
+        if (other.getCaptionSegmentLengthControl() == null ^ this.getCaptionSegmentLengthControl() == null)
+            return false;
+        if (other.getCaptionSegmentLengthControl() != null && other.getCaptionSegmentLengthControl().equals(this.getCaptionSegmentLengthControl()) == false)
             return false;
         if (other.getClientCache() == null ^ this.getClientCache() == null)
             return false;
@@ -2107,6 +2250,7 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getBaseUrl() == null) ? 0 : getBaseUrl().hashCode());
         hashCode = prime * hashCode + ((getCaptionLanguageMappings() == null) ? 0 : getCaptionLanguageMappings().hashCode());
         hashCode = prime * hashCode + ((getCaptionLanguageSetting() == null) ? 0 : getCaptionLanguageSetting().hashCode());
+        hashCode = prime * hashCode + ((getCaptionSegmentLengthControl() == null) ? 0 : getCaptionSegmentLengthControl().hashCode());
         hashCode = prime * hashCode + ((getClientCache() == null) ? 0 : getClientCache().hashCode());
         hashCode = prime * hashCode + ((getCodecSpecification() == null) ? 0 : getCodecSpecification().hashCode());
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());

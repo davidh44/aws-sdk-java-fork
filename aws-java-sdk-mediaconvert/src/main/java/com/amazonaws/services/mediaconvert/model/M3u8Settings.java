@@ -94,11 +94,13 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
      */
     private String scte35Source;
     /**
-     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     * includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and Custom ID3
+     * metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set ID3 metadata to None
+     * (NONE) or leave blank.
      */
     private String timedMetadata;
-    /** Packet Identifier (PID) of the timed metadata stream in the transport stream. */
+    /** Packet Identifier (PID) of the ID3 metadata stream in the transport stream. */
     private Integer timedMetadataPid;
     /** The value of the transport stream ID field in the Program Map Table. */
     private Integer transportStreamId;
@@ -893,12 +895,16 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     * includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and Custom ID3
+     * metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set ID3 metadata to None
+     * (NONE) or leave blank.
      * 
      * @param timedMetadata
-     *        Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *        from the input in this output.
+     *        Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     *        includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and
+     *        Custom ID3 metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set
+     *        ID3 metadata to None (NONE) or leave blank.
      * @see TimedMetadata
      */
 
@@ -907,11 +913,15 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     * includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and Custom ID3
+     * metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set ID3 metadata to None
+     * (NONE) or leave blank.
      * 
-     * @return Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *         from the input in this output.
+     * @return Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output.
+     *         This includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period),
+     *         and Custom ID3 metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output:
+     *         set ID3 metadata to None (NONE) or leave blank.
      * @see TimedMetadata
      */
 
@@ -920,12 +930,16 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     * includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and Custom ID3
+     * metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set ID3 metadata to None
+     * (NONE) or leave blank.
      * 
      * @param timedMetadata
-     *        Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *        from the input in this output.
+     *        Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     *        includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and
+     *        Custom ID3 metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set
+     *        ID3 metadata to None (NONE) or leave blank.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimedMetadata
      */
@@ -936,12 +950,16 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     * includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and Custom ID3
+     * metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set ID3 metadata to None
+     * (NONE) or leave blank.
      * 
      * @param timedMetadata
-     *        Applies to HLS outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *        from the input in this output.
+     *        Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH) to include ID3 metadata in this output. This
+     *        includes ID3 metadata from the following features: ID3 timestamp period (timedMetadataId3Period), and
+     *        Custom ID3 metadata inserter (timedMetadataInsertion). To exclude this ID3 metadata in this output: set
+     *        ID3 metadata to None (NONE) or leave blank.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimedMetadata
      */
@@ -952,10 +970,10 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Packet Identifier (PID) of the timed metadata stream in the transport stream.
+     * Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
      * 
      * @param timedMetadataPid
-     *        Packet Identifier (PID) of the timed metadata stream in the transport stream.
+     *        Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
      */
 
     public void setTimedMetadataPid(Integer timedMetadataPid) {
@@ -963,9 +981,9 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Packet Identifier (PID) of the timed metadata stream in the transport stream.
+     * Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
      * 
-     * @return Packet Identifier (PID) of the timed metadata stream in the transport stream.
+     * @return Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
      */
 
     public Integer getTimedMetadataPid() {
@@ -973,10 +991,10 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Packet Identifier (PID) of the timed metadata stream in the transport stream.
+     * Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
      * 
      * @param timedMetadataPid
-     *        Packet Identifier (PID) of the timed metadata stream in the transport stream.
+     *        Packet Identifier (PID) of the ID3 metadata stream in the transport stream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

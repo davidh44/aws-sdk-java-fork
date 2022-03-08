@@ -40,6 +40,8 @@ public class HlsGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("captionLanguageMappings").build();
     private static final MarshallingInfo<String> CAPTIONLANGUAGESETTING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("captionLanguageSetting").build();
+    private static final MarshallingInfo<String> CAPTIONSEGMENTLENGTHCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("captionSegmentLengthControl").build();
     private static final MarshallingInfo<String> CLIENTCACHE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientCache").build();
     private static final MarshallingInfo<String> CODECSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -111,6 +113,7 @@ public class HlsGroupSettingsMarshaller {
             protocolMarshaller.marshall(hlsGroupSettings.getBaseUrl(), BASEURL_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getCaptionLanguageMappings(), CAPTIONLANGUAGEMAPPINGS_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getCaptionLanguageSetting(), CAPTIONLANGUAGESETTING_BINDING);
+            protocolMarshaller.marshall(hlsGroupSettings.getCaptionSegmentLengthControl(), CAPTIONSEGMENTLENGTHCONTROL_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getClientCache(), CLIENTCACHE_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getCodecSpecification(), CODECSPECIFICATION_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getDestination(), DESTINATION_BINDING);

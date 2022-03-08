@@ -66,8 +66,10 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private String scte35Source;
     /**
-     * Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
+     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
+     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
+     * or leave blank.
      */
     private String timedMetadata;
 
@@ -487,12 +489,16 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
+     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
+     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
+     * or leave blank.
      * 
      * @param timedMetadata
-     *        Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *        from the input in this output.
+     *        To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+     *        Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
+     *        each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
+     *        ID3 metadata to None (NONE) or leave blank.
      * @see MpdTimedMetadata
      */
 
@@ -501,11 +507,15 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
+     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
+     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
+     * or leave blank.
      * 
-     * @return Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *         from the input in this output.
+     * @return To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+     *         Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
+     *         each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
+     *         ID3 metadata to None (NONE) or leave blank.
      * @see MpdTimedMetadata
      */
 
@@ -514,12 +524,16 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
+     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
+     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
+     * or leave blank.
      * 
      * @param timedMetadata
-     *        Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *        from the input in this output.
+     *        To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+     *        Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
+     *        each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
+     *        ID3 metadata to None (NONE) or leave blank.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MpdTimedMetadata
      */
@@ -530,12 +544,16 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata from the
-     * input in this output.
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
+     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
+     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
+     * or leave blank.
      * 
      * @param timedMetadata
-     *        Applies to DASH outputs. Use this setting to specify whether the service inserts the ID3 timed metadata
-     *        from the input in this output.
+     *        To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
+     *        Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
+     *        each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
+     *        ID3 metadata to None (NONE) or leave blank.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MpdTimedMetadata
      */
