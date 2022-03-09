@@ -153,6 +153,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public DescribeTargetedSentimentDetectionJobResult describeTargetedSentimentDetectionJob(DescribeTargetedSentimentDetectionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeTopicsDetectionJobResult describeTopicsDetectionJob(DescribeTopicsDetectionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -258,6 +263,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public ListTargetedSentimentDetectionJobsResult listTargetedSentimentDetectionJobs(ListTargetedSentimentDetectionJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTopicsDetectionJobsResult listTopicsDetectionJobs(ListTopicsDetectionJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -303,6 +313,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public StartTargetedSentimentDetectionJobResult startTargetedSentimentDetectionJob(StartTargetedSentimentDetectionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartTopicsDetectionJobResult startTopicsDetectionJob(StartTopicsDetectionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -334,6 +349,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
 
     @Override
     public StopSentimentDetectionJobResult stopSentimentDetectionJob(StopSentimentDetectionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopTargetedSentimentDetectionJobResult stopTargetedSentimentDetectionJob(StopTargetedSentimentDetectionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

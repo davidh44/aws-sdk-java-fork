@@ -1,3 +1,8 @@
+# __1.12.175__ __2022-03-09__
+## __Amazon Comprehend__
+  - ### Features
+    - Amazon Comprehend now supports extracting the sentiment associated with entities such as brands, products and services from text documents.
+
 # __1.12.174__ __2022-03-08__
 ## __AWS Elemental MediaConvert__
   - ### Features

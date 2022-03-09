@@ -670,6 +670,29 @@ public interface AmazonComprehend {
 
     /**
      * <p>
+     * Gets the properties associated with a targeted sentiment detection job. Use this operation to get the status of
+     * the job.
+     * </p>
+     * 
+     * @param describeTargetedSentimentDetectionJobRequest
+     * @return Result of the DescribeTargetedSentimentDetectionJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws JobNotFoundException
+     *         The specified job was not found. Check the job ID and try again.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.DescribeTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTargetedSentimentDetectionJobResult describeTargetedSentimentDetectionJob(
+            DescribeTargetedSentimentDetectionJobRequest describeTargetedSentimentDetectionJobRequest);
+
+    /**
+     * <p>
      * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
      * job.
      * </p>
@@ -1146,6 +1169,28 @@ public interface AmazonComprehend {
 
     /**
      * <p>
+     * Gets a list of targeted sentiment detection jobs that you have submitted.
+     * </p>
+     * 
+     * @param listTargetedSentimentDetectionJobsRequest
+     * @return Result of the ListTargetedSentimentDetectionJobs operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InvalidFilterException
+     *         The filter specified for the operation is invalid. Specify a different filter.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.ListTargetedSentimentDetectionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListTargetedSentimentDetectionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTargetedSentimentDetectionJobsResult listTargetedSentimentDetectionJobs(
+            ListTargetedSentimentDetectionJobsRequest listTargetedSentimentDetectionJobsRequest);
+
+    /**
+     * <p>
      * Gets a list of the topic detection jobs that you have submitted.
      * </p>
      * 
@@ -1347,7 +1392,7 @@ public interface AmazonComprehend {
 
     /**
      * <p>
-     * Starts an asynchronous sentiment detection job for a collection of documents. use the operation to track the
+     * Starts an asynchronous sentiment detection job for a collection of documents. Use the operation to track the
      * status of a job.
      * </p>
      * 
@@ -1369,6 +1414,32 @@ public interface AmazonComprehend {
      *      target="_top">AWS API Documentation</a>
      */
     StartSentimentDetectionJobResult startSentimentDetectionJob(StartSentimentDetectionJobRequest startSentimentDetectionJobRequest);
+
+    /**
+     * <p>
+     * Starts an asynchronous targeted sentiment detection job for a collection of documents. Use the operation to track
+     * the status of a job.
+     * </p>
+     * 
+     * @param startTargetedSentimentDetectionJobRequest
+     * @return Result of the StartTargetedSentimentDetectionJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws KmsKeyValidationException
+     *         The KMS customer managed key (CMK) entered cannot be validated. Verify the key and re-enter it.
+     * @throws TooManyTagsException
+     *         The request contains more tags than can be associated with a resource (50 tags per resource). The maximum
+     *         number of tags includes both existing tags and those included in your current request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.StartTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartTargetedSentimentDetectionJobResult startTargetedSentimentDetectionJob(
+            StartTargetedSentimentDetectionJobRequest startTargetedSentimentDetectionJobRequest);
 
     /**
      * <p>
@@ -1556,6 +1627,37 @@ public interface AmazonComprehend {
      *      target="_top">AWS API Documentation</a>
      */
     StopSentimentDetectionJobResult stopSentimentDetectionJob(StopSentimentDetectionJobRequest stopSentimentDetectionJobRequest);
+
+    /**
+     * <p>
+     * Stops a targeted sentiment detection job in progress.
+     * </p>
+     * <p>
+     * If the job state is <code>IN_PROGRESS</code> the job is marked for termination and put into the
+     * <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the
+     * <code>COMPLETED</code> state; otherwise the job is be stopped and put into the <code>STOPPED</code> state.
+     * </p>
+     * <p>
+     * If the job is in the <code>COMPLETED</code> or <code>FAILED</code> state when you call the
+     * <code>StopDominantLanguageDetectionJob</code> operation, the operation returns a 400 Internal Request Exception.
+     * </p>
+     * <p>
+     * When a job is stopped, any documents already processed are written to the output location.
+     * </p>
+     * 
+     * @param stopTargetedSentimentDetectionJobRequest
+     * @return Result of the StopTargetedSentimentDetectionJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws JobNotFoundException
+     *         The specified job was not found. Check the job ID and try again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.StopTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopTargetedSentimentDetectionJobResult stopTargetedSentimentDetectionJob(StopTargetedSentimentDetectionJobRequest stopTargetedSentimentDetectionJobRequest);
 
     /**
      * <p>

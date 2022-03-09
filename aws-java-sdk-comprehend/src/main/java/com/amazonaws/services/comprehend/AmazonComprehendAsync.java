@@ -913,6 +913,43 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
 
     /**
      * <p>
+     * Gets the properties associated with a targeted sentiment detection job. Use this operation to get the status of
+     * the job.
+     * </p>
+     * 
+     * @param describeTargetedSentimentDetectionJobRequest
+     * @return A Java Future containing the result of the DescribeTargetedSentimentDetectionJob operation returned by
+     *         the service.
+     * @sample AmazonComprehendAsync.DescribeTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTargetedSentimentDetectionJobResult> describeTargetedSentimentDetectionJobAsync(
+            DescribeTargetedSentimentDetectionJobRequest describeTargetedSentimentDetectionJobRequest);
+
+    /**
+     * <p>
+     * Gets the properties associated with a targeted sentiment detection job. Use this operation to get the status of
+     * the job.
+     * </p>
+     * 
+     * @param describeTargetedSentimentDetectionJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTargetedSentimentDetectionJob operation returned by
+     *         the service.
+     * @sample AmazonComprehendAsyncHandler.DescribeTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTargetedSentimentDetectionJobResult> describeTargetedSentimentDetectionJobAsync(
+            DescribeTargetedSentimentDetectionJobRequest describeTargetedSentimentDetectionJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTargetedSentimentDetectionJobRequest, DescribeTargetedSentimentDetectionJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
      * job.
      * </p>
@@ -1634,6 +1671,41 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
 
     /**
      * <p>
+     * Gets a list of targeted sentiment detection jobs that you have submitted.
+     * </p>
+     * 
+     * @param listTargetedSentimentDetectionJobsRequest
+     * @return A Java Future containing the result of the ListTargetedSentimentDetectionJobs operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsync.ListTargetedSentimentDetectionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListTargetedSentimentDetectionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTargetedSentimentDetectionJobsResult> listTargetedSentimentDetectionJobsAsync(
+            ListTargetedSentimentDetectionJobsRequest listTargetedSentimentDetectionJobsRequest);
+
+    /**
+     * <p>
+     * Gets a list of targeted sentiment detection jobs that you have submitted.
+     * </p>
+     * 
+     * @param listTargetedSentimentDetectionJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTargetedSentimentDetectionJobs operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsyncHandler.ListTargetedSentimentDetectionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListTargetedSentimentDetectionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTargetedSentimentDetectionJobsResult> listTargetedSentimentDetectionJobsAsync(
+            ListTargetedSentimentDetectionJobsRequest listTargetedSentimentDetectionJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTargetedSentimentDetectionJobsRequest, ListTargetedSentimentDetectionJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of the topic detection jobs that you have submitted.
      * </p>
      * 
@@ -1916,7 +1988,7 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
 
     /**
      * <p>
-     * Starts an asynchronous sentiment detection job for a collection of documents. use the operation to track the
+     * Starts an asynchronous sentiment detection job for a collection of documents. Use the operation to track the
      * status of a job.
      * </p>
      * 
@@ -1931,7 +2003,7 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
 
     /**
      * <p>
-     * Starts an asynchronous sentiment detection job for a collection of documents. use the operation to track the
+     * Starts an asynchronous sentiment detection job for a collection of documents. Use the operation to track the
      * status of a job.
      * </p>
      * 
@@ -1948,6 +2020,43 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
     java.util.concurrent.Future<StartSentimentDetectionJobResult> startSentimentDetectionJobAsync(
             StartSentimentDetectionJobRequest startSentimentDetectionJobRequest,
             com.amazonaws.handlers.AsyncHandler<StartSentimentDetectionJobRequest, StartSentimentDetectionJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts an asynchronous targeted sentiment detection job for a collection of documents. Use the operation to track
+     * the status of a job.
+     * </p>
+     * 
+     * @param startTargetedSentimentDetectionJobRequest
+     * @return A Java Future containing the result of the StartTargetedSentimentDetectionJob operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsync.StartTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartTargetedSentimentDetectionJobResult> startTargetedSentimentDetectionJobAsync(
+            StartTargetedSentimentDetectionJobRequest startTargetedSentimentDetectionJobRequest);
+
+    /**
+     * <p>
+     * Starts an asynchronous targeted sentiment detection job for a collection of documents. Use the operation to track
+     * the status of a job.
+     * </p>
+     * 
+     * @param startTargetedSentimentDetectionJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartTargetedSentimentDetectionJob operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsyncHandler.StartTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StartTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartTargetedSentimentDetectionJobResult> startTargetedSentimentDetectionJobAsync(
+            StartTargetedSentimentDetectionJobRequest startTargetedSentimentDetectionJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartTargetedSentimentDetectionJobRequest, StartTargetedSentimentDetectionJobResult> asyncHandler);
 
     /**
      * <p>
@@ -2273,6 +2382,65 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
     java.util.concurrent.Future<StopSentimentDetectionJobResult> stopSentimentDetectionJobAsync(
             StopSentimentDetectionJobRequest stopSentimentDetectionJobRequest,
             com.amazonaws.handlers.AsyncHandler<StopSentimentDetectionJobRequest, StopSentimentDetectionJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops a targeted sentiment detection job in progress.
+     * </p>
+     * <p>
+     * If the job state is <code>IN_PROGRESS</code> the job is marked for termination and put into the
+     * <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the
+     * <code>COMPLETED</code> state; otherwise the job is be stopped and put into the <code>STOPPED</code> state.
+     * </p>
+     * <p>
+     * If the job is in the <code>COMPLETED</code> or <code>FAILED</code> state when you call the
+     * <code>StopDominantLanguageDetectionJob</code> operation, the operation returns a 400 Internal Request Exception.
+     * </p>
+     * <p>
+     * When a job is stopped, any documents already processed are written to the output location.
+     * </p>
+     * 
+     * @param stopTargetedSentimentDetectionJobRequest
+     * @return A Java Future containing the result of the StopTargetedSentimentDetectionJob operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsync.StopTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopTargetedSentimentDetectionJobResult> stopTargetedSentimentDetectionJobAsync(
+            StopTargetedSentimentDetectionJobRequest stopTargetedSentimentDetectionJobRequest);
+
+    /**
+     * <p>
+     * Stops a targeted sentiment detection job in progress.
+     * </p>
+     * <p>
+     * If the job state is <code>IN_PROGRESS</code> the job is marked for termination and put into the
+     * <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the
+     * <code>COMPLETED</code> state; otherwise the job is be stopped and put into the <code>STOPPED</code> state.
+     * </p>
+     * <p>
+     * If the job is in the <code>COMPLETED</code> or <code>FAILED</code> state when you call the
+     * <code>StopDominantLanguageDetectionJob</code> operation, the operation returns a 400 Internal Request Exception.
+     * </p>
+     * <p>
+     * When a job is stopped, any documents already processed are written to the output location.
+     * </p>
+     * 
+     * @param stopTargetedSentimentDetectionJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopTargetedSentimentDetectionJob operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsyncHandler.StopTargetedSentimentDetectionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/StopTargetedSentimentDetectionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopTargetedSentimentDetectionJobResult> stopTargetedSentimentDetectionJobAsync(
+            StopTargetedSentimentDetectionJobRequest stopTargetedSentimentDetectionJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StopTargetedSentimentDetectionJobRequest, StopTargetedSentimentDetectionJobResult> asyncHandler);
 
     /**
      * <p>
