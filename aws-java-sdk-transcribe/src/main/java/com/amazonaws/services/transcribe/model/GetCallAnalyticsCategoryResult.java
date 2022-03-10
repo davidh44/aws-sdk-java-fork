@@ -25,18 +25,21 @@ public class GetCallAnalyticsCategoryResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The rules you've defined for a category.
+     * Provides you with the rules associated with the category you specified in your
+     * <code>GetCallAnalyticsCategory</code> request.
      * </p>
      */
     private CategoryProperties categoryProperties;
 
     /**
      * <p>
-     * The rules you've defined for a category.
+     * Provides you with the rules associated with the category you specified in your
+     * <code>GetCallAnalyticsCategory</code> request.
      * </p>
      * 
      * @param categoryProperties
-     *        The rules you've defined for a category.
+     *        Provides you with the rules associated with the category you specified in your
+     *        <code>GetCallAnalyticsCategory</code> request.
      */
 
     public void setCategoryProperties(CategoryProperties categoryProperties) {
@@ -45,10 +48,12 @@ public class GetCallAnalyticsCategoryResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The rules you've defined for a category.
+     * Provides you with the rules associated with the category you specified in your
+     * <code>GetCallAnalyticsCategory</code> request.
      * </p>
      * 
-     * @return The rules you've defined for a category.
+     * @return Provides you with the rules associated with the category you specified in your
+     *         <code>GetCallAnalyticsCategory</code> request.
      */
 
     public CategoryProperties getCategoryProperties() {
@@ -57,11 +62,13 @@ public class GetCallAnalyticsCategoryResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The rules you've defined for a category.
+     * Provides you with the rules associated with the category you specified in your
+     * <code>GetCallAnalyticsCategory</code> request.
      * </p>
      * 
      * @param categoryProperties
-     *        The rules you've defined for a category.
+     *        Provides you with the rules associated with the category you specified in your
+     *        <code>GetCallAnalyticsCategory</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,69 +27,74 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
-     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of your new vocabulary.
+     * </p>
+     * <p>
+     * This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account. If
+     * you try to create a vocabulary with the same name as a previous vocabulary, you get a
      * <code>ConflictException</code> error.
      * </p>
      */
     private String vocabularyName;
     /**
      * <p>
-     * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>table-language-matrix</a>.
+     * The language code that represents the language of the entries in your custom vocabulary. Each vocabulary must
+     * contain terms in only one language. For a list of languages and their corresponding language codes, see <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      */
     private String languageCode;
     /**
      * <p>
-     * An array of strings that contains the vocabulary entries.
+     * Use this flag to include a list of terms within your request.
+     * </p>
+     * <p>
+     * Note that if you include <code>Phrases</code> in your request, you cannot use <code>VocabularyFileUri</code>; you
+     * must choose one or the other.
      * </p>
      */
     private java.util.List<String> phrases;
     /**
      * <p>
-     * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is:
+     * The S3 location of the text file that contains your custom vocabulary. The URI must be located in the same region
+     * as the API endpoint you're calling.
      * </p>
      * <p>
-     * <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * Here's an example URI path:
      * </p>
      * <p>
-     * For example:
+     * <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     * </p>
-     * <p>
-     * For more information about S3 object names, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
-     * <i>Amazon S3 Developer Guide</i>.
-     * </p>
-     * <p>
-     * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     * Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the <code>Phrases</code>
+     * flag; you must choose one or the other.
      * </p>
      */
     private String vocabularyFileUri;
     /**
      * <p>
-     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the time
-     * you create this new vocabulary.
+     * Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you create
+     * this new vocabulary.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
-     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of your new vocabulary.
+     * </p>
+     * <p>
+     * This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account. If
+     * you try to create a vocabulary with the same name as a previous vocabulary, you get a
      * <code>ConflictException</code> error.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is
-     *        case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will
-     *        receive a <code>ConflictException</code> error.
+     *        The name of your new vocabulary.</p>
+     *        <p>
+     *        This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services
+     *        account. If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     *        <code>ConflictException</code> error.
      */
 
     public void setVocabularyName(String vocabularyName) {
@@ -98,14 +103,19 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
-     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of your new vocabulary.
+     * </p>
+     * <p>
+     * This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account. If
+     * you try to create a vocabulary with the same name as a previous vocabulary, you get a
      * <code>ConflictException</code> error.
      * </p>
      * 
-     * @return The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is
-     *         case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will
-     *         receive a <code>ConflictException</code> error.
+     * @return The name of your new vocabulary.</p>
+     *         <p>
+     *         This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services
+     *         account. If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     *         <code>ConflictException</code> error.
      */
 
     public String getVocabularyName() {
@@ -114,15 +124,20 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
-     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of your new vocabulary.
+     * </p>
+     * <p>
+     * This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services account. If
+     * you try to create a vocabulary with the same name as a previous vocabulary, you get a
      * <code>ConflictException</code> error.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is
-     *        case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will
-     *        receive a <code>ConflictException</code> error.
+     *        The name of your new vocabulary.</p>
+     *        <p>
+     *        This name is case sensitive, cannot contain spaces, and must be unique within an Amazon Web Services
+     *        account. If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     *        <code>ConflictException</code> error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +148,16 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>table-language-matrix</a>.
+     * The language code that represents the language of the entries in your custom vocabulary. Each vocabulary must
+     * contain terms in only one language. For a list of languages and their corresponding language codes, see <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *        codes, see <a>table-language-matrix</a>.
+     *        The language code that represents the language of the entries in your custom vocabulary. Each vocabulary
+     *        must contain terms in only one language. For a list of languages and their corresponding language codes,
+     *        see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a>.
      * @see LanguageCode
      */
 
@@ -149,12 +167,15 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>table-language-matrix</a>.
+     * The language code that represents the language of the entries in your custom vocabulary. Each vocabulary must
+     * contain terms in only one language. For a list of languages and their corresponding language codes, see <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
-     * @return The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *         codes, see <a>table-language-matrix</a>.
+     * @return The language code that represents the language of the entries in your custom vocabulary. Each vocabulary
+     *         must contain terms in only one language. For a list of languages and their corresponding language codes,
+     *         see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *         languages</a>.
      * @see LanguageCode
      */
 
@@ -164,13 +185,16 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>table-language-matrix</a>.
+     * The language code that represents the language of the entries in your custom vocabulary. Each vocabulary must
+     * contain terms in only one language. For a list of languages and their corresponding language codes, see <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *        codes, see <a>table-language-matrix</a>.
+     *        The language code that represents the language of the entries in your custom vocabulary. Each vocabulary
+     *        must contain terms in only one language. For a list of languages and their corresponding language codes,
+     *        see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -182,13 +206,16 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>table-language-matrix</a>.
+     * The language code that represents the language of the entries in your custom vocabulary. Each vocabulary must
+     * contain terms in only one language. For a list of languages and their corresponding language codes, see <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *        codes, see <a>table-language-matrix</a>.
+     *        The language code that represents the language of the entries in your custom vocabulary. Each vocabulary
+     *        must contain terms in only one language. For a list of languages and their corresponding language codes,
+     *        see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -200,10 +227,17 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An array of strings that contains the vocabulary entries.
+     * Use this flag to include a list of terms within your request.
+     * </p>
+     * <p>
+     * Note that if you include <code>Phrases</code> in your request, you cannot use <code>VocabularyFileUri</code>; you
+     * must choose one or the other.
      * </p>
      * 
-     * @return An array of strings that contains the vocabulary entries.
+     * @return Use this flag to include a list of terms within your request.</p>
+     *         <p>
+     *         Note that if you include <code>Phrases</code> in your request, you cannot use
+     *         <code>VocabularyFileUri</code>; you must choose one or the other.
      */
 
     public java.util.List<String> getPhrases() {
@@ -212,11 +246,18 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An array of strings that contains the vocabulary entries.
+     * Use this flag to include a list of terms within your request.
+     * </p>
+     * <p>
+     * Note that if you include <code>Phrases</code> in your request, you cannot use <code>VocabularyFileUri</code>; you
+     * must choose one or the other.
      * </p>
      * 
      * @param phrases
-     *        An array of strings that contains the vocabulary entries.
+     *        Use this flag to include a list of terms within your request.</p>
+     *        <p>
+     *        Note that if you include <code>Phrases</code> in your request, you cannot use
+     *        <code>VocabularyFileUri</code>; you must choose one or the other.
      */
 
     public void setPhrases(java.util.Collection<String> phrases) {
@@ -230,7 +271,11 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An array of strings that contains the vocabulary entries.
+     * Use this flag to include a list of terms within your request.
+     * </p>
+     * <p>
+     * Note that if you include <code>Phrases</code> in your request, you cannot use <code>VocabularyFileUri</code>; you
+     * must choose one or the other.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -239,7 +284,10 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param phrases
-     *        An array of strings that contains the vocabulary entries.
+     *        Use this flag to include a list of terms within your request.</p>
+     *        <p>
+     *        Note that if you include <code>Phrases</code> in your request, you cannot use
+     *        <code>VocabularyFileUri</code>; you must choose one or the other.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -255,11 +303,18 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An array of strings that contains the vocabulary entries.
+     * Use this flag to include a list of terms within your request.
+     * </p>
+     * <p>
+     * Note that if you include <code>Phrases</code> in your request, you cannot use <code>VocabularyFileUri</code>; you
+     * must choose one or the other.
      * </p>
      * 
      * @param phrases
-     *        An array of strings that contains the vocabulary entries.
+     *        Use this flag to include a list of terms within your request.</p>
+     *        <p>
+     *        Note that if you include <code>Phrases</code> in your request, you cannot use
+     *        <code>VocabularyFileUri</code>; you must choose one or the other.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -270,48 +325,32 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is:
+     * The S3 location of the text file that contains your custom vocabulary. The URI must be located in the same region
+     * as the API endpoint you're calling.
      * </p>
      * <p>
-     * <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * Here's an example URI path:
      * </p>
      * <p>
-     * For example:
+     * <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     * </p>
-     * <p>
-     * For more information about S3 object names, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
-     * <i>Amazon S3 Developer Guide</i>.
-     * </p>
-     * <p>
-     * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     * Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the <code>Phrases</code>
+     * flag; you must choose one or the other.
      * </p>
      * 
      * @param vocabularyFileUri
-     *        The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in
-     *        the same region as the API endpoint that you are calling. The general form is:</p>
+     *        The S3 location of the text file that contains your custom vocabulary. The URI must be located in the same
+     *        region as the API endpoint you're calling.</p>
      *        <p>
-     *        <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *        Here's an example URI path:
      *        </p>
      *        <p>
-     *        For example:
+     *        <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      *        </p>
      *        <p>
-     *        <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     *        </p>
-     *        <p>
-     *        For more information about S3 object names, see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
-     *        the <i>Amazon S3 Developer Guide</i>.
-     *        </p>
-     *        <p>
-     *        For more information about custom vocabularies, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     *        Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the
+     *        <code>Phrases</code> flag; you must choose one or the other.
      */
 
     public void setVocabularyFileUri(String vocabularyFileUri) {
@@ -320,47 +359,31 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is:
+     * The S3 location of the text file that contains your custom vocabulary. The URI must be located in the same region
+     * as the API endpoint you're calling.
      * </p>
      * <p>
-     * <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * Here's an example URI path:
      * </p>
      * <p>
-     * For example:
+     * <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     * </p>
-     * <p>
-     * For more information about S3 object names, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
-     * <i>Amazon S3 Developer Guide</i>.
-     * </p>
-     * <p>
-     * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     * Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the <code>Phrases</code>
+     * flag; you must choose one or the other.
      * </p>
      * 
-     * @return The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be
-     *         in the same region as the API endpoint that you are calling. The general form is:</p>
+     * @return The S3 location of the text file that contains your custom vocabulary. The URI must be located in the
+     *         same region as the API endpoint you're calling.</p>
      *         <p>
-     *         <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *         Here's an example URI path:
      *         </p>
      *         <p>
-     *         For example:
+     *         <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      *         </p>
      *         <p>
-     *         <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     *         </p>
-     *         <p>
-     *         For more information about S3 object names, see <a
-     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
-     *         the <i>Amazon S3 Developer Guide</i>.
-     *         </p>
-     *         <p>
-     *         For more information about custom vocabularies, see <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     *         Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the
+     *         <code>Phrases</code> flag; you must choose one or the other.
      */
 
     public String getVocabularyFileUri() {
@@ -369,48 +392,32 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is:
+     * The S3 location of the text file that contains your custom vocabulary. The URI must be located in the same region
+     * as the API endpoint you're calling.
      * </p>
      * <p>
-     * <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * Here's an example URI path:
      * </p>
      * <p>
-     * For example:
+     * <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     * </p>
-     * <p>
-     * For more information about S3 object names, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
-     * <i>Amazon S3 Developer Guide</i>.
-     * </p>
-     * <p>
-     * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     * Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the <code>Phrases</code>
+     * flag; you must choose one or the other.
      * </p>
      * 
      * @param vocabularyFileUri
-     *        The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in
-     *        the same region as the API endpoint that you are calling. The general form is:</p>
+     *        The S3 location of the text file that contains your custom vocabulary. The URI must be located in the same
+     *        region as the API endpoint you're calling.</p>
      *        <p>
-     *        <code>https://s3.&lt;Amazon Web Services-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *        Here's an example URI path:
      *        </p>
      *        <p>
-     *        For example:
+     *        <code>https://s3.us-east-1.amazonaws.com/my-s3-bucket/my-vocab-file.txt</code>
      *        </p>
      *        <p>
-     *        <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
-     *        </p>
-     *        <p>
-     *        For more information about S3 object names, see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
-     *        the <i>Amazon S3 Developer Guide</i>.
-     *        </p>
-     *        <p>
-     *        For more information about custom vocabularies, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom vocabularies</a>.
+     *        Note that if you include <code>VocabularyFileUri</code> in your request, you cannot use the
+     *        <code>Phrases</code> flag; you must choose one or the other.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -421,12 +428,12 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the time
-     * you create this new vocabulary.
+     * Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you create
+     * this new vocabulary.
      * </p>
      * 
-     * @return Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the
-     *         time you create this new vocabulary.
+     * @return Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you
+     *         create this new vocabulary.
      */
 
     public java.util.List<Tag> getTags() {
@@ -435,13 +442,13 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the time
-     * you create this new vocabulary.
+     * Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you create
+     * this new vocabulary.
      * </p>
      * 
      * @param tags
-     *        Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the
-     *        time you create this new vocabulary.
+     *        Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you
+     *        create this new vocabulary.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -455,8 +462,8 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the time
-     * you create this new vocabulary.
+     * Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you create
+     * this new vocabulary.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -465,8 +472,8 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param tags
-     *        Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the
-     *        time you create this new vocabulary.
+     *        Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you
+     *        create this new vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -482,13 +489,13 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the time
-     * you create this new vocabulary.
+     * Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you create
+     * this new vocabulary.
      * </p>
      * 
      * @param tags
-     *        Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary at the
-     *        time you create this new vocabulary.
+     *        Adds one or more tags, each in the form of a key:value pair, to a new custom vocabulary at the time you
+     *        create this new vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

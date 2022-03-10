@@ -25,18 +25,33 @@ public class GetMedicalTranscriptionJobResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An object that contains the results of the medical transcription job.
+     * An object that contains detailed information about your medical transcription job. Returned fields include:
+     * <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     * <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     * <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     * <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     * <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      * </p>
      */
     private MedicalTranscriptionJob medicalTranscriptionJob;
 
     /**
      * <p>
-     * An object that contains the results of the medical transcription job.
+     * An object that contains detailed information about your medical transcription job. Returned fields include:
+     * <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     * <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     * <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     * <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     * <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      * </p>
      * 
      * @param medicalTranscriptionJob
-     *        An object that contains the results of the medical transcription job.
+     *        An object that contains detailed information about your medical transcription job. Returned fields
+     *        include: <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     *        <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     *        <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     *        <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     *        <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      */
 
     public void setMedicalTranscriptionJob(MedicalTranscriptionJob medicalTranscriptionJob) {
@@ -45,10 +60,20 @@ public class GetMedicalTranscriptionJobResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An object that contains the results of the medical transcription job.
+     * An object that contains detailed information about your medical transcription job. Returned fields include:
+     * <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     * <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     * <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     * <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     * <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      * </p>
      * 
-     * @return An object that contains the results of the medical transcription job.
+     * @return An object that contains detailed information about your medical transcription job. Returned fields
+     *         include: <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     *         <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     *         <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     *         <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     *         <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      */
 
     public MedicalTranscriptionJob getMedicalTranscriptionJob() {
@@ -57,11 +82,21 @@ public class GetMedicalTranscriptionJobResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An object that contains the results of the medical transcription job.
+     * An object that contains detailed information about your medical transcription job. Returned fields include:
+     * <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     * <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     * <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     * <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     * <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      * </p>
      * 
      * @param medicalTranscriptionJob
-     *        An object that contains the results of the medical transcription job.
+     *        An object that contains detailed information about your medical transcription job. Returned fields
+     *        include: <code>CompletionTime</code>, <code>ContentIdentificationType</code>, <code>CreationTime</code>,
+     *        <code>FailureReason</code>, <code>LanguageCode</code>, <code>Media</code>, <code>MediaFormat</code>,
+     *        <code>MediaSampleRateHertz</code>, <code>MedicalTranscriptionJobName</code>, <code>Settings</code>,
+     *        <code>Specialty</code>, <code>StartTime</code>, <code>Tags</code>, <code>Transcript</code>,
+     *        <code>TranscriptionJobStatus</code>, and <code>Type</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

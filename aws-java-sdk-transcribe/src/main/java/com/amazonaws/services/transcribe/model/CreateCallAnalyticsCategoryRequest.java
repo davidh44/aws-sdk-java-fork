@@ -27,26 +27,30 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name that you choose for your category when you create it.
+     * A unique name, chosen by you, for your call analytics category. For example,
+     * <code>sentiment-positive-last30seconds</code>.
      * </p>
      */
     private String categoryName;
     /**
      * <p>
-     * To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be applied
-     * to the attributes of the call. For example, you can specify a sentiment filter to detect if the customer's
-     * sentiment was negative or neutral.
+     * Rules make up a call analytics category. When creating a call analytics category, you must create between 1 and
+     * 20 rules for your category. For each rule, you specify a filter you want applied to the attributes of a call. For
+     * example, you can choose a sentiment filter that detects if a customer's sentiment was positive during the last 30
+     * seconds of the call.
      * </p>
      */
     private java.util.List<Rule> rules;
 
     /**
      * <p>
-     * The name that you choose for your category when you create it.
+     * A unique name, chosen by you, for your call analytics category. For example,
+     * <code>sentiment-positive-last30seconds</code>.
      * </p>
      * 
      * @param categoryName
-     *        The name that you choose for your category when you create it.
+     *        A unique name, chosen by you, for your call analytics category. For example,
+     *        <code>sentiment-positive-last30seconds</code>.
      */
 
     public void setCategoryName(String categoryName) {
@@ -55,10 +59,12 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name that you choose for your category when you create it.
+     * A unique name, chosen by you, for your call analytics category. For example,
+     * <code>sentiment-positive-last30seconds</code>.
      * </p>
      * 
-     * @return The name that you choose for your category when you create it.
+     * @return A unique name, chosen by you, for your call analytics category. For example,
+     *         <code>sentiment-positive-last30seconds</code>.
      */
 
     public String getCategoryName() {
@@ -67,11 +73,13 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name that you choose for your category when you create it.
+     * A unique name, chosen by you, for your call analytics category. For example,
+     * <code>sentiment-positive-last30seconds</code>.
      * </p>
      * 
      * @param categoryName
-     *        The name that you choose for your category when you create it.
+     *        A unique name, chosen by you, for your call analytics category. For example,
+     *        <code>sentiment-positive-last30seconds</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,14 +90,16 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be applied
-     * to the attributes of the call. For example, you can specify a sentiment filter to detect if the customer's
-     * sentiment was negative or neutral.
+     * Rules make up a call analytics category. When creating a call analytics category, you must create between 1 and
+     * 20 rules for your category. For each rule, you specify a filter you want applied to the attributes of a call. For
+     * example, you can choose a sentiment filter that detects if a customer's sentiment was positive during the last 30
+     * seconds of the call.
      * </p>
      * 
-     * @return To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be
-     *         applied to the attributes of the call. For example, you can specify a sentiment filter to detect if the
-     *         customer's sentiment was negative or neutral.
+     * @return Rules make up a call analytics category. When creating a call analytics category, you must create between
+     *         1 and 20 rules for your category. For each rule, you specify a filter you want applied to the attributes
+     *         of a call. For example, you can choose a sentiment filter that detects if a customer's sentiment was
+     *         positive during the last 30 seconds of the call.
      */
 
     public java.util.List<Rule> getRules() {
@@ -98,15 +108,17 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be applied
-     * to the attributes of the call. For example, you can specify a sentiment filter to detect if the customer's
-     * sentiment was negative or neutral.
+     * Rules make up a call analytics category. When creating a call analytics category, you must create between 1 and
+     * 20 rules for your category. For each rule, you specify a filter you want applied to the attributes of a call. For
+     * example, you can choose a sentiment filter that detects if a customer's sentiment was positive during the last 30
+     * seconds of the call.
      * </p>
      * 
      * @param rules
-     *        To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be
-     *        applied to the attributes of the call. For example, you can specify a sentiment filter to detect if the
-     *        customer's sentiment was negative or neutral.
+     *        Rules make up a call analytics category. When creating a call analytics category, you must create between
+     *        1 and 20 rules for your category. For each rule, you specify a filter you want applied to the attributes
+     *        of a call. For example, you can choose a sentiment filter that detects if a customer's sentiment was
+     *        positive during the last 30 seconds of the call.
      */
 
     public void setRules(java.util.Collection<Rule> rules) {
@@ -120,9 +132,10 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be applied
-     * to the attributes of the call. For example, you can specify a sentiment filter to detect if the customer's
-     * sentiment was negative or neutral.
+     * Rules make up a call analytics category. When creating a call analytics category, you must create between 1 and
+     * 20 rules for your category. For each rule, you specify a filter you want applied to the attributes of a call. For
+     * example, you can choose a sentiment filter that detects if a customer's sentiment was positive during the last 30
+     * seconds of the call.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -131,9 +144,10 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param rules
-     *        To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be
-     *        applied to the attributes of the call. For example, you can specify a sentiment filter to detect if the
-     *        customer's sentiment was negative or neutral.
+     *        Rules make up a call analytics category. When creating a call analytics category, you must create between
+     *        1 and 20 rules for your category. For each rule, you specify a filter you want applied to the attributes
+     *        of a call. For example, you can choose a sentiment filter that detects if a customer's sentiment was
+     *        positive during the last 30 seconds of the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -149,15 +163,17 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be applied
-     * to the attributes of the call. For example, you can specify a sentiment filter to detect if the customer's
-     * sentiment was negative or neutral.
+     * Rules make up a call analytics category. When creating a call analytics category, you must create between 1 and
+     * 20 rules for your category. For each rule, you specify a filter you want applied to the attributes of a call. For
+     * example, you can choose a sentiment filter that detects if a customer's sentiment was positive during the last 30
+     * seconds of the call.
      * </p>
      * 
      * @param rules
-     *        To create a category, you must specify between 1 and 20 rules. For each rule, you specify a filter to be
-     *        applied to the attributes of the call. For example, you can specify a sentiment filter to detect if the
-     *        customer's sentiment was negative or neutral.
+     *        Rules make up a call analytics category. When creating a call analytics category, you must create between
+     *        1 and 20 rules for your category. For each rule, you specify a filter you want applied to the attributes
+     *        of a call. For example, you can choose a sentiment filter that detects if a customer's sentiment was
+     *        positive during the last 30 seconds of the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

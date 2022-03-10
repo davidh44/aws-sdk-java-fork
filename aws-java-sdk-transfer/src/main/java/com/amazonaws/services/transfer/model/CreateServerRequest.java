@@ -189,9 +189,27 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String loggingRole;
-
+    /**
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * authenticates.
+     * </p>
+     * <note>
+     * <p>
+     * The SFTP protocol does not support post-authentication display banners.
+     * </p>
+     * </note>
+     */
     private String postAuthenticationLoginBanner;
-
+    /**
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system.
+     * </p>
+     * <p>
+     * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
+     * </p>
+     */
     private String preAuthenticationLoginBanner;
     /**
      * <p>
@@ -1416,7 +1434,22 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * authenticates.
+     * </p>
+     * <note>
+     * <p>
+     * The SFTP protocol does not support post-authentication display banners.
+     * </p>
+     * </note>
+     * 
      * @param postAuthenticationLoginBanner
+     *        Specify a string to display when users connect to a server. This string is displayed after the user
+     *        authenticates.</p> <note>
+     *        <p>
+     *        The SFTP protocol does not support post-authentication display banners.
+     *        </p>
      */
 
     public void setPostAuthenticationLoginBanner(String postAuthenticationLoginBanner) {
@@ -1424,7 +1457,21 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * @return
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * authenticates.
+     * </p>
+     * <note>
+     * <p>
+     * The SFTP protocol does not support post-authentication display banners.
+     * </p>
+     * </note>
+     * 
+     * @return Specify a string to display when users connect to a server. This string is displayed after the user
+     *         authenticates.</p> <note>
+     *         <p>
+     *         The SFTP protocol does not support post-authentication display banners.
+     *         </p>
      */
 
     public String getPostAuthenticationLoginBanner() {
@@ -1432,7 +1479,22 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * authenticates.
+     * </p>
+     * <note>
+     * <p>
+     * The SFTP protocol does not support post-authentication display banners.
+     * </p>
+     * </note>
+     * 
      * @param postAuthenticationLoginBanner
+     *        Specify a string to display when users connect to a server. This string is displayed after the user
+     *        authenticates.</p> <note>
+     *        <p>
+     *        The SFTP protocol does not support post-authentication display banners.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1442,7 +1504,19 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system.
+     * </p>
+     * <p>
+     * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
+     * </p>
+     * 
      * @param preAuthenticationLoginBanner
+     *        Specify a string to display when users connect to a server. This string is displayed before the user
+     *        authenticates. For example, the following banner displays details about using the system.</p>
+     *        <p>
+     *        <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      */
 
     public void setPreAuthenticationLoginBanner(String preAuthenticationLoginBanner) {
@@ -1450,7 +1524,18 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * @return
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system.
+     * </p>
+     * <p>
+     * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
+     * </p>
+     * 
+     * @return Specify a string to display when users connect to a server. This string is displayed before the user
+     *         authenticates. For example, the following banner displays details about using the system.</p>
+     *         <p>
+     *         <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      */
 
     public String getPreAuthenticationLoginBanner() {
@@ -1458,7 +1543,19 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specify a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system.
+     * </p>
+     * <p>
+     * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
+     * </p>
+     * 
      * @param preAuthenticationLoginBanner
+     *        Specify a string to display when users connect to a server. This string is displayed before the user
+     *        authenticates. For example, the following banner displays details about using the system.</p>
+     *        <p>
+     *        <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

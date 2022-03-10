@@ -185,7 +185,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
     private String type;
     /**
      * <p>
-     * Add tags to an Amazon Transcribe medical transcription job.
+     * Add tags to an Amazon Transcribe Medical transcription job.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -1340,10 +1340,10 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Add tags to an Amazon Transcribe medical transcription job.
+     * Add tags to an Amazon Transcribe Medical transcription job.
      * </p>
      * 
-     * @return Add tags to an Amazon Transcribe medical transcription job.
+     * @return Add tags to an Amazon Transcribe Medical transcription job.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1352,11 +1352,11 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Add tags to an Amazon Transcribe medical transcription job.
+     * Add tags to an Amazon Transcribe Medical transcription job.
      * </p>
      * 
      * @param tags
-     *        Add tags to an Amazon Transcribe medical transcription job.
+     *        Add tags to an Amazon Transcribe Medical transcription job.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1370,7 +1370,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Add tags to an Amazon Transcribe medical transcription job.
+     * Add tags to an Amazon Transcribe Medical transcription job.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1379,7 +1379,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param tags
-     *        Add tags to an Amazon Transcribe medical transcription job.
+     *        Add tags to an Amazon Transcribe Medical transcription job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1395,11 +1395,11 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Add tags to an Amazon Transcribe medical transcription job.
+     * Add tags to an Amazon Transcribe Medical transcription job.
      * </p>
      * 
      * @param tags
-     *        Add tags to an Amazon Transcribe medical transcription job.
+     *        Add tags to an Amazon Transcribe Medical transcription job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

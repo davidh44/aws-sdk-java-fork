@@ -27,18 +27,18 @@ public class DescribeLanguageModelRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the custom language model you submit to get more information.
+     * The name of the custom language model you want described. Model names are case-sensitive.
      * </p>
      */
     private String modelName;
 
     /**
      * <p>
-     * The name of the custom language model you submit to get more information.
+     * The name of the custom language model you want described. Model names are case-sensitive.
      * </p>
      * 
      * @param modelName
-     *        The name of the custom language model you submit to get more information.
+     *        The name of the custom language model you want described. Model names are case-sensitive.
      */
 
     public void setModelName(String modelName) {
@@ -47,10 +47,10 @@ public class DescribeLanguageModelRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the custom language model you submit to get more information.
+     * The name of the custom language model you want described. Model names are case-sensitive.
      * </p>
      * 
-     * @return The name of the custom language model you submit to get more information.
+     * @return The name of the custom language model you want described. Model names are case-sensitive.
      */
 
     public String getModelName() {
@@ -59,11 +59,11 @@ public class DescribeLanguageModelRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the custom language model you submit to get more information.
+     * The name of the custom language model you want described. Model names are case-sensitive.
      * </p>
      * 
      * @param modelName
-     *        The name of the custom language model you submit to get more information.
+     *        The name of the custom language model you want described. Model names are case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

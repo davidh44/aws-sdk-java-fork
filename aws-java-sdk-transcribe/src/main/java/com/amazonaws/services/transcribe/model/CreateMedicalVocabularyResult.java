@@ -25,46 +25,45 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case sensitive.
+     * The name you chose for your vocabulary.
      * </p>
      */
     private String vocabularyName;
     /**
      * <p>
-     * The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language code
-     * for Amazon Transcribe Medical.
+     * The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is the
+     * only language supported with Amazon Transcribe Medical.
      * </p>
      */
     private String languageCode;
     /**
      * <p>
-     * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is <code>READY</code>,
-     * you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     * The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the
+     * vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * </p>
      */
     private String vocabularyState;
     /**
      * <p>
-     * The date and time that you created the vocabulary.
+     * The date and time you created your custom medical vocabulary.
      * </p>
      */
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about why the
-     * job failed.
+     * If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains information
+     * about why the job failed.
      * </p>
      */
     private String failureReason;
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case sensitive.
+     * The name you chose for your vocabulary.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case
-     *        sensitive.
+     *        The name you chose for your vocabulary.
      */
 
     public void setVocabularyName(String vocabularyName) {
@@ -73,11 +72,10 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case sensitive.
+     * The name you chose for your vocabulary.
      * </p>
      * 
-     * @return The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case
-     *         sensitive.
+     * @return The name you chose for your vocabulary.
      */
 
     public String getVocabularyName() {
@@ -86,12 +84,11 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case sensitive.
+     * The name you chose for your vocabulary.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the vocabulary. The name must be unique within an Amazon Web Services account and is case
-     *        sensitive.
+     *        The name you chose for your vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,13 +99,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language code
-     * for Amazon Transcribe Medical.
+     * The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is the
+     * only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @param languageCode
-     *        The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language
-     *        code for Amazon Transcribe Medical.
+     *        The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is
+     *        the only language supported with Amazon Transcribe Medical.
      * @see LanguageCode
      */
 
@@ -118,12 +115,12 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language code
-     * for Amazon Transcribe Medical.
+     * The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is the
+     * only language supported with Amazon Transcribe Medical.
      * </p>
      * 
-     * @return The language code for the entries in your custom vocabulary. US English (en-US) is the only valid
-     *         language code for Amazon Transcribe Medical.
+     * @return The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>)
+     *         is the only language supported with Amazon Transcribe Medical.
      * @see LanguageCode
      */
 
@@ -133,13 +130,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language code
-     * for Amazon Transcribe Medical.
+     * The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is the
+     * only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @param languageCode
-     *        The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language
-     *        code for Amazon Transcribe Medical.
+     *        The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is
+     *        the only language supported with Amazon Transcribe Medical.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -151,13 +148,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language code
-     * for Amazon Transcribe Medical.
+     * The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is the
+     * only language supported with Amazon Transcribe Medical.
      * </p>
      * 
      * @param languageCode
-     *        The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language
-     *        code for Amazon Transcribe Medical.
+     *        The language code you selected for your medical vocabulary. Note that U.S. English (<code>en-US</code>) is
+     *        the only language supported with Amazon Transcribe Medical.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -169,13 +166,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is <code>READY</code>,
-     * you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     * The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the
+     * vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * </p>
      * 
      * @param vocabularyState
-     *        The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is
-     *        <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     *        The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use
+     *        the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * @see VocabularyState
      */
 
@@ -185,12 +182,12 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is <code>READY</code>,
-     * you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     * The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the
+     * vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * </p>
      * 
-     * @return The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is
-     *         <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     * @return The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use
+     *         the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * @see VocabularyState
      */
 
@@ -200,13 +197,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is <code>READY</code>,
-     * you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     * The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the
+     * vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * </p>
      * 
      * @param vocabularyState
-     *        The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is
-     *        <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     *        The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use
+     *        the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VocabularyState
      */
@@ -218,13 +215,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is <code>READY</code>,
-     * you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     * The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use the
+     * vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * </p>
      * 
      * @param vocabularyState
-     *        The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is
-     *        <code>READY</code>, you can use the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
+     *        The processing state of your custom medical vocabulary. If the state is <code>READY</code>, you can use
+     *        the vocabulary in a <code>StartMedicalTranscriptionJob</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VocabularyState
      */
@@ -236,11 +233,11 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The date and time that you created the vocabulary.
+     * The date and time you created your custom medical vocabulary.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The date and time that you created the vocabulary.
+     *        The date and time you created your custom medical vocabulary.
      */
 
     public void setLastModifiedTime(java.util.Date lastModifiedTime) {
@@ -249,10 +246,10 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The date and time that you created the vocabulary.
+     * The date and time you created your custom medical vocabulary.
      * </p>
      * 
-     * @return The date and time that you created the vocabulary.
+     * @return The date and time you created your custom medical vocabulary.
      */
 
     public java.util.Date getLastModifiedTime() {
@@ -261,11 +258,11 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The date and time that you created the vocabulary.
+     * The date and time you created your custom medical vocabulary.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The date and time that you created the vocabulary.
+     *        The date and time you created your custom medical vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,13 +273,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about why the
-     * job failed.
+     * If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains information
+     * about why the job failed.
      * </p>
      * 
      * @param failureReason
-     *        If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about
-     *        why the job failed.
+     *        If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains
+     *        information about why the job failed.
      */
 
     public void setFailureReason(String failureReason) {
@@ -291,12 +288,12 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about why the
-     * job failed.
+     * If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains information
+     * about why the job failed.
      * </p>
      * 
-     * @return If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about
-     *         why the job failed.
+     * @return If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains
+     *         information about why the job failed.
      */
 
     public String getFailureReason() {
@@ -305,13 +302,13 @@ public class CreateMedicalVocabularyResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about why the
-     * job failed.
+     * If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains information
+     * about why the job failed.
      * </p>
      * 
      * @param failureReason
-     *        If the <code>VocabularyState</code> field is <code>FAILED</code>, this field contains information about
-     *        why the job failed.
+     *        If the <code>VocabularyState</code> field is <code>FAILED</code>, <code>FailureReason</code> contains
+     *        information about why the job failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

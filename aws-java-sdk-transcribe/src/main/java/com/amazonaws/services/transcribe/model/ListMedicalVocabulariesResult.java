@@ -35,7 +35,7 @@ public class ListMedicalVocabulariesResult extends com.amazonaws.AmazonWebServic
      * number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there are more jobs in
      * the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code> token. To return the
      * next page of vocabularies, include the token in the next request to the <code>ListMedicalVocabularies</code>
-     * operation .
+     * operation.
      * </p>
      */
     private String nextToken;
@@ -111,7 +111,7 @@ public class ListMedicalVocabulariesResult extends com.amazonaws.AmazonWebServic
      * number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there are more jobs in
      * the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code> token. To return the
      * next page of vocabularies, include the token in the next request to the <code>ListMedicalVocabularies</code>
-     * operation .
+     * operation.
      * </p>
      * 
      * @param nextToken
@@ -119,7 +119,7 @@ public class ListMedicalVocabulariesResult extends com.amazonaws.AmazonWebServic
      *        maximum number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there
      *        are more jobs in the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code>
      *        token. To return the next page of vocabularies, include the token in the next request to the
-     *        <code>ListMedicalVocabularies</code> operation .
+     *        <code>ListMedicalVocabularies</code> operation.
      */
 
     public void setNextToken(String nextToken) {
@@ -132,14 +132,14 @@ public class ListMedicalVocabulariesResult extends com.amazonaws.AmazonWebServic
      * number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there are more jobs in
      * the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code> token. To return the
      * next page of vocabularies, include the token in the next request to the <code>ListMedicalVocabularies</code>
-     * operation .
+     * operation.
      * </p>
      * 
      * @return The <code>ListMedicalVocabularies</code> operation returns a page of vocabularies at a time. You set the
      *         maximum number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there
      *         are more jobs in the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code>
      *         token. To return the next page of vocabularies, include the token in the next request to the
-     *         <code>ListMedicalVocabularies</code> operation .
+     *         <code>ListMedicalVocabularies</code> operation.
      */
 
     public String getNextToken() {
@@ -152,7 +152,7 @@ public class ListMedicalVocabulariesResult extends com.amazonaws.AmazonWebServic
      * number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there are more jobs in
      * the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code> token. To return the
      * next page of vocabularies, include the token in the next request to the <code>ListMedicalVocabularies</code>
-     * operation .
+     * operation.
      * </p>
      * 
      * @param nextToken
@@ -160,7 +160,7 @@ public class ListMedicalVocabulariesResult extends com.amazonaws.AmazonWebServic
      *        maximum number of vocabularies to return on a page with the <code>MaxResults</code> parameter. If there
      *        are more jobs in the list will fit on a page, Amazon Transcribe Medical returns the <code>NextPage</code>
      *        token. To return the next page of vocabularies, include the token in the next request to the
-     *        <code>ListMedicalVocabularies</code> operation .
+     *        <code>ListMedicalVocabularies</code> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

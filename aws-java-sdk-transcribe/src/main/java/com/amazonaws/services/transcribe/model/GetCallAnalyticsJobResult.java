@@ -25,18 +25,33 @@ public class GetCallAnalyticsJobResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An object that contains the results of your call analytics job.
+     * An object that contains detailed information about your call analytics job. Returned fields include:
+     * <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     * <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     * <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>, <code>Media</code>,
+     * <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>, <code>StartTime</code>, and
+     * <code>Transcript</code>.
      * </p>
      */
     private CallAnalyticsJob callAnalyticsJob;
 
     /**
      * <p>
-     * An object that contains the results of your call analytics job.
+     * An object that contains detailed information about your call analytics job. Returned fields include:
+     * <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     * <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     * <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>, <code>Media</code>,
+     * <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>, <code>StartTime</code>, and
+     * <code>Transcript</code>.
      * </p>
      * 
      * @param callAnalyticsJob
-     *        An object that contains the results of your call analytics job.
+     *        An object that contains detailed information about your call analytics job. Returned fields include:
+     *        <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     *        <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     *        <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>,
+     *        <code>Media</code>, <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>,
+     *        <code>StartTime</code>, and <code>Transcript</code>.
      */
 
     public void setCallAnalyticsJob(CallAnalyticsJob callAnalyticsJob) {
@@ -45,10 +60,20 @@ public class GetCallAnalyticsJobResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An object that contains the results of your call analytics job.
+     * An object that contains detailed information about your call analytics job. Returned fields include:
+     * <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     * <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     * <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>, <code>Media</code>,
+     * <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>, <code>StartTime</code>, and
+     * <code>Transcript</code>.
      * </p>
      * 
-     * @return An object that contains the results of your call analytics job.
+     * @return An object that contains detailed information about your call analytics job. Returned fields include:
+     *         <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     *         <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     *         <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>,
+     *         <code>Media</code>, <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>,
+     *         <code>StartTime</code>, and <code>Transcript</code>.
      */
 
     public CallAnalyticsJob getCallAnalyticsJob() {
@@ -57,11 +82,21 @@ public class GetCallAnalyticsJobResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An object that contains the results of your call analytics job.
+     * An object that contains detailed information about your call analytics job. Returned fields include:
+     * <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     * <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     * <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>, <code>Media</code>,
+     * <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>, <code>StartTime</code>, and
+     * <code>Transcript</code>.
      * </p>
      * 
      * @param callAnalyticsJob
-     *        An object that contains the results of your call analytics job.
+     *        An object that contains detailed information about your call analytics job. Returned fields include:
+     *        <code>CallAnalyticsJobName</code>, <code>CallAnalyticsJobStatus</code>, <code>ChannelDefinitions</code>,
+     *        <code>CompletionTime</code>, <code>CreationTime</code>, <code>DataAccessRoleArn</code>,
+     *        <code>FailureReason</code>, <code>IdentifiedLanguageScore</code>, <code>LanguageCode</code>,
+     *        <code>Media</code>, <code>MediaFormat</code>, <code>MediaSampleRateHertz</code>, <code>Settings</code>,
+     *        <code>StartTime</code>, and <code>Transcript</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

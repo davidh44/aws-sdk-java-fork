@@ -45,13 +45,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * Amazon Web Services Region as the resource that you are calling. The following is the format for a URI:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      * </p>
      * <p>
      * For example:
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     * <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
@@ -184,13 +184,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * Amazon Web Services Region as the resource that you are calling. The following is the format for a URI:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      * </p>
      * <p>
      * For example:
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     * <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
@@ -207,13 +207,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        same Amazon Web Services Region as the resource that you are calling. The following is the format for a
      *        URI:</p>
      *        <p>
-     *        <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *        <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      *        </p>
      *        <p>
      *        For example:
      *        </p>
      *        <p>
-     *        <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     *        <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      *        </p>
      *        <p>
      *        For more information about Amazon S3 object names, see <a
@@ -236,13 +236,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * Amazon Web Services Region as the resource that you are calling. The following is the format for a URI:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      * </p>
      * <p>
      * For example:
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     * <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
@@ -258,13 +258,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *         same Amazon Web Services Region as the resource that you are calling. The following is the format for a
      *         URI:</p>
      *         <p>
-     *         <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *         <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      *         </p>
      *         <p>
      *         For example:
      *         </p>
      *         <p>
-     *         <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     *         <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      *         </p>
      *         <p>
      *         For more information about Amazon S3 object names, see <a
@@ -287,13 +287,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * Amazon Web Services Region as the resource that you are calling. The following is the format for a URI:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      * </p>
      * <p>
      * For example:
      * </p>
      * <p>
-     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     * <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
@@ -310,13 +310,13 @@ public class UpdateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        same Amazon Web Services Region as the resource that you are calling. The following is the format for a
      *        URI:</p>
      *        <p>
-     *        <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *        <code>https://s3.aws-region.amazonaws.com/bucket-name/keyprefix/objectkey</code>
      *        </p>
      *        <p>
      *        For example:
      *        </p>
      *        <p>
-     *        <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
+     *        <code>https://s3.us-east-1.amazonaws.com/DOC-EXAMPLE-BUCKET/vocab.txt</code>
      *        </p>
      *        <p>
      *        For more information about Amazon S3 object names, see <a

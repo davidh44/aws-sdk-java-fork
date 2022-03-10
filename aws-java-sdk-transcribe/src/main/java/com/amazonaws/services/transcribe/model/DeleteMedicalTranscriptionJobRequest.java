@@ -27,19 +27,18 @@ public class DeleteMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription job.
+     * The name of the medical transcription job you want to delete. Job names are case-sensitive.
      * </p>
      */
     private String medicalTranscriptionJobName;
 
     /**
      * <p>
-     * The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription job.
+     * The name of the medical transcription job you want to delete. Job names are case-sensitive.
      * </p>
      * 
      * @param medicalTranscriptionJobName
-     *        The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription
-     *        job.
+     *        The name of the medical transcription job you want to delete. Job names are case-sensitive.
      */
 
     public void setMedicalTranscriptionJobName(String medicalTranscriptionJobName) {
@@ -48,11 +47,10 @@ public class DeleteMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription job.
+     * The name of the medical transcription job you want to delete. Job names are case-sensitive.
      * </p>
      * 
-     * @return The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription
-     *         job.
+     * @return The name of the medical transcription job you want to delete. Job names are case-sensitive.
      */
 
     public String getMedicalTranscriptionJobName() {
@@ -61,12 +59,11 @@ public class DeleteMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription job.
+     * The name of the medical transcription job you want to delete. Job names are case-sensitive.
      * </p>
      * 
      * @param medicalTranscriptionJobName
-     *        The name you provide to the <code>DeleteMedicalTranscriptionJob</code> object to delete a transcription
-     *        job.
+     *        The name of the medical transcription job you want to delete. Job names are case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

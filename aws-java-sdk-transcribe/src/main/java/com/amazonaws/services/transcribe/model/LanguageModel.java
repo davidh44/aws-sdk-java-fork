@@ -67,7 +67,7 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
     private String modelStatus;
     /**
      * <p>
-     * Whether the base model used for the custom language model is up to date. If this field is <code>true</code> then
+     * Whether the base model used for the custom language model is up to date. If this field is <code>false</code> then
      * you are running the most up-to-date version of the base model in your custom language model.
      * </p>
      */
@@ -392,13 +392,13 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the base model used for the custom language model is up to date. If this field is <code>true</code> then
+     * Whether the base model used for the custom language model is up to date. If this field is <code>false</code> then
      * you are running the most up-to-date version of the base model in your custom language model.
      * </p>
      * 
      * @param upgradeAvailability
      *        Whether the base model used for the custom language model is up to date. If this field is
-     *        <code>true</code> then you are running the most up-to-date version of the base model in your custom
+     *        <code>false</code> then you are running the most up-to-date version of the base model in your custom
      *        language model.
      */
 
@@ -408,12 +408,12 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the base model used for the custom language model is up to date. If this field is <code>true</code> then
+     * Whether the base model used for the custom language model is up to date. If this field is <code>false</code> then
      * you are running the most up-to-date version of the base model in your custom language model.
      * </p>
      * 
      * @return Whether the base model used for the custom language model is up to date. If this field is
-     *         <code>true</code> then you are running the most up-to-date version of the base model in your custom
+     *         <code>false</code> then you are running the most up-to-date version of the base model in your custom
      *         language model.
      */
 
@@ -423,13 +423,13 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the base model used for the custom language model is up to date. If this field is <code>true</code> then
+     * Whether the base model used for the custom language model is up to date. If this field is <code>false</code> then
      * you are running the most up-to-date version of the base model in your custom language model.
      * </p>
      * 
      * @param upgradeAvailability
      *        Whether the base model used for the custom language model is up to date. If this field is
-     *        <code>true</code> then you are running the most up-to-date version of the base model in your custom
+     *        <code>false</code> then you are running the most up-to-date version of the base model in your custom
      *        language model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -441,12 +441,12 @@ public class LanguageModel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the base model used for the custom language model is up to date. If this field is <code>true</code> then
+     * Whether the base model used for the custom language model is up to date. If this field is <code>false</code> then
      * you are running the most up-to-date version of the base model in your custom language model.
      * </p>
      * 
      * @return Whether the base model used for the custom language model is up to date. If this field is
-     *         <code>true</code> then you are running the most up-to-date version of the base model in your custom
+     *         <code>false</code> then you are running the most up-to-date version of the base model in your custom
      *         language model.
      */
 

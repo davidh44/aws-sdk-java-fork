@@ -31,13 +31,13 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
     private String vocabularyFilterName;
     /**
      * <p>
-     * The language code of the words in the collection.
+     * The language code associated with your vocabulary filter.
      * </p>
      */
     private String languageCode;
     /**
      * <p>
-     * The date and time that the vocabulary filter was modified.
+     * The date and time the vocabulary filter was modified.
      * </p>
      */
     private java.util.Date lastModifiedTime;
@@ -84,11 +84,11 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The language code of the words in the collection.
+     * The language code associated with your vocabulary filter.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the words in the collection.
+     *        The language code associated with your vocabulary filter.
      * @see LanguageCode
      */
 
@@ -98,10 +98,10 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The language code of the words in the collection.
+     * The language code associated with your vocabulary filter.
      * </p>
      * 
-     * @return The language code of the words in the collection.
+     * @return The language code associated with your vocabulary filter.
      * @see LanguageCode
      */
 
@@ -111,11 +111,11 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The language code of the words in the collection.
+     * The language code associated with your vocabulary filter.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the words in the collection.
+     *        The language code associated with your vocabulary filter.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -127,11 +127,11 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The language code of the words in the collection.
+     * The language code associated with your vocabulary filter.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the words in the collection.
+     *        The language code associated with your vocabulary filter.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -143,11 +143,11 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The date and time that the vocabulary filter was modified.
+     * The date and time the vocabulary filter was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The date and time that the vocabulary filter was modified.
+     *        The date and time the vocabulary filter was modified.
      */
 
     public void setLastModifiedTime(java.util.Date lastModifiedTime) {
@@ -156,10 +156,10 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The date and time that the vocabulary filter was modified.
+     * The date and time the vocabulary filter was modified.
      * </p>
      * 
-     * @return The date and time that the vocabulary filter was modified.
+     * @return The date and time the vocabulary filter was modified.
      */
 
     public java.util.Date getLastModifiedTime() {
@@ -168,11 +168,11 @@ public class CreateVocabularyFilterResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The date and time that the vocabulary filter was modified.
+     * The date and time the vocabulary filter was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The date and time that the vocabulary filter was modified.
+     *        The date and time the vocabulary filter was modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

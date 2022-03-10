@@ -20,7 +20,14 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ExecutionErrorType {
 
-    PERMISSION_DENIED("PERMISSION_DENIED");
+    PERMISSION_DENIED("PERMISSION_DENIED"),
+    CUSTOM_STEP_FAILED("CUSTOM_STEP_FAILED"),
+    THROTTLED("THROTTLED"),
+    ALREADY_EXISTS("ALREADY_EXISTS"),
+    NOT_FOUND("NOT_FOUND"),
+    BAD_REQUEST("BAD_REQUEST"),
+    TIMEOUT("TIMEOUT"),
+    INTERNAL_SERVER_ERROR("INTERNAL_SERVER_ERROR");
 
     private String value;
 

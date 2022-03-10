@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specify the output format for your subtitle file.
+ * Choose the output format for your subtitle file and the S3 location where you want your file saved.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/SubtitlesOutput" target="_top">AWS API
@@ -37,7 +37,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     private java.util.List<String> formats;
     /**
      * <p>
-     * Choose the output location for your subtitle file. This location must be an S3 bucket.
+     * Contains the output location for your subtitle file. This location must be an S3 bucket.
      * </p>
      */
     private java.util.List<String> subtitleFileUris;
@@ -152,10 +152,10 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Choose the output location for your subtitle file. This location must be an S3 bucket.
+     * Contains the output location for your subtitle file. This location must be an S3 bucket.
      * </p>
      * 
-     * @return Choose the output location for your subtitle file. This location must be an S3 bucket.
+     * @return Contains the output location for your subtitle file. This location must be an S3 bucket.
      */
 
     public java.util.List<String> getSubtitleFileUris() {
@@ -164,11 +164,11 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Choose the output location for your subtitle file. This location must be an S3 bucket.
+     * Contains the output location for your subtitle file. This location must be an S3 bucket.
      * </p>
      * 
      * @param subtitleFileUris
-     *        Choose the output location for your subtitle file. This location must be an S3 bucket.
+     *        Contains the output location for your subtitle file. This location must be an S3 bucket.
      */
 
     public void setSubtitleFileUris(java.util.Collection<String> subtitleFileUris) {
@@ -182,7 +182,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Choose the output location for your subtitle file. This location must be an S3 bucket.
+     * Contains the output location for your subtitle file. This location must be an S3 bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -191,7 +191,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param subtitleFileUris
-     *        Choose the output location for your subtitle file. This location must be an S3 bucket.
+     *        Contains the output location for your subtitle file. This location must be an S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,11 +207,11 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Choose the output location for your subtitle file. This location must be an S3 bucket.
+     * Contains the output location for your subtitle file. This location must be an S3 bucket.
      * </p>
      * 
      * @param subtitleFileUris
-     *        Choose the output location for your subtitle file. This location must be an S3 bucket.
+     *        Contains the output location for your subtitle file. This location must be an S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
