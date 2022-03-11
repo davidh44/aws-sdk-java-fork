@@ -13,7 +13,7 @@
 package com.amazonaws.services.connect.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -46,6 +46,8 @@ public class StartChatContactRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Integer> CHATDURATIONINMINUTES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChatDurationInMinutes").build();
+    private static final MarshallingInfo<List> SUPPORTEDMESSAGINGCONTENTTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedMessagingContentTypes").build();
 
     private static final StartChatContactRequestMarshaller instance = new StartChatContactRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class StartChatContactRequestMarshaller {
             protocolMarshaller.marshall(startChatContactRequest.getInitialMessage(), INITIALMESSAGE_BINDING);
             protocolMarshaller.marshall(startChatContactRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(startChatContactRequest.getChatDurationInMinutes(), CHATDURATIONINMINUTES_BINDING);
+            protocolMarshaller.marshall(startChatContactRequest.getSupportedMessagingContentTypes(), SUPPORTEDMESSAGINGCONTENTTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

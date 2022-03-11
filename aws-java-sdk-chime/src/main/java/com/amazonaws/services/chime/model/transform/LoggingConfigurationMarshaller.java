@@ -29,6 +29,8 @@ public class LoggingConfigurationMarshaller {
 
     private static final MarshallingInfo<Boolean> ENABLESIPLOGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableSIPLogs").build();
+    private static final MarshallingInfo<Boolean> ENABLEMEDIAMETRICLOGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableMediaMetricLogs").build();
 
     private static final LoggingConfigurationMarshaller instance = new LoggingConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class LoggingConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(loggingConfiguration.getEnableSIPLogs(), ENABLESIPLOGS_BINDING);
+            protocolMarshaller.marshall(loggingConfiguration.getEnableMediaMetricLogs(), ENABLEMEDIAMETRICLOGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

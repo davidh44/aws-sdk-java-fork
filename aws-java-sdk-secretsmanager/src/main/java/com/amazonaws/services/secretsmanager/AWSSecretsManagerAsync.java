@@ -640,7 +640,8 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Lists the secrets that are stored by Secrets Manager in the Amazon Web Services account.
+     * Lists the secrets that are stored by Secrets Manager in the Amazon Web Services account, not including secrets
+     * that are marked for deletion. To see secrets marked for deletion, use the Secrets Manager console.
      * </p>
      * <p>
      * To list the versions of a secret, use <a>ListSecretVersionIds</a>.
@@ -671,7 +672,8 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Lists the secrets that are stored by Secrets Manager in the Amazon Web Services account.
+     * Lists the secrets that are stored by Secrets Manager in the Amazon Web Services account, not including secrets
+     * that are marked for deletion. To see secrets marked for deletion, use the Secrets Manager console.
      * </p>
      * <p>
      * To list the versions of a secret, use <a>ListSecretVersionIds</a>.

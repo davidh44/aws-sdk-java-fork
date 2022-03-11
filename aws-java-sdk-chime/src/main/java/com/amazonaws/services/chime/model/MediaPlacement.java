@@ -72,7 +72,7 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
     private String turnControlUrl;
     /**
      * <p>
-     * The event ingestion URL.
+     * The event ingestion URL to which you send client meeting events.
      * </p>
      */
     private String eventIngestionUrl;
@@ -359,11 +359,11 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The event ingestion URL.
+     * The event ingestion URL to which you send client meeting events.
      * </p>
      * 
      * @param eventIngestionUrl
-     *        The event ingestion URL.
+     *        The event ingestion URL to which you send client meeting events.
      */
 
     public void setEventIngestionUrl(String eventIngestionUrl) {
@@ -372,10 +372,10 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The event ingestion URL.
+     * The event ingestion URL to which you send client meeting events.
      * </p>
      * 
-     * @return The event ingestion URL.
+     * @return The event ingestion URL to which you send client meeting events.
      */
 
     public String getEventIngestionUrl() {
@@ -384,11 +384,11 @@ public class MediaPlacement implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The event ingestion URL.
+     * The event ingestion URL to which you send client meeting events.
      * </p>
      * 
      * @param eventIngestionUrl
-     *        The event ingestion URL.
+     *        The event ingestion URL to which you send client meeting events.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

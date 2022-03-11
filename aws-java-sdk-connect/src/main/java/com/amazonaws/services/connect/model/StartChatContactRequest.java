@@ -80,6 +80,12 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Integer chatDurationInMinutes;
+    /**
+     * <p>
+     * The supported chat message content types. Content types can be text/plain or both text/plain and text/markdown.
+     * </p>
+     */
+    private java.util.List<String> supportedMessagingContentTypes;
 
     /**
      * <p>
@@ -465,6 +471,80 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The supported chat message content types. Content types can be text/plain or both text/plain and text/markdown.
+     * </p>
+     * 
+     * @return The supported chat message content types. Content types can be text/plain or both text/plain and
+     *         text/markdown.
+     */
+
+    public java.util.List<String> getSupportedMessagingContentTypes() {
+        return supportedMessagingContentTypes;
+    }
+
+    /**
+     * <p>
+     * The supported chat message content types. Content types can be text/plain or both text/plain and text/markdown.
+     * </p>
+     * 
+     * @param supportedMessagingContentTypes
+     *        The supported chat message content types. Content types can be text/plain or both text/plain and
+     *        text/markdown.
+     */
+
+    public void setSupportedMessagingContentTypes(java.util.Collection<String> supportedMessagingContentTypes) {
+        if (supportedMessagingContentTypes == null) {
+            this.supportedMessagingContentTypes = null;
+            return;
+        }
+
+        this.supportedMessagingContentTypes = new java.util.ArrayList<String>(supportedMessagingContentTypes);
+    }
+
+    /**
+     * <p>
+     * The supported chat message content types. Content types can be text/plain or both text/plain and text/markdown.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSupportedMessagingContentTypes(java.util.Collection)} or
+     * {@link #withSupportedMessagingContentTypes(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param supportedMessagingContentTypes
+     *        The supported chat message content types. Content types can be text/plain or both text/plain and
+     *        text/markdown.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChatContactRequest withSupportedMessagingContentTypes(String... supportedMessagingContentTypes) {
+        if (this.supportedMessagingContentTypes == null) {
+            setSupportedMessagingContentTypes(new java.util.ArrayList<String>(supportedMessagingContentTypes.length));
+        }
+        for (String ele : supportedMessagingContentTypes) {
+            this.supportedMessagingContentTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The supported chat message content types. Content types can be text/plain or both text/plain and text/markdown.
+     * </p>
+     * 
+     * @param supportedMessagingContentTypes
+     *        The supported chat message content types. Content types can be text/plain or both text/plain and
+     *        text/markdown.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChatContactRequest withSupportedMessagingContentTypes(java.util.Collection<String> supportedMessagingContentTypes) {
+        setSupportedMessagingContentTypes(supportedMessagingContentTypes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -489,7 +569,9 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getChatDurationInMinutes() != null)
-            sb.append("ChatDurationInMinutes: ").append(getChatDurationInMinutes());
+            sb.append("ChatDurationInMinutes: ").append(getChatDurationInMinutes()).append(",");
+        if (getSupportedMessagingContentTypes() != null)
+            sb.append("SupportedMessagingContentTypes: ").append(getSupportedMessagingContentTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -532,6 +614,11 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getChatDurationInMinutes() != null && other.getChatDurationInMinutes().equals(this.getChatDurationInMinutes()) == false)
             return false;
+        if (other.getSupportedMessagingContentTypes() == null ^ this.getSupportedMessagingContentTypes() == null)
+            return false;
+        if (other.getSupportedMessagingContentTypes() != null
+                && other.getSupportedMessagingContentTypes().equals(this.getSupportedMessagingContentTypes()) == false)
+            return false;
         return true;
     }
 
@@ -547,6 +634,7 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getInitialMessage() == null) ? 0 : getInitialMessage().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getChatDurationInMinutes() == null) ? 0 : getChatDurationInMinutes().hashCode());
+        hashCode = prime * hashCode + ((getSupportedMessagingContentTypes() == null) ? 0 : getSupportedMessagingContentTypes().hashCode());
         return hashCode;
     }
 

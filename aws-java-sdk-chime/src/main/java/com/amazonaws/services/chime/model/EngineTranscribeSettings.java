@@ -75,7 +75,7 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
     private String partialResultsStability;
     /**
      * <p>
-     * Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     * Set this field to <code>PII</code> to identify personally identifiable information in the transcription output.
      * </p>
      */
     private String contentIdentificationType;
@@ -503,11 +503,12 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     * Set this field to <code>PII</code> to identify personally identifiable information in the transcription output.
      * </p>
      * 
      * @param contentIdentificationType
-     *        Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     *        Set this field to <code>PII</code> to identify personally identifiable information in the transcription
+     *        output.
      * @see TranscribeContentIdentificationType
      */
 
@@ -517,10 +518,11 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     * Set this field to <code>PII</code> to identify personally identifiable information in the transcription output.
      * </p>
      * 
-     * @return Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     * @return Set this field to <code>PII</code> to identify personally identifiable information in the transcription
+     *         output.
      * @see TranscribeContentIdentificationType
      */
 
@@ -530,11 +532,12 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     * Set this field to <code>PII</code> to identify personally identifiable information in the transcription output.
      * </p>
      * 
      * @param contentIdentificationType
-     *        Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     *        Set this field to <code>PII</code> to identify personally identifiable information in the transcription
+     *        output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TranscribeContentIdentificationType
      */
@@ -546,11 +549,12 @@ public class EngineTranscribeSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     * Set this field to <code>PII</code> to identify personally identifiable information in the transcription output.
      * </p>
      * 
      * @param contentIdentificationType
-     *        Set this field to <code>PII</code> to identify personal health information in the transcription output.
+     *        Set this field to <code>PII</code> to identify personally identifiable information in the transcription
+     *        output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TranscribeContentIdentificationType
      */

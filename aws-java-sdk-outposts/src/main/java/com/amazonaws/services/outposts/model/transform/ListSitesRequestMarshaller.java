@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.outposts.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,12 @@ public class ListSitesRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<List> OPERATINGADDRESSCOUNTRYCODEFILTER_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("OperatingAddressCountryCodeFilter").build();
+    private static final MarshallingInfo<List> OPERATINGADDRESSSTATEORREGIONFILTER_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("OperatingAddressStateOrRegionFilter").build();
+    private static final MarshallingInfo<List> OPERATINGADDRESSCITYFILTER_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("OperatingAddressCityFilter").build();
 
     private static final ListSitesRequestMarshaller instance = new ListSitesRequestMarshaller();
 
@@ -50,6 +57,9 @@ public class ListSitesRequestMarshaller {
         try {
             protocolMarshaller.marshall(listSitesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listSitesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listSitesRequest.getOperatingAddressCountryCodeFilter(), OPERATINGADDRESSCOUNTRYCODEFILTER_BINDING);
+            protocolMarshaller.marshall(listSitesRequest.getOperatingAddressStateOrRegionFilter(), OPERATINGADDRESSSTATEORREGIONFILTER_BINDING);
+            protocolMarshaller.marshall(listSitesRequest.getOperatingAddressCityFilter(), OPERATINGADDRESSCITYFILTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

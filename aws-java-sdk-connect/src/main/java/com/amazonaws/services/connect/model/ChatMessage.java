@@ -30,7 +30,7 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are text and plain.
+     * The type of the content. Supported types are <code>text/plain</code>.
      * </p>
      */
     private String contentType;
@@ -43,11 +43,11 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are text and plain.
+     * The type of the content. Supported types are <code>text/plain</code>.
      * </p>
      * 
      * @param contentType
-     *        The type of the content. Supported types are text and plain.
+     *        The type of the content. Supported types are <code>text/plain</code>.
      */
 
     public void setContentType(String contentType) {
@@ -56,10 +56,10 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are text and plain.
+     * The type of the content. Supported types are <code>text/plain</code>.
      * </p>
      * 
-     * @return The type of the content. Supported types are text and plain.
+     * @return The type of the content. Supported types are <code>text/plain</code>.
      */
 
     public String getContentType() {
@@ -68,11 +68,11 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are text and plain.
+     * The type of the content. Supported types are <code>text/plain</code>.
      * </p>
      * 
      * @param contentType
-     *        The type of the content. Supported types are text and plain.
+     *        The type of the content. Supported types are <code>text/plain</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

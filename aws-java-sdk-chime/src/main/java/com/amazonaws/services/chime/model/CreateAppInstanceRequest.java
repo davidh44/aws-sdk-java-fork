@@ -45,7 +45,7 @@ public class CreateAppInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
     private String clientRequestToken;
     /**
      * <p>
-     * Tags assigned to the <code>AppInstanceUser</code>.
+     * Tags assigned to the <code>AppInstance</code>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -172,10 +172,10 @@ public class CreateAppInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Tags assigned to the <code>AppInstanceUser</code>.
+     * Tags assigned to the <code>AppInstance</code>.
      * </p>
      * 
-     * @return Tags assigned to the <code>AppInstanceUser</code>.
+     * @return Tags assigned to the <code>AppInstance</code>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -184,11 +184,11 @@ public class CreateAppInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Tags assigned to the <code>AppInstanceUser</code>.
+     * Tags assigned to the <code>AppInstance</code>.
      * </p>
      * 
      * @param tags
-     *        Tags assigned to the <code>AppInstanceUser</code>.
+     *        Tags assigned to the <code>AppInstance</code>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -202,7 +202,7 @@ public class CreateAppInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Tags assigned to the <code>AppInstanceUser</code>.
+     * Tags assigned to the <code>AppInstance</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -211,7 +211,7 @@ public class CreateAppInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param tags
-     *        Tags assigned to the <code>AppInstanceUser</code>.
+     *        Tags assigned to the <code>AppInstance</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +227,11 @@ public class CreateAppInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Tags assigned to the <code>AppInstanceUser</code>.
+     * Tags assigned to the <code>AppInstance</code>.
      * </p>
      * 
      * @param tags
-     *        Tags assigned to the <code>AppInstanceUser</code>.
+     *        Tags assigned to the <code>AppInstance</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

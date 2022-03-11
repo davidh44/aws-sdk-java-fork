@@ -112,6 +112,13 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String revisionId;
+    /**
+     * <p>
+     * The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon Web
+     * Services accounts under this organization.
+     * </p>
+     */
+    private String principalOrgID;
 
     /**
      * <p>
@@ -669,6 +676,52 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon Web
+     * Services accounts under this organization.
+     * </p>
+     * 
+     * @param principalOrgID
+     *        The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon Web
+     *        Services accounts under this organization.
+     */
+
+    public void setPrincipalOrgID(String principalOrgID) {
+        this.principalOrgID = principalOrgID;
+    }
+
+    /**
+     * <p>
+     * The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon Web
+     * Services accounts under this organization.
+     * </p>
+     * 
+     * @return The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon
+     *         Web Services accounts under this organization.
+     */
+
+    public String getPrincipalOrgID() {
+        return this.principalOrgID;
+    }
+
+    /**
+     * <p>
+     * The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon Web
+     * Services accounts under this organization.
+     * </p>
+     * 
+     * @param principalOrgID
+     *        The identifier for your organization in Organizations. Use this to grant permissions to all the Amazon Web
+     *        Services accounts under this organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AddPermissionRequest withPrincipalOrgID(String principalOrgID) {
+        setPrincipalOrgID(principalOrgID);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -697,7 +750,9 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getQualifier() != null)
             sb.append("Qualifier: ").append(getQualifier()).append(",");
         if (getRevisionId() != null)
-            sb.append("RevisionId: ").append(getRevisionId());
+            sb.append("RevisionId: ").append(getRevisionId()).append(",");
+        if (getPrincipalOrgID() != null)
+            sb.append("PrincipalOrgID: ").append(getPrincipalOrgID());
         sb.append("}");
         return sb.toString();
     }
@@ -748,6 +803,10 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getRevisionId() != null && other.getRevisionId().equals(this.getRevisionId()) == false)
             return false;
+        if (other.getPrincipalOrgID() == null ^ this.getPrincipalOrgID() == null)
+            return false;
+        if (other.getPrincipalOrgID() != null && other.getPrincipalOrgID().equals(this.getPrincipalOrgID()) == false)
+            return false;
         return true;
     }
 
@@ -765,6 +824,7 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getEventSourceToken() == null) ? 0 : getEventSourceToken().hashCode());
         hashCode = prime * hashCode + ((getQualifier() == null) ? 0 : getQualifier().hashCode());
         hashCode = prime * hashCode + ((getRevisionId() == null) ? 0 : getRevisionId().hashCode());
+        hashCode = prime * hashCode + ((getPrincipalOrgID() == null) ? 0 : getPrincipalOrgID().hashCode());
         return hashCode;
     }
 
