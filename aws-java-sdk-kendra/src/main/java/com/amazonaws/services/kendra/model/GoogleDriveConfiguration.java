@@ -39,29 +39,28 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
     private String secretArn;
     /**
      * <p>
-     * A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     * included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is excluded
-     * from the index.
+     * A list of regular expression patterns to include certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are included in the index. Items that don't match the patterns
+     * are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      */
     private java.util.List<String> inclusionPatterns;
     /**
      * <p>
-     * A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern are
-     * excluded from the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * included in the index. If an item matches both an exclusion pattern and an inclusion pattern, it is excluded from
-     * the index.
+     * A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are excluded from the index. Items that don't match the patterns
+     * are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      */
     private java.util.List<String> exclusionPatterns;
     /**
      * <p>
-     * Defines mapping between a field in the Google Drive and a Amazon Kendra index field.
-     * </p>
-     * <p>
-     * If you are using the console, you can define index fields when creating the mapping. If you are using the API,
-     * you must first create the field using the <code>UpdateIndex</code> API.
+     * Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Google
+     * Drive data source field names must exist in your Google Drive custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -151,16 +150,16 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     * included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is excluded
-     * from the index.
+     * A list of regular expression patterns to include certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are included in the index. Items that don't match the patterns
+     * are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * 
-     * @return A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern
-     *         are included in the index from both shared drives and users' My Drives. Items that don't match the
-     *         pattern are excluded from the index. If an item matches both an inclusion pattern and an exclusion
-     *         pattern, it is excluded from the index.
+     * @return A list of regular expression patterns to include certain items in your Google Drive, including shared
+     *         drives and users' My Drives. Items that match the patterns are included in the index. Items that don't
+     *         match the patterns are excluded from the index. If an item matches both an inclusion and exclusion
+     *         pattern, the exclusion pattern takes precedence and the item isn't included in the index.
      */
 
     public java.util.List<String> getInclusionPatterns() {
@@ -169,17 +168,17 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     * included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is excluded
-     * from the index.
+     * A list of regular expression patterns to include certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are included in the index. Items that don't match the patterns
+     * are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     *        included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     *        excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is
-     *        excluded from the index.
+     *        A list of regular expression patterns to include certain items in your Google Drive, including shared
+     *        drives and users' My Drives. Items that match the patterns are included in the index. Items that don't
+     *        match the patterns are excluded from the index. If an item matches both an inclusion and exclusion
+     *        pattern, the exclusion pattern takes precedence and the item isn't included in the index.
      */
 
     public void setInclusionPatterns(java.util.Collection<String> inclusionPatterns) {
@@ -193,10 +192,10 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     * included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is excluded
-     * from the index.
+     * A list of regular expression patterns to include certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are included in the index. Items that don't match the patterns
+     * are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -205,10 +204,10 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     *        included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     *        excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is
-     *        excluded from the index.
+     *        A list of regular expression patterns to include certain items in your Google Drive, including shared
+     *        drives and users' My Drives. Items that match the patterns are included in the index. Items that don't
+     *        match the patterns are excluded from the index. If an item matches both an inclusion and exclusion
+     *        pattern, the exclusion pattern takes precedence and the item isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,17 +223,17 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     * included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is excluded
-     * from the index.
+     * A list of regular expression patterns to include certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are included in the index. Items that don't match the patterns
+     * are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns that apply to path on Google Drive. Items that match the pattern are
-     *        included in the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     *        excluded from the index. If an item matches both an inclusion pattern and an exclusion pattern, it is
-     *        excluded from the index.
+     *        A list of regular expression patterns to include certain items in your Google Drive, including shared
+     *        drives and users' My Drives. Items that match the patterns are included in the index. Items that don't
+     *        match the patterns are excluded from the index. If an item matches both an inclusion and exclusion
+     *        pattern, the exclusion pattern takes precedence and the item isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,16 +244,16 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern are
-     * excluded from the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * included in the index. If an item matches both an exclusion pattern and an inclusion pattern, it is excluded from
-     * the index.
+     * A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are excluded from the index. Items that don't match the patterns
+     * are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * 
-     * @return A list of regular expression patterns that apply to the path on Google Drive. Items that match the
-     *         pattern are excluded from the index from both shared drives and users' My Drives. Items that don't match
-     *         the pattern are included in the index. If an item matches both an exclusion pattern and an inclusion
-     *         pattern, it is excluded from the index.
+     * @return A list of regular expression patterns to exclude certain items in your Google Drive, including shared
+     *         drives and users' My Drives. Items that match the patterns are excluded from the index. Items that don't
+     *         match the patterns are included in the index. If an item matches both an inclusion and exclusion pattern,
+     *         the exclusion pattern takes precedence and the item isn't included in the index.
      */
 
     public java.util.List<String> getExclusionPatterns() {
@@ -263,17 +262,17 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern are
-     * excluded from the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * included in the index. If an item matches both an exclusion pattern and an inclusion pattern, it is excluded from
-     * the index.
+     * A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are excluded from the index. Items that don't match the patterns
+     * are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern
-     *        are excluded from the index from both shared drives and users' My Drives. Items that don't match the
-     *        pattern are included in the index. If an item matches both an exclusion pattern and an inclusion pattern,
-     *        it is excluded from the index.
+     *        A list of regular expression patterns to exclude certain items in your Google Drive, including shared
+     *        drives and users' My Drives. Items that match the patterns are excluded from the index. Items that don't
+     *        match the patterns are included in the index. If an item matches both an inclusion and exclusion pattern,
+     *        the exclusion pattern takes precedence and the item isn't included in the index.
      */
 
     public void setExclusionPatterns(java.util.Collection<String> exclusionPatterns) {
@@ -287,10 +286,10 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern are
-     * excluded from the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * included in the index. If an item matches both an exclusion pattern and an inclusion pattern, it is excluded from
-     * the index.
+     * A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are excluded from the index. Items that don't match the patterns
+     * are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -299,10 +298,10 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern
-     *        are excluded from the index from both shared drives and users' My Drives. Items that don't match the
-     *        pattern are included in the index. If an item matches both an exclusion pattern and an inclusion pattern,
-     *        it is excluded from the index.
+     *        A list of regular expression patterns to exclude certain items in your Google Drive, including shared
+     *        drives and users' My Drives. Items that match the patterns are excluded from the index. Items that don't
+     *        match the patterns are included in the index. If an item matches both an inclusion and exclusion pattern,
+     *        the exclusion pattern takes precedence and the item isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,17 +317,17 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern are
-     * excluded from the index from both shared drives and users' My Drives. Items that don't match the pattern are
-     * included in the index. If an item matches both an exclusion pattern and an inclusion pattern, it is excluded from
-     * the index.
+     * A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and
+     * users' My Drives. Items that match the patterns are excluded from the index. Items that don't match the patterns
+     * are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the item isn't included in the index.
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns that apply to the path on Google Drive. Items that match the pattern
-     *        are excluded from the index from both shared drives and users' My Drives. Items that don't match the
-     *        pattern are included in the index. If an item matches both an exclusion pattern and an inclusion pattern,
-     *        it is excluded from the index.
+     *        A list of regular expression patterns to exclude certain items in your Google Drive, including shared
+     *        drives and users' My Drives. Items that match the patterns are excluded from the index. Items that don't
+     *        match the patterns are included in the index. If an item matches both an inclusion and exclusion pattern,
+     *        the exclusion pattern takes precedence and the item isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -339,17 +338,17 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Defines mapping between a field in the Google Drive and a Amazon Kendra index field.
-     * </p>
-     * <p>
-     * If you are using the console, you can define index fields when creating the mapping. If you are using the API,
-     * you must first create the field using the <code>UpdateIndex</code> API.
+     * Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Google
+     * Drive data source field names must exist in your Google Drive custom metadata.
      * </p>
      * 
-     * @return Defines mapping between a field in the Google Drive and a Amazon Kendra index field.</p>
-     *         <p>
-     *         If you are using the console, you can define index fields when creating the mapping. If you are using the
-     *         API, you must first create the field using the <code>UpdateIndex</code> API.
+     * @return Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create
+     *         custom fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more
+     *         information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *         source fields</a>. The Google Drive data source field names must exist in your Google Drive custom
+     *         metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -358,18 +357,18 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Defines mapping between a field in the Google Drive and a Amazon Kendra index field.
-     * </p>
-     * <p>
-     * If you are using the console, you can define index fields when creating the mapping. If you are using the API,
-     * you must first create the field using the <code>UpdateIndex</code> API.
+     * Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Google
+     * Drive data source field names must exist in your Google Drive custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        Defines mapping between a field in the Google Drive and a Amazon Kendra index field.</p>
-     *        <p>
-     *        If you are using the console, you can define index fields when creating the mapping. If you are using the
-     *        API, you must first create the field using the <code>UpdateIndex</code> API.
+     *        Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create
+     *        custom fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Google Drive data source field names must exist in your Google Drive custom
+     *        metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -383,11 +382,10 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Defines mapping between a field in the Google Drive and a Amazon Kendra index field.
-     * </p>
-     * <p>
-     * If you are using the console, you can define index fields when creating the mapping. If you are using the API,
-     * you must first create the field using the <code>UpdateIndex</code> API.
+     * Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Google
+     * Drive data source field names must exist in your Google Drive custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -396,10 +394,11 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param fieldMappings
-     *        Defines mapping between a field in the Google Drive and a Amazon Kendra index field.</p>
-     *        <p>
-     *        If you are using the console, you can define index fields when creating the mapping. If you are using the
-     *        API, you must first create the field using the <code>UpdateIndex</code> API.
+     *        Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create
+     *        custom fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Google Drive data source field names must exist in your Google Drive custom
+     *        metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -415,18 +414,18 @@ public class GoogleDriveConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Defines mapping between a field in the Google Drive and a Amazon Kendra index field.
-     * </p>
-     * <p>
-     * If you are using the console, you can define index fields when creating the mapping. If you are using the API,
-     * you must first create the field using the <code>UpdateIndex</code> API.
+     * Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Google
+     * Drive data source field names must exist in your Google Drive custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        Defines mapping between a field in the Google Drive and a Amazon Kendra index field.</p>
-     *        <p>
-     *        If you are using the console, you can define index fields when creating the mapping. If you are using the
-     *        API, you must first create the field using the <code>UpdateIndex</code> API.
+     *        Maps Google Drive data source attributes or field names to Amazon Kendra index field names. To create
+     *        custom fields, use the <code>UpdateIndex</code> API before you map to Google Drive fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Google Drive data source field names must exist in your Google Drive custom
+     *        metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

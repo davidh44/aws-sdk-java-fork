@@ -1,3 +1,20 @@
+# __1.12.178__ __2022-03-14__
+## __AWS Config__
+  - ### Features
+    - Add resourceType enums for AWS::ECR::PublicRepository and AWS::EC2::LaunchTemplate
+
+## __AWSKendraFrontendService__
+  - ### Features
+    - Amazon Kendra now provides a data source connector for Slack. For more information, see https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html
+
+## __Amazon ElastiCache__
+  - ### Features
+    - Doc only update for ElastiCache
+
+## __Amazon Timestream Query__
+  - ### Features
+    - Amazon Timestream Scheduled Queries now support Timestamp datatype in a multi-measure record.
+
 # __1.12.177__ __2022-03-11__
 ## __AWS Lambda__
   - ### Features

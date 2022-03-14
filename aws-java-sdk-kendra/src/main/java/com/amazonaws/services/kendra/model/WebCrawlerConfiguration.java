@@ -99,21 +99,17 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
     private Integer maxUrlsPerMinuteCrawlRate;
     /**
      * <p>
-     * The regular expression pattern to include certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included
+     * in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      */
     private java.util.List<String> urlInclusionPatterns;
     /**
      * <p>
-     * The regular expression pattern to exclude certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are excluded
+     * from the index. URLs that don't match the patterns are included in the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      */
     private java.util.List<String> urlExclusionPatterns;
@@ -581,17 +577,15 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to include certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included
+     * in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * 
-     * @return The regular expression pattern to include certain URLs to crawl.</p>
-     *         <p>
-     *         If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern,
-     *         the exclude pattern takes precedence.
+     * @return A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are
+     *         included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches
+     *         both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *         included in the index.
      */
 
     public java.util.List<String> getUrlInclusionPatterns() {
@@ -600,18 +594,16 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to include certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included
+     * in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * 
      * @param urlInclusionPatterns
-     *        The regular expression pattern to include certain URLs to crawl.</p>
-     *        <p>
-     *        If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern,
-     *        the exclude pattern takes precedence.
+     *        A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are
+     *        included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches
+     *        both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *        included in the index.
      */
 
     public void setUrlInclusionPatterns(java.util.Collection<String> urlInclusionPatterns) {
@@ -625,11 +617,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to include certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included
+     * in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -638,10 +628,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param urlInclusionPatterns
-     *        The regular expression pattern to include certain URLs to crawl.</p>
-     *        <p>
-     *        If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern,
-     *        the exclude pattern takes precedence.
+     *        A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are
+     *        included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches
+     *        both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *        included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -657,18 +647,16 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to include certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included
+     * in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * 
      * @param urlInclusionPatterns
-     *        The regular expression pattern to include certain URLs to crawl.</p>
-     *        <p>
-     *        If there is a regular expression pattern to exclude certain URLs that conflicts with the include pattern,
-     *        the exclude pattern takes precedence.
+     *        A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are
+     *        included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches
+     *        both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *        included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -679,17 +667,15 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to exclude certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are excluded
+     * from the index. URLs that don't match the patterns are included in the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * 
-     * @return The regular expression pattern to exclude certain URLs to crawl.</p>
-     *         <p>
-     *         If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern,
-     *         the exclude pattern takes precedence.
+     * @return A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are
+     *         excluded from the index. URLs that don't match the patterns are included in the index. If a URL matches
+     *         both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *         included in the index.
      */
 
     public java.util.List<String> getUrlExclusionPatterns() {
@@ -698,18 +684,16 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to exclude certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are excluded
+     * from the index. URLs that don't match the patterns are included in the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * 
      * @param urlExclusionPatterns
-     *        The regular expression pattern to exclude certain URLs to crawl.</p>
-     *        <p>
-     *        If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern,
-     *        the exclude pattern takes precedence.
+     *        A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are
+     *        excluded from the index. URLs that don't match the patterns are included in the index. If a URL matches
+     *        both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *        included in the index.
      */
 
     public void setUrlExclusionPatterns(java.util.Collection<String> urlExclusionPatterns) {
@@ -723,11 +707,9 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to exclude certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are excluded
+     * from the index. URLs that don't match the patterns are included in the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -736,10 +718,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param urlExclusionPatterns
-     *        The regular expression pattern to exclude certain URLs to crawl.</p>
-     *        <p>
-     *        If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern,
-     *        the exclude pattern takes precedence.
+     *        A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are
+     *        excluded from the index. URLs that don't match the patterns are included in the index. If a URL matches
+     *        both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *        included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -755,18 +737,16 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The regular expression pattern to exclude certain URLs to crawl.
-     * </p>
-     * <p>
-     * If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern, the
-     * exclude pattern takes precedence.
+     * A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are excluded
+     * from the index. URLs that don't match the patterns are included in the index. If a URL matches both an inclusion
+     * and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index.
      * </p>
      * 
      * @param urlExclusionPatterns
-     *        The regular expression pattern to exclude certain URLs to crawl.</p>
-     *        <p>
-     *        If there is a regular expression pattern to include certain URLs that conflicts with the exclude pattern,
-     *        the exclude pattern takes precedence.
+     *        A list of regular expression patterns to exclude certain URLs to crawl. URLs that match the patterns are
+     *        excluded from the index. URLs that don't match the patterns are included in the index. If a URL matches
+     *        both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't
+     *        included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

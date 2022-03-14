@@ -134,7 +134,9 @@ public enum ResourceType {
     AWSKinesisStreamConsumer("AWS::Kinesis::StreamConsumer"),
     AWSCodeDeployApplication("AWS::CodeDeploy::Application"),
     AWSCodeDeployDeploymentConfig("AWS::CodeDeploy::DeploymentConfig"),
-    AWSCodeDeployDeploymentGroup("AWS::CodeDeploy::DeploymentGroup");
+    AWSCodeDeployDeploymentGroup("AWS::CodeDeploy::DeploymentGroup"),
+    AWSEC2LaunchTemplate("AWS::EC2::LaunchTemplate"),
+    AWSECRPublicRepository("AWS::ECR::PublicRepository");
 
     private String value;
 

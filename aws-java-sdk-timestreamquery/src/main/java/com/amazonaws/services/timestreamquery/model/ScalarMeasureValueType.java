@@ -23,7 +23,8 @@ public enum ScalarMeasureValueType {
     BIGINT("BIGINT"),
     BOOLEAN("BOOLEAN"),
     DOUBLE("DOUBLE"),
-    VARCHAR("VARCHAR");
+    VARCHAR("VARCHAR"),
+    TIMESTAMP("TIMESTAMP");
 
     private String value;
 

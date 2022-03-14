@@ -36,9 +36,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
     private Boolean crawlAttachments;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are included in the index. Items that don't match the patterns are excluded from the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
@@ -47,9 +48,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
     private java.util.List<String> includeAttachmentFilePatterns;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are excluded from the index. Items that don't match the patterns are included in the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
@@ -70,8 +72,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
     private String documentTitleFieldName;
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields, use the
+     * <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -130,17 +134,19 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are included in the index. Items that don't match the patterns are excluded from the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *         Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *         exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     * @return A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item
+     *         that match the patterns are included in the index. Items that don't match the patterns are excluded from
+     *         the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the item isn't included in the index.</p>
      *         <p>
      *         The regex is applied to the file name of the attachment.
      */
@@ -151,18 +157,20 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are included in the index. Items that don't match the patterns are excluded from the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item
+     *        that match the patterns are included in the index. Items that don't match the patterns are excluded from
+     *        the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the item isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the file name of the attachment.
      */
@@ -178,9 +186,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are included in the index. Items that don't match the patterns are excluded from the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
@@ -192,9 +201,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item
+     *        that match the patterns are included in the index. Items that don't match the patterns are excluded from
+     *        the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the item isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the file name of the attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -212,18 +222,20 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are included in the index. Items that don't match the patterns are excluded from the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain attachments of catalogs in your ServiceNow. Item
+     *        that match the patterns are included in the index. Items that don't match the patterns are excluded from
+     *        the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the item isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the file name of the attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -236,17 +248,19 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are excluded from the index. Items that don't match the patterns are included in the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *         Documents that don't match the patterns are included in the index. If a document matches both an
-     *         exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     * @return A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item
+     *         that match the patterns are excluded from the index. Items that don't match the patterns are included in
+     *         the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the item isn't included in the index.</p>
      *         <p>
      *         The regex is applied to the file name of the attachment.
      */
@@ -257,18 +271,20 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are excluded from the index. Items that don't match the patterns are included in the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item
+     *        that match the patterns are excluded from the index. Items that don't match the patterns are included in
+     *        the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the item isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the file name of the attachment.
      */
@@ -284,9 +300,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are excluded from the index. Items that don't match the patterns are included in the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
@@ -298,9 +315,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item
+     *        that match the patterns are excluded from the index. Items that don't match the patterns are included in
+     *        the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the item isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the file name of the attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -318,18 +336,20 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item that
+     * match the patterns are excluded from the index. Items that don't match the patterns are included in the index. If
+     * an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the file name of the attachment.
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain attachments of catalogs in your ServiceNow. Item
+     *        that match the patterns are excluded from the index. Items that don't match the patterns are included in
+     *        the index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the item isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the file name of the attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -425,12 +445,16 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields, use the
+     * <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * 
-     * @return Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *         you map the field.
+     * @return Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields,
+     *         use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
+     *         The ServiceNow data source field names must exist in your ServiceNow custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -439,13 +463,17 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields, use the
+     * <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *        you map the field.
+     *        Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields,
+     *        use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        ServiceNow data source field names must exist in your ServiceNow custom metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -459,8 +487,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields, use the
+     * <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -469,8 +499,10 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
      * </p>
      * 
      * @param fieldMappings
-     *        Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *        you map the field.
+     *        Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields,
+     *        use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -486,13 +518,17 @@ public class ServiceNowServiceCatalogConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields, use the
+     * <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *        you map the field.
+     *        Maps attributes or field names of catalogs to Amazon Kendra index field names. To create custom fields,
+     *        use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

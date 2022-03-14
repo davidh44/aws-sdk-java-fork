@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the attachment settings for the Confluence data source. Attachment settings are optional, if you don't
+ * Configuration of attachment settings for the Confluence data source. Attachment settings are optional, if you don't
  * specify settings attachments, Amazon Kendra won't index them.
  * </p>
  * 
@@ -37,8 +37,10 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
     private Boolean crawlAttachments;
     /**
      * <p>
-     * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
+     * Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Confluence data source field names must exist in your Confluence custom metadata.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -100,16 +102,20 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
+     * Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Confluence data source field names must exist in your Confluence custom metadata.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
      * </p>
      * 
-     * @return Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
-     *         must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *         API.</p>
+     * @return Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create
+     *         custom fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more
+     *         information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *         source fields</a>. The Confluence data source field names must exist in your Confluence custom
+     *         metadata.</p>
      *         <p>
      *         If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *         mapping.
@@ -121,17 +127,21 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
+     * Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Confluence data source field names must exist in your Confluence custom metadata.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
-     *        must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        API.</p>
+     *        Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create
+     *        custom fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Confluence data source field names must exist in your Confluence custom
+     *        metadata.</p>
      *        <p>
      *        If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *        mapping.
@@ -148,8 +158,10 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
+     * Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Confluence data source field names must exist in your Confluence custom metadata.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -161,9 +173,11 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
-     *        must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        API.</p>
+     *        Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create
+     *        custom fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Confluence data source field names must exist in your Confluence custom
+     *        metadata.</p>
      *        <p>
      *        If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *        mapping.
@@ -182,17 +196,21 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
+     * Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Confluence data source field names must exist in your Confluence custom metadata.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
-     *        must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        API.</p>
+     *        Maps attributes or field names of Confluence attachments to Amazon Kendra index field names. To create
+     *        custom fields, use the <code>UpdateIndex</code> API before you map to Confluence fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Confluence data source field names must exist in your Confluence custom
+     *        metadata.</p>
      *        <p>
      *        If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *        mapping.

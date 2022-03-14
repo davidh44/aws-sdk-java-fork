@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information for connecting to a Salesforce data source.
+ * Provides the configuration information to connect to Salesforce as your data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SalesforceConfiguration" target="_top">AWS API
@@ -75,21 +75,21 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
     private String secretArn;
     /**
      * <p>
-     * Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     * Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * </p>
      */
     private java.util.List<SalesforceStandardObjectConfiguration> standardObjectConfigurations;
     /**
      * <p>
-     * Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
-     * indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
+     * Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra indexes
+     * standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
      * knowledge articles, but not both.
      * </p>
      */
     private SalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
     /**
      * <p>
-     * Specifies configuration information for Salesforce chatter feeds.
+     * Configuration information for Salesforce chatter feeds.
      * </p>
      */
     private SalesforceChatterFeedConfiguration chatterFeedConfiguration;
@@ -107,23 +107,25 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
     private SalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your Salesforce. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      */
     private java.util.List<String> includeAttachmentFilePatterns;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      */
     private java.util.List<String> excludeAttachmentFilePatterns;
@@ -406,10 +408,10 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     * Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * </p>
      * 
-     * @return Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     * @return Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      */
 
     public java.util.List<SalesforceStandardObjectConfiguration> getStandardObjectConfigurations() {
@@ -418,11 +420,11 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     * Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * </p>
      * 
      * @param standardObjectConfigurations
-     *        Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     *        Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      */
 
     public void setStandardObjectConfigurations(java.util.Collection<SalesforceStandardObjectConfiguration> standardObjectConfigurations) {
@@ -436,7 +438,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     * Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -445,7 +447,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param standardObjectConfigurations
-     *        Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     *        Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -461,11 +463,11 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     * Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * </p>
      * 
      * @param standardObjectConfigurations
-     *        Specifies the Salesforce standard objects that Amazon Kendra indexes.
+     *        Configuration of the Salesforce standard objects that Amazon Kendra indexes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -476,15 +478,15 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
-     * indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
+     * Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra indexes
+     * standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
      * knowledge articles, but not both.
      * </p>
      * 
      * @param knowledgeArticleConfiguration
-     *        Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon
-     *        Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom
-     *        fields of custom knowledge articles, but not both.
+     *        Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
+     *        indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of
+     *        custom knowledge articles, but not both.
      */
 
     public void setKnowledgeArticleConfiguration(SalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
@@ -493,14 +495,14 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
-     * indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
+     * Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra indexes
+     * standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
      * knowledge articles, but not both.
      * </p>
      * 
-     * @return Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon
-     *         Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom
-     *         fields of custom knowledge articles, but not both.
+     * @return Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
+     *         indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields
+     *         of custom knowledge articles, but not both.
      */
 
     public SalesforceKnowledgeArticleConfiguration getKnowledgeArticleConfiguration() {
@@ -509,15 +511,15 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
-     * indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
+     * Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra indexes
+     * standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
      * knowledge articles, but not both.
      * </p>
      * 
      * @param knowledgeArticleConfiguration
-     *        Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon
-     *        Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom
-     *        fields of custom knowledge articles, but not both.
+     *        Configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
+     *        indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of
+     *        custom knowledge articles, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -528,11 +530,11 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for Salesforce chatter feeds.
+     * Configuration information for Salesforce chatter feeds.
      * </p>
      * 
      * @param chatterFeedConfiguration
-     *        Specifies configuration information for Salesforce chatter feeds.
+     *        Configuration information for Salesforce chatter feeds.
      */
 
     public void setChatterFeedConfiguration(SalesforceChatterFeedConfiguration chatterFeedConfiguration) {
@@ -541,10 +543,10 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for Salesforce chatter feeds.
+     * Configuration information for Salesforce chatter feeds.
      * </p>
      * 
-     * @return Specifies configuration information for Salesforce chatter feeds.
+     * @return Configuration information for Salesforce chatter feeds.
      */
 
     public SalesforceChatterFeedConfiguration getChatterFeedConfiguration() {
@@ -553,11 +555,11 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for Salesforce chatter feeds.
+     * Configuration information for Salesforce chatter feeds.
      * </p>
      * 
      * @param chatterFeedConfiguration
-     *        Specifies configuration information for Salesforce chatter feeds.
+     *        Configuration information for Salesforce chatter feeds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -661,19 +663,21 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your Salesforce. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *         Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *         inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     * @return A list of regular expression patterns to include certain documents in your Salesforce. Documents that
+     *         match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *         the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the document isn't included in the index.</p>
      *         <p>
-     *         The regex is applied to the name of the attached file.
+     *         The pattern is applied to the name of the attached file.
      */
 
     public java.util.List<String> getIncludeAttachmentFilePatterns() {
@@ -682,20 +686,22 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your Salesforce. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain documents in your Salesforce. Documents that
+     *        match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the name of the attached file.
+     *        The pattern is applied to the name of the attached file.
      */
 
     public void setIncludeAttachmentFilePatterns(java.util.Collection<String> includeAttachmentFilePatterns) {
@@ -709,12 +715,13 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your Salesforce. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -723,11 +730,12 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain documents in your Salesforce. Documents that
+     *        match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the name of the attached file.
+     *        The pattern is applied to the name of the attached file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -743,20 +751,22 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your Salesforce. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain documents in your Salesforce. Documents that
+     *        match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the name of the attached file.
+     *        The pattern is applied to the name of the attached file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -767,19 +777,21 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *         Documents that don't match the patterns are included in the index. If a document matches both an
-     *         exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     * @return A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that
+     *         match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *         the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the document isn't included in the index.</p>
      *         <p>
-     *         The regex is applied to the name of the attached file.
+     *         The pattern is applied to the name of the attached file.
      */
 
     public java.util.List<String> getExcludeAttachmentFilePatterns() {
@@ -788,20 +800,22 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that
+     *        match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the name of the attached file.
+     *        The pattern is applied to the name of the attached file.
      */
 
     public void setExcludeAttachmentFilePatterns(java.util.Collection<String> excludeAttachmentFilePatterns) {
@@ -815,12 +829,13 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -829,11 +844,12 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that
+     *        match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the name of the attached file.
+     *        The pattern is applied to the name of the attached file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -849,20 +865,22 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the name of the attached file.
+     * The pattern is applied to the name of the attached file.
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain documents in your Salesforce. Documents that
+     *        match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the name of the attached file.
+     *        The pattern is applied to the name of the attached file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

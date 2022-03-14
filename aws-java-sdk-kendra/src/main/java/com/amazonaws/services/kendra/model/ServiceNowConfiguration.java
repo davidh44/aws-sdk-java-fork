@@ -31,7 +31,7 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The ServiceNow instance that the data source connects to. The host endpoint should look like the following:
-     * <code>{instance}.service-now.com.</code>
+     * <i>{instance}.service-now.com.</i>
      * </p>
      */
     private String hostUrl;
@@ -63,11 +63,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
     private ServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
     /**
      * <p>
-     * Determines the type of authentication used to connect to the ServiceNow instance. If you choose
-     * <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the Secrets
-     * Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is
-     * authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the user name and
-     * password are used to determine which information Amazon Kendra has access to.
+     * The type of authentication used to connect to the ServiceNow instance. If you choose <code>HTTP_BASIC</code>,
+     * Amazon Kendra is authenticated using the user name and password provided in the Secrets Manager secret in the
+     * <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is authenticated using the OAuth
+     * token and secret provided in the Secrets Manager secret, and the user name and password are used to determine
+     * which information Amazon Kendra has access to.
      * </p>
      * <p>
      * When you use <code>OAUTH2</code> authentication, you must generate a token and a client secret using the
@@ -81,12 +81,12 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The ServiceNow instance that the data source connects to. The host endpoint should look like the following:
-     * <code>{instance}.service-now.com.</code>
+     * <i>{instance}.service-now.com.</i>
      * </p>
      * 
      * @param hostUrl
      *        The ServiceNow instance that the data source connects to. The host endpoint should look like the
-     *        following: <code>{instance}.service-now.com.</code>
+     *        following: <i>{instance}.service-now.com.</i>
      */
 
     public void setHostUrl(String hostUrl) {
@@ -96,11 +96,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The ServiceNow instance that the data source connects to. The host endpoint should look like the following:
-     * <code>{instance}.service-now.com.</code>
+     * <i>{instance}.service-now.com.</i>
      * </p>
      * 
      * @return The ServiceNow instance that the data source connects to. The host endpoint should look like the
-     *         following: <code>{instance}.service-now.com.</code>
+     *         following: <i>{instance}.service-now.com.</i>
      */
 
     public String getHostUrl() {
@@ -110,12 +110,12 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The ServiceNow instance that the data source connects to. The host endpoint should look like the following:
-     * <code>{instance}.service-now.com.</code>
+     * <i>{instance}.service-now.com.</i>
      * </p>
      * 
      * @param hostUrl
      *        The ServiceNow instance that the data source connects to. The host endpoint should look like the
-     *        following: <code>{instance}.service-now.com.</code>
+     *        following: <i>{instance}.service-now.com.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -319,11 +319,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Determines the type of authentication used to connect to the ServiceNow instance. If you choose
-     * <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the Secrets
-     * Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is
-     * authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the user name and
-     * password are used to determine which information Amazon Kendra has access to.
+     * The type of authentication used to connect to the ServiceNow instance. If you choose <code>HTTP_BASIC</code>,
+     * Amazon Kendra is authenticated using the user name and password provided in the Secrets Manager secret in the
+     * <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is authenticated using the OAuth
+     * token and secret provided in the Secrets Manager secret, and the user name and password are used to determine
+     * which information Amazon Kendra has access to.
      * </p>
      * <p>
      * When you use <code>OAUTH2</code> authentication, you must generate a token and a client secret using the
@@ -333,7 +333,7 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param authenticationType
-     *        Determines the type of authentication used to connect to the ServiceNow instance. If you choose
+     *        The type of authentication used to connect to the ServiceNow instance. If you choose
      *        <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the
      *        Secrets Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon
      *        Kendra is authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the
@@ -352,11 +352,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Determines the type of authentication used to connect to the ServiceNow instance. If you choose
-     * <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the Secrets
-     * Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is
-     * authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the user name and
-     * password are used to determine which information Amazon Kendra has access to.
+     * The type of authentication used to connect to the ServiceNow instance. If you choose <code>HTTP_BASIC</code>,
+     * Amazon Kendra is authenticated using the user name and password provided in the Secrets Manager secret in the
+     * <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is authenticated using the OAuth
+     * token and secret provided in the Secrets Manager secret, and the user name and password are used to determine
+     * which information Amazon Kendra has access to.
      * </p>
      * <p>
      * When you use <code>OAUTH2</code> authentication, you must generate a token and a client secret using the
@@ -365,7 +365,7 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
      * source</a>.
      * </p>
      * 
-     * @return Determines the type of authentication used to connect to the ServiceNow instance. If you choose
+     * @return The type of authentication used to connect to the ServiceNow instance. If you choose
      *         <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the
      *         Secrets Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon
      *         Kendra is authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the
@@ -384,11 +384,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Determines the type of authentication used to connect to the ServiceNow instance. If you choose
-     * <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the Secrets
-     * Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is
-     * authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the user name and
-     * password are used to determine which information Amazon Kendra has access to.
+     * The type of authentication used to connect to the ServiceNow instance. If you choose <code>HTTP_BASIC</code>,
+     * Amazon Kendra is authenticated using the user name and password provided in the Secrets Manager secret in the
+     * <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is authenticated using the OAuth
+     * token and secret provided in the Secrets Manager secret, and the user name and password are used to determine
+     * which information Amazon Kendra has access to.
      * </p>
      * <p>
      * When you use <code>OAUTH2</code> authentication, you must generate a token and a client secret using the
@@ -398,7 +398,7 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param authenticationType
-     *        Determines the type of authentication used to connect to the ServiceNow instance. If you choose
+     *        The type of authentication used to connect to the ServiceNow instance. If you choose
      *        <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the
      *        Secrets Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon
      *        Kendra is authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the
@@ -419,11 +419,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Determines the type of authentication used to connect to the ServiceNow instance. If you choose
-     * <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the Secrets
-     * Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is
-     * authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the user name and
-     * password are used to determine which information Amazon Kendra has access to.
+     * The type of authentication used to connect to the ServiceNow instance. If you choose <code>HTTP_BASIC</code>,
+     * Amazon Kendra is authenticated using the user name and password provided in the Secrets Manager secret in the
+     * <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon Kendra is authenticated using the OAuth
+     * token and secret provided in the Secrets Manager secret, and the user name and password are used to determine
+     * which information Amazon Kendra has access to.
      * </p>
      * <p>
      * When you use <code>OAUTH2</code> authentication, you must generate a token and a client secret using the
@@ -433,7 +433,7 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param authenticationType
-     *        Determines the type of authentication used to connect to the ServiceNow instance. If you choose
+     *        The type of authentication used to connect to the ServiceNow instance. If you choose
      *        <code>HTTP_BASIC</code>, Amazon Kendra is authenticated using the user name and password provided in the
      *        Secrets Manager secret in the <code>SecretArn</code> field. When you choose <code>OAUTH2</code>, Amazon
      *        Kendra is authenticated using the OAuth token and secret provided in the Secrets Manager secret, and the

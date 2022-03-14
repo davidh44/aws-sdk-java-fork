@@ -31,25 +31,25 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The URL of your Confluence instance. Use the full URL of the server. For example,
-     * <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     * <code>https://192.168.1.113/</code>.
+     * <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     * <i>https://192.168.1.113/</i>.
      * </p>
      */
     private String serverUrl;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to connect
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
      * to your Confluence server. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username - The user name or email address of a user with administrative privileges for the Confluence server.
+     * username—The user name or email address of a user with administrative privileges for the Confluence server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * password - The password associated with the user logging in to the Confluence server.
+     * password—The password associated with the user logging in to the Confluence server.
      * </p>
      * </li>
      * </ul>
@@ -63,49 +63,51 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     private String version;
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence spaces.
+     * Configuration information for indexing Confluence spaces.
      * </p>
      */
     private ConfluenceSpaceConfiguration spaceConfiguration;
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence pages.
+     * Configuration information for indexing Confluence pages.
      * </p>
      */
     private ConfluencePageConfiguration pageConfiguration;
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence blogs.
+     * Configuration information for indexing Confluence blogs.
      * </p>
      */
     private ConfluenceBlogConfiguration blogConfiguration;
     /**
      * <p>
-     * Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     * Configuration information for indexing attachments to Confluence blogs and pages.
      * </p>
      */
     private ConfluenceAttachmentConfiguration attachmentConfiguration;
     /**
      * <p>
-     * Specifies the information for connecting to an Amazon VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      */
     private DataSourceVpcConfiguration vpcConfiguration;
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in the index.
-     * Items that don't match the pattern are excluded from the index. If an item matches both an inclusion pattern and
-     * an exclusion pattern, the item isn't included in the index.
+     * A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are included in the index. Content that doesn't match the patterns
+     * is excluded from the index. If content matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the content isn't included in the index.
      * </p>
      */
     private java.util.List<String> inclusionPatterns;
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded from the
-     * index. Items that don't match the pattern are included in the index. If a item matches both an exclusion pattern
-     * and an inclusion pattern, the item isn't included in the index.
+     * &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match the
+     * patterns is included in the index. If content matches both an inclusion and exclusion pattern, the exclusion
+     * pattern takes precedence and the content isn't included in the index.
      * </p>
      */
     private java.util.List<String> exclusionPatterns;
@@ -113,14 +115,14 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The URL of your Confluence instance. Use the full URL of the server. For example,
-     * <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     * <code>https://192.168.1.113/</code>.
+     * <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     * <i>https://192.168.1.113/</i>.
      * </p>
      * 
      * @param serverUrl
      *        The URL of your Confluence instance. Use the full URL of the server. For example,
-     *        <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     *        <code>https://192.168.1.113/</code>.
+     *        <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     *        <i>https://192.168.1.113/</i>.
      */
 
     public void setServerUrl(String serverUrl) {
@@ -130,13 +132,13 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The URL of your Confluence instance. Use the full URL of the server. For example,
-     * <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     * <code>https://192.168.1.113/</code>.
+     * <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     * <i>https://192.168.1.113/</i>.
      * </p>
      * 
      * @return The URL of your Confluence instance. Use the full URL of the server. For example,
-     *         <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     *         <code>https://192.168.1.113/</code>.
+     *         <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     *         <i>https://192.168.1.113/</i>.
      */
 
     public String getServerUrl() {
@@ -146,14 +148,14 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The URL of your Confluence instance. Use the full URL of the server. For example,
-     * <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     * <code>https://192.168.1.113/</code>.
+     * <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     * <i>https://192.168.1.113/</i>.
      * </p>
      * 
      * @param serverUrl
      *        The URL of your Confluence instance. Use the full URL of the server. For example,
-     *        <code>https://server.example.com:port/</code>. You can also use an IP address, for example,
-     *        <code>https://192.168.1.113/</code>.
+     *        <i>https://server.example.com:port/</i>. You can also use an IP address, for example,
+     *        <i>https://192.168.1.113/</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,35 +166,35 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to connect
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
      * to your Confluence server. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username - The user name or email address of a user with administrative privileges for the Confluence server.
+     * username—The user name or email address of a user with administrative privileges for the Confluence server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * password - The password associated with the user logging in to the Confluence server.
+     * password—The password associated with the user logging in to the Confluence server.
      * </p>
      * </li>
      * </ul>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to
+     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to
      *        connect to your Confluence server. The secret must contain a JSON structure with the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        username - The user name or email address of a user with administrative privileges for the Confluence
+     *        username—The user name or email address of a user with administrative privileges for the Confluence
      *        server.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        password - The password associated with the user logging in to the Confluence server.
+     *        password—The password associated with the user logging in to the Confluence server.
      *        </p>
      *        </li>
      */
@@ -203,34 +205,34 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to connect
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
      * to your Confluence server. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username - The user name or email address of a user with administrative privileges for the Confluence server.
+     * username—The user name or email address of a user with administrative privileges for the Confluence server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * password - The password associated with the user logging in to the Confluence server.
+     * password—The password associated with the user logging in to the Confluence server.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to
+     * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to
      *         connect to your Confluence server. The secret must contain a JSON structure with the following keys:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         username - The user name or email address of a user with administrative privileges for the Confluence
+     *         username—The user name or email address of a user with administrative privileges for the Confluence
      *         server.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         password - The password associated with the user logging in to the Confluence server.
+     *         password—The password associated with the user logging in to the Confluence server.
      *         </p>
      *         </li>
      */
@@ -241,35 +243,35 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to connect
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
      * to your Confluence server. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username - The user name or email address of a user with administrative privileges for the Confluence server.
+     * username—The user name or email address of a user with administrative privileges for the Confluence server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * password - The password associated with the user logging in to the Confluence server.
+     * password—The password associated with the user logging in to the Confluence server.
      * </p>
      * </li>
      * </ul>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key/value pairs required to
+     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to
      *        connect to your Confluence server. The secret must contain a JSON structure with the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        username - The user name or email address of a user with administrative privileges for the Confluence
+     *        username—The user name or email address of a user with administrative privileges for the Confluence
      *        server.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        password - The password associated with the user logging in to the Confluence server.
+     *        password—The password associated with the user logging in to the Confluence server.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -341,11 +343,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence spaces.
+     * Configuration information for indexing Confluence spaces.
      * </p>
      * 
      * @param spaceConfiguration
-     *        Specifies configuration information for indexing Confluence spaces.
+     *        Configuration information for indexing Confluence spaces.
      */
 
     public void setSpaceConfiguration(ConfluenceSpaceConfiguration spaceConfiguration) {
@@ -354,10 +356,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence spaces.
+     * Configuration information for indexing Confluence spaces.
      * </p>
      * 
-     * @return Specifies configuration information for indexing Confluence spaces.
+     * @return Configuration information for indexing Confluence spaces.
      */
 
     public ConfluenceSpaceConfiguration getSpaceConfiguration() {
@@ -366,11 +368,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence spaces.
+     * Configuration information for indexing Confluence spaces.
      * </p>
      * 
      * @param spaceConfiguration
-     *        Specifies configuration information for indexing Confluence spaces.
+     *        Configuration information for indexing Confluence spaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -381,11 +383,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence pages.
+     * Configuration information for indexing Confluence pages.
      * </p>
      * 
      * @param pageConfiguration
-     *        Specifies configuration information for indexing Confluence pages.
+     *        Configuration information for indexing Confluence pages.
      */
 
     public void setPageConfiguration(ConfluencePageConfiguration pageConfiguration) {
@@ -394,10 +396,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence pages.
+     * Configuration information for indexing Confluence pages.
      * </p>
      * 
-     * @return Specifies configuration information for indexing Confluence pages.
+     * @return Configuration information for indexing Confluence pages.
      */
 
     public ConfluencePageConfiguration getPageConfiguration() {
@@ -406,11 +408,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence pages.
+     * Configuration information for indexing Confluence pages.
      * </p>
      * 
      * @param pageConfiguration
-     *        Specifies configuration information for indexing Confluence pages.
+     *        Configuration information for indexing Confluence pages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -421,11 +423,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence blogs.
+     * Configuration information for indexing Confluence blogs.
      * </p>
      * 
      * @param blogConfiguration
-     *        Specifies configuration information for indexing Confluence blogs.
+     *        Configuration information for indexing Confluence blogs.
      */
 
     public void setBlogConfiguration(ConfluenceBlogConfiguration blogConfiguration) {
@@ -434,10 +436,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence blogs.
+     * Configuration information for indexing Confluence blogs.
      * </p>
      * 
-     * @return Specifies configuration information for indexing Confluence blogs.
+     * @return Configuration information for indexing Confluence blogs.
      */
 
     public ConfluenceBlogConfiguration getBlogConfiguration() {
@@ -446,11 +448,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing Confluence blogs.
+     * Configuration information for indexing Confluence blogs.
      * </p>
      * 
      * @param blogConfiguration
-     *        Specifies configuration information for indexing Confluence blogs.
+     *        Configuration information for indexing Confluence blogs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -461,11 +463,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     * Configuration information for indexing attachments to Confluence blogs and pages.
      * </p>
      * 
      * @param attachmentConfiguration
-     *        Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     *        Configuration information for indexing attachments to Confluence blogs and pages.
      */
 
     public void setAttachmentConfiguration(ConfluenceAttachmentConfiguration attachmentConfiguration) {
@@ -474,10 +476,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     * Configuration information for indexing attachments to Confluence blogs and pages.
      * </p>
      * 
-     * @return Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     * @return Configuration information for indexing attachments to Confluence blogs and pages.
      */
 
     public ConfluenceAttachmentConfiguration getAttachmentConfiguration() {
@@ -486,11 +488,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     * Configuration information for indexing attachments to Confluence blogs and pages.
      * </p>
      * 
      * @param attachmentConfiguration
-     *        Specifies configuration information for indexing attachments to Confluence blogs and pages.
+     *        Configuration information for indexing attachments to Confluence blogs and pages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -501,11 +503,15 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the information for connecting to an Amazon VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Specifies the information for connecting to an Amazon VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -514,10 +520,14 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the information for connecting to an Amazon VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      * 
-     * @return Specifies the information for connecting to an Amazon VPC.
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -526,11 +536,15 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Specifies the information for connecting to an Amazon VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Specifies the information for connecting to an Amazon VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Confluence. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -541,16 +555,16 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in the index.
-     * Items that don't match the pattern are excluded from the index. If an item matches both an inclusion pattern and
-     * an exclusion pattern, the item isn't included in the index.
+     * A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are included in the index. Content that doesn't match the patterns
+     * is excluded from the index. If content matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the content isn't included in the index.
      * </p>
      * 
-     * @return A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern
-     *         can apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included
-     *         in the index. Items that don't match the pattern are excluded from the index. If an item matches both an
-     *         inclusion pattern and an exclusion pattern, the item isn't included in the index.
+     * @return A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in
+     *         your Confluence. Content that matches the patterns are included in the index. Content that doesn't match
+     *         the patterns is excluded from the index. If content matches both an inclusion and exclusion pattern, the
+     *         exclusion pattern takes precedence and the content isn't included in the index.
      */
 
     public java.util.List<String> getInclusionPatterns() {
@@ -559,17 +573,17 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in the index.
-     * Items that don't match the pattern are excluded from the index. If an item matches both an inclusion pattern and
-     * an exclusion pattern, the item isn't included in the index.
+     * A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are included in the index. Content that doesn't match the patterns
+     * is excluded from the index. If content matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the content isn't included in the index.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern
-     *        can apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in
-     *        the index. Items that don't match the pattern are excluded from the index. If an item matches both an
-     *        inclusion pattern and an exclusion pattern, the item isn't included in the index.
+     *        A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     *        Confluence. Content that matches the patterns are included in the index. Content that doesn't match the
+     *        patterns is excluded from the index. If content matches both an inclusion and exclusion pattern, the
+     *        exclusion pattern takes precedence and the content isn't included in the index.
      */
 
     public void setInclusionPatterns(java.util.Collection<String> inclusionPatterns) {
@@ -583,10 +597,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in the index.
-     * Items that don't match the pattern are excluded from the index. If an item matches both an inclusion pattern and
-     * an exclusion pattern, the item isn't included in the index.
+     * A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are included in the index. Content that doesn't match the patterns
+     * is excluded from the index. If content matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the content isn't included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -595,10 +609,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern
-     *        can apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in
-     *        the index. Items that don't match the pattern are excluded from the index. If an item matches both an
-     *        inclusion pattern and an exclusion pattern, the item isn't included in the index.
+     *        A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     *        Confluence. Content that matches the patterns are included in the index. Content that doesn't match the
+     *        patterns is excluded from the index. If content matches both an inclusion and exclusion pattern, the
+     *        exclusion pattern takes precedence and the content isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -614,17 +628,17 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in the index.
-     * Items that don't match the pattern are excluded from the index. If an item matches both an inclusion pattern and
-     * an exclusion pattern, the item isn't included in the index.
+     * A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are included in the index. Content that doesn't match the patterns
+     * is excluded from the index. If content matches both an inclusion and exclusion pattern, the exclusion pattern
+     * takes precedence and the content isn't included in the index.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns that apply to a URL on the Confluence server. An inclusion pattern
-     *        can apply to a blog post, a page, a space, or an attachment. Items that match the patterns are included in
-     *        the index. Items that don't match the pattern are excluded from the index. If an item matches both an
-     *        inclusion pattern and an exclusion pattern, the item isn't included in the index.
+     *        A list of regular expression patterns to include certain blog posts, pages, spaces, or attachments in your
+     *        Confluence. Content that matches the patterns are included in the index. Content that doesn't match the
+     *        patterns is excluded from the index. If content matches both an inclusion and exclusion pattern, the
+     *        exclusion pattern takes precedence and the content isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -635,16 +649,16 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded from the
-     * index. Items that don't match the pattern are included in the index. If a item matches both an exclusion pattern
-     * and an inclusion pattern, the item isn't included in the index.
+     * &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match the
+     * patterns is included in the index. If content matches both an inclusion and exclusion pattern, the exclusion
+     * pattern takes precedence and the content isn't included in the index.
      * </p>
      * 
-     * @return A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern
-     *         can apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded
-     *         from the index. Items that don't match the pattern are included in the index. If a item matches both an
-     *         exclusion pattern and an inclusion pattern, the item isn't included in the index.
+     * @return &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in
+     *         your Confluence. Content that matches the patterns are excluded from the index. Content that doesn't
+     *         match the patterns is included in the index. If content matches both an inclusion and exclusion pattern,
+     *         the exclusion pattern takes precedence and the content isn't included in the index.
      */
 
     public java.util.List<String> getExclusionPatterns() {
@@ -653,17 +667,17 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded from the
-     * index. Items that don't match the pattern are included in the index. If a item matches both an exclusion pattern
-     * and an inclusion pattern, the item isn't included in the index.
+     * &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match the
+     * patterns is included in the index. If content matches both an inclusion and exclusion pattern, the exclusion
+     * pattern takes precedence and the content isn't included in the index.
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern
-     *        can apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded
-     *        from the index. Items that don't match the pattern are included in the index. If a item matches both an
-     *        exclusion pattern and an inclusion pattern, the item isn't included in the index.
+     *        &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in
+     *        your Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match
+     *        the patterns is included in the index. If content matches both an inclusion and exclusion pattern, the
+     *        exclusion pattern takes precedence and the content isn't included in the index.
      */
 
     public void setExclusionPatterns(java.util.Collection<String> exclusionPatterns) {
@@ -677,10 +691,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded from the
-     * index. Items that don't match the pattern are included in the index. If a item matches both an exclusion pattern
-     * and an inclusion pattern, the item isn't included in the index.
+     * &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match the
+     * patterns is included in the index. If content matches both an inclusion and exclusion pattern, the exclusion
+     * pattern takes precedence and the content isn't included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -689,10 +703,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern
-     *        can apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded
-     *        from the index. Items that don't match the pattern are included in the index. If a item matches both an
-     *        exclusion pattern and an inclusion pattern, the item isn't included in the index.
+     *        &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in
+     *        your Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match
+     *        the patterns is included in the index. If content matches both an inclusion and exclusion pattern, the
+     *        exclusion pattern takes precedence and the content isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -708,17 +722,17 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern can
-     * apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded from the
-     * index. Items that don't match the pattern are included in the index. If a item matches both an exclusion pattern
-     * and an inclusion pattern, the item isn't included in the index.
+     * &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in your
+     * Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match the
+     * patterns is included in the index. If content matches both an inclusion and exclusion pattern, the exclusion
+     * pattern takes precedence and the content isn't included in the index.
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns that apply to a URL on the Confluence server. An exclusion pattern
-     *        can apply to a blog post, a page, a space, or an attachment. Items that match the pattern are excluded
-     *        from the index. Items that don't match the pattern are included in the index. If a item matches both an
-     *        exclusion pattern and an inclusion pattern, the item isn't included in the index.
+     *        &gt;A list of regular expression patterns to exclude certain blog posts, pages, spaces, or attachments in
+     *        your Confluence. Content that matches the patterns are excluded from the index. Content that doesn't match
+     *        the patterns is included in the index. If content matches both an inclusion and exclusion pattern, the
+     *        exclusion pattern takes precedence and the content isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information for indexing Salesforce custom articles.
+ * Provides the configuration information for indexing Salesforce custom articles.
  * </p>
  * 
  * @see <a
@@ -49,7 +49,10 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration implements Serial
     private String documentTitleFieldName;
     /**
      * <p>
-     * One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     * Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To create
+     * custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -176,10 +179,16 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration implements Serial
 
     /**
      * <p>
-     * One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     * Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To create
+     * custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * 
-     * @return One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     * @return Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To
+     *         create custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more
+     *         information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *         source fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -188,11 +197,17 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration implements Serial
 
     /**
      * <p>
-     * One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     * Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To create
+     * custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     *        Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To
+     *        create custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -206,7 +221,10 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration implements Serial
 
     /**
      * <p>
-     * One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     * Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To create
+     * custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -215,7 +233,10 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration implements Serial
      * </p>
      * 
      * @param fieldMappings
-     *        One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     *        Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To
+     *        create custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -231,11 +252,17 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration implements Serial
 
     /**
      * <p>
-     * One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     * Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To create
+     * custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        One or more objects that map fields in the custom knowledge article to fields in the Amazon Kendra index.
+     *        Maps attributes or field names of the custom knowledge article to Amazon Kendra index field names. To
+     *        create custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *        source fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,7 +31,8 @@ public enum DataSourceType {
     GOOGLEDRIVE("GOOGLEDRIVE"),
     WEBCRAWLER("WEBCRAWLER"),
     WORKDOCS("WORKDOCS"),
-    FSX("FSX");
+    FSX("FSX"),
+    SLACK("SLACK");
 
     private String value;
 

@@ -16759,6 +16759,9 @@
       }, {
         "name" : "VARCHAR",
         "value" : "VARCHAR"
+      }, {
+        "name" : "TIMESTAMP",
+        "value" : "TIMESTAMP"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.timestreamquery.enum.ScalarMeasureValueType",

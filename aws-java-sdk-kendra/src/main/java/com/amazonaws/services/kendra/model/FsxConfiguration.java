@@ -48,7 +48,7 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     private String fileSystemType;
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon FSx
      * instance must reside inside your VPC.
      * </p>
      */
@@ -80,17 +80,17 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that match
      * the patterns are included in the index. Files that don't match the patterns are excluded from the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      */
     private java.util.List<String> inclusionPatterns;
     /**
      * <p>
      * A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that match
-     * the patterns are excluded from the index. Files that don’t match the patterns are included in the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * the patterns are excluded from the index. Files that don't match the patterns are included in the index. If a
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      */
     private java.util.List<String> exclusionPatterns;
@@ -239,13 +239,13 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon FSx
      * instance must reside inside your VPC.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your
-     *        Amazon FSx instance must reside inside your VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon
+     *        FSx instance must reside inside your VPC.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -254,12 +254,12 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon FSx
      * instance must reside inside your VPC.
      * </p>
      * 
-     * @return Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your
-     *         Amazon FSx instance must reside inside your VPC.
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon
+     *         FSx instance must reside inside your VPC.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -268,13 +268,13 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon FSx
      * instance must reside inside your VPC.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your
-     *        Amazon FSx instance must reside inside your VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Amazon FSx. Your Amazon
+     *        FSx instance must reside inside your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -426,14 +426,14 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that match
      * the patterns are included in the index. Files that don't match the patterns are excluded from the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * 
      * @return A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that
      *         match the patterns are included in the index. Files that don't match the patterns are excluded from the
-     *         index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *         precedence and the file isn't included in the index.
+     *         index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *         and the file isn't included in the index.
      */
 
     public java.util.List<String> getInclusionPatterns() {
@@ -444,15 +444,15 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that match
      * the patterns are included in the index. Files that don't match the patterns are excluded from the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * 
      * @param inclusionPatterns
      *        A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that
      *        match the patterns are included in the index. Files that don't match the patterns are excluded from the
-     *        index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *        precedence and the file isn't included in the index.
+     *        index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *        and the file isn't included in the index.
      */
 
     public void setInclusionPatterns(java.util.Collection<String> inclusionPatterns) {
@@ -468,8 +468,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that match
      * the patterns are included in the index. Files that don't match the patterns are excluded from the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -480,8 +480,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * @param inclusionPatterns
      *        A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that
      *        match the patterns are included in the index. Files that don't match the patterns are excluded from the
-     *        index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *        precedence and the file isn't included in the index.
+     *        index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *        and the file isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -499,15 +499,15 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that match
      * the patterns are included in the index. Files that don't match the patterns are excluded from the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * 
      * @param inclusionPatterns
      *        A list of regular expression patterns to include certain files in your Amazon FSx file system. Files that
      *        match the patterns are included in the index. Files that don't match the patterns are excluded from the
-     *        index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *        precedence and the file isn't included in the index.
+     *        index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *        and the file isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -519,15 +519,15 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that match
-     * the patterns are excluded from the index. Files that don’t match the patterns are included in the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * the patterns are excluded from the index. Files that don't match the patterns are included in the index. If a
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * 
      * @return A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that
-     *         match the patterns are excluded from the index. Files that don’t match the patterns are included in the
-     *         index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *         precedence and the file isn't included in the index.
+     *         match the patterns are excluded from the index. Files that don't match the patterns are included in the
+     *         index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *         and the file isn't included in the index.
      */
 
     public java.util.List<String> getExclusionPatterns() {
@@ -537,16 +537,16 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that match
-     * the patterns are excluded from the index. Files that don’t match the patterns are included in the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * the patterns are excluded from the index. Files that don't match the patterns are included in the index. If a
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * 
      * @param exclusionPatterns
      *        A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that
-     *        match the patterns are excluded from the index. Files that don’t match the patterns are included in the
-     *        index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *        precedence and the file isn't included in the index.
+     *        match the patterns are excluded from the index. Files that don't match the patterns are included in the
+     *        index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *        and the file isn't included in the index.
      */
 
     public void setExclusionPatterns(java.util.Collection<String> exclusionPatterns) {
@@ -561,9 +561,9 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that match
-     * the patterns are excluded from the index. Files that don’t match the patterns are included in the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * the patterns are excluded from the index. Files that don't match the patterns are included in the index. If a
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -573,9 +573,9 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * 
      * @param exclusionPatterns
      *        A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that
-     *        match the patterns are excluded from the index. Files that don’t match the patterns are included in the
-     *        index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *        precedence and the file isn't included in the index.
+     *        match the patterns are excluded from the index. Files that don't match the patterns are included in the
+     *        index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *        and the file isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -592,16 +592,16 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that match
-     * the patterns are excluded from the index. Files that don’t match the patterns are included in the index. If a
-     * file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the
-     * file isn't included in the index.
+     * the patterns are excluded from the index. Files that don't match the patterns are included in the index. If a
+     * file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't
+     * included in the index.
      * </p>
      * 
      * @param exclusionPatterns
      *        A list of regular expression patterns to exclude certain files in your Amazon FSx file system. Files that
-     *        match the patterns are excluded from the index. Files that don’t match the patterns are included in the
-     *        index. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes
-     *        precedence and the file isn't included in the index.
+     *        match the patterns are excluded from the index. Files that don't match the patterns are included in the
+     *        index. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence
+     *        and the file isn't included in the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

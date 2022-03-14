@@ -61,17 +61,18 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private Boolean crawlAttachments;
     /**
      * <p>
-     * Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need to be
-     * updated in the index. Depending on the size of the SharePoint change log, it may take longer for Amazon Kendra to
-     * use the change log than it takes it to determine the changed documents using the Amazon Kendra document crawler.
+     * <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in SharePoint.
      * </p>
      */
     private Boolean useChangeLog;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your SharePoint. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
@@ -80,9 +81,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private java.util.List<String> inclusionPatterns;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
@@ -93,10 +95,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private DataSourceVpcConfiguration vpcConfiguration;
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to custom
-     * fields in the Amazon Kendra index. You must first create the index fields using the <code>UpdateIndex</code> API
-     * before you map SharePoint attributes. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to SharePoint fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * SharePoint data source field names must exist in your SharePoint custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -383,16 +386,15 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need to be
-     * updated in the index. Depending on the size of the SharePoint change log, it may take longer for Amazon Kendra to
-     * use the change log than it takes it to determine the changed documents using the Amazon Kendra document crawler.
+     * <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in SharePoint.
      * </p>
      * 
      * @param useChangeLog
-     *        Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need
-     *        to be updated in the index. Depending on the size of the SharePoint change log, it may take longer for
-     *        Amazon Kendra to use the change log than it takes it to determine the changed documents using the Amazon
-     *        Kendra document crawler.
+     *        <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the
+     *        index. Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than
+     *        to scan all of your documents in SharePoint.
      */
 
     public void setUseChangeLog(Boolean useChangeLog) {
@@ -401,15 +403,14 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need to be
-     * updated in the index. Depending on the size of the SharePoint change log, it may take longer for Amazon Kendra to
-     * use the change log than it takes it to determine the changed documents using the Amazon Kendra document crawler.
+     * <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in SharePoint.
      * </p>
      * 
-     * @return Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need
-     *         to be updated in the index. Depending on the size of the SharePoint change log, it may take longer for
-     *         Amazon Kendra to use the change log than it takes it to determine the changed documents using the Amazon
-     *         Kendra document crawler.
+     * @return <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the
+     *         index. Depending on the change log's size, it may take longer for Amazon Kendra to use the change log
+     *         than to scan all of your documents in SharePoint.
      */
 
     public Boolean getUseChangeLog() {
@@ -418,16 +419,15 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need to be
-     * updated in the index. Depending on the size of the SharePoint change log, it may take longer for Amazon Kendra to
-     * use the change log than it takes it to determine the changed documents using the Amazon Kendra document crawler.
+     * <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in SharePoint.
      * </p>
      * 
      * @param useChangeLog
-     *        Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need
-     *        to be updated in the index. Depending on the size of the SharePoint change log, it may take longer for
-     *        Amazon Kendra to use the change log than it takes it to determine the changed documents using the Amazon
-     *        Kendra document crawler.
+     *        <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the
+     *        index. Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than
+     *        to scan all of your documents in SharePoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -438,15 +438,14 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need to be
-     * updated in the index. Depending on the size of the SharePoint change log, it may take longer for Amazon Kendra to
-     * use the change log than it takes it to determine the changed documents using the Amazon Kendra document crawler.
+     * <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in SharePoint.
      * </p>
      * 
-     * @return Set to <code>TRUE</code> to use the Microsoft SharePoint change log to determine the documents that need
-     *         to be updated in the index. Depending on the size of the SharePoint change log, it may take longer for
-     *         Amazon Kendra to use the change log than it takes it to determine the changed documents using the Amazon
-     *         Kendra document crawler.
+     * @return <code>TRUE</code> to use the SharePoint change log to determine which documents require updating in the
+     *         index. Depending on the change log's size, it may take longer for Amazon Kendra to use the change log
+     *         than to scan all of your documents in SharePoint.
      */
 
     public Boolean isUseChangeLog() {
@@ -455,17 +454,19 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your SharePoint. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *         Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *         inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     * @return A list of regular expression patterns to include certain documents in your SharePoint. Documents that
+     *         match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *         the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the document isn't included in the index.</p>
      *         <p>
      *         The regex is applied to the display URL of the SharePoint document.
      */
@@ -476,18 +477,20 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your SharePoint. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain documents in your SharePoint. Documents that
+     *        match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the display URL of the SharePoint document.
      */
@@ -503,9 +506,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your SharePoint. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
@@ -517,9 +521,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain documents in your SharePoint. Documents that
+     *        match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -537,18 +542,20 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents
-     * that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your SharePoint. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns. Documents that match the patterns are included in the index.
-     *        Documents that don't match the patterns are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to include certain documents in your SharePoint. Documents that
+     *        match the patterns are included in the index. Documents that don't match the patterns are excluded from
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -561,17 +568,19 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *         Documents that don't match the patterns are included in the index. If a document matches both an
-     *         exclusion pattern and an inclusion pattern, the document is not included in the index.</p>
+     * @return A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that
+     *         match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *         the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the document isn't included in the index.</p>
      *         <p>
      *         The regex is applied to the display URL of the SharePoint document.
      */
@@ -582,18 +591,20 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that
+     *        match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the display URL of the SharePoint document.
      */
@@ -609,9 +620,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
@@ -623,9 +635,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that
+     *        match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -643,18 +656,20 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the patterns are excluded from the index. Documents
-     * that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an
-     * inclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
      * The regex is applied to the display URL of the SharePoint document.
      * </p>
      * 
      * @param exclusionPatterns
-     *        A list of regular expression patterns. Documents that match the patterns are excluded from the index.
-     *        Documents that don't match the patterns are included in the index. If a document matches both an exclusion
-     *        pattern and an inclusion pattern, the document is not included in the index.</p>
+     *        A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that
+     *        match the patterns are excluded from the index. Documents that don't match the patterns are included in
+     *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
      *        The regex is applied to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -693,16 +708,18 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to custom
-     * fields in the Amazon Kendra index. You must first create the index fields using the <code>UpdateIndex</code> API
-     * before you map SharePoint attributes. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to SharePoint fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * SharePoint data source field names must exist in your SharePoint custom metadata.
      * </p>
      * 
-     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to
-     *         custom fields in the Amazon Kendra index. You must first create the index fields using the
-     *         <code>UpdateIndex</code> API before you map SharePoint attributes. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes
+     *         or field names to Amazon Kendra index field names. To create custom fields, use the
+     *         <code>UpdateIndex</code> API before you map to SharePoint fields. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
+     *         The SharePoint data source field names must exist in your SharePoint custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -711,17 +728,19 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to custom
-     * fields in the Amazon Kendra index. You must first create the index fields using the <code>UpdateIndex</code> API
-     * before you map SharePoint attributes. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to SharePoint fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * SharePoint data source field names must exist in your SharePoint custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to
-     *        custom fields in the Amazon Kendra index. You must first create the index fields using the
-     *        <code>UpdateIndex</code> API before you map SharePoint attributes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to SharePoint fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        SharePoint data source field names must exist in your SharePoint custom metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -735,10 +754,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to custom
-     * fields in the Amazon Kendra index. You must first create the index fields using the <code>UpdateIndex</code> API
-     * before you map SharePoint attributes. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to SharePoint fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * SharePoint data source field names must exist in your SharePoint custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -747,10 +767,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param fieldMappings
-     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to
-     *        custom fields in the Amazon Kendra index. You must first create the index fields using the
-     *        <code>UpdateIndex</code> API before you map SharePoint attributes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to SharePoint fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        SharePoint data source field names must exist in your SharePoint custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -766,17 +787,19 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to custom
-     * fields in the Amazon Kendra index. You must first create the index fields using the <code>UpdateIndex</code> API
-     * before you map SharePoint attributes. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to SharePoint fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * SharePoint data source field names must exist in your SharePoint custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft SharePoint attributes to
-     *        custom fields in the Amazon Kendra index. You must first create the index fields using the
-     *        <code>UpdateIndex</code> API before you map SharePoint attributes. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping Data Source Fields</a>.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map SharePoint data source attributes or
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to SharePoint fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        SharePoint data source field names must exist in your SharePoint custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

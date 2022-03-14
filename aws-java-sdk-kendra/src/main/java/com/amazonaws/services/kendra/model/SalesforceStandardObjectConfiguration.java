@@ -48,8 +48,10 @@ public class SalesforceStandardObjectConfiguration implements Serializable, Clon
     private String documentTitleFieldName;
     /**
      * <p>
-     * One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field must
-     * exist before you can map a Salesforce field to it.
+     * Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -195,12 +197,16 @@ public class SalesforceStandardObjectConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field must
-     * exist before you can map a Salesforce field to it.
+     * Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * 
-     * @return One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field
-     *         must exist before you can map a Salesforce field to it.
+     * @return Maps attributes or field names of the standard object to Amazon Kendra index field names. To create
+     *         custom fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more
+     *         information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data
+     *         source fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -209,13 +215,17 @@ public class SalesforceStandardObjectConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field must
-     * exist before you can map a Salesforce field to it.
+     * Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field
-     *        must exist before you can map a Salesforce field to it.
+     *        Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     *        fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *        fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -229,8 +239,10 @@ public class SalesforceStandardObjectConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field must
-     * exist before you can map a Salesforce field to it.
+     * Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -239,8 +251,10 @@ public class SalesforceStandardObjectConfiguration implements Serializable, Clon
      * </p>
      * 
      * @param fieldMappings
-     *        One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field
-     *        must exist before you can map a Salesforce field to it.
+     *        Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     *        fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *        fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,13 +270,17 @@ public class SalesforceStandardObjectConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field must
-     * exist before you can map a Salesforce field to it.
+     * Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     * fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * Salesforce data source field names must exist in your Salesforce custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        One or more objects that map fields in the standard object to Amazon Kendra index fields. The index field
-     *        must exist before you can map a Salesforce field to it.
+     *        Maps attributes or field names of the standard object to Amazon Kendra index field names. To create custom
+     *        fields, use the <code>UpdateIndex</code> API before you map to Salesforce fields. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *        fields</a>. The Salesforce data source field names must exist in your Salesforce custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -50,30 +50,35 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
     private OneDriveUsers oneDriveUsers;
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the pattern are included in the index. Documents that
-     * don't match the pattern are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your OneDrive. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      */
     private java.util.List<String> inclusionPatterns;
     /**
      * <p>
-     * List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed. If you
-     * provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't
-     * indexed.
+     * A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      */
     private java.util.List<String> exclusionPatterns;
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom fields
-     * in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to OneDrive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * OneDrive data source field names must exist in your OneDrive custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -219,19 +224,21 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the pattern are included in the index. Documents that
-     * don't match the pattern are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your OneDrive. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * 
-     * @return A list of regular expression patterns. Documents that match the pattern are included in the index.
-     *         Documents that don't match the pattern are excluded from the index. If a document matches both an
-     *         inclusion pattern and an exclusion pattern, the document is not included in the index. </p>
+     * @return A list of regular expression patterns to include certain documents in your OneDrive. Documents that match
+     *         the patterns are included in the index. Documents that don't match the patterns are excluded from the
+     *         index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the document isn't included in the index.</p>
      *         <p>
-     *         The exclusion pattern is applied to the file name.
+     *         The pattern is applied to the file name.
      */
 
     public java.util.List<String> getInclusionPatterns() {
@@ -240,20 +247,22 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the pattern are included in the index. Documents that
-     * don't match the pattern are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your OneDrive. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns. Documents that match the pattern are included in the index.
-     *        Documents that don't match the pattern are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index. </p>
+     *        A list of regular expression patterns to include certain documents in your OneDrive. Documents that match
+     *        the patterns are included in the index. Documents that don't match the patterns are excluded from the
+     *        index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The exclusion pattern is applied to the file name.
+     *        The pattern is applied to the file name.
      */
 
     public void setInclusionPatterns(java.util.Collection<String> inclusionPatterns) {
@@ -267,12 +276,13 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the pattern are included in the index. Documents that
-     * don't match the pattern are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your OneDrive. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -281,11 +291,12 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns. Documents that match the pattern are included in the index.
-     *        Documents that don't match the pattern are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index. </p>
+     *        A list of regular expression patterns to include certain documents in your OneDrive. Documents that match
+     *        the patterns are included in the index. Documents that don't match the patterns are excluded from the
+     *        index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The exclusion pattern is applied to the file name.
+     *        The pattern is applied to the file name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -301,20 +312,22 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of regular expression patterns. Documents that match the pattern are included in the index. Documents that
-     * don't match the pattern are excluded from the index. If a document matches both an inclusion pattern and an
-     * exclusion pattern, the document is not included in the index.
+     * A list of regular expression patterns to include certain documents in your OneDrive. Documents that match the
+     * patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * 
      * @param inclusionPatterns
-     *        A list of regular expression patterns. Documents that match the pattern are included in the index.
-     *        Documents that don't match the pattern are excluded from the index. If a document matches both an
-     *        inclusion pattern and an exclusion pattern, the document is not included in the index. </p>
+     *        A list of regular expression patterns to include certain documents in your OneDrive. Documents that match
+     *        the patterns are included in the index. Documents that don't match the patterns are excluded from the
+     *        index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The exclusion pattern is applied to the file name.
+     *        The pattern is applied to the file name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -325,19 +338,21 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed. If you
-     * provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't
-     * indexed.
+     * A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * 
-     * @return List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed.
-     *         If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion
-     *         pattern isn't indexed. </p>
+     * @return A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match
+     *         the patterns are excluded from the index. Documents that don't match the patterns are included in the
+     *         index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *         precedence and the document isn't included in the index.</p>
      *         <p>
-     *         The exclusion pattern is applied to the file name.
+     *         The pattern is applied to the file name.
      */
 
     public java.util.List<String> getExclusionPatterns() {
@@ -346,20 +361,22 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed. If you
-     * provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't
-     * indexed.
+     * A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * 
      * @param exclusionPatterns
-     *        List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed.
-     *        If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion
-     *        pattern isn't indexed. </p>
+     *        A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match
+     *        the patterns are excluded from the index. Documents that don't match the patterns are included in the
+     *        index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The exclusion pattern is applied to the file name.
+     *        The pattern is applied to the file name.
      */
 
     public void setExclusionPatterns(java.util.Collection<String> exclusionPatterns) {
@@ -373,12 +390,13 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed. If you
-     * provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't
-     * indexed.
+     * A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -387,11 +405,12 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param exclusionPatterns
-     *        List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed.
-     *        If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion
-     *        pattern isn't indexed. </p>
+     *        A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match
+     *        the patterns are excluded from the index. Documents that don't match the patterns are included in the
+     *        index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The exclusion pattern is applied to the file name.
+     *        The pattern is applied to the file name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -407,20 +426,22 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed. If you
-     * provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't
-     * indexed.
+     * A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match the
+     * patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a
+     * document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document
+     * isn't included in the index.
      * </p>
      * <p>
-     * The exclusion pattern is applied to the file name.
+     * The pattern is applied to the file name.
      * </p>
      * 
      * @param exclusionPatterns
-     *        List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed.
-     *        If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion
-     *        pattern isn't indexed. </p>
+     *        A list of regular expression patterns to exclude certain documents in your OneDrive. Documents that match
+     *        the patterns are excluded from the index. Documents that don't match the patterns are included in the
+     *        index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
+     *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The exclusion pattern is applied to the file name.
+     *        The pattern is applied to the file name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -431,12 +452,18 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom fields
-     * in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to OneDrive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * OneDrive data source field names must exist in your OneDrive custom metadata.
      * </p>
      * 
-     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom
-     *         fields in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or
+     *         field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to OneDrive fields. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
+     *         The OneDrive data source field names must exist in your OneDrive custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -445,13 +472,19 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom fields
-     * in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to OneDrive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * OneDrive data source field names must exist in your OneDrive custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom
-     *        fields in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to OneDrive fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        OneDrive data source field names must exist in your OneDrive custom metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -465,8 +498,11 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom fields
-     * in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to OneDrive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * OneDrive data source field names must exist in your OneDrive custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -475,8 +511,11 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param fieldMappings
-     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom
-     *        fields in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to OneDrive fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        OneDrive data source field names must exist in your OneDrive custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -492,13 +531,19 @@ public class OneDriveConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom fields
-     * in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or field
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to OneDrive fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * OneDrive data source field names must exist in your OneDrive custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Microsoft OneDrive fields to custom
-     *        fields in the Amazon Kendra index. You must first create the index fields before you map OneDrive fields.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map OneDrive data source attributes or
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to OneDrive fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        OneDrive data source field names must exist in your OneDrive custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

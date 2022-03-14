@@ -36,15 +36,25 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
     private Boolean crawlAttachments;
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     * A list of regular expression patterns to include certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are included in the index. Items that don't match the patterns are excluded from the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      */
     private java.util.List<String> includeAttachmentFilePatterns;
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     * A list of regular expression patterns to exclude certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are excluded from the index. Items that don't match the patterns are included in the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      */
     private java.util.List<String> excludeAttachmentFilePatterns;
@@ -62,8 +72,10 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
     private String documentTitleFieldName;
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom fields,
+     * use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> fieldMappings;
@@ -134,12 +146,21 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     * A list of regular expression patterns to include certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are included in the index. Items that don't match the patterns are excluded from the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * 
-     * @return List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *         are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     * @return A list of regular expression patterns to include certain attachments of knowledge articles in your
+     *         ServiceNow. Item that match the patterns are included in the index. Items that don't match the patterns
+     *         are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *         pattern takes precedence and the item isn't included in the index.</p>
+     *         <p>
+     *         The regex is applied to the field specified in the <code>PatternTargetField</code>.
      */
 
     public java.util.List<String> getIncludeAttachmentFilePatterns() {
@@ -148,13 +169,22 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     * A list of regular expression patterns to include certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are included in the index. Items that don't match the patterns are excluded from the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *        are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     *        A list of regular expression patterns to include certain attachments of knowledge articles in your
+     *        ServiceNow. Item that match the patterns are included in the index. Items that don't match the patterns
+     *        are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *        pattern takes precedence and the item isn't included in the index.</p>
+     *        <p>
+     *        The regex is applied to the field specified in the <code>PatternTargetField</code>.
      */
 
     public void setIncludeAttachmentFilePatterns(java.util.Collection<String> includeAttachmentFilePatterns) {
@@ -168,8 +198,13 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     * A list of regular expression patterns to include certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are included in the index. Items that don't match the patterns are excluded from the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -178,8 +213,12 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *        are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     *        A list of regular expression patterns to include certain attachments of knowledge articles in your
+     *        ServiceNow. Item that match the patterns are included in the index. Items that don't match the patterns
+     *        are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *        pattern takes precedence and the item isn't included in the index.</p>
+     *        <p>
+     *        The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,13 +234,22 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     * A list of regular expression patterns to include certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are included in the index. Items that don't match the patterns are excluded from the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * 
      * @param includeAttachmentFilePatterns
-     *        List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *        are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>.
+     *        A list of regular expression patterns to include certain attachments of knowledge articles in your
+     *        ServiceNow. Item that match the patterns are included in the index. Items that don't match the patterns
+     *        are excluded from the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *        pattern takes precedence and the item isn't included in the index.</p>
+     *        <p>
+     *        The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -212,12 +260,21 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     * A list of regular expression patterns to exclude certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are excluded from the index. Items that don't match the patterns are included in the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * 
-     * @return List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *         are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     * @return A list of regular expression patterns to exclude certain attachments of knowledge articles in your
+     *         ServiceNow. Item that match the patterns are excluded from the index. Items that don't match the patterns
+     *         are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *         pattern takes precedence and the item isn't included in the index.</p>
+     *         <p>
+     *         The regex is applied to the field specified in the <code>PatternTargetField</code>.
      */
 
     public java.util.List<String> getExcludeAttachmentFilePatterns() {
@@ -226,13 +283,22 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     * A list of regular expression patterns to exclude certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are excluded from the index. Items that don't match the patterns are included in the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *        are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     *        A list of regular expression patterns to exclude certain attachments of knowledge articles in your
+     *        ServiceNow. Item that match the patterns are excluded from the index. Items that don't match the patterns
+     *        are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *        pattern takes precedence and the item isn't included in the index.</p>
+     *        <p>
+     *        The regex is applied to the field specified in the <code>PatternTargetField</code>.
      */
 
     public void setExcludeAttachmentFilePatterns(java.util.Collection<String> excludeAttachmentFilePatterns) {
@@ -246,8 +312,13 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     * A list of regular expression patterns to exclude certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are excluded from the index. Items that don't match the patterns are included in the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -256,8 +327,12 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *        are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     *        A list of regular expression patterns to exclude certain attachments of knowledge articles in your
+     *        ServiceNow. Item that match the patterns are excluded from the index. Items that don't match the patterns
+     *        are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *        pattern takes precedence and the item isn't included in the index.</p>
+     *        <p>
+     *        The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,13 +348,22 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern are not
-     * indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     * A list of regular expression patterns to exclude certain attachments of knowledge articles in your ServiceNow.
+     * Item that match the patterns are excluded from the index. Items that don't match the patterns are included in the
+     * index. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the
+     * item isn't included in the index.
+     * </p>
+     * <p>
+     * The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * </p>
      * 
      * @param excludeAttachmentFilePatterns
-     *        List of regular expressions applied to knowledge articles. Items that don't match the inclusion pattern
-     *        are not indexed. The regex is applied to the field specified in the <code>PatternTargetField</code>
+     *        A list of regular expression patterns to exclude certain attachments of knowledge articles in your
+     *        ServiceNow. Item that match the patterns are excluded from the index. Items that don't match the patterns
+     *        are included in the index. If an item matches both an inclusion and exclusion pattern, the exclusion
+     *        pattern takes precedence and the item isn't included in the index.</p>
+     *        <p>
+     *        The regex is applied to the field specified in the <code>PatternTargetField</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -373,12 +457,16 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom fields,
+     * use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * 
-     * @return Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *         you map the field.
+     * @return Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom
+     *         fields, use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information,
+     *         see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *         fields</a>. The ServiceNow data source field names must exist in your ServiceNow custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getFieldMappings() {
@@ -387,13 +475,17 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom fields,
+     * use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *        you map the field.
+     *        Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom
+     *        fields, use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *        fields</a>. The ServiceNow data source field names must exist in your ServiceNow custom metadata.
      */
 
     public void setFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> fieldMappings) {
@@ -407,8 +499,10 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom fields,
+     * use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -417,8 +511,10 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
      * </p>
      * 
      * @param fieldMappings
-     *        Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *        you map the field.
+     *        Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom
+     *        fields, use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *        fields</a>. The ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -434,13 +530,17 @@ public class ServiceNowKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before you map
-     * the field.
+     * Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom fields,
+     * use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     * ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * </p>
      * 
      * @param fieldMappings
-     *        Mapping between ServiceNow fields and Amazon Kendra index fields. You must create the index field before
-     *        you map the field.
+     *        Maps attributes or field names of knoweldge articles to Amazon Kendra index field names. To create custom
+     *        fields, use the <code>UpdateIndex</code> API before you map to ServiceNow fields. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source
+     *        fields</a>. The ServiceNow data source field names must exist in your ServiceNow custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -66,7 +66,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     private ServiceNowConfiguration serviceNowConfiguration;
     /**
      * <p>
-     * Provides configuration information for connecting to a Confluence data source.
+     * Provides the configuration information to connect to Confluence as your data source.
      * </p>
      */
     private ConfluenceConfiguration confluenceConfiguration;
@@ -90,6 +90,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private FsxConfiguration fsxConfiguration;
+    /**
+     * <p>
+     * Provides the configuration information to connect to Slack as your data source.
+     * </p>
+     */
+    private SlackConfiguration slackConfiguration;
 
     /**
      * <p>
@@ -333,11 +339,11 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for connecting to a Confluence data source.
+     * Provides the configuration information to connect to Confluence as your data source.
      * </p>
      * 
      * @param confluenceConfiguration
-     *        Provides configuration information for connecting to a Confluence data source.
+     *        Provides the configuration information to connect to Confluence as your data source.
      */
 
     public void setConfluenceConfiguration(ConfluenceConfiguration confluenceConfiguration) {
@@ -346,10 +352,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for connecting to a Confluence data source.
+     * Provides the configuration information to connect to Confluence as your data source.
      * </p>
      * 
-     * @return Provides configuration information for connecting to a Confluence data source.
+     * @return Provides the configuration information to connect to Confluence as your data source.
      */
 
     public ConfluenceConfiguration getConfluenceConfiguration() {
@@ -358,11 +364,11 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for connecting to a Confluence data source.
+     * Provides the configuration information to connect to Confluence as your data source.
      * </p>
      * 
      * @param confluenceConfiguration
-     *        Provides configuration information for connecting to a Confluence data source.
+     *        Provides the configuration information to connect to Confluence as your data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -518,6 +524,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Provides the configuration information to connect to Slack as your data source.
+     * </p>
+     * 
+     * @param slackConfiguration
+     *        Provides the configuration information to connect to Slack as your data source.
+     */
+
+    public void setSlackConfiguration(SlackConfiguration slackConfiguration) {
+        this.slackConfiguration = slackConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Slack as your data source.
+     * </p>
+     * 
+     * @return Provides the configuration information to connect to Slack as your data source.
+     */
+
+    public SlackConfiguration getSlackConfiguration() {
+        return this.slackConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Slack as your data source.
+     * </p>
+     * 
+     * @param slackConfiguration
+     *        Provides the configuration information to connect to Slack as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withSlackConfiguration(SlackConfiguration slackConfiguration) {
+        setSlackConfiguration(slackConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -550,7 +596,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getWorkDocsConfiguration() != null)
             sb.append("WorkDocsConfiguration: ").append(getWorkDocsConfiguration()).append(",");
         if (getFsxConfiguration() != null)
-            sb.append("FsxConfiguration: ").append(getFsxConfiguration());
+            sb.append("FsxConfiguration: ").append(getFsxConfiguration()).append(",");
+        if (getSlackConfiguration() != null)
+            sb.append("SlackConfiguration: ").append(getSlackConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -609,6 +657,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getFsxConfiguration() != null && other.getFsxConfiguration().equals(this.getFsxConfiguration()) == false)
             return false;
+        if (other.getSlackConfiguration() == null ^ this.getSlackConfiguration() == null)
+            return false;
+        if (other.getSlackConfiguration() != null && other.getSlackConfiguration().equals(this.getSlackConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -628,6 +680,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getWebCrawlerConfiguration() == null) ? 0 : getWebCrawlerConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWorkDocsConfiguration() == null) ? 0 : getWorkDocsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getFsxConfiguration() == null) ? 0 : getFsxConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSlackConfiguration() == null) ? 0 : getSlackConfiguration().hashCode());
         return hashCode;
     }
 
