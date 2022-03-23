@@ -49,7 +49,7 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String reason;
     /**
      * <p>
-     * Reserved for future use.
+     * The values you want to specify for the parameters defined in the Session document.
      * </p>
      */
     private java.util.Map<String, java.util.List<String>> parameters;
@@ -200,10 +200,10 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Reserved for future use.
+     * The values you want to specify for the parameters defined in the Session document.
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return The values you want to specify for the parameters defined in the Session document.
      */
 
     public java.util.Map<String, java.util.List<String>> getParameters() {
@@ -212,11 +212,11 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Reserved for future use.
+     * The values you want to specify for the parameters defined in the Session document.
      * </p>
      * 
      * @param parameters
-     *        Reserved for future use.
+     *        The values you want to specify for the parameters defined in the Session document.
      */
 
     public void setParameters(java.util.Map<String, java.util.List<String>> parameters) {
@@ -225,11 +225,11 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Reserved for future use.
+     * The values you want to specify for the parameters defined in the Session document.
      * </p>
      * 
      * @param parameters
-     *        Reserved for future use.
+     *        The values you want to specify for the parameters defined in the Session document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

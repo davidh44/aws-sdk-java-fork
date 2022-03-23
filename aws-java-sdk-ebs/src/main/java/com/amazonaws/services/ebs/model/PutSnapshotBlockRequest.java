@@ -30,6 +30,14 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the snapshot.
      * </p>
+     * <important>
+     * <p>
+     * If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to encrypt the
+     * snapshot. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using encryption</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     * </p>
+     * </important>
      */
     private String snapshotId;
     /**
@@ -90,9 +98,23 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the snapshot.
      * </p>
+     * <important>
+     * <p>
+     * If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to encrypt the
+     * snapshot. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using encryption</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     * </p>
+     * </important>
      * 
      * @param snapshotId
-     *        The ID of the snapshot.
+     *        The ID of the snapshot.</p> <important>
+     *        <p>
+     *        If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to
+     *        encrypt the snapshot. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using
+     *        encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     *        </p>
      */
 
     public void setSnapshotId(String snapshotId) {
@@ -103,8 +125,22 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the snapshot.
      * </p>
+     * <important>
+     * <p>
+     * If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to encrypt the
+     * snapshot. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using encryption</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     * </p>
+     * </important>
      * 
-     * @return The ID of the snapshot.
+     * @return The ID of the snapshot.</p> <important>
+     *         <p>
+     *         If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to
+     *         encrypt the snapshot. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using
+     *         encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     *         </p>
      */
 
     public String getSnapshotId() {
@@ -115,9 +151,23 @@ public class PutSnapshotBlockRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the snapshot.
      * </p>
+     * <important>
+     * <p>
+     * If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to encrypt the
+     * snapshot. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using encryption</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     * </p>
+     * </important>
      * 
      * @param snapshotId
-     *        The ID of the snapshot.
+     *        The ID of the snapshot.</p> <important>
+     *        <p>
+     *        If the specified snapshot is encrypted, you must have permission to use the KMS key that was used to
+     *        encrypt the snapshot. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebsapis-using-encryption.html"> Using
+     *        encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>..
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -199,6 +199,10 @@ public class RestoreFromClusterSnapshotRequestMarshaller implements Marshaller<R
             request.addParameter("TargetReservedNodeOfferingId", StringUtils.fromString(restoreFromClusterSnapshotRequest.getTargetReservedNodeOfferingId()));
         }
 
+        if (restoreFromClusterSnapshotRequest.getEncrypted() != null) {
+            request.addParameter("Encrypted", StringUtils.fromBoolean(restoreFromClusterSnapshotRequest.getEncrypted()));
+        }
+
         return request;
     }
 

@@ -245,6 +245,13 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      */
     private WorkflowDetails workflowDetails;
 
@@ -1837,10 +1844,23 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      * 
      * @param workflowDetails
      *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
-     *        workflow.
+     *        workflow.</p>
+     *        <p>
+     *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *        in the following example.
+     *        </p>
+     *        <p>
+     *        <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      */
 
     public void setWorkflowDetails(WorkflowDetails workflowDetails) {
@@ -1851,9 +1871,22 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      * 
      * @return Specifies the workflow ID for the workflow to assign and the execution role used for executing the
-     *         workflow.
+     *         workflow.</p>
+     *         <p>
+     *         To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *         in the following example.
+     *         </p>
+     *         <p>
+     *         <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      */
 
     public WorkflowDetails getWorkflowDetails() {
@@ -1864,10 +1897,23 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      * 
      * @param workflowDetails
      *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
-     *        workflow.
+     *        workflow.</p>
+     *        <p>
+     *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *        in the following example.
+     *        </p>
+     *        <p>
+     *        <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

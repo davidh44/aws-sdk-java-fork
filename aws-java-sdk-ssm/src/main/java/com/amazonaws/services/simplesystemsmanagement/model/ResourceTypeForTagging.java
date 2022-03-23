@@ -26,7 +26,8 @@ public enum ResourceTypeForTagging {
     Parameter("Parameter"),
     PatchBaseline("PatchBaseline"),
     OpsItem("OpsItem"),
-    OpsMetadata("OpsMetadata");
+    OpsMetadata("OpsMetadata"),
+    Automation("Automation");
 
     private String value;
 

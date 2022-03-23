@@ -52,6 +52,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>PatchBaseline</code>: <code>pb-012345abcde</code>
      * </p>
      * <p>
+     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
+     * </p>
+     * <p>
      * <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource Name
      * (ARN) for the object. Specifically, <code>ResourceID</code> is created from the strings that come after the word
      * <code>opsmetadata</code> in the ARN. For example, an OpsMetadata object with an ARN of
@@ -233,6 +236,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>PatchBaseline</code>: <code>pb-012345abcde</code>
      * </p>
      * <p>
+     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
+     * </p>
+     * <p>
      * <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource Name
      * (ARN) for the object. Specifically, <code>ResourceID</code> is created from the strings that come after the word
      * <code>opsmetadata</code> in the ARN. For example, an OpsMetadata object with an ARN of
@@ -264,6 +270,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        <code>PatchBaseline</code>: <code>pb-012345abcde</code>
+     *        </p>
+     *        <p>
+     *        <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
      *        </p>
      *        <p>
      *        <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource
@@ -305,6 +314,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>PatchBaseline</code>: <code>pb-012345abcde</code>
      * </p>
      * <p>
+     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
+     * </p>
+     * <p>
      * <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource Name
      * (ARN) for the object. Specifically, <code>ResourceID</code> is created from the strings that come after the word
      * <code>opsmetadata</code> in the ARN. For example, an OpsMetadata object with an ARN of
@@ -335,6 +347,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <p>
      *         <code>PatchBaseline</code>: <code>pb-012345abcde</code>
+     *         </p>
+     *         <p>
+     *         <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
      *         </p>
      *         <p>
      *         <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource
@@ -376,6 +391,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>PatchBaseline</code>: <code>pb-012345abcde</code>
      * </p>
      * <p>
+     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
+     * </p>
+     * <p>
      * <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource Name
      * (ARN) for the object. Specifically, <code>ResourceID</code> is created from the strings that come after the word
      * <code>opsmetadata</code> in the ARN. For example, an OpsMetadata object with an ARN of
@@ -407,6 +425,9 @@ public class AddTagsToResourceRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        <code>PatchBaseline</code>: <code>pb-012345abcde</code>
+     *        </p>
+     *        <p>
+     *        <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
      *        </p>
      *        <p>
      *        <code>OpsMetadata</code> object: <code>ResourceID</code> for tagging is created from the Amazon Resource

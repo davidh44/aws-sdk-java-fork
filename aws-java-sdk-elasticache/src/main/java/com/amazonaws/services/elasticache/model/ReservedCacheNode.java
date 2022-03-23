@@ -79,7 +79,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version 1.5.16
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
      * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
@@ -403,7 +403,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version 1.5.16
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
      * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
@@ -581,7 +581,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      *        <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *        </p>
      *        <p>
-     *        <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version
+     *        <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
      *        1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      *        </p>
      *        <p>
@@ -769,7 +769,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version 1.5.16
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
      * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
@@ -946,7 +946,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      *         <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *         </p>
      *         <p>
-     *         <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version
+     *         <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
      *         1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      *         </p>
      *         <p>
@@ -1134,7 +1134,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
-     * <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version 1.5.16
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
      * onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      * </p>
      * <p>
@@ -1312,7 +1312,7 @@ public class ReservedCacheNode implements Serializable, Cloneable {
      *        <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *        </p>
      *        <p>
-     *        <b>T4g node types</b> (available only for Redis engine version 6.0 onward and Memcached engine version
+     *        <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
      *        1.5.16 onward): <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
      *        </p>
      *        <p>

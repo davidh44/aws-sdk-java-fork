@@ -260,8 +260,11 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private Integer manualSnapshotRetentionPeriod;
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster
-     * that you restore from a shared snapshot.
+     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
+     * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
+     * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
+     * KMS key ID.
      * </p>
      */
     private String kmsKeyId;
@@ -387,6 +390,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String targetReservedNodeOfferingId;
+    /**
+     * <p>
+     * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
+     * and a CMK.
+     * </p>
+     */
+    private Boolean encrypted;
 
     /**
      * <p>
@@ -1946,13 +1956,19 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster
-     * that you restore from a shared snapshot.
+     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
+     * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
+     * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
+     * KMS key ID.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the
-     *        cluster that you restore from a shared snapshot.
+     *        The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from
+     *        a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an
+     *        encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
+     *        from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster
+     *        is encrypted with the new KMS key ID.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1961,12 +1977,18 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster
-     * that you restore from a shared snapshot.
+     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
+     * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
+     * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
+     * KMS key ID.
      * </p>
      * 
-     * @return The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the
-     *         cluster that you restore from a shared snapshot.
+     * @return The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored
+     *         from a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to
+     *         an encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
+     *         from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster
+     *         is encrypted with the new KMS key ID.
      */
 
     public String getKmsKeyId() {
@@ -1975,13 +1997,19 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster
-     * that you restore from a shared snapshot.
+     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
+     * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
+     * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
+     * KMS key ID.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the
-     *        cluster that you restore from a shared snapshot.
+     *        The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from
+     *        a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an
+     *        encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
+     *        from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster
+     *        is encrypted with the new KMS key ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2908,6 +2936,66 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
+     * and a CMK.
+     * </p>
+     * 
+     * @param encrypted
+     *        Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
+     *        (KMS) and a CMK.
+     */
+
+    public void setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+    }
+
+    /**
+     * <p>
+     * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
+     * and a CMK.
+     * </p>
+     * 
+     * @return Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
+     *         (KMS) and a CMK.
+     */
+
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    /**
+     * <p>
+     * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
+     * and a CMK.
+     * </p>
+     * 
+     * @param encrypted
+     *        Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
+     *        (KMS) and a CMK.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreFromClusterSnapshotRequest withEncrypted(Boolean encrypted) {
+        setEncrypted(encrypted);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
+     * and a CMK.
+     * </p>
+     * 
+     * @return Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
+     *         (KMS) and a CMK.
+     */
+
+    public Boolean isEncrypted() {
+        return this.encrypted;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2980,7 +3068,9 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         if (getReservedNodeId() != null)
             sb.append("ReservedNodeId: ").append(getReservedNodeId()).append(",");
         if (getTargetReservedNodeOfferingId() != null)
-            sb.append("TargetReservedNodeOfferingId: ").append(getTargetReservedNodeOfferingId());
+            sb.append("TargetReservedNodeOfferingId: ").append(getTargetReservedNodeOfferingId()).append(",");
+        if (getEncrypted() != null)
+            sb.append("Encrypted: ").append(getEncrypted());
         sb.append("}");
         return sb.toString();
     }
@@ -3122,6 +3212,10 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getTargetReservedNodeOfferingId() != null && other.getTargetReservedNodeOfferingId().equals(this.getTargetReservedNodeOfferingId()) == false)
             return false;
+        if (other.getEncrypted() == null ^ this.getEncrypted() == null)
+            return false;
+        if (other.getEncrypted() != null && other.getEncrypted().equals(this.getEncrypted()) == false)
+            return false;
         return true;
     }
 
@@ -3161,6 +3255,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getDefaultIamRoleArn() == null) ? 0 : getDefaultIamRoleArn().hashCode());
         hashCode = prime * hashCode + ((getReservedNodeId() == null) ? 0 : getReservedNodeId().hashCode());
         hashCode = prime * hashCode + ((getTargetReservedNodeOfferingId() == null) ? 0 : getTargetReservedNodeOfferingId().hashCode());
+        hashCode = prime * hashCode + ((getEncrypted() == null) ? 0 : getEncrypted().hashCode());
         return hashCode;
     }
 

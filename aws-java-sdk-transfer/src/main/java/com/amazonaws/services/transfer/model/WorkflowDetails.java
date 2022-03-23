@@ -33,6 +33,13 @@ public class WorkflowDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      */
     private java.util.List<WorkflowDetail> onUpload;
 
@@ -40,8 +47,21 @@ public class WorkflowDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      * 
-     * @return A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
+     * @return A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.</p>
+     *         <p>
+     *         To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *         in the following example.
+     *         </p>
+     *         <p>
+     *         <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      */
 
     public java.util.List<WorkflowDetail> getOnUpload() {
@@ -52,9 +72,22 @@ public class WorkflowDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      * 
      * @param onUpload
-     *        A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
+     *        A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.</p>
+     *        <p>
+     *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *        in the following example.
+     *        </p>
+     *        <p>
+     *        <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      */
 
     public void setOnUpload(java.util.Collection<WorkflowDetail> onUpload) {
@@ -71,13 +104,26 @@ public class WorkflowDetails implements Serializable, Cloneable, StructuredPojo 
      * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
      * </p>
      * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setOnUpload(java.util.Collection)} or {@link #withOnUpload(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param onUpload
-     *        A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
+     *        A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.</p>
+     *        <p>
+     *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *        in the following example.
+     *        </p>
+     *        <p>
+     *        <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,9 +141,22 @@ public class WorkflowDetails implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
      * </p>
+     * <p>
+     * To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as in the
+     * following example.
+     * </p>
+     * <p>
+     * <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
+     * </p>
      * 
      * @param onUpload
-     *        A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.
+     *        A trigger that starts a workflow: the workflow begins to execute after a file is uploaded.</p>
+     *        <p>
+     *        To remove an associated workflow from a server, you can provide an empty <code>OnUpload</code> object, as
+     *        in the following example.
+     *        </p>
+     *        <p>
+     *        <code>aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

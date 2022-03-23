@@ -135,7 +135,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * <note>
      * <p>
-     * To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     * To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      * </p>
      * </note>
      */
@@ -903,7 +903,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * <note>
      * <p>
-     * To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     * To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      * </p>
      * </note>
      * 
@@ -925,7 +925,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      *         </ul>
      *         <note>
      *         <p>
-     *         To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     *         To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      *         </p>
      */
 
@@ -957,7 +957,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * <note>
      * <p>
-     * To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     * To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      * </p>
      * </note>
      * 
@@ -980,7 +980,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      *        </ul>
      *        <note>
      *        <p>
-     *        To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     *        To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      *        </p>
      */
 
@@ -1014,7 +1014,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * <note>
      * <p>
-     * To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     * To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      * </p>
      * </note>
      * <p>
@@ -1042,7 +1042,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      *        </ul>
      *        <note>
      *        <p>
-     *        To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     *        To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1078,7 +1078,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * <note>
      * <p>
-     * To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     * To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      * </p>
      * </note>
      * 
@@ -1101,7 +1101,7 @@ public class StartAutomationExecutionRequest extends com.amazonaws.AmazonWebServ
      *        </ul>
      *        <note>
      *        <p>
-     *        To add tags to an existing patch baseline, use the <a>AddTagsToResource</a> operation.
+     *        To add tags to an existing automation, use the <a>AddTagsToResource</a> operation.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
