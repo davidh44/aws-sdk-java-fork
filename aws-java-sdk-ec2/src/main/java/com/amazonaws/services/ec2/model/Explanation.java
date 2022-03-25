@@ -96,7 +96,7 @@ public class Explanation implements Serializable, Cloneable {
     private AnalysisComponent destinationVpc;
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -310,6 +310,30 @@ public class Explanation implements Serializable, Cloneable {
      * </p>
      */
     private AnalysisComponent vpnGateway;
+    /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     */
+    private AnalysisComponent transitGateway;
+    /**
+     * <p>
+     * The transit gateway route table.
+     * </p>
+     */
+    private AnalysisComponent transitGatewayRouteTable;
+    /**
+     * <p>
+     * The transit gateway route table route.
+     * </p>
+     */
+    private TransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
+    /**
+     * <p>
+     * The transit gateway attachment.
+     * </p>
+     */
+    private AnalysisComponent transitGatewayAttachment;
 
     /**
      * <p>
@@ -852,7 +876,7 @@ public class Explanation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -868,7 +892,7 @@ public class Explanation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param direction
-     *        The direction. The following are possible values:</p>
+     *        The direction. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -888,7 +912,7 @@ public class Explanation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -903,7 +927,7 @@ public class Explanation implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return The direction. The following are possible values:</p>
+     * @return The direction. The following are the possible values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -923,7 +947,7 @@ public class Explanation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -939,7 +963,7 @@ public class Explanation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param direction
-     *        The direction. The following are possible values:</p>
+     *        The direction. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -2412,6 +2436,166 @@ public class Explanation implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     * 
+     * @param transitGateway
+     *        The transit gateway.
+     */
+
+    public void setTransitGateway(AnalysisComponent transitGateway) {
+        this.transitGateway = transitGateway;
+    }
+
+    /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     * 
+     * @return The transit gateway.
+     */
+
+    public AnalysisComponent getTransitGateway() {
+        return this.transitGateway;
+    }
+
+    /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     * 
+     * @param transitGateway
+     *        The transit gateway.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Explanation withTransitGateway(AnalysisComponent transitGateway) {
+        setTransitGateway(transitGateway);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The transit gateway route table.
+     * </p>
+     * 
+     * @param transitGatewayRouteTable
+     *        The transit gateway route table.
+     */
+
+    public void setTransitGatewayRouteTable(AnalysisComponent transitGatewayRouteTable) {
+        this.transitGatewayRouteTable = transitGatewayRouteTable;
+    }
+
+    /**
+     * <p>
+     * The transit gateway route table.
+     * </p>
+     * 
+     * @return The transit gateway route table.
+     */
+
+    public AnalysisComponent getTransitGatewayRouteTable() {
+        return this.transitGatewayRouteTable;
+    }
+
+    /**
+     * <p>
+     * The transit gateway route table.
+     * </p>
+     * 
+     * @param transitGatewayRouteTable
+     *        The transit gateway route table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Explanation withTransitGatewayRouteTable(AnalysisComponent transitGatewayRouteTable) {
+        setTransitGatewayRouteTable(transitGatewayRouteTable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The transit gateway route table route.
+     * </p>
+     * 
+     * @param transitGatewayRouteTableRoute
+     *        The transit gateway route table route.
+     */
+
+    public void setTransitGatewayRouteTableRoute(TransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
+        this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
+    }
+
+    /**
+     * <p>
+     * The transit gateway route table route.
+     * </p>
+     * 
+     * @return The transit gateway route table route.
+     */
+
+    public TransitGatewayRouteTableRoute getTransitGatewayRouteTableRoute() {
+        return this.transitGatewayRouteTableRoute;
+    }
+
+    /**
+     * <p>
+     * The transit gateway route table route.
+     * </p>
+     * 
+     * @param transitGatewayRouteTableRoute
+     *        The transit gateway route table route.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Explanation withTransitGatewayRouteTableRoute(TransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
+        setTransitGatewayRouteTableRoute(transitGatewayRouteTableRoute);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The transit gateway attachment.
+     * </p>
+     * 
+     * @param transitGatewayAttachment
+     *        The transit gateway attachment.
+     */
+
+    public void setTransitGatewayAttachment(AnalysisComponent transitGatewayAttachment) {
+        this.transitGatewayAttachment = transitGatewayAttachment;
+    }
+
+    /**
+     * <p>
+     * The transit gateway attachment.
+     * </p>
+     * 
+     * @return The transit gateway attachment.
+     */
+
+    public AnalysisComponent getTransitGatewayAttachment() {
+        return this.transitGatewayAttachment;
+    }
+
+    /**
+     * <p>
+     * The transit gateway attachment.
+     * </p>
+     * 
+     * @param transitGatewayAttachment
+     *        The transit gateway attachment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Explanation withTransitGatewayAttachment(AnalysisComponent transitGatewayAttachment) {
+        setTransitGatewayAttachment(transitGatewayAttachment);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2512,7 +2696,15 @@ public class Explanation implements Serializable, Cloneable {
         if (getVpnConnection() != null)
             sb.append("VpnConnection: ").append(getVpnConnection()).append(",");
         if (getVpnGateway() != null)
-            sb.append("VpnGateway: ").append(getVpnGateway());
+            sb.append("VpnGateway: ").append(getVpnGateway()).append(",");
+        if (getTransitGateway() != null)
+            sb.append("TransitGateway: ").append(getTransitGateway()).append(",");
+        if (getTransitGatewayRouteTable() != null)
+            sb.append("TransitGatewayRouteTable: ").append(getTransitGatewayRouteTable()).append(",");
+        if (getTransitGatewayRouteTableRoute() != null)
+            sb.append("TransitGatewayRouteTableRoute: ").append(getTransitGatewayRouteTableRoute()).append(",");
+        if (getTransitGatewayAttachment() != null)
+            sb.append("TransitGatewayAttachment: ").append(getTransitGatewayAttachment());
         sb.append("}");
         return sb.toString();
     }
@@ -2707,6 +2899,23 @@ public class Explanation implements Serializable, Cloneable {
             return false;
         if (other.getVpnGateway() != null && other.getVpnGateway().equals(this.getVpnGateway()) == false)
             return false;
+        if (other.getTransitGateway() == null ^ this.getTransitGateway() == null)
+            return false;
+        if (other.getTransitGateway() != null && other.getTransitGateway().equals(this.getTransitGateway()) == false)
+            return false;
+        if (other.getTransitGatewayRouteTable() == null ^ this.getTransitGatewayRouteTable() == null)
+            return false;
+        if (other.getTransitGatewayRouteTable() != null && other.getTransitGatewayRouteTable().equals(this.getTransitGatewayRouteTable()) == false)
+            return false;
+        if (other.getTransitGatewayRouteTableRoute() == null ^ this.getTransitGatewayRouteTableRoute() == null)
+            return false;
+        if (other.getTransitGatewayRouteTableRoute() != null
+                && other.getTransitGatewayRouteTableRoute().equals(this.getTransitGatewayRouteTableRoute()) == false)
+            return false;
+        if (other.getTransitGatewayAttachment() == null ^ this.getTransitGatewayAttachment() == null)
+            return false;
+        if (other.getTransitGatewayAttachment() != null && other.getTransitGatewayAttachment().equals(this.getTransitGatewayAttachment()) == false)
+            return false;
         return true;
     }
 
@@ -2760,6 +2969,10 @@ public class Explanation implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getVpcEndpoint() == null) ? 0 : getVpcEndpoint().hashCode());
         hashCode = prime * hashCode + ((getVpnConnection() == null) ? 0 : getVpnConnection().hashCode());
         hashCode = prime * hashCode + ((getVpnGateway() == null) ? 0 : getVpnGateway().hashCode());
+        hashCode = prime * hashCode + ((getTransitGateway() == null) ? 0 : getTransitGateway().hashCode());
+        hashCode = prime * hashCode + ((getTransitGatewayRouteTable() == null) ? 0 : getTransitGatewayRouteTable().hashCode());
+        hashCode = prime * hashCode + ((getTransitGatewayRouteTableRoute() == null) ? 0 : getTransitGatewayRouteTableRoute().hashCode());
+        hashCode = prime * hashCode + ((getTransitGatewayAttachment() == null) ? 0 : getTransitGatewayAttachment().hashCode());
         return hashCode;
     }
 

@@ -52,7 +52,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
     private java.util.Date analysisEndTime;
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -277,7 +277,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -292,7 +292,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
      * </li>
      * </ul>
      * 
-     * @return The filters. The following are possible values:</p>
+     * @return The filters. The following are the possible values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -315,7 +315,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -331,7 +331,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are possible values:</p>
+     *        The filters. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -356,7 +356,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -377,7 +377,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
      * </p>
      * 
      * @param filters
-     *        The filters. The following are possible values:</p>
+     *        The filters. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -404,7 +404,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -420,7 +420,7 @@ public class DescribeNetworkInsightsAnalysesRequest extends AmazonWebServiceRequ
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are possible values:</p>
+     *        The filters. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>

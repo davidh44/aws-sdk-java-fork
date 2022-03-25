@@ -183,9 +183,18 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * update it. This parameter isn't supported for rate expressions.
      * </p>
      * <p>
-     * Also, if you specified this option when you created the association, you can reset it. To do so, specify the
-     * <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command line. This
-     * parameter forces the association to run immediately after updating it and according to the interval specified.
+     * If you chose this option when you created an association and later you edit that association or you make changes
+     * to the SSM document on which that association is based (by using the Documents page in the console), State
+     * Manager applies the association at the next specified cron interval. For example, if you chose the
+     * <code>Latest</code> version of an SSM document when you created an association and you edit the association by
+     * choosing a different document version on the Documents page, State Manager applies the association at the next
+     * specified cron interval if you previously selected this option. If this option wasn't selected, State Manager
+     * immediately runs the association.
+     * </p>
+     * <p>
+     * You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter when you
+     * update the association from the command line. This parameter forces the association to run immediately after
+     * updating it and according to the interval specified.
      * </p>
      */
     private Boolean applyOnlyAtCronInterval;
@@ -1287,9 +1296,18 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * update it. This parameter isn't supported for rate expressions.
      * </p>
      * <p>
-     * Also, if you specified this option when you created the association, you can reset it. To do so, specify the
-     * <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command line. This
-     * parameter forces the association to run immediately after updating it and according to the interval specified.
+     * If you chose this option when you created an association and later you edit that association or you make changes
+     * to the SSM document on which that association is based (by using the Documents page in the console), State
+     * Manager applies the association at the next specified cron interval. For example, if you chose the
+     * <code>Latest</code> version of an SSM document when you created an association and you edit the association by
+     * choosing a different document version on the Documents page, State Manager applies the association at the next
+     * specified cron interval if you previously selected this option. If this option wasn't selected, State Manager
+     * immediately runs the association.
+     * </p>
+     * <p>
+     * You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter when you
+     * update the association from the command line. This parameter forces the association to run immediately after
+     * updating it and according to the interval specified.
      * </p>
      * 
      * @param applyOnlyAtCronInterval
@@ -1297,10 +1315,18 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        according to the schedule you specified. Specify this option if you don't want an association to run
      *        immediately after you update it. This parameter isn't supported for rate expressions.</p>
      *        <p>
-     *        Also, if you specified this option when you created the association, you can reset it. To do so, specify
-     *        the <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command
-     *        line. This parameter forces the association to run immediately after updating it and according to the
-     *        interval specified.
+     *        If you chose this option when you created an association and later you edit that association or you make
+     *        changes to the SSM document on which that association is based (by using the Documents page in the
+     *        console), State Manager applies the association at the next specified cron interval. For example, if you
+     *        chose the <code>Latest</code> version of an SSM document when you created an association and you edit the
+     *        association by choosing a different document version on the Documents page, State Manager applies the
+     *        association at the next specified cron interval if you previously selected this option. If this option
+     *        wasn't selected, State Manager immediately runs the association.
+     *        </p>
+     *        <p>
+     *        You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter
+     *        when you update the association from the command line. This parameter forces the association to run
+     *        immediately after updating it and according to the interval specified.
      */
 
     public void setApplyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
@@ -1314,19 +1340,36 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * update it. This parameter isn't supported for rate expressions.
      * </p>
      * <p>
-     * Also, if you specified this option when you created the association, you can reset it. To do so, specify the
-     * <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command line. This
-     * parameter forces the association to run immediately after updating it and according to the interval specified.
+     * If you chose this option when you created an association and later you edit that association or you make changes
+     * to the SSM document on which that association is based (by using the Documents page in the console), State
+     * Manager applies the association at the next specified cron interval. For example, if you chose the
+     * <code>Latest</code> version of an SSM document when you created an association and you edit the association by
+     * choosing a different document version on the Documents page, State Manager applies the association at the next
+     * specified cron interval if you previously selected this option. If this option wasn't selected, State Manager
+     * immediately runs the association.
+     * </p>
+     * <p>
+     * You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter when you
+     * update the association from the command line. This parameter forces the association to run immediately after
+     * updating it and according to the interval specified.
      * </p>
      * 
      * @return By default, when you update an association, the system runs it immediately after it is updated and then
      *         according to the schedule you specified. Specify this option if you don't want an association to run
      *         immediately after you update it. This parameter isn't supported for rate expressions.</p>
      *         <p>
-     *         Also, if you specified this option when you created the association, you can reset it. To do so, specify
-     *         the <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the
-     *         command line. This parameter forces the association to run immediately after updating it and according to
-     *         the interval specified.
+     *         If you chose this option when you created an association and later you edit that association or you make
+     *         changes to the SSM document on which that association is based (by using the Documents page in the
+     *         console), State Manager applies the association at the next specified cron interval. For example, if you
+     *         chose the <code>Latest</code> version of an SSM document when you created an association and you edit the
+     *         association by choosing a different document version on the Documents page, State Manager applies the
+     *         association at the next specified cron interval if you previously selected this option. If this option
+     *         wasn't selected, State Manager immediately runs the association.
+     *         </p>
+     *         <p>
+     *         You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter
+     *         when you update the association from the command line. This parameter forces the association to run
+     *         immediately after updating it and according to the interval specified.
      */
 
     public Boolean getApplyOnlyAtCronInterval() {
@@ -1340,9 +1383,18 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * update it. This parameter isn't supported for rate expressions.
      * </p>
      * <p>
-     * Also, if you specified this option when you created the association, you can reset it. To do so, specify the
-     * <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command line. This
-     * parameter forces the association to run immediately after updating it and according to the interval specified.
+     * If you chose this option when you created an association and later you edit that association or you make changes
+     * to the SSM document on which that association is based (by using the Documents page in the console), State
+     * Manager applies the association at the next specified cron interval. For example, if you chose the
+     * <code>Latest</code> version of an SSM document when you created an association and you edit the association by
+     * choosing a different document version on the Documents page, State Manager applies the association at the next
+     * specified cron interval if you previously selected this option. If this option wasn't selected, State Manager
+     * immediately runs the association.
+     * </p>
+     * <p>
+     * You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter when you
+     * update the association from the command line. This parameter forces the association to run immediately after
+     * updating it and according to the interval specified.
      * </p>
      * 
      * @param applyOnlyAtCronInterval
@@ -1350,10 +1402,18 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        according to the schedule you specified. Specify this option if you don't want an association to run
      *        immediately after you update it. This parameter isn't supported for rate expressions.</p>
      *        <p>
-     *        Also, if you specified this option when you created the association, you can reset it. To do so, specify
-     *        the <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command
-     *        line. This parameter forces the association to run immediately after updating it and according to the
-     *        interval specified.
+     *        If you chose this option when you created an association and later you edit that association or you make
+     *        changes to the SSM document on which that association is based (by using the Documents page in the
+     *        console), State Manager applies the association at the next specified cron interval. For example, if you
+     *        chose the <code>Latest</code> version of an SSM document when you created an association and you edit the
+     *        association by choosing a different document version on the Documents page, State Manager applies the
+     *        association at the next specified cron interval if you previously selected this option. If this option
+     *        wasn't selected, State Manager immediately runs the association.
+     *        </p>
+     *        <p>
+     *        You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter
+     *        when you update the association from the command line. This parameter forces the association to run
+     *        immediately after updating it and according to the interval specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1369,19 +1429,36 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * update it. This parameter isn't supported for rate expressions.
      * </p>
      * <p>
-     * Also, if you specified this option when you created the association, you can reset it. To do so, specify the
-     * <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the command line. This
-     * parameter forces the association to run immediately after updating it and according to the interval specified.
+     * If you chose this option when you created an association and later you edit that association or you make changes
+     * to the SSM document on which that association is based (by using the Documents page in the console), State
+     * Manager applies the association at the next specified cron interval. For example, if you chose the
+     * <code>Latest</code> version of an SSM document when you created an association and you edit the association by
+     * choosing a different document version on the Documents page, State Manager applies the association at the next
+     * specified cron interval if you previously selected this option. If this option wasn't selected, State Manager
+     * immediately runs the association.
+     * </p>
+     * <p>
+     * You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter when you
+     * update the association from the command line. This parameter forces the association to run immediately after
+     * updating it and according to the interval specified.
      * </p>
      * 
      * @return By default, when you update an association, the system runs it immediately after it is updated and then
      *         according to the schedule you specified. Specify this option if you don't want an association to run
      *         immediately after you update it. This parameter isn't supported for rate expressions.</p>
      *         <p>
-     *         Also, if you specified this option when you created the association, you can reset it. To do so, specify
-     *         the <code>no-apply-only-at-cron-interval</code> parameter when you update the association from the
-     *         command line. This parameter forces the association to run immediately after updating it and according to
-     *         the interval specified.
+     *         If you chose this option when you created an association and later you edit that association or you make
+     *         changes to the SSM document on which that association is based (by using the Documents page in the
+     *         console), State Manager applies the association at the next specified cron interval. For example, if you
+     *         chose the <code>Latest</code> version of an SSM document when you created an association and you edit the
+     *         association by choosing a different document version on the Documents page, State Manager applies the
+     *         association at the next specified cron interval if you previously selected this option. If this option
+     *         wasn't selected, State Manager immediately runs the association.
+     *         </p>
+     *         <p>
+     *         You can reset this option. To do so, specify the <code>no-apply-only-at-cron-interval</code> parameter
+     *         when you update the association from the command line. This parameter forces the association to run
+     *         immediately after updating it and according to the interval specified.
      */
 
     public Boolean isApplyOnlyAtCronInterval() {

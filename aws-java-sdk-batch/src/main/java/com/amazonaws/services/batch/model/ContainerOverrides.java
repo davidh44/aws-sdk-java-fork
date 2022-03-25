@@ -31,10 +31,10 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter
-     * that's set in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
-     * resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU
-     * requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
+     * that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on
+     * EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any
+     * vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
+     * vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
      * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
      * set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
@@ -46,12 +46,13 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified
-     * in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources,
-     * it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
-     * memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
-     * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
-     * set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a
+     * in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
+     * resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any
+     * memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To
+     * override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job
+     * definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with
+     * <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information,
+     * see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      * >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      * </p>
@@ -102,10 +103,10 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter
-     * that's set in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
-     * resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU
-     * requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
+     * that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on
+     * EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any
+     * vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
+     * vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
      * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
      * set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
@@ -114,14 +115,14 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
      * 
      * @param vcpus
      *        This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code>
-     *        parameter that's set in the job definition. It's not supported for jobs that run on Fargate resources. For
-     *        jobs run on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but
-     *        doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in the
-     *        job definition. To override vCPU requirements that are specified in the <code>resourceRequirements</code>
-     *        structure in the job definition, <code>resourceRequirements</code> must be specified in the
-     *        <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and <code>value</code> set
-     *        to the new value. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
+     *        parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For
+     *        jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition,
+     *        but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in
+     *        the job definition. To override vCPU requirements that are specified in the
+     *        <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must
+     *        be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and
+     *        <code>value</code> set to the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      *        >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      */
     @Deprecated
@@ -132,10 +133,10 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter
-     * that's set in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
-     * resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU
-     * requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
+     * that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on
+     * EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any
+     * vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
+     * vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
      * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
      * set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
@@ -143,8 +144,8 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @return This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code>
-     *         parameter that's set in the job definition. It's not supported for jobs that run on Fargate resources.
-     *         For jobs run on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition,
+     *         parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For
+     *         jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition,
      *         but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in
      *         the job definition. To override vCPU requirements that are specified in the
      *         <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must
@@ -161,10 +162,10 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code> parameter
-     * that's set in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
-     * resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any vCPU
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override vCPU
-     * requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
+     * that's set in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on
+     * EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but doesn't override any
+     * vCPU requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
+     * vCPU requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
      * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
      * set to <code>VCPU</code> and <code>value</code> set to the new value. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
@@ -173,14 +174,14 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
      * 
      * @param vcpus
      *        This parameter is deprecated, use <code>resourceRequirements</code> to override the <code>vcpus</code>
-     *        parameter that's set in the job definition. It's not supported for jobs that run on Fargate resources. For
-     *        jobs run on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition, but
-     *        doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in the
-     *        job definition. To override vCPU requirements that are specified in the <code>resourceRequirements</code>
-     *        structure in the job definition, <code>resourceRequirements</code> must be specified in the
-     *        <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and <code>value</code> set
-     *        to the new value. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
+     *        parameter that's set in the job definition. It's not supported for jobs running on Fargate resources. For
+     *        jobs running on EC2 resources, it overrides the <code>vcpus</code> parameter set in the job definition,
+     *        but doesn't override any vCPU requirement specified in the <code>resourceRequirements</code> structure in
+     *        the job definition. To override vCPU requirements that are specified in the
+     *        <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must
+     *        be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>VCPU</code> and
+     *        <code>value</code> set to the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      *        >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -193,26 +194,27 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified
-     * in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources,
-     * it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
-     * memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
-     * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
-     * set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a
+     * in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
+     * resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any
+     * memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To
+     * override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job
+     * definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with
+     * <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information,
+     * see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      * >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param memory
      *        This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements
-     *        specified in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run
-     *        on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't
-     *        override any memory requirement specified in the <code>resourceRequirements</code> structure in the job
-     *        definition. To override memory requirements that are specified in the <code>resourceRequirements</code>
-     *        structure in the job definition, <code>resourceRequirements</code> must be specified in the
-     *        <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code>
-     *        set to the new value. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
+     *        specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs
+     *        running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but
+     *        doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in
+     *        the job definition. To override memory requirements that are specified in the
+     *        <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must
+     *        be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and
+     *        <code>value</code> set to the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      *        >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      */
     @Deprecated
@@ -223,25 +225,26 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified
-     * in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources,
-     * it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
-     * memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
-     * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
-     * set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a
+     * in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
+     * resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any
+     * memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To
+     * override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job
+     * definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with
+     * <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information,
+     * see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      * >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @return This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements
-     *         specified in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run
-     *         on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't
-     *         override any memory requirement specified in the <code>resourceRequirements</code> structure in the job
-     *         definition. To override memory requirements that are specified in the <code>resourceRequirements</code>
-     *         structure in the job definition, <code>resourceRequirements</code> must be specified in the
-     *         <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code>
-     *         set to the new value. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
+     *         specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs
+     *         running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but
+     *         doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in
+     *         the job definition. To override memory requirements that are specified in the
+     *         <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must
+     *         be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and
+     *         <code>value</code> set to the new value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      *         >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      */
     @Deprecated
@@ -252,26 +255,27 @@ public class ContainerOverrides implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements specified
-     * in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources,
-     * it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any memory
-     * requirement specified in the <code>resourceRequirements</code> structure in the job definition. To override
-     * memory requirements that are specified in the <code>resourceRequirements</code> structure in the job definition,
-     * <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with <code>type</code>
-     * set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information, see <a
+     * in the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
+     * resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't override any
+     * memory requirement specified in the <code>resourceRequirements</code> structure in the job definition. To
+     * override memory requirements that are specified in the <code>resourceRequirements</code> structure in the job
+     * definition, <code>resourceRequirements</code> must be specified in the <code>SubmitJob</code> request, with
+     * <code>type</code> set to <code>MEMORY</code> and <code>value</code> set to the new value. For more information,
+     * see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      * >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param memory
      *        This parameter is deprecated, use <code>resourceRequirements</code> to override the memory requirements
-     *        specified in the job definition. It's not supported for jobs that run on Fargate resources. For jobs run
-     *        on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but doesn't
-     *        override any memory requirement specified in the <code>resourceRequirements</code> structure in the job
-     *        definition. To override memory requirements that are specified in the <code>resourceRequirements</code>
-     *        structure in the job definition, <code>resourceRequirements</code> must be specified in the
-     *        <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and <code>value</code>
-     *        set to the new value. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
+     *        specified in the job definition. It's not supported for jobs running on Fargate resources. For jobs
+     *        running on EC2 resources, it overrides the <code>memory</code> parameter set in the job definition, but
+     *        doesn't override any memory requirement specified in the <code>resourceRequirements</code> structure in
+     *        the job definition. To override memory requirements that are specified in the
+     *        <code>resourceRequirements</code> structure in the job definition, <code>resourceRequirements</code> must
+     *        be specified in the <code>SubmitJob</code> request, with <code>type</code> set to <code>MEMORY</code> and
+     *        <code>value</code> set to the new value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#override-resource-requirements"
      *        >Can't override job definition resource requirements</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

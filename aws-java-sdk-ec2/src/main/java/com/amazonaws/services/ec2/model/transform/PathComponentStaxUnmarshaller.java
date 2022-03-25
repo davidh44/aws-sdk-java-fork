@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.ec2.model.transform;
 
+import java.util.ArrayList;
+
 import javax.xml.stream.events.XMLEvent;
 import javax.annotation.Generated;
 
@@ -100,6 +102,26 @@ public class PathComponentStaxUnmarshaller implements Unmarshaller<PathComponent
 
                 if (context.testExpression("vpc", targetDepth)) {
                     pathComponent.setVpc(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("additionalDetailSet", targetDepth)) {
+                    pathComponent.withAdditionalDetails(new ArrayList<AdditionalDetail>());
+                    continue;
+                }
+
+                if (context.testExpression("additionalDetailSet/item", targetDepth)) {
+                    pathComponent.withAdditionalDetails(AdditionalDetailStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("transitGateway", targetDepth)) {
+                    pathComponent.setTransitGateway(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("transitGatewayRouteTableRoute", targetDepth)) {
+                    pathComponent.setTransitGatewayRouteTableRoute(TransitGatewayRouteTableRouteStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
             } else if (xmlEvent.isEndElement()) {

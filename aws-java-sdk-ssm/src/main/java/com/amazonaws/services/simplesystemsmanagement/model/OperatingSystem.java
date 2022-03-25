@@ -30,7 +30,8 @@ public enum OperatingSystem {
     ORACLE_LINUX("ORACLE_LINUX"),
     DEBIAN("DEBIAN"),
     MACOS("MACOS"),
-    RASPBIAN("RASPBIAN");
+    RASPBIAN("RASPBIAN"),
+    ROCKY_LINUX("ROCKY_LINUX");
 
     private String value;
 

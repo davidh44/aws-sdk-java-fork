@@ -34,7 +34,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
     private com.amazonaws.internal.SdkInternalList<String> networkInsightsPathIds;
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -154,7 +154,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -184,7 +184,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * 
-     * @return The filters. The following are possible values:</p>
+     * @return The filters. The following are the possible values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -222,7 +222,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -253,7 +253,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are possible values:</p>
+     *        The filters. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -293,7 +293,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -329,7 +329,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
      * </p>
      * 
      * @param filters
-     *        The filters. The following are possible values:</p>
+     *        The filters. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -371,7 +371,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The filters. The following are possible values:
+     * The filters. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -402,7 +402,7 @@ public class DescribeNetworkInsightsPathsRequest extends AmazonWebServiceRequest
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are possible values:</p>
+     *        The filters. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>

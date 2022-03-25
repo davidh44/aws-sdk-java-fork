@@ -98,6 +98,20 @@ public class PathComponent implements Serializable, Cloneable {
      * </p>
      */
     private AnalysisComponent vpc;
+    /**
+     * <p>
+     * The additional details.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<AdditionalDetail> additionalDetails;
+
+    private AnalysisComponent transitGateway;
+    /**
+     * <p>
+     * The route in a transit gateway route table.
+     * </p>
+     */
+    private TransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
 
     /**
      * <p>
@@ -580,6 +594,145 @@ public class PathComponent implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The additional details.
+     * </p>
+     * 
+     * @return The additional details.
+     */
+
+    public java.util.List<AdditionalDetail> getAdditionalDetails() {
+        if (additionalDetails == null) {
+            additionalDetails = new com.amazonaws.internal.SdkInternalList<AdditionalDetail>();
+        }
+        return additionalDetails;
+    }
+
+    /**
+     * <p>
+     * The additional details.
+     * </p>
+     * 
+     * @param additionalDetails
+     *        The additional details.
+     */
+
+    public void setAdditionalDetails(java.util.Collection<AdditionalDetail> additionalDetails) {
+        if (additionalDetails == null) {
+            this.additionalDetails = null;
+            return;
+        }
+
+        this.additionalDetails = new com.amazonaws.internal.SdkInternalList<AdditionalDetail>(additionalDetails);
+    }
+
+    /**
+     * <p>
+     * The additional details.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalDetails(java.util.Collection)} or {@link #withAdditionalDetails(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalDetails
+     *        The additional details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PathComponent withAdditionalDetails(AdditionalDetail... additionalDetails) {
+        if (this.additionalDetails == null) {
+            setAdditionalDetails(new com.amazonaws.internal.SdkInternalList<AdditionalDetail>(additionalDetails.length));
+        }
+        for (AdditionalDetail ele : additionalDetails) {
+            this.additionalDetails.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The additional details.
+     * </p>
+     * 
+     * @param additionalDetails
+     *        The additional details.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PathComponent withAdditionalDetails(java.util.Collection<AdditionalDetail> additionalDetails) {
+        setAdditionalDetails(additionalDetails);
+        return this;
+    }
+
+    /**
+     * @param transitGateway
+     */
+
+    public void setTransitGateway(AnalysisComponent transitGateway) {
+        this.transitGateway = transitGateway;
+    }
+
+    /**
+     * @return
+     */
+
+    public AnalysisComponent getTransitGateway() {
+        return this.transitGateway;
+    }
+
+    /**
+     * @param transitGateway
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PathComponent withTransitGateway(AnalysisComponent transitGateway) {
+        setTransitGateway(transitGateway);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The route in a transit gateway route table.
+     * </p>
+     * 
+     * @param transitGatewayRouteTableRoute
+     *        The route in a transit gateway route table.
+     */
+
+    public void setTransitGatewayRouteTableRoute(TransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
+        this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
+    }
+
+    /**
+     * <p>
+     * The route in a transit gateway route table.
+     * </p>
+     * 
+     * @return The route in a transit gateway route table.
+     */
+
+    public TransitGatewayRouteTableRoute getTransitGatewayRouteTableRoute() {
+        return this.transitGatewayRouteTableRoute;
+    }
+
+    /**
+     * <p>
+     * The route in a transit gateway route table.
+     * </p>
+     * 
+     * @param transitGatewayRouteTableRoute
+     *        The route in a transit gateway route table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PathComponent withTransitGatewayRouteTableRoute(TransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
+        setTransitGatewayRouteTableRoute(transitGatewayRouteTableRoute);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -614,7 +767,13 @@ public class PathComponent implements Serializable, Cloneable {
         if (getSubnet() != null)
             sb.append("Subnet: ").append(getSubnet()).append(",");
         if (getVpc() != null)
-            sb.append("Vpc: ").append(getVpc());
+            sb.append("Vpc: ").append(getVpc()).append(",");
+        if (getAdditionalDetails() != null)
+            sb.append("AdditionalDetails: ").append(getAdditionalDetails()).append(",");
+        if (getTransitGateway() != null)
+            sb.append("TransitGateway: ").append(getTransitGateway()).append(",");
+        if (getTransitGatewayRouteTableRoute() != null)
+            sb.append("TransitGatewayRouteTableRoute: ").append(getTransitGatewayRouteTableRoute());
         sb.append("}");
         return sb.toString();
     }
@@ -677,6 +836,19 @@ public class PathComponent implements Serializable, Cloneable {
             return false;
         if (other.getVpc() != null && other.getVpc().equals(this.getVpc()) == false)
             return false;
+        if (other.getAdditionalDetails() == null ^ this.getAdditionalDetails() == null)
+            return false;
+        if (other.getAdditionalDetails() != null && other.getAdditionalDetails().equals(this.getAdditionalDetails()) == false)
+            return false;
+        if (other.getTransitGateway() == null ^ this.getTransitGateway() == null)
+            return false;
+        if (other.getTransitGateway() != null && other.getTransitGateway().equals(this.getTransitGateway()) == false)
+            return false;
+        if (other.getTransitGatewayRouteTableRoute() == null ^ this.getTransitGatewayRouteTableRoute() == null)
+            return false;
+        if (other.getTransitGatewayRouteTableRoute() != null
+                && other.getTransitGatewayRouteTableRoute().equals(this.getTransitGatewayRouteTableRoute()) == false)
+            return false;
         return true;
     }
 
@@ -697,6 +869,9 @@ public class PathComponent implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSourceVpc() == null) ? 0 : getSourceVpc().hashCode());
         hashCode = prime * hashCode + ((getSubnet() == null) ? 0 : getSubnet().hashCode());
         hashCode = prime * hashCode + ((getVpc() == null) ? 0 : getVpc().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalDetails() == null) ? 0 : getAdditionalDetails().hashCode());
+        hashCode = prime * hashCode + ((getTransitGateway() == null) ? 0 : getTransitGateway().hashCode());
+        hashCode = prime * hashCode + ((getTransitGatewayRouteTableRoute() == null) ? 0 : getTransitGatewayRouteTableRoute().hashCode());
         return hashCode;
     }
 

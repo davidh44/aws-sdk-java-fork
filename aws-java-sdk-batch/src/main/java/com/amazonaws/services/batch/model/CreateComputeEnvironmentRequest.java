@@ -69,7 +69,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      * </p>
      * </note>
      */
@@ -468,7 +468,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      * </p>
      * </note>
      * 
@@ -477,7 +477,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      *        share scheduling to reserve vCPU capacity for new share identifiers. If this parameter isn't provided for
      *        a fair share job queue, no vCPU capacity is reserved.</p> <note>
      *        <p>
-     *        This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     *        This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      *        </p>
      */
 
@@ -493,7 +493,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      * </p>
      * </note>
      * 
@@ -501,7 +501,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      *         share scheduling to reserve vCPU capacity for new share identifiers. If this parameter isn't provided for
      *         a fair share job queue, no vCPU capacity is reserved.</p> <note>
      *         <p>
-     *         This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     *         This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      *         </p>
      */
 
@@ -517,7 +517,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      * </p>
      * </note>
      * 
@@ -526,7 +526,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      *        share scheduling to reserve vCPU capacity for new share identifiers. If this parameter isn't provided for
      *        a fair share job queue, no vCPU capacity is reserved.</p> <note>
      *        <p>
-     *        This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     *        This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

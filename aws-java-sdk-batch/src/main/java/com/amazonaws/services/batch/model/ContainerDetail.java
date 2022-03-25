@@ -55,8 +55,8 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     private Integer vcpus;
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
-     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs running on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>
+     * , the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      */
@@ -436,13 +436,13 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
-     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs running on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>
+     * , the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      * 
      * @param memory
-     *        For jobs run on EC2 resources that didn't specify memory requirements using
+     *        For jobs running on EC2 resources that didn't specify memory requirements using
      *        <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs,
      *        including all run on Fargate resources, see <code>resourceRequirements</code>.
      */
@@ -453,12 +453,12 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
-     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs running on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>
+     * , the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      * 
-     * @return For jobs run on EC2 resources that didn't specify memory requirements using
+     * @return For jobs running on EC2 resources that didn't specify memory requirements using
      *         <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs,
      *         including all run on Fargate resources, see <code>resourceRequirements</code>.
      */
@@ -469,13 +469,13 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
-     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs running on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>
+     * , the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      * 
      * @param memory
-     *        For jobs run on EC2 resources that didn't specify memory requirements using
+     *        For jobs running on EC2 resources that didn't specify memory requirements using
      *        <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs,
      *        including all run on Fargate resources, see <code>resourceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

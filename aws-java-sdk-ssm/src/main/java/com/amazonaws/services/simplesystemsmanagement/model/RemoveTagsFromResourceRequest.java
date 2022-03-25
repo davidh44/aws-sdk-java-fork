@@ -49,9 +49,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * MaintenanceWindow: mw-012345abcde
      * </p>
      * <p>
-     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
-     * </p>
-     * <p>
      * PatchBaseline: pb-012345abcde
      * </p>
      * <p>
@@ -224,9 +221,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * MaintenanceWindow: mw-012345abcde
      * </p>
      * <p>
-     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
-     * </p>
-     * <p>
      * PatchBaseline: pb-012345abcde
      * </p>
      * <p>
@@ -254,9 +248,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        <p>
      *        MaintenanceWindow: mw-012345abcde
-     *        </p>
-     *        <p>
-     *        <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
      *        </p>
      *        <p>
      *        PatchBaseline: pb-012345abcde
@@ -294,9 +285,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * MaintenanceWindow: mw-012345abcde
      * </p>
      * <p>
-     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
-     * </p>
-     * <p>
      * PatchBaseline: pb-012345abcde
      * </p>
      * <p>
@@ -323,9 +311,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      *         </p>
      *         <p>
      *         MaintenanceWindow: mw-012345abcde
-     *         </p>
-     *         <p>
-     *         <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
      *         </p>
      *         <p>
      *         PatchBaseline: pb-012345abcde
@@ -363,9 +348,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      * MaintenanceWindow: mw-012345abcde
      * </p>
      * <p>
-     * <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
-     * </p>
-     * <p>
      * PatchBaseline: pb-012345abcde
      * </p>
      * <p>
@@ -393,9 +375,6 @@ public class RemoveTagsFromResourceRequest extends com.amazonaws.AmazonWebServic
      *        </p>
      *        <p>
      *        MaintenanceWindow: mw-012345abcde
-     *        </p>
-     *        <p>
-     *        <code>Automation</code>: <code>example-c160-4567-8519-012345abcde</code>
      *        </p>
      *        <p>
      *        PatchBaseline: pb-012345abcde

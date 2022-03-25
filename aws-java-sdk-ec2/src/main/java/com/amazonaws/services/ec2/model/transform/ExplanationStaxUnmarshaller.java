@@ -304,6 +304,26 @@ public class ExplanationStaxUnmarshaller implements Unmarshaller<Explanation, St
                     explanation.setVpnGateway(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("transitGateway", targetDepth)) {
+                    explanation.setTransitGateway(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("transitGatewayRouteTable", targetDepth)) {
+                    explanation.setTransitGatewayRouteTable(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("transitGatewayRouteTableRoute", targetDepth)) {
+                    explanation.setTransitGatewayRouteTableRoute(TransitGatewayRouteTableRouteStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("transitGatewayAttachment", targetDepth)) {
+                    explanation.setTransitGatewayAttachment(AnalysisComponentStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return explanation;

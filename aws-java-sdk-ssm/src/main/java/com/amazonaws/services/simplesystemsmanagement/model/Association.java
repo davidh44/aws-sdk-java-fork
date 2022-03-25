@@ -55,7 +55,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
     private String associationVersion;
     /**
      * <p>
-     * The version of the document used in the association.
+     * The version of the document used in the association. If you change a document version for a State Manager
+     * association, Systems Manager immediately runs the association unless you previously specifed the
+     * <code>apply-only-at-cron-interval</code> parameter.
      * </p>
      * <important>
      * <p>
@@ -269,7 +271,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version of the document used in the association.
+     * The version of the document used in the association. If you change a document version for a State Manager
+     * association, Systems Manager immediately runs the association unless you previously specifed the
+     * <code>apply-only-at-cron-interval</code> parameter.
      * </p>
      * <important>
      * <p>
@@ -282,7 +286,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
      * </important>
      * 
      * @param documentVersion
-     *        The version of the document used in the association.</p> <important>
+     *        The version of the document used in the association. If you change a document version for a State Manager
+     *        association, Systems Manager immediately runs the association unless you previously specifed the
+     *        <code>apply-only-at-cron-interval</code> parameter.</p> <important>
      *        <p>
      *        State Manager doesn't support running associations that use a new version of a document if that document
      *        is shared from another account. State Manager always runs the <code>default</code> version of a document
@@ -298,7 +304,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version of the document used in the association.
+     * The version of the document used in the association. If you change a document version for a State Manager
+     * association, Systems Manager immediately runs the association unless you previously specifed the
+     * <code>apply-only-at-cron-interval</code> parameter.
      * </p>
      * <important>
      * <p>
@@ -310,7 +318,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </important>
      * 
-     * @return The version of the document used in the association.</p> <important>
+     * @return The version of the document used in the association. If you change a document version for a State Manager
+     *         association, Systems Manager immediately runs the association unless you previously specifed the
+     *         <code>apply-only-at-cron-interval</code> parameter.</p> <important>
      *         <p>
      *         State Manager doesn't support running associations that use a new version of a document if that document
      *         is shared from another account. State Manager always runs the <code>default</code> version of a document
@@ -326,7 +336,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version of the document used in the association.
+     * The version of the document used in the association. If you change a document version for a State Manager
+     * association, Systems Manager immediately runs the association unless you previously specifed the
+     * <code>apply-only-at-cron-interval</code> parameter.
      * </p>
      * <important>
      * <p>
@@ -339,7 +351,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
      * </important>
      * 
      * @param documentVersion
-     *        The version of the document used in the association.</p> <important>
+     *        The version of the document used in the association. If you change a document version for a State Manager
+     *        association, Systems Manager immediately runs the association unless you previously specifed the
+     *        <code>apply-only-at-cron-interval</code> parameter.</p> <important>
      *        <p>
      *        State Manager doesn't support running associations that use a new version of a document if that document
      *        is shared from another account. State Manager always runs the <code>default</code> version of a document

@@ -1,3 +1,16 @@
+# __1.12.186__ __2022-03-25__
+## __AWS Batch__
+  - ### Features
+    - Bug Fix: Fixed a bug where shapes were marked as unboxed and were not serialized and sent over the wire, causing an API error from the service.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This is release adds support for Amazon VPC Reachability Analyzer to analyze path through a Transit Gateway.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - This Patch Manager release supports creating, updating, and deleting Patch Baselines for Rocky Linux OS.
+
 # __1.12.185__ __2022-03-24__
 ## __AWS Config__
   - ### Features

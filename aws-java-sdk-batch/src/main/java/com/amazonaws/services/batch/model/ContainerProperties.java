@@ -47,6 +47,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     * <code>registry/repository[@digest]</code> naming conventions. For example,
+     * <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Images in Amazon ECR repositories use the full registry and repository URI (for example,
      * <code>012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;</code>).
      * </p>
@@ -75,7 +82,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
-     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
@@ -91,7 +98,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
-     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
      * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
      * hard limit can be specified in several places. It must be specified for each node at least once.
@@ -317,6 +324,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     * <code>registry/repository[@digest]</code> naming conventions. For example,
+     * <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Images in Amazon ECR repositories use the full registry and repository URI (for example,
      * <code>012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;</code>).
      * </p>
@@ -356,6 +370,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      *        </p>
      *        </note>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     *        <code>registry/repository[@digest]</code> naming conventions. For example,
+     *        <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        Images in Amazon ECR repositories use the full registry and repository URI (for example,
@@ -405,6 +426,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     * <code>registry/repository[@digest]</code> naming conventions. For example,
+     * <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Images in Amazon ECR repositories use the full registry and repository URI (for example,
      * <code>012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;</code>).
      * </p>
@@ -443,6 +471,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      *         </p>
      *         </note>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     *         <code>registry/repository[@digest]</code> naming conventions. For example,
+     *         <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         Images in Amazon ECR repositories use the full registry and repository URI (for example,
@@ -492,6 +527,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
+     * Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     * <code>registry/repository[@digest]</code> naming conventions. For example,
+     * <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Images in Amazon ECR repositories use the full registry and repository URI (for example,
      * <code>012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;</code>).
      * </p>
@@ -533,6 +575,13 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
+     *        Images in Amazon ECR Public repositories use the full <code>registry/repository[:tag]</code> or
+     *        <code>registry/repository[@digest]</code> naming conventions. For example,
+     *        <code>public.ecr.aws/<i>registry_alias</i>/<i>my-web-app</i>:<i>latest</i> </code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        Images in Amazon ECR repositories use the full registry and repository URI (for example,
      *        <code>012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;</code>).
      *        </p>
@@ -566,7 +615,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
-     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
@@ -579,7 +628,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * 
      * @param vcpus
      *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for
-     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
      *        resources, it specifies the number of vCPUs reserved for the job.</p>
      *        <p>
      *        Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
@@ -597,7 +646,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
-     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
@@ -609,7 +658,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @return This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for
-     *         the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *         the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
      *         resources, it specifies the number of vCPUs reserved for the job.</p>
      *         <p>
      *         Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
@@ -627,7 +676,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
-     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
@@ -640,7 +689,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * 
      * @param vcpus
      *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for
-     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
      *        resources, it specifies the number of vCPUs reserved for the job.</p>
      *        <p>
      *        Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
@@ -660,7 +709,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
-     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
      * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
      * hard limit can be specified in several places. It must be specified for each node at least once.
@@ -668,7 +717,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * 
      * @param memory
      *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for
-     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
      *        resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to
      *        exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using
      *        this parameter. The memory hard limit can be specified in several places. It must be specified for each
@@ -682,14 +731,14 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
-     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
      * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
      * hard limit can be specified in several places. It must be specified for each node at least once.
      * </p>
      * 
      * @return This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements
-     *         for the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *         for the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
      *         resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to
      *         exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using
      *         this parameter. The memory hard limit can be specified in several places. It must be specified for each
@@ -703,7 +752,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
-     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2 resources, it
      * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
      * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
      * hard limit can be specified in several places. It must be specified for each node at least once.
@@ -711,7 +760,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * 
      * @param memory
      *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for
-     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        the job definition. It's not supported for jobs running on Fargate resources. For jobs running on EC2
      *        resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to
      *        exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using
      *        this parameter. The memory hard limit can be specified in several places. It must be specified for each

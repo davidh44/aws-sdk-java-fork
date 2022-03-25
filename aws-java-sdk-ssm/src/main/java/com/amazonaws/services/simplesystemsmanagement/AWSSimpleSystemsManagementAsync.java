@@ -88,10 +88,10 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
     /**
      * <p>
      * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your
-     * automations, documents, managed nodes, maintenance windows, Parameter Store parameters, and patch baselines. Tags
-     * enable you to categorize your resources in different ways, for example, by purpose, owner, or environment. Each
-     * tag consists of a key and an optional value, both of which you define. For example, you could define a set of
-     * tags for your account's managed nodes that helps you track each node's owner and stack level. For example:
+     * documents, managed nodes, maintenance windows, Parameter Store parameters, and patch baselines. Tags enable you
+     * to categorize your resources in different ways, for example, by purpose, owner, or environment. Each tag consists
+     * of a key and an optional value, both of which you define. For example, you could define a set of tags for your
+     * account's managed nodes that helps you track each node's owner and stack level. For example:
      * </p>
      * <ul>
      * <li>
@@ -126,7 +126,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </li>
      * </ul>
      * <p>
-     * Most resources can have a maximum of 50 tags. Automations can have a maximum of 5 tags.
+     * Each resource can have a maximum of 50 tags.
      * </p>
      * <p>
      * We recommend that you devise a set of tag keys that meets your needs for each resource type. Using a consistent
@@ -151,10 +151,10 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
     /**
      * <p>
      * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your
-     * automations, documents, managed nodes, maintenance windows, Parameter Store parameters, and patch baselines. Tags
-     * enable you to categorize your resources in different ways, for example, by purpose, owner, or environment. Each
-     * tag consists of a key and an optional value, both of which you define. For example, you could define a set of
-     * tags for your account's managed nodes that helps you track each node's owner and stack level. For example:
+     * documents, managed nodes, maintenance windows, Parameter Store parameters, and patch baselines. Tags enable you
+     * to categorize your resources in different ways, for example, by purpose, owner, or environment. Each tag consists
+     * of a key and an optional value, both of which you define. For example, you could define a set of tags for your
+     * account's managed nodes that helps you track each node's owner and stack level. For example:
      * </p>
      * <ul>
      * <li>
@@ -189,7 +189,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </li>
      * </ul>
      * <p>
-     * Most resources can have a maximum of 50 tags. Automations can have a maximum of 5 tags.
+     * Each resource can have a maximum of 50 tags.
      * </p>
      * <p>
      * We recommend that you devise a set of tag keys that meets your needs for each resource type. Using a consistent
@@ -3112,7 +3112,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Lists the tasks in a maintenance window.
+     * Retrieves the details of a maintenance window task.
      * </p>
      * <note>
      * <p>
@@ -3122,6 +3122,10 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * ignored.
      * </p>
      * </note>
+     * <p>
+     * To retrieve a list of tasks in a maintenance window, instead use the <a>DescribeMaintenanceWindowTasks</a>
+     * command.
+     * </p>
      * 
      * @param getMaintenanceWindowTaskRequest
      * @return A Java Future containing the result of the GetMaintenanceWindowTask operation returned by the service.
@@ -3133,7 +3137,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Lists the tasks in a maintenance window.
+     * Retrieves the details of a maintenance window task.
      * </p>
      * <note>
      * <p>
@@ -3143,6 +3147,10 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * ignored.
      * </p>
      * </note>
+     * <p>
+     * To retrieve a list of tasks in a maintenance window, instead use the <a>DescribeMaintenanceWindowTasks</a>
+     * command.
+     * </p>
      * 
      * @param getMaintenanceWindowTaskRequest
      * @param asyncHandler
@@ -5326,6 +5334,12 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * Set the default version of a document.
      * </p>
+     * <note>
+     * <p>
+     * If you change a document version for a State Manager association, Systems Manager immediately runs the
+     * association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     * </p>
+     * </note>
      * 
      * @param updateDocumentDefaultVersionRequest
      * @return A Java Future containing the result of the UpdateDocumentDefaultVersion operation returned by the
@@ -5341,6 +5355,12 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * Set the default version of a document.
      * </p>
+     * <note>
+     * <p>
+     * If you change a document version for a State Manager association, Systems Manager immediately runs the
+     * association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     * </p>
+     * </note>
      * 
      * @param updateDocumentDefaultVersionRequest
      * @param asyncHandler

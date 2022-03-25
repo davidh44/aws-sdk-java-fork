@@ -64,6 +64,12 @@ public class UpdateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * version of the document. You can specify the version number of the latest version or use the <code>$LATEST</code>
      * variable.
      * </p>
+     * <note>
+     * <p>
+     * If you change a document version for a State Manager association, Systems Manager immediately runs the
+     * association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     * </p>
+     * </note>
      */
     private String documentVersion;
     /**
@@ -337,11 +343,21 @@ public class UpdateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * version of the document. You can specify the version number of the latest version or use the <code>$LATEST</code>
      * variable.
      * </p>
+     * <note>
+     * <p>
+     * If you change a document version for a State Manager association, Systems Manager immediately runs the
+     * association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     * </p>
+     * </note>
      * 
      * @param documentVersion
      *        The version of the document that you want to update. Currently, Systems Manager supports updating only the
      *        latest version of the document. You can specify the version number of the latest version or use the
-     *        <code>$LATEST</code> variable.
+     *        <code>$LATEST</code> variable.</p> <note>
+     *        <p>
+     *        If you change a document version for a State Manager association, Systems Manager immediately runs the
+     *        association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     *        </p>
      */
 
     public void setDocumentVersion(String documentVersion) {
@@ -354,10 +370,20 @@ public class UpdateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * version of the document. You can specify the version number of the latest version or use the <code>$LATEST</code>
      * variable.
      * </p>
+     * <note>
+     * <p>
+     * If you change a document version for a State Manager association, Systems Manager immediately runs the
+     * association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     * </p>
+     * </note>
      * 
      * @return The version of the document that you want to update. Currently, Systems Manager supports updating only
      *         the latest version of the document. You can specify the version number of the latest version or use the
-     *         <code>$LATEST</code> variable.
+     *         <code>$LATEST</code> variable.</p> <note>
+     *         <p>
+     *         If you change a document version for a State Manager association, Systems Manager immediately runs the
+     *         association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     *         </p>
      */
 
     public String getDocumentVersion() {
@@ -370,11 +396,21 @@ public class UpdateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * version of the document. You can specify the version number of the latest version or use the <code>$LATEST</code>
      * variable.
      * </p>
+     * <note>
+     * <p>
+     * If you change a document version for a State Manager association, Systems Manager immediately runs the
+     * association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     * </p>
+     * </note>
      * 
      * @param documentVersion
      *        The version of the document that you want to update. Currently, Systems Manager supports updating only the
      *        latest version of the document. You can specify the version number of the latest version or use the
-     *        <code>$LATEST</code> variable.
+     *        <code>$LATEST</code> variable.</p> <note>
+     *        <p>
+     *        If you change a document version for a State Manager association, Systems Manager immediately runs the
+     *        association unless you previously specifed the <code>apply-only-at-cron-interval</code> parameter.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

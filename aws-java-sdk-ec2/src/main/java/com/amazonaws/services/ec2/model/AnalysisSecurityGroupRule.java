@@ -34,7 +34,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
     private String cidr;
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -117,7 +117,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -133,7 +133,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
      * </ul>
      * 
      * @param direction
-     *        The direction. The following are possible values:</p>
+     *        The direction. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -153,7 +153,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -168,7 +168,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return The direction. The following are possible values:</p>
+     * @return The direction. The following are the possible values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -188,7 +188,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The direction. The following are possible values:
+     * The direction. The following are the possible values:
      * </p>
      * <ul>
      * <li>
@@ -204,7 +204,7 @@ public class AnalysisSecurityGroupRule implements Serializable, Cloneable {
      * </ul>
      * 
      * @param direction
-     *        The direction. The following are possible values:</p>
+     *        The direction. The following are the possible values:</p>
      *        <ul>
      *        <li>
      *        <p>
