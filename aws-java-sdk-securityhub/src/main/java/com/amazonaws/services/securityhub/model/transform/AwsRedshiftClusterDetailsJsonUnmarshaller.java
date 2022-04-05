@@ -242,6 +242,10 @@ public class AwsRedshiftClusterDetailsJsonUnmarshaller implements Unmarshaller<A
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("LoggingStatus", targetDepth)) {
+                    context.nextToken();
+                    awsRedshiftClusterDetails.setLoggingStatus(AwsRedshiftClusterLoggingStatusJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -81,6 +81,12 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
      * </p>
      */
     private AwsCodeBuildProjectVpcConfig vpcConfig;
+    /**
+     * <p>
+     * Information about the secondary artifacts for the CodeBuild project.
+     * </p>
+     */
+    private java.util.List<AwsCodeBuildProjectArtifactsDetails> secondaryArtifacts;
 
     /**
      * <p>
@@ -460,6 +466,76 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Information about the secondary artifacts for the CodeBuild project.
+     * </p>
+     * 
+     * @return Information about the secondary artifacts for the CodeBuild project.
+     */
+
+    public java.util.List<AwsCodeBuildProjectArtifactsDetails> getSecondaryArtifacts() {
+        return secondaryArtifacts;
+    }
+
+    /**
+     * <p>
+     * Information about the secondary artifacts for the CodeBuild project.
+     * </p>
+     * 
+     * @param secondaryArtifacts
+     *        Information about the secondary artifacts for the CodeBuild project.
+     */
+
+    public void setSecondaryArtifacts(java.util.Collection<AwsCodeBuildProjectArtifactsDetails> secondaryArtifacts) {
+        if (secondaryArtifacts == null) {
+            this.secondaryArtifacts = null;
+            return;
+        }
+
+        this.secondaryArtifacts = new java.util.ArrayList<AwsCodeBuildProjectArtifactsDetails>(secondaryArtifacts);
+    }
+
+    /**
+     * <p>
+     * Information about the secondary artifacts for the CodeBuild project.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSecondaryArtifacts(java.util.Collection)} or {@link #withSecondaryArtifacts(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param secondaryArtifacts
+     *        Information about the secondary artifacts for the CodeBuild project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectDetails withSecondaryArtifacts(AwsCodeBuildProjectArtifactsDetails... secondaryArtifacts) {
+        if (this.secondaryArtifacts == null) {
+            setSecondaryArtifacts(new java.util.ArrayList<AwsCodeBuildProjectArtifactsDetails>(secondaryArtifacts.length));
+        }
+        for (AwsCodeBuildProjectArtifactsDetails ele : secondaryArtifacts) {
+            this.secondaryArtifacts.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the secondary artifacts for the CodeBuild project.
+     * </p>
+     * 
+     * @param secondaryArtifacts
+     *        Information about the secondary artifacts for the CodeBuild project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectDetails withSecondaryArtifacts(java.util.Collection<AwsCodeBuildProjectArtifactsDetails> secondaryArtifacts) {
+        setSecondaryArtifacts(secondaryArtifacts);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -486,7 +562,9 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
         if (getLogsConfig() != null)
             sb.append("LogsConfig: ").append(getLogsConfig()).append(",");
         if (getVpcConfig() != null)
-            sb.append("VpcConfig: ").append(getVpcConfig());
+            sb.append("VpcConfig: ").append(getVpcConfig()).append(",");
+        if (getSecondaryArtifacts() != null)
+            sb.append("SecondaryArtifacts: ").append(getSecondaryArtifacts());
         sb.append("}");
         return sb.toString();
     }
@@ -533,6 +611,10 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
             return false;
         if (other.getVpcConfig() != null && other.getVpcConfig().equals(this.getVpcConfig()) == false)
             return false;
+        if (other.getSecondaryArtifacts() == null ^ this.getSecondaryArtifacts() == null)
+            return false;
+        if (other.getSecondaryArtifacts() != null && other.getSecondaryArtifacts().equals(this.getSecondaryArtifacts()) == false)
+            return false;
         return true;
     }
 
@@ -549,6 +631,7 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getServiceRole() == null) ? 0 : getServiceRole().hashCode());
         hashCode = prime * hashCode + ((getLogsConfig() == null) ? 0 : getLogsConfig().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
+        hashCode = prime * hashCode + ((getSecondaryArtifacts() == null) ? 0 : getSecondaryArtifacts().hashCode());
         return hashCode;
     }
 

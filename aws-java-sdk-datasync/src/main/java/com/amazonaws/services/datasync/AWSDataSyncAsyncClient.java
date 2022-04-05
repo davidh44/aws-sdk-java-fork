@@ -212,6 +212,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(CreateLocationFsxOpenZfsRequest request) {
+
+        return createLocationFsxOpenZfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(final CreateLocationFsxOpenZfsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLocationFsxOpenZfsRequest, CreateLocationFsxOpenZfsResult> asyncHandler) {
+        final CreateLocationFsxOpenZfsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLocationFsxOpenZfsResult>() {
+            @Override
+            public CreateLocationFsxOpenZfsResult call() throws Exception {
+                CreateLocationFsxOpenZfsResult result = null;
+
+                try {
+                    result = executeCreateLocationFsxOpenZfs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLocationFsxWindowsResult> createLocationFsxWindowsAsync(CreateLocationFsxWindowsRequest request) {
 
         return createLocationFsxWindowsAsync(request, null);
@@ -625,6 +658,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
 
                 try {
                     result = executeDescribeLocationFsxLustre(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxOpenZfsResult> describeLocationFsxOpenZfsAsync(DescribeLocationFsxOpenZfsRequest request) {
+
+        return describeLocationFsxOpenZfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxOpenZfsResult> describeLocationFsxOpenZfsAsync(final DescribeLocationFsxOpenZfsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxOpenZfsRequest, DescribeLocationFsxOpenZfsResult> asyncHandler) {
+        final DescribeLocationFsxOpenZfsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLocationFsxOpenZfsResult>() {
+            @Override
+            public DescribeLocationFsxOpenZfsResult call() throws Exception {
+                DescribeLocationFsxOpenZfsResult result = null;
+
+                try {
+                    result = executeDescribeLocationFsxOpenZfs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

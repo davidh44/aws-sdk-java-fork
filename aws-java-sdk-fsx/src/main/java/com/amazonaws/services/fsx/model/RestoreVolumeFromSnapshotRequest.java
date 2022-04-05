@@ -52,8 +52,8 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned volumes
-     * and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate snapshots. If
+     * there are any dependent clone volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
      * </p>
      * </li>
      * </ul>
@@ -180,8 +180,8 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned volumes
-     * and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate snapshots. If
+     * there are any dependent clone volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
      * </p>
      * </li>
      * </ul>
@@ -197,8 +197,9 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned
-     *         volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     *         <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate
+     *         snapshots. If there are any dependent clone volumes and this option isn't used,
+     *         <code>RestoreVolumeFromSnapshot</code> fails.
      *         </p>
      *         </li>
      * @see RestoreOpenZFSVolumeOption
@@ -222,8 +223,8 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned volumes
-     * and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate snapshots. If
+     * there are any dependent clone volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
      * </p>
      * </li>
      * </ul>
@@ -240,8 +241,9 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned
-     *        volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate
+     *        snapshots. If there are any dependent clone volumes and this option isn't used,
+     *        <code>RestoreVolumeFromSnapshot</code> fails.
      *        </p>
      *        </li>
      * @see RestoreOpenZFSVolumeOption
@@ -270,8 +272,8 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned volumes
-     * and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate snapshots. If
+     * there are any dependent clone volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
      * </p>
      * </li>
      * </ul>
@@ -293,8 +295,9 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned
-     *        volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate
+     *        snapshots. If there are any dependent clone volumes and this option isn't used,
+     *        <code>RestoreVolumeFromSnapshot</code> fails.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -325,8 +328,8 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned volumes
-     * and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate snapshots. If
+     * there are any dependent clone volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
      * </p>
      * </li>
      * </ul>
@@ -343,8 +346,9 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned
-     *        volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate
+     *        snapshots. If there are any dependent clone volumes and this option isn't used,
+     *        <code>RestoreVolumeFromSnapshot</code> fails.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -370,8 +374,8 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned volumes
-     * and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     * <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate snapshots. If
+     * there are any dependent clone volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
      * </p>
      * </li>
      * </ul>
@@ -388,8 +392,9 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any volumes cloned from this volume. If there are any cloned
-     *        volumes and this option isn't used, <code>RestoreVolumeFromSnapshot</code> fails.
+     *        <code>DELETE_CLONED_VOLUMES</code> - Deletes any dependent clone volumes created from intermediate
+     *        snapshots. If there are any dependent clone volumes and this option isn't used,
+     *        <code>RestoreVolumeFromSnapshot</code> fails.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

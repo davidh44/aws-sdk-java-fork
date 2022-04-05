@@ -153,6 +153,8 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsNetworkFirewallFirewall").build();
     private static final MarshallingInfo<StructuredPojo> AWSNETWORKFIREWALLRULEGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsNetworkFirewallRuleGroup").build();
+    private static final MarshallingInfo<StructuredPojo> AWSRDSDBSECURITYGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsRdsDbSecurityGroup").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -232,6 +234,7 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsNetworkFirewallFirewallPolicy(), AWSNETWORKFIREWALLFIREWALLPOLICY_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsNetworkFirewallFirewall(), AWSNETWORKFIREWALLFIREWALL_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsNetworkFirewallRuleGroup(), AWSNETWORKFIREWALLRULEGROUP_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsRdsDbSecurityGroup(), AWSRDSDBSECURITYGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

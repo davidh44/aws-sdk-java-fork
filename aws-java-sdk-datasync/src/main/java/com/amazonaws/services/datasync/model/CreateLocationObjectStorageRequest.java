@@ -31,7 +31,7 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this host name to mount the object storage server in a network.
+     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
      * </p>
      */
     private String serverHostname;
@@ -94,13 +94,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this host name to mount the object storage server in a network.
+     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
      * </p>
      * 
      * @param serverHostname
      *        The name of the self-managed object storage server. This value is the IP address or Domain Name Service
-     *        (DNS) name of the object storage server. An agent uses this host name to mount the object storage server
-     *        in a network.
+     *        (DNS) name of the object storage server. An agent uses this hostname to mount the object storage server in
+     *        a network.
      */
 
     public void setServerHostname(String serverHostname) {
@@ -110,11 +110,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this host name to mount the object storage server in a network.
+     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
      * </p>
      * 
      * @return The name of the self-managed object storage server. This value is the IP address or Domain Name Service
-     *         (DNS) name of the object storage server. An agent uses this host name to mount the object storage server
+     *         (DNS) name of the object storage server. An agent uses this hostname to mount the object storage server
      *         in a network.
      */
 
@@ -125,13 +125,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this host name to mount the object storage server in a network.
+     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
      * </p>
      * 
      * @param serverHostname
      *        The name of the self-managed object storage server. This value is the IP address or Domain Name Service
-     *        (DNS) name of the object storage server. An agent uses this host name to mount the object storage server
-     *        in a network.
+     *        (DNS) name of the object storage server. An agent uses this hostname to mount the object storage server in
+     *        a network.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

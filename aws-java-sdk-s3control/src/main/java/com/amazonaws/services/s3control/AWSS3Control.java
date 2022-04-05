@@ -2374,7 +2374,7 @@ public interface AWSS3Control {
      * <ul>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreatJob</a>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
      * </p>
      * </li>
      * <li>

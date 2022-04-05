@@ -59,7 +59,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS server. An
-     * agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     * agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      * </p>
      * <p>
      * If you are copying data to or from your Snowcone device, see <a
@@ -279,7 +279,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS server. An
-     * agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     * agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      * </p>
      * <p>
      * If you are copying data to or from your Snowcone device, see <a
@@ -294,7 +294,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param serverHostname
      *        The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS
-     *        server. An agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     *        server. An agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      *        </p>
      *        <p>
      *        If you are copying data to or from your Snowcone device, see <a
@@ -314,7 +314,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS server. An
-     * agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     * agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      * </p>
      * <p>
      * If you are copying data to or from your Snowcone device, see <a
@@ -328,7 +328,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @return The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS
-     *         server. An agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     *         server. An agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      *         </p>
      *         <p>
      *         If you are copying data to or from your Snowcone device, see <a
@@ -348,7 +348,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS server. An
-     * agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     * agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      * </p>
      * <p>
      * If you are copying data to or from your Snowcone device, see <a
@@ -363,7 +363,7 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param serverHostname
      *        The name of the NFS server. This value is the IP address or Domain Name Service (DNS) name of the NFS
-     *        server. An agent that is installed on-premises uses this host name to mount the NFS server in a network.
+     *        server. An agent that is installed on-premises uses this hostname to mount the NFS server in a network.
      *        </p>
      *        <p>
      *        If you are copying data to or from your Snowcone device, see <a

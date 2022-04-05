@@ -51,7 +51,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
-     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * values are 128, 256, 512, 1024, or 2048 MB/s.
      * </p>
      */
     private Integer throughputCapacity;
@@ -238,12 +238,12 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
-     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * values are 128, 256, 512, 1024, or 2048 MB/s.
      * </p>
      * 
      * @param throughputCapacity
      *        Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps).
-     *        Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     *        Valid values are 128, 256, 512, 1024, or 2048 MB/s.
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -253,11 +253,11 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
-     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * values are 128, 256, 512, 1024, or 2048 MB/s.
      * </p>
      * 
      * @return Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps).
-     *         Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     *         Valid values are 128, 256, 512, 1024, or 2048 MB/s.
      */
 
     public Integer getThroughputCapacity() {
@@ -267,12 +267,12 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
-     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * values are 128, 256, 512, 1024, or 2048 MB/s.
      * </p>
      * 
      * @param throughputCapacity
      *        Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps).
-     *        Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     *        Valid values are 128, 256, 512, 1024, or 2048 MB/s.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

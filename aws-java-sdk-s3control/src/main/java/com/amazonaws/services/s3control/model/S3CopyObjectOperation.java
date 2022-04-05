@@ -71,7 +71,7 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
      * </p>
      */
     private String targetKeyPrefix;
@@ -664,12 +664,13 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
      * </p>
      * 
      * @param targetKeyPrefix
      *        Specifies the folder prefix into which you would like the objects to be copied. For example, to copy
-     *        objects into a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     *        objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to
+     *        <code>Folder1</code>.
      */
 
     public void setTargetKeyPrefix(String targetKeyPrefix) {
@@ -679,11 +680,12 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
      * </p>
      * 
      * @return Specifies the folder prefix into which you would like the objects to be copied. For example, to copy
-     *         objects into a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     *         objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to
+     *         <code>Folder1</code>.
      */
 
     public String getTargetKeyPrefix() {
@@ -693,12 +695,13 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
      * </p>
      * 
      * @param targetKeyPrefix
      *        Specifies the folder prefix into which you would like the objects to be copied. For example, to copy
-     *        objects into a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
+     *        objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to
+     *        <code>Folder1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

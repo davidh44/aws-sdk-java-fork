@@ -16,14 +16,15 @@ package com.amazonaws.auth;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.SDKGlobalConfiguration;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.ThreadFactory;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Credentials provider implementation that loads credentials from the Amazon EC2 Instance Metadata Service.

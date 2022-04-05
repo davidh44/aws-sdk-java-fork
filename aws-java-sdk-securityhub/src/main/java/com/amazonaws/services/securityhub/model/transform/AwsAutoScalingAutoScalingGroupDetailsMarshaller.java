@@ -42,6 +42,10 @@ public class AwsAutoScalingAutoScalingGroupDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MixedInstancesPolicy").build();
     private static final MarshallingInfo<List> AVAILABILITYZONES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AvailabilityZones").build();
+    private static final MarshallingInfo<StructuredPojo> LAUNCHTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LaunchTemplate").build();
+    private static final MarshallingInfo<Boolean> CAPACITYREBALANCE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CapacityRebalance").build();
 
     private static final AwsAutoScalingAutoScalingGroupDetailsMarshaller instance = new AwsAutoScalingAutoScalingGroupDetailsMarshaller();
 
@@ -66,6 +70,8 @@ public class AwsAutoScalingAutoScalingGroupDetailsMarshaller {
             protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getCreatedTime(), CREATEDTIME_BINDING);
             protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getMixedInstancesPolicy(), MIXEDINSTANCESPOLICY_BINDING);
             protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getAvailabilityZones(), AVAILABILITYZONES_BINDING);
+            protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getLaunchTemplate(), LAUNCHTEMPLATE_BINDING);
+            protocolMarshaller.marshall(awsAutoScalingAutoScalingGroupDetails.getCapacityRebalance(), CAPACITYREBALANCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

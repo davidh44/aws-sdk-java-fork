@@ -44,6 +44,8 @@ public class AwsCodeBuildProjectDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogsConfig").build();
     private static final MarshallingInfo<StructuredPojo> VPCCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfig").build();
+    private static final MarshallingInfo<List> SECONDARYARTIFACTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecondaryArtifacts").build();
 
     private static final AwsCodeBuildProjectDetailsMarshaller instance = new AwsCodeBuildProjectDetailsMarshaller();
 
@@ -69,6 +71,7 @@ public class AwsCodeBuildProjectDetailsMarshaller {
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getServiceRole(), SERVICEROLE_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getLogsConfig(), LOGSCONFIG_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getVpcConfig(), VPCCONFIG_BINDING);
+            protocolMarshaller.marshall(awsCodeBuildProjectDetails.getSecondaryArtifacts(), SECONDARYARTIFACTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

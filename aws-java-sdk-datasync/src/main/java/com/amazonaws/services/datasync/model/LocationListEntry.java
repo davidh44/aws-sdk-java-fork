@@ -50,12 +50,12 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      * </p>
      * <p>
-     * TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     * TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      * </p>
      * <p>
      * GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS is
      * <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as <code>myBucket</code>.
-     * An example for NFS is a valid IPv4 address or a host name compliant with Domain Name Service (DNS).
+     * An example for NFS is a valid IPv4 address or a hostname that is compliant with Domain Name Service (DNS).
      * </p>
      * <p>
      * SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and Amazon
@@ -129,12 +129,12 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      * </p>
      * <p>
-     * TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     * TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      * </p>
      * <p>
      * GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS is
      * <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as <code>myBucket</code>.
-     * An example for NFS is a valid IPv4 address or a host name compliant with Domain Name Service (DNS).
+     * An example for NFS is a valid IPv4 address or a hostname that is compliant with Domain Name Service (DNS).
      * </p>
      * <p>
      * SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and Amazon
@@ -153,13 +153,13 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      *        Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      *        </p>
      *        <p>
-     *        TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     *        TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      *        </p>
      *        <p>
      *        GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS is
      *        <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as
-     *        <code>myBucket</code>. An example for NFS is a valid IPv4 address or a host name compliant with Domain
-     *        Name Service (DNS).
+     *        <code>myBucket</code>. An example for NFS is a valid IPv4 address or a hostname that is compliant with
+     *        Domain Name Service (DNS).
      *        </p>
      *        <p>
      *        SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and
@@ -183,12 +183,12 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      * </p>
      * <p>
-     * TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     * TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      * </p>
      * <p>
      * GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS is
      * <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as <code>myBucket</code>.
-     * An example for NFS is a valid IPv4 address or a host name compliant with Domain Name Service (DNS).
+     * An example for NFS is a valid IPv4 address or a hostname that is compliant with Domain Name Service (DNS).
      * </p>
      * <p>
      * SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and Amazon
@@ -206,13 +206,13 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      *         Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      *         </p>
      *         <p>
-     *         TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     *         TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      *         </p>
      *         <p>
      *         GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS
      *         is <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as
-     *         <code>myBucket</code>. An example for NFS is a valid IPv4 address or a host name compliant with Domain
-     *         Name Service (DNS).
+     *         <code>myBucket</code>. An example for NFS is a valid IPv4 address or a hostname that is compliant with
+     *         Domain Name Service (DNS).
      *         </p>
      *         <p>
      *         SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and
@@ -236,12 +236,12 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      * Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      * </p>
      * <p>
-     * TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     * TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      * </p>
      * <p>
      * GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS is
      * <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as <code>myBucket</code>.
-     * An example for NFS is a valid IPv4 address or a host name compliant with Domain Name Service (DNS).
+     * An example for NFS is a valid IPv4 address or a hostname that is compliant with Domain Name Service (DNS).
      * </p>
      * <p>
      * SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and Amazon
@@ -260,13 +260,13 @@ public class LocationListEntry implements Serializable, Cloneable, StructuredPoj
      *        Format: <code>TYPE://GLOBAL_ID/SUBDIR</code>.
      *        </p>
      *        <p>
-     *        TYPE designates the type of location. Valid values: NFS | EFS | S3.
+     *        TYPE designates the type of location (for example, <code>nfs</code> or <code>s3</code>).
      *        </p>
      *        <p>
      *        GLOBAL_ID is the globally unique identifier of the resource that backs the location. An example for EFS is
      *        <code>us-east-2.fs-abcd1234</code>. An example for Amazon S3 is the bucket name, such as
-     *        <code>myBucket</code>. An example for NFS is a valid IPv4 address or a host name compliant with Domain
-     *        Name Service (DNS).
+     *        <code>myBucket</code>. An example for NFS is a valid IPv4 address or a hostname that is compliant with
+     *        Domain Name Service (DNS).
      *        </p>
      *        <p>
      *        SUBDIR is a valid file system path, delimited by forward slashes as is the *nix convention. For NFS and

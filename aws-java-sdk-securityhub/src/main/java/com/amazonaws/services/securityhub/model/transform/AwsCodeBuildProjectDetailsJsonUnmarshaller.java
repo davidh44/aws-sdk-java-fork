@@ -83,6 +83,13 @@ public class AwsCodeBuildProjectDetailsJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     awsCodeBuildProjectDetails.setVpcConfig(AwsCodeBuildProjectVpcConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SecondaryArtifacts", targetDepth)) {
+                    context.nextToken();
+                    awsCodeBuildProjectDetails.setSecondaryArtifacts(new ListUnmarshaller<AwsCodeBuildProjectArtifactsDetails>(
+                            AwsCodeBuildProjectArtifactsDetailsJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

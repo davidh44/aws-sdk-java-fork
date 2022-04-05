@@ -430,6 +430,12 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsNetworkFirewallRuleGroupDetails awsNetworkFirewallRuleGroup;
+    /**
+     * <p>
+     * Details about an Amazon RDS DB security group.
+     * </p>
+     */
+    private AwsRdsDbSecurityGroupDetails awsRdsDbSecurityGroup;
 
     /**
      * <p>
@@ -3045,6 +3051,46 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Details about an Amazon RDS DB security group.
+     * </p>
+     * 
+     * @param awsRdsDbSecurityGroup
+     *        Details about an Amazon RDS DB security group.
+     */
+
+    public void setAwsRdsDbSecurityGroup(AwsRdsDbSecurityGroupDetails awsRdsDbSecurityGroup) {
+        this.awsRdsDbSecurityGroup = awsRdsDbSecurityGroup;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon RDS DB security group.
+     * </p>
+     * 
+     * @return Details about an Amazon RDS DB security group.
+     */
+
+    public AwsRdsDbSecurityGroupDetails getAwsRdsDbSecurityGroup() {
+        return this.awsRdsDbSecurityGroup;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon RDS DB security group.
+     * </p>
+     * 
+     * @param awsRdsDbSecurityGroup
+     *        Details about an Amazon RDS DB security group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsRdsDbSecurityGroup(AwsRdsDbSecurityGroupDetails awsRdsDbSecurityGroup) {
+        setAwsRdsDbSecurityGroup(awsRdsDbSecurityGroup);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3179,7 +3225,9 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsNetworkFirewallFirewall() != null)
             sb.append("AwsNetworkFirewallFirewall: ").append(getAwsNetworkFirewallFirewall()).append(",");
         if (getAwsNetworkFirewallRuleGroup() != null)
-            sb.append("AwsNetworkFirewallRuleGroup: ").append(getAwsNetworkFirewallRuleGroup());
+            sb.append("AwsNetworkFirewallRuleGroup: ").append(getAwsNetworkFirewallRuleGroup()).append(",");
+        if (getAwsRdsDbSecurityGroup() != null)
+            sb.append("AwsRdsDbSecurityGroup: ").append(getAwsRdsDbSecurityGroup());
         sb.append("}");
         return sb.toString();
     }
@@ -3448,6 +3496,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsNetworkFirewallRuleGroup() != null && other.getAwsNetworkFirewallRuleGroup().equals(this.getAwsNetworkFirewallRuleGroup()) == false)
             return false;
+        if (other.getAwsRdsDbSecurityGroup() == null ^ this.getAwsRdsDbSecurityGroup() == null)
+            return false;
+        if (other.getAwsRdsDbSecurityGroup() != null && other.getAwsRdsDbSecurityGroup().equals(this.getAwsRdsDbSecurityGroup()) == false)
+            return false;
         return true;
     }
 
@@ -3518,6 +3570,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsNetworkFirewallFirewallPolicy() == null) ? 0 : getAwsNetworkFirewallFirewallPolicy().hashCode());
         hashCode = prime * hashCode + ((getAwsNetworkFirewallFirewall() == null) ? 0 : getAwsNetworkFirewallFirewall().hashCode());
         hashCode = prime * hashCode + ((getAwsNetworkFirewallRuleGroup() == null) ? 0 : getAwsNetworkFirewallRuleGroup().hashCode());
+        hashCode = prime * hashCode + ((getAwsRdsDbSecurityGroup() == null) ? 0 : getAwsRdsDbSecurityGroup().hashCode());
         return hashCode;
     }
 

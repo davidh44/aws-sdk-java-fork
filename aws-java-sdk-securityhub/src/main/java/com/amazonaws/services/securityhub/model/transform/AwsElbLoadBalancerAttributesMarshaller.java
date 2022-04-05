@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.securityhub.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +36,8 @@ public class AwsElbLoadBalancerAttributesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectionSettings").build();
     private static final MarshallingInfo<StructuredPojo> CROSSZONELOADBALANCING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossZoneLoadBalancing").build();
+    private static final MarshallingInfo<List> ADDITIONALATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalAttributes").build();
 
     private static final AwsElbLoadBalancerAttributesMarshaller instance = new AwsElbLoadBalancerAttributesMarshaller();
 
@@ -56,6 +59,7 @@ public class AwsElbLoadBalancerAttributesMarshaller {
             protocolMarshaller.marshall(awsElbLoadBalancerAttributes.getConnectionDraining(), CONNECTIONDRAINING_BINDING);
             protocolMarshaller.marshall(awsElbLoadBalancerAttributes.getConnectionSettings(), CONNECTIONSETTINGS_BINDING);
             protocolMarshaller.marshall(awsElbLoadBalancerAttributes.getCrossZoneLoadBalancing(), CROSSZONELOADBALANCING_BINDING);
+            protocolMarshaller.marshall(awsElbLoadBalancerAttributes.getAdditionalAttributes(), ADDITIONALATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

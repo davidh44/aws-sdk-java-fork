@@ -145,6 +145,23 @@ public interface AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param createLocationFsxOpenZfsRequest
+     * @return Result of the CreateLocationFsxOpenZfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLocationFsxOpenZfsResult createLocationFsxOpenZfs(CreateLocationFsxOpenZfsRequest createLocationFsxOpenZfsRequest);
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for Windows File Server file system.
      * </p>
      * 
@@ -393,7 +410,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * Returns metadata about an Amazon FSx for Lustre location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxLustreRequest
@@ -410,7 +427,24 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Windows File Server location.
+     * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
+     * </p>
+     * 
+     * @param describeLocationFsxOpenZfsRequest
+     * @return Result of the DescribeLocationFsxOpenZfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeLocationFsxOpenZfsResult describeLocationFsxOpenZfs(DescribeLocationFsxOpenZfsRequest describeLocationFsxOpenZfsRequest);
+
+    /**
+     * <p>
+     * Returns metadata about an Amazon FSx for Windows File Server location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxWindowsRequest

@@ -114,6 +114,8 @@ public class AwsRedshiftClusterDetailsMarshaller {
             .marshallLocationName("VpcId").build();
     private static final MarshallingInfo<List> VPCSECURITYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcSecurityGroups").build();
+    private static final MarshallingInfo<StructuredPojo> LOGGINGSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LoggingStatus").build();
 
     private static final AwsRedshiftClusterDetailsMarshaller instance = new AwsRedshiftClusterDetailsMarshaller();
 
@@ -174,6 +176,7 @@ public class AwsRedshiftClusterDetailsMarshaller {
             protocolMarshaller.marshall(awsRedshiftClusterDetails.getSnapshotScheduleState(), SNAPSHOTSCHEDULESTATE_BINDING);
             protocolMarshaller.marshall(awsRedshiftClusterDetails.getVpcId(), VPCID_BINDING);
             protocolMarshaller.marshall(awsRedshiftClusterDetails.getVpcSecurityGroups(), VPCSECURITYGROUPS_BINDING);
+            protocolMarshaller.marshall(awsRedshiftClusterDetails.getLoggingStatus(), LOGGINGSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

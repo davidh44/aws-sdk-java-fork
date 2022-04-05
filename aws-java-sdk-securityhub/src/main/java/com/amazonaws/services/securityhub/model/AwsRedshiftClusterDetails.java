@@ -374,6 +374,12 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<AwsRedshiftClusterVpcSecurityGroup> vpcSecurityGroups;
+    /**
+     * <p>
+     * Information about the logging status of the cluster.
+     * </p>
+     */
+    private AwsRedshiftClusterLoggingStatus loggingStatus;
 
     /**
      * <p>
@@ -2860,6 +2866,46 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Information about the logging status of the cluster.
+     * </p>
+     * 
+     * @param loggingStatus
+     *        Information about the logging status of the cluster.
+     */
+
+    public void setLoggingStatus(AwsRedshiftClusterLoggingStatus loggingStatus) {
+        this.loggingStatus = loggingStatus;
+    }
+
+    /**
+     * <p>
+     * Information about the logging status of the cluster.
+     * </p>
+     * 
+     * @return Information about the logging status of the cluster.
+     */
+
+    public AwsRedshiftClusterLoggingStatus getLoggingStatus() {
+        return this.loggingStatus;
+    }
+
+    /**
+     * <p>
+     * Information about the logging status of the cluster.
+     * </p>
+     * 
+     * @param loggingStatus
+     *        Information about the logging status of the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsRedshiftClusterDetails withLoggingStatus(AwsRedshiftClusterLoggingStatus loggingStatus) {
+        setLoggingStatus(loggingStatus);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2956,7 +3002,9 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
         if (getVpcId() != null)
             sb.append("VpcId: ").append(getVpcId()).append(",");
         if (getVpcSecurityGroups() != null)
-            sb.append("VpcSecurityGroups: ").append(getVpcSecurityGroups());
+            sb.append("VpcSecurityGroups: ").append(getVpcSecurityGroups()).append(",");
+        if (getLoggingStatus() != null)
+            sb.append("LoggingStatus: ").append(getLoggingStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -3149,6 +3197,10 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
             return false;
         if (other.getVpcSecurityGroups() != null && other.getVpcSecurityGroups().equals(this.getVpcSecurityGroups()) == false)
             return false;
+        if (other.getLoggingStatus() == null ^ this.getLoggingStatus() == null)
+            return false;
+        if (other.getLoggingStatus() != null && other.getLoggingStatus().equals(this.getLoggingStatus()) == false)
+            return false;
         return true;
     }
 
@@ -3200,6 +3252,7 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getSnapshotScheduleState() == null) ? 0 : getSnapshotScheduleState().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getVpcSecurityGroups() == null) ? 0 : getVpcSecurityGroups().hashCode());
+        hashCode = prime * hashCode + ((getLoggingStatus() == null) ? 0 : getLoggingStatus().hashCode());
         return hashCode;
     }
 

@@ -404,6 +404,67 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param createLocationFsxOpenZfsRequest
+     * @return Result of the CreateLocationFsxOpenZfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLocationFsxOpenZfsResult createLocationFsxOpenZfs(CreateLocationFsxOpenZfsRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLocationFsxOpenZfs(request);
+    }
+
+    @SdkInternalApi
+    final CreateLocationFsxOpenZfsResult executeCreateLocationFsxOpenZfs(CreateLocationFsxOpenZfsRequest createLocationFsxOpenZfsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLocationFsxOpenZfsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLocationFsxOpenZfsRequest> request = null;
+        Response<CreateLocationFsxOpenZfsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLocationFsxOpenZfsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createLocationFsxOpenZfsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLocationFsxOpenZfs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLocationFsxOpenZfsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateLocationFsxOpenZfsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for Windows File Server file system.
      * </p>
      * 
@@ -1160,7 +1221,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * Returns metadata about an Amazon FSx for Lustre location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxLustreRequest
@@ -1221,7 +1282,68 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Windows File Server location.
+     * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
+     * </p>
+     * 
+     * @param describeLocationFsxOpenZfsRequest
+     * @return Result of the DescribeLocationFsxOpenZfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeLocationFsxOpenZfsResult describeLocationFsxOpenZfs(DescribeLocationFsxOpenZfsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLocationFsxOpenZfs(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLocationFsxOpenZfsResult executeDescribeLocationFsxOpenZfs(DescribeLocationFsxOpenZfsRequest describeLocationFsxOpenZfsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLocationFsxOpenZfsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLocationFsxOpenZfsRequest> request = null;
+        Response<DescribeLocationFsxOpenZfsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLocationFsxOpenZfsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeLocationFsxOpenZfsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLocationFsxOpenZfs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLocationFsxOpenZfsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeLocationFsxOpenZfsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns metadata about an Amazon FSx for Windows File Server location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxWindowsRequest

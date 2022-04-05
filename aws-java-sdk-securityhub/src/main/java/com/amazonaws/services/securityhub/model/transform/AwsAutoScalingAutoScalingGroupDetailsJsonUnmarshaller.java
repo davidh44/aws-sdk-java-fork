@@ -83,6 +83,16 @@ public class AwsAutoScalingAutoScalingGroupDetailsJsonUnmarshaller implements Un
 
                             .unmarshall(context));
                 }
+                if (context.testExpression("LaunchTemplate", targetDepth)) {
+                    context.nextToken();
+                    awsAutoScalingAutoScalingGroupDetails
+                            .setLaunchTemplate(AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecificationJsonUnmarshaller.getInstance()
+                                    .unmarshall(context));
+                }
+                if (context.testExpression("CapacityRebalance", targetDepth)) {
+                    context.nextToken();
+                    awsAutoScalingAutoScalingGroupDetails.setCapacityRebalance(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -65,6 +65,13 @@ public class AwsElbLoadBalancerAttributesJsonUnmarshaller implements Unmarshalle
                     awsElbLoadBalancerAttributes.setCrossZoneLoadBalancing(AwsElbLoadBalancerCrossZoneLoadBalancingJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("AdditionalAttributes", targetDepth)) {
+                    context.nextToken();
+                    awsElbLoadBalancerAttributes.setAdditionalAttributes(new ListUnmarshaller<AwsElbLoadBalancerAdditionalAttribute>(
+                            AwsElbLoadBalancerAdditionalAttributeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

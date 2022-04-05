@@ -68,6 +68,12 @@ public class AwsElbLoadBalancerAttributes implements Serializable, Cloneable, St
      * </p>
      */
     private AwsElbLoadBalancerCrossZoneLoadBalancing crossZoneLoadBalancing;
+    /**
+     * <p>
+     * Any additional attributes for a load balancer.
+     * </p>
+     */
+    private java.util.List<AwsElbLoadBalancerAdditionalAttribute> additionalAttributes;
 
     /**
      * <p>
@@ -314,6 +320,76 @@ public class AwsElbLoadBalancerAttributes implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Any additional attributes for a load balancer.
+     * </p>
+     * 
+     * @return Any additional attributes for a load balancer.
+     */
+
+    public java.util.List<AwsElbLoadBalancerAdditionalAttribute> getAdditionalAttributes() {
+        return additionalAttributes;
+    }
+
+    /**
+     * <p>
+     * Any additional attributes for a load balancer.
+     * </p>
+     * 
+     * @param additionalAttributes
+     *        Any additional attributes for a load balancer.
+     */
+
+    public void setAdditionalAttributes(java.util.Collection<AwsElbLoadBalancerAdditionalAttribute> additionalAttributes) {
+        if (additionalAttributes == null) {
+            this.additionalAttributes = null;
+            return;
+        }
+
+        this.additionalAttributes = new java.util.ArrayList<AwsElbLoadBalancerAdditionalAttribute>(additionalAttributes);
+    }
+
+    /**
+     * <p>
+     * Any additional attributes for a load balancer.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalAttributes(java.util.Collection)} or {@link #withAdditionalAttributes(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalAttributes
+     *        Any additional attributes for a load balancer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsElbLoadBalancerAttributes withAdditionalAttributes(AwsElbLoadBalancerAdditionalAttribute... additionalAttributes) {
+        if (this.additionalAttributes == null) {
+            setAdditionalAttributes(new java.util.ArrayList<AwsElbLoadBalancerAdditionalAttribute>(additionalAttributes.length));
+        }
+        for (AwsElbLoadBalancerAdditionalAttribute ele : additionalAttributes) {
+            this.additionalAttributes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Any additional attributes for a load balancer.
+     * </p>
+     * 
+     * @param additionalAttributes
+     *        Any additional attributes for a load balancer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsElbLoadBalancerAttributes withAdditionalAttributes(java.util.Collection<AwsElbLoadBalancerAdditionalAttribute> additionalAttributes) {
+        setAdditionalAttributes(additionalAttributes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -332,7 +408,9 @@ public class AwsElbLoadBalancerAttributes implements Serializable, Cloneable, St
         if (getConnectionSettings() != null)
             sb.append("ConnectionSettings: ").append(getConnectionSettings()).append(",");
         if (getCrossZoneLoadBalancing() != null)
-            sb.append("CrossZoneLoadBalancing: ").append(getCrossZoneLoadBalancing());
+            sb.append("CrossZoneLoadBalancing: ").append(getCrossZoneLoadBalancing()).append(",");
+        if (getAdditionalAttributes() != null)
+            sb.append("AdditionalAttributes: ").append(getAdditionalAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -363,6 +441,10 @@ public class AwsElbLoadBalancerAttributes implements Serializable, Cloneable, St
             return false;
         if (other.getCrossZoneLoadBalancing() != null && other.getCrossZoneLoadBalancing().equals(this.getCrossZoneLoadBalancing()) == false)
             return false;
+        if (other.getAdditionalAttributes() == null ^ this.getAdditionalAttributes() == null)
+            return false;
+        if (other.getAdditionalAttributes() != null && other.getAdditionalAttributes().equals(this.getAdditionalAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -375,6 +457,7 @@ public class AwsElbLoadBalancerAttributes implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getConnectionDraining() == null) ? 0 : getConnectionDraining().hashCode());
         hashCode = prime * hashCode + ((getConnectionSettings() == null) ? 0 : getConnectionSettings().hashCode());
         hashCode = prime * hashCode + ((getCrossZoneLoadBalancing() == null) ? 0 : getCrossZoneLoadBalancing().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalAttributes() == null) ? 0 : getAdditionalAttributes().hashCode());
         return hashCode;
     }
 

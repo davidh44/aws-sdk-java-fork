@@ -76,6 +76,18 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
      * </p>
      */
     private java.util.List<AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails> availabilityZones;
+    /**
+     * <p>
+     * The launch template to use.
+     * </p>
+     */
+    private AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecification launchTemplate;
+    /**
+     * <p>
+     * Indicates whether capacity rebalancing is enabled.
+     * </p>
+     */
+    private Boolean capacityRebalance;
 
     /**
      * <p>
@@ -452,6 +464,98 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
     }
 
     /**
+     * <p>
+     * The launch template to use.
+     * </p>
+     * 
+     * @param launchTemplate
+     *        The launch template to use.
+     */
+
+    public void setLaunchTemplate(AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecification launchTemplate) {
+        this.launchTemplate = launchTemplate;
+    }
+
+    /**
+     * <p>
+     * The launch template to use.
+     * </p>
+     * 
+     * @return The launch template to use.
+     */
+
+    public AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecification getLaunchTemplate() {
+        return this.launchTemplate;
+    }
+
+    /**
+     * <p>
+     * The launch template to use.
+     * </p>
+     * 
+     * @param launchTemplate
+     *        The launch template to use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsAutoScalingAutoScalingGroupDetails withLaunchTemplate(AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecification launchTemplate) {
+        setLaunchTemplate(launchTemplate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether capacity rebalancing is enabled.
+     * </p>
+     * 
+     * @param capacityRebalance
+     *        Indicates whether capacity rebalancing is enabled.
+     */
+
+    public void setCapacityRebalance(Boolean capacityRebalance) {
+        this.capacityRebalance = capacityRebalance;
+    }
+
+    /**
+     * <p>
+     * Indicates whether capacity rebalancing is enabled.
+     * </p>
+     * 
+     * @return Indicates whether capacity rebalancing is enabled.
+     */
+
+    public Boolean getCapacityRebalance() {
+        return this.capacityRebalance;
+    }
+
+    /**
+     * <p>
+     * Indicates whether capacity rebalancing is enabled.
+     * </p>
+     * 
+     * @param capacityRebalance
+     *        Indicates whether capacity rebalancing is enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsAutoScalingAutoScalingGroupDetails withCapacityRebalance(Boolean capacityRebalance) {
+        setCapacityRebalance(capacityRebalance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether capacity rebalancing is enabled.
+     * </p>
+     * 
+     * @return Indicates whether capacity rebalancing is enabled.
+     */
+
+    public Boolean isCapacityRebalance() {
+        return this.capacityRebalance;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -476,7 +580,11 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
         if (getMixedInstancesPolicy() != null)
             sb.append("MixedInstancesPolicy: ").append(getMixedInstancesPolicy()).append(",");
         if (getAvailabilityZones() != null)
-            sb.append("AvailabilityZones: ").append(getAvailabilityZones());
+            sb.append("AvailabilityZones: ").append(getAvailabilityZones()).append(",");
+        if (getLaunchTemplate() != null)
+            sb.append("LaunchTemplate: ").append(getLaunchTemplate()).append(",");
+        if (getCapacityRebalance() != null)
+            sb.append("CapacityRebalance: ").append(getCapacityRebalance());
         sb.append("}");
         return sb.toString();
     }
@@ -519,6 +627,14 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
             return false;
         if (other.getAvailabilityZones() != null && other.getAvailabilityZones().equals(this.getAvailabilityZones()) == false)
             return false;
+        if (other.getLaunchTemplate() == null ^ this.getLaunchTemplate() == null)
+            return false;
+        if (other.getLaunchTemplate() != null && other.getLaunchTemplate().equals(this.getLaunchTemplate()) == false)
+            return false;
+        if (other.getCapacityRebalance() == null ^ this.getCapacityRebalance() == null)
+            return false;
+        if (other.getCapacityRebalance() != null && other.getCapacityRebalance().equals(this.getCapacityRebalance()) == false)
+            return false;
         return true;
     }
 
@@ -534,6 +650,8 @@ public class AwsAutoScalingAutoScalingGroupDetails implements Serializable, Clon
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
         hashCode = prime * hashCode + ((getMixedInstancesPolicy() == null) ? 0 : getMixedInstancesPolicy().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZones() == null) ? 0 : getAvailabilityZones().hashCode());
+        hashCode = prime * hashCode + ((getLaunchTemplate() == null) ? 0 : getLaunchTemplate().hashCode());
+        hashCode = prime * hashCode + ((getCapacityRebalance() == null) ? 0 : getCapacityRebalance().hashCode());
         return hashCode;
     }
 

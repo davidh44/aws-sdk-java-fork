@@ -41,8 +41,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
     private String fsxFilesystemArn;
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
-     * Server file system.
+     * The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * </p>
      */
     private java.util.List<String> securityGroupArns;
@@ -172,12 +171,10 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
-     * Server file system.
+     * The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * </p>
      * 
-     * @return The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
-     *         File Server file system.
+     * @return The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      */
 
     public java.util.List<String> getSecurityGroupArns() {
@@ -186,13 +183,11 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
-     * Server file system.
+     * The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * </p>
      * 
      * @param securityGroupArns
-     *        The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
-     *        File Server file system.
+     *        The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      */
 
     public void setSecurityGroupArns(java.util.Collection<String> securityGroupArns) {
@@ -206,8 +201,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
-     * Server file system.
+     * The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -216,8 +210,7 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param securityGroupArns
-     *        The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
-     *        File Server file system.
+     *        The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,13 +226,11 @@ public class CreateLocationFsxWindowsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows File
-     * Server file system.
+     * The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * </p>
      * 
      * @param securityGroupArns
-     *        The Amazon Resource Names (ARNs) of the security groups that are used to configure the FSx for Windows
-     *        File Server file system.
+     *        The ARNs of the security groups that are used to configure the FSx for Windows File Server file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -80,6 +80,19 @@ public class AbstractAWSDataSyncAsync extends AbstractAWSDataSync implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(CreateLocationFsxOpenZfsRequest request) {
+
+        return createLocationFsxOpenZfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(CreateLocationFsxOpenZfsRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLocationFsxOpenZfsRequest, CreateLocationFsxOpenZfsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLocationFsxWindowsResult> createLocationFsxWindowsAsync(CreateLocationFsxWindowsRequest request) {
 
         return createLocationFsxWindowsAsync(request, null);
@@ -244,6 +257,19 @@ public class AbstractAWSDataSyncAsync extends AbstractAWSDataSync implements AWS
     @Override
     public java.util.concurrent.Future<DescribeLocationFsxLustreResult> describeLocationFsxLustreAsync(DescribeLocationFsxLustreRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxLustreRequest, DescribeLocationFsxLustreResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxOpenZfsResult> describeLocationFsxOpenZfsAsync(DescribeLocationFsxOpenZfsRequest request) {
+
+        return describeLocationFsxOpenZfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxOpenZfsResult> describeLocationFsxOpenZfsAsync(DescribeLocationFsxOpenZfsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxOpenZfsRequest, DescribeLocationFsxOpenZfsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

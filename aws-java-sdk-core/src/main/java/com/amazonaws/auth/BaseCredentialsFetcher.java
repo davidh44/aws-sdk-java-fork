@@ -19,10 +19,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.util.DateUtils;
 import com.amazonaws.util.json.Jackson;
 import com.fasterxml.jackson.databind.JsonNode;
-import java.util.Date;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.joda.time.DateTime;
+
+import java.util.Date;
 
 /**
  * Helper class that contains the common behavior of the
@@ -159,10 +159,24 @@ abstract class BaseCredentialsFetcher {
         } catch (Exception e) {
             handleError("Unable to load credentials from service endpoint", e);
         } finally {
-            if (allowExpiredCredentials && credentials != null && needsToLoadCredentials()) {
-                LOG.warn("Credential expiration has been extended due to a credential service availability issue. A "
-                         + "refresh of these credentials will be attempted again in 15 minutes.");
-                this.credentialsExpiration = DateTime.now().plusMillis(FIFTEEN_MINUTES_IN_MILLIS + EXPIRATION_THRESHOLD).toDate();
+            if (allowExpiredCredentials && credentials != null && credentialsExpiration != null && needsToLoadCredentials()) {
+                long now = System.currentTimeMillis();
+                long fifteenSecondsBeforeExpiration = credentialsExpiration.getTime() - 15 * 1000;
+                long fiveMinutesFromNow = now + 5 * 60 * 1000;
+
+                if (fifteenSecondsBeforeExpiration > now) {
+                    // We're close to expiring, but we're not actually expired, yet.
+
+                    // Try again in 15 minutes OR 15 seconds before expiration, whatever comes first.
+                    long fifteenMinutesFromNow = now + 15 * 60 * 1000;
+                    long nextRefreshTime = Math.min(fifteenMinutesFromNow, fifteenSecondsBeforeExpiration);
+                    this.credentialsExpiration = new Date(nextRefreshTime + EXPIRATION_THRESHOLD);
+                } else {
+                    // We're expired, wait 5 minutes before trying again.
+                    LOG.warn("Credential expiration has been extended due to a credential service availability " +
+                             "issue. A refresh of these credentials will be attempted again in 5 minutes.");
+                    this.credentialsExpiration = new Date(fiveMinutesFromNow + EXPIRATION_THRESHOLD);
+                }
             }
         }
     }

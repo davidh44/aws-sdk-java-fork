@@ -92,15 +92,15 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted
-     * keys. You can load the keytab from a file by providing the file's address. If you use the AWS CLI, it performs
-     * base64 encoding for you. Otherwise, provide the base64-encoded text.
+     * keys. You can load the keytab from a file by providing the file's address. If you use the CLI, it performs base64
+     * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      */
     private java.nio.ByteBuffer kerberosKeytab;
     /**
      * <p>
      * The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     * <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the base64
+     * <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the base64
      * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      */
@@ -592,8 +592,8 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted
-     * keys. You can load the keytab from a file by providing the file's address. If you use the AWS CLI, it performs
-     * base64 encoding for you. Otherwise, provide the base64-encoded text.
+     * keys. You can load the keytab from a file by providing the file's address. If you use the CLI, it performs base64
+     * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -608,8 +608,8 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param kerberosKeytab
      *        The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the
-     *        encrypted keys. You can load the keytab from a file by providing the file's address. If you use the AWS
-     *        CLI, it performs base64 encoding for you. Otherwise, provide the base64-encoded text.
+     *        encrypted keys. You can load the keytab from a file by providing the file's address. If you use the CLI,
+     *        it performs base64 encoding for you. Otherwise, provide the base64-encoded text.
      */
 
     public void setKerberosKeytab(java.nio.ByteBuffer kerberosKeytab) {
@@ -619,8 +619,8 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted
-     * keys. You can load the keytab from a file by providing the file's address. If you use the AWS CLI, it performs
-     * base64 encoding for you. Otherwise, provide the base64-encoded text.
+     * keys. You can load the keytab from a file by providing the file's address. If you use the CLI, it performs base64
+     * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -631,8 +631,8 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @return The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the
-     *         encrypted keys. You can load the keytab from a file by providing the file's address. If you use the AWS
-     *         CLI, it performs base64 encoding for you. Otherwise, provide the base64-encoded text.
+     *         encrypted keys. You can load the keytab from a file by providing the file's address. If you use the CLI,
+     *         it performs base64 encoding for you. Otherwise, provide the base64-encoded text.
      */
 
     public java.nio.ByteBuffer getKerberosKeytab() {
@@ -642,8 +642,8 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted
-     * keys. You can load the keytab from a file by providing the file's address. If you use the AWS CLI, it performs
-     * base64 encoding for you. Otherwise, provide the base64-encoded text.
+     * keys. You can load the keytab from a file by providing the file's address. If you use the CLI, it performs base64
+     * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -658,8 +658,8 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param kerberosKeytab
      *        The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the
-     *        encrypted keys. You can load the keytab from a file by providing the file's address. If you use the AWS
-     *        CLI, it performs base64 encoding for you. Otherwise, provide the base64-encoded text.
+     *        encrypted keys. You can load the keytab from a file by providing the file's address. If you use the CLI,
+     *        it performs base64 encoding for you. Otherwise, provide the base64-encoded text.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -671,7 +671,7 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     * <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the base64
+     * <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the base64
      * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      * <p>
@@ -687,7 +687,7 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param kerberosKrb5Conf
      *        The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     *        <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the
+     *        <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the
      *        base64 encoding for you. Otherwise, provide the base64-encoded text.
      */
 
@@ -698,7 +698,7 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     * <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the base64
+     * <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the base64
      * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      * <p>
@@ -710,7 +710,7 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @return The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     *         <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the
+     *         <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the
      *         base64 encoding for you. Otherwise, provide the base64-encoded text.
      */
 
@@ -721,7 +721,7 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     * <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the base64
+     * <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the base64
      * encoding for you. Otherwise, provide the base64-encoded text.
      * </p>
      * <p>
@@ -737,7 +737,7 @@ public class UpdateLocationHdfsRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param kerberosKrb5Conf
      *        The <code>krb5.conf</code> file that contains the Kerberos configuration information. You can load the
-     *        <code>krb5.conf</code> file by providing the file's address. If you're using the AWS CLI, it performs the
+     *        <code>krb5.conf</code> file by providing the file's address. If you're using the CLI, it performs the
      *        base64 encoding for you. Otherwise, provide the base64-encoded text.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

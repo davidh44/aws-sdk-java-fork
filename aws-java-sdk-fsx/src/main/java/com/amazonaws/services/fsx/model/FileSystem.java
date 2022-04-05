@@ -87,6 +87,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is currently
+     * unavailable due to a change in your Active Directory configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
@@ -462,6 +468,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is currently
+     * unavailable due to a change in your Active Directory configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
@@ -494,6 +506,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is
+     *        currently unavailable due to a change in your Active Directory configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -541,6 +559,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is currently
+     * unavailable due to a change in your Active Directory configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
@@ -572,6 +596,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is
+     *         currently unavailable due to a change in your Active Directory configuration.
      *         </p>
      *         </li>
      *         <li>
@@ -619,6 +649,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is currently
+     * unavailable due to a change in your Active Directory configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
@@ -651,6 +687,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is
+     *        currently unavailable due to a change in your Active Directory configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -700,6 +742,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is currently
+     * unavailable due to a change in your Active Directory configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
@@ -732,6 +780,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISCONFIGURED_UNAVAILABLE</code> - (Amazon FSx for Windows File Server only) The file system is
+     *        currently unavailable due to a change in your Active Directory configuration.
      *        </p>
      *        </li>
      *        <li>

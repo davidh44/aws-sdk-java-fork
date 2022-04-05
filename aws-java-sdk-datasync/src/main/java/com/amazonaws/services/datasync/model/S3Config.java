@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that is used to access an Amazon S3
- * bucket.
+ * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role used to access an Amazon S3 bucket.
  * </p>
  * <p>
  * For detailed information about using such a role, see Creating a Location for Amazon S3 in the <i>DataSync User
@@ -35,24 +34,18 @@ public class S3Config implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
-     * operation.
+     * The ARN of the IAM role for accessing the S3 bucket.
      * </p>
      */
     private String bucketAccessRoleArn;
 
     /**
      * <p>
-     * The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
-     * operation.
+     * The ARN of the IAM role for accessing the S3 bucket.
      * </p>
      * 
      * @param bucketAccessRoleArn
-     *        The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html"
-     *        >CreateLocationS3</a> operation.
+     *        The ARN of the IAM role for accessing the S3 bucket.
      */
 
     public void setBucketAccessRoleArn(String bucketAccessRoleArn) {
@@ -61,14 +54,10 @@ public class S3Config implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
-     * operation.
+     * The ARN of the IAM role for accessing the S3 bucket.
      * </p>
      * 
-     * @return The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html"
-     *         >CreateLocationS3</a> operation.
+     * @return The ARN of the IAM role for accessing the S3 bucket.
      */
 
     public String getBucketAccessRoleArn() {
@@ -77,15 +66,11 @@ public class S3Config implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
-     * operation.
+     * The ARN of the IAM role for accessing the S3 bucket.
      * </p>
      * 
      * @param bucketAccessRoleArn
-     *        The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html"
-     *        >CreateLocationS3</a> operation.
+     *        The ARN of the IAM role for accessing the S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

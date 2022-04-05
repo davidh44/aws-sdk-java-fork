@@ -31,7 +31,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDet
 
     /**
      * <p>
-     * The launch template to use.
+     * The launch template to use for a mixed instances policy.
      * </p>
      */
     private AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification;
@@ -44,11 +44,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDet
 
     /**
      * <p>
-     * The launch template to use.
+     * The launch template to use for a mixed instances policy.
      * </p>
      * 
      * @param launchTemplateSpecification
-     *        The launch template to use.
+     *        The launch template to use for a mixed instances policy.
      */
 
     public void setLaunchTemplateSpecification(
@@ -58,10 +58,10 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDet
 
     /**
      * <p>
-     * The launch template to use.
+     * The launch template to use for a mixed instances policy.
      * </p>
      * 
-     * @return The launch template to use.
+     * @return The launch template to use for a mixed instances policy.
      */
 
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification getLaunchTemplateSpecification() {
@@ -70,11 +70,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDet
 
     /**
      * <p>
-     * The launch template to use.
+     * The launch template to use for a mixed instances policy.
      * </p>
      * 
      * @param launchTemplateSpecification
-     *        The launch template to use.
+     *        The launch template to use for a mixed instances policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

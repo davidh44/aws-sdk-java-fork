@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about the launch template to use.
+ * Details about the launch template to use for a mixed instances policy.
  * </p>
  * 
  * @see <a

@@ -220,6 +220,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param createLocationFsxOpenZfsRequest
+     * @return A Java Future containing the result of the CreateLocationFsxOpenZfs operation returned by the service.
+     * @sample AWSDataSyncAsync.CreateLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(CreateLocationFsxOpenZfsRequest createLocationFsxOpenZfsRequest);
+
+    /**
+     * <p>
+     * Creates an endpoint for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param createLocationFsxOpenZfsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLocationFsxOpenZfs operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.CreateLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(CreateLocationFsxOpenZfsRequest createLocationFsxOpenZfsRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLocationFsxOpenZfsRequest, CreateLocationFsxOpenZfsResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for Windows File Server file system.
      * </p>
      * 
@@ -682,7 +713,7 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * Returns metadata about an Amazon FSx for Lustre location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxLustreRequest
@@ -696,7 +727,7 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Lustre location.
+     * Returns metadata about an Amazon FSx for Lustre location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxLustreRequest
@@ -715,7 +746,40 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Windows File Server location.
+     * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
+     * </p>
+     * 
+     * @param describeLocationFsxOpenZfsRequest
+     * @return A Java Future containing the result of the DescribeLocationFsxOpenZfs operation returned by the service.
+     * @sample AWSDataSyncAsync.DescribeLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationFsxOpenZfsResult> describeLocationFsxOpenZfsAsync(
+            DescribeLocationFsxOpenZfsRequest describeLocationFsxOpenZfsRequest);
+
+    /**
+     * <p>
+     * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
+     * </p>
+     * 
+     * @param describeLocationFsxOpenZfsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLocationFsxOpenZfs operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.DescribeLocationFsxOpenZfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOpenZfs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationFsxOpenZfsResult> describeLocationFsxOpenZfsAsync(
+            DescribeLocationFsxOpenZfsRequest describeLocationFsxOpenZfsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxOpenZfsRequest, DescribeLocationFsxOpenZfsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns metadata about an Amazon FSx for Windows File Server location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxWindowsRequest
@@ -729,7 +793,7 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon FSx for Windows File Server location.
+     * Returns metadata about an Amazon FSx for Windows File Server location, such as information about its path.
      * </p>
      * 
      * @param describeLocationFsxWindowsRequest

@@ -1,3 +1,20 @@
+# __1.12.193__ __2022-04-05__
+## __AWS DataSync__
+  - ### Features
+    - AWS DataSync now supports Amazon FSx for OpenZFS locations.
+
+## __AWS S3 Control__
+  - ### Features
+    - Documentation-only update for doc bug fixes for the S3 Control API docs.
+
+## __AWS SecurityHub__
+  - ### Features
+    - Added additional ASFF details for RdsSecurityGroup AutoScalingGroup, ElbLoadBalancer, CodeBuildProject and RedshiftCluster.
+
+## __Amazon FSx__
+  - ### Features
+    - Provide customers more visibility into file system status by adding new "Misconfigured Unavailable" status for Amazon FSx for Windows File Server.
+
 # __1.12.192__ __2022-04-04__
 ## __AWS IoT__
   - ### Features
