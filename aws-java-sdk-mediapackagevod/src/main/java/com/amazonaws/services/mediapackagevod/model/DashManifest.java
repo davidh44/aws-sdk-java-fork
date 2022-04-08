@@ -41,6 +41,11 @@ public class DashManifest implements Serializable, Cloneable, StructuredPojo {
      * is enabled.
      */
     private String profile;
+    /**
+     * The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the
+     * ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     */
+    private String scteMarkersSource;
 
     private StreamSelection streamSelection;
 
@@ -239,6 +244,69 @@ public class DashManifest implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the
+     * ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     * @param scteMarkersSource
+     *        The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of
+     *        the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested
+     *        content.
+     * @see ScteMarkersSource
+     */
+
+    public void setScteMarkersSource(String scteMarkersSource) {
+        this.scteMarkersSource = scteMarkersSource;
+    }
+
+    /**
+     * The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the
+     * ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     * @return The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of
+     *         the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the
+     *         ingested content.
+     * @see ScteMarkersSource
+     */
+
+    public String getScteMarkersSource() {
+        return this.scteMarkersSource;
+    }
+
+    /**
+     * The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the
+     * ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     * @param scteMarkersSource
+     *        The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of
+     *        the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested
+     *        content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ScteMarkersSource
+     */
+
+    public DashManifest withScteMarkersSource(String scteMarkersSource) {
+        setScteMarkersSource(scteMarkersSource);
+        return this;
+    }
+
+    /**
+     * The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the
+     * ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     * @param scteMarkersSource
+     *        The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of
+     *        the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested
+     *        content.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ScteMarkersSource
+     */
+
+    public DashManifest withScteMarkersSource(ScteMarkersSource scteMarkersSource) {
+        this.scteMarkersSource = scteMarkersSource.toString();
+        return this;
+    }
+
+    /**
      * @param streamSelection
      */
 
@@ -284,6 +352,8 @@ public class DashManifest implements Serializable, Cloneable, StructuredPojo {
             sb.append("MinBufferTimeSeconds: ").append(getMinBufferTimeSeconds()).append(",");
         if (getProfile() != null)
             sb.append("Profile: ").append(getProfile()).append(",");
+        if (getScteMarkersSource() != null)
+            sb.append("ScteMarkersSource: ").append(getScteMarkersSource()).append(",");
         if (getStreamSelection() != null)
             sb.append("StreamSelection: ").append(getStreamSelection());
         sb.append("}");
@@ -316,6 +386,10 @@ public class DashManifest implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProfile() != null && other.getProfile().equals(this.getProfile()) == false)
             return false;
+        if (other.getScteMarkersSource() == null ^ this.getScteMarkersSource() == null)
+            return false;
+        if (other.getScteMarkersSource() != null && other.getScteMarkersSource().equals(this.getScteMarkersSource()) == false)
+            return false;
         if (other.getStreamSelection() == null ^ this.getStreamSelection() == null)
             return false;
         if (other.getStreamSelection() != null && other.getStreamSelection().equals(this.getStreamSelection()) == false)
@@ -332,6 +406,7 @@ public class DashManifest implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getManifestName() == null) ? 0 : getManifestName().hashCode());
         hashCode = prime * hashCode + ((getMinBufferTimeSeconds() == null) ? 0 : getMinBufferTimeSeconds().hashCode());
         hashCode = prime * hashCode + ((getProfile() == null) ? 0 : getProfile().hashCode());
+        hashCode = prime * hashCode + ((getScteMarkersSource() == null) ? 0 : getScteMarkersSource().hashCode());
         hashCode = prime * hashCode + ((getStreamSelection() == null) ? 0 : getStreamSelection().hashCode());
         return hashCode;
     }

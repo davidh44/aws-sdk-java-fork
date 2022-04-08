@@ -35,6 +35,8 @@ public class DashManifestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minBufferTimeSeconds").build();
     private static final MarshallingInfo<String> PROFILE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("profile").build();
+    private static final MarshallingInfo<String> SCTEMARKERSSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scteMarkersSource").build();
     private static final MarshallingInfo<StructuredPojo> STREAMSELECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("streamSelection").build();
 
@@ -58,6 +60,7 @@ public class DashManifestMarshaller {
             protocolMarshaller.marshall(dashManifest.getManifestName(), MANIFESTNAME_BINDING);
             protocolMarshaller.marshall(dashManifest.getMinBufferTimeSeconds(), MINBUFFERTIMESECONDS_BINDING);
             protocolMarshaller.marshall(dashManifest.getProfile(), PROFILE_BINDING);
+            protocolMarshaller.marshall(dashManifest.getScteMarkersSource(), SCTEMARKERSSOURCE_BINDING);
             protocolMarshaller.marshall(dashManifest.getStreamSelection(), STREAMSELECTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

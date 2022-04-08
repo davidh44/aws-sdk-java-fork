@@ -118,6 +118,11 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
     /** The length, in seconds, of each fragment. Only used with EBP markers. */
     private Double fragmentTime;
     /**
+     * Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     */
+    private String klvMetadata;
+    /**
      * Specify the maximum time, in milliseconds, between Program Clock References (PCRs) inserted into the transport
      * stream.
      */
@@ -1190,6 +1195,65 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
 
     public M2tsSettings withFragmentTime(Double fragmentTime) {
         setFragmentTime(fragmentTime);
+        return this;
+    }
+
+    /**
+     * Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *        the input in this output.
+     * @see M2tsKlvMetadata
+     */
+
+    public void setKlvMetadata(String klvMetadata) {
+        this.klvMetadata = klvMetadata;
+    }
+
+    /**
+     * Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @return Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *         the input in this output.
+     * @see M2tsKlvMetadata
+     */
+
+    public String getKlvMetadata() {
+        return this.klvMetadata;
+    }
+
+    /**
+     * Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *        the input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M2tsKlvMetadata
+     */
+
+    public M2tsSettings withKlvMetadata(String klvMetadata) {
+        setKlvMetadata(klvMetadata);
+        return this;
+    }
+
+    /**
+     * Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to MPEG-TS outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *        the input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M2tsKlvMetadata
+     */
+
+    public M2tsSettings withKlvMetadata(M2tsKlvMetadata klvMetadata) {
+        this.klvMetadata = klvMetadata.toString();
         return this;
     }
 
@@ -2278,6 +2342,8 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("ForceTsVideoEbpOrder: ").append(getForceTsVideoEbpOrder()).append(",");
         if (getFragmentTime() != null)
             sb.append("FragmentTime: ").append(getFragmentTime()).append(",");
+        if (getKlvMetadata() != null)
+            sb.append("KlvMetadata: ").append(getKlvMetadata()).append(",");
         if (getMaxPcrInterval() != null)
             sb.append("MaxPcrInterval: ").append(getMaxPcrInterval()).append(",");
         if (getMinEbpInterval() != null)
@@ -2402,6 +2468,10 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFragmentTime() != null && other.getFragmentTime().equals(this.getFragmentTime()) == false)
             return false;
+        if (other.getKlvMetadata() == null ^ this.getKlvMetadata() == null)
+            return false;
+        if (other.getKlvMetadata() != null && other.getKlvMetadata().equals(this.getKlvMetadata()) == false)
+            return false;
         if (other.getMaxPcrInterval() == null ^ this.getMaxPcrInterval() == null)
             return false;
         if (other.getMaxPcrInterval() != null && other.getMaxPcrInterval().equals(this.getMaxPcrInterval()) == false)
@@ -2511,6 +2581,7 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEsRateInPes() == null) ? 0 : getEsRateInPes().hashCode());
         hashCode = prime * hashCode + ((getForceTsVideoEbpOrder() == null) ? 0 : getForceTsVideoEbpOrder().hashCode());
         hashCode = prime * hashCode + ((getFragmentTime() == null) ? 0 : getFragmentTime().hashCode());
+        hashCode = prime * hashCode + ((getKlvMetadata() == null) ? 0 : getKlvMetadata().hashCode());
         hashCode = prime * hashCode + ((getMaxPcrInterval() == null) ? 0 : getMaxPcrInterval().hashCode());
         hashCode = prime * hashCode + ((getMinEbpInterval() == null) ? 0 : getMinEbpInterval().hashCode());
         hashCode = prime * hashCode + ((getNielsenId3() == null) ? 0 : getNielsenId3().hashCode());

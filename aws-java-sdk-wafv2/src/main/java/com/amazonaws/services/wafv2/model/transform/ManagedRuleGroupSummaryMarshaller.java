@@ -31,6 +31,8 @@ public class ManagedRuleGroupSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VendorName").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
+    private static final MarshallingInfo<Boolean> VERSIONINGSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VersioningSupported").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
 
@@ -52,6 +54,7 @@ public class ManagedRuleGroupSummaryMarshaller {
         try {
             protocolMarshaller.marshall(managedRuleGroupSummary.getVendorName(), VENDORNAME_BINDING);
             protocolMarshaller.marshall(managedRuleGroupSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(managedRuleGroupSummary.getVersioningSupported(), VERSIONINGSUPPORTED_BINDING);
             protocolMarshaller.marshall(managedRuleGroupSummary.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

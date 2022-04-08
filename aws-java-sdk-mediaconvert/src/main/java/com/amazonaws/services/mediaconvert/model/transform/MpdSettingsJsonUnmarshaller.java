@@ -60,6 +60,10 @@ public class MpdSettingsJsonUnmarshaller implements Unmarshaller<MpdSettings, Js
                     context.nextToken();
                     mpdSettings.setCaptionContainerType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("klvMetadata", targetDepth)) {
+                    context.nextToken();
+                    mpdSettings.setKlvMetadata(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("scte35Esam", targetDepth)) {
                     context.nextToken();
                     mpdSettings.setScte35Esam(context.getUnmarshaller(String.class).unmarshall(context));

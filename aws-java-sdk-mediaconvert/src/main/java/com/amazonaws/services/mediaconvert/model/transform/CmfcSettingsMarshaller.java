@@ -39,6 +39,8 @@ public class CmfcSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("descriptiveVideoServiceFlag").build();
     private static final MarshallingInfo<String> IFRAMEONLYMANIFEST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("iFrameOnlyManifest").build();
+    private static final MarshallingInfo<String> KLVMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("klvMetadata").build();
     private static final MarshallingInfo<String> SCTE35ESAM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35Esam").build();
     private static final MarshallingInfo<String> SCTE35SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -68,6 +70,7 @@ public class CmfcSettingsMarshaller {
             protocolMarshaller.marshall(cmfcSettings.getAudioTrackType(), AUDIOTRACKTYPE_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getDescriptiveVideoServiceFlag(), DESCRIPTIVEVIDEOSERVICEFLAG_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getIFrameOnlyManifest(), IFRAMEONLYMANIFEST_BINDING);
+            protocolMarshaller.marshall(cmfcSettings.getKlvMetadata(), KLVMETADATA_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getScte35Esam(), SCTE35ESAM_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getScte35Source(), SCTE35SOURCE_BINDING);
             protocolMarshaller.marshall(cmfcSettings.getTimedMetadata(), TIMEDMETADATA_BINDING);

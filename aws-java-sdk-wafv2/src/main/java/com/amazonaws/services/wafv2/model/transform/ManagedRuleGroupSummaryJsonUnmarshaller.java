@@ -56,6 +56,10 @@ public class ManagedRuleGroupSummaryJsonUnmarshaller implements Unmarshaller<Man
                     context.nextToken();
                     managedRuleGroupSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("VersioningSupported", targetDepth)) {
+                    context.nextToken();
+                    managedRuleGroupSummary.setVersioningSupported(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
                     managedRuleGroupSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

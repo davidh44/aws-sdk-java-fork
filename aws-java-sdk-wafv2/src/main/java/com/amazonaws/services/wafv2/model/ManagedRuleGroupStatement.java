@@ -80,6 +80,13 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      * provide information about the sign-in page of your application.
      * </p>
+     * <p>
+     * You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration,
+     * for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends
+     * on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual
+     * configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and
+     * <code>UsernameField</code>.
+     * </p>
      */
     private java.util.List<ManagedRuleGroupConfig> managedRuleGroupConfigs;
 
@@ -373,12 +380,26 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      * provide information about the sign-in page of your application.
      * </p>
+     * <p>
+     * You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration,
+     * for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends
+     * on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual
+     * configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and
+     * <code>UsernameField</code>.
+     * </p>
      * 
      * @return Additional information that's used by a managed rule group. Most managed rule groups don't require
      *         this.</p>
      *         <p>
      *         Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>,
      *         to provide information about the sign-in page of your application.
+     *         </p>
+     *         <p>
+     *         You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group
+     *         configuration, for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration
+     *         that you provide depends on the needs of the managed rule group. For the ATP managed rule group, you
+     *         provide the following individual configuration objects: <code>LoginPath</code>,
+     *         <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.
      */
 
     public java.util.List<ManagedRuleGroupConfig> getManagedRuleGroupConfigs() {
@@ -393,6 +414,13 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      * provide information about the sign-in page of your application.
      * </p>
+     * <p>
+     * You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration,
+     * for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends
+     * on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual
+     * configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and
+     * <code>UsernameField</code>.
+     * </p>
      * 
      * @param managedRuleGroupConfigs
      *        Additional information that's used by a managed rule group. Most managed rule groups don't require
@@ -400,6 +428,12 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      *        <p>
      *        Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      *        provide information about the sign-in page of your application.
+     *        </p>
+     *        <p>
+     *        You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group
+     *        configuration, for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration
+     *        that you provide depends on the needs of the managed rule group. For the ATP managed rule group, you
+     *        provide the following individual configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.
      */
 
     public void setManagedRuleGroupConfigs(java.util.Collection<ManagedRuleGroupConfig> managedRuleGroupConfigs) {
@@ -420,6 +454,13 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      * provide information about the sign-in page of your application.
      * </p>
      * <p>
+     * You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration,
+     * for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends
+     * on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual
+     * configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and
+     * <code>UsernameField</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setManagedRuleGroupConfigs(java.util.Collection)} or
      * {@link #withManagedRuleGroupConfigs(java.util.Collection)} if you want to override the existing values.
@@ -431,6 +472,12 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      *        <p>
      *        Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      *        provide information about the sign-in page of your application.
+     *        </p>
+     *        <p>
+     *        You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group
+     *        configuration, for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration
+     *        that you provide depends on the needs of the managed rule group. For the ATP managed rule group, you
+     *        provide the following individual configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -452,6 +499,13 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      * provide information about the sign-in page of your application.
      * </p>
+     * <p>
+     * You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration,
+     * for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends
+     * on the needs of the managed rule group. For the ATP managed rule group, you provide the following individual
+     * configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and
+     * <code>UsernameField</code>.
+     * </p>
      * 
      * @param managedRuleGroupConfigs
      *        Additional information that's used by a managed rule group. Most managed rule groups don't require
@@ -459,6 +513,12 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
      *        <p>
      *        Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to
      *        provide information about the sign-in page of your application.
+     *        </p>
+     *        <p>
+     *        You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group
+     *        configuration, for example <code>UsernameField</code> and <code>PasswordField</code>. The configuration
+     *        that you provide depends on the needs of the managed rule group. For the ATP managed rule group, you
+     *        provide the following individual configuration objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

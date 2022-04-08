@@ -54,6 +54,11 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private String captionContainerType;
     /**
+     * Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     */
+    private String klvMetadata;
+    /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
      * XML (sccXml).
@@ -355,6 +360,65 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *        the input in this output.
+     * @see MpdKlvMetadata
+     */
+
+    public void setKlvMetadata(String klvMetadata) {
+        this.klvMetadata = klvMetadata;
+    }
+
+    /**
+     * Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @return Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata
+     *         from the input in this output.
+     * @see MpdKlvMetadata
+     */
+
+    public String getKlvMetadata() {
+        return this.klvMetadata;
+    }
+
+    /**
+     * Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *        the input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MpdKlvMetadata
+     */
+
+    public MpdSettings withKlvMetadata(String klvMetadata) {
+        setKlvMetadata(klvMetadata);
+        return this;
+    }
+
+    /**
+     * Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     * input in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to DASH ISO outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *        the input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MpdKlvMetadata
+     */
+
+    public MpdSettings withKlvMetadata(MpdKlvMetadata klvMetadata) {
+        this.klvMetadata = klvMetadata.toString();
+        return this;
+    }
+
+    /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
      * XML (sccXml).
@@ -581,6 +645,8 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("AudioDuration: ").append(getAudioDuration()).append(",");
         if (getCaptionContainerType() != null)
             sb.append("CaptionContainerType: ").append(getCaptionContainerType()).append(",");
+        if (getKlvMetadata() != null)
+            sb.append("KlvMetadata: ").append(getKlvMetadata()).append(",");
         if (getScte35Esam() != null)
             sb.append("Scte35Esam: ").append(getScte35Esam()).append(",");
         if (getScte35Source() != null)
@@ -613,6 +679,10 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCaptionContainerType() != null && other.getCaptionContainerType().equals(this.getCaptionContainerType()) == false)
             return false;
+        if (other.getKlvMetadata() == null ^ this.getKlvMetadata() == null)
+            return false;
+        if (other.getKlvMetadata() != null && other.getKlvMetadata().equals(this.getKlvMetadata()) == false)
+            return false;
         if (other.getScte35Esam() == null ^ this.getScte35Esam() == null)
             return false;
         if (other.getScte35Esam() != null && other.getScte35Esam().equals(this.getScte35Esam()) == false)
@@ -636,6 +706,7 @@ public class MpdSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAccessibilityCaptionHints() == null) ? 0 : getAccessibilityCaptionHints().hashCode());
         hashCode = prime * hashCode + ((getAudioDuration() == null) ? 0 : getAudioDuration().hashCode());
         hashCode = prime * hashCode + ((getCaptionContainerType() == null) ? 0 : getCaptionContainerType().hashCode());
+        hashCode = prime * hashCode + ((getKlvMetadata() == null) ? 0 : getKlvMetadata().hashCode());
         hashCode = prime * hashCode + ((getScte35Esam() == null) ? 0 : getScte35Esam().hashCode());
         hashCode = prime * hashCode + ((getScte35Source() == null) ? 0 : getScte35Source().hashCode());
         hashCode = prime * hashCode + ((getTimedMetadata() == null) ? 0 : getTimedMetadata().hashCode());

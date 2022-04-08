@@ -93,6 +93,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private String iFrameOnlyManifest;
     /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the input
+     * in this output.
+     */
+    private String klvMetadata;
+    /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
      * XML (sccXml).
@@ -699,6 +704,65 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the input
+     * in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     *        input in this output.
+     * @see CmfcKlvMetadata
+     */
+
+    public void setKlvMetadata(String klvMetadata) {
+        this.klvMetadata = klvMetadata;
+    }
+
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the input
+     * in this output.
+     * 
+     * @return Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from
+     *         the input in this output.
+     * @see CmfcKlvMetadata
+     */
+
+    public String getKlvMetadata() {
+        return this.klvMetadata;
+    }
+
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the input
+     * in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     *        input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CmfcKlvMetadata
+     */
+
+    public CmfcSettings withKlvMetadata(String klvMetadata) {
+        setKlvMetadata(klvMetadata);
+        return this;
+    }
+
+    /**
+     * Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the input
+     * in this output.
+     * 
+     * @param klvMetadata
+     *        Applies to CMAF outputs. Use this setting to specify whether the service inserts the KLV metadata from the
+     *        input in this output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CmfcKlvMetadata
+     */
+
+    public CmfcSettings withKlvMetadata(CmfcKlvMetadata klvMetadata) {
+        this.klvMetadata = klvMetadata.toString();
+        return this;
+    }
+
+    /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
      * XML (sccXml).
@@ -931,6 +995,8 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("DescriptiveVideoServiceFlag: ").append(getDescriptiveVideoServiceFlag()).append(",");
         if (getIFrameOnlyManifest() != null)
             sb.append("IFrameOnlyManifest: ").append(getIFrameOnlyManifest()).append(",");
+        if (getKlvMetadata() != null)
+            sb.append("KlvMetadata: ").append(getKlvMetadata()).append(",");
         if (getScte35Esam() != null)
             sb.append("Scte35Esam: ").append(getScte35Esam()).append(",");
         if (getScte35Source() != null)
@@ -975,6 +1041,10 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getIFrameOnlyManifest() != null && other.getIFrameOnlyManifest().equals(this.getIFrameOnlyManifest()) == false)
             return false;
+        if (other.getKlvMetadata() == null ^ this.getKlvMetadata() == null)
+            return false;
+        if (other.getKlvMetadata() != null && other.getKlvMetadata().equals(this.getKlvMetadata()) == false)
+            return false;
         if (other.getScte35Esam() == null ^ this.getScte35Esam() == null)
             return false;
         if (other.getScte35Esam() != null && other.getScte35Esam().equals(this.getScte35Esam()) == false)
@@ -1001,6 +1071,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAudioTrackType() == null) ? 0 : getAudioTrackType().hashCode());
         hashCode = prime * hashCode + ((getDescriptiveVideoServiceFlag() == null) ? 0 : getDescriptiveVideoServiceFlag().hashCode());
         hashCode = prime * hashCode + ((getIFrameOnlyManifest() == null) ? 0 : getIFrameOnlyManifest().hashCode());
+        hashCode = prime * hashCode + ((getKlvMetadata() == null) ? 0 : getKlvMetadata().hashCode());
         hashCode = prime * hashCode + ((getScte35Esam() == null) ? 0 : getScte35Esam().hashCode());
         hashCode = prime * hashCode + ((getScte35Source() == null) ? 0 : getScte35Source().hashCode());
         hashCode = prime * hashCode + ((getTimedMetadata() == null) ? 0 : getTimedMetadata().hashCode());

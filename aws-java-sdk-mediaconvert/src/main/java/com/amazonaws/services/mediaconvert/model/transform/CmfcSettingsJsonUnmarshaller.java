@@ -72,6 +72,10 @@ public class CmfcSettingsJsonUnmarshaller implements Unmarshaller<CmfcSettings, 
                     context.nextToken();
                     cmfcSettings.setIFrameOnlyManifest(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("klvMetadata", targetDepth)) {
+                    context.nextToken();
+                    cmfcSettings.setKlvMetadata(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("scte35Esam", targetDepth)) {
                     context.nextToken();
                     cmfcSettings.setScte35Esam(context.getUnmarshaller(String.class).unmarshall(context));

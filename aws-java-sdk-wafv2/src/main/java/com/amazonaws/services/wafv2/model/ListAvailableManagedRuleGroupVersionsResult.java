@@ -38,6 +38,12 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
      * </p>
      */
     private java.util.List<ManagedRuleGroupVersion> versions;
+    /**
+     * <p>
+     * The name of the version that's currently set as the default.
+     * </p>
+     */
+    private String currentDefaultVersion;
 
     /**
      * <p>
@@ -165,6 +171,46 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
     }
 
     /**
+     * <p>
+     * The name of the version that's currently set as the default.
+     * </p>
+     * 
+     * @param currentDefaultVersion
+     *        The name of the version that's currently set as the default.
+     */
+
+    public void setCurrentDefaultVersion(String currentDefaultVersion) {
+        this.currentDefaultVersion = currentDefaultVersion;
+    }
+
+    /**
+     * <p>
+     * The name of the version that's currently set as the default.
+     * </p>
+     * 
+     * @return The name of the version that's currently set as the default.
+     */
+
+    public String getCurrentDefaultVersion() {
+        return this.currentDefaultVersion;
+    }
+
+    /**
+     * <p>
+     * The name of the version that's currently set as the default.
+     * </p>
+     * 
+     * @param currentDefaultVersion
+     *        The name of the version that's currently set as the default.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAvailableManagedRuleGroupVersionsResult withCurrentDefaultVersion(String currentDefaultVersion) {
+        setCurrentDefaultVersion(currentDefaultVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -179,7 +225,9 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
         if (getNextMarker() != null)
             sb.append("NextMarker: ").append(getNextMarker()).append(",");
         if (getVersions() != null)
-            sb.append("Versions: ").append(getVersions());
+            sb.append("Versions: ").append(getVersions()).append(",");
+        if (getCurrentDefaultVersion() != null)
+            sb.append("CurrentDefaultVersion: ").append(getCurrentDefaultVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -202,6 +250,10 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
             return false;
         if (other.getVersions() != null && other.getVersions().equals(this.getVersions()) == false)
             return false;
+        if (other.getCurrentDefaultVersion() == null ^ this.getCurrentDefaultVersion() == null)
+            return false;
+        if (other.getCurrentDefaultVersion() != null && other.getCurrentDefaultVersion().equals(this.getCurrentDefaultVersion()) == false)
+            return false;
         return true;
     }
 
@@ -212,6 +264,7 @@ public class ListAvailableManagedRuleGroupVersionsResult extends com.amazonaws.A
 
         hashCode = prime * hashCode + ((getNextMarker() == null) ? 0 : getNextMarker().hashCode());
         hashCode = prime * hashCode + ((getVersions() == null) ? 0 : getVersions().hashCode());
+        hashCode = prime * hashCode + ((getCurrentDefaultVersion() == null) ? 0 : getCurrentDefaultVersion().hashCode());
         return hashCode;
     }
 

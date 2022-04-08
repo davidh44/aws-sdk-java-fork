@@ -2894,6 +2894,8 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         be associated.
      *         </p>
      *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.ListAvailableManagedRuleGroupVersions
@@ -4194,8 +4196,8 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         <li>
      *         <p>
      *         <code>Action</code> must specify <code>wafv2:CreateWebACL</code>, <code>wafv2:UpdateWebACL</code>, and
-     *         <code>wafv2:PutFirewallManagerRuleGroups</code>. WAF rejects any extra actions or wildcard actions in the
-     *         policy.
+     *         <code>wafv2:PutFirewallManagerRuleGroups</code> and may optionally specify
+     *         <code>wafv2:GetRuleGroup</code>. WAF rejects any extra actions or wildcard actions in the policy.
      *         </p>
      *         </li>
      *         <li>

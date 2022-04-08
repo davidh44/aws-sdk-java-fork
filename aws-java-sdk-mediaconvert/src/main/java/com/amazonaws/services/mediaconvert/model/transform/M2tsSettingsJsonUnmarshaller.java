@@ -120,6 +120,10 @@ public class M2tsSettingsJsonUnmarshaller implements Unmarshaller<M2tsSettings, 
                     context.nextToken();
                     m2tsSettings.setFragmentTime(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("klvMetadata", targetDepth)) {
+                    context.nextToken();
+                    m2tsSettings.setKlvMetadata(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("maxPcrInterval", targetDepth)) {
                     context.nextToken();
                     m2tsSettings.setMaxPcrInterval(context.getUnmarshaller(Integer.class).unmarshall(context));

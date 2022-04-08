@@ -60,6 +60,10 @@ public class ListAvailableManagedRuleGroupVersionsResultJsonUnmarshaller impleme
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("CurrentDefaultVersion", targetDepth)) {
+                    context.nextToken();
+                    listAvailableManagedRuleGroupVersionsResult.setCurrentDefaultVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

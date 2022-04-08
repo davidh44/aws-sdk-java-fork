@@ -62,6 +62,8 @@ public class M2tsSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("forceTsVideoEbpOrder").build();
     private static final MarshallingInfo<Double> FRAGMENTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fragmentTime").build();
+    private static final MarshallingInfo<String> KLVMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("klvMetadata").build();
     private static final MarshallingInfo<Integer> MAXPCRINTERVAL_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxPcrInterval").build();
     private static final MarshallingInfo<Integer> MINEBPINTERVAL_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -138,6 +140,7 @@ public class M2tsSettingsMarshaller {
             protocolMarshaller.marshall(m2tsSettings.getEsRateInPes(), ESRATEINPES_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getForceTsVideoEbpOrder(), FORCETSVIDEOEBPORDER_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getFragmentTime(), FRAGMENTTIME_BINDING);
+            protocolMarshaller.marshall(m2tsSettings.getKlvMetadata(), KLVMETADATA_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getMaxPcrInterval(), MAXPCRINTERVAL_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getMinEbpInterval(), MINEBPINTERVAL_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getNielsenId3(), NIELSENID3_BINDING);

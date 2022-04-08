@@ -47,6 +47,13 @@ public class ManagedRuleGroupSummary implements Serializable, Cloneable, Structu
     private String name;
     /**
      * <p>
+     * Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>.
+     * </p>
+     */
+    private Boolean versioningSupported;
+    /**
+     * <p>
      * The description of the managed rule group, provided by Amazon Web Services Managed Rules or the Amazon Web
      * Services Marketplace seller who manages it.
      * </p>
@@ -141,6 +148,66 @@ public class ManagedRuleGroupSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
+     * Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>.
+     * </p>
+     * 
+     * @param versioningSupported
+     *        Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by
+     *        calling <a>ListAvailableManagedRuleGroupVersions</a>.
+     */
+
+    public void setVersioningSupported(Boolean versioningSupported) {
+        this.versioningSupported = versioningSupported;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>.
+     * </p>
+     * 
+     * @return Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by
+     *         calling <a>ListAvailableManagedRuleGroupVersions</a>.
+     */
+
+    public Boolean getVersioningSupported() {
+        return this.versioningSupported;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>.
+     * </p>
+     * 
+     * @param versioningSupported
+     *        Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by
+     *        calling <a>ListAvailableManagedRuleGroupVersions</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ManagedRuleGroupSummary withVersioningSupported(Boolean versioningSupported) {
+        setVersioningSupported(versioningSupported);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>.
+     * </p>
+     * 
+     * @return Indicates whether the managed rule group is versioned. If it is, you can retrieve the versions list by
+     *         calling <a>ListAvailableManagedRuleGroupVersions</a>.
+     */
+
+    public Boolean isVersioningSupported() {
+        return this.versioningSupported;
+    }
+
+    /**
+     * <p>
      * The description of the managed rule group, provided by Amazon Web Services Managed Rules or the Amazon Web
      * Services Marketplace seller who manages it.
      * </p>
@@ -201,6 +268,8 @@ public class ManagedRuleGroupSummary implements Serializable, Cloneable, Structu
             sb.append("VendorName: ").append(getVendorName()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getVersioningSupported() != null)
+            sb.append("VersioningSupported: ").append(getVersioningSupported()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription());
         sb.append("}");
@@ -225,6 +294,10 @@ public class ManagedRuleGroupSummary implements Serializable, Cloneable, Structu
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getVersioningSupported() == null ^ this.getVersioningSupported() == null)
+            return false;
+        if (other.getVersioningSupported() != null && other.getVersioningSupported().equals(this.getVersioningSupported()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -239,6 +312,7 @@ public class ManagedRuleGroupSummary implements Serializable, Cloneable, Structu
 
         hashCode = prime * hashCode + ((getVendorName() == null) ? 0 : getVendorName().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getVersioningSupported() == null) ? 0 : getVersioningSupported().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }

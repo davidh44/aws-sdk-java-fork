@@ -64,6 +64,10 @@ public class DashManifestJsonUnmarshaller implements Unmarshaller<DashManifest, 
                     context.nextToken();
                     dashManifest.setProfile(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("scteMarkersSource", targetDepth)) {
+                    context.nextToken();
+                    dashManifest.setScteMarkersSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("streamSelection", targetDepth)) {
                     context.nextToken();
                     dashManifest.setStreamSelection(StreamSelectionJsonUnmarshaller.getInstance().unmarshall(context));

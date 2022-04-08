@@ -25,6 +25,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Use this for the account takeover prevention managed rule group <code>AWSManagedRulesATPRuleSet</code>, to provide
  * information about the sign-in page of your application.
  * </p>
+ * <p>
+ * You can provide multiple individual <code>ManagedRuleGroupConfig</code> objects for any rule group configuration, for
+ * example <code>UsernameField</code> and <code>PasswordField</code>. The configuration that you provide depends on the
+ * needs of the managed rule group. For the ATP managed rule group, you provide the following individual configuration
+ * objects: <code>LoginPath</code>, <code>PasswordField</code>, <code>PayloadType</code> and <code>UsernameField</code>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ManagedRuleGroupConfig" target="_top">AWS API
  *      Documentation</a>
