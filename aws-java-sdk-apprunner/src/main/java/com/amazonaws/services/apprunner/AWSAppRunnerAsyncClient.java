@@ -200,6 +200,41 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
     }
 
     @Override
+    public java.util.concurrent.Future<CreateObservabilityConfigurationResult> createObservabilityConfigurationAsync(
+            CreateObservabilityConfigurationRequest request) {
+
+        return createObservabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateObservabilityConfigurationResult> createObservabilityConfigurationAsync(
+            final CreateObservabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateObservabilityConfigurationRequest, CreateObservabilityConfigurationResult> asyncHandler) {
+        final CreateObservabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateObservabilityConfigurationResult>() {
+            @Override
+            public CreateObservabilityConfigurationResult call() throws Exception {
+                CreateObservabilityConfigurationResult result = null;
+
+                try {
+                    result = executeCreateObservabilityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateServiceResult> createServiceAsync(CreateServiceRequest request) {
 
         return createServiceAsync(request, null);
@@ -317,6 +352,41 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
 
                 try {
                     result = executeDeleteConnection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObservabilityConfigurationResult> deleteObservabilityConfigurationAsync(
+            DeleteObservabilityConfigurationRequest request) {
+
+        return deleteObservabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObservabilityConfigurationResult> deleteObservabilityConfigurationAsync(
+            final DeleteObservabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteObservabilityConfigurationRequest, DeleteObservabilityConfigurationResult> asyncHandler) {
+        final DeleteObservabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteObservabilityConfigurationResult>() {
+            @Override
+            public DeleteObservabilityConfigurationResult call() throws Exception {
+                DeleteObservabilityConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteObservabilityConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -451,6 +521,41 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
 
                 try {
                     result = executeDescribeCustomDomains(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeObservabilityConfigurationResult> describeObservabilityConfigurationAsync(
+            DescribeObservabilityConfigurationRequest request) {
+
+        return describeObservabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeObservabilityConfigurationResult> describeObservabilityConfigurationAsync(
+            final DescribeObservabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeObservabilityConfigurationRequest, DescribeObservabilityConfigurationResult> asyncHandler) {
+        final DescribeObservabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeObservabilityConfigurationResult>() {
+            @Override
+            public DescribeObservabilityConfigurationResult call() throws Exception {
+                DescribeObservabilityConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeObservabilityConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -617,6 +722,41 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
 
                 try {
                     result = executeListConnections(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListObservabilityConfigurationsResult> listObservabilityConfigurationsAsync(
+            ListObservabilityConfigurationsRequest request) {
+
+        return listObservabilityConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListObservabilityConfigurationsResult> listObservabilityConfigurationsAsync(
+            final ListObservabilityConfigurationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListObservabilityConfigurationsRequest, ListObservabilityConfigurationsResult> asyncHandler) {
+        final ListObservabilityConfigurationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListObservabilityConfigurationsResult>() {
+            @Override
+            public ListObservabilityConfigurationsResult call() throws Exception {
+                ListObservabilityConfigurationsResult result = null;
+
+                try {
+                    result = executeListObservabilityConfigurations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -43,6 +43,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
     }
 
     @Override
+    public CreateObservabilityConfigurationResult createObservabilityConfiguration(CreateObservabilityConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateServiceResult createService(CreateServiceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -63,6 +68,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
     }
 
     @Override
+    public DeleteObservabilityConfigurationResult deleteObservabilityConfiguration(DeleteObservabilityConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteServiceResult deleteService(DeleteServiceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,6 +89,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
 
     @Override
     public DescribeCustomDomainsResult describeCustomDomains(DescribeCustomDomainsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeObservabilityConfigurationResult describeObservabilityConfiguration(DescribeObservabilityConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +119,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
 
     @Override
     public ListConnectionsResult listConnections(ListConnectionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListObservabilityConfigurationsResult listObservabilityConfigurations(ListObservabilityConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

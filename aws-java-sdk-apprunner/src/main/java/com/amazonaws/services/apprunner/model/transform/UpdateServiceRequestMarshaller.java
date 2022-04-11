@@ -39,6 +39,8 @@ public class UpdateServiceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HealthCheckConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> OBSERVABILITYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ObservabilityConfiguration").build();
 
     private static final UpdateServiceRequestMarshaller instance = new UpdateServiceRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class UpdateServiceRequestMarshaller {
             protocolMarshaller.marshall(updateServiceRequest.getAutoScalingConfigurationArn(), AUTOSCALINGCONFIGURATIONARN_BINDING);
             protocolMarshaller.marshall(updateServiceRequest.getHealthCheckConfiguration(), HEALTHCHECKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateServiceRequest.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateServiceRequest.getObservabilityConfiguration(), OBSERVABILITYCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

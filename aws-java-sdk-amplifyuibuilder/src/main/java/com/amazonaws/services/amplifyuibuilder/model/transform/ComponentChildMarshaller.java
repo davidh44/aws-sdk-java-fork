@@ -39,6 +39,8 @@ public class ComponentChildMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> PROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("properties").build();
+    private static final MarshallingInfo<String> SOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sourceId").build();
 
     private static final ComponentChildMarshaller instance = new ComponentChildMarshaller();
 
@@ -61,6 +63,7 @@ public class ComponentChildMarshaller {
             protocolMarshaller.marshall(componentChild.getEvents(), EVENTS_BINDING);
             protocolMarshaller.marshall(componentChild.getName(), NAME_BINDING);
             protocolMarshaller.marshall(componentChild.getProperties(), PROPERTIES_BINDING);
+            protocolMarshaller.marshall(componentChild.getSourceId(), SOURCEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

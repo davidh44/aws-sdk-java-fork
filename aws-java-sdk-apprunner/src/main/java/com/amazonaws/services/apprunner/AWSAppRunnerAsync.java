@@ -108,14 +108,15 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
     /**
      * <p>
      * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create
-     * App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration
-     * across multiple services.
+     * or update App Runner services and you require non-default auto scaling settings. You can share an auto scaling
+     * configuration across multiple services.
      * </p>
      * <p>
      * Create multiple revisions of a configuration by calling this action multiple times using the same
      * <code>AutoScalingConfigurationName</code>. The call returns incremental
-     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
-     * active revision of an auto scaling configuration or a specific revision.
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service and configure an auto scaling
+     * configuration resource, the service uses the latest active revision of the auto scaling configuration by default.
+     * You can optionally configure the service to use a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -139,14 +140,15 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
     /**
      * <p>
      * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create
-     * App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration
-     * across multiple services.
+     * or update App Runner services and you require non-default auto scaling settings. You can share an auto scaling
+     * configuration across multiple services.
      * </p>
      * <p>
      * Create multiple revisions of a configuration by calling this action multiple times using the same
      * <code>AutoScalingConfigurationName</code>. The call returns incremental
-     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
-     * active revision of an auto scaling configuration or a specific revision.
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service and configure an auto scaling
+     * configuration resource, the service uses the latest active revision of the auto scaling configuration by default.
+     * You can optionally configure the service to use a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -214,6 +216,71 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      */
     java.util.concurrent.Future<CreateConnectionResult> createConnectionAsync(CreateConnectionRequest createConnectionRequest,
             com.amazonaws.handlers.AsyncHandler<CreateConnectionRequest, CreateConnectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create an App Runner observability configuration resource. App Runner requires this resource when you create or
+     * update App Runner services and you want to enable non-default observability features. You can share an
+     * observability configuration across multiple services.
+     * </p>
+     * <p>
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>ObservabilityConfigurationName</code>. The call returns incremental
+     * <code>ObservabilityConfigurationRevision</code> values. When you create a service and configure an observability
+     * configuration resource, the service uses the latest active revision of the observability configuration by
+     * default. You can optionally configure the service to use a specific revision.
+     * </p>
+     * <p>
+     * The observability configuration resource is designed to configure multiple features (currently one feature,
+     * tracing). This action takes optional parameters that describe the configuration of these features (currently one
+     * parameter, <code>TraceConfiguration</code>). If you don't specify a feature parameter, App Runner doesn't enable
+     * the feature.
+     * </p>
+     * 
+     * @param createObservabilityConfigurationRequest
+     * @return A Java Future containing the result of the CreateObservabilityConfiguration operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsync.CreateObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateObservabilityConfigurationResult> createObservabilityConfigurationAsync(
+            CreateObservabilityConfigurationRequest createObservabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Create an App Runner observability configuration resource. App Runner requires this resource when you create or
+     * update App Runner services and you want to enable non-default observability features. You can share an
+     * observability configuration across multiple services.
+     * </p>
+     * <p>
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>ObservabilityConfigurationName</code>. The call returns incremental
+     * <code>ObservabilityConfigurationRevision</code> values. When you create a service and configure an observability
+     * configuration resource, the service uses the latest active revision of the observability configuration by
+     * default. You can optionally configure the service to use a specific revision.
+     * </p>
+     * <p>
+     * The observability configuration resource is designed to configure multiple features (currently one feature,
+     * tracing). This action takes optional parameters that describe the configuration of these features (currently one
+     * parameter, <code>TraceConfiguration</code>). If you don't specify a feature parameter, App Runner doesn't enable
+     * the feature.
+     * </p>
+     * 
+     * @param createObservabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateObservabilityConfiguration operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsyncHandler.CreateObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateObservabilityConfigurationResult> createObservabilityConfigurationAsync(
+            CreateObservabilityConfigurationRequest createObservabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateObservabilityConfigurationRequest, CreateObservabilityConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -361,6 +428,43 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
+     * Delete an App Runner observability configuration resource. You can delete a specific revision or the latest
+     * active revision. You can't delete a configuration that's used by one or more App Runner services.
+     * </p>
+     * 
+     * @param deleteObservabilityConfigurationRequest
+     * @return A Java Future containing the result of the DeleteObservabilityConfiguration operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsync.DeleteObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteObservabilityConfigurationResult> deleteObservabilityConfigurationAsync(
+            DeleteObservabilityConfigurationRequest deleteObservabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Delete an App Runner observability configuration resource. You can delete a specific revision or the latest
+     * active revision. You can't delete a configuration that's used by one or more App Runner services.
+     * </p>
+     * 
+     * @param deleteObservabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteObservabilityConfiguration operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsyncHandler.DeleteObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteObservabilityConfigurationResult> deleteObservabilityConfigurationAsync(
+            DeleteObservabilityConfigurationRequest deleteObservabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteObservabilityConfigurationRequest, DeleteObservabilityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Delete an App Runner service.
      * </p>
      * <p>
@@ -499,6 +603,41 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
+     * Return a full description of an App Runner observability configuration resource.
+     * </p>
+     * 
+     * @param describeObservabilityConfigurationRequest
+     * @return A Java Future containing the result of the DescribeObservabilityConfiguration operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsync.DescribeObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeObservabilityConfigurationResult> describeObservabilityConfigurationAsync(
+            DescribeObservabilityConfigurationRequest describeObservabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Return a full description of an App Runner observability configuration resource.
+     * </p>
+     * 
+     * @param describeObservabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeObservabilityConfiguration operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsyncHandler.DescribeObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeObservabilityConfigurationResult> describeObservabilityConfigurationAsync(
+            DescribeObservabilityConfigurationRequest describeObservabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeObservabilityConfigurationRequest, DescribeObservabilityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Return a full description of an App Runner service.
      * </p>
      * 
@@ -604,9 +743,13 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query
-     * the revisions for a specific configuration name or the revisions for all configurations in your account. You can
-     * optionally query only the latest revision of each requested name.
+     * Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListAutoScalingConfigurations</code>.
      * </p>
      * 
      * @param listAutoScalingConfigurationsRequest
@@ -621,9 +764,13 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query
-     * the revisions for a specific configuration name or the revisions for all configurations in your account. You can
-     * optionally query only the latest revision of each requested name.
+     * Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListAutoScalingConfigurations</code>.
      * </p>
      * 
      * @param listAutoScalingConfigurationsRequest
@@ -671,6 +818,53 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      */
     java.util.concurrent.Future<ListConnectionsResult> listConnectionsAsync(ListConnectionsRequest listConnectionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListConnectionsRequest, ListConnectionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of active App Runner observability configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListObservabilityConfigurations</code>.
+     * </p>
+     * 
+     * @param listObservabilityConfigurationsRequest
+     * @return A Java Future containing the result of the ListObservabilityConfigurations operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsync.ListObservabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListObservabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListObservabilityConfigurationsResult> listObservabilityConfigurationsAsync(
+            ListObservabilityConfigurationsRequest listObservabilityConfigurationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of active App Runner observability configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListObservabilityConfigurations</code>.
+     * </p>
+     * 
+     * @param listObservabilityConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListObservabilityConfigurations operation returned by the
+     *         service.
+     * @sample AWSAppRunnerAsyncHandler.ListObservabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListObservabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListObservabilityConfigurationsResult> listObservabilityConfigurationsAsync(
+            ListObservabilityConfigurationsRequest listObservabilityConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListObservabilityConfigurationsRequest, ListObservabilityConfigurationsResult> asyncHandler);
 
     /**
      * <p>

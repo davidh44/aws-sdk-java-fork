@@ -106,17 +106,17 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
                             new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.apprunner.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.apprunner.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServiceErrorException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.apprunner.model.transform.InternalServiceErrorExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.apprunner.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidStateException").withExceptionUnmarshaller(
                                     com.amazonaws.services.apprunner.model.transform.InvalidStateExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.apprunner.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServiceErrorException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.apprunner.model.transform.InternalServiceErrorExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.apprunner.model.AWSAppRunnerException.class));
 
     public static AWSAppRunnerClientBuilder builder() {
@@ -239,14 +239,15 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
     /**
      * <p>
      * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create
-     * App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration
-     * across multiple services.
+     * or update App Runner services and you require non-default auto scaling settings. You can share an auto scaling
+     * configuration across multiple services.
      * </p>
      * <p>
      * Create multiple revisions of a configuration by calling this action multiple times using the same
      * <code>AutoScalingConfigurationName</code>. The call returns incremental
-     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
-     * active revision of an auto scaling configuration or a specific revision.
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service and configure an auto scaling
+     * configuration resource, the service uses the latest active revision of the auto scaling configuration by default.
+     * You can optionally configure the service to use a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -382,6 +383,90 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateConnectionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateConnectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create an App Runner observability configuration resource. App Runner requires this resource when you create or
+     * update App Runner services and you want to enable non-default observability features. You can share an
+     * observability configuration across multiple services.
+     * </p>
+     * <p>
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>ObservabilityConfigurationName</code>. The call returns incremental
+     * <code>ObservabilityConfigurationRevision</code> values. When you create a service and configure an observability
+     * configuration resource, the service uses the latest active revision of the observability configuration by
+     * default. You can optionally configure the service to use a specific revision.
+     * </p>
+     * <p>
+     * The observability configuration resource is designed to configure multiple features (currently one feature,
+     * tracing). This action takes optional parameters that describe the configuration of these features (currently one
+     * parameter, <code>TraceConfiguration</code>). If you don't specify a feature parameter, App Runner doesn't enable
+     * the feature.
+     * </p>
+     * 
+     * @param createObservabilityConfigurationRequest
+     * @return Result of the CreateObservabilityConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ServiceQuotaExceededException
+     *         App Runner can't create this resource. You've reached your account quota for this resource type.</p>
+     *         <p>
+     *         For App Runner per-resource quotas, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a>
+     *         in the <i>Amazon Web Services General Reference</i>.
+     * @sample AWSAppRunner.CreateObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateObservabilityConfigurationResult createObservabilityConfiguration(CreateObservabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateObservabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final CreateObservabilityConfigurationResult executeCreateObservabilityConfiguration(
+            CreateObservabilityConfigurationRequest createObservabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createObservabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateObservabilityConfigurationRequest> request = null;
+        Response<CreateObservabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateObservabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createObservabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppRunner");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateObservabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateObservabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateObservabilityConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -662,6 +747,73 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
 
     /**
      * <p>
+     * Delete an App Runner observability configuration resource. You can delete a specific revision or the latest
+     * active revision. You can't delete a configuration that's used by one or more App Runner services.
+     * </p>
+     * 
+     * @param deleteObservabilityConfigurationRequest
+     * @return Result of the DeleteObservabilityConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ResourceNotFoundException
+     *         A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services
+     *         account.
+     * @sample AWSAppRunner.DeleteObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteObservabilityConfigurationResult deleteObservabilityConfiguration(DeleteObservabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteObservabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteObservabilityConfigurationResult executeDeleteObservabilityConfiguration(
+            DeleteObservabilityConfigurationRequest deleteObservabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteObservabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteObservabilityConfigurationRequest> request = null;
+        Response<DeleteObservabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteObservabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteObservabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppRunner");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteObservabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteObservabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteObservabilityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Delete an App Runner service.
      * </p>
      * <p>
@@ -925,6 +1077,72 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
 
     /**
      * <p>
+     * Return a full description of an App Runner observability configuration resource.
+     * </p>
+     * 
+     * @param describeObservabilityConfigurationRequest
+     * @return Result of the DescribeObservabilityConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ResourceNotFoundException
+     *         A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services
+     *         account.
+     * @sample AWSAppRunner.DescribeObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeObservabilityConfigurationResult describeObservabilityConfiguration(DescribeObservabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeObservabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DescribeObservabilityConfigurationResult executeDescribeObservabilityConfiguration(
+            DescribeObservabilityConfigurationRequest describeObservabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeObservabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeObservabilityConfigurationRequest> request = null;
+        Response<DescribeObservabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeObservabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeObservabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppRunner");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeObservabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeObservabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeObservabilityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Return a full description of an App Runner service.
      * </p>
      * 
@@ -1124,9 +1342,13 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
 
     /**
      * <p>
-     * Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query
-     * the revisions for a specific configuration name or the revisions for all configurations in your account. You can
-     * optionally query only the latest revision of each requested name.
+     * Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListAutoScalingConfigurations</code>.
      * </p>
      * 
      * @param listAutoScalingConfigurationsRequest
@@ -1236,6 +1458,75 @@ public class AWSAppRunnerClient extends AmazonWebServiceClient implements AWSApp
 
             HttpResponseHandler<AmazonWebServiceResponse<ListConnectionsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListConnectionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of active App Runner observability configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListObservabilityConfigurations</code>.
+     * </p>
+     * 
+     * @param listObservabilityConfigurationsRequest
+     * @return Result of the ListObservabilityConfigurations operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @sample AWSAppRunner.ListObservabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListObservabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListObservabilityConfigurationsResult listObservabilityConfigurations(ListObservabilityConfigurationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListObservabilityConfigurations(request);
+    }
+
+    @SdkInternalApi
+    final ListObservabilityConfigurationsResult executeListObservabilityConfigurations(
+            ListObservabilityConfigurationsRequest listObservabilityConfigurationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listObservabilityConfigurationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListObservabilityConfigurationsRequest> request = null;
+        Response<ListObservabilityConfigurationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListObservabilityConfigurationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listObservabilityConfigurationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppRunner");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListObservabilityConfigurations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListObservabilityConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListObservabilityConfigurationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

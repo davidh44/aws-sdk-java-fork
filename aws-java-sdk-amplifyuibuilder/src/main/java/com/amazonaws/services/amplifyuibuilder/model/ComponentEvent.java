@@ -37,6 +37,13 @@ public class ComponentEvent implements Serializable, Cloneable, StructuredPojo {
     private String action;
     /**
      * <p>
+     * Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called
+     * when the action is performed.
+     * </p>
+     */
+    private String bindingEvent;
+    /**
+     * <p>
      * Describes information about the action.
      * </p>
      */
@@ -79,6 +86,52 @@ public class ComponentEvent implements Serializable, Cloneable, StructuredPojo {
 
     public ComponentEvent withAction(String action) {
         setAction(action);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called
+     * when the action is performed.
+     * </p>
+     * 
+     * @param bindingEvent
+     *        Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is
+     *        called when the action is performed.
+     */
+
+    public void setBindingEvent(String bindingEvent) {
+        this.bindingEvent = bindingEvent;
+    }
+
+    /**
+     * <p>
+     * Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called
+     * when the action is performed.
+     * </p>
+     * 
+     * @return Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is
+     *         called when the action is performed.
+     */
+
+    public String getBindingEvent() {
+        return this.bindingEvent;
+    }
+
+    /**
+     * <p>
+     * Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called
+     * when the action is performed.
+     * </p>
+     * 
+     * @param bindingEvent
+     *        Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is
+     *        called when the action is performed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentEvent withBindingEvent(String bindingEvent) {
+        setBindingEvent(bindingEvent);
         return this;
     }
 
@@ -136,6 +189,8 @@ public class ComponentEvent implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAction() != null)
             sb.append("Action: ").append(getAction()).append(",");
+        if (getBindingEvent() != null)
+            sb.append("BindingEvent: ").append(getBindingEvent()).append(",");
         if (getParameters() != null)
             sb.append("Parameters: ").append(getParameters());
         sb.append("}");
@@ -156,6 +211,10 @@ public class ComponentEvent implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAction() != null && other.getAction().equals(this.getAction()) == false)
             return false;
+        if (other.getBindingEvent() == null ^ this.getBindingEvent() == null)
+            return false;
+        if (other.getBindingEvent() != null && other.getBindingEvent().equals(this.getBindingEvent()) == false)
+            return false;
         if (other.getParameters() == null ^ this.getParameters() == null)
             return false;
         if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
@@ -169,6 +228,7 @@ public class ComponentEvent implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAction() == null) ? 0 : getAction().hashCode());
+        hashCode = prime * hashCode + ((getBindingEvent() == null) ? 0 : getBindingEvent().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         return hashCode;
     }

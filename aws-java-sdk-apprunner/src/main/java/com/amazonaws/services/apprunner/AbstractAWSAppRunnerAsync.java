@@ -67,6 +67,21 @@ public class AbstractAWSAppRunnerAsync extends AbstractAWSAppRunner implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateObservabilityConfigurationResult> createObservabilityConfigurationAsync(
+            CreateObservabilityConfigurationRequest request) {
+
+        return createObservabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateObservabilityConfigurationResult> createObservabilityConfigurationAsync(
+            CreateObservabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateObservabilityConfigurationRequest, CreateObservabilityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateServiceResult> createServiceAsync(CreateServiceRequest request) {
 
         return createServiceAsync(request, null);
@@ -114,6 +129,21 @@ public class AbstractAWSAppRunnerAsync extends AbstractAWSAppRunner implements A
     @Override
     public java.util.concurrent.Future<DeleteConnectionResult> deleteConnectionAsync(DeleteConnectionRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteConnectionRequest, DeleteConnectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObservabilityConfigurationResult> deleteObservabilityConfigurationAsync(
+            DeleteObservabilityConfigurationRequest request) {
+
+        return deleteObservabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObservabilityConfigurationResult> deleteObservabilityConfigurationAsync(
+            DeleteObservabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteObservabilityConfigurationRequest, DeleteObservabilityConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -168,6 +198,21 @@ public class AbstractAWSAppRunnerAsync extends AbstractAWSAppRunner implements A
     @Override
     public java.util.concurrent.Future<DescribeCustomDomainsResult> describeCustomDomainsAsync(DescribeCustomDomainsRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeCustomDomainsRequest, DescribeCustomDomainsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeObservabilityConfigurationResult> describeObservabilityConfigurationAsync(
+            DescribeObservabilityConfigurationRequest request) {
+
+        return describeObservabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeObservabilityConfigurationResult> describeObservabilityConfigurationAsync(
+            DescribeObservabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeObservabilityConfigurationRequest, DescribeObservabilityConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -233,6 +278,21 @@ public class AbstractAWSAppRunnerAsync extends AbstractAWSAppRunner implements A
     @Override
     public java.util.concurrent.Future<ListConnectionsResult> listConnectionsAsync(ListConnectionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListConnectionsRequest, ListConnectionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListObservabilityConfigurationsResult> listObservabilityConfigurationsAsync(
+            ListObservabilityConfigurationsRequest request) {
+
+        return listObservabilityConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListObservabilityConfigurationsResult> listObservabilityConfigurationsAsync(
+            ListObservabilityConfigurationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListObservabilityConfigurationsRequest, ListObservabilityConfigurationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

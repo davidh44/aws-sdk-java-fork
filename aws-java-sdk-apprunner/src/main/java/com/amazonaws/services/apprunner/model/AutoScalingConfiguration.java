@@ -61,7 +61,8 @@ public class AutoScalingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     * configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     * configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to <code>false</code>
+     * otherwise.
      * </p>
      */
     private Boolean latest;
@@ -245,12 +246,14 @@ public class AutoScalingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     * configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     * configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to <code>false</code>
+     * otherwise.
      * </p>
      * 
      * @param latest
      *        It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     *        configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     *        configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to
+     *        <code>false</code> otherwise.
      */
 
     public void setLatest(Boolean latest) {
@@ -260,11 +263,13 @@ public class AutoScalingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     * configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     * configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to <code>false</code>
+     * otherwise.
      * </p>
      * 
      * @return It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     *         configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     *         configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to
+     *         <code>false</code> otherwise.
      */
 
     public Boolean getLatest() {
@@ -274,12 +279,14 @@ public class AutoScalingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     * configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     * configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to <code>false</code>
+     * otherwise.
      * </p>
      * 
      * @param latest
      *        It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     *        configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     *        configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to
+     *        <code>false</code> otherwise.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +298,13 @@ public class AutoScalingConfiguration implements Serializable, Cloneable, Struct
     /**
      * <p>
      * It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     * configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     * configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to <code>false</code>
+     * otherwise.
      * </p>
      * 
      * @return It's set to <code>true</code> for the configuration with the highest <code>Revision</code> among all
-     *         configurations that share the same <code>Name</code>. It's set to <code>false</code> otherwise.
+     *         configurations that share the same <code>AutoScalingConfigurationName</code>. It's set to
+     *         <code>false</code> otherwise.
      */
 
     public Boolean isLatest() {

@@ -8342,6 +8342,75 @@
           "variableSetterType" : "java.util.Map<String,ComponentProperty>"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "sourceId",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "<p>The unique ID of the child component in its original source system, such as Figma.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@param sourceId The unique ID of the child component in its original source system, such as Figma.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withSourceId",
+        "getterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@return The unique ID of the child component in its original source system, such as Figma.*/",
+        "getterMethodName" : "getSourceId",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "sourceId",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "sourceId",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "SourceId",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@param sourceId The unique ID of the child component in its original source system, such as Figma.*/",
+        "setterMethodName" : "setSourceId",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "sourceId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@param sourceId The unique ID of the child component in its original source system, such as Figma.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "sourceId",
+          "variableType" : "String",
+          "documentation" : "<p>The unique ID of the child component in its original source system, such as Figma.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "Children" : {
@@ -8943,6 +9012,76 @@
             "documentation" : "<p>Describes the properties of the child component. You can't specify <code>tags</code> as a valid property for <code>properties</code>.</p>",
             "simpleType" : "Map<String,ComponentProperty>",
             "variableSetterType" : "java.util.Map<String,ComponentProperty>"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "SourceId" : {
+          "c2jName" : "sourceId",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "<p>The unique ID of the child component in its original source system, such as Figma.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@param sourceId The unique ID of the child component in its original source system, such as Figma.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withSourceId",
+          "getterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@return The unique ID of the child component in its original source system, such as Figma.*/",
+          "getterMethodName" : "getSourceId",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "sourceId",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "sourceId",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "SourceId",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@param sourceId The unique ID of the child component in its original source system, such as Figma.*/",
+          "setterMethodName" : "setSourceId",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "sourceId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The unique ID of the child component in its original source system, such as Figma.</p>\n@param sourceId The unique ID of the child component in its original source system, such as Figma.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "sourceId",
+            "variableType" : "String",
+            "documentation" : "<p>The unique ID of the child component in its original source system, such as Figma.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
           },
           "xmlNameSpaceUri" : null
         }
@@ -11014,6 +11153,75 @@
         },
         "xmlNameSpaceUri" : null
       }, {
+        "c2jName" : "bindingEvent",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@param bindingEvent Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withBindingEvent",
+        "getterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@return Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.*/",
+        "getterMethodName" : "getBindingEvent",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "bindingEvent",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "bindingEvent",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "BindingEvent",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@param bindingEvent Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.*/",
+        "setterMethodName" : "setBindingEvent",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "bindingEvent",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@param bindingEvent Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "bindingEvent",
+          "variableType" : "String",
+          "documentation" : "<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "parameters",
         "c2jShape" : "ActionParameters",
         "deprecated" : false,
@@ -11149,6 +11357,76 @@
             "variableName" : "action",
             "variableType" : "String",
             "documentation" : "<p>The action to perform when a specific event is raised.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "BindingEvent" : {
+          "c2jName" : "bindingEvent",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@param bindingEvent Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withBindingEvent",
+          "getterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@return Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.*/",
+          "getterMethodName" : "getBindingEvent",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "bindingEvent",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "bindingEvent",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "BindingEvent",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@param bindingEvent Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.*/",
+          "setterMethodName" : "setBindingEvent",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "bindingEvent",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>\n@param bindingEvent Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "bindingEvent",
+            "variableType" : "String",
+            "documentation" : "<p>Binds an event to an action on a component. When you specify a <code>bindingEvent</code>, the event is called when the action is performed.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -22880,7 +23158,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "code",
-        "c2jShape" : "SyntheticExchangeCodeForTokenRequestBodyString",
+        "c2jShape" : "SensitiveString",
         "deprecated" : false,
         "documentation" : "<p>The access code to send in the request.</p>",
         "endpointDiscoveryId" : false,
@@ -23020,7 +23298,7 @@
       "membersAsMap" : {
         "Code" : {
           "c2jName" : "code",
-          "c2jShape" : "SyntheticExchangeCodeForTokenRequestBodyString",
+          "c2jShape" : "SensitiveString",
           "deprecated" : false,
           "documentation" : "<p>The access code to send in the request.</p>",
           "endpointDiscoveryId" : false,
@@ -23203,7 +23481,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "accessToken",
-        "c2jShape" : "SyntheticExchangeCodeForTokenResponseString",
+        "c2jShape" : "SensitiveString",
         "deprecated" : false,
         "documentation" : "<p>The access token.</p>",
         "endpointDiscoveryId" : false,
@@ -23341,7 +23619,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "refreshToken",
-        "c2jShape" : "SyntheticExchangeCodeForTokenResponseString",
+        "c2jShape" : "SensitiveString",
         "deprecated" : false,
         "documentation" : "<p>The token to use to refresh a previously issued access token that might have expired.</p>",
         "endpointDiscoveryId" : false,
@@ -23412,7 +23690,7 @@
       "membersAsMap" : {
         "AccessToken" : {
           "c2jName" : "accessToken",
-          "c2jShape" : "SyntheticExchangeCodeForTokenResponseString",
+          "c2jShape" : "SensitiveString",
           "deprecated" : false,
           "documentation" : "<p>The access token.</p>",
           "endpointDiscoveryId" : false,
@@ -23552,7 +23830,7 @@
         },
         "RefreshToken" : {
           "c2jName" : "refreshToken",
-          "c2jShape" : "SyntheticExchangeCodeForTokenResponseString",
+          "c2jShape" : "SensitiveString",
           "deprecated" : false,
           "documentation" : "<p>The token to use to refresh a previously issued access token that might have expired.</p>",
           "endpointDiscoveryId" : false,
@@ -31341,7 +31619,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "token",
-        "c2jShape" : "SyntheticRefreshTokenRequestBodyString",
+        "c2jShape" : "SensitiveString",
         "deprecated" : false,
         "documentation" : "<p>The token to use to refresh a previously issued access token that might have expired.</p>",
         "endpointDiscoveryId" : false,
@@ -31412,7 +31690,7 @@
       "membersAsMap" : {
         "Token" : {
           "c2jName" : "token",
-          "c2jShape" : "SyntheticRefreshTokenRequestBodyString",
+          "c2jShape" : "SensitiveString",
           "deprecated" : false,
           "documentation" : "<p>The token to use to refresh a previously issued access token that might have expired.</p>",
           "endpointDiscoveryId" : false,
@@ -31525,7 +31803,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "accessToken",
-        "c2jShape" : "SyntheticRefreshTokenResponseString",
+        "c2jShape" : "SensitiveString",
         "deprecated" : false,
         "documentation" : "<p>The access token.</p>",
         "endpointDiscoveryId" : false,
@@ -31665,7 +31943,7 @@
       "membersAsMap" : {
         "AccessToken" : {
           "c2jName" : "accessToken",
-          "c2jShape" : "SyntheticRefreshTokenResponseString",
+          "c2jShape" : "SensitiveString",
           "deprecated" : false,
           "documentation" : "<p>The access token.</p>",
           "endpointDiscoveryId" : false,

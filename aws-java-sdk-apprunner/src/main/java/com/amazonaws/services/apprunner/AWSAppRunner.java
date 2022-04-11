@@ -98,14 +98,15 @@ public interface AWSAppRunner {
     /**
      * <p>
      * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create
-     * App Runner services that require non-default auto scaling settings. You can share an auto scaling configuration
-     * across multiple services.
+     * or update App Runner services and you require non-default auto scaling settings. You can share an auto scaling
+     * configuration across multiple services.
      * </p>
      * <p>
      * Create multiple revisions of a configuration by calling this action multiple times using the same
      * <code>AutoScalingConfigurationName</code>. The call returns incremental
-     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
-     * active revision of an auto scaling configuration or a specific revision.
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service and configure an auto scaling
+     * configuration resource, the service uses the latest active revision of the auto scaling configuration by default.
+     * You can optionally configure the service to use a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -164,6 +165,45 @@ public interface AWSAppRunner {
      *      Documentation</a>
      */
     CreateConnectionResult createConnection(CreateConnectionRequest createConnectionRequest);
+
+    /**
+     * <p>
+     * Create an App Runner observability configuration resource. App Runner requires this resource when you create or
+     * update App Runner services and you want to enable non-default observability features. You can share an
+     * observability configuration across multiple services.
+     * </p>
+     * <p>
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>ObservabilityConfigurationName</code>. The call returns incremental
+     * <code>ObservabilityConfigurationRevision</code> values. When you create a service and configure an observability
+     * configuration resource, the service uses the latest active revision of the observability configuration by
+     * default. You can optionally configure the service to use a specific revision.
+     * </p>
+     * <p>
+     * The observability configuration resource is designed to configure multiple features (currently one feature,
+     * tracing). This action takes optional parameters that describe the configuration of these features (currently one
+     * parameter, <code>TraceConfiguration</code>). If you don't specify a feature parameter, App Runner doesn't enable
+     * the feature.
+     * </p>
+     * 
+     * @param createObservabilityConfigurationRequest
+     * @return Result of the CreateObservabilityConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ServiceQuotaExceededException
+     *         App Runner can't create this resource. You've reached your account quota for this resource type.</p>
+     *         <p>
+     *         For App Runner per-resource quotas, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a>
+     *         in the <i>Amazon Web Services General Reference</i>.
+     * @sample AWSAppRunner.CreateObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateObservabilityConfigurationResult createObservabilityConfiguration(CreateObservabilityConfigurationRequest createObservabilityConfigurationRequest);
 
     /**
      * <p>
@@ -265,6 +305,28 @@ public interface AWSAppRunner {
 
     /**
      * <p>
+     * Delete an App Runner observability configuration resource. You can delete a specific revision or the latest
+     * active revision. You can't delete a configuration that's used by one or more App Runner services.
+     * </p>
+     * 
+     * @param deleteObservabilityConfigurationRequest
+     * @return Result of the DeleteObservabilityConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ResourceNotFoundException
+     *         A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services
+     *         account.
+     * @sample AWSAppRunner.DeleteObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteObservabilityConfigurationResult deleteObservabilityConfiguration(DeleteObservabilityConfigurationRequest deleteObservabilityConfigurationRequest);
+
+    /**
+     * <p>
      * Delete an App Runner service.
      * </p>
      * <p>
@@ -356,6 +418,28 @@ public interface AWSAppRunner {
 
     /**
      * <p>
+     * Return a full description of an App Runner observability configuration resource.
+     * </p>
+     * 
+     * @param describeObservabilityConfigurationRequest
+     * @return Result of the DescribeObservabilityConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ResourceNotFoundException
+     *         A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services
+     *         account.
+     * @sample AWSAppRunner.DescribeObservabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeObservabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeObservabilityConfigurationResult describeObservabilityConfiguration(
+            DescribeObservabilityConfigurationRequest describeObservabilityConfigurationRequest);
+
+    /**
+     * <p>
      * Return a full description of an App Runner service.
      * </p>
      * 
@@ -427,9 +511,13 @@ public interface AWSAppRunner {
 
     /**
      * <p>
-     * Returns a list of App Runner automatic scaling configurations in your Amazon Web Services account. You can query
-     * the revisions for a specific configuration name or the revisions for all configurations in your account. You can
-     * optionally query only the latest revision of each requested name.
+     * Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListAutoScalingConfigurations</code>.
      * </p>
      * 
      * @param listAutoScalingConfigurationsRequest
@@ -462,6 +550,30 @@ public interface AWSAppRunner {
      *      Documentation</a>
      */
     ListConnectionsResult listConnections(ListConnectionsRequest listConnectionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of active App Runner observability configurations in your Amazon Web Services account. You can
+     * query the revisions for a specific configuration name or the revisions for all active configurations in your
+     * account. You can optionally query only the latest revision of each requested name.
+     * </p>
+     * <p>
+     * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned
+     * by <code>ListObservabilityConfigurations</code>.
+     * </p>
+     * 
+     * @param listObservabilityConfigurationsRequest
+     * @return Result of the ListObservabilityConfigurations operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @sample AWSAppRunner.ListObservabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListObservabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListObservabilityConfigurationsResult listObservabilityConfigurations(ListObservabilityConfigurationsRequest listObservabilityConfigurationsRequest);
 
     /**
      * <p>

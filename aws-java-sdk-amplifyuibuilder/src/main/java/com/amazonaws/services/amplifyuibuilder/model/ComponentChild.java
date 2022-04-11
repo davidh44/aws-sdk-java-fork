@@ -60,6 +60,12 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, ComponentProperty> properties;
+    /**
+     * <p>
+     * The unique ID of the child component in its original source system, such as Figma.
+     * </p>
+     */
+    private String sourceId;
 
     /**
      * <p>
@@ -360,6 +366,46 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The unique ID of the child component in its original source system, such as Figma.
+     * </p>
+     * 
+     * @param sourceId
+     *        The unique ID of the child component in its original source system, such as Figma.
+     */
+
+    public void setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+    }
+
+    /**
+     * <p>
+     * The unique ID of the child component in its original source system, such as Figma.
+     * </p>
+     * 
+     * @return The unique ID of the child component in its original source system, such as Figma.
+     */
+
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    /**
+     * <p>
+     * The unique ID of the child component in its original source system, such as Figma.
+     * </p>
+     * 
+     * @param sourceId
+     *        The unique ID of the child component in its original source system, such as Figma.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentChild withSourceId(String sourceId) {
+        setSourceId(sourceId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -380,7 +426,9 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getProperties() != null)
-            sb.append("Properties: ").append(getProperties());
+            sb.append("Properties: ").append(getProperties()).append(",");
+        if (getSourceId() != null)
+            sb.append("SourceId: ").append(getSourceId());
         sb.append("}");
         return sb.toString();
     }
@@ -415,6 +463,10 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProperties() != null && other.getProperties().equals(this.getProperties()) == false)
             return false;
+        if (other.getSourceId() == null ^ this.getSourceId() == null)
+            return false;
+        if (other.getSourceId() != null && other.getSourceId().equals(this.getSourceId()) == false)
+            return false;
         return true;
     }
 
@@ -428,6 +480,7 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEvents() == null) ? 0 : getEvents().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
+        hashCode = prime * hashCode + ((getSourceId() == null) ? 0 : getSourceId().hashCode());
         return hashCode;
     }
 

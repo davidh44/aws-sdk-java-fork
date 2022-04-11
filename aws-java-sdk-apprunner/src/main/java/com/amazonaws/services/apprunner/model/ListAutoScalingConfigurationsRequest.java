@@ -28,7 +28,7 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner lists
-     * revisions that share this name. If not specified, App Runner returns revisions of all configurations.
+     * revisions that share this name. If not specified, App Runner returns revisions of all active configurations.
      * </p>
      */
     private String autoScalingConfigurationName;
@@ -37,10 +37,10 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
      * Set to <code>true</code> to list only the latest revision for each requested configuration name.
      * </p>
      * <p>
-     * Keep as <code>false</code> to list all revisions for each requested configuration name.
+     * Set to <code>false</code> to list all revisions for each requested configuration name.
      * </p>
      * <p>
-     * Default: <code>false</code>
+     * Default: <code>true</code>
      * </p>
      */
     private Boolean latestOnly;
@@ -67,12 +67,12 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner lists
-     * revisions that share this name. If not specified, App Runner returns revisions of all configurations.
+     * revisions that share this name. If not specified, App Runner returns revisions of all active configurations.
      * </p>
      * 
      * @param autoScalingConfigurationName
      *        The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner
-     *        lists revisions that share this name. If not specified, App Runner returns revisions of all
+     *        lists revisions that share this name. If not specified, App Runner returns revisions of all active
      *        configurations.
      */
 
@@ -83,11 +83,11 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner lists
-     * revisions that share this name. If not specified, App Runner returns revisions of all configurations.
+     * revisions that share this name. If not specified, App Runner returns revisions of all active configurations.
      * </p>
      * 
      * @return The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner
-     *         lists revisions that share this name. If not specified, App Runner returns revisions of all
+     *         lists revisions that share this name. If not specified, App Runner returns revisions of all active
      *         configurations.
      */
 
@@ -98,12 +98,12 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner lists
-     * revisions that share this name. If not specified, App Runner returns revisions of all configurations.
+     * revisions that share this name. If not specified, App Runner returns revisions of all active configurations.
      * </p>
      * 
      * @param autoScalingConfigurationName
      *        The name of the App Runner auto scaling configuration that you want to list. If specified, App Runner
-     *        lists revisions that share this name. If not specified, App Runner returns revisions of all
+     *        lists revisions that share this name. If not specified, App Runner returns revisions of all active
      *        configurations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -118,19 +118,19 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
      * Set to <code>true</code> to list only the latest revision for each requested configuration name.
      * </p>
      * <p>
-     * Keep as <code>false</code> to list all revisions for each requested configuration name.
+     * Set to <code>false</code> to list all revisions for each requested configuration name.
      * </p>
      * <p>
-     * Default: <code>false</code>
+     * Default: <code>true</code>
      * </p>
      * 
      * @param latestOnly
      *        Set to <code>true</code> to list only the latest revision for each requested configuration name.</p>
      *        <p>
-     *        Keep as <code>false</code> to list all revisions for each requested configuration name.
+     *        Set to <code>false</code> to list all revisions for each requested configuration name.
      *        </p>
      *        <p>
-     *        Default: <code>false</code>
+     *        Default: <code>true</code>
      */
 
     public void setLatestOnly(Boolean latestOnly) {
@@ -142,18 +142,18 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
      * Set to <code>true</code> to list only the latest revision for each requested configuration name.
      * </p>
      * <p>
-     * Keep as <code>false</code> to list all revisions for each requested configuration name.
+     * Set to <code>false</code> to list all revisions for each requested configuration name.
      * </p>
      * <p>
-     * Default: <code>false</code>
+     * Default: <code>true</code>
      * </p>
      * 
      * @return Set to <code>true</code> to list only the latest revision for each requested configuration name.</p>
      *         <p>
-     *         Keep as <code>false</code> to list all revisions for each requested configuration name.
+     *         Set to <code>false</code> to list all revisions for each requested configuration name.
      *         </p>
      *         <p>
-     *         Default: <code>false</code>
+     *         Default: <code>true</code>
      */
 
     public Boolean getLatestOnly() {
@@ -165,19 +165,19 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
      * Set to <code>true</code> to list only the latest revision for each requested configuration name.
      * </p>
      * <p>
-     * Keep as <code>false</code> to list all revisions for each requested configuration name.
+     * Set to <code>false</code> to list all revisions for each requested configuration name.
      * </p>
      * <p>
-     * Default: <code>false</code>
+     * Default: <code>true</code>
      * </p>
      * 
      * @param latestOnly
      *        Set to <code>true</code> to list only the latest revision for each requested configuration name.</p>
      *        <p>
-     *        Keep as <code>false</code> to list all revisions for each requested configuration name.
+     *        Set to <code>false</code> to list all revisions for each requested configuration name.
      *        </p>
      *        <p>
-     *        Default: <code>false</code>
+     *        Default: <code>true</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,18 +191,18 @@ public class ListAutoScalingConfigurationsRequest extends com.amazonaws.AmazonWe
      * Set to <code>true</code> to list only the latest revision for each requested configuration name.
      * </p>
      * <p>
-     * Keep as <code>false</code> to list all revisions for each requested configuration name.
+     * Set to <code>false</code> to list all revisions for each requested configuration name.
      * </p>
      * <p>
-     * Default: <code>false</code>
+     * Default: <code>true</code>
      * </p>
      * 
      * @return Set to <code>true</code> to list only the latest revision for each requested configuration name.</p>
      *         <p>
-     *         Keep as <code>false</code> to list all revisions for each requested configuration name.
+     *         Set to <code>false</code> to list all revisions for each requested configuration name.
      *         </p>
      *         <p>
-     *         Default: <code>false</code>
+     *         Default: <code>true</code>
      */
 
     public Boolean isLatestOnly() {

@@ -40,7 +40,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private SourceConfiguration sourceConfiguration;
     /**
      * <p>
-     * The runtime configuration of instances (scaling units) of the App Runner service.
+     * The runtime configuration of instances (scaling units) of your service.
      * </p>
      */
     private InstanceConfiguration instanceConfiguration;
@@ -67,8 +67,16 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
-     * auto scaling configuration.
+     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
+     * configuration.
+     * </p>
+     * <p>
+     * Specify an ARN with a name and a revision number to associate that revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     * </p>
+     * <p>
+     * Specify just the name to associate the latest revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      * </p>
      */
     private String autoScalingConfigurationArn;
@@ -78,6 +86,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private NetworkConfiguration networkConfiguration;
+    /**
+     * <p>
+     * The observability configuration of your service.
+     * </p>
+     */
+    private ServiceObservabilityConfiguration observabilityConfiguration;
 
     /**
      * <p>
@@ -167,11 +181,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The runtime configuration of instances (scaling units) of the App Runner service.
+     * The runtime configuration of instances (scaling units) of your service.
      * </p>
      * 
      * @param instanceConfiguration
-     *        The runtime configuration of instances (scaling units) of the App Runner service.
+     *        The runtime configuration of instances (scaling units) of your service.
      */
 
     public void setInstanceConfiguration(InstanceConfiguration instanceConfiguration) {
@@ -180,10 +194,10 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The runtime configuration of instances (scaling units) of the App Runner service.
+     * The runtime configuration of instances (scaling units) of your service.
      * </p>
      * 
-     * @return The runtime configuration of instances (scaling units) of the App Runner service.
+     * @return The runtime configuration of instances (scaling units) of your service.
      */
 
     public InstanceConfiguration getInstanceConfiguration() {
@@ -192,11 +206,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The runtime configuration of instances (scaling units) of the App Runner service.
+     * The runtime configuration of instances (scaling units) of your service.
      * </p>
      * 
      * @param instanceConfiguration
-     *        The runtime configuration of instances (scaling units) of the App Runner service.
+     *        The runtime configuration of instances (scaling units) of your service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -375,14 +389,29 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
-     * auto scaling configuration.
+     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
+     * configuration.
+     * </p>
+     * <p>
+     * Specify an ARN with a name and a revision number to associate that revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     * </p>
+     * <p>
+     * Specify just the name to associate the latest revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      * </p>
      * 
      * @param autoScalingConfigurationArn
      *        The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *        associate with the App Runner service. If not provided, App Runner associates the latest revision of a
-     *        default auto scaling configuration.
+     *        associate with your service. If not provided, App Runner associates the latest revision of a default auto
+     *        scaling configuration.</p>
+     *        <p>
+     *        Specify an ARN with a name and a revision number to associate that revision. For example:
+     *        <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     *        </p>
+     *        <p>
+     *        Specify just the name to associate the latest revision. For example:
+     *        <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      */
 
     public void setAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
@@ -392,13 +421,28 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
-     * auto scaling configuration.
+     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
+     * configuration.
+     * </p>
+     * <p>
+     * Specify an ARN with a name and a revision number to associate that revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     * </p>
+     * <p>
+     * Specify just the name to associate the latest revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *         associate with the App Runner service. If not provided, App Runner associates the latest revision of a
-     *         default auto scaling configuration.
+     *         associate with your service. If not provided, App Runner associates the latest revision of a default auto
+     *         scaling configuration.</p>
+     *         <p>
+     *         Specify an ARN with a name and a revision number to associate that revision. For example:
+     *         <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     *         </p>
+     *         <p>
+     *         Specify just the name to associate the latest revision. For example:
+     *         <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      */
 
     public String getAutoScalingConfigurationArn() {
@@ -408,14 +452,29 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
-     * auto scaling configuration.
+     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
+     * configuration.
+     * </p>
+     * <p>
+     * Specify an ARN with a name and a revision number to associate that revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     * </p>
+     * <p>
+     * Specify just the name to associate the latest revision. For example:
+     * <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      * </p>
      * 
      * @param autoScalingConfigurationArn
      *        The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *        associate with the App Runner service. If not provided, App Runner associates the latest revision of a
-     *        default auto scaling configuration.
+     *        associate with your service. If not provided, App Runner associates the latest revision of a default auto
+     *        scaling configuration.</p>
+     *        <p>
+     *        Specify an ARN with a name and a revision number to associate that revision. For example:
+     *        <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3</code>
+     *        </p>
+     *        <p>
+     *        Specify just the name to associate the latest revision. For example:
+     *        <code>arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -466,6 +525,46 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The observability configuration of your service.
+     * </p>
+     * 
+     * @param observabilityConfiguration
+     *        The observability configuration of your service.
+     */
+
+    public void setObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
+        this.observabilityConfiguration = observabilityConfiguration;
+    }
+
+    /**
+     * <p>
+     * The observability configuration of your service.
+     * </p>
+     * 
+     * @return The observability configuration of your service.
+     */
+
+    public ServiceObservabilityConfiguration getObservabilityConfiguration() {
+        return this.observabilityConfiguration;
+    }
+
+    /**
+     * <p>
+     * The observability configuration of your service.
+     * </p>
+     * 
+     * @param observabilityConfiguration
+     *        The observability configuration of your service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServiceRequest withObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
+        setObservabilityConfiguration(observabilityConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -492,7 +591,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getAutoScalingConfigurationArn() != null)
             sb.append("AutoScalingConfigurationArn: ").append(getAutoScalingConfigurationArn()).append(",");
         if (getNetworkConfiguration() != null)
-            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration());
+            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
+        if (getObservabilityConfiguration() != null)
+            sb.append("ObservabilityConfiguration: ").append(getObservabilityConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -539,6 +640,10 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
             return false;
+        if (other.getObservabilityConfiguration() == null ^ this.getObservabilityConfiguration() == null)
+            return false;
+        if (other.getObservabilityConfiguration() != null && other.getObservabilityConfiguration().equals(this.getObservabilityConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -555,6 +660,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getHealthCheckConfiguration() == null) ? 0 : getHealthCheckConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAutoScalingConfigurationArn() == null) ? 0 : getAutoScalingConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getObservabilityConfiguration() == null) ? 0 : getObservabilityConfiguration().hashCode());
         return hashCode;
     }
 

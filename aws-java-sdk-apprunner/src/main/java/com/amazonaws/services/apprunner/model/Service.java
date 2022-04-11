@@ -143,6 +143,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private NetworkConfiguration networkConfiguration;
+    /**
+     * <p>
+     * The observability configuration of this service.
+     * </p>
+     */
+    private ServiceObservabilityConfiguration observabilityConfiguration;
 
     /**
      * <p>
@@ -888,6 +894,46 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The observability configuration of this service.
+     * </p>
+     * 
+     * @param observabilityConfiguration
+     *        The observability configuration of this service.
+     */
+
+    public void setObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
+        this.observabilityConfiguration = observabilityConfiguration;
+    }
+
+    /**
+     * <p>
+     * The observability configuration of this service.
+     * </p>
+     * 
+     * @return The observability configuration of this service.
+     */
+
+    public ServiceObservabilityConfiguration getObservabilityConfiguration() {
+        return this.observabilityConfiguration;
+    }
+
+    /**
+     * <p>
+     * The observability configuration of this service.
+     * </p>
+     * 
+     * @param observabilityConfiguration
+     *        The observability configuration of this service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
+        setObservabilityConfiguration(observabilityConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -926,7 +972,9 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (getAutoScalingConfigurationSummary() != null)
             sb.append("AutoScalingConfigurationSummary: ").append(getAutoScalingConfigurationSummary()).append(",");
         if (getNetworkConfiguration() != null)
-            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration());
+            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
+        if (getObservabilityConfiguration() != null)
+            sb.append("ObservabilityConfiguration: ").append(getObservabilityConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -998,6 +1046,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
             return false;
+        if (other.getObservabilityConfiguration() == null ^ this.getObservabilityConfiguration() == null)
+            return false;
+        if (other.getObservabilityConfiguration() != null && other.getObservabilityConfiguration().equals(this.getObservabilityConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1020,6 +1072,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getHealthCheckConfiguration() == null) ? 0 : getHealthCheckConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAutoScalingConfigurationSummary() == null) ? 0 : getAutoScalingConfigurationSummary().hashCode());
         hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getObservabilityConfiguration() == null) ? 0 : getObservabilityConfiguration().hashCode());
         return hashCode;
     }
 
