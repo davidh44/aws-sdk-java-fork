@@ -25,18 +25,18 @@ public class DescribeEventSourcesConfigResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the event source.
+     * Lists the event sources in the configuration.
      * </p>
      */
     private EventSourcesConfig eventSources;
 
     /**
      * <p>
-     * The name of the event source.
+     * Lists the event sources in the configuration.
      * </p>
      * 
      * @param eventSources
-     *        The name of the event source.
+     *        Lists the event sources in the configuration.
      */
 
     public void setEventSources(EventSourcesConfig eventSources) {
@@ -45,10 +45,10 @@ public class DescribeEventSourcesConfigResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the event source.
+     * Lists the event sources in the configuration.
      * </p>
      * 
-     * @return The name of the event source.
+     * @return Lists the event sources in the configuration.
      */
 
     public EventSourcesConfig getEventSources() {
@@ -57,11 +57,11 @@ public class DescribeEventSourcesConfigResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the event source.
+     * Lists the event sources in the configuration.
      * </p>
      * 
      * @param eventSources
-     *        The name of the event source.
+     *        Lists the event sources in the configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

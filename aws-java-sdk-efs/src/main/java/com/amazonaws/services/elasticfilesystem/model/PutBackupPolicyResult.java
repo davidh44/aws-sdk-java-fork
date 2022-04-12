@@ -25,18 +25,18 @@ public class PutBackupPolicyResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      * </p>
      */
     private BackupPolicy backupPolicy;
 
     /**
      * <p>
-     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      * </p>
      * 
      * @param backupPolicy
-     *        Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     *        Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      */
 
     public void setBackupPolicy(BackupPolicy backupPolicy) {
@@ -45,10 +45,10 @@ public class PutBackupPolicyResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      * </p>
      * 
-     * @return Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     * @return Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      */
 
     public BackupPolicy getBackupPolicy() {
@@ -57,11 +57,11 @@ public class PutBackupPolicyResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     * Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      * </p>
      * 
      * @param backupPolicy
-     *        Describes the file system's backup policy, indicating whether automatic backups are turned on or off..
+     *        Describes the file system's backup policy, indicating whether automatic backups are turned on or off.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,33 +30,33 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses regional storage, specify the Amazon Web Services Region in which to create the
+     * To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to create the
      * destination file system.
      * </p>
      */
     private String region;
     /**
      * <p>
-     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
-     * the destination file system.
+     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
+     * create the destination file system.
      * </p>
      */
     private String availabilityZoneName;
     /**
      * <p>
-     * Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS key,
-     * EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in one of the
-     * following formats:
+     * Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file system. If
+     * you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     * <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN - An Amazon Resource Name (ARN) for the key, for example
+     * ARN - The Amazon Resource Name (ARN) for the key, for example
      * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
@@ -67,7 +67,7 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * Key alias ARN - An ARN for a key alias, for example
+     * Key alias ARN - The ARN for a key alias, for example
      * <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      * </p>
      * </li>
@@ -77,12 +77,12 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses regional storage, specify the Amazon Web Services Region in which to create the
+     * To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to create the
      * destination file system.
      * </p>
      * 
      * @param region
-     *        To create a file system that uses regional storage, specify the Amazon Web Services Region in which to
+     *        To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to
      *        create the destination file system.
      */
 
@@ -92,11 +92,11 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses regional storage, specify the Amazon Web Services Region in which to create the
+     * To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to create the
      * destination file system.
      * </p>
      * 
-     * @return To create a file system that uses regional storage, specify the Amazon Web Services Region in which to
+     * @return To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to
      *         create the destination file system.
      */
 
@@ -106,12 +106,12 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses regional storage, specify the Amazon Web Services Region in which to create the
+     * To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to create the
      * destination file system.
      * </p>
      * 
      * @param region
-     *        To create a file system that uses regional storage, specify the Amazon Web Services Region in which to
+     *        To create a file system that uses Regional storage, specify the Amazon Web Services Region in which to
      *        create the destination file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -123,13 +123,13 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
-     * the destination file system.
+     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
+     * create the destination file system.
      * </p>
      * 
      * @param availabilityZoneName
-     *        To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to
-     *        create the destination file system.
+     *        To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which
+     *        to create the destination file system.
      */
 
     public void setAvailabilityZoneName(String availabilityZoneName) {
@@ -138,12 +138,12 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
-     * the destination file system.
+     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
+     * create the destination file system.
      * </p>
      * 
-     * @return To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to
-     *         create the destination file system.
+     * @return To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in
+     *         which to create the destination file system.
      */
 
     public String getAvailabilityZoneName() {
@@ -152,13 +152,13 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
-     * the destination file system.
+     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
+     * create the destination file system.
      * </p>
      * 
      * @param availabilityZoneName
-     *        To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to
-     *        create the destination file system.
+     *        To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which
+     *        to create the destination file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,19 +169,19 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS key,
-     * EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in one of the
-     * following formats:
+     * Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file system. If
+     * you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     * <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN - An Amazon Resource Name (ARN) for the key, for example
+     * ARN - The Amazon Resource Name (ARN) for the key, for example
      * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
@@ -192,25 +192,25 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * Key alias ARN - An ARN for a key alias, for example
+     * Key alias ARN - The ARN for a key alias, for example
      * <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param kmsKeyId
-     *        Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS
-     *        key, EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in
-     *        one of the following formats:</p>
+     *        Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file
+     *        system. If you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     *        <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     *        Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        ARN - An Amazon Resource Name (ARN) for the key, for example
+     *        ARN - The Amazon Resource Name (ARN) for the key, for example
      *        <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      *        </p>
      *        </li>
@@ -221,7 +221,7 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        Key alias ARN - An ARN for a key alias, for example
+     *        Key alias ARN - The ARN for a key alias, for example
      *        <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      *        </p>
      *        </li>
@@ -233,19 +233,19 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS key,
-     * EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in one of the
-     * following formats:
+     * Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file system. If
+     * you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     * <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN - An Amazon Resource Name (ARN) for the key, for example
+     * ARN - The Amazon Resource Name (ARN) for the key, for example
      * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
@@ -256,24 +256,24 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * Key alias ARN - An ARN for a key alias, for example
+     * Key alias ARN - The ARN for a key alias, for example
      * <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS
-     *         key, EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in
-     *         one of the following formats:</p>
+     * @return Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file
+     *         system. If you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     *         <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     *         Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         ARN - An Amazon Resource Name (ARN) for the key, for example
+     *         ARN - The Amazon Resource Name (ARN) for the key, for example
      *         <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      *         </p>
      *         </li>
@@ -284,7 +284,7 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      *         </li>
      *         <li>
      *         <p>
-     *         Key alias ARN - An ARN for a key alias, for example
+     *         Key alias ARN - The ARN for a key alias, for example
      *         <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      *         </p>
      *         </li>
@@ -296,19 +296,19 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS key,
-     * EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in one of the
-     * following formats:
+     * Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file system. If
+     * you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     * <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * ARN - An Amazon Resource Name (ARN) for the key, for example
+     * ARN - The Amazon Resource Name (ARN) for the key, for example
      * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      * </p>
      * </li>
@@ -319,25 +319,25 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * Key alias ARN - An ARN for a key alias, for example
+     * Key alias ARN - The ARN for a key alias, for example
      * <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param kmsKeyId
-     *        Specifies the KMS key you want to use to encrypt the destination file system. If you do not specify a KMS
-     *        key, EFS uses your default KMS key for Amazon EFS, <code>/aws/elasticfilesystem</code>. This ID can be in
-     *        one of the following formats:</p>
+     *        Specifies the Key Management Service (KMS) key that you want to use to encrypt the destination file
+     *        system. If you do not specify a KMS key, Amazon EFS uses your default KMS key for Amazon EFS,
+     *        <code>/aws/elasticfilesystem</code>. This ID can be in one of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Key ID - A unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     *        Key ID - The unique identifier of the key, for example <code>1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        ARN - An Amazon Resource Name (ARN) for the key, for example
+     *        ARN - The Amazon Resource Name (ARN) for the key, for example
      *        <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
      *        </p>
      *        </li>
@@ -348,7 +348,7 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        Key alias ARN - An ARN for a key alias, for example
+     *        Key alias ARN - The ARN for a key alias, for example
      *        <code>arn:aws:kms:us-west-2:444455556666:alias/projectKey1</code>.
      *        </p>
      *        </li>

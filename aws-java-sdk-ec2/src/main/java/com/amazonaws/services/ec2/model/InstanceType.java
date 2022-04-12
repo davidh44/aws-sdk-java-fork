@@ -504,7 +504,29 @@ public enum InstanceType {
     Z1d3xlarge("z1d.3xlarge"),
     Z1d6xlarge("z1d.6xlarge"),
     Z1d12xlarge("z1d.12xlarge"),
-    Z1dMetal("z1d.metal");
+    Z1dMetal("z1d.metal"),
+    X2idn16xlarge("x2idn.16xlarge"),
+    X2idn24xlarge("x2idn.24xlarge"),
+    X2idn32xlarge("x2idn.32xlarge"),
+    X2iednXlarge("x2iedn.xlarge"),
+    X2iedn2xlarge("x2iedn.2xlarge"),
+    X2iedn4xlarge("x2iedn.4xlarge"),
+    X2iedn8xlarge("x2iedn.8xlarge"),
+    X2iedn16xlarge("x2iedn.16xlarge"),
+    X2iedn24xlarge("x2iedn.24xlarge"),
+    X2iedn32xlarge("x2iedn.32xlarge"),
+    C6aLarge("c6a.large"),
+    C6aXlarge("c6a.xlarge"),
+    C6a2xlarge("c6a.2xlarge"),
+    C6a4xlarge("c6a.4xlarge"),
+    C6a8xlarge("c6a.8xlarge"),
+    C6a12xlarge("c6a.12xlarge"),
+    C6a16xlarge("c6a.16xlarge"),
+    C6a24xlarge("c6a.24xlarge"),
+    C6a32xlarge("c6a.32xlarge"),
+    C6a48xlarge("c6a.48xlarge"),
+    C6aMetal("c6a.metal"),
+    M6aMetal("m6a.metal");
 
     private String value;
 

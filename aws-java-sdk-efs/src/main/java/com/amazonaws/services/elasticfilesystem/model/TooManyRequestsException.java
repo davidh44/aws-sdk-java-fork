@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if you don’t wait at least 24 hours before changing the throughput mode, or decreasing the Provisioned
- * Throughput value.
+ * Returned if you don’t wait at least 24 hours before either changing the throughput mode, or decreasing the
+ * Provisioned Throughput value.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

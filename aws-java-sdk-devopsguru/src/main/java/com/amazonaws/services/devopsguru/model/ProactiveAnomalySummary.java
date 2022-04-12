@@ -90,7 +90,7 @@ public class ProactiveAnomalySummary implements Serializable, Cloneable, Structu
     private Double limit;
     /**
      * <p>
-     * Returns the metadata of the source.
+     * The metadata of the source which detects proactive anomalies.
      * </p>
      */
     private AnomalySourceMetadata sourceMetadata;
@@ -581,11 +581,11 @@ public class ProactiveAnomalySummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Returns the metadata of the source.
+     * The metadata of the source which detects proactive anomalies.
      * </p>
      * 
      * @param sourceMetadata
-     *        Returns the metadata of the source.
+     *        The metadata of the source which detects proactive anomalies.
      */
 
     public void setSourceMetadata(AnomalySourceMetadata sourceMetadata) {
@@ -594,10 +594,10 @@ public class ProactiveAnomalySummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Returns the metadata of the source.
+     * The metadata of the source which detects proactive anomalies.
      * </p>
      * 
-     * @return Returns the metadata of the source.
+     * @return The metadata of the source which detects proactive anomalies.
      */
 
     public AnomalySourceMetadata getSourceMetadata() {
@@ -606,11 +606,11 @@ public class ProactiveAnomalySummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Returns the metadata of the source.
+     * The metadata of the source which detects proactive anomalies.
      * </p>
      * 
      * @param sourceMetadata
-     *        Returns the metadata of the source.
+     *        The metadata of the source which detects proactive anomalies.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

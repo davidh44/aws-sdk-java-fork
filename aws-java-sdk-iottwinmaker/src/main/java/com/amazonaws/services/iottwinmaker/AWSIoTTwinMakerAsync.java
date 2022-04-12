@@ -25,11 +25,6 @@ import com.amazonaws.services.iottwinmaker.model.*;
  * {@link com.amazonaws.services.iottwinmaker.AbstractAWSIoTTwinMakerAsync} instead.
  * </p>
  * <p>
- * <important>
- * <p>
- * TwinMaker is in public preview and is subject to change.
- * </p>
- * </important>
  * <p>
  * IoT TwinMaker is a service that enables you to build operational digital twins of physical systems. IoT TwinMaker
  * overlays measurements and analysis from real-world sensors, cameras, and enterprise applications so you can create
@@ -75,11 +70,6 @@ public interface AWSIoTTwinMakerAsync extends AWSIoTTwinMaker {
      * <p>
      * Creates a component type.
      * </p>
-     * <important>
-     * <p>
-     * TwinMaker is in public preview and is subject to change.
-     * </p>
-     * </important>
      * 
      * @param createComponentTypeRequest
      * @return A Java Future containing the result of the CreateComponentType operation returned by the service.
@@ -93,11 +83,6 @@ public interface AWSIoTTwinMakerAsync extends AWSIoTTwinMaker {
      * <p>
      * Creates a component type.
      * </p>
-     * <important>
-     * <p>
-     * TwinMaker is in public preview and is subject to change.
-     * </p>
-     * </important>
      * 
      * @param createComponentTypeRequest
      * @param asyncHandler

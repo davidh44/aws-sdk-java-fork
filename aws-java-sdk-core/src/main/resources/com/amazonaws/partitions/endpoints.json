@@ -17874,6 +17874,14 @@
           "us-iso-west-1" : { }
         }
       },
+      "eks" : {
+        "defaults" : {
+          "protocols" : [ "http", "https" ]
+        },
+        "endpoints" : {
+          "us-iso-east-1" : { }
+        }
+      },
       "elasticache" : {
         "endpoints" : {
           "us-iso-east-1" : { },
@@ -18332,6 +18340,14 @@
         }
       },
       "ecs" : {
+        "endpoints" : {
+          "us-isob-east-1" : { }
+        }
+      },
+      "eks" : {
+        "defaults" : {
+          "protocols" : [ "http", "https" ]
+        },
         "endpoints" : {
           "us-isob-east-1" : { }
         }

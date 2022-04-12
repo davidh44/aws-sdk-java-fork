@@ -1,3 +1,20 @@
+# __1.12.198__ __2022-04-12__
+## __AWS IoT TwinMaker__
+  - ### Features
+    - This release adds the following new features: 1) ListEntities API now supports search using ExternalId. 2) BatchPutPropertyValue and GetPropertyValueHistory API now allows users to represent time in sub-second level precisions.
+
+## __Amazon DevOps Guru__
+  - ### Features
+    - This release adds new APIs DeleteInsight to deletes the insight along with the associated anomalies, events and recommendations.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - X2idn and X2iedn instances are powered by 3rd generation Intel Xeon Scalable processors with an all-core turbo frequency up to 3.5 GHzAmazon EC2. C6a instances are powered by 3rd generation AMD EPYC processors.
+
+## __Amazon Elastic File System__
+  - ### Features
+    - Amazon EFS adds support for a ThrottlingException when using the CreateAccessPoint API if the account is nearing the AccessPoint limit(120).
+
 # __1.12.197__ __2022-04-11__
 ## __AWS Amplify UI Builder__
   - ### Features

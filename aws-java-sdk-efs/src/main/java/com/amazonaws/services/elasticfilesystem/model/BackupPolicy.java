@@ -47,7 +47,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     * <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      * </p>
      * </li>
      * <li>
@@ -76,7 +76,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     * <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      * </p>
      * </li>
      * <li>
@@ -101,7 +101,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     *        <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      *        </p>
      *        </li>
      *        <li>
@@ -133,7 +133,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     * <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      * </p>
      * </li>
      * <li>
@@ -157,7 +157,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     *         <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      *         </p>
      *         </li>
      *         <li>
@@ -189,7 +189,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     * <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      * </p>
      * </li>
      * <li>
@@ -214,7 +214,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     *        <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      *        </p>
      *        </li>
      *        <li>
@@ -248,7 +248,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     * <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      * </p>
      * </li>
      * <li>
@@ -273,7 +273,7 @@ public class BackupPolicy implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>DISABLED</code> </b> - automatic back ups are turned off for the file system.
+     *        <b> <code>DISABLED</code> </b> - Automatic back ups are turned off for the file system.
      *        </p>
      *        </li>
      *        <li>

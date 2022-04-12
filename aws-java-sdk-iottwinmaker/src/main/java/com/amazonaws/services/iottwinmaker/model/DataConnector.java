@@ -30,7 +30,7 @@ public class DataConnector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      * </p>
      */
     private Boolean isNative;
@@ -43,11 +43,11 @@ public class DataConnector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      * </p>
      * 
      * @param isNative
-     *        A Boolean value that specifies whether the data connector is native to TwinMaker.
+     *        A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      */
 
     public void setIsNative(Boolean isNative) {
@@ -56,10 +56,10 @@ public class DataConnector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      * </p>
      * 
-     * @return A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * @return A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      */
 
     public Boolean getIsNative() {
@@ -68,11 +68,11 @@ public class DataConnector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      * </p>
      * 
      * @param isNative
-     *        A Boolean value that specifies whether the data connector is native to TwinMaker.
+     *        A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,10 +83,10 @@ public class DataConnector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      * </p>
      * 
-     * @return A Boolean value that specifies whether the data connector is native to TwinMaker.
+     * @return A Boolean value that specifies whether the data connector is native to IoT TwinMaker.
      */
 
     public Boolean isNative() {

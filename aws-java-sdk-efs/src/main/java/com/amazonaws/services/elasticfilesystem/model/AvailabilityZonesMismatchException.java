@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * Returned if the Availability Zone that was specified for a mount target is different from the Availability Zone that
- * was specified for One Zone storage classes. For more information, see <a
+ * was specified for One Zone storage. For more information, see <a
  * href="https://docs.aws.amazon.com/efs/latest/ug/availability-durability.html">Regional and One Zone storage
  * redundancy</a>.
  * </p>

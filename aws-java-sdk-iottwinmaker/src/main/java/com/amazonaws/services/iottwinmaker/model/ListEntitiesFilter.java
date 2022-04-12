@@ -36,6 +36,13 @@ public class ListEntitiesFilter implements Serializable, Cloneable, StructuredPo
     private String componentTypeId;
     /**
      * <p>
+     * The external-Id property of a component. The external-Id property is the primary key of an external storage
+     * system.
+     * </p>
+     */
+    private String externalId;
+    /**
+     * <p>
      * The parent of the entities in the list.
      * </p>
      */
@@ -78,6 +85,52 @@ public class ListEntitiesFilter implements Serializable, Cloneable, StructuredPo
 
     public ListEntitiesFilter withComponentTypeId(String componentTypeId) {
         setComponentTypeId(componentTypeId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The external-Id property of a component. The external-Id property is the primary key of an external storage
+     * system.
+     * </p>
+     * 
+     * @param externalId
+     *        The external-Id property of a component. The external-Id property is the primary key of an external
+     *        storage system.
+     */
+
+    public void setExternalId(String externalId) {
+        this.externalId = externalId;
+    }
+
+    /**
+     * <p>
+     * The external-Id property of a component. The external-Id property is the primary key of an external storage
+     * system.
+     * </p>
+     * 
+     * @return The external-Id property of a component. The external-Id property is the primary key of an external
+     *         storage system.
+     */
+
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    /**
+     * <p>
+     * The external-Id property of a component. The external-Id property is the primary key of an external storage
+     * system.
+     * </p>
+     * 
+     * @param externalId
+     *        The external-Id property of a component. The external-Id property is the primary key of an external
+     *        storage system.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListEntitiesFilter withExternalId(String externalId) {
+        setExternalId(externalId);
         return this;
     }
 
@@ -135,6 +188,8 @@ public class ListEntitiesFilter implements Serializable, Cloneable, StructuredPo
         sb.append("{");
         if (getComponentTypeId() != null)
             sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
+        if (getExternalId() != null)
+            sb.append("ExternalId: ").append(getExternalId()).append(",");
         if (getParentEntityId() != null)
             sb.append("ParentEntityId: ").append(getParentEntityId());
         sb.append("}");
@@ -155,6 +210,10 @@ public class ListEntitiesFilter implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getComponentTypeId() != null && other.getComponentTypeId().equals(this.getComponentTypeId()) == false)
             return false;
+        if (other.getExternalId() == null ^ this.getExternalId() == null)
+            return false;
+        if (other.getExternalId() != null && other.getExternalId().equals(this.getExternalId()) == false)
+            return false;
         if (other.getParentEntityId() == null ^ this.getParentEntityId() == null)
             return false;
         if (other.getParentEntityId() != null && other.getParentEntityId().equals(this.getParentEntityId()) == false)
@@ -168,6 +227,7 @@ public class ListEntitiesFilter implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
+        hashCode = prime * hashCode + ((getExternalId() == null) ? 0 : getExternalId().hashCode());
         hashCode = prime * hashCode + ((getParentEntityId() == null) ? 0 : getParentEntityId().hashCode());
         return hashCode;
     }

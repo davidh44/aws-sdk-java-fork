@@ -33,7 +33,7 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      * <note>
      * <p>
      * Starting in October, 2021, you will receive an error when setting the account preference to <code>SHORT_ID</code>
-     * . Contact Amazon Web Services support if you receive an error and need to use short IDs for file system and mount
+     * . Contact Amazon Web Services support if you receive an error and must use short IDs for file system and mount
      * target resources.
      * </p>
      * </note>
@@ -48,7 +48,7 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      * <note>
      * <p>
      * Starting in October, 2021, you will receive an error when setting the account preference to <code>SHORT_ID</code>
-     * . Contact Amazon Web Services support if you receive an error and need to use short IDs for file system and mount
+     * . Contact Amazon Web Services support if you receive an error and must use short IDs for file system and mount
      * target resources.
      * </p>
      * </note>
@@ -59,8 +59,8 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      *        characters).</p> <note>
      *        <p>
      *        Starting in October, 2021, you will receive an error when setting the account preference to
-     *        <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and need to use short
-     *        IDs for file system and mount target resources.
+     *        <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and must use short IDs
+     *        for file system and mount target resources.
      *        </p>
      * @see ResourceIdType
      */
@@ -77,7 +77,7 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      * <note>
      * <p>
      * Starting in October, 2021, you will receive an error when setting the account preference to <code>SHORT_ID</code>
-     * . Contact Amazon Web Services support if you receive an error and need to use short IDs for file system and mount
+     * . Contact Amazon Web Services support if you receive an error and must use short IDs for file system and mount
      * target resources.
      * </p>
      * </note>
@@ -87,8 +87,8 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      *         (8 characters).</p> <note>
      *         <p>
      *         Starting in October, 2021, you will receive an error when setting the account preference to
-     *         <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and need to use short
-     *         IDs for file system and mount target resources.
+     *         <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and must use short IDs
+     *         for file system and mount target resources.
      *         </p>
      * @see ResourceIdType
      */
@@ -105,7 +105,7 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      * <note>
      * <p>
      * Starting in October, 2021, you will receive an error when setting the account preference to <code>SHORT_ID</code>
-     * . Contact Amazon Web Services support if you receive an error and need to use short IDs for file system and mount
+     * . Contact Amazon Web Services support if you receive an error and must use short IDs for file system and mount
      * target resources.
      * </p>
      * </note>
@@ -116,8 +116,8 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      *        characters).</p> <note>
      *        <p>
      *        Starting in October, 2021, you will receive an error when setting the account preference to
-     *        <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and need to use short
-     *        IDs for file system and mount target resources.
+     *        <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and must use short IDs
+     *        for file system and mount target resources.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceIdType
@@ -136,7 +136,7 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      * <note>
      * <p>
      * Starting in October, 2021, you will receive an error when setting the account preference to <code>SHORT_ID</code>
-     * . Contact Amazon Web Services support if you receive an error and need to use short IDs for file system and mount
+     * . Contact Amazon Web Services support if you receive an error and must use short IDs for file system and mount
      * target resources.
      * </p>
      * </note>
@@ -147,8 +147,8 @@ public class PutAccountPreferencesRequest extends com.amazonaws.AmazonWebService
      *        characters).</p> <note>
      *        <p>
      *        Starting in October, 2021, you will receive an error when setting the account preference to
-     *        <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and need to use short
-     *        IDs for file system and mount target resources.
+     *        <code>SHORT_ID</code>. Contact Amazon Web Services support if you receive an error and must use short IDs
+     *        for file system and mount target resources.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceIdType

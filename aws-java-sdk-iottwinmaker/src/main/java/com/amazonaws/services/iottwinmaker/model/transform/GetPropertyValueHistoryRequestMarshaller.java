@@ -34,6 +34,8 @@ public class GetPropertyValueHistoryRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentTypeId").build();
     private static final MarshallingInfo<java.util.Date> ENDDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endDateTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("endTime").build();
     private static final MarshallingInfo<String> ENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("entityId").build();
     private static final MarshallingInfo<StructuredPojo> INTERPOLATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -50,6 +52,8 @@ public class GetPropertyValueHistoryRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("selectedProperties").build();
     private static final MarshallingInfo<java.util.Date> STARTDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startDateTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("startTime").build();
     private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("workspaceId").build();
 
@@ -72,6 +76,7 @@ public class GetPropertyValueHistoryRequestMarshaller {
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getComponentName(), COMPONENTNAME_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getComponentTypeId(), COMPONENTTYPEID_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getEndDateTime(), ENDDATETIME_BINDING);
+            protocolMarshaller.marshall(getPropertyValueHistoryRequest.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getEntityId(), ENTITYID_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getInterpolation(), INTERPOLATION_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getMaxResults(), MAXRESULTS_BINDING);
@@ -80,6 +85,7 @@ public class GetPropertyValueHistoryRequestMarshaller {
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getPropertyFilters(), PROPERTYFILTERS_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getSelectedProperties(), SELECTEDPROPERTIES_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getStartDateTime(), STARTDATETIME_BINDING);
+            protocolMarshaller.marshall(getPropertyValueHistoryRequest.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(getPropertyValueHistoryRequest.getWorkspaceId(), WORKSPACEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

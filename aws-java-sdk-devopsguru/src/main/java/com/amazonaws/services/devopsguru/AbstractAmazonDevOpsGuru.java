@@ -33,6 +33,11 @@ public class AbstractAmazonDevOpsGuru implements AmazonDevOpsGuru {
     }
 
     @Override
+    public DeleteInsightResult deleteInsight(DeleteInsightRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAccountHealthResult describeAccountHealth(DescribeAccountHealthRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

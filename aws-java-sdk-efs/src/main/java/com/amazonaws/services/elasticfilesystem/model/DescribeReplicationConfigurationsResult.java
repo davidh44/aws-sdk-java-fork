@@ -26,7 +26,7 @@ public class DescribeReplicationConfigurationsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The collection of replication configurations returned.
+     * The collection of replication configurations that is returned.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ReplicationConfigurationDescription> replications;
@@ -40,10 +40,10 @@ public class DescribeReplicationConfigurationsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The collection of replication configurations returned.
+     * The collection of replication configurations that is returned.
      * </p>
      * 
-     * @return The collection of replication configurations returned.
+     * @return The collection of replication configurations that is returned.
      */
 
     public java.util.List<ReplicationConfigurationDescription> getReplications() {
@@ -55,11 +55,11 @@ public class DescribeReplicationConfigurationsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The collection of replication configurations returned.
+     * The collection of replication configurations that is returned.
      * </p>
      * 
      * @param replications
-     *        The collection of replication configurations returned.
+     *        The collection of replication configurations that is returned.
      */
 
     public void setReplications(java.util.Collection<ReplicationConfigurationDescription> replications) {
@@ -73,7 +73,7 @@ public class DescribeReplicationConfigurationsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The collection of replication configurations returned.
+     * The collection of replication configurations that is returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class DescribeReplicationConfigurationsResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param replications
-     *        The collection of replication configurations returned.
+     *        The collection of replication configurations that is returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class DescribeReplicationConfigurationsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The collection of replication configurations returned.
+     * The collection of replication configurations that is returned.
      * </p>
      * 
      * @param replications
-     *        The collection of replication configurations returned.
+     *        The collection of replication configurations that is returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

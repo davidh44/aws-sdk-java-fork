@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about your account's integration with Amazon CodeGuru Profiler.
+ * Information about your account's integration with Amazon CodeGuru Profiler. This returns whether DevOps Guru is
+ * configured to consume recommendations generated from Amazon CodeGuru Profiler.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AmazonCodeGuruProfilerIntegration"
@@ -30,18 +31,21 @@ public class AmazonCodeGuruProfilerIntegration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The status of the CodeGuru Profiler integration.
+     * The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume recommendations
+     * that are generated from Amazon CodeGuru Profiler.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The status of the CodeGuru Profiler integration.
+     * The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume recommendations
+     * that are generated from Amazon CodeGuru Profiler.
      * </p>
      * 
      * @param status
-     *        The status of the CodeGuru Profiler integration.
+     *        The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume
+     *        recommendations that are generated from Amazon CodeGuru Profiler.
      * @see EventSourceOptInStatus
      */
 
@@ -51,10 +55,12 @@ public class AmazonCodeGuruProfilerIntegration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The status of the CodeGuru Profiler integration.
+     * The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume recommendations
+     * that are generated from Amazon CodeGuru Profiler.
      * </p>
      * 
-     * @return The status of the CodeGuru Profiler integration.
+     * @return The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume
+     *         recommendations that are generated from Amazon CodeGuru Profiler.
      * @see EventSourceOptInStatus
      */
 
@@ -64,11 +70,13 @@ public class AmazonCodeGuruProfilerIntegration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The status of the CodeGuru Profiler integration.
+     * The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume recommendations
+     * that are generated from Amazon CodeGuru Profiler.
      * </p>
      * 
      * @param status
-     *        The status of the CodeGuru Profiler integration.
+     *        The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume
+     *        recommendations that are generated from Amazon CodeGuru Profiler.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourceOptInStatus
      */
@@ -80,11 +88,13 @@ public class AmazonCodeGuruProfilerIntegration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The status of the CodeGuru Profiler integration.
+     * The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume recommendations
+     * that are generated from Amazon CodeGuru Profiler.
      * </p>
      * 
      * @param status
-     *        The status of the CodeGuru Profiler integration.
+     *        The status of the CodeGuru Profiler integration. Specifies if DevOps Guru is enabled to consume
+     *        recommendations that are generated from Amazon CodeGuru Profiler.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourceOptInStatus
      */

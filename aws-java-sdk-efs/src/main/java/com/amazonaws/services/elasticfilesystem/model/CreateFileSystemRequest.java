@@ -56,7 +56,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean encrypted;
     /**
      * <p>
-     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only required
+     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is required only
      * if you want to use a non-default KMS key. If this parameter is not specified, the default KMS key for Amazon EFS
      * is used. You can specify a KMS key ID using the following formats:
      * </p>
@@ -426,7 +426,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only required
+     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is required only
      * if you want to use a non-default KMS key. If this parameter is not specified, the default KMS key for Amazon EFS
      * is used. You can specify a KMS key ID using the following formats:
      * </p>
@@ -464,9 +464,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * 
      * @param kmsKeyId
-     *        The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only
-     *        required if you want to use a non-default KMS key. If this parameter is not specified, the default KMS key
-     *        for Amazon EFS is used. You can specify a KMS key ID using the following formats:</p>
+     *        The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is
+     *        required only if you want to use a non-default KMS key. If this parameter is not specified, the default
+     *        KMS key for Amazon EFS is used. You can specify a KMS key ID using the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -507,7 +507,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only required
+     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is required only
      * if you want to use a non-default KMS key. If this parameter is not specified, the default KMS key for Amazon EFS
      * is used. You can specify a KMS key ID using the following formats:
      * </p>
@@ -544,9 +544,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </important>
      * 
-     * @return The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only
-     *         required if you want to use a non-default KMS key. If this parameter is not specified, the default KMS
-     *         key for Amazon EFS is used. You can specify a KMS key ID using the following formats:</p>
+     * @return The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is
+     *         required only if you want to use a non-default KMS key. If this parameter is not specified, the default
+     *         KMS key for Amazon EFS is used. You can specify a KMS key ID using the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -587,7 +587,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only required
+     * The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is required only
      * if you want to use a non-default KMS key. If this parameter is not specified, the default KMS key for Amazon EFS
      * is used. You can specify a KMS key ID using the following formats:
      * </p>
@@ -625,9 +625,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * 
      * @param kmsKeyId
-     *        The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is only
-     *        required if you want to use a non-default KMS key. If this parameter is not specified, the default KMS key
-     *        for Amazon EFS is used. You can specify a KMS key ID using the following formats:</p>
+     *        The ID of the KMS key that you want to use to protect the encrypted file system. This parameter is
+     *        required only if you want to use a non-default KMS key. If this parameter is not specified, the default
+     *        KMS key for Amazon EFS is used. You can specify a KMS key ID using the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>

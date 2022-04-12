@@ -28,11 +28,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
 
+    private String time;
     /**
      * <p>
      * The timestamp of a value for a time series property.
      * </p>
      */
+    @Deprecated
     private java.util.Date timestamp;
     /**
      * <p>
@@ -42,6 +44,32 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
     private DataValue value;
 
     /**
+     * @param time
+     */
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getTime() {
+        return this.time;
+    }
+
+    /**
+     * @param time
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PropertyValue withTime(String time) {
+        setTime(time);
+        return this;
+    }
+
+    /**
      * <p>
      * The timestamp of a value for a time series property.
      * </p>
@@ -49,7 +77,7 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
      * @param timestamp
      *        The timestamp of a value for a time series property.
      */
-
+    @Deprecated
     public void setTimestamp(java.util.Date timestamp) {
         this.timestamp = timestamp;
     }
@@ -61,7 +89,7 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return The timestamp of a value for a time series property.
      */
-
+    @Deprecated
     public java.util.Date getTimestamp() {
         return this.timestamp;
     }
@@ -75,7 +103,7 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
      *        The timestamp of a value for a time series property.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public PropertyValue withTimestamp(java.util.Date timestamp) {
         setTimestamp(timestamp);
         return this;
@@ -133,6 +161,8 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getTime() != null)
+            sb.append("Time: ").append(getTime()).append(",");
         if (getTimestamp() != null)
             sb.append("Timestamp: ").append(getTimestamp()).append(",");
         if (getValue() != null)
@@ -151,6 +181,10 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof PropertyValue == false)
             return false;
         PropertyValue other = (PropertyValue) obj;
+        if (other.getTime() == null ^ this.getTime() == null)
+            return false;
+        if (other.getTime() != null && other.getTime().equals(this.getTime()) == false)
+            return false;
         if (other.getTimestamp() == null ^ this.getTimestamp() == null)
             return false;
         if (other.getTimestamp() != null && other.getTimestamp().equals(this.getTimestamp()) == false)
@@ -167,6 +201,7 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getTime() == null) ? 0 : getTime().hashCode());
         hashCode = prime * hashCode + ((getTimestamp() == null) ? 0 : getTimestamp().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
         return hashCode;

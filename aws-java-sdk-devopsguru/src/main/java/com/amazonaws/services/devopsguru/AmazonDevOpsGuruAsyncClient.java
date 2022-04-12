@@ -125,6 +125,39 @@ public class AmazonDevOpsGuruAsyncClient extends AmazonDevOpsGuruClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteInsightResult> deleteInsightAsync(DeleteInsightRequest request) {
+
+        return deleteInsightAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInsightResult> deleteInsightAsync(final DeleteInsightRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteInsightRequest, DeleteInsightResult> asyncHandler) {
+        final DeleteInsightRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteInsightResult>() {
+            @Override
+            public DeleteInsightResult call() throws Exception {
+                DeleteInsightResult result = null;
+
+                try {
+                    result = executeDeleteInsight(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAccountHealthResult> describeAccountHealthAsync(DescribeAccountHealthRequest request) {
 
         return describeAccountHealthAsync(request, null);

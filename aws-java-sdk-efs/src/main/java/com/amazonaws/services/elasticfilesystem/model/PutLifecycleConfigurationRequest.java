@@ -35,7 +35,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * An array of <code>LifecyclePolicy</code> objects that define the file system's
      * <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS lifecycle
-     * management and intelligent tiering of the following:
+     * management and EFS Intelligent-Tiering of the following:
      * </p>
      * <ul>
      * <li>
@@ -53,7 +53,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * When using the <code>put-lifecycle-configuration</code> CLI command or the <code>PutLifecycleConfiguration</code>
      * API action, Amazon EFS requires that each <code>LifecyclePolicy</code> object have only a single transition. This
-     * means that in a request body, <code>LifecyclePolicies</code> needs to be structured as an array of
+     * means that in a request body, <code>LifecyclePolicies</code> must be structured as an array of
      * <code>LifecyclePolicy</code> objects, one object for each transition, <code>TransitionToIA</code>,
      * <code>TransitionToPrimaryStorageClass</code>. See the example requests in the following section for more
      * information.
@@ -109,7 +109,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * An array of <code>LifecyclePolicy</code> objects that define the file system's
      * <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS lifecycle
-     * management and intelligent tiering of the following:
+     * management and EFS Intelligent-Tiering of the following:
      * </p>
      * <ul>
      * <li>
@@ -127,7 +127,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * When using the <code>put-lifecycle-configuration</code> CLI command or the <code>PutLifecycleConfiguration</code>
      * API action, Amazon EFS requires that each <code>LifecyclePolicy</code> object have only a single transition. This
-     * means that in a request body, <code>LifecyclePolicies</code> needs to be structured as an array of
+     * means that in a request body, <code>LifecyclePolicies</code> must be structured as an array of
      * <code>LifecyclePolicy</code> objects, one object for each transition, <code>TransitionToIA</code>,
      * <code>TransitionToPrimaryStorageClass</code>. See the example requests in the following section for more
      * information.
@@ -136,7 +136,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * 
      * @return An array of <code>LifecyclePolicy</code> objects that define the file system's
      *         <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS
-     *         lifecycle management and intelligent tiering of the following:</p>
+     *         lifecycle management and EFS Intelligent-Tiering of the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -154,10 +154,9 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      *         When using the <code>put-lifecycle-configuration</code> CLI command or the
      *         <code>PutLifecycleConfiguration</code> API action, Amazon EFS requires that each
      *         <code>LifecyclePolicy</code> object have only a single transition. This means that in a request body,
-     *         <code>LifecyclePolicies</code> needs to be structured as an array of <code>LifecyclePolicy</code>
-     *         objects, one object for each transition, <code>TransitionToIA</code>,
-     *         <code>TransitionToPrimaryStorageClass</code>. See the example requests in the following section for more
-     *         information.
+     *         <code>LifecyclePolicies</code> must be structured as an array of <code>LifecyclePolicy</code> objects,
+     *         one object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>
+     *         . See the example requests in the following section for more information.
      *         </p>
      */
 
@@ -172,7 +171,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * An array of <code>LifecyclePolicy</code> objects that define the file system's
      * <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS lifecycle
-     * management and intelligent tiering of the following:
+     * management and EFS Intelligent-Tiering of the following:
      * </p>
      * <ul>
      * <li>
@@ -190,7 +189,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * When using the <code>put-lifecycle-configuration</code> CLI command or the <code>PutLifecycleConfiguration</code>
      * API action, Amazon EFS requires that each <code>LifecyclePolicy</code> object have only a single transition. This
-     * means that in a request body, <code>LifecyclePolicies</code> needs to be structured as an array of
+     * means that in a request body, <code>LifecyclePolicies</code> must be structured as an array of
      * <code>LifecyclePolicy</code> objects, one object for each transition, <code>TransitionToIA</code>,
      * <code>TransitionToPrimaryStorageClass</code>. See the example requests in the following section for more
      * information.
@@ -200,7 +199,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * @param lifecyclePolicies
      *        An array of <code>LifecyclePolicy</code> objects that define the file system's
      *        <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS
-     *        lifecycle management and intelligent tiering of the following:</p>
+     *        lifecycle management and EFS Intelligent-Tiering of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -218,9 +217,9 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      *        When using the <code>put-lifecycle-configuration</code> CLI command or the
      *        <code>PutLifecycleConfiguration</code> API action, Amazon EFS requires that each
      *        <code>LifecyclePolicy</code> object have only a single transition. This means that in a request body,
-     *        <code>LifecyclePolicies</code> needs to be structured as an array of <code>LifecyclePolicy</code> objects,
-     *        one object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>.
-     *        See the example requests in the following section for more information.
+     *        <code>LifecyclePolicies</code> must be structured as an array of <code>LifecyclePolicy</code> objects, one
+     *        object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>. See
+     *        the example requests in the following section for more information.
      *        </p>
      */
 
@@ -237,7 +236,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * An array of <code>LifecyclePolicy</code> objects that define the file system's
      * <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS lifecycle
-     * management and intelligent tiering of the following:
+     * management and EFS Intelligent-Tiering of the following:
      * </p>
      * <ul>
      * <li>
@@ -255,7 +254,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * When using the <code>put-lifecycle-configuration</code> CLI command or the <code>PutLifecycleConfiguration</code>
      * API action, Amazon EFS requires that each <code>LifecyclePolicy</code> object have only a single transition. This
-     * means that in a request body, <code>LifecyclePolicies</code> needs to be structured as an array of
+     * means that in a request body, <code>LifecyclePolicies</code> must be structured as an array of
      * <code>LifecyclePolicy</code> objects, one object for each transition, <code>TransitionToIA</code>,
      * <code>TransitionToPrimaryStorageClass</code>. See the example requests in the following section for more
      * information.
@@ -270,7 +269,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * @param lifecyclePolicies
      *        An array of <code>LifecyclePolicy</code> objects that define the file system's
      *        <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS
-     *        lifecycle management and intelligent tiering of the following:</p>
+     *        lifecycle management and EFS Intelligent-Tiering of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -288,9 +287,9 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      *        When using the <code>put-lifecycle-configuration</code> CLI command or the
      *        <code>PutLifecycleConfiguration</code> API action, Amazon EFS requires that each
      *        <code>LifecyclePolicy</code> object have only a single transition. This means that in a request body,
-     *        <code>LifecyclePolicies</code> needs to be structured as an array of <code>LifecyclePolicy</code> objects,
-     *        one object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>.
-     *        See the example requests in the following section for more information.
+     *        <code>LifecyclePolicies</code> must be structured as an array of <code>LifecyclePolicy</code> objects, one
+     *        object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>. See
+     *        the example requests in the following section for more information.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -309,7 +308,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * An array of <code>LifecyclePolicy</code> objects that define the file system's
      * <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS lifecycle
-     * management and intelligent tiering of the following:
+     * management and EFS Intelligent-Tiering of the following:
      * </p>
      * <ul>
      * <li>
@@ -327,7 +326,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * When using the <code>put-lifecycle-configuration</code> CLI command or the <code>PutLifecycleConfiguration</code>
      * API action, Amazon EFS requires that each <code>LifecyclePolicy</code> object have only a single transition. This
-     * means that in a request body, <code>LifecyclePolicies</code> needs to be structured as an array of
+     * means that in a request body, <code>LifecyclePolicies</code> must be structured as an array of
      * <code>LifecyclePolicy</code> objects, one object for each transition, <code>TransitionToIA</code>,
      * <code>TransitionToPrimaryStorageClass</code>. See the example requests in the following section for more
      * information.
@@ -337,7 +336,7 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      * @param lifecyclePolicies
      *        An array of <code>LifecyclePolicy</code> objects that define the file system's
      *        <code>LifecycleConfiguration</code> object. A <code>LifecycleConfiguration</code> object informs EFS
-     *        lifecycle management and intelligent tiering of the following:</p>
+     *        lifecycle management and EFS Intelligent-Tiering of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -355,9 +354,9 @@ public class PutLifecycleConfigurationRequest extends com.amazonaws.AmazonWebSer
      *        When using the <code>put-lifecycle-configuration</code> CLI command or the
      *        <code>PutLifecycleConfiguration</code> API action, Amazon EFS requires that each
      *        <code>LifecyclePolicy</code> object have only a single transition. This means that in a request body,
-     *        <code>LifecyclePolicies</code> needs to be structured as an array of <code>LifecyclePolicy</code> objects,
-     *        one object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>.
-     *        See the example requests in the following section for more information.
+     *        <code>LifecyclePolicies</code> must be structured as an array of <code>LifecyclePolicy</code> objects, one
+     *        object for each transition, <code>TransitionToIA</code>, <code>TransitionToPrimaryStorageClass</code>. See
+     *        the example requests in the following section for more information.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

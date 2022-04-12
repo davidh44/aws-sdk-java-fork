@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if the <code>FileSystemPolicy</code> is is malformed or contains an error such as an invalid parameter value
- * or a missing required parameter. Returned in the case of a policy lockout safety check error.
+ * Returned if the <code>FileSystemPolicy</code> is malformed or contains an error such as a parameter value that is not
+ * valid or a missing required parameter. Returned in the case of a policy lockout safety check error.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

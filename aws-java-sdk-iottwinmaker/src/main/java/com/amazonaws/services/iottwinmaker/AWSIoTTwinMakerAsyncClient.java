@@ -25,11 +25,6 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <important>
- * <p>
- * TwinMaker is in public preview and is subject to change.
- * </p>
- * </important>
  * <p>
  * IoT TwinMaker is a service that enables you to build operational digital twins of physical systems. IoT TwinMaker
  * overlays measurements and analysis from real-world sensors, cameras, and enterprise applications so you can create

@@ -52,6 +52,10 @@ public class ListEntitiesFilterJsonUnmarshaller implements Unmarshaller<ListEnti
                     context.nextToken();
                     listEntitiesFilter.setComponentTypeId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("externalId", targetDepth)) {
+                    context.nextToken();
+                    listEntitiesFilter.setExternalId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("parentEntityId", targetDepth)) {
                     context.nextToken();
                     listEntitiesFilter.setParentEntityId(context.getUnmarshaller(String.class).unmarshall(context));

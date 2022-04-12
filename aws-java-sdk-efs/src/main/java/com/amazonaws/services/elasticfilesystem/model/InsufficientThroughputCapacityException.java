@@ -18,8 +18,8 @@ import javax.annotation.Generated;
  * <p>
  * Returned if there's not enough capacity to provision additional throughput. This value might be returned when you try
  * to create a file system in provisioned throughput mode, when you attempt to increase the provisioned throughput of an
- * existing file system, or when you attempt to change an existing file system from bursting to provisioned throughput
- * mode. Try again later.
+ * existing file system, or when you attempt to change an existing file system from Bursting Throughput to Provisioned
+ * Throughput mode. Try again later.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

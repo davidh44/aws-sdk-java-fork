@@ -38,7 +38,7 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
     private String sourceFileSystemRegion;
     /**
      * <p>
-     * The ARN of the current source file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      * </p>
      */
     private String sourceFileSystemArn;
@@ -56,7 +56,7 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
     private java.util.Date creationTime;
     /**
      * <p>
-     * Array of destination objects. Only one destination object is supported.
+     * An array of destination objects. Only one destination object is supported.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Destination> destinations;
@@ -143,11 +143,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ARN of the current source file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      * </p>
      * 
      * @param sourceFileSystemArn
-     *        The ARN of the current source file system in the replication configuration.
+     *        The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      */
 
     public void setSourceFileSystemArn(String sourceFileSystemArn) {
@@ -156,10 +156,10 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ARN of the current source file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      * </p>
      * 
-     * @return The ARN of the current source file system in the replication configuration.
+     * @return The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      */
 
     public String getSourceFileSystemArn() {
@@ -168,11 +168,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The ARN of the current source file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      * </p>
      * 
      * @param sourceFileSystemArn
-     *        The ARN of the current source file system in the replication configuration.
+     *        The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -266,10 +266,10 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Array of destination objects. Only one destination object is supported.
+     * An array of destination objects. Only one destination object is supported.
      * </p>
      * 
-     * @return Array of destination objects. Only one destination object is supported.
+     * @return An array of destination objects. Only one destination object is supported.
      */
 
     public java.util.List<Destination> getDestinations() {
@@ -281,11 +281,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Array of destination objects. Only one destination object is supported.
+     * An array of destination objects. Only one destination object is supported.
      * </p>
      * 
      * @param destinations
-     *        Array of destination objects. Only one destination object is supported.
+     *        An array of destination objects. Only one destination object is supported.
      */
 
     public void setDestinations(java.util.Collection<Destination> destinations) {
@@ -299,7 +299,7 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Array of destination objects. Only one destination object is supported.
+     * An array of destination objects. Only one destination object is supported.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -308,7 +308,7 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param destinations
-     *        Array of destination objects. Only one destination object is supported.
+     *        An array of destination objects. Only one destination object is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -324,11 +324,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Array of destination objects. Only one destination object is supported.
+     * An array of destination objects. Only one destination object is supported.
      * </p>
      * 
      * @param destinations
-     *        Array of destination objects. Only one destination object is supported.
+     *        An array of destination objects. Only one destination object is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

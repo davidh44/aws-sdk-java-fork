@@ -27,18 +27,21 @@ public class UpdateEventSourcesConfigRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the event source.
+     * Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with another AWS
+     * Service.
      * </p>
      */
     private EventSourcesConfig eventSources;
 
     /**
      * <p>
-     * The name of the event source.
+     * Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with another AWS
+     * Service.
      * </p>
      * 
      * @param eventSources
-     *        The name of the event source.
+     *        Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with
+     *        another AWS Service.
      */
 
     public void setEventSources(EventSourcesConfig eventSources) {
@@ -47,10 +50,12 @@ public class UpdateEventSourcesConfigRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the event source.
+     * Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with another AWS
+     * Service.
      * </p>
      * 
-     * @return The name of the event source.
+     * @return Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with
+     *         another AWS Service.
      */
 
     public EventSourcesConfig getEventSources() {
@@ -59,11 +64,13 @@ public class UpdateEventSourcesConfigRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the event source.
+     * Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with another AWS
+     * Service.
      * </p>
      * 
      * @param eventSources
-     *        The name of the event source.
+     *        Configuration information about the integration of DevOps Guru as the Consumer via EventBridge with
+     *        another AWS Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

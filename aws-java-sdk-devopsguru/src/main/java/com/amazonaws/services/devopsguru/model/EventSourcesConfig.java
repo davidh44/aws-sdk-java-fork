@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the event sources.
+ * Information about the integration of DevOps Guru as consumer with another AWS service, such as AWS CodeGuru Profiler
+ * via EventBridge.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/EventSourcesConfig" target="_top">AWS API
@@ -28,13 +29,23 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EventSourcesConfig implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Information about whether DevOps Guru is configured to consume recommendations which are generated from AWS
+     * CodeGuru Profiler.
+     * </p>
+     */
     private AmazonCodeGuruProfilerIntegration amazonCodeGuruProfiler;
 
     /**
-     * <p/>
+     * <p>
+     * Information about whether DevOps Guru is configured to consume recommendations which are generated from AWS
+     * CodeGuru Profiler.
+     * </p>
      * 
      * @param amazonCodeGuruProfiler
+     *        Information about whether DevOps Guru is configured to consume recommendations which are generated from
+     *        AWS CodeGuru Profiler.
      */
 
     public void setAmazonCodeGuruProfiler(AmazonCodeGuruProfilerIntegration amazonCodeGuruProfiler) {
@@ -42,9 +53,13 @@ public class EventSourcesConfig implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * Information about whether DevOps Guru is configured to consume recommendations which are generated from AWS
+     * CodeGuru Profiler.
+     * </p>
      * 
-     * @return
+     * @return Information about whether DevOps Guru is configured to consume recommendations which are generated from
+     *         AWS CodeGuru Profiler.
      */
 
     public AmazonCodeGuruProfilerIntegration getAmazonCodeGuruProfiler() {
@@ -52,9 +67,14 @@ public class EventSourcesConfig implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * Information about whether DevOps Guru is configured to consume recommendations which are generated from AWS
+     * CodeGuru Profiler.
+     * </p>
      * 
      * @param amazonCodeGuruProfiler
+     *        Information about whether DevOps Guru is configured to consume recommendations which are generated from
+     *        AWS CodeGuru Profiler.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

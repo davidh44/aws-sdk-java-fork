@@ -42,7 +42,10 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      * The date and time of the latest property value to return.
      * </p>
      */
+    @Deprecated
     private java.util.Date endDateTime;
+
+    private String endTime;
     /**
      * <p>
      * The ID of the entity.
@@ -90,7 +93,10 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      * The date and time of the earliest property value to return.
      * </p>
      */
+    @Deprecated
     private java.util.Date startDateTime;
+
+    private String startTime;
     /**
      * <p>
      * The ID of the workspace.
@@ -186,7 +192,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      * @param endDateTime
      *        The date and time of the latest property value to return.
      */
-
+    @Deprecated
     public void setEndDateTime(java.util.Date endDateTime) {
         this.endDateTime = endDateTime;
     }
@@ -198,7 +204,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      * 
      * @return The date and time of the latest property value to return.
      */
-
+    @Deprecated
     public java.util.Date getEndDateTime() {
         return this.endDateTime;
     }
@@ -212,9 +218,35 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      *        The date and time of the latest property value to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetPropertyValueHistoryRequest withEndDateTime(java.util.Date endDateTime) {
         setEndDateTime(endDateTime);
+        return this;
+    }
+
+    /**
+     * @param endTime
+     */
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @param endTime
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPropertyValueHistoryRequest withEndTime(String endTime) {
+        setEndTime(endTime);
         return this;
     }
 
@@ -585,7 +617,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      * @param startDateTime
      *        The date and time of the earliest property value to return.
      */
-
+    @Deprecated
     public void setStartDateTime(java.util.Date startDateTime) {
         this.startDateTime = startDateTime;
     }
@@ -597,7 +629,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      * 
      * @return The date and time of the earliest property value to return.
      */
-
+    @Deprecated
     public java.util.Date getStartDateTime() {
         return this.startDateTime;
     }
@@ -611,9 +643,35 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      *        The date and time of the earliest property value to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetPropertyValueHistoryRequest withStartDateTime(java.util.Date startDateTime) {
         setStartDateTime(startDateTime);
+        return this;
+    }
+
+    /**
+     * @param startTime
+     */
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * @param startTime
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPropertyValueHistoryRequest withStartTime(String startTime) {
+        setStartTime(startTime);
         return this;
     }
 
@@ -675,6 +733,8 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
             sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
         if (getEndDateTime() != null)
             sb.append("EndDateTime: ").append(getEndDateTime()).append(",");
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getEntityId() != null)
             sb.append("EntityId: ").append(getEntityId()).append(",");
         if (getInterpolation() != null)
@@ -691,6 +751,8 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
             sb.append("SelectedProperties: ").append(getSelectedProperties()).append(",");
         if (getStartDateTime() != null)
             sb.append("StartDateTime: ").append(getStartDateTime()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getWorkspaceId() != null)
             sb.append("WorkspaceId: ").append(getWorkspaceId());
         sb.append("}");
@@ -718,6 +780,10 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
         if (other.getEndDateTime() == null ^ this.getEndDateTime() == null)
             return false;
         if (other.getEndDateTime() != null && other.getEndDateTime().equals(this.getEndDateTime()) == false)
+            return false;
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
+            return false;
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
         if (other.getEntityId() == null ^ this.getEntityId() == null)
             return false;
@@ -751,6 +817,10 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getStartDateTime() != null && other.getStartDateTime().equals(this.getStartDateTime()) == false)
             return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
         if (other.getWorkspaceId() == null ^ this.getWorkspaceId() == null)
             return false;
         if (other.getWorkspaceId() != null && other.getWorkspaceId().equals(this.getWorkspaceId()) == false)
@@ -766,6 +836,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
         hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
         hashCode = prime * hashCode + ((getEndDateTime() == null) ? 0 : getEndDateTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getEntityId() == null) ? 0 : getEntityId().hashCode());
         hashCode = prime * hashCode + ((getInterpolation() == null) ? 0 : getInterpolation().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
@@ -774,6 +845,7 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getPropertyFilters() == null) ? 0 : getPropertyFilters().hashCode());
         hashCode = prime * hashCode + ((getSelectedProperties() == null) ? 0 : getSelectedProperties().hashCode());
         hashCode = prime * hashCode + ((getStartDateTime() == null) ? 0 : getStartDateTime().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getWorkspaceId() == null) ? 0 : getWorkspaceId().hashCode());
         return hashCode;
     }

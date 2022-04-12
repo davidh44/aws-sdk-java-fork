@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum PropertyUpdateType {
 
     UPDATE("UPDATE"),
-    DELETE("DELETE");
+    DELETE("DELETE"),
+    CREATE("CREATE");
 
     private String value;
 

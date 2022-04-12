@@ -56,9 +56,14 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
      * <p>
      * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru
      * permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using
-     * Amazon SNS in your account. For more information, see <a
+     * Amazon SNS in your account. DevOps Guru only supports standard SNS topics. For more information, see <a
      * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions for
      * cross account Amazon SNS topics</a>.
+     * </p>
+     * <p>
+     * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru
+     * permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using
+     * Amazon SNS in your account. For more information, see Permissions for cross account Amazon SNS topics.
      * </p>
      * <p>
      * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
@@ -83,9 +88,14 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
      * <p>
      * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru
      * permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using
-     * Amazon SNS in your account. For more information, see <a
+     * Amazon SNS in your account. DevOps Guru only supports standard SNS topics. For more information, see <a
      * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions for
      * cross account Amazon SNS topics</a>.
+     * </p>
+     * <p>
+     * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru
+     * permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using
+     * Amazon SNS in your account. For more information, see Permissions for cross account Amazon SNS topics.
      * </p>
      * <p>
      * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
@@ -106,6 +116,37 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
      */
     java.util.concurrent.Future<AddNotificationChannelResult> addNotificationChannelAsync(AddNotificationChannelRequest addNotificationChannelRequest,
             com.amazonaws.handlers.AsyncHandler<AddNotificationChannelRequest, AddNotificationChannelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the insight along with the associated anomalies, events and recommendations.
+     * </p>
+     * 
+     * @param deleteInsightRequest
+     * @return A Java Future containing the result of the DeleteInsight operation returned by the service.
+     * @sample AmazonDevOpsGuruAsync.DeleteInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DeleteInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteInsightResult> deleteInsightAsync(DeleteInsightRequest deleteInsightRequest);
+
+    /**
+     * <p>
+     * Deletes the insight along with the associated anomalies, events and recommendations.
+     * </p>
+     * 
+     * @param deleteInsightRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteInsight operation returned by the service.
+     * @sample AmazonDevOpsGuruAsyncHandler.DeleteInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DeleteInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteInsightResult> deleteInsightAsync(DeleteInsightRequest deleteInsightRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteInsightRequest, DeleteInsightResult> asyncHandler);
 
     /**
      * <p>
@@ -208,7 +249,9 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
 
     /**
      * <p>
-     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge. The
+     * one service that can be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive
+     * recommendations which can be stored and viewed in DevOps Guru.
      * </p>
      * 
      * @param describeEventSourcesConfigRequest
@@ -222,7 +265,9 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
 
     /**
      * <p>
-     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge. The
+     * one service that can be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive
+     * recommendations which can be stored and viewed in DevOps Guru.
      * </p>
      * 
      * @param describeEventSourcesConfigRequest
@@ -955,7 +1000,9 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Updates the event source configuration.
+     * Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can
+     * be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations which can
+     * be stored and viewed in DevOps Guru.
      * </p>
      * 
      * @param updateEventSourcesConfigRequest
@@ -968,7 +1015,9 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Updates the event source configuration.
+     * Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can
+     * be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations which can
+     * be stored and viewed in DevOps Guru.
      * </p>
      * 
      * @param updateEventSourcesConfigRequest

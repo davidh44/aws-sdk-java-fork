@@ -30,7 +30,9 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     * destination file system in the replication configuration is in a failed state and is unrecoverable. To access the
+     * file system data, restore a backup of the failed file system to a new file system.
      * </p>
      */
     private String status;
@@ -48,20 +50,24 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
     private String region;
     /**
      * <p>
-     * The time when the most recent sync successfully completed on the destination file system. Any changes to data on
-     * the source file system that occurred prior to this time were successfully replicated to the destination file
-     * system. Any changes that occurred after this time might not be fully replicated.
+     * The time when the most recent sync was successfully completed on the destination file system. Any changes to data
+     * on the source file system that occurred before this time have been successfully replicated to the destination
+     * file system. Any changes that occurred after this time might not be fully replicated.
      * </p>
      */
     private java.util.Date lastReplicatedTimestamp;
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     * destination file system in the replication configuration is in a failed state and is unrecoverable. To access the
+     * file system data, restore a backup of the failed file system to a new file system.
      * </p>
      * 
      * @param status
-     *        Describes the status of the destination Amazon EFS file system.
+     *        Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     *        destination file system in the replication configuration is in a failed state and is unrecoverable. To
+     *        access the file system data, restore a backup of the failed file system to a new file system.
      * @see ReplicationStatus
      */
 
@@ -71,10 +77,14 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     * destination file system in the replication configuration is in a failed state and is unrecoverable. To access the
+     * file system data, restore a backup of the failed file system to a new file system.
      * </p>
      * 
-     * @return Describes the status of the destination Amazon EFS file system.
+     * @return Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     *         destination file system in the replication configuration is in a failed state and is unrecoverable. To
+     *         access the file system data, restore a backup of the failed file system to a new file system.
      * @see ReplicationStatus
      */
 
@@ -84,11 +94,15 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     * destination file system in the replication configuration is in a failed state and is unrecoverable. To access the
+     * file system data, restore a backup of the failed file system to a new file system.
      * </p>
      * 
      * @param status
-     *        Describes the status of the destination Amazon EFS file system.
+     *        Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     *        destination file system in the replication configuration is in a failed state and is unrecoverable. To
+     *        access the file system data, restore a backup of the failed file system to a new file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationStatus
      */
@@ -100,11 +114,15 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     * destination file system in the replication configuration is in a failed state and is unrecoverable. To access the
+     * file system data, restore a backup of the failed file system to a new file system.
      * </p>
      * 
      * @param status
-     *        Describes the status of the destination Amazon EFS file system.
+     *        Describes the status of the destination Amazon EFS file system. If the status is <code>ERROR</code>, the
+     *        destination file system in the replication configuration is in a failed state and is unrecoverable. To
+     *        access the file system data, restore a backup of the failed file system to a new file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ReplicationStatus
      */
@@ -196,14 +214,14 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the most recent sync successfully completed on the destination file system. Any changes to data on
-     * the source file system that occurred prior to this time were successfully replicated to the destination file
-     * system. Any changes that occurred after this time might not be fully replicated.
+     * The time when the most recent sync was successfully completed on the destination file system. Any changes to data
+     * on the source file system that occurred before this time have been successfully replicated to the destination
+     * file system. Any changes that occurred after this time might not be fully replicated.
      * </p>
      * 
      * @param lastReplicatedTimestamp
-     *        The time when the most recent sync successfully completed on the destination file system. Any changes to
-     *        data on the source file system that occurred prior to this time were successfully replicated to the
+     *        The time when the most recent sync was successfully completed on the destination file system. Any changes
+     *        to data on the source file system that occurred before this time have been successfully replicated to the
      *        destination file system. Any changes that occurred after this time might not be fully replicated.
      */
 
@@ -213,13 +231,13 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the most recent sync successfully completed on the destination file system. Any changes to data on
-     * the source file system that occurred prior to this time were successfully replicated to the destination file
-     * system. Any changes that occurred after this time might not be fully replicated.
+     * The time when the most recent sync was successfully completed on the destination file system. Any changes to data
+     * on the source file system that occurred before this time have been successfully replicated to the destination
+     * file system. Any changes that occurred after this time might not be fully replicated.
      * </p>
      * 
-     * @return The time when the most recent sync successfully completed on the destination file system. Any changes to
-     *         data on the source file system that occurred prior to this time were successfully replicated to the
+     * @return The time when the most recent sync was successfully completed on the destination file system. Any changes
+     *         to data on the source file system that occurred before this time have been successfully replicated to the
      *         destination file system. Any changes that occurred after this time might not be fully replicated.
      */
 
@@ -229,14 +247,14 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the most recent sync successfully completed on the destination file system. Any changes to data on
-     * the source file system that occurred prior to this time were successfully replicated to the destination file
-     * system. Any changes that occurred after this time might not be fully replicated.
+     * The time when the most recent sync was successfully completed on the destination file system. Any changes to data
+     * on the source file system that occurred before this time have been successfully replicated to the destination
+     * file system. Any changes that occurred after this time might not be fully replicated.
      * </p>
      * 
      * @param lastReplicatedTimestamp
-     *        The time when the most recent sync successfully completed on the destination file system. Any changes to
-     *        data on the source file system that occurred prior to this time were successfully replicated to the
+     *        The time when the most recent sync was successfully completed on the destination file system. Any changes
+     *        to data on the source file system that occurred before this time have been successfully replicated to the
      *        destination file system. Any changes that occurred after this time might not be fully replicated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -50,11 +50,6 @@ import com.amazonaws.services.iottwinmaker.model.transform.*;
  * Client for accessing AWS IoT TwinMaker. All service calls made using this client are blocking, and will not return
  * until the service call completes.
  * <p>
- * <important>
- * <p>
- * TwinMaker is in public preview and is subject to change.
- * </p>
- * </important>
  * <p>
  * IoT TwinMaker is a service that enables you to build operational digital twins of physical systems. IoT TwinMaker
  * overlays measurements and analysis from real-world sensors, cameras, and enterprise applications so you can create
@@ -240,11 +235,6 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
      * <p>
      * Creates a component type.
      * </p>
-     * <important>
-     * <p>
-     * TwinMaker is in public preview and is subject to change.
-     * </p>
-     * </important>
      * 
      * @param createComponentTypeRequest
      * @return Result of the CreateComponentType operation returned by the service.

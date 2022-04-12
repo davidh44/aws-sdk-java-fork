@@ -43,12 +43,12 @@ public class PutFileSystemPolicyRequest extends com.amazonaws.AmazonWebServiceRe
     private String policy;
     /**
      * <p>
-     * (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check. The
-     * policy lockout safety check determines whether the policy in the request will prevent the principal making the
-     * request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the file system. Set
-     * <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the principal
-     * that is making the request from making a subsequent <code>PutFileSystemPolicy</code> request on the file system.
-     * The default value is False.
+     * (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout safety
+     * check. The lockout safety check determines whether the policy in the request will lock out, or prevent, the IAM
+     * principal that is making the request from making future <code>PutFileSystemPolicy</code> requests on this file
+     * system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the
+     * IAM principal that is making the request from making subsequent <code>PutFileSystemPolicy</code> requests on this
+     * file system. The default value is <code>False</code>.
      * </p>
      */
     private Boolean bypassPolicyLockoutSafetyCheck;
@@ -159,21 +159,21 @@ public class PutFileSystemPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check. The
-     * policy lockout safety check determines whether the policy in the request will prevent the principal making the
-     * request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the file system. Set
-     * <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the principal
-     * that is making the request from making a subsequent <code>PutFileSystemPolicy</code> request on the file system.
-     * The default value is False.
+     * (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout safety
+     * check. The lockout safety check determines whether the policy in the request will lock out, or prevent, the IAM
+     * principal that is making the request from making future <code>PutFileSystemPolicy</code> requests on this file
+     * system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the
+     * IAM principal that is making the request from making subsequent <code>PutFileSystemPolicy</code> requests on this
+     * file system. The default value is <code>False</code>.
      * </p>
      * 
      * @param bypassPolicyLockoutSafetyCheck
-     *        (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check.
-     *        The policy lockout safety check determines whether the policy in the request will prevent the principal
-     *        making the request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the
-     *        file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to
-     *        prevent the principal that is making the request from making a subsequent <code>PutFileSystemPolicy</code>
-     *        request on the file system. The default value is False.
+     *        (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout
+     *        safety check. The lockout safety check determines whether the policy in the request will lock out, or
+     *        prevent, the IAM principal that is making the request from making future <code>PutFileSystemPolicy</code>
+     *        requests on this file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only
+     *        when you intend to prevent the IAM principal that is making the request from making subsequent
+     *        <code>PutFileSystemPolicy</code> requests on this file system. The default value is <code>False</code>.
      */
 
     public void setBypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
@@ -182,20 +182,20 @@ public class PutFileSystemPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check. The
-     * policy lockout safety check determines whether the policy in the request will prevent the principal making the
-     * request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the file system. Set
-     * <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the principal
-     * that is making the request from making a subsequent <code>PutFileSystemPolicy</code> request on the file system.
-     * The default value is False.
+     * (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout safety
+     * check. The lockout safety check determines whether the policy in the request will lock out, or prevent, the IAM
+     * principal that is making the request from making future <code>PutFileSystemPolicy</code> requests on this file
+     * system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the
+     * IAM principal that is making the request from making subsequent <code>PutFileSystemPolicy</code> requests on this
+     * file system. The default value is <code>False</code>.
      * </p>
      * 
-     * @return (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check.
-     *         The policy lockout safety check determines whether the policy in the request will prevent the principal
-     *         making the request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the
-     *         file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to
-     *         prevent the principal that is making the request from making a subsequent
-     *         <code>PutFileSystemPolicy</code> request on the file system. The default value is False.
+     * @return (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout
+     *         safety check. The lockout safety check determines whether the policy in the request will lock out, or
+     *         prevent, the IAM principal that is making the request from making future <code>PutFileSystemPolicy</code>
+     *         requests on this file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only
+     *         when you intend to prevent the IAM principal that is making the request from making subsequent
+     *         <code>PutFileSystemPolicy</code> requests on this file system. The default value is <code>False</code>.
      */
 
     public Boolean getBypassPolicyLockoutSafetyCheck() {
@@ -204,21 +204,21 @@ public class PutFileSystemPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check. The
-     * policy lockout safety check determines whether the policy in the request will prevent the principal making the
-     * request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the file system. Set
-     * <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the principal
-     * that is making the request from making a subsequent <code>PutFileSystemPolicy</code> request on the file system.
-     * The default value is False.
+     * (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout safety
+     * check. The lockout safety check determines whether the policy in the request will lock out, or prevent, the IAM
+     * principal that is making the request from making future <code>PutFileSystemPolicy</code> requests on this file
+     * system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the
+     * IAM principal that is making the request from making subsequent <code>PutFileSystemPolicy</code> requests on this
+     * file system. The default value is <code>False</code>.
      * </p>
      * 
      * @param bypassPolicyLockoutSafetyCheck
-     *        (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check.
-     *        The policy lockout safety check determines whether the policy in the request will prevent the principal
-     *        making the request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the
-     *        file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to
-     *        prevent the principal that is making the request from making a subsequent <code>PutFileSystemPolicy</code>
-     *        request on the file system. The default value is False.
+     *        (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout
+     *        safety check. The lockout safety check determines whether the policy in the request will lock out, or
+     *        prevent, the IAM principal that is making the request from making future <code>PutFileSystemPolicy</code>
+     *        requests on this file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only
+     *        when you intend to prevent the IAM principal that is making the request from making subsequent
+     *        <code>PutFileSystemPolicy</code> requests on this file system. The default value is <code>False</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,20 +229,20 @@ public class PutFileSystemPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check. The
-     * policy lockout safety check determines whether the policy in the request will prevent the principal making the
-     * request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the file system. Set
-     * <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the principal
-     * that is making the request from making a subsequent <code>PutFileSystemPolicy</code> request on the file system.
-     * The default value is False.
+     * (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout safety
+     * check. The lockout safety check determines whether the policy in the request will lock out, or prevent, the IAM
+     * principal that is making the request from making future <code>PutFileSystemPolicy</code> requests on this file
+     * system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to prevent the
+     * IAM principal that is making the request from making subsequent <code>PutFileSystemPolicy</code> requests on this
+     * file system. The default value is <code>False</code>.
      * </p>
      * 
-     * @return (Optional) A flag to indicate whether to bypass the <code>FileSystemPolicy</code> lockout safety check.
-     *         The policy lockout safety check determines whether the policy in the request will prevent the principal
-     *         making the request will be locked out from making future <code>PutFileSystemPolicy</code> requests on the
-     *         file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only when you intend to
-     *         prevent the principal that is making the request from making a subsequent
-     *         <code>PutFileSystemPolicy</code> request on the file system. The default value is False.
+     * @return (Optional) A boolean that specifies whether or not to bypass the <code>FileSystemPolicy</code> lockout
+     *         safety check. The lockout safety check determines whether the policy in the request will lock out, or
+     *         prevent, the IAM principal that is making the request from making future <code>PutFileSystemPolicy</code>
+     *         requests on this file system. Set <code>BypassPolicyLockoutSafetyCheck</code> to <code>True</code> only
+     *         when you intend to prevent the IAM principal that is making the request from making subsequent
+     *         <code>PutFileSystemPolicy</code> requests on this file system. The default value is <code>False</code>.
      */
 
     public Boolean isBypassPolicyLockoutSafetyCheck() {

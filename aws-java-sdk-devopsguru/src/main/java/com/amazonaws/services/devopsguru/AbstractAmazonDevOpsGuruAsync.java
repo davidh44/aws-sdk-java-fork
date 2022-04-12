@@ -41,6 +41,19 @@ public class AbstractAmazonDevOpsGuruAsync extends AbstractAmazonDevOpsGuru impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteInsightResult> deleteInsightAsync(DeleteInsightRequest request) {
+
+        return deleteInsightAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInsightResult> deleteInsightAsync(DeleteInsightRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteInsightRequest, DeleteInsightResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAccountHealthResult> describeAccountHealthAsync(DescribeAccountHealthRequest request) {
 
         return describeAccountHealthAsync(request, null);

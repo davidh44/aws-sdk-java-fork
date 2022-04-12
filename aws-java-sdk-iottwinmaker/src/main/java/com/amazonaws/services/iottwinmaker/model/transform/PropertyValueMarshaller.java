@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PropertyValueMarshaller {
 
+    private static final MarshallingInfo<String> TIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("time").build();
     private static final MarshallingInfo<java.util.Date> TIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<StructuredPojo> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -48,6 +50,7 @@ public class PropertyValueMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(propertyValue.getTime(), TIME_BINDING);
             protocolMarshaller.marshall(propertyValue.getTimestamp(), TIMESTAMP_BINDING);
             protocolMarshaller.marshall(propertyValue.getValue(), VALUE_BINDING);
         } catch (Exception e) {

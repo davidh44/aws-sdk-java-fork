@@ -65,9 +65,14 @@ public interface AmazonDevOpsGuru {
      * <p>
      * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru
      * permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using
-     * Amazon SNS in your account. For more information, see <a
+     * Amazon SNS in your account. DevOps Guru only supports standard SNS topics. For more information, see <a
      * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions for
      * cross account Amazon SNS topics</a>.
+     * </p>
+     * <p>
+     * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru
+     * permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using
+     * Amazon SNS in your account. For more information, see Permissions for cross account Amazon SNS topics.
      * </p>
      * <p>
      * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service
@@ -100,6 +105,34 @@ public interface AmazonDevOpsGuru {
      *      target="_top">AWS API Documentation</a>
      */
     AddNotificationChannelResult addNotificationChannel(AddNotificationChannelRequest addNotificationChannelRequest);
+
+    /**
+     * <p>
+     * Deletes the insight along with the associated anomalies, events and recommendations.
+     * </p>
+     * 
+     * @param deleteInsightRequest
+     * @return Result of the DeleteInsight operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
+     * @throws InternalServerException
+     *         An internal failure in an Amazon service occurred.
+     * @throws ResourceNotFoundException
+     *         A requested resource could not be found
+     * @throws ConflictException
+     *         An exception that is thrown when a conflict occurs.
+     * @throws ThrottlingException
+     *         The request was denied due to a request throttling.
+     * @throws ValidationException
+     *         Contains information about data passed in to a field during a request that is not valid.
+     * @sample AmazonDevOpsGuru.DeleteInsight
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DeleteInsight" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteInsightResult deleteInsight(DeleteInsightRequest deleteInsightRequest);
 
     /**
      * <p>
@@ -180,7 +213,9 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * This operation lists details about a DevOps Guru event source that is shared with your&#x2028; account.
+     * Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge. The
+     * one service that can be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive
+     * recommendations which can be stored and viewed in DevOps Guru.
      * </p>
      * 
      * @param describeEventSourcesConfigRequest
@@ -748,7 +783,9 @@ public interface AmazonDevOpsGuru {
 
     /**
      * <p>
-     * Updates the event source configuration.
+     * Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can
+     * be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations which can
+     * be stored and viewed in DevOps Guru.
      * </p>
      * 
      * @param updateEventSourcesConfigRequest

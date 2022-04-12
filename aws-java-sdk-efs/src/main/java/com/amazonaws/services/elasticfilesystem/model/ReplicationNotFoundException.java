@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if the specified file system did not have a replication configuration.
+ * Returned if the specified file system does not have a replication configuration.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

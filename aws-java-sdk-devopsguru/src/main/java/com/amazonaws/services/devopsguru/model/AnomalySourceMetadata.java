@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Metadata about an anomaly. The anomaly is detected using analysis of the metric data&#x2028; over a period of time
+ * Metadata about the detection source that generates proactive anomalies. The anomaly is detected using analysis of the
+ * metric data&#x2028; over a period of time
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AnomalySourceMetadata" target="_top">AWS

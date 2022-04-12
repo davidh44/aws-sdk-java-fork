@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if one of the specified security groups doesn't exist in the subnet's VPC.
+ * Returned if one of the specified security groups doesn't exist in the subnet's virtual private cloud (VPC).
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

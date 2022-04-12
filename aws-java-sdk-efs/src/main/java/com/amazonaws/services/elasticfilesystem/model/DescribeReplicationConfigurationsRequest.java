@@ -27,32 +27,32 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * You can retrieve replication configurations for a specific file system by providing a file system ID.
+     * You can retrieve the replication configuration for a specific file system by providing its file system ID.
      * </p>
      */
     private String fileSystemId;
     /**
      * <p>
-     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      * subsequent request to fetch the next page of output.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects returned
-     * in a response. The default value is 100.
+     * (Optional) To limit the number of objects returned in a response, you can specify the <code>MaxItems</code>
+     * parameter. The default value is 100.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * You can retrieve replication configurations for a specific file system by providing a file system ID.
+     * You can retrieve the replication configuration for a specific file system by providing its file system ID.
      * </p>
      * 
      * @param fileSystemId
-     *        You can retrieve replication configurations for a specific file system by providing a file system ID.
+     *        You can retrieve the replication configuration for a specific file system by providing its file system ID.
      */
 
     public void setFileSystemId(String fileSystemId) {
@@ -61,10 +61,11 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * You can retrieve replication configurations for a specific file system by providing a file system ID.
+     * You can retrieve the replication configuration for a specific file system by providing its file system ID.
      * </p>
      * 
-     * @return You can retrieve replication configurations for a specific file system by providing a file system ID.
+     * @return You can retrieve the replication configuration for a specific file system by providing its file system
+     *         ID.
      */
 
     public String getFileSystemId() {
@@ -73,11 +74,11 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * You can retrieve replication configurations for a specific file system by providing a file system ID.
+     * You can retrieve the replication configuration for a specific file system by providing its file system ID.
      * </p>
      * 
      * @param fileSystemId
-     *        You can retrieve replication configurations for a specific file system by providing a file system ID.
+     *        You can retrieve the replication configuration for a specific file system by providing its file system ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,12 +89,12 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      * subsequent request to fetch the next page of output.
      * </p>
      * 
      * @param nextToken
-     *        <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     *        <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      *        subsequent request to fetch the next page of output.
      */
 
@@ -103,11 +104,11 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      * subsequent request to fetch the next page of output.
      * </p>
      * 
-     * @return <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     * @return <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      *         subsequent request to fetch the next page of output.
      */
 
@@ -117,12 +118,12 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     * <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      * subsequent request to fetch the next page of output.
      * </p>
      * 
      * @param nextToken
-     *        <code>NextToken</code> is present if the response is paginated. You can use <code>NextMarker</code> in a
+     *        <code>NextToken</code> is present if the response is paginated. You can use <code>NextToken</code> in a
      *        subsequent request to fetch the next page of output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -134,13 +135,13 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects returned
-     * in a response. The default value is 100.
+     * (Optional) To limit the number of objects returned in a response, you can specify the <code>MaxItems</code>
+     * parameter. The default value is 100.
      * </p>
      * 
      * @param maxResults
-     *        (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects
-     *        returned in a response. The default value is 100.
+     *        (Optional) To limit the number of objects returned in a response, you can specify the
+     *        <code>MaxItems</code> parameter. The default value is 100.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -149,12 +150,12 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects returned
-     * in a response. The default value is 100.
+     * (Optional) To limit the number of objects returned in a response, you can specify the <code>MaxItems</code>
+     * parameter. The default value is 100.
      * </p>
      * 
-     * @return (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects
-     *         returned in a response. The default value is 100.
+     * @return (Optional) To limit the number of objects returned in a response, you can specify the
+     *         <code>MaxItems</code> parameter. The default value is 100.
      */
 
     public Integer getMaxResults() {
@@ -163,13 +164,13 @@ public class DescribeReplicationConfigurationsRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects returned
-     * in a response. The default value is 100.
+     * (Optional) To limit the number of objects returned in a response, you can specify the <code>MaxItems</code>
+     * parameter. The default value is 100.
      * </p>
      * 
      * @param maxResults
-     *        (Optional) You can optionally specify the <code>MaxItems</code> parameter to limit the number of objects
-     *        returned in a response. The default value is 100.
+     *        (Optional) To limit the number of objects returned in a response, you can specify the
+     *        <code>MaxItems</code> parameter. The default value is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

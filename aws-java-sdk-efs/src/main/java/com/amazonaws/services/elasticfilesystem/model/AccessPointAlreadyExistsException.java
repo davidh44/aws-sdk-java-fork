@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned if the access point you are trying to create already exists, with the creation token you provided in the
- * request.
+ * Returned if the access point that you are trying to create already exists, with the creation token you provided in
+ * the request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
