@@ -101,9 +101,18 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon Redshift. A credentials provider chain will be used
@@ -294,132 +303,512 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InvalidHsmConfigurationStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidHsmConfigurationStateFault", new InvalidHsmConfigurationStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidHsmConfigurationStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotScheduleAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("SnapshotScheduleAlreadyExists", new SnapshotScheduleAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotScheduleAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotScheduleQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("SnapshotScheduleQuotaExceeded", new SnapshotScheduleQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotScheduleQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSubscriptionStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidSubscriptionStateFault", new InvalidSubscriptionStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSubscriptionStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnauthorizedPartnerIntegration") == null) {
+            exceptionUnmarshallersMap.put("UnauthorizedPartnerIntegration", new UnauthorizedPartnerIntegrationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnauthorizedPartnerIntegrationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidUsageLimit") == null) {
+            exceptionUnmarshallersMap.put("InvalidUsageLimit", new InvalidUsageLimitExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidUsageLimitExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRestore") == null) {
+            exceptionUnmarshallersMap.put("InvalidRestore", new InvalidRestoreExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRestoreExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotCopyDisabledFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotCopyDisabledFault", new SnapshotCopyDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotCopyDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedNodeExchangeNotFond") == null) {
+            exceptionUnmarshallersMap.put("ReservedNodeExchangeNotFond", new ReservedNodeExchangeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedNodeExchangeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSubnetGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ClusterSubnetGroupQuotaExceeded", new ClusterSubnetGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSubnetGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSchedule") == null) {
+            exceptionUnmarshallersMap.put("InvalidSchedule", new InvalidScheduleExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidScheduleExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DependentServiceRequestThrottlingFault") == null) {
+            exceptionUnmarshallersMap.put("DependentServiceRequestThrottlingFault", new DependentServiceRequestThrottlingExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DependentServiceRequestThrottlingExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BucketNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("BucketNotFoundFault", new BucketNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BucketNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceededFault") == null) {
+            exceptionUnmarshallersMap.put("LimitExceededFault", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("EndpointAlreadyExists", new EndpointAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PartnerNotFound") == null) {
+            exceptionUnmarshallersMap.put("PartnerNotFound", new PartnerNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PartnerNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ScheduledActionQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ScheduledActionQuotaExceeded", new ScheduledActionQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ScheduledActionQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTableRestoreArgument") == null) {
+            exceptionUnmarshallersMap.put("InvalidTableRestoreArgument", new InvalidTableRestoreArgumentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTableRestoreArgumentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotCopyGrantAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotCopyGrantAlreadyExistsFault", new SnapshotCopyGrantAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotCopyGrantAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotCopyGrantQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotCopyGrantQuotaExceededFault", new SnapshotCopyGrantQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotCopyGrantQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterNotFound") == null) {
+            exceptionUnmarshallersMap.put("ClusterNotFound", new ClusterNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ClusterQuotaExceeded", new ClusterQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnsupportedOperation") == null) {
+            exceptionUnmarshallersMap.put("UnsupportedOperation", new UnsupportedOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnsupportedOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ScheduledActionAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ScheduledActionAlreadyExists", new ScheduledActionAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ScheduledActionAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterState") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterState", new InvalidClusterStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSubnetQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("ClusterSubnetQuotaExceededFault", new ClusterSubnetQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSubnetQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterParameterGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterParameterGroupState", new InvalidClusterParameterGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterParameterGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSubnetGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("ClusterSubnetGroupNotFoundFault", new ClusterSubnetGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSubnetGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotCopyAlreadyDisabledFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotCopyAlreadyDisabledFault", new SnapshotCopyAlreadyDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotCopyAlreadyDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSnapshotQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ClusterSnapshotQuotaExceeded", new ClusterSnapshotQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSnapshotQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointAuthorizationAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("EndpointAuthorizationAlreadyExists", new EndpointAuthorizationAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointAuthorizationAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ClusterAlreadyExists", new ClusterAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberOfNodesQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberOfNodesQuotaExceeded", new NumberOfNodesQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberOfNodesQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSecurityGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ClusterSecurityGroupAlreadyExists", new ClusterSecurityGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSecurityGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationQuotaExceeded", new AuthorizationQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedNodeOfferingNotFound") == null) {
+            exceptionUnmarshallersMap.put("ReservedNodeOfferingNotFound", new ReservedNodeOfferingNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedNodeOfferingNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointNotFound") == null) {
+            exceptionUnmarshallersMap.put("EndpointNotFound", new EndpointNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InProgressTableRestoreQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("InProgressTableRestoreQuotaExceededFault", new InProgressTableRestoreQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InProgressTableRestoreQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AccessToSnapshotDenied") == null) {
+            exceptionUnmarshallersMap.put("AccessToSnapshotDenied", new AccessToSnapshotDeniedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AccessToSnapshotDeniedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidElasticIpFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidElasticIpFault", new InvalidElasticIpExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidElasticIpExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResizeNotFound") == null) {
+            exceptionUnmarshallersMap.put("ResizeNotFound", new ResizeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResizeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ScheduleDefinitionTypeUnsupported") == null) {
+            exceptionUnmarshallersMap.put("ScheduleDefinitionTypeUnsupported", new ScheduleDefinitionTypeUnsupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ScheduleDefinitionTypeUnsupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTagFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidTagFault", new InvalidTagExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTagExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HsmClientCertificateAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("HsmClientCertificateAlreadyExistsFault", new HsmClientCertificateAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HsmClientCertificateAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidVPCNetworkStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidVPCNetworkStateFault", new InvalidVPCNetworkStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidVPCNetworkStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SNSTopicArnNotFound") == null) {
+            exceptionUnmarshallersMap.put("SNSTopicArnNotFound", new SNSTopicArnNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SNSTopicArnNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ScheduledActionTypeUnsupported") == null) {
+            exceptionUnmarshallersMap.put("ScheduledActionTypeUnsupported", new ScheduledActionTypeUnsupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ScheduledActionTypeUnsupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterParameterGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ClusterParameterGroupQuotaExceeded", new ClusterParameterGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterParameterGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnauthorizedOperation") == null) {
+            exceptionUnmarshallersMap.put("UnauthorizedOperation", new UnauthorizedOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnauthorizedOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthenticationProfileNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("AuthenticationProfileNotFoundFault", new AuthenticationProfileNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthenticationProfileNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotScheduleNotFound") == null) {
+            exceptionUnmarshallersMap.put("SnapshotScheduleNotFound", new SnapshotScheduleNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotScheduleNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedNodeAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ReservedNodeAlreadyExists", new ReservedNodeAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedNodeAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidS3BucketNameFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidS3BucketNameFault", new InvalidS3BucketNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidS3BucketNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnsupportedOptionFault") == null) {
+            exceptionUnmarshallersMap.put("UnsupportedOptionFault", new UnsupportedOptionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnsupportedOptionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientClusterCapacity") == null) {
+            exceptionUnmarshallersMap.put("InsufficientClusterCapacity", new InsufficientClusterCapacityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientClusterCapacityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSubnetGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ClusterSubnetGroupAlreadyExists", new ClusterSubnetGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSubnetGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TagLimitExceededFault") == null) {
+            exceptionUnmarshallersMap.put("TagLimitExceededFault", new TagLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TagLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterSnapshotState") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterSnapshotState", new InvalidClusterSnapshotStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterSnapshotStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientS3BucketPolicyFault") == null) {
+            exceptionUnmarshallersMap.put("InsufficientS3BucketPolicyFault", new InsufficientS3BucketPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientS3BucketPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BatchDeleteRequestSizeExceeded") == null) {
+            exceptionUnmarshallersMap.put("BatchDeleteRequestSizeExceeded", new BatchDeleteRequestSizeExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchDeleteRequestSizeExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidS3KeyPrefixFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidS3KeyPrefixFault", new InvalidS3KeyPrefixExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidS3KeyPrefixExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationNotFound") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationNotFound", new AuthorizationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ScheduledActionNotFound") == null) {
+            exceptionUnmarshallersMap.put("ScheduledActionNotFound", new ScheduledActionNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ScheduledActionNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionEventIdNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionEventIdNotFound", new SubscriptionEventIdNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionEventIdNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterSnapshotScheduleState") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterSnapshotScheduleState", new InvalidClusterSnapshotScheduleStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterSnapshotScheduleStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointAuthorizationNotFound") == null) {
+            exceptionUnmarshallersMap.put("EndpointAuthorizationNotFound", new EndpointAuthorizationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointAuthorizationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterTrack") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterTrack", new InvalidClusterTrackExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterTrackExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionSeverityNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionSeverityNotFound", new SubscriptionSeverityNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionSeverityNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNamespaceFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidNamespaceFault", new InvalidNamespaceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNamespaceExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AccessToClusterDenied") == null) {
+            exceptionUnmarshallersMap.put("AccessToClusterDenied", new AccessToClusterDeniedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AccessToClusterDeniedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CopyToRegionDisabledFault") == null) {
+            exceptionUnmarshallersMap.put("CopyToRegionDisabledFault", new CopyToRegionDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CopyToRegionDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionCategoryNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionCategoryNotFound", new SubscriptionCategoryNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionCategoryNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SNSInvalidTopic") == null) {
+            exceptionUnmarshallersMap.put("SNSInvalidTopic", new SNSInvalidTopicExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SNSInvalidTopicExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidEndpointState") == null) {
+            exceptionUnmarshallersMap.put("InvalidEndpointState", new InvalidEndpointStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidEndpointStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnknownSnapshotCopyRegionFault") == null) {
+            exceptionUnmarshallersMap.put("UnknownSnapshotCopyRegionFault", new UnknownSnapshotCopyRegionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnknownSnapshotCopyRegionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TableRestoreNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("TableRestoreNotFoundFault", new TableRestoreNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TableRestoreNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFoundFault", new ResourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HsmConfigurationQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("HsmConfigurationQuotaExceededFault", new HsmConfigurationQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HsmConfigurationQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotCopyGrantNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotCopyGrantNotFoundFault", new SnapshotCopyGrantNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotCopyGrantNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedNodeAlreadyMigrated") == null) {
+            exceptionUnmarshallersMap.put("ReservedNodeAlreadyMigrated", new ReservedNodeAlreadyMigratedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedNodeAlreadyMigratedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HsmClientCertificateNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("HsmClientCertificateNotFoundFault", new HsmClientCertificateNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HsmClientCertificateNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotCopyAlreadyEnabledFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotCopyAlreadyEnabledFault", new SnapshotCopyAlreadyEnabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotCopyAlreadyEnabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HsmConfigurationAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("HsmConfigurationAlreadyExistsFault", new HsmConfigurationAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HsmConfigurationAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionNotFound", new SubscriptionNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidReservedNodeState") == null) {
+            exceptionUnmarshallersMap.put("InvalidReservedNodeState", new InvalidReservedNodeStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidReservedNodeStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubnetAlreadyInUse") == null) {
+            exceptionUnmarshallersMap.put("SubnetAlreadyInUse", new SubnetAlreadyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubnetAlreadyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DependentServiceUnavailableFault") == null) {
+            exceptionUnmarshallersMap.put("DependentServiceUnavailableFault", new DependentServiceUnavailableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DependentServiceUnavailableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidAuthorizationState") == null) {
+            exceptionUnmarshallersMap.put("InvalidAuthorizationState", new InvalidAuthorizationStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAuthorizationStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSecurityGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("ClusterSecurityGroupNotFound", new ClusterSecurityGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSecurityGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSubnet") == null) {
+            exceptionUnmarshallersMap.put("InvalidSubnet", new InvalidSubnetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSubnetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HsmConfigurationNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("HsmConfigurationNotFoundFault", new HsmConfigurationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HsmConfigurationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SNSNoAuthorization") == null) {
+            exceptionUnmarshallersMap.put("SNSNoAuthorization", new SNSNoAuthorizationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SNSNoAuthorizationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberOfNodesPerClusterLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberOfNodesPerClusterLimitExceeded", new NumberOfNodesPerClusterLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberOfNodesPerClusterLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthenticationProfileQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("AuthenticationProfileQuotaExceededFault", new AuthenticationProfileQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthenticationProfileQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointAuthorizationsPerClusterLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("EndpointAuthorizationsPerClusterLimitExceeded",
+                    new EndpointAuthorizationsPerClusterLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointAuthorizationsPerClusterLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSnapshotAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ClusterSnapshotAlreadyExists", new ClusterSnapshotAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSnapshotAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRetentionPeriodFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidRetentionPeriodFault", new InvalidRetentionPeriodExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRetentionPeriodExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthenticationProfileAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("AuthenticationProfileAlreadyExistsFault", new AuthenticationProfileAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthenticationProfileAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointsPerAuthorizationLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("EndpointsPerAuthorizationLimitExceeded", new EndpointsPerAuthorizationLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointsPerAuthorizationLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UsageLimitNotFound") == null) {
+            exceptionUnmarshallersMap.put("UsageLimitNotFound", new UsageLimitNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UsageLimitNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TableLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("TableLimitExceeded", new TableLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TableLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotScheduleUpdateInProgress") == null) {
+            exceptionUnmarshallersMap.put("SnapshotScheduleUpdateInProgress", new SnapshotScheduleUpdateInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotScheduleUpdateInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSnapshotCopyGrantStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidSnapshotCopyGrantStateFault", new InvalidSnapshotCopyGrantStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSnapshotCopyGrantStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidHsmClientCertificateStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidHsmClientCertificateStateFault", new InvalidHsmClientCertificateStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidHsmClientCertificateStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterSubnetGroupStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterSubnetGroupStateFault", new InvalidClusterSubnetGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterSubnetGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterOnLatestRevision") == null) {
+            exceptionUnmarshallersMap.put("ClusterOnLatestRevision", new ClusterOnLatestRevisionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterOnLatestRevisionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterSnapshotNotFound") == null) {
+            exceptionUnmarshallersMap.put("ClusterSnapshotNotFound", new ClusterSnapshotNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSnapshotNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDataShareFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidDataShareFault", new InvalidDataShareExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDataShareExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BatchModifyClusterSnapshotsLimitExceededFault") == null) {
+            exceptionUnmarshallersMap.put("BatchModifyClusterSnapshotsLimitExceededFault", new BatchModifyClusterSnapshotsLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchModifyClusterSnapshotsLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HsmClientCertificateQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("HsmClientCertificateQuotaExceededFault", new HsmClientCertificateQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HsmClientCertificateQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterSecurityGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterSecurityGroupState", new InvalidClusterSecurityGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterSecurityGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedNodeQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ReservedNodeQuotaExceeded", new ReservedNodeQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedNodeQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidAuthenticationProfileRequestFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidAuthenticationProfileRequestFault", new InvalidAuthenticationProfileRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAuthenticationProfileRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidClusterSubnetStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidClusterSubnetStateFault", new InvalidClusterSubnetStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidClusterSubnetStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionAlreadyExist") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionAlreadyExist", new SubscriptionAlreadyExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionAlreadyExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedNodeNotFound") == null) {
+            exceptionUnmarshallersMap.put("ReservedNodeNotFound", new ReservedNodeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedNodeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidScheduledAction") == null) {
+            exceptionUnmarshallersMap.put("InvalidScheduledAction", new InvalidScheduledActionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidScheduledActionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IncompatibleOrderableOptions") == null) {
+            exceptionUnmarshallersMap.put("IncompatibleOrderableOptions", new IncompatibleOrderableOptionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IncompatibleOrderableOptionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointsPerClusterLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("EndpointsPerClusterLimitExceeded", new EndpointsPerClusterLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointsPerClusterLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UsageLimitAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("UsageLimitAlreadyExists", new UsageLimitAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UsageLimitAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SourceNotFound") == null) {
+            exceptionUnmarshallersMap.put("SourceNotFound", new SourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterParameterGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("ClusterParameterGroupNotFound", new ClusterParameterGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterParameterGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("QuotaExceeded.ClusterSecurityGroup") == null) {
+            exceptionUnmarshallersMap.put("QuotaExceeded.ClusterSecurityGroup", new ClusterSecurityGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterSecurityGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EventSubscriptionQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("EventSubscriptionQuotaExceeded", new EventSubscriptionQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EventSubscriptionQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationAlreadyExists", new AuthorizationAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterParameterGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ClusterParameterGroupAlreadyExists", new ClusterParameterGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterParameterGroupAlreadyExistsExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.redshift.model.AmazonRedshiftException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.redshift.model.AmazonRedshiftException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -8761,7 +9150,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

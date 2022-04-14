@@ -112,9 +112,18 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Elastic Load Balancing v2. A credentials provider chain will
@@ -307,43 +316,155 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("UnsupportedProtocol") == null) {
+            exceptionUnmarshallersMap.put("UnsupportedProtocol", new UnsupportedProtocolExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnsupportedProtocolExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyUniqueTargetGroupsPerLoadBalancer") == null) {
+            exceptionUnmarshallersMap.put("TooManyUniqueTargetGroupsPerLoadBalancer", new TooManyUniqueTargetGroupsPerLoadBalancerExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyUniqueTargetGroupsPerLoadBalancerExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AllocationIdNotFound") == null) {
+            exceptionUnmarshallersMap.put("AllocationIdNotFound", new AllocationIdNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AllocationIdNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceInUse") == null) {
+            exceptionUnmarshallersMap.put("ResourceInUse", new ResourceInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateTargetGroupName") == null) {
+            exceptionUnmarshallersMap.put("DuplicateTargetGroupName", new DuplicateTargetGroupNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateTargetGroupNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyRules") == null) {
+            exceptionUnmarshallersMap.put("TooManyRules", new TooManyRulesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyRulesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCertificates") == null) {
+            exceptionUnmarshallersMap.put("TooManyCertificates", new TooManyCertificatesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCertificatesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LoadBalancerNotFound") == null) {
+            exceptionUnmarshallersMap.put("LoadBalancerNotFound", new LoadBalancerNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LoadBalancerNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTargetGroups") == null) {
+            exceptionUnmarshallersMap.put("TooManyTargetGroups", new TooManyTargetGroupsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTargetGroupsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyLoadBalancers") == null) {
+            exceptionUnmarshallersMap.put("TooManyLoadBalancers", new TooManyLoadBalancersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyLoadBalancersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidConfigurationRequest") == null) {
+            exceptionUnmarshallersMap.put("InvalidConfigurationRequest", new InvalidConfigurationRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidConfigurationRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TargetGroupAssociationLimit") == null) {
+            exceptionUnmarshallersMap.put("TargetGroupAssociationLimit", new TargetGroupAssociationLimitExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TargetGroupAssociationLimitExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSecurityGroup") == null) {
+            exceptionUnmarshallersMap.put("InvalidSecurityGroup", new InvalidSecurityGroupExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSecurityGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IncompatibleProtocols") == null) {
+            exceptionUnmarshallersMap.put("IncompatibleProtocols", new IncompatibleProtocolsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IncompatibleProtocolsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyActions") == null) {
+            exceptionUnmarshallersMap.put("TooManyActions", new TooManyActionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyActionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyListeners") == null) {
+            exceptionUnmarshallersMap.put("TooManyListeners", new TooManyListenersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyListenersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateLoadBalancerName") == null) {
+            exceptionUnmarshallersMap.put("DuplicateLoadBalancerName", new DuplicateLoadBalancerNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateLoadBalancerNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ALPNPolicyNotFound") == null) {
+            exceptionUnmarshallersMap.put("ALPNPolicyNotFound", new ALPNPolicyNotSupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ALPNPolicyNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OperationNotPermitted") == null) {
+            exceptionUnmarshallersMap.put("OperationNotPermitted", new OperationNotPermittedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationNotPermittedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidLoadBalancerAction") == null) {
+            exceptionUnmarshallersMap.put("InvalidLoadBalancerAction", new InvalidLoadBalancerActionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidLoadBalancerActionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CertificateNotFound") == null) {
+            exceptionUnmarshallersMap.put("CertificateNotFound", new CertificateNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CertificateNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateTagKeys") == null) {
+            exceptionUnmarshallersMap.put("DuplicateTagKeys", new DuplicateTagKeysExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateTagKeysExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTags") == null) {
+            exceptionUnmarshallersMap.put("TooManyTags", new TooManyTagsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTagsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TargetGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("TargetGroupNotFound", new TargetGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TargetGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyRegistrationsForTargetId") == null) {
+            exceptionUnmarshallersMap.put("TooManyRegistrationsForTargetId", new TooManyRegistrationsForTargetIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyRegistrationsForTargetIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SSLPolicyNotFound") == null) {
+            exceptionUnmarshallersMap.put("SSLPolicyNotFound", new SSLPolicyNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SSLPolicyNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ListenerNotFound") == null) {
+            exceptionUnmarshallersMap.put("ListenerNotFound", new ListenerNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ListenerNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PriorityInUse") == null) {
+            exceptionUnmarshallersMap.put("PriorityInUse", new PriorityInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PriorityInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTarget") == null) {
+            exceptionUnmarshallersMap.put("InvalidTarget", new InvalidTargetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTargetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubnetNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubnetNotFound", new SubnetNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubnetNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AvailabilityZoneNotSupported") == null) {
+            exceptionUnmarshallersMap.put("AvailabilityZoneNotSupported", new AvailabilityZoneNotSupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AvailabilityZoneNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RuleNotFound") == null) {
+            exceptionUnmarshallersMap.put("RuleNotFound", new RuleNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RuleNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateListener") == null) {
+            exceptionUnmarshallersMap.put("DuplicateListener", new DuplicateListenerExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateListenerExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidScheme") == null) {
+            exceptionUnmarshallersMap.put("InvalidScheme", new InvalidSchemeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSchemeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HealthUnavailable") == null) {
+            exceptionUnmarshallersMap.put("HealthUnavailable", new HealthUnavailableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HealthUnavailableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSubnet") == null) {
+            exceptionUnmarshallersMap.put("InvalidSubnet", new InvalidSubnetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSubnetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTargets") == null) {
+            exceptionUnmarshallersMap.put("TooManyTargets", new TooManyTargetsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTargetsExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.elasticloadbalancingv2.model.AmazonElasticLoadBalancingException.class);
         exceptionUnmarshallers
                 .add(new StandardErrorUnmarshaller(com.amazonaws.services.elasticloadbalancingv2.model.AmazonElasticLoadBalancingException.class));
 
@@ -2904,7 +3025,7 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

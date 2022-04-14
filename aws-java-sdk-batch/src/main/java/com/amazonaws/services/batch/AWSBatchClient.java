@@ -557,6 +557,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param createSchedulingPolicyRequest
+     *        Contains the parameters for <code>CreateSchedulingPolicy</code>.
      * @return Result of the CreateSchedulingPolicy operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -761,6 +762,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param deleteSchedulingPolicyRequest
+     *        Contains the parameters for <code>DeleteSchedulingPolicy</code>.
      * @return Result of the DeleteSchedulingPolicy operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -886,8 +888,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * <p>
      * If you're using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code>
-     * operation to determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
-     * into.
+     * operation to determine the <code>ecsClusterArn</code> that you launch your Amazon ECS container instances into.
      * </p>
      * 
      * @param describeComputeEnvironmentsRequest
@@ -1143,6 +1144,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param describeSchedulingPoliciesRequest
+     *        Contains the parameters for <code>DescribeSchedulingPolicies</code>.
      * @return Result of the DescribeSchedulingPolicies operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -1292,6 +1294,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param listSchedulingPoliciesRequest
+     *        Contains the parameters for <code>ListSchedulingPolicies</code>.
      * @return Result of the ListSchedulingPolicies operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -1356,6 +1359,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param listTagsForResourceRequest
+     *        Contains the parameters for <code>ListTagsForResource</code>.
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -1561,6 +1565,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param tagResourceRequest
+     *        Contains the parameters for <code>TagResource</code>.
      * @return Result of the TagResource operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -1686,6 +1691,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param untagResourceRequest
+     *        Contains the parameters for <code>UntagResource</code>.
      * @return Result of the UntagResource operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
@@ -1873,6 +1879,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * 
      * @param updateSchedulingPolicyRequest
+     *        Contains the parameters for <code>UpdateSchedulingPolicy</code>.
      * @return Result of the UpdateSchedulingPolicy operation returned by the service.
      * @throws ClientException
      *         These errors are usually caused by a client action, such as using an action or resource on behalf of a

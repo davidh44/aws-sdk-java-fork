@@ -80,9 +80,18 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on IAM. A credentials provider chain will be used that searches
@@ -273,33 +282,115 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("ConcurrentModification") == null) {
+            exceptionUnmarshallersMap.put("ConcurrentModification", new ConcurrentModificationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConcurrentModificationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnmodifiableEntity") == null) {
+            exceptionUnmarshallersMap.put("UnmodifiableEntity", new UnmodifiableEntityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnmodifiableEntityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("LimitExceeded", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchEntity") == null) {
+            exceptionUnmarshallersMap.put("NoSuchEntity", new NoSuchEntityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchEntityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EntityTemporarilyUnmodifiable") == null) {
+            exceptionUnmarshallersMap.put("EntityTemporarilyUnmodifiable", new EntityTemporarilyUnmodifiableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EntityTemporarilyUnmodifiableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NotSupportedService") == null) {
+            exceptionUnmarshallersMap.put("NotSupportedService", new ServiceNotSupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ServiceNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReportInProgress") == null) {
+            exceptionUnmarshallersMap.put("ReportInProgress", new CredentialReportNotReadyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CredentialReportNotReadyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ServiceFailure") == null) {
+            exceptionUnmarshallersMap.put("ServiceFailure", new ServiceFailureExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ServiceFailureExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidPublicKey") == null) {
+            exceptionUnmarshallersMap.put("InvalidPublicKey", new InvalidPublicKeyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidPublicKeyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PolicyEvaluation") == null) {
+            exceptionUnmarshallersMap.put("PolicyEvaluation", new PolicyEvaluationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PolicyEvaluationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidInput") == null) {
+            exceptionUnmarshallersMap.put("InvalidInput", new InvalidInputExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidInputExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PolicyNotAttachable") == null) {
+            exceptionUnmarshallersMap.put("PolicyNotAttachable", new PolicyNotAttachableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PolicyNotAttachableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MalformedCertificate") == null) {
+            exceptionUnmarshallersMap.put("MalformedCertificate", new MalformedCertificateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MalformedCertificateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MalformedPolicyDocument") == null) {
+            exceptionUnmarshallersMap.put("MalformedPolicyDocument", new MalformedPolicyDocumentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MalformedPolicyDocumentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DeleteConflict") == null) {
+            exceptionUnmarshallersMap.put("DeleteConflict", new DeleteConflictExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DeleteConflictExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidCertificate") == null) {
+            exceptionUnmarshallersMap.put("InvalidCertificate", new InvalidCertificateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidCertificateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PasswordPolicyViolation") == null) {
+            exceptionUnmarshallersMap.put("PasswordPolicyViolation", new PasswordPolicyViolationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PasswordPolicyViolationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReportExpired") == null) {
+            exceptionUnmarshallersMap.put("ReportExpired", new CredentialReportExpiredExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CredentialReportExpiredExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidUserType") == null) {
+            exceptionUnmarshallersMap.put("InvalidUserType", new InvalidUserTypeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidUserTypeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateSSHPublicKey") == null) {
+            exceptionUnmarshallersMap.put("DuplicateSSHPublicKey", new DuplicateSSHPublicKeyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateSSHPublicKeyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateCertificate") == null) {
+            exceptionUnmarshallersMap.put("DuplicateCertificate", new DuplicateCertificateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateCertificateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KeyPairMismatch") == null) {
+            exceptionUnmarshallersMap.put("KeyPairMismatch", new KeyPairMismatchExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KeyPairMismatchExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EntityAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("EntityAlreadyExists", new EntityAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EntityAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidAuthenticationCode") == null) {
+            exceptionUnmarshallersMap.put("InvalidAuthenticationCode", new InvalidAuthenticationCodeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAuthenticationCodeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReportNotPresent") == null) {
+            exceptionUnmarshallersMap.put("ReportNotPresent", new CredentialReportNotPresentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CredentialReportNotPresentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnrecognizedPublicKeyEncoding") == null) {
+            exceptionUnmarshallersMap.put("UnrecognizedPublicKeyEncoding", new UnrecognizedPublicKeyEncodingExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnrecognizedPublicKeyEncodingExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReportGenerationLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("ReportGenerationLimitExceeded", new ReportGenerationLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReportGenerationLimitExceededExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.identitymanagement.model.AmazonIdentityManagementException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.identitymanagement.model.AmazonIdentityManagementException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -12847,7 +12938,7 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

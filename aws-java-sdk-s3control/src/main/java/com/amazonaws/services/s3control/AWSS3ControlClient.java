@@ -76,9 +76,18 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     public static AWSS3ControlClientBuilder builder() {
         return AWSS3ControlClientBuilder.standard();
@@ -116,18 +125,55 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InvalidRequestException") == null) {
+            exceptionUnmarshallersMap.put("InvalidRequestException", new InvalidRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNextTokenException") == null) {
+            exceptionUnmarshallersMap.put("InvalidNextTokenException", new InvalidNextTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNextTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("JobStatusException") == null) {
+            exceptionUnmarshallersMap.put("JobStatusException", new JobStatusExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new JobStatusExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchPublicAccessBlockConfiguration") == null) {
+            exceptionUnmarshallersMap.put("NoSuchPublicAccessBlockConfiguration", new NoSuchPublicAccessBlockConfigurationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchPublicAccessBlockConfigurationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InternalServiceException") == null) {
+            exceptionUnmarshallersMap.put("InternalServiceException", new InternalServiceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InternalServiceExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BucketAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("BucketAlreadyExists", new BucketAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BucketAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NotFoundException") == null) {
+            exceptionUnmarshallersMap.put("NotFoundException", new NotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTagsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyTagsException", new TooManyTagsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTagsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IdempotencyException") == null) {
+            exceptionUnmarshallersMap.put("IdempotencyException", new IdempotencyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IdempotencyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BucketAlreadyOwnedByYou") == null) {
+            exceptionUnmarshallersMap.put("BucketAlreadyOwnedByYou", new BucketAlreadyOwnedByYouExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BucketAlreadyOwnedByYouExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyRequestsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyRequestsException", new TooManyRequestsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyRequestsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BadRequestException") == null) {
+            exceptionUnmarshallersMap.put("BadRequestException", new BadRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BadRequestExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.s3control.model.AWSS3ControlException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.s3control.model.AWSS3ControlException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -6344,7 +6390,7 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

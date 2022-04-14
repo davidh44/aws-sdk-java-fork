@@ -62,7 +62,7 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      */
@@ -99,7 +99,7 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The compute resources defined for the compute environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      */
@@ -113,6 +113,15 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
      * </p>
      */
     private String serviceRole;
+    /**
+     * <p>
+     * Specifies the infrastructure update policy for the compute environment. For more information about infrastructure
+     * updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     */
+    private UpdatePolicy updatePolicy;
 
     /**
      * <p>
@@ -351,14 +360,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param type
      *        The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information,
      *        see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.
+     *        environments</a> in the <i>Batch User Guide</i>.
      * @see CEType
      */
 
@@ -369,14 +378,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @return The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *         Environments</a> in the <i>Batch User Guide</i>.
+     *         environments</a> in the <i>Batch User Guide</i>.
      * @see CEType
      */
 
@@ -387,14 +396,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param type
      *        The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information,
      *        see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.
+     *        environments</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CEType
      */
@@ -407,14 +416,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param type
      *        The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information,
      *        see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.
+     *        environments</a> in the <i>Batch User Guide</i>.
      * @see CEType
      */
 
@@ -425,14 +434,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param type
      *        The type of the compute environment: <code>MANAGED</code> or <code>UNMANAGED</code>. For more information,
      *        see <a href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.
+     *        environments</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CEType
      */
@@ -744,14 +753,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The compute resources defined for the compute environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param computeResources
      *        The compute resources defined for the compute environment. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.
+     *        environments</a> in the <i>Batch User Guide</i>.
      */
 
     public void setComputeResources(ComputeResource computeResources) {
@@ -761,13 +770,13 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The compute resources defined for the compute environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @return The compute resources defined for the compute environment. For more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *         Environments</a> in the <i>Batch User Guide</i>.
+     *         environments</a> in the <i>Batch User Guide</i>.
      */
 
     public ComputeResource getComputeResources() {
@@ -777,14 +786,14 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The compute resources defined for the compute environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param computeResources
      *        The compute resources defined for the compute environment. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.
+     *        environments</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -852,6 +861,64 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies the infrastructure update policy for the compute environment. For more information about infrastructure
+     * updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     * 
+     * @param updatePolicy
+     *        Specifies the infrastructure update policy for the compute environment. For more information about
+     *        infrastructure updates, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
+     */
+
+    public void setUpdatePolicy(UpdatePolicy updatePolicy) {
+        this.updatePolicy = updatePolicy;
+    }
+
+    /**
+     * <p>
+     * Specifies the infrastructure update policy for the compute environment. For more information about infrastructure
+     * updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     * 
+     * @return Specifies the infrastructure update policy for the compute environment. For more information about
+     *         infrastructure updates, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *         compute environments</a> in the <i>Batch User Guide</i>.
+     */
+
+    public UpdatePolicy getUpdatePolicy() {
+        return this.updatePolicy;
+    }
+
+    /**
+     * <p>
+     * Specifies the infrastructure update policy for the compute environment. For more information about infrastructure
+     * updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     * 
+     * @param updatePolicy
+     *        Specifies the infrastructure update policy for the compute environment. For more information about
+     *        infrastructure updates, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComputeEnvironmentDetail withUpdatePolicy(UpdatePolicy updatePolicy) {
+        setUpdatePolicy(updatePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -884,7 +951,9 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
         if (getComputeResources() != null)
             sb.append("ComputeResources: ").append(getComputeResources()).append(",");
         if (getServiceRole() != null)
-            sb.append("ServiceRole: ").append(getServiceRole());
+            sb.append("ServiceRole: ").append(getServiceRole()).append(",");
+        if (getUpdatePolicy() != null)
+            sb.append("UpdatePolicy: ").append(getUpdatePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -943,6 +1012,10 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
             return false;
         if (other.getServiceRole() != null && other.getServiceRole().equals(this.getServiceRole()) == false)
             return false;
+        if (other.getUpdatePolicy() == null ^ this.getUpdatePolicy() == null)
+            return false;
+        if (other.getUpdatePolicy() != null && other.getUpdatePolicy().equals(this.getUpdatePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -962,6 +1035,7 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
         hashCode = prime * hashCode + ((getComputeResources() == null) ? 0 : getComputeResources().hashCode());
         hashCode = prime * hashCode + ((getServiceRole() == null) ? 0 : getServiceRole().hashCode());
+        hashCode = prime * hashCode + ((getUpdatePolicy() == null) ? 0 : getUpdatePolicy().hashCode());
         return hashCode;
     }
 

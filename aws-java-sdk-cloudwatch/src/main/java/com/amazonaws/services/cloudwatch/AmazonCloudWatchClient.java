@@ -88,9 +88,18 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on CloudWatch. A credentials provider chain will be used that
@@ -281,17 +290,51 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("ConcurrentModificationException") == null) {
+            exceptionUnmarshallersMap.put("ConcurrentModificationException", new ConcurrentModificationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConcurrentModificationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterValue") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterValue", new InvalidParameterValueExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterValueExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidFormat") == null) {
+            exceptionUnmarshallersMap.put("InvalidFormat", new InvalidFormatExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidFormatExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MissingParameter") == null) {
+            exceptionUnmarshallersMap.put("MissingParameter", new MissingRequiredParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingRequiredParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNextToken") == null) {
+            exceptionUnmarshallersMap.put("InvalidNextToken", new InvalidNextTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNextTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("LimitExceeded", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFoundException", new ResourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterCombination") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterCombination", new InvalidParameterCombinationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterCombinationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFound") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFound", new DashboardNotFoundErrorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DashboardNotFoundErrorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterInput") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterInput", new DashboardInvalidInputErrorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DashboardInvalidInputErrorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InternalServiceError") == null) {
+            exceptionUnmarshallersMap.put("InternalServiceError", new InternalServiceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InternalServiceExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.cloudwatch.model.AmazonCloudWatchException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.cloudwatch.model.AmazonCloudWatchException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -2681,8 +2724,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * <p>
      * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use the
-     * <code>StatisticsConfigurations</code> parameter to have the metric stream also send extended statistics in the
-     * stream. Streaming extended statistics incurs additional costs. For more information, see <a
+     * <code>StatisticsConfigurations</code> parameter to have the metric stream also send additional statistics in the
+     * stream. Streaming additional statistics incurs additional costs. For more information, see <a
      * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
      * </p>
      * <p>
@@ -3163,7 +3206,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

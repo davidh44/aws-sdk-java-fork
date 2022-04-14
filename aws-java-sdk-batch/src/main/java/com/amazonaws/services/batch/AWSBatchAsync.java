@@ -285,6 +285,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param createSchedulingPolicyRequest
+     *        Contains the parameters for <code>CreateSchedulingPolicy</code>.
      * @return A Java Future containing the result of the CreateSchedulingPolicy operation returned by the service.
      * @sample AWSBatchAsync.CreateSchedulingPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CreateSchedulingPolicy" target="_top">AWS
@@ -298,6 +299,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param createSchedulingPolicyRequest
+     *        Contains the parameters for <code>CreateSchedulingPolicy</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -411,6 +413,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param deleteSchedulingPolicyRequest
+     *        Contains the parameters for <code>DeleteSchedulingPolicy</code>.
      * @return A Java Future containing the result of the DeleteSchedulingPolicy operation returned by the service.
      * @sample AWSBatchAsync.DeleteSchedulingPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeleteSchedulingPolicy" target="_top">AWS
@@ -427,6 +430,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param deleteSchedulingPolicyRequest
+     *        Contains the parameters for <code>DeleteSchedulingPolicy</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -476,8 +480,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * <p>
      * If you're using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code>
-     * operation to determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
-     * into.
+     * operation to determine the <code>ecsClusterArn</code> that you launch your Amazon ECS container instances into.
      * </p>
      * 
      * @param describeComputeEnvironmentsRequest
@@ -496,8 +499,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * <p>
      * If you're using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code>
-     * operation to determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
-     * into.
+     * operation to determine the <code>ecsClusterArn</code> that you launch your Amazon ECS container instances into.
      * </p>
      * 
      * @param describeComputeEnvironmentsRequest
@@ -622,6 +624,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param describeSchedulingPoliciesRequest
+     *        Contains the parameters for <code>DescribeSchedulingPolicies</code>.
      * @return A Java Future containing the result of the DescribeSchedulingPolicies operation returned by the service.
      * @sample AWSBatchAsync.DescribeSchedulingPolicies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeSchedulingPolicies"
@@ -636,6 +639,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param describeSchedulingPoliciesRequest
+     *        Contains the parameters for <code>DescribeSchedulingPolicies</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -736,6 +740,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param listSchedulingPoliciesRequest
+     *        Contains the parameters for <code>ListSchedulingPolicies</code>.
      * @return A Java Future containing the result of the ListSchedulingPolicies operation returned by the service.
      * @sample AWSBatchAsync.ListSchedulingPolicies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListSchedulingPolicies" target="_top">AWS
@@ -749,6 +754,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param listSchedulingPoliciesRequest
+     *        Contains the parameters for <code>ListSchedulingPolicies</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -769,6 +775,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param listTagsForResourceRequest
+     *        Contains the parameters for <code>ListTagsForResource</code>.
      * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
      * @sample AWSBatchAsync.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListTagsForResource" target="_top">AWS API
@@ -784,6 +791,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param listTagsForResourceRequest
+     *        Contains the parameters for <code>ListTagsForResource</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -902,6 +910,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param tagResourceRequest
+     *        Contains the parameters for <code>TagResource</code>.
      * @return A Java Future containing the result of the TagResource operation returned by the service.
      * @sample AWSBatchAsync.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/TagResource" target="_top">AWS API
@@ -919,6 +928,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param tagResourceRequest
+     *        Contains the parameters for <code>TagResource</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -974,6 +984,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param untagResourceRequest
+     *        Contains the parameters for <code>UntagResource</code>.
      * @return A Java Future containing the result of the UntagResource operation returned by the service.
      * @sample AWSBatchAsync.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UntagResource" target="_top">AWS API
@@ -987,6 +998,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param untagResourceRequest
+     *        Contains the parameters for <code>UntagResource</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1071,6 +1083,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param updateSchedulingPolicyRequest
+     *        Contains the parameters for <code>UpdateSchedulingPolicy</code>.
      * @return A Java Future containing the result of the UpdateSchedulingPolicy operation returned by the service.
      * @sample AWSBatchAsync.UpdateSchedulingPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdateSchedulingPolicy" target="_top">AWS
@@ -1084,6 +1097,7 @@ public interface AWSBatchAsync extends AWSBatch {
      * </p>
      * 
      * @param updateSchedulingPolicyRequest
+     *        Contains the parameters for <code>UpdateSchedulingPolicy</code>.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or

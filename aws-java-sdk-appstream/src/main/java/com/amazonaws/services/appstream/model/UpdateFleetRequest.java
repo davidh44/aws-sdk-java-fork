@@ -374,6 +374,12 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.List<String> usbDeviceFilterStrings;
+    /**
+     * <p>
+     * The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     * </p>
+     */
+    private S3Location sessionScriptS3Location;
 
     /**
      * <p>
@@ -2707,6 +2713,46 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     * </p>
+     * 
+     * @param sessionScriptS3Location
+     *        The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     */
+
+    public void setSessionScriptS3Location(S3Location sessionScriptS3Location) {
+        this.sessionScriptS3Location = sessionScriptS3Location;
+    }
+
+    /**
+     * <p>
+     * The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     * </p>
+     * 
+     * @return The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     */
+
+    public S3Location getSessionScriptS3Location() {
+        return this.sessionScriptS3Location;
+    }
+
+    /**
+     * <p>
+     * The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     * </p>
+     * 
+     * @param sessionScriptS3Location
+     *        The S3 location of the session scripts configuration zip file. This only applies to Elastic fleets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFleetRequest withSessionScriptS3Location(S3Location sessionScriptS3Location) {
+        setSessionScriptS3Location(sessionScriptS3Location);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2757,7 +2803,9 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getMaxConcurrentSessions() != null)
             sb.append("MaxConcurrentSessions: ").append(getMaxConcurrentSessions()).append(",");
         if (getUsbDeviceFilterStrings() != null)
-            sb.append("UsbDeviceFilterStrings: ").append(getUsbDeviceFilterStrings());
+            sb.append("UsbDeviceFilterStrings: ").append(getUsbDeviceFilterStrings()).append(",");
+        if (getSessionScriptS3Location() != null)
+            sb.append("SessionScriptS3Location: ").append(getSessionScriptS3Location());
         sb.append("}");
         return sb.toString();
     }
@@ -2853,6 +2901,10 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getUsbDeviceFilterStrings() != null && other.getUsbDeviceFilterStrings().equals(this.getUsbDeviceFilterStrings()) == false)
             return false;
+        if (other.getSessionScriptS3Location() == null ^ this.getSessionScriptS3Location() == null)
+            return false;
+        if (other.getSessionScriptS3Location() != null && other.getSessionScriptS3Location().equals(this.getSessionScriptS3Location()) == false)
+            return false;
         return true;
     }
 
@@ -2881,6 +2933,7 @@ public class UpdateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getPlatform() == null) ? 0 : getPlatform().hashCode());
         hashCode = prime * hashCode + ((getMaxConcurrentSessions() == null) ? 0 : getMaxConcurrentSessions().hashCode());
         hashCode = prime * hashCode + ((getUsbDeviceFilterStrings() == null) ? 0 : getUsbDeviceFilterStrings().hashCode());
+        hashCode = prime * hashCode + ((getSessionScriptS3Location() == null) ? 0 : getSessionScriptS3Location().hashCode());
         return hashCode;
     }
 

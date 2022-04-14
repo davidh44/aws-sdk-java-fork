@@ -136,6 +136,8 @@ public class RuntimeHttpUtilsTest {
             RuntimeHttpUtils.convertRequestToUrl(request, false, false);
         }
 
+
+
         private Request<?> newRequest() {
             Request<?> request = new DefaultRequest<Object>("foo");
             request.setEndpoint(ENDPOINT);

@@ -36,6 +36,8 @@ public class OAuth2DefaultsMarshaller {
             .marshallLocationName("authCodeUrls").build();
     private static final MarshallingInfo<List> OAUTH2GRANTTYPESSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("oauth2GrantTypesSupported").build();
+    private static final MarshallingInfo<List> OAUTH2CUSTOMPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("oauth2CustomProperties").build();
 
     private static final OAuth2DefaultsMarshaller instance = new OAuth2DefaultsMarshaller();
 
@@ -57,6 +59,7 @@ public class OAuth2DefaultsMarshaller {
             protocolMarshaller.marshall(oAuth2Defaults.getTokenUrls(), TOKENURLS_BINDING);
             protocolMarshaller.marshall(oAuth2Defaults.getAuthCodeUrls(), AUTHCODEURLS_BINDING);
             protocolMarshaller.marshall(oAuth2Defaults.getOauth2GrantTypesSupported(), OAUTH2GRANTTYPESSUPPORTED_BINDING);
+            protocolMarshaller.marshall(oAuth2Defaults.getOauth2CustomProperties(), OAUTH2CUSTOMPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

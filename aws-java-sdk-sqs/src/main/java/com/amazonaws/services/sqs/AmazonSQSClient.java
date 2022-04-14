@@ -157,9 +157,18 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon SQS. A credentials provider chain will be used that
@@ -349,22 +358,71 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.PurgeQueueInProgress") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.PurgeQueueInProgress", new PurgeQueueInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PurgeQueueInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidAttributeName") == null) {
+            exceptionUnmarshallersMap.put("InvalidAttributeName", new InvalidAttributeNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAttributeNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.BatchEntryIdsNotDistinct") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.BatchEntryIdsNotDistinct", new BatchEntryIdsNotDistinctExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchEntryIdsNotDistinctExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.TooManyEntriesInBatchRequest") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.TooManyEntriesInBatchRequest", new TooManyEntriesInBatchRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyEntriesInBatchRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.BatchRequestTooLong") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.BatchRequestTooLong", new BatchRequestTooLongExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchRequestTooLongExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.UnsupportedOperation") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.UnsupportedOperation", new UnsupportedOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnsupportedOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidIdFormat") == null) {
+            exceptionUnmarshallersMap.put("InvalidIdFormat", new InvalidIdFormatExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidIdFormatExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OverLimit") == null) {
+            exceptionUnmarshallersMap.put("OverLimit", new OverLimitExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OverLimitExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.NonExistentQueue") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.NonExistentQueue", new QueueDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new QueueDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("QueueAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("QueueAlreadyExists", new QueueNameExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new QueueNameExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.MessageNotInflight") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.MessageNotInflight", new MessageNotInflightExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MessageNotInflightExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReceiptHandleIsInvalid") == null) {
+            exceptionUnmarshallersMap.put("ReceiptHandleIsInvalid", new ReceiptHandleIsInvalidExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReceiptHandleIsInvalidExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidMessageContents") == null) {
+            exceptionUnmarshallersMap.put("InvalidMessageContents", new InvalidMessageContentsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidMessageContentsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.QueueDeletedRecently") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.QueueDeletedRecently", new QueueDeletedRecentlyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new QueueDeletedRecentlyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.EmptyBatchRequest") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.EmptyBatchRequest", new EmptyBatchRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EmptyBatchRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AWS.SimpleQueueService.InvalidBatchEntryId") == null) {
+            exceptionUnmarshallersMap.put("AWS.SimpleQueueService.InvalidBatchEntryId", new InvalidBatchEntryIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidBatchEntryIdExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.sqs.model.AmazonSQSException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.sqs.model.AmazonSQSException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -2266,7 +2324,7 @@ public class AmazonSQSClient extends AmazonWebServiceClient implements AmazonSQS
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

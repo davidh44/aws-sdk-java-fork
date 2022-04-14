@@ -117,16 +117,16 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have the
-     * metric stream also send extended statistics in the stream. This array can have up to 100 members.
+     * metric stream also send additional statistics in the stream. This array can have up to 100 members.
      * </p>
      * <p>
-     * For each entry in this array, you specify one or more metrics and the list of extended statistics to stream for
-     * those metrics. The extended statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
-     * the <code>OutputFormat</code> is <code>json</code>, you can stream any extended statistic that is supported by
+     * For each entry in this array, you specify one or more metrics and the list of additional statistics to stream for
+     * those metrics. The additional statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
+     * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics (p<i>??</i>).
+     * stream percentile statistics such as p95, p99.9 and so on.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration> statisticsConfigurations;
@@ -843,29 +843,30 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have the
-     * metric stream also send extended statistics in the stream. This array can have up to 100 members.
+     * metric stream also send additional statistics in the stream. This array can have up to 100 members.
      * </p>
      * <p>
-     * For each entry in this array, you specify one or more metrics and the list of extended statistics to stream for
-     * those metrics. The extended statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
-     * the <code>OutputFormat</code> is <code>json</code>, you can stream any extended statistic that is supported by
+     * For each entry in this array, you specify one or more metrics and the list of additional statistics to stream for
+     * those metrics. The additional statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
+     * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics (p<i>??</i>).
+     * stream percentile statistics such as p95, p99.9 and so on.
      * </p>
      * 
      * @return By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      *         <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have
-     *         the metric stream also send extended statistics in the stream. This array can have up to 100 members.</p>
+     *         the metric stream also send additional statistics in the stream. This array can have up to 100
+     *         members.</p>
      *         <p>
-     *         For each entry in this array, you specify one or more metrics and the list of extended statistics to
-     *         stream for those metrics. The extended statistics that you can stream depend on the stream's
+     *         For each entry in this array, you specify one or more metrics and the list of additional statistics to
+     *         stream for those metrics. The additional statistics that you can stream depend on the stream's
      *         <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
-     *         extended statistic that is supported by CloudWatch, listed in <a
+     *         additional statistic that is supported by CloudWatch, listed in <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *         CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *         you can stream percentile statistics (p<i>??</i>).
+     *         you can stream percentile statistics such as p95, p99.9 and so on.
      */
 
     public java.util.List<MetricStreamStatisticsConfiguration> getStatisticsConfigurations() {
@@ -879,30 +880,31 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have the
-     * metric stream also send extended statistics in the stream. This array can have up to 100 members.
+     * metric stream also send additional statistics in the stream. This array can have up to 100 members.
      * </p>
      * <p>
-     * For each entry in this array, you specify one or more metrics and the list of extended statistics to stream for
-     * those metrics. The extended statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
-     * the <code>OutputFormat</code> is <code>json</code>, you can stream any extended statistic that is supported by
+     * For each entry in this array, you specify one or more metrics and the list of additional statistics to stream for
+     * those metrics. The additional statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
+     * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics (p<i>??</i>).
+     * stream percentile statistics such as p95, p99.9 and so on.
      * </p>
      * 
      * @param statisticsConfigurations
      *        By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      *        <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have
-     *        the metric stream also send extended statistics in the stream. This array can have up to 100 members.</p>
+     *        the metric stream also send additional statistics in the stream. This array can have up to 100
+     *        members.</p>
      *        <p>
-     *        For each entry in this array, you specify one or more metrics and the list of extended statistics to
-     *        stream for those metrics. The extended statistics that you can stream depend on the stream's
+     *        For each entry in this array, you specify one or more metrics and the list of additional statistics to
+     *        stream for those metrics. The additional statistics that you can stream depend on the stream's
      *        <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
-     *        extended statistic that is supported by CloudWatch, listed in <a
+     *        additional statistic that is supported by CloudWatch, listed in <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *        you can stream percentile statistics (p<i>??</i>).
+     *        you can stream percentile statistics such as p95, p99.9 and so on.
      */
 
     public void setStatisticsConfigurations(java.util.Collection<MetricStreamStatisticsConfiguration> statisticsConfigurations) {
@@ -918,16 +920,16 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have the
-     * metric stream also send extended statistics in the stream. This array can have up to 100 members.
+     * metric stream also send additional statistics in the stream. This array can have up to 100 members.
      * </p>
      * <p>
-     * For each entry in this array, you specify one or more metrics and the list of extended statistics to stream for
-     * those metrics. The extended statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
-     * the <code>OutputFormat</code> is <code>json</code>, you can stream any extended statistic that is supported by
+     * For each entry in this array, you specify one or more metrics and the list of additional statistics to stream for
+     * those metrics. The additional statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
+     * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics (p<i>??</i>).
+     * stream percentile statistics such as p95, p99.9 and so on.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -938,15 +940,16 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * @param statisticsConfigurations
      *        By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      *        <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have
-     *        the metric stream also send extended statistics in the stream. This array can have up to 100 members.</p>
+     *        the metric stream also send additional statistics in the stream. This array can have up to 100
+     *        members.</p>
      *        <p>
-     *        For each entry in this array, you specify one or more metrics and the list of extended statistics to
-     *        stream for those metrics. The extended statistics that you can stream depend on the stream's
+     *        For each entry in this array, you specify one or more metrics and the list of additional statistics to
+     *        stream for those metrics. The additional statistics that you can stream depend on the stream's
      *        <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
-     *        extended statistic that is supported by CloudWatch, listed in <a
+     *        additional statistic that is supported by CloudWatch, listed in <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *        you can stream percentile statistics (p<i>??</i>).
+     *        you can stream percentile statistics such as p95, p99.9 and so on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -964,30 +967,31 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have the
-     * metric stream also send extended statistics in the stream. This array can have up to 100 members.
+     * metric stream also send additional statistics in the stream. This array can have up to 100 members.
      * </p>
      * <p>
-     * For each entry in this array, you specify one or more metrics and the list of extended statistics to stream for
-     * those metrics. The extended statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
-     * the <code>OutputFormat</code> is <code>json</code>, you can stream any extended statistic that is supported by
+     * For each entry in this array, you specify one or more metrics and the list of additional statistics to stream for
+     * those metrics. The additional statistics that you can stream depend on the stream's <code>OutputFormat</code>. If
+     * the <code>OutputFormat</code> is <code>json</code>, you can stream any additional statistic that is supported by
      * CloudWatch, listed in <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>, you can
-     * stream percentile statistics (p<i>??</i>).
+     * stream percentile statistics such as p95, p99.9 and so on.
      * </p>
      * 
      * @param statisticsConfigurations
      *        By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
      *        <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use this parameter to have
-     *        the metric stream also send extended statistics in the stream. This array can have up to 100 members.</p>
+     *        the metric stream also send additional statistics in the stream. This array can have up to 100
+     *        members.</p>
      *        <p>
-     *        For each entry in this array, you specify one or more metrics and the list of extended statistics to
-     *        stream for those metrics. The extended statistics that you can stream depend on the stream's
+     *        For each entry in this array, you specify one or more metrics and the list of additional statistics to
+     *        stream for those metrics. The additional statistics that you can stream depend on the stream's
      *        <code>OutputFormat</code>. If the <code>OutputFormat</code> is <code>json</code>, you can stream any
-     *        extended statistic that is supported by CloudWatch, listed in <a
+     *        additional statistic that is supported by CloudWatch, listed in <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *        CloudWatch statistics definitions</a>. If the <code>OutputFormat</code> is <code>opentelemetry0.7</code>,
-     *        you can stream percentile statistics (p<i>??</i>).
+     *        you can stream percentile statistics such as p95, p99.9 and so on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

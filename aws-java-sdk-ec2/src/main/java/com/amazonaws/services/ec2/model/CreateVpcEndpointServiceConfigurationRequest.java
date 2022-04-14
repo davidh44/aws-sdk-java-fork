@@ -28,8 +28,8 @@ public class CreateVpcEndpointServiceConfigurationRequest extends AmazonWebServi
 
     /**
      * <p>
-     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted. To
-     * accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     * manually.
      * </p>
      */
     private Boolean acceptanceRequired;
@@ -68,13 +68,13 @@ public class CreateVpcEndpointServiceConfigurationRequest extends AmazonWebServi
 
     /**
      * <p>
-     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted. To
-     * accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     * manually.
      * </p>
      * 
      * @param acceptanceRequired
-     *        Indicates whether requests from service consumers to create an endpoint to your service must be accepted.
-     *        To accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     *        Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     *        manually.
      */
 
     public void setAcceptanceRequired(Boolean acceptanceRequired) {
@@ -83,12 +83,12 @@ public class CreateVpcEndpointServiceConfigurationRequest extends AmazonWebServi
 
     /**
      * <p>
-     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted. To
-     * accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     * manually.
      * </p>
      * 
-     * @return Indicates whether requests from service consumers to create an endpoint to your service must be accepted.
-     *         To accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * @return Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     *         manually.
      */
 
     public Boolean getAcceptanceRequired() {
@@ -97,13 +97,13 @@ public class CreateVpcEndpointServiceConfigurationRequest extends AmazonWebServi
 
     /**
      * <p>
-     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted. To
-     * accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     * manually.
      * </p>
      * 
      * @param acceptanceRequired
-     *        Indicates whether requests from service consumers to create an endpoint to your service must be accepted.
-     *        To accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     *        Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     *        manually.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,12 +114,12 @@ public class CreateVpcEndpointServiceConfigurationRequest extends AmazonWebServi
 
     /**
      * <p>
-     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted. To
-     * accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     * manually.
      * </p>
      * 
-     * @return Indicates whether requests from service consumers to create an endpoint to your service must be accepted.
-     *         To accept a request, use <a>AcceptVpcEndpointConnections</a>.
+     * @return Indicates whether requests from service consumers to create an endpoint to your service must be accepted
+     *         manually.
      */
 
     public Boolean isAcceptanceRequired() {

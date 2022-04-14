@@ -74,6 +74,8 @@ public class FleetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxConcurrentSessions").build();
     private static final MarshallingInfo<List> USBDEVICEFILTERSTRINGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UsbDeviceFilterStrings").build();
+    private static final MarshallingInfo<StructuredPojo> SESSIONSCRIPTS3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SessionScriptS3Location").build();
 
     private static final FleetMarshaller instance = new FleetMarshaller();
 
@@ -114,6 +116,7 @@ public class FleetMarshaller {
             protocolMarshaller.marshall(fleet.getPlatform(), PLATFORM_BINDING);
             protocolMarshaller.marshall(fleet.getMaxConcurrentSessions(), MAXCONCURRENTSESSIONS_BINDING);
             protocolMarshaller.marshall(fleet.getUsbDeviceFilterStrings(), USBDEVICEFILTERSTRINGS_BINDING);
+            protocolMarshaller.marshall(fleet.getSessionScriptS3Location(), SESSIONSCRIPTS3LOCATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

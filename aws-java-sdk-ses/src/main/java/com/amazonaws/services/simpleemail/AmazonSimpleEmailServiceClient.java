@@ -85,9 +85,18 @@ public class AmazonSimpleEmailServiceClient extends AmazonWebServiceClient imple
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon SES. A credentials provider chain will be used that
@@ -279,40 +288,145 @@ public class AmazonSimpleEmailServiceClient extends AmazonWebServiceClient imple
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InvalidFirehoseDestination") == null) {
+            exceptionUnmarshallersMap.put("InvalidFirehoseDestination", new InvalidFirehoseDestinationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidFirehoseDestinationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidS3Configuration") == null) {
+            exceptionUnmarshallersMap.put("InvalidS3Configuration", new InvalidS3ConfigurationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidS3ConfigurationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDeliveryOptions") == null) {
+            exceptionUnmarshallersMap.put("InvalidDeliveryOptions", new InvalidDeliveryOptionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDeliveryOptionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSNSDestination") == null) {
+            exceptionUnmarshallersMap.put("InvalidSNSDestination", new InvalidSNSDestinationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSNSDestinationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRenderingParameter") == null) {
+            exceptionUnmarshallersMap.put("InvalidRenderingParameter", new InvalidRenderingParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRenderingParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MessageRejected") == null) {
+            exceptionUnmarshallersMap.put("MessageRejected", new MessageRejectedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MessageRejectedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidCloudWatchDestination") == null) {
+            exceptionUnmarshallersMap.put("InvalidCloudWatchDestination", new InvalidCloudWatchDestinationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidCloudWatchDestinationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AccountSendingPausedException") == null) {
+            exceptionUnmarshallersMap.put("AccountSendingPausedException", new AccountSendingPausedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AccountSendingPausedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RuleSetDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("RuleSetDoesNotExist", new RuleSetDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RuleSetDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSnsTopic") == null) {
+            exceptionUnmarshallersMap.put("InvalidSnsTopic", new InvalidSnsTopicExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSnsTopicExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("LimitExceeded", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConfigurationSetSendingPausedException") == null) {
+            exceptionUnmarshallersMap.put("ConfigurationSetSendingPausedException", new ConfigurationSetSendingPausedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConfigurationSetSendingPausedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EventDestinationDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("EventDestinationDoesNotExist", new EventDestinationDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EventDestinationDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidLambdaFunction") == null) {
+            exceptionUnmarshallersMap.put("InvalidLambdaFunction", new InvalidLambdaFunctionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidLambdaFunctionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TemplateDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("TemplateDoesNotExist", new TemplateDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TemplateDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MissingRenderingAttribute") == null) {
+            exceptionUnmarshallersMap.put("MissingRenderingAttribute", new MissingRenderingAttributeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingRenderingAttributeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("AlreadyExists", new AlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CannotDelete") == null) {
+            exceptionUnmarshallersMap.put("CannotDelete", new CannotDeleteExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CannotDeleteExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrackingOptionsAlreadyExistsException") == null) {
+            exceptionUnmarshallersMap.put("TrackingOptionsAlreadyExistsException", new TrackingOptionsAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrackingOptionsAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConfigurationSetAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ConfigurationSetAlreadyExists", new ConfigurationSetAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConfigurationSetAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CustomVerificationEmailInvalidContent") == null) {
+            exceptionUnmarshallersMap.put("CustomVerificationEmailInvalidContent", new CustomVerificationEmailInvalidContentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CustomVerificationEmailInvalidContentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTemplate") == null) {
+            exceptionUnmarshallersMap.put("InvalidTemplate", new InvalidTemplateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTemplateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MailFromDomainNotVerifiedException") == null) {
+            exceptionUnmarshallersMap.put("MailFromDomainNotVerifiedException", new MailFromDomainNotVerifiedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MailFromDomainNotVerifiedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConfigurationSetDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("ConfigurationSetDoesNotExist", new ConfigurationSetDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConfigurationSetDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ProductionAccessNotGranted") == null) {
+            exceptionUnmarshallersMap.put("ProductionAccessNotGranted", new ProductionAccessNotGrantedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ProductionAccessNotGrantedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTrackingOptions") == null) {
+            exceptionUnmarshallersMap.put("InvalidTrackingOptions", new InvalidTrackingOptionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTrackingOptionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrackingOptionsDoesNotExistException") == null) {
+            exceptionUnmarshallersMap.put("TrackingOptionsDoesNotExistException", new TrackingOptionsDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrackingOptionsDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EventDestinationAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("EventDestinationAlreadyExists", new EventDestinationAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EventDestinationAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FromEmailAddressNotVerified") == null) {
+            exceptionUnmarshallersMap.put("FromEmailAddressNotVerified", new FromEmailAddressNotVerifiedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FromEmailAddressNotVerifiedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RuleDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("RuleDoesNotExist", new RuleDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RuleDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidConfigurationSet") == null) {
+            exceptionUnmarshallersMap.put("InvalidConfigurationSet", new InvalidConfigurationSetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidConfigurationSetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CustomVerificationEmailTemplateDoesNotExist") == null) {
+            exceptionUnmarshallersMap
+                    .put("CustomVerificationEmailTemplateDoesNotExist", new CustomVerificationEmailTemplateDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CustomVerificationEmailTemplateDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidPolicy") == null) {
+            exceptionUnmarshallersMap.put("InvalidPolicy", new InvalidPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CustomVerificationEmailTemplateAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CustomVerificationEmailTemplateAlreadyExists",
+                    new CustomVerificationEmailTemplateAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CustomVerificationEmailTemplateAlreadyExistsExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.simpleemail.model.AmazonSimpleEmailServiceException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.simpleemail.model.AmazonSimpleEmailServiceException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -5858,7 +5972,7 @@ public class AmazonSimpleEmailServiceClient extends AmazonWebServiceClient imple
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

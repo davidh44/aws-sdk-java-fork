@@ -51,6 +51,8 @@ public class ComputeEnvironmentDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeResources").build();
     private static final MarshallingInfo<String> SERVICEROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceRole").build();
+    private static final MarshallingInfo<StructuredPojo> UPDATEPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatePolicy").build();
 
     private static final ComputeEnvironmentDetailMarshaller instance = new ComputeEnvironmentDetailMarshaller();
 
@@ -79,6 +81,7 @@ public class ComputeEnvironmentDetailMarshaller {
             protocolMarshaller.marshall(computeEnvironmentDetail.getStatusReason(), STATUSREASON_BINDING);
             protocolMarshaller.marshall(computeEnvironmentDetail.getComputeResources(), COMPUTERESOURCES_BINDING);
             protocolMarshaller.marshall(computeEnvironmentDetail.getServiceRole(), SERVICEROLE_BINDING);
+            protocolMarshaller.marshall(computeEnvironmentDetail.getUpdatePolicy(), UPDATEPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

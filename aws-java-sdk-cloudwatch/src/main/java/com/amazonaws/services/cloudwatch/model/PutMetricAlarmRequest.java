@@ -249,6 +249,13 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * Valid Values: <code>breaching | notBreaching | ignore | missing</code>
      * </p>
+     * <note>
+     * <p>
+     * Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code> missing data
+     * even if you choose a different option for <code>TreatMissingData</code>. When an <code>AWS/DynamoDB</code> metric
+     * has missing data, alarms that evaluate that metric remain in their current state.
+     * </p>
+     * </note>
      */
     private String treatMissingData;
     /**
@@ -2098,6 +2105,13 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * Valid Values: <code>breaching | notBreaching | ignore | missing</code>
      * </p>
+     * <note>
+     * <p>
+     * Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code> missing data
+     * even if you choose a different option for <code>TreatMissingData</code>. When an <code>AWS/DynamoDB</code> metric
+     * has missing data, alarms that evaluate that metric remain in their current state.
+     * </p>
+     * </note>
      * 
      * @param treatMissingData
      *        Sets how this alarm is to handle missing data points. If <code>TreatMissingData</code> is omitted, the
@@ -2106,6 +2120,14 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        >Configuring How CloudWatch Alarms Treats Missing Data</a>.</p>
      *        <p>
      *        Valid Values: <code>breaching | notBreaching | ignore | missing</code>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code> missing
+     *        data even if you choose a different option for <code>TreatMissingData</code>. When an
+     *        <code>AWS/DynamoDB</code> metric has missing data, alarms that evaluate that metric remain in their
+     *        current state.
+     *        </p>
      */
 
     public void setTreatMissingData(String treatMissingData) {
@@ -2122,6 +2144,13 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * Valid Values: <code>breaching | notBreaching | ignore | missing</code>
      * </p>
+     * <note>
+     * <p>
+     * Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code> missing data
+     * even if you choose a different option for <code>TreatMissingData</code>. When an <code>AWS/DynamoDB</code> metric
+     * has missing data, alarms that evaluate that metric remain in their current state.
+     * </p>
+     * </note>
      * 
      * @return Sets how this alarm is to handle missing data points. If <code>TreatMissingData</code> is omitted, the
      *         default behavior of <code>missing</code> is used. For more information, see <a href=
@@ -2129,6 +2158,14 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *         >Configuring How CloudWatch Alarms Treats Missing Data</a>.</p>
      *         <p>
      *         Valid Values: <code>breaching | notBreaching | ignore | missing</code>
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code>
+     *         missing data even if you choose a different option for <code>TreatMissingData</code>. When an
+     *         <code>AWS/DynamoDB</code> metric has missing data, alarms that evaluate that metric remain in their
+     *         current state.
+     *         </p>
      */
 
     public String getTreatMissingData() {
@@ -2145,6 +2182,13 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * Valid Values: <code>breaching | notBreaching | ignore | missing</code>
      * </p>
+     * <note>
+     * <p>
+     * Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code> missing data
+     * even if you choose a different option for <code>TreatMissingData</code>. When an <code>AWS/DynamoDB</code> metric
+     * has missing data, alarms that evaluate that metric remain in their current state.
+     * </p>
+     * </note>
      * 
      * @param treatMissingData
      *        Sets how this alarm is to handle missing data points. If <code>TreatMissingData</code> is omitted, the
@@ -2153,6 +2197,14 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        >Configuring How CloudWatch Alarms Treats Missing Data</a>.</p>
      *        <p>
      *        Valid Values: <code>breaching | notBreaching | ignore | missing</code>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Alarms that evaluate metrics in the <code>AWS/DynamoDB</code> namespace always <code>ignore</code> missing
+     *        data even if you choose a different option for <code>TreatMissingData</code>. When an
+     *        <code>AWS/DynamoDB</code> metric has missing data, alarms that evaluate that metric remain in their
+     *        current state.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

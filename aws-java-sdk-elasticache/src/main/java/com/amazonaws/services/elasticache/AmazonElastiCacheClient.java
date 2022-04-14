@@ -86,9 +86,18 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon ElastiCache. A credentials provider chain will be
@@ -280,73 +289,275 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("CacheSubnetGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("CacheSubnetGroupNotFoundFault", new CacheSubnetGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSubnetGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubnetInUse") == null) {
+            exceptionUnmarshallersMap.put("SubnetInUse", new SubnetInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubnetInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheClusterAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CacheClusterAlreadyExists", new CacheClusterAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheClusterAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheSecurityGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CacheSecurityGroupAlreadyExists", new CacheSecurityGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSecurityGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidGlobalReplicationGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidGlobalReplicationGroupState", new InvalidGlobalReplicationGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidGlobalReplicationGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidCacheSecurityGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidCacheSecurityGroupState", new InvalidCacheSecurityGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidCacheSecurityGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("QuotaExceeded.CacheSecurityGroup") == null) {
+            exceptionUnmarshallersMap.put("QuotaExceeded.CacheSecurityGroup", new CacheSecurityGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSecurityGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheParameterGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("CacheParameterGroupQuotaExceeded", new CacheParameterGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheParameterGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedCacheNodesOfferingNotFound") == null) {
+            exceptionUnmarshallersMap.put("ReservedCacheNodesOfferingNotFound", new ReservedCacheNodesOfferingNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedCacheNodesOfferingNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReplicationGroupNotUnderMigrationFault") == null) {
+            exceptionUnmarshallersMap.put("ReplicationGroupNotUnderMigrationFault", new ReplicationGroupNotUnderMigrationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReplicationGroupNotUnderMigrationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheParameterGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CacheParameterGroupAlreadyExists", new CacheParameterGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheParameterGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TestFailoverNotAvailableFault") == null) {
+            exceptionUnmarshallersMap.put("TestFailoverNotAvailableFault", new TestFailoverNotAvailableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TestFailoverNotAvailableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateUserName") == null) {
+            exceptionUnmarshallersMap.put("DuplicateUserName", new DuplicateUserNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateUserNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheParameterGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("CacheParameterGroupNotFound", new CacheParameterGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheParameterGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubnetNotAllowedFault") == null) {
+            exceptionUnmarshallersMap.put("SubnetNotAllowedFault", new SubnetNotAllowedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubnetNotAllowedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ServiceLinkedRoleNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("ServiceLinkedRoleNotFoundFault", new ServiceLinkedRoleNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ServiceLinkedRoleNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserNotFound") == null) {
+            exceptionUnmarshallersMap.put("UserNotFound", new UserNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NodeGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("NodeGroupNotFoundFault", new NodeGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NodeGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("APICallRateForCustomerExceeded") == null) {
+            exceptionUnmarshallersMap.put("APICallRateForCustomerExceeded", new APICallRateForCustomerExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new APICallRateForCustomerExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidKMSKeyFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidKMSKeyFault", new InvalidKMSKeyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidKMSKeyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("GlobalReplicationGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("GlobalReplicationGroupNotFoundFault", new GlobalReplicationGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new GlobalReplicationGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientCacheClusterCapacity") == null) {
+            exceptionUnmarshallersMap.put("InsufficientCacheClusterCapacity", new InsufficientCacheClusterCapacityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientCacheClusterCapacityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedCacheNodeNotFound") == null) {
+            exceptionUnmarshallersMap.put("ReservedCacheNodeNotFound", new ReservedCacheNodeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedCacheNodeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheSubnetGroupInUse") == null) {
+            exceptionUnmarshallersMap.put("CacheSubnetGroupInUse", new CacheSubnetGroupInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSubnetGroupInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReplicationGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("ReplicationGroupNotFoundFault", new ReplicationGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReplicationGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSubnet") == null) {
+            exceptionUnmarshallersMap.put("InvalidSubnet", new InvalidSubnetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSubnetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoOperationFault") == null) {
+            exceptionUnmarshallersMap.put("NoOperationFault", new NoOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NodeGroupsPerReplicationGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("NodeGroupsPerReplicationGroupQuotaExceeded", new NodeGroupsPerReplicationGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NodeGroupsPerReplicationGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedCacheNodeQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("ReservedCacheNodeQuotaExceeded", new ReservedCacheNodeQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedCacheNodeQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReservedCacheNodeAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ReservedCacheNodeAlreadyExists", new ReservedCacheNodeAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReservedCacheNodeAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheClusterNotFound") == null) {
+            exceptionUnmarshallersMap.put("CacheClusterNotFound", new CacheClusterNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheClusterNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("GlobalReplicationGroupAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("GlobalReplicationGroupAlreadyExistsFault", new GlobalReplicationGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new GlobalReplicationGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterValue") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterValue", new InvalidParameterValueExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterValueExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotAlreadyExistsFault", new SnapshotAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("UserGroupQuotaExceeded", new UserGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidReplicationGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidReplicationGroupState", new InvalidReplicationGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidReplicationGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotQuotaExceededFault", new SnapshotQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("UserGroupAlreadyExists", new UserGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DefaultUserRequired") == null) {
+            exceptionUnmarshallersMap.put("DefaultUserRequired", new DefaultUserRequiredExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DefaultUserRequiredExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NodeQuotaForCustomerExceeded") == null) {
+            exceptionUnmarshallersMap.put("NodeQuotaForCustomerExceeded", new NodeQuotaForCustomerExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NodeQuotaForCustomerExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("UserAlreadyExists", new UserAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidUserGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidUserGroupState", new InvalidUserGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidUserGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TagNotFound") == null) {
+            exceptionUnmarshallersMap.put("TagNotFound", new TagNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TagNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ClusterQuotaForCustomerExceeded") == null) {
+            exceptionUnmarshallersMap.put("ClusterQuotaForCustomerExceeded", new ClusterQuotaForCustomerExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ClusterQuotaForCustomerExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NodeQuotaForClusterExceeded") == null) {
+            exceptionUnmarshallersMap.put("NodeQuotaForClusterExceeded", new NodeQuotaForClusterExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NodeQuotaForClusterExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ServiceUpdateNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("ServiceUpdateNotFoundFault", new ServiceUpdateNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ServiceUpdateNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidCacheClusterState") == null) {
+            exceptionUnmarshallersMap.put("InvalidCacheClusterState", new InvalidCacheClusterStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidCacheClusterStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidVPCNetworkStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidVPCNetworkStateFault", new InvalidVPCNetworkStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidVPCNetworkStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheSubnetQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("CacheSubnetQuotaExceededFault", new CacheSubnetQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSubnetQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotFeatureNotSupportedFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotFeatureNotSupportedFault", new SnapshotFeatureNotSupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotFeatureNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSnapshotState") == null) {
+            exceptionUnmarshallersMap.put("InvalidSnapshotState", new InvalidSnapshotStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSnapshotStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReplicationGroupAlreadyUnderMigrationFault") == null) {
+            exceptionUnmarshallersMap.put("ReplicationGroupAlreadyUnderMigrationFault", new ReplicationGroupAlreadyUnderMigrationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReplicationGroupAlreadyUnderMigrationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheSubnetGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CacheSubnetGroupAlreadyExists", new CacheSubnetGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSubnetGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheSubnetGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("CacheSubnetGroupQuotaExceeded", new CacheSubnetGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSubnetGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ReplicationGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ReplicationGroupAlreadyExists", new ReplicationGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ReplicationGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DefaultUserAssociatedToUserGroup") == null) {
+            exceptionUnmarshallersMap.put("DefaultUserAssociatedToUserGroup", new DefaultUserAssociatedToUserGroupExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DefaultUserAssociatedToUserGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterCombination") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterCombination", new InvalidParameterCombinationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterCombinationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidUserState") == null) {
+            exceptionUnmarshallersMap.put("InvalidUserState", new InvalidUserStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidUserStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("UserGroupNotFound", new UserGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("SnapshotNotFoundFault", new SnapshotNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("UserQuotaExceeded", new UserQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CacheSecurityGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("CacheSecurityGroupNotFound", new CacheSecurityGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CacheSecurityGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidCacheParameterGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidCacheParameterGroupState", new InvalidCacheParameterGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidCacheParameterGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidARN") == null) {
+            exceptionUnmarshallersMap.put("InvalidARN", new InvalidARNExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidARNExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TagQuotaPerResourceExceeded") == null) {
+            exceptionUnmarshallersMap.put("TagQuotaPerResourceExceeded", new TagQuotaPerResourceExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TagQuotaPerResourceExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationAlreadyExists", new AuthorizationAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationNotFound") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationNotFound", new AuthorizationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationNotFoundExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.elasticache.model.AmazonElastiCacheException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.elasticache.model.AmazonElastiCacheException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -5500,7 +5711,7 @@ public class AmazonElastiCacheClient extends AmazonWebServiceClient implements A
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

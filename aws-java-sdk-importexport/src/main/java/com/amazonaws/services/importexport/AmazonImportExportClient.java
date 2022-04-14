@@ -74,9 +74,18 @@ public class AmazonImportExportClient extends AmazonWebServiceClient implements 
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on AWS Import/Export. A credentials provider chain will be used
@@ -268,26 +277,87 @@ public class AmazonImportExportClient extends AmazonWebServiceClient implements 
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("MissingCustomsException") == null) {
+            exceptionUnmarshallersMap.put("MissingCustomsException", new MissingCustomsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingCustomsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidVersionException") == null) {
+            exceptionUnmarshallersMap.put("InvalidVersionException", new InvalidVersionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidVersionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MultipleRegionsException") == null) {
+            exceptionUnmarshallersMap.put("MultipleRegionsException", new MultipleRegionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MultipleRegionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CreateJobQuotaExceededException") == null) {
+            exceptionUnmarshallersMap.put("CreateJobQuotaExceededException", new CreateJobQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CreateJobQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnableToUpdateJobIdException") == null) {
+            exceptionUnmarshallersMap.put("UnableToUpdateJobIdException", new UnableToUpdateJobIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnableToUpdateJobIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterException") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterException", new InvalidParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchBucketException") == null) {
+            exceptionUnmarshallersMap.put("NoSuchBucketException", new NoSuchBucketExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchBucketExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BucketPermissionException") == null) {
+            exceptionUnmarshallersMap.put("BucketPermissionException", new BucketPermissionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BucketPermissionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidCustomsException") == null) {
+            exceptionUnmarshallersMap.put("InvalidCustomsException", new InvalidCustomsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidCustomsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnableToCancelJobIdException") == null) {
+            exceptionUnmarshallersMap.put("UnableToCancelJobIdException", new UnableToCancelJobIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnableToCancelJobIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CanceledJobIdException") == null) {
+            exceptionUnmarshallersMap.put("CanceledJobIdException", new CanceledJobIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CanceledJobIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ExpiredJobIdException") == null) {
+            exceptionUnmarshallersMap.put("ExpiredJobIdException", new ExpiredJobIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ExpiredJobIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidJobIdException") == null) {
+            exceptionUnmarshallersMap.put("InvalidJobIdException", new InvalidJobIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidJobIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidManifestFieldException") == null) {
+            exceptionUnmarshallersMap.put("InvalidManifestFieldException", new InvalidManifestFieldExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidManifestFieldExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MissingParameterException") == null) {
+            exceptionUnmarshallersMap.put("MissingParameterException", new MissingParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MissingManifestFieldException") == null) {
+            exceptionUnmarshallersMap.put("MissingManifestFieldException", new MissingManifestFieldExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingManifestFieldExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MalformedManifestException") == null) {
+            exceptionUnmarshallersMap.put("MalformedManifestException", new MalformedManifestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MalformedManifestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidAccessKeyIdException") == null) {
+            exceptionUnmarshallersMap.put("InvalidAccessKeyIdException", new InvalidAccessKeyIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAccessKeyIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidAddressException") == null) {
+            exceptionUnmarshallersMap.put("InvalidAddressException", new InvalidAddressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAddressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidFileSystemException") == null) {
+            exceptionUnmarshallersMap.put("InvalidFileSystemException", new InvalidFileSystemExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidFileSystemExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.importexport.model.AmazonImportExportException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.importexport.model.AmazonImportExportException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -818,7 +888,7 @@ public class AmazonImportExportClient extends AmazonWebServiceClient implements 
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

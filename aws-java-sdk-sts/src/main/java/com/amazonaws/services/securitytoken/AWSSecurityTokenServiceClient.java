@@ -76,9 +76,18 @@ public class AWSSecurityTokenServiceClient extends AmazonWebServiceClient implem
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     // STS regions that originally mapped to the global endpoint but now have region-specific endpoints
     private static final Set<String> LEGACY_ENABLED_REGIONS;
@@ -294,14 +303,39 @@ public class AWSSecurityTokenServiceClient extends AmazonWebServiceClient implem
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InvalidAuthorizationMessageException") == null) {
+            exceptionUnmarshallersMap.put("InvalidAuthorizationMessageException", new InvalidAuthorizationMessageExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidAuthorizationMessageExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ExpiredTokenException") == null) {
+            exceptionUnmarshallersMap.put("ExpiredTokenException", new ExpiredTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ExpiredTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PackedPolicyTooLarge") == null) {
+            exceptionUnmarshallersMap.put("PackedPolicyTooLarge", new PackedPolicyTooLargeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PackedPolicyTooLargeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RegionDisabledException") == null) {
+            exceptionUnmarshallersMap.put("RegionDisabledException", new RegionDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RegionDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MalformedPolicyDocument") == null) {
+            exceptionUnmarshallersMap.put("MalformedPolicyDocument", new MalformedPolicyDocumentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MalformedPolicyDocumentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IDPCommunicationError") == null) {
+            exceptionUnmarshallersMap.put("IDPCommunicationError", new IDPCommunicationErrorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IDPCommunicationErrorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidIdentityToken") == null) {
+            exceptionUnmarshallersMap.put("InvalidIdentityToken", new InvalidIdentityTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidIdentityTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IDPRejectedClaim") == null) {
+            exceptionUnmarshallersMap.put("IDPRejectedClaim", new IDPRejectedClaimExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IDPRejectedClaimExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.securitytoken.model.AWSSecurityTokenServiceException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.securitytoken.model.AWSSecurityTokenServiceException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -1679,7 +1713,7 @@ public class AWSSecurityTokenServiceClient extends AmazonWebServiceClient implem
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

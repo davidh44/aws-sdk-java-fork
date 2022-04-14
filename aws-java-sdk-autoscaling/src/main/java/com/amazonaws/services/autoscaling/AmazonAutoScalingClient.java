@@ -86,9 +86,18 @@ public class AmazonAutoScalingClient extends AmazonWebServiceClient implements A
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Auto Scaling. A credentials provider chain will be used that
@@ -279,15 +288,43 @@ public class AmazonAutoScalingClient extends AmazonWebServiceClient implements A
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InstanceRefreshInProgress") == null) {
+            exceptionUnmarshallersMap.put("InstanceRefreshInProgress", new InstanceRefreshInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InstanceRefreshInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ScalingActivityInProgress") == null) {
+            exceptionUnmarshallersMap.put("ScalingActivityInProgress", new ScalingActivityInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ScalingActivityInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNextToken") == null) {
+            exceptionUnmarshallersMap.put("InvalidNextToken", new InvalidNextTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNextTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("LimitExceeded", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("AlreadyExists", new AlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ActiveInstanceRefreshNotFound") == null) {
+            exceptionUnmarshallersMap.put("ActiveInstanceRefreshNotFound", new ActiveInstanceRefreshNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ActiveInstanceRefreshNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceContention") == null) {
+            exceptionUnmarshallersMap.put("ResourceContention", new ResourceContentionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceContentionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ServiceLinkedRoleFailure") == null) {
+            exceptionUnmarshallersMap.put("ServiceLinkedRoleFailure", new ServiceLinkedRoleFailureExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ServiceLinkedRoleFailureExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceInUse") == null) {
+            exceptionUnmarshallersMap.put("ResourceInUse", new ResourceInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceInUseExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.autoscaling.model.AmazonAutoScalingException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.autoscaling.model.AmazonAutoScalingException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -4944,7 +4981,7 @@ public class AmazonAutoScalingClient extends AmazonWebServiceClient implements A
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

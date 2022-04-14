@@ -91,8 +91,8 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
     private String outputFormat;
     /**
      * <p>
-     * Each entry in this array displays information about one or more metrics that include extended statistics in the
-     * metric stream. For more information about extended statistics, see <a
+     * Each entry in this array displays information about one or more metrics that include additional statistics in the
+     * metric stream. For more information about the additional statistics, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>.
      * </p>
@@ -634,14 +634,14 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Each entry in this array displays information about one or more metrics that include extended statistics in the
-     * metric stream. For more information about extended statistics, see <a
+     * Each entry in this array displays information about one or more metrics that include additional statistics in the
+     * metric stream. For more information about the additional statistics, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>.
      * </p>
      * 
-     * @return Each entry in this array displays information about one or more metrics that include extended statistics
-     *         in the metric stream. For more information about extended statistics, see <a
+     * @return Each entry in this array displays information about one or more metrics that include additional
+     *         statistics in the metric stream. For more information about the additional statistics, see <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *         CloudWatch statistics definitions</a>.
      */
@@ -655,15 +655,15 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Each entry in this array displays information about one or more metrics that include extended statistics in the
-     * metric stream. For more information about extended statistics, see <a
+     * Each entry in this array displays information about one or more metrics that include additional statistics in the
+     * metric stream. For more information about the additional statistics, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>.
      * </p>
      * 
      * @param statisticsConfigurations
-     *        Each entry in this array displays information about one or more metrics that include extended statistics
-     *        in the metric stream. For more information about extended statistics, see <a
+     *        Each entry in this array displays information about one or more metrics that include additional statistics
+     *        in the metric stream. For more information about the additional statistics, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *        CloudWatch statistics definitions</a>.
      */
@@ -679,8 +679,8 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Each entry in this array displays information about one or more metrics that include extended statistics in the
-     * metric stream. For more information about extended statistics, see <a
+     * Each entry in this array displays information about one or more metrics that include additional statistics in the
+     * metric stream. For more information about the additional statistics, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>.
      * </p>
@@ -691,8 +691,8 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param statisticsConfigurations
-     *        Each entry in this array displays information about one or more metrics that include extended statistics
-     *        in the metric stream. For more information about extended statistics, see <a
+     *        Each entry in this array displays information about one or more metrics that include additional statistics
+     *        in the metric stream. For more information about the additional statistics, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *        CloudWatch statistics definitions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -710,15 +710,15 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Each entry in this array displays information about one or more metrics that include extended statistics in the
-     * metric stream. For more information about extended statistics, see <a
+     * Each entry in this array displays information about one or more metrics that include additional statistics in the
+     * metric stream. For more information about the additional statistics, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      * CloudWatch statistics definitions</a>.
      * </p>
      * 
      * @param statisticsConfigurations
-     *        Each entry in this array displays information about one or more metrics that include extended statistics
-     *        in the metric stream. For more information about extended statistics, see <a
+     *        Each entry in this array displays information about one or more metrics that include additional statistics
+     *        in the metric stream. For more information about the additional statistics, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
      *        CloudWatch statistics definitions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

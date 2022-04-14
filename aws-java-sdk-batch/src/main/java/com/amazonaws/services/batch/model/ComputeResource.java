@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * An object representing an Batch compute resource. For more information, see <a
- * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in the
+ * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in the
  * <i>Batch User Guide</i>.
  * </p>
  * 
@@ -34,13 +34,13 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      * <code>FARGATE_SPOT</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <p>
      * If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      * <code>spotIamFleetRole</code> parameter. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      */
@@ -51,7 +51,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * can be allocated. This might be because of availability of the instance type in the Region or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service
      * limits</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation Strategies</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -69,7 +69,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>
      * then additional jobs aren't run until the currently running jobs have completed. This allocation strategy keeps
      * costs lower but can limit scaling. If you are using Spot Fleets with <code>BEST_FIT</code> then the Spot Fleet
-     * IAM Role must be specified.
+     * IAM Role must be specified. Compute resources that use a <code>BEST_FIT</code> allocation strategy don't support
+     * infrastructure updates and can't update some parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </dd>
      * <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -185,7 +188,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The VPC subnets where the compute resources are launched. These subnets must be within the same VPC. Fargate
      * compute resources can contain up to 16 subnets. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
      */
@@ -220,7 +223,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
-     * Instance Role</a> in the <i>Batch User Guide</i>.
+     * instance role</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -251,7 +254,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * parallel jobs to your compute environment, you should consider creating a cluster placement group and associate
      * it with your compute resources. This keeps your multi-node parallel job on a logical grouping of instances within
      * a single Availability Zone with high network flow potential. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <note>
@@ -281,7 +284,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code> compute
      * environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if the allocation
      * strategy isn't specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet Role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -294,7 +297,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <b>AmazonEC2SpotFleetTaggingRole</b> managed policy. The previously recommended <b>AmazonEC2SpotFleetRole</b>
      * managed policy doesn't have the required permissions to tag Spot Instances. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     * Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     * instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      */
@@ -304,8 +307,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The launch template to use for your compute resources. Any other compute resource parameters that you specify in
      * a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch template. You must
      * specify either the launch template ID or launch template name in the request, but not both. For more information,
-     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     * Support</a> in the <i>Batch User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     * support</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -334,13 +337,13 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      * <code>FARGATE_SPOT</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <p>
      * If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      * <code>spotIamFleetRole</code> parameter. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * 
@@ -348,11 +351,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      *        <code>FARGATE_SPOT</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.</p>
+     *        environments</a> in the <i>Batch User Guide</i>.</p>
      *        <p>
      *        If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      *        <code>spotIamFleetRole</code> parameter. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
      *        role</a> in the <i>Batch User Guide</i>.
      * @see CRType
      */
@@ -365,24 +368,24 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      * <code>FARGATE_SPOT</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <p>
      * If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      * <code>spotIamFleetRole</code> parameter. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @return The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      *         <code>FARGATE_SPOT</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *         Environments</a> in the <i>Batch User Guide</i>.</p>
+     *         environments</a> in the <i>Batch User Guide</i>.</p>
      *         <p>
      *         If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      *         <code>spotIamFleetRole</code> parameter. For more information, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
      *         role</a> in the <i>Batch User Guide</i>.
      * @see CRType
      */
@@ -395,13 +398,13 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      * <code>FARGATE_SPOT</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <p>
      * If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      * <code>spotIamFleetRole</code> parameter. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * 
@@ -409,11 +412,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      *        <code>FARGATE_SPOT</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.</p>
+     *        environments</a> in the <i>Batch User Guide</i>.</p>
      *        <p>
      *        If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      *        <code>spotIamFleetRole</code> parameter. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
      *        role</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CRType
@@ -428,13 +431,13 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      * <code>FARGATE_SPOT</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <p>
      * If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      * <code>spotIamFleetRole</code> parameter. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * 
@@ -442,11 +445,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      *        <code>FARGATE_SPOT</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.</p>
+     *        environments</a> in the <i>Batch User Guide</i>.</p>
      *        <p>
      *        If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      *        <code>spotIamFleetRole</code> parameter. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
      *        role</a> in the <i>Batch User Guide</i>.
      * @see CRType
      */
@@ -459,13 +462,13 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      * <code>FARGATE_SPOT</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute environments</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <p>
      * If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      * <code>spotIamFleetRole</code> parameter. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * 
@@ -473,11 +476,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The type of compute environment: <code>EC2</code>, <code>SPOT</code>, <code>FARGATE</code>, or
      *        <code>FARGATE_SPOT</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute
-     *        Environments</a> in the <i>Batch User Guide</i>.</p>
+     *        environments</a> in the <i>Batch User Guide</i>.</p>
      *        <p>
      *        If you choose <code>SPOT</code>, you must also specify an Amazon EC2 Spot Fleet role with the
      *        <code>spotIamFleetRole</code> parameter. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
      *        role</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CRType
@@ -494,7 +497,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * can be allocated. This might be because of availability of the instance type in the Region or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service
      * limits</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation Strategies</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -512,7 +515,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>
      * then additional jobs aren't run until the currently running jobs have completed. This allocation strategy keeps
      * costs lower but can limit scaling. If you are using Spot Fleets with <code>BEST_FIT</code> then the Spot Fleet
-     * IAM Role must be specified.
+     * IAM Role must be specified. Compute resources that use a <code>BEST_FIT</code> allocation strategy don't support
+     * infrastructure updates and can't update some parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </dd>
      * <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -544,7 +550,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation
-     *        Strategies</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        strategies</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -559,7 +565,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        reaching <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a> then additional jobs aren't run until the currently running jobs have completed. This
      *        allocation strategy keeps costs lower but can limit scaling. If you are using Spot Fleets with
-     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified.
+     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified. Compute resources that use a
+     *        <code>BEST_FIT</code> allocation strategy don't support infrastructure updates and can't update some
+     *        parameters. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
      *        </p>
      *        </dd>
      *        <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -596,7 +606,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * can be allocated. This might be because of availability of the instance type in the Region or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service
      * limits</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation Strategies</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -614,7 +624,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>
      * then additional jobs aren't run until the currently running jobs have completed. This allocation strategy keeps
      * costs lower but can limit scaling. If you are using Spot Fleets with <code>BEST_FIT</code> then the Spot Fleet
-     * IAM Role must be specified.
+     * IAM Role must be specified. Compute resources that use a <code>BEST_FIT</code> allocation strategy don't support
+     * infrastructure updates and can't update some parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </dd>
      * <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -645,7 +658,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *         service limits</a>. For more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation
-     *         Strategies</a> in the <i>Batch User Guide</i>.</p> <note>
+     *         strategies</a> in the <i>Batch User Guide</i>.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be
      *         specified.
@@ -661,7 +674,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         reaching <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon
      *         EC2 service limits</a> then additional jobs aren't run until the currently running jobs have completed.
      *         This allocation strategy keeps costs lower but can limit scaling. If you are using Spot Fleets with
-     *         <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified.
+     *         <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified. Compute resources that use a
+     *         <code>BEST_FIT</code> allocation strategy don't support infrastructure updates and can't update some
+     *         parameters. For more information, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *         compute environments</a> in the <i>Batch User Guide</i>.
      *         </p>
      *         </dd>
      *         <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -698,7 +715,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * can be allocated. This might be because of availability of the instance type in the Region or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service
      * limits</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation Strategies</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -716,7 +733,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>
      * then additional jobs aren't run until the currently running jobs have completed. This allocation strategy keeps
      * costs lower but can limit scaling. If you are using Spot Fleets with <code>BEST_FIT</code> then the Spot Fleet
-     * IAM Role must be specified.
+     * IAM Role must be specified. Compute resources that use a <code>BEST_FIT</code> allocation strategy don't support
+     * infrastructure updates and can't update some parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </dd>
      * <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -748,7 +768,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation
-     *        Strategies</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        strategies</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -763,7 +783,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        reaching <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a> then additional jobs aren't run until the currently running jobs have completed. This
      *        allocation strategy keeps costs lower but can limit scaling. If you are using Spot Fleets with
-     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified.
+     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified. Compute resources that use a
+     *        <code>BEST_FIT</code> allocation strategy don't support infrastructure updates and can't update some
+     *        parameters. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
      *        </p>
      *        </dd>
      *        <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -802,7 +826,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * can be allocated. This might be because of availability of the instance type in the Region or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service
      * limits</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation Strategies</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -820,7 +844,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>
      * then additional jobs aren't run until the currently running jobs have completed. This allocation strategy keeps
      * costs lower but can limit scaling. If you are using Spot Fleets with <code>BEST_FIT</code> then the Spot Fleet
-     * IAM Role must be specified.
+     * IAM Role must be specified. Compute resources that use a <code>BEST_FIT</code> allocation strategy don't support
+     * infrastructure updates and can't update some parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </dd>
      * <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -852,7 +879,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation
-     *        Strategies</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        strategies</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -867,7 +894,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        reaching <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a> then additional jobs aren't run until the currently running jobs have completed. This
      *        allocation strategy keeps costs lower but can limit scaling. If you are using Spot Fleets with
-     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified.
+     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified. Compute resources that use a
+     *        <code>BEST_FIT</code> allocation strategy don't support infrastructure updates and can't update some
+     *        parameters. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
      *        </p>
      *        </dd>
      *        <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -904,7 +935,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * can be allocated. This might be because of availability of the instance type in the Region or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service
      * limits</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation Strategies</a> in
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation strategies</a> in
      * the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -922,7 +953,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 service limits</a>
      * then additional jobs aren't run until the currently running jobs have completed. This allocation strategy keeps
      * costs lower but can limit scaling. If you are using Spot Fleets with <code>BEST_FIT</code> then the Spot Fleet
-     * IAM Role must be specified.
+     * IAM Role must be specified. Compute resources that use a <code>BEST_FIT</code> allocation strategy don't support
+     * infrastructure updates and can't update some parameters. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </dd>
      * <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -954,7 +988,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        or <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html">Allocation
-     *        Strategies</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        strategies</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -969,7 +1003,11 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        reaching <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2
      *        service limits</a> then additional jobs aren't run until the currently running jobs have completed. This
      *        allocation strategy keeps costs lower but can limit scaling. If you are using Spot Fleets with
-     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified.
+     *        <code>BEST_FIT</code> then the Spot Fleet IAM Role must be specified. Compute resources that use a
+     *        <code>BEST_FIT</code> allocation strategy don't support infrastructure updates and can't update some
+     *        parameters. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
      *        </p>
      *        </dd>
      *        <dt>BEST_FIT_PROGRESSIVE</dt>
@@ -1584,13 +1622,13 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The VPC subnets where the compute resources are launched. These subnets must be within the same VPC. Fargate
      * compute resources can contain up to 16 subnets. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
      * 
      * @return The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *         Fargate compute resources can contain up to 16 subnets. For more information, see <a
-     *         href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the
+     *         href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
      *         <i>Amazon VPC User Guide</i>.
      */
 
@@ -1602,14 +1640,14 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The VPC subnets where the compute resources are launched. These subnets must be within the same VPC. Fargate
      * compute resources can contain up to 16 subnets. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
      * 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *        Fargate compute resources can contain up to 16 subnets. For more information, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
      *        <i>Amazon VPC User Guide</i>.
      */
 
@@ -1626,7 +1664,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The VPC subnets where the compute resources are launched. These subnets must be within the same VPC. Fargate
      * compute resources can contain up to 16 subnets. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
      * <p>
@@ -1638,7 +1676,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *        Fargate compute resources can contain up to 16 subnets. For more information, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
      *        <i>Amazon VPC User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1657,14 +1695,14 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The VPC subnets where the compute resources are launched. These subnets must be within the same VPC. Fargate
      * compute resources can contain up to 16 subnets. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
      * 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *        Fargate compute resources can contain up to 16 subnets. For more information, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and Subnets</a> in the
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
      *        <i>Amazon VPC User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1862,7 +1900,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
-     * Instance Role</a> in the <i>Batch User Guide</i>.
+     * instance role</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1876,8 +1914,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        <code> <i>ecsInstanceRole</i> </code> or
      *        <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS Instance
-     *        Role</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance
+     *        role</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -1894,7 +1932,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
-     * Instance Role</a> in the <i>Batch User Guide</i>.
+     * instance role</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1907,8 +1945,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         <code> <i>ecsInstanceRole</i> </code> or
      *         <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For
      *         more information, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS Instance
-     *         Role</a> in the <i>Batch User Guide</i>.</p> <note>
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance
+     *         role</a> in the <i>Batch User Guide</i>.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be
      *         specified.
@@ -1926,7 +1964,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <code> <i>ecsInstanceRole</i> </code> or
      * <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS
-     * Instance Role</a> in the <i>Batch User Guide</i>.
+     * instance role</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1940,8 +1978,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        <code> <i>ecsInstanceRole</i> </code> or
      *        <code>arn:aws:iam::<i>&lt;aws_account_id&gt;</i>:instance-profile/<i>ecsInstanceRole</i> </code>. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS Instance
-     *        Role</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html">Amazon ECS instance
+     *        role</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -2085,7 +2123,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * parallel jobs to your compute environment, you should consider creating a cluster placement group and associate
      * it with your compute resources. This keeps your multi-node parallel job on a logical grouping of instances within
      * a single Availability Zone with high network flow potential. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <note>
@@ -2100,7 +2138,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        group and associate it with your compute resources. This keeps your multi-node parallel job on a logical
      *        grouping of instances within a single Availability Zone with high network flow potential. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in
      *        the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
@@ -2117,7 +2155,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * parallel jobs to your compute environment, you should consider creating a cluster placement group and associate
      * it with your compute resources. This keeps your multi-node parallel job on a logical grouping of instances within
      * a single Availability Zone with high network flow potential. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <note>
@@ -2131,7 +2169,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         group and associate it with your compute resources. This keeps your multi-node parallel job on a logical
      *         grouping of instances within a single Availability Zone with high network flow potential. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in
      *         the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be
@@ -2149,7 +2187,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * parallel jobs to your compute environment, you should consider creating a cluster placement group and associate
      * it with your compute resources. This keeps your multi-node parallel job on a logical grouping of instances within
      * a single Availability Zone with high network flow potential. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * <note>
@@ -2164,7 +2202,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        group and associate it with your compute resources. This keeps your multi-node parallel job on a logical
      *        grouping of instances within a single Availability Zone with high network flow potential. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in
      *        the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
@@ -2271,7 +2309,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code> compute
      * environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if the allocation
      * strategy isn't specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet Role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -2284,7 +2322,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <b>AmazonEC2SpotFleetTaggingRole</b> managed policy. The previously recommended <b>AmazonEC2SpotFleetRole</b>
      * managed policy doesn't have the required permissions to tag Spot Instances. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     * Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     * instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * 
@@ -2292,8 +2330,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code>
      *        compute environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if
      *        the allocation strategy isn't specified. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
-     *        Role</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
+     *        role</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -2304,7 +2342,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        <b>AmazonEC2SpotFleetRole</b> managed policy doesn't have the required permissions to tag Spot Instances.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     *        Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     *        instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      *        </p>
      */
 
@@ -2317,7 +2355,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code> compute
      * environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if the allocation
      * strategy isn't specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet Role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -2330,15 +2368,15 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <b>AmazonEC2SpotFleetTaggingRole</b> managed policy. The previously recommended <b>AmazonEC2SpotFleetRole</b>
      * managed policy doesn't have the required permissions to tag Spot Instances. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     * Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     * instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * 
      * @return The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code>
      *         compute environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if
      *         the allocation strategy isn't specified. For more information, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
-     *         Role</a> in the <i>Batch User Guide</i>.</p> <note>
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
+     *         role</a> in the <i>Batch User Guide</i>.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be
      *         specified.
@@ -2350,7 +2388,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         <b>AmazonEC2SpotFleetRole</b> managed policy doesn't have the required permissions to tag Spot Instances.
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     *         Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     *         instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      *         </p>
      */
 
@@ -2363,7 +2401,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code> compute
      * environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if the allocation
      * strategy isn't specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet Role</a>
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet role</a>
      * in the <i>Batch User Guide</i>.
      * </p>
      * <note>
@@ -2376,7 +2414,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * <b>AmazonEC2SpotFleetTaggingRole</b> managed policy. The previously recommended <b>AmazonEC2SpotFleetRole</b>
      * managed policy doesn't have the required permissions to tag Spot Instances. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     * Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     * instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * 
@@ -2384,8 +2422,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a <code>SPOT</code>
      *        compute environment. This role is required if the allocation strategy set to <code>BEST_FIT</code> or if
      *        the allocation strategy isn't specified. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 Spot Fleet
-     *        Role</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/spot_fleet_IAM_role.html">Amazon EC2 spot fleet
+     *        role</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -2396,7 +2434,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        <b>AmazonEC2SpotFleetRole</b> managed policy doesn't have the required permissions to tag Spot Instances.
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#spot-instance-no-tag">Spot
-     *        Instances not tagged on creation</a> in the <i>Batch User Guide</i>.
+     *        instances not tagged on creation</a> in the <i>Batch User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2411,8 +2449,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The launch template to use for your compute resources. Any other compute resource parameters that you specify in
      * a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch template. You must
      * specify either the launch template ID or launch template name in the request, but not both. For more information,
-     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     * Support</a> in the <i>Batch User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     * support</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2425,8 +2463,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        specify in a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch
      *        template. You must specify either the launch template ID or launch template name in the request, but not
      *        both. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     *        Support</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     *        support</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>
@@ -2441,8 +2479,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The launch template to use for your compute resources. Any other compute resource parameters that you specify in
      * a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch template. You must
      * specify either the launch template ID or launch template name in the request, but not both. For more information,
-     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     * Support</a> in the <i>Batch User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     * support</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2454,8 +2492,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         specify in a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch
      *         template. You must specify either the launch template ID or launch template name in the request, but not
      *         both. For more information, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     *         Support</a> in the <i>Batch User Guide</i>.</p> <note>
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     *         support</a> in the <i>Batch User Guide</i>.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be
      *         specified.
@@ -2471,8 +2509,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * The launch template to use for your compute resources. Any other compute resource parameters that you specify in
      * a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch template. You must
      * specify either the launch template ID or launch template name in the request, but not both. For more information,
-     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     * Support</a> in the <i>Batch User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     * support</a> in the <i>Batch User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2485,8 +2523,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        specify in a <a>CreateComputeEnvironment</a> API operation override the same parameters in the launch
      *        template. You must specify either the launch template ID or launch template name in the request, but not
      *        both. For more information, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch Template
-     *        Support</a> in the <i>Batch User Guide</i>.</p> <note>
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Launch template
+     *        support</a> in the <i>Batch User Guide</i>.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      *        </p>

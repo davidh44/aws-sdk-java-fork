@@ -1,3 +1,32 @@
+# __1.12.200__ __2022-04-14__
+## __AWS Batch__
+  - ### Features
+    - Enables configuration updates for compute environments with BEST_FIT_PROGRESSIVE and SPOT_CAPACITY_OPTIMIZED allocation strategies.
+
+## __AWS Glue__
+  - ### Features
+    - Auto Scaling for Glue version 3.0 and later jobs to dynamically scale compute resources. This SDK change provides customers with the auto-scaled DPU usage
+
+## __AWS SDK for Java__
+  - ### Features
+    - Pass _X_AMZN_TRACE_ID environment variable through to X-Amzn-Trace-Id header for AWS services running on Lambda.
+
+## __Amazon AppStream__
+  - ### Features
+    - Includes updates for create and update fleet APIs to manage the session scripts locations for Elastic fleets.
+
+## __Amazon Appflow__
+  - ### Features
+    - Enables users to pass custom token URL parameters for Oauth2 authentication during create connector profile
+
+## __Amazon CloudWatch__
+  - ### Features
+    - Updates documentation for additional statistics in CloudWatch Metric Streams.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Amazon EC2.
+
 # __1.12.199__ __2022-04-13__
 ## __Amazon CloudWatch__
   - ### Features

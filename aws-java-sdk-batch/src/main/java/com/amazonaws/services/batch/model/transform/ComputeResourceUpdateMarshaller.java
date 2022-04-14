@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.batch.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -38,6 +39,30 @@ public class ComputeResourceUpdateMarshaller {
             .marshallLocationName("subnets").build();
     private static final MarshallingInfo<List> SECURITYGROUPIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("securityGroupIds").build();
+    private static final MarshallingInfo<String> ALLOCATIONSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allocationStrategy").build();
+    private static final MarshallingInfo<List> INSTANCETYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("instanceTypes").build();
+    private static final MarshallingInfo<String> EC2KEYPAIR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2KeyPair").build();
+    private static final MarshallingInfo<String> INSTANCEROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceRole").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> PLACEMENTGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("placementGroup").build();
+    private static final MarshallingInfo<Integer> BIDPERCENTAGE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bidPercentage").build();
+    private static final MarshallingInfo<StructuredPojo> LAUNCHTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchTemplate").build();
+    private static final MarshallingInfo<List> EC2CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2Configuration").build();
+    private static final MarshallingInfo<Boolean> UPDATETOLATESTIMAGEVERSION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateToLatestImageVersion").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
+    private static final MarshallingInfo<String> IMAGEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("imageId").build();
 
     private static final ComputeResourceUpdateMarshaller instance = new ComputeResourceUpdateMarshaller();
 
@@ -60,6 +85,18 @@ public class ComputeResourceUpdateMarshaller {
             protocolMarshaller.marshall(computeResourceUpdate.getDesiredvCpus(), DESIREDVCPUS_BINDING);
             protocolMarshaller.marshall(computeResourceUpdate.getSubnets(), SUBNETS_BINDING);
             protocolMarshaller.marshall(computeResourceUpdate.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getAllocationStrategy(), ALLOCATIONSTRATEGY_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getInstanceTypes(), INSTANCETYPES_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getEc2KeyPair(), EC2KEYPAIR_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getInstanceRole(), INSTANCEROLE_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getPlacementGroup(), PLACEMENTGROUP_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getBidPercentage(), BIDPERCENTAGE_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getLaunchTemplate(), LAUNCHTEMPLATE_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getEc2Configuration(), EC2CONFIGURATION_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getUpdateToLatestImageVersion(), UPDATETOLATESTIMAGEVERSION_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(computeResourceUpdate.getImageId(), IMAGEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

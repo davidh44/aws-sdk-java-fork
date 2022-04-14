@@ -98,9 +98,18 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Elastic Load Balancing. A credentials provider chain will be
@@ -293,28 +302,95 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("UnsupportedProtocol") == null) {
+            exceptionUnmarshallersMap.put("UnsupportedProtocol", new UnsupportedProtocolExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnsupportedProtocolExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LoadBalancerAttributeNotFound") == null) {
+            exceptionUnmarshallersMap.put("LoadBalancerAttributeNotFound", new LoadBalancerAttributeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LoadBalancerAttributeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LoadBalancerNotFound") == null) {
+            exceptionUnmarshallersMap.put("LoadBalancerNotFound", new LoadBalancerNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LoadBalancerNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyLoadBalancers") == null) {
+            exceptionUnmarshallersMap.put("TooManyLoadBalancers", new TooManyLoadBalancersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyLoadBalancersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidConfigurationRequest") == null) {
+            exceptionUnmarshallersMap.put("InvalidConfigurationRequest", new InvalidConfigurationRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidConfigurationRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSecurityGroup") == null) {
+            exceptionUnmarshallersMap.put("InvalidSecurityGroup", new InvalidSecurityGroupExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSecurityGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateLoadBalancerName") == null) {
+            exceptionUnmarshallersMap.put("DuplicateLoadBalancerName", new DuplicateLoadBalancerNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateLoadBalancerNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DependencyThrottle") == null) {
+            exceptionUnmarshallersMap.put("DependencyThrottle", new DependencyThrottleExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DependencyThrottleExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OperationNotPermitted") == null) {
+            exceptionUnmarshallersMap.put("OperationNotPermitted", new OperationNotPermittedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationNotPermittedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PolicyNotFound") == null) {
+            exceptionUnmarshallersMap.put("PolicyNotFound", new PolicyNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PolicyNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CertificateNotFound") == null) {
+            exceptionUnmarshallersMap.put("CertificateNotFound", new CertificateNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CertificateNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateTagKeys") == null) {
+            exceptionUnmarshallersMap.put("DuplicateTagKeys", new DuplicateTagKeysExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateTagKeysExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTags") == null) {
+            exceptionUnmarshallersMap.put("TooManyTags", new TooManyTagsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTagsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ListenerNotFound") == null) {
+            exceptionUnmarshallersMap.put("ListenerNotFound", new ListenerNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ListenerNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyPolicies") == null) {
+            exceptionUnmarshallersMap.put("TooManyPolicies", new TooManyPoliciesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyPoliciesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicatePolicyName") == null) {
+            exceptionUnmarshallersMap.put("DuplicatePolicyName", new DuplicatePolicyNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicatePolicyNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubnetNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubnetNotFound", new SubnetNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubnetNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateListener") == null) {
+            exceptionUnmarshallersMap.put("DuplicateListener", new DuplicateListenerExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateListenerExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidScheme") == null) {
+            exceptionUnmarshallersMap.put("InvalidScheme", new InvalidSchemeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSchemeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PolicyTypeNotFound") == null) {
+            exceptionUnmarshallersMap.put("PolicyTypeNotFound", new PolicyTypeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PolicyTypeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSubnet") == null) {
+            exceptionUnmarshallersMap.put("InvalidSubnet", new InvalidSubnetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSubnetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidInstance") == null) {
+            exceptionUnmarshallersMap.put("InvalidInstance", new InvalidInstanceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidInstanceExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.elasticloadbalancing.model.AmazonElasticLoadBalancingException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.elasticloadbalancing.model.AmazonElasticLoadBalancingException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -2507,7 +2583,7 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

@@ -56,6 +56,11 @@ public class OAuth2PropertiesJsonUnmarshaller implements Unmarshaller<OAuth2Prop
                     context.nextToken();
                     oAuth2Properties.setOAuth2GrantType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("tokenUrlCustomProperties", targetDepth)) {
+                    context.nextToken();
+                    oAuth2Properties.setTokenUrlCustomProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

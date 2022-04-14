@@ -97,7 +97,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A list of container overrides in the JSON format that specify the name of a container in the specified job
-     * definition and the overrides it should receive. You can override the default command for a container, which is
+     * definition and the overrides it receives. You can override the default command for a container, which is
      * specified in the job definition or the Docker image, with a <code>command</code> override. You can also override
      * existing environment variables on a container or add new environment variables to it with an
      * <code>environment</code> override.
@@ -649,7 +649,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A list of container overrides in the JSON format that specify the name of a container in the specified job
-     * definition and the overrides it should receive. You can override the default command for a container, which is
+     * definition and the overrides it receives. You can override the default command for a container, which is
      * specified in the job definition or the Docker image, with a <code>command</code> override. You can also override
      * existing environment variables on a container or add new environment variables to it with an
      * <code>environment</code> override.
@@ -657,10 +657,10 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param containerOverrides
      *        A list of container overrides in the JSON format that specify the name of a container in the specified job
-     *        definition and the overrides it should receive. You can override the default command for a container,
-     *        which is specified in the job definition or the Docker image, with a <code>command</code> override. You
-     *        can also override existing environment variables on a container or add new environment variables to it
-     *        with an <code>environment</code> override.
+     *        definition and the overrides it receives. You can override the default command for a container, which is
+     *        specified in the job definition or the Docker image, with a <code>command</code> override. You can also
+     *        override existing environment variables on a container or add new environment variables to it with an
+     *        <code>environment</code> override.
      */
 
     public void setContainerOverrides(ContainerOverrides containerOverrides) {
@@ -670,17 +670,17 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A list of container overrides in the JSON format that specify the name of a container in the specified job
-     * definition and the overrides it should receive. You can override the default command for a container, which is
+     * definition and the overrides it receives. You can override the default command for a container, which is
      * specified in the job definition or the Docker image, with a <code>command</code> override. You can also override
      * existing environment variables on a container or add new environment variables to it with an
      * <code>environment</code> override.
      * </p>
      * 
      * @return A list of container overrides in the JSON format that specify the name of a container in the specified
-     *         job definition and the overrides it should receive. You can override the default command for a container,
-     *         which is specified in the job definition or the Docker image, with a <code>command</code> override. You
-     *         can also override existing environment variables on a container or add new environment variables to it
-     *         with an <code>environment</code> override.
+     *         job definition and the overrides it receives. You can override the default command for a container, which
+     *         is specified in the job definition or the Docker image, with a <code>command</code> override. You can
+     *         also override existing environment variables on a container or add new environment variables to it with
+     *         an <code>environment</code> override.
      */
 
     public ContainerOverrides getContainerOverrides() {
@@ -690,7 +690,7 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A list of container overrides in the JSON format that specify the name of a container in the specified job
-     * definition and the overrides it should receive. You can override the default command for a container, which is
+     * definition and the overrides it receives. You can override the default command for a container, which is
      * specified in the job definition or the Docker image, with a <code>command</code> override. You can also override
      * existing environment variables on a container or add new environment variables to it with an
      * <code>environment</code> override.
@@ -698,10 +698,10 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param containerOverrides
      *        A list of container overrides in the JSON format that specify the name of a container in the specified job
-     *        definition and the overrides it should receive. You can override the default command for a container,
-     *        which is specified in the job definition or the Docker image, with a <code>command</code> override. You
-     *        can also override existing environment variables on a container or add new environment variables to it
-     *        with an <code>environment</code> override.
+     *        definition and the overrides it receives. You can override the default command for a container, which is
+     *        specified in the job definition or the Docker image, with a <code>command</code> override. You can also
+     *        override existing environment variables on a container or add new environment variables to it with an
+     *        <code>environment</code> override.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

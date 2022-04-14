@@ -2,9 +2,14 @@
     private void init() {
 <#list serviceModelRoot.shapes?values as shapeModel>
     <#if shapeModel.type == "Exception">
+        if(exceptionUnmarshallersMap.get("${shapeModel.errorCode}") == null){
+            exceptionUnmarshallersMap.put("${shapeModel.errorCode}", new ${shapeModel.shapeName}Unmarshaller());
+        }
         exceptionUnmarshallers.add(new ${shapeModel.shapeName}Unmarshaller());
     </#if>
 </#list>
+        defaultUnmarshaller =
+            new ${serviceModelRoot.exceptionUnmarshallerImpl}(${serviceModelRoot.sdkModeledExceptionBaseFqcn}.class);
         exceptionUnmarshallers.add(
             new ${serviceModelRoot.exceptionUnmarshallerImpl}(${serviceModelRoot.sdkModeledExceptionBaseFqcn}.class));
 

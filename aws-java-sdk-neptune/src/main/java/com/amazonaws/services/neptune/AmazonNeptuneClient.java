@@ -90,9 +90,18 @@ public class AmazonNeptuneClient extends AmazonWebServiceClient implements Amazo
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     public static AmazonNeptuneClientBuilder builder() {
         return AmazonNeptuneClientBuilder.standard();
@@ -130,69 +139,259 @@ public class AmazonNeptuneClient extends AmazonWebServiceClient implements Amazo
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("DBClusterRoleNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBClusterRoleNotFound", new DBClusterRoleNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterRoleNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSnapshotNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBSnapshotNotFound", new DBSnapshotNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSnapshotNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionCategoryNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionCategoryNotFound", new SubscriptionCategoryNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionCategoryNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRestoreFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidRestoreFault", new InvalidRestoreExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRestoreExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBInstanceAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DBInstanceAlreadyExists", new DBInstanceAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBInstanceAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSnapshotAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DBSnapshotAlreadyExists", new DBSnapshotAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSnapshotAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterRoleQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("DBClusterRoleQuotaExceeded", new DBClusterRoleQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterRoleQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SNSInvalidTopic") == null) {
+            exceptionUnmarshallersMap.put("SNSInvalidTopic", new SNSInvalidTopicExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SNSInvalidTopicExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBParameterGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DBParameterGroupAlreadyExists", new DBParameterGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBParameterGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBInstanceState") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBInstanceState", new InvalidDBInstanceStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBInstanceStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBSubnetGroupStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBSubnetGroupStateFault", new InvalidDBSubnetGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBSubnetGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientDBClusterCapacityFault") == null) {
+            exceptionUnmarshallersMap.put("InsufficientDBClusterCapacityFault", new InsufficientDBClusterCapacityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientDBClusterCapacityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBSubnetStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBSubnetStateFault", new InvalidDBSubnetStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBSubnetStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CertificateNotFound") == null) {
+            exceptionUnmarshallersMap.put("CertificateNotFound", new CertificateNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CertificateNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBSecurityGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBSecurityGroupState", new InvalidDBSecurityGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBSecurityGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSubnetQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("DBSubnetQuotaExceededFault", new DBSubnetQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSubnetQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBSnapshotState") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBSnapshotState", new InvalidDBSnapshotStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBSnapshotStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSecurityGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBSecurityGroupNotFound", new DBSecurityGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSecurityGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSubnetGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("DBSubnetGroupQuotaExceeded", new DBSubnetGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSubnetGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFoundFault", new ResourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StorageTypeNotSupported") == null) {
+            exceptionUnmarshallersMap.put("StorageTypeNotSupported", new StorageTypeNotSupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StorageTypeNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientDBInstanceCapacity") == null) {
+            exceptionUnmarshallersMap.put("InsufficientDBInstanceCapacity", new InsufficientDBInstanceCapacityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientDBInstanceCapacityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBUpgradeDependencyFailure") == null) {
+            exceptionUnmarshallersMap.put("DBUpgradeDependencyFailure", new DBUpgradeDependencyFailureExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBUpgradeDependencyFailureExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSKeyNotAccessibleFault") == null) {
+            exceptionUnmarshallersMap.put("KMSKeyNotAccessibleFault", new KMSKeyNotAccessibleExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSKeyNotAccessibleExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionNotFound") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionNotFound", new SubscriptionNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterQuotaExceededFault", new DBClusterQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterEndpointNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterEndpointNotFoundFault", new DBClusterEndpointNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterEndpointNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientStorageClusterCapacity") == null) {
+            exceptionUnmarshallersMap.put("InsufficientStorageClusterCapacity", new InsufficientStorageClusterCapacityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientStorageClusterCapacityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubnetAlreadyInUse") == null) {
+            exceptionUnmarshallersMap.put("SubnetAlreadyInUse", new SubnetAlreadyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubnetAlreadyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ProvisionedIopsNotAvailableInAZFault") == null) {
+            exceptionUnmarshallersMap.put("ProvisionedIopsNotAvailableInAZFault", new ProvisionedIopsNotAvailableInAZExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ProvisionedIopsNotAvailableInAZExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterSnapshotAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterSnapshotAlreadyExistsFault", new DBClusterSnapshotAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterSnapshotAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterRoleAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DBClusterRoleAlreadyExists", new DBClusterRoleAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterRoleAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidEventSubscriptionState") == null) {
+            exceptionUnmarshallersMap.put("InvalidEventSubscriptionState", new InvalidEventSubscriptionStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidEventSubscriptionStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBParameterGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBParameterGroupNotFound", new DBParameterGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBParameterGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSubnet") == null) {
+            exceptionUnmarshallersMap.put("InvalidSubnet", new InvalidSubnetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSubnetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSubnetGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DBSubnetGroupAlreadyExists", new DBSubnetGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSubnetGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SNSNoAuthorization") == null) {
+            exceptionUnmarshallersMap.put("SNSNoAuthorization", new SNSNoAuthorizationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SNSNoAuthorizationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSubnetGroupDoesNotCoverEnoughAZs") == null) {
+            exceptionUnmarshallersMap.put("DBSubnetGroupDoesNotCoverEnoughAZs", new DBSubnetGroupDoesNotCoverEnoughAZsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSubnetGroupDoesNotCoverEnoughAZsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterSnapshotNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterSnapshotNotFoundFault", new DBClusterSnapshotNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterSnapshotNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBSubnetGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("DBSubnetGroupNotFoundFault", new DBSubnetGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBSubnetGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterEndpointQuotaExceededFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterEndpointQuotaExceededFault", new DBClusterEndpointQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterEndpointQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InstanceQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("InstanceQuotaExceeded", new InstanceQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InstanceQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterParameterGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBClusterParameterGroupNotFound", new DBClusterParameterGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterParameterGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SnapshotQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("SnapshotQuotaExceeded", new SnapshotQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SnapshotQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBInstanceNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBInstanceNotFound", new DBInstanceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBInstanceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SharedSnapshotQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("SharedSnapshotQuotaExceeded", new SharedSnapshotQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SharedSnapshotQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBClusterEndpointStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBClusterEndpointStateFault", new InvalidDBClusterEndpointStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBClusterEndpointStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBClusterStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBClusterStateFault", new InvalidDBClusterStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBClusterStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterAlreadyExistsFault", new DBClusterAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidVPCNetworkStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidVPCNetworkStateFault", new InvalidVPCNetworkStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidVPCNetworkStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SNSTopicArnNotFound") == null) {
+            exceptionUnmarshallersMap.put("SNSTopicArnNotFound", new SNSTopicArnNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SNSTopicArnNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SubscriptionAlreadyExist") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionAlreadyExist", new SubscriptionAlreadyExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionAlreadyExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterNotFoundFault", new DBClusterNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBParameterGroupQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("DBParameterGroupQuotaExceeded", new DBParameterGroupQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBParameterGroupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OptionGroupNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("OptionGroupNotFoundFault", new OptionGroupNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OptionGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBClusterSnapshotStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBClusterSnapshotStateFault", new InvalidDBClusterSnapshotStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBClusterSnapshotStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SourceNotFound") == null) {
+            exceptionUnmarshallersMap.put("SourceNotFound", new SourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBParameterGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBParameterGroupState", new InvalidDBParameterGroupStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDBParameterGroupStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DomainNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("DomainNotFoundFault", new DomainNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DomainNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EventSubscriptionQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("EventSubscriptionQuotaExceeded", new EventSubscriptionQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EventSubscriptionQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StorageQuotaExceeded") == null) {
+            exceptionUnmarshallersMap.put("StorageQuotaExceeded", new StorageQuotaExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StorageQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBClusterEndpointAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("DBClusterEndpointAlreadyExistsFault", new DBClusterEndpointAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DBClusterEndpointAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationNotFound") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationNotFound", new AuthorizationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationNotFoundExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.neptune.model.AmazonNeptuneException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.neptune.model.AmazonNeptuneException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -4537,7 +4736,7 @@ public class AmazonNeptuneClient extends AmazonWebServiceClient implements Amazo
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

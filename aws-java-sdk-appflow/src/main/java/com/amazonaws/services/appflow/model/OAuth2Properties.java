@@ -40,6 +40,13 @@ public class OAuth2Properties implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String oAuth2GrantType;
+    /**
+     * <p>
+     * Associates your token URL with a map of properties that you define. Use this parameter to provide any additional
+     * details that the connector requires to authenticate your request.
+     * </p>
+     */
+    private java.util.Map<String, String> tokenUrlCustomProperties;
 
     /**
      * <p>
@@ -141,6 +148,80 @@ public class OAuth2Properties implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Associates your token URL with a map of properties that you define. Use this parameter to provide any additional
+     * details that the connector requires to authenticate your request.
+     * </p>
+     * 
+     * @return Associates your token URL with a map of properties that you define. Use this parameter to provide any
+     *         additional details that the connector requires to authenticate your request.
+     */
+
+    public java.util.Map<String, String> getTokenUrlCustomProperties() {
+        return tokenUrlCustomProperties;
+    }
+
+    /**
+     * <p>
+     * Associates your token URL with a map of properties that you define. Use this parameter to provide any additional
+     * details that the connector requires to authenticate your request.
+     * </p>
+     * 
+     * @param tokenUrlCustomProperties
+     *        Associates your token URL with a map of properties that you define. Use this parameter to provide any
+     *        additional details that the connector requires to authenticate your request.
+     */
+
+    public void setTokenUrlCustomProperties(java.util.Map<String, String> tokenUrlCustomProperties) {
+        this.tokenUrlCustomProperties = tokenUrlCustomProperties;
+    }
+
+    /**
+     * <p>
+     * Associates your token URL with a map of properties that you define. Use this parameter to provide any additional
+     * details that the connector requires to authenticate your request.
+     * </p>
+     * 
+     * @param tokenUrlCustomProperties
+     *        Associates your token URL with a map of properties that you define. Use this parameter to provide any
+     *        additional details that the connector requires to authenticate your request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OAuth2Properties withTokenUrlCustomProperties(java.util.Map<String, String> tokenUrlCustomProperties) {
+        setTokenUrlCustomProperties(tokenUrlCustomProperties);
+        return this;
+    }
+
+    /**
+     * Add a single TokenUrlCustomProperties entry
+     *
+     * @see OAuth2Properties#withTokenUrlCustomProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OAuth2Properties addTokenUrlCustomPropertiesEntry(String key, String value) {
+        if (null == this.tokenUrlCustomProperties) {
+            this.tokenUrlCustomProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.tokenUrlCustomProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tokenUrlCustomProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into TokenUrlCustomProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OAuth2Properties clearTokenUrlCustomPropertiesEntries() {
+        this.tokenUrlCustomProperties = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -155,7 +236,9 @@ public class OAuth2Properties implements Serializable, Cloneable, StructuredPojo
         if (getTokenUrl() != null)
             sb.append("TokenUrl: ").append(getTokenUrl()).append(",");
         if (getOAuth2GrantType() != null)
-            sb.append("OAuth2GrantType: ").append(getOAuth2GrantType());
+            sb.append("OAuth2GrantType: ").append(getOAuth2GrantType()).append(",");
+        if (getTokenUrlCustomProperties() != null)
+            sb.append("TokenUrlCustomProperties: ").append(getTokenUrlCustomProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -178,6 +261,10 @@ public class OAuth2Properties implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getOAuth2GrantType() != null && other.getOAuth2GrantType().equals(this.getOAuth2GrantType()) == false)
             return false;
+        if (other.getTokenUrlCustomProperties() == null ^ this.getTokenUrlCustomProperties() == null)
+            return false;
+        if (other.getTokenUrlCustomProperties() != null && other.getTokenUrlCustomProperties().equals(this.getTokenUrlCustomProperties()) == false)
+            return false;
         return true;
     }
 
@@ -188,6 +275,7 @@ public class OAuth2Properties implements Serializable, Cloneable, StructuredPojo
 
         hashCode = prime * hashCode + ((getTokenUrl() == null) ? 0 : getTokenUrl().hashCode());
         hashCode = prime * hashCode + ((getOAuth2GrantType() == null) ? 0 : getOAuth2GrantType().hashCode());
+        hashCode = prime * hashCode + ((getTokenUrlCustomProperties() == null) ? 0 : getTokenUrlCustomProperties().hashCode());
         return hashCode;
     }
 

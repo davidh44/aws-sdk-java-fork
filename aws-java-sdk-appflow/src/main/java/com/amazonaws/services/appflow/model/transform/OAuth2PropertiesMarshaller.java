@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.appflow.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +33,8 @@ public class OAuth2PropertiesMarshaller {
             .marshallLocationName("tokenUrl").build();
     private static final MarshallingInfo<String> OAUTH2GRANTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("oAuth2GrantType").build();
+    private static final MarshallingInfo<Map> TOKENURLCUSTOMPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tokenUrlCustomProperties").build();
 
     private static final OAuth2PropertiesMarshaller instance = new OAuth2PropertiesMarshaller();
 
@@ -50,6 +54,7 @@ public class OAuth2PropertiesMarshaller {
         try {
             protocolMarshaller.marshall(oAuth2Properties.getTokenUrl(), TOKENURL_BINDING);
             protocolMarshaller.marshall(oAuth2Properties.getOAuth2GrantType(), OAUTH2GRANTTYPE_BINDING);
+            protocolMarshaller.marshall(oAuth2Properties.getTokenUrlCustomProperties(), TOKENURLCUSTOMPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -89,9 +89,18 @@ public class AmazonSNSClient extends AmazonWebServiceClient implements AmazonSNS
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon SNS. A credentials provider chain will be used that
@@ -281,38 +290,135 @@ public class AmazonSNSClient extends AmazonWebServiceClient implements AmazonSNS
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("SubscriptionLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("SubscriptionLimitExceeded", new SubscriptionLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SubscriptionLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameter") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameter", new InvalidParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BatchEntryIdsNotDistinct") == null) {
+            exceptionUnmarshallersMap.put("BatchEntryIdsNotDistinct", new BatchEntryIdsNotDistinctExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchEntryIdsNotDistinctExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ParameterValueInvalid") == null) {
+            exceptionUnmarshallersMap.put("ParameterValueInvalid", new InvalidParameterValueExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterValueExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EndpointDisabled") == null) {
+            exceptionUnmarshallersMap.put("EndpointDisabled", new EndpointDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EndpointDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FilterPolicyLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("FilterPolicyLimitExceeded", new FilterPolicyLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FilterPolicyLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UserError") == null) {
+            exceptionUnmarshallersMap.put("UserError", new UserErrorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UserErrorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSAccessDenied") == null) {
+            exceptionUnmarshallersMap.put("KMSAccessDenied", new KMSAccessDeniedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSAccessDeniedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSInvalidState") == null) {
+            exceptionUnmarshallersMap.put("KMSInvalidState", new KMSInvalidStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSInvalidStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StaleTag") == null) {
+            exceptionUnmarshallersMap.put("StaleTag", new StaleTagExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StaleTagExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NotFound") == null) {
+            exceptionUnmarshallersMap.put("NotFound", new NotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSDisabled") == null) {
+            exceptionUnmarshallersMap.put("KMSDisabled", new KMSDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("VerificationException") == null) {
+            exceptionUnmarshallersMap.put("VerificationException", new VerificationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new VerificationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("Throttled") == null) {
+            exceptionUnmarshallersMap.put("Throttled", new ThrottledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ThrottledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InternalError") == null) {
+            exceptionUnmarshallersMap.put("InternalError", new InternalErrorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InternalErrorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("EmptyBatchRequest") == null) {
+            exceptionUnmarshallersMap.put("EmptyBatchRequest", new EmptyBatchRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new EmptyBatchRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSecurity") == null) {
+            exceptionUnmarshallersMap.put("InvalidSecurity", new InvalidSecurityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSecurityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OptedOut") == null) {
+            exceptionUnmarshallersMap.put("OptedOut", new OptedOutExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OptedOutExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSOptInRequired") == null) {
+            exceptionUnmarshallersMap.put("KMSOptInRequired", new KMSOptInRequiredExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSOptInRequiredExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyEntriesInBatchRequest") == null) {
+            exceptionUnmarshallersMap.put("TooManyEntriesInBatchRequest", new TooManyEntriesInBatchRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyEntriesInBatchRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFound") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFound", new ResourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BatchRequestTooLong") == null) {
+            exceptionUnmarshallersMap.put("BatchRequestTooLong", new BatchRequestTooLongExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchRequestTooLongExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ValidationException") == null) {
+            exceptionUnmarshallersMap.put("ValidationException", new ValidationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ValidationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSNotFound") == null) {
+            exceptionUnmarshallersMap.put("KMSNotFound", new KMSNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TopicLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("TopicLimitExceeded", new TopicLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TopicLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TagPolicy") == null) {
+            exceptionUnmarshallersMap.put("TagPolicy", new TagPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TagPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TagLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("TagLimitExceeded", new TagLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TagLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PlatformApplicationDisabled") == null) {
+            exceptionUnmarshallersMap.put("PlatformApplicationDisabled", new PlatformApplicationDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PlatformApplicationDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KMSThrottling") == null) {
+            exceptionUnmarshallersMap.put("KMSThrottling", new KMSThrottlingExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KMSThrottlingExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AuthorizationError") == null) {
+            exceptionUnmarshallersMap.put("AuthorizationError", new AuthorizationErrorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AuthorizationErrorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConcurrentAccess") == null) {
+            exceptionUnmarshallersMap.put("ConcurrentAccess", new ConcurrentAccessExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConcurrentAccessExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidBatchEntryId") == null) {
+            exceptionUnmarshallersMap.put("InvalidBatchEntryId", new InvalidBatchEntryIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidBatchEntryIdExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.sns.model.AmazonSNSException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.sns.model.AmazonSNSException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -3540,7 +3646,7 @@ public class AmazonSNSClient extends AmazonWebServiceClient implements AmazonSNS
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

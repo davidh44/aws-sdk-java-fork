@@ -78,9 +78,18 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on CloudFront. A credentials provider chain will be used that
@@ -271,133 +280,526 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("StreamingDistributionAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("StreamingDistributionAlreadyExists", new StreamingDistributionAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StreamingDistributionAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchInvalidation") == null) {
+            exceptionUnmarshallersMap.put("NoSuchInvalidation", new NoSuchInvalidationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchInvalidationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchFieldLevelEncryptionConfig") == null) {
+            exceptionUnmarshallersMap.put("NoSuchFieldLevelEncryptionConfig", new NoSuchFieldLevelEncryptionConfigExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchFieldLevelEncryptionConfigExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OriginRequestPolicyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("OriginRequestPolicyAlreadyExists", new OriginRequestPolicyAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OriginRequestPolicyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyKeyGroupsAssociatedToDistribution") == null) {
+            exceptionUnmarshallersMap.put("TooManyKeyGroupsAssociatedToDistribution", new TooManyKeyGroupsAssociatedToDistributionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyKeyGroupsAssociatedToDistributionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidMinimumProtocolVersion") == null) {
+            exceptionUnmarshallersMap.put("InvalidMinimumProtocolVersion", new InvalidMinimumProtocolVersionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidMinimumProtocolVersionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyInvalidationsInProgress") == null) {
+            exceptionUnmarshallersMap.put("TooManyInvalidationsInProgress", new TooManyInvalidationsInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyInvalidationsInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionConfigs") == null) {
+            exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionConfigs", new TooManyFieldLevelEncryptionConfigsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFieldLevelEncryptionConfigsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyPublicKeys") == null) {
+            exceptionUnmarshallersMap.put("TooManyPublicKeys", new TooManyPublicKeysExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyPublicKeysExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCacheBehaviors") == null) {
+            exceptionUnmarshallersMap.put("TooManyCacheBehaviors", new TooManyCacheBehaviorsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCacheBehaviorsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CloudFrontOriginAccessIdentityInUse") == null) {
+            exceptionUnmarshallersMap.put("CloudFrontOriginAccessIdentityInUse", new CloudFrontOriginAccessIdentityInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CloudFrontOriginAccessIdentityInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FieldLevelEncryptionProfileAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("FieldLevelEncryptionProfileAlreadyExists", new FieldLevelEncryptionProfileAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FieldLevelEncryptionProfileAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MissingBody") == null) {
+            exceptionUnmarshallersMap.put("MissingBody", new MissingBodyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingBodyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyResponseHeadersPolicies") == null) {
+            exceptionUnmarshallersMap.put("TooManyResponseHeadersPolicies", new TooManyResponseHeadersPoliciesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyResponseHeadersPoliciesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyOrigins") == null) {
+            exceptionUnmarshallersMap.put("TooManyOrigins", new TooManyOriginsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyOriginsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FunctionSizeLimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("FunctionSizeLimitExceeded", new FunctionSizeLimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FunctionSizeLimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTTLOrder") == null) {
+            exceptionUnmarshallersMap.put("InvalidTTLOrder", new InvalidTTLOrderExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTTLOrderExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsWithSingleFunctionARN") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsWithSingleFunctionARN", new TooManyDistributionsWithSingleFunctionARNExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsWithSingleFunctionARNExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnsupportedOperation") == null) {
+            exceptionUnmarshallersMap.put("UnsupportedOperation", new UnsupportedOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new UnsupportedOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BatchTooLarge") == null) {
+            exceptionUnmarshallersMap.put("BatchTooLarge", new BatchTooLargeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BatchTooLargeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RealtimeLogConfigInUse") == null) {
+            exceptionUnmarshallersMap.put("RealtimeLogConfigInUse", new RealtimeLogConfigInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RealtimeLogConfigInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidResponseCode") == null) {
+            exceptionUnmarshallersMap.put("InvalidResponseCode", new InvalidResponseCodeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidResponseCodeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FieldLevelEncryptionConfigAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("FieldLevelEncryptionConfigAlreadyExists", new FieldLevelEncryptionConfigAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FieldLevelEncryptionConfigAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidOriginKeepaliveTimeout") == null) {
+            exceptionUnmarshallersMap.put("InvalidOriginKeepaliveTimeout", new InvalidOriginKeepaliveTimeoutExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidOriginKeepaliveTimeoutExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StreamingDistributionNotDisabled") == null) {
+            exceptionUnmarshallersMap.put("StreamingDistributionNotDisabled", new StreamingDistributionNotDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StreamingDistributionNotDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyQueryStringParameters") == null) {
+            exceptionUnmarshallersMap.put("TooManyQueryStringParameters", new TooManyQueryStringParametersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyQueryStringParametersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionEncryptionEntities") == null) {
+            exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionEncryptionEntities",
+                    new TooManyFieldLevelEncryptionEncryptionEntitiesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFieldLevelEncryptionEncryptionEntitiesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FieldLevelEncryptionConfigInUse") == null) {
+            exceptionUnmarshallersMap.put("FieldLevelEncryptionConfigInUse", new FieldLevelEncryptionConfigInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FieldLevelEncryptionConfigInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CloudFrontOriginAccessIdentityAlreadyExists") == null) {
+            exceptionUnmarshallersMap
+                    .put("CloudFrontOriginAccessIdentityAlreadyExists", new CloudFrontOriginAccessIdentityAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CloudFrontOriginAccessIdentityAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchRealtimeLogConfig") == null) {
+            exceptionUnmarshallersMap.put("NoSuchRealtimeLogConfig", new NoSuchRealtimeLogConfigExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchRealtimeLogConfigExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidProtocolSettings") == null) {
+            exceptionUnmarshallersMap.put("InvalidProtocolSettings", new InvalidProtocolSettingsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidProtocolSettingsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionProfiles") == null) {
+            exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionProfiles", new TooManyFieldLevelEncryptionProfilesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFieldLevelEncryptionProfilesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceInUse") == null) {
+            exceptionUnmarshallersMap.put("ResourceInUse", new ResourceInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidForwardCookies") == null) {
+            exceptionUnmarshallersMap.put("InvalidForwardCookies", new InvalidForwardCookiesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidForwardCookiesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyPublicKeysInKeyGroup") == null) {
+            exceptionUnmarshallersMap.put("TooManyPublicKeysInKeyGroup", new TooManyPublicKeysInKeyGroupExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyPublicKeysInKeyGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidOriginAccessIdentity") == null) {
+            exceptionUnmarshallersMap.put("InvalidOriginAccessIdentity", new InvalidOriginAccessIdentityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidOriginAccessIdentityExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IllegalUpdate") == null) {
+            exceptionUnmarshallersMap.put("IllegalUpdate", new IllegalUpdateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IllegalUpdateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CNAMEAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CNAMEAlreadyExists", new CNAMEAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CNAMEAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCookieNamesInWhiteList") == null) {
+            exceptionUnmarshallersMap.put("TooManyCookieNamesInWhiteList", new TooManyCookieNamesInWhiteListExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCookieNamesInWhiteListExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrustedKeyGroupDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("TrustedKeyGroupDoesNotExist", new TrustedKeyGroupDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrustedKeyGroupDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsAssociatedToResponseHeadersPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsAssociatedToResponseHeadersPolicy",
+                    new TooManyDistributionsAssociatedToResponseHeadersPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsAssociatedToResponseHeadersPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchDistribution") == null) {
+            exceptionUnmarshallersMap.put("NoSuchDistribution", new NoSuchDistributionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchDistributionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchResponseHeadersPolicy") == null) {
+            exceptionUnmarshallersMap.put("NoSuchResponseHeadersPolicy", new NoSuchResponseHeadersPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchResponseHeadersPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FunctionInUse") == null) {
+            exceptionUnmarshallersMap.put("FunctionInUse", new FunctionInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FunctionInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidViewerCertificate") == null) {
+            exceptionUnmarshallersMap.put("InvalidViewerCertificate", new InvalidViewerCertificateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidViewerCertificateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCachePolicies") == null) {
+            exceptionUnmarshallersMap.put("TooManyCachePolicies", new TooManyCachePoliciesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCachePoliciesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyQueryStringsInCachePolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyQueryStringsInCachePolicy", new TooManyQueryStringsInCachePolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyQueryStringsInCachePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FunctionAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("FunctionAlreadyExists", new FunctionAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FunctionAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CachePolicyInUse") == null) {
+            exceptionUnmarshallersMap.put("CachePolicyInUse", new CachePolicyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CachePolicyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDefaultRootObject") == null) {
+            exceptionUnmarshallersMap.put("InvalidDefaultRootObject", new InvalidDefaultRootObjectExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDefaultRootObjectExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCloudFrontOriginAccessIdentities") == null) {
+            exceptionUnmarshallersMap.put("TooManyCloudFrontOriginAccessIdentities", new TooManyCloudFrontOriginAccessIdentitiesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCloudFrontOriginAccessIdentitiesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionContentTypeProfiles") == null) {
+            exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionContentTypeProfiles",
+                    new TooManyFieldLevelEncryptionContentTypeProfilesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFieldLevelEncryptionContentTypeProfilesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRelativePath") == null) {
+            exceptionUnmarshallersMap.put("InvalidRelativePath", new InvalidRelativePathExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRelativePathExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsWithLambdaAssociations") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsWithLambdaAssociations", new TooManyDistributionsWithLambdaAssociationsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsWithLambdaAssociationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidHeadersForS3Origin") == null) {
+            exceptionUnmarshallersMap.put("InvalidHeadersForS3Origin", new InvalidHeadersForS3OriginExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidHeadersForS3OriginExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RealtimeLogConfigAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("RealtimeLogConfigAlreadyExists", new RealtimeLogConfigAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RealtimeLogConfigAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributions") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributions", new TooManyDistributionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsAssociatedToOriginRequestPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsAssociatedToOriginRequestPolicy",
+                    new TooManyDistributionsAssociatedToOriginRequestPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsAssociatedToOriginRequestPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CannotChangeImmutablePublicKeyFields") == null) {
+            exceptionUnmarshallersMap.put("CannotChangeImmutablePublicKeyFields", new CannotChangeImmutablePublicKeyFieldsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CannotChangeImmutablePublicKeyFieldsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionQueryArgProfiles") == null) {
+            exceptionUnmarshallersMap
+                    .put("TooManyFieldLevelEncryptionQueryArgProfiles", new TooManyFieldLevelEncryptionQueryArgProfilesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFieldLevelEncryptionQueryArgProfilesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCookiesInOriginRequestPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyCookiesInOriginRequestPolicy", new TooManyCookiesInOriginRequestPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCookiesInOriginRequestPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IllegalDelete") == null) {
+            exceptionUnmarshallersMap.put("IllegalDelete", new IllegalDeleteExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IllegalDeleteExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidOrigin") == null) {
+            exceptionUnmarshallersMap.put("InvalidOrigin", new InvalidOriginExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidOriginExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TestFunctionFailed") == null) {
+            exceptionUnmarshallersMap.put("TestFunctionFailed", new TestFunctionFailedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TestFunctionFailedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidGeoRestrictionParameter") == null) {
+            exceptionUnmarshallersMap.put("InvalidGeoRestrictionParameter", new InvalidGeoRestrictionParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidGeoRestrictionParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCustomHeadersInResponseHeadersPolicy") == null) {
+            exceptionUnmarshallersMap
+                    .put("TooManyCustomHeadersInResponseHeadersPolicy", new TooManyCustomHeadersInResponseHeadersPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCustomHeadersInResponseHeadersPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrustedSignerDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("TrustedSignerDoesNotExist", new TrustedSignerDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrustedSignerDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidWebACLId") == null) {
+            exceptionUnmarshallersMap.put("InvalidWebACLId", new InvalidWebACLIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidWebACLIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResponseHeadersPolicyInUse") == null) {
+            exceptionUnmarshallersMap.put("ResponseHeadersPolicyInUse", new ResponseHeadersPolicyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResponseHeadersPolicyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyHeadersInForwardedValues") == null) {
+            exceptionUnmarshallersMap.put("TooManyHeadersInForwardedValues", new TooManyHeadersInForwardedValuesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyHeadersInForwardedValuesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidOriginReadTimeout") == null) {
+            exceptionUnmarshallersMap.put("InvalidOriginReadTimeout", new InvalidOriginReadTimeoutExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidOriginReadTimeoutExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OriginRequestPolicyInUse") == null) {
+            exceptionUnmarshallersMap.put("OriginRequestPolicyInUse", new OriginRequestPolicyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OriginRequestPolicyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsAssociatedToKeyGroup") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsAssociatedToKeyGroup", new TooManyDistributionsAssociatedToKeyGroupExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsAssociatedToKeyGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionCNAMEs") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionCNAMEs", new TooManyDistributionCNAMEsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionCNAMEsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidErrorCode") == null) {
+            exceptionUnmarshallersMap.put("InvalidErrorCode", new InvalidErrorCodeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidErrorCodeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionFieldPatterns") == null) {
+            exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionFieldPatterns", new TooManyFieldLevelEncryptionFieldPatternsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFieldLevelEncryptionFieldPatternsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior") == null) {
+            exceptionUnmarshallersMap.put("IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior",
+                    new IllegalFieldLevelEncryptionConfigAssociationWithCacheBehaviorExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IllegalFieldLevelEncryptionConfigAssociationWithCacheBehaviorExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRequiredProtocol") == null) {
+            exceptionUnmarshallersMap.put("InvalidRequiredProtocol", new InvalidRequiredProtocolExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRequiredProtocolExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchOriginRequestPolicy") == null) {
+            exceptionUnmarshallersMap.put("NoSuchOriginRequestPolicy", new NoSuchOriginRequestPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchOriginRequestPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchOrigin") == null) {
+            exceptionUnmarshallersMap.put("NoSuchOrigin", new NoSuchOriginExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchOriginExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyQueryStringsInOriginRequestPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyQueryStringsInOriginRequestPolicy", new TooManyQueryStringsInOriginRequestPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyQueryStringsInOriginRequestPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTrustedSigners") == null) {
+            exceptionUnmarshallersMap.put("TooManyTrustedSigners", new TooManyTrustedSignersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTrustedSignersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFunctions") == null) {
+            exceptionUnmarshallersMap.put("TooManyFunctions", new TooManyFunctionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFunctionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsWithFunctionAssociations") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsWithFunctionAssociations",
+                    new TooManyDistributionsWithFunctionAssociationsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsWithFunctionAssociationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyStreamingDistributions") == null) {
+            exceptionUnmarshallersMap.put("TooManyStreamingDistributions", new TooManyStreamingDistributionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyStreamingDistributionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PublicKeyInUse") == null) {
+            exceptionUnmarshallersMap.put("PublicKeyInUse", new PublicKeyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PublicKeyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PreconditionFailed") == null) {
+            exceptionUnmarshallersMap.put("PreconditionFailed", new PreconditionFailedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PreconditionFailedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyKeyGroups") == null) {
+            exceptionUnmarshallersMap.put("TooManyKeyGroups", new TooManyKeyGroupsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyKeyGroupsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DistributionAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DistributionAlreadyExists", new DistributionAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DistributionAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyStreamingDistributionCNAMEs") == null) {
+            exceptionUnmarshallersMap.put("TooManyStreamingDistributionCNAMEs", new TooManyStreamingDistributionCNAMEsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyStreamingDistributionCNAMEsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CachePolicyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("CachePolicyAlreadyExists", new CachePolicyAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CachePolicyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyOriginCustomHeaders") == null) {
+            exceptionUnmarshallersMap.put("TooManyOriginCustomHeaders", new TooManyOriginCustomHeadersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyOriginCustomHeadersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidLocationCode") == null) {
+            exceptionUnmarshallersMap.put("InvalidLocationCode", new InvalidLocationCodeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidLocationCodeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyFunctionAssociations") == null) {
+            exceptionUnmarshallersMap.put("TooManyFunctionAssociations", new TooManyFunctionAssociationsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyFunctionAssociationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FieldLevelEncryptionProfileSizeExceeded") == null) {
+            exceptionUnmarshallersMap.put("FieldLevelEncryptionProfileSizeExceeded", new FieldLevelEncryptionProfileSizeExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FieldLevelEncryptionProfileSizeExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCertificates") == null) {
+            exceptionUnmarshallersMap.put("TooManyCertificates", new TooManyCertificatesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCertificatesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("QueryArgProfileEmpty") == null) {
+            exceptionUnmarshallersMap.put("QueryArgProfileEmpty", new QueryArgProfileEmptyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new QueryArgProfileEmptyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyRealtimeLogConfigs") == null) {
+            exceptionUnmarshallersMap.put("TooManyRealtimeLogConfigs", new TooManyRealtimeLogConfigsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyRealtimeLogConfigsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidQueryStringParameters") == null) {
+            exceptionUnmarshallersMap.put("InvalidQueryStringParameters", new InvalidQueryStringParametersExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidQueryStringParametersExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchFunctionExists") == null) {
+            exceptionUnmarshallersMap.put("NoSuchFunctionExists", new NoSuchFunctionExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchFunctionExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyHeadersInCachePolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyHeadersInCachePolicy", new TooManyHeadersInCachePolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyHeadersInCachePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RealtimeLogConfigOwnerMismatch") == null) {
+            exceptionUnmarshallersMap.put("RealtimeLogConfigOwnerMismatch", new RealtimeLogConfigOwnerMismatchExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RealtimeLogConfigOwnerMismatchExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchFieldLevelEncryptionProfile") == null) {
+            exceptionUnmarshallersMap.put("NoSuchFieldLevelEncryptionProfile", new NoSuchFieldLevelEncryptionProfileExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchFieldLevelEncryptionProfileExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchResource") == null) {
+            exceptionUnmarshallersMap.put("NoSuchResource", new NoSuchResourceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchResourceExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InconsistentQuantities") == null) {
+            exceptionUnmarshallersMap.put("InconsistentQuantities", new InconsistentQuantitiesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InconsistentQuantitiesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidFunctionAssociation") == null) {
+            exceptionUnmarshallersMap.put("InvalidFunctionAssociation", new InvalidFunctionAssociationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidFunctionAssociationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidLambdaFunctionAssociation") == null) {
+            exceptionUnmarshallersMap.put("InvalidLambdaFunctionAssociation", new InvalidLambdaFunctionAssociationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidLambdaFunctionAssociationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyLambdaFunctionAssociations") == null) {
+            exceptionUnmarshallersMap.put("TooManyLambdaFunctionAssociations", new TooManyLambdaFunctionAssociationsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyLambdaFunctionAssociationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DistributionNotDisabled") == null) {
+            exceptionUnmarshallersMap.put("DistributionNotDisabled", new DistributionNotDisabledExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DistributionNotDisabledExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResponseHeadersPolicyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ResponseHeadersPolicyAlreadyExists", new ResponseHeadersPolicyAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResponseHeadersPolicyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyOriginGroupsPerDistribution") == null) {
+            exceptionUnmarshallersMap.put("TooManyOriginGroupsPerDistribution", new TooManyOriginGroupsPerDistributionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyOriginGroupsPerDistributionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AccessDenied") == null) {
+            exceptionUnmarshallersMap.put("AccessDenied", new AccessDeniedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AccessDeniedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyCookiesInCachePolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyCookiesInCachePolicy", new TooManyCookiesInCachePolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyCookiesInCachePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidArgument") == null) {
+            exceptionUnmarshallersMap.put("InvalidArgument", new InvalidArgumentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidArgumentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyOriginRequestPolicies") == null) {
+            exceptionUnmarshallersMap.put("TooManyOriginRequestPolicies", new TooManyOriginRequestPoliciesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyOriginRequestPoliciesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchCachePolicy") == null) {
+            exceptionUnmarshallersMap.put("NoSuchCachePolicy", new NoSuchCachePolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchCachePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KeyGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("KeyGroupAlreadyExists", new KeyGroupAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KeyGroupAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchStreamingDistribution") == null) {
+            exceptionUnmarshallersMap.put("NoSuchStreamingDistribution", new NoSuchStreamingDistributionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchStreamingDistributionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchPublicKey") == null) {
+            exceptionUnmarshallersMap.put("NoSuchPublicKey", new NoSuchPublicKeyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchPublicKeyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsAssociatedToFieldLevelEncryptionConfig") == null) {
+            exceptionUnmarshallersMap.put("TooManyDistributionsAssociatedToFieldLevelEncryptionConfig",
+                    new TooManyDistributionsAssociatedToFieldLevelEncryptionConfigExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsAssociatedToFieldLevelEncryptionConfigExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyDistributionsAssociatedToCachePolicy") == null) {
+            exceptionUnmarshallersMap
+                    .put("TooManyDistributionsAssociatedToCachePolicy", new TooManyDistributionsAssociatedToCachePolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyDistributionsAssociatedToCachePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PublicKeyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("PublicKeyAlreadyExists", new PublicKeyAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PublicKeyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("FieldLevelEncryptionProfileInUse") == null) {
+            exceptionUnmarshallersMap.put("FieldLevelEncryptionProfileInUse", new FieldLevelEncryptionProfileInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new FieldLevelEncryptionProfileInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidIfMatchVersion") == null) {
+            exceptionUnmarshallersMap.put("InvalidIfMatchVersion", new InvalidIfMatchVersionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidIfMatchVersionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTagging") == null) {
+            exceptionUnmarshallersMap.put("InvalidTagging", new InvalidTaggingExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTaggingExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyHeadersInOriginRequestPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyHeadersInOriginRequestPolicy", new TooManyHeadersInOriginRequestPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyHeadersInOriginRequestPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchCloudFrontOriginAccessIdentity") == null) {
+            exceptionUnmarshallersMap.put("NoSuchCloudFrontOriginAccessIdentity", new NoSuchCloudFrontOriginAccessIdentityExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchCloudFrontOriginAccessIdentityExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.cloudfront.model.AmazonCloudFrontException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.cloudfront.model.AmazonCloudFrontException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -7775,7 +8177,7 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

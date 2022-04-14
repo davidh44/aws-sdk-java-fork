@@ -65,7 +65,7 @@ public class EFSVolumeConfiguration implements Serializable, Cloneable, Structur
      * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you don't
      * specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount helper uses. The
      * value must be between 0 and 65,535. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the <i>Amazon
      * Elastic File System User Guide</i>.
      * </p>
      */
@@ -298,7 +298,7 @@ public class EFSVolumeConfiguration implements Serializable, Cloneable, Structur
      * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you don't
      * specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount helper uses. The
      * value must be between 0 and 65,535. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the <i>Amazon
      * Elastic File System User Guide</i>.
      * </p>
      * 
@@ -306,7 +306,7 @@ public class EFSVolumeConfiguration implements Serializable, Cloneable, Structur
      *        The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you
      *        don't specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount
      *        helper uses. The value must be between 0 and 65,535. For more information, see <a
-     *        href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the
+     *        href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the
      *        <i>Amazon Elastic File System User Guide</i>.
      */
 
@@ -319,14 +319,14 @@ public class EFSVolumeConfiguration implements Serializable, Cloneable, Structur
      * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you don't
      * specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount helper uses. The
      * value must be between 0 and 65,535. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the <i>Amazon
      * Elastic File System User Guide</i>.
      * </p>
      * 
      * @return The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you
      *         don't specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount
      *         helper uses. The value must be between 0 and 65,535. For more information, see <a
-     *         href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the
+     *         href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the
      *         <i>Amazon Elastic File System User Guide</i>.
      */
 
@@ -339,7 +339,7 @@ public class EFSVolumeConfiguration implements Serializable, Cloneable, Structur
      * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you don't
      * specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount helper uses. The
      * value must be between 0 and 65,535. For more information, see <a
-     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the <i>Amazon
+     * href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the <i>Amazon
      * Elastic File System User Guide</i>.
      * </p>
      * 
@@ -347,7 +347,7 @@ public class EFSVolumeConfiguration implements Serializable, Cloneable, Structur
      *        The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS server. If you
      *        don't specify a transit encryption port, it uses the port selection strategy that the Amazon EFS mount
      *        helper uses. The value must be between 0 and 65,535. For more information, see <a
-     *        href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS Mount Helper</a> in the
+     *        href="https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html">EFS mount helper</a> in the
      *        <i>Amazon Elastic File System User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -52,6 +52,12 @@ public class OAuth2Defaults implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> oauth2GrantTypesSupported;
+    /**
+     * <p>
+     * List of custom parameters required for OAuth 2.0 authentication.
+     * </p>
+     */
+    private java.util.List<OAuth2CustomParameter> oauth2CustomProperties;
 
     /**
      * <p>
@@ -362,6 +368,76 @@ public class OAuth2Defaults implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * List of custom parameters required for OAuth 2.0 authentication.
+     * </p>
+     * 
+     * @return List of custom parameters required for OAuth 2.0 authentication.
+     */
+
+    public java.util.List<OAuth2CustomParameter> getOauth2CustomProperties() {
+        return oauth2CustomProperties;
+    }
+
+    /**
+     * <p>
+     * List of custom parameters required for OAuth 2.0 authentication.
+     * </p>
+     * 
+     * @param oauth2CustomProperties
+     *        List of custom parameters required for OAuth 2.0 authentication.
+     */
+
+    public void setOauth2CustomProperties(java.util.Collection<OAuth2CustomParameter> oauth2CustomProperties) {
+        if (oauth2CustomProperties == null) {
+            this.oauth2CustomProperties = null;
+            return;
+        }
+
+        this.oauth2CustomProperties = new java.util.ArrayList<OAuth2CustomParameter>(oauth2CustomProperties);
+    }
+
+    /**
+     * <p>
+     * List of custom parameters required for OAuth 2.0 authentication.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOauth2CustomProperties(java.util.Collection)} or
+     * {@link #withOauth2CustomProperties(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param oauth2CustomProperties
+     *        List of custom parameters required for OAuth 2.0 authentication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OAuth2Defaults withOauth2CustomProperties(OAuth2CustomParameter... oauth2CustomProperties) {
+        if (this.oauth2CustomProperties == null) {
+            setOauth2CustomProperties(new java.util.ArrayList<OAuth2CustomParameter>(oauth2CustomProperties.length));
+        }
+        for (OAuth2CustomParameter ele : oauth2CustomProperties) {
+            this.oauth2CustomProperties.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of custom parameters required for OAuth 2.0 authentication.
+     * </p>
+     * 
+     * @param oauth2CustomProperties
+     *        List of custom parameters required for OAuth 2.0 authentication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OAuth2Defaults withOauth2CustomProperties(java.util.Collection<OAuth2CustomParameter> oauth2CustomProperties) {
+        setOauth2CustomProperties(oauth2CustomProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -380,7 +456,9 @@ public class OAuth2Defaults implements Serializable, Cloneable, StructuredPojo {
         if (getAuthCodeUrls() != null)
             sb.append("AuthCodeUrls: ").append(getAuthCodeUrls()).append(",");
         if (getOauth2GrantTypesSupported() != null)
-            sb.append("Oauth2GrantTypesSupported: ").append(getOauth2GrantTypesSupported());
+            sb.append("Oauth2GrantTypesSupported: ").append(getOauth2GrantTypesSupported()).append(",");
+        if (getOauth2CustomProperties() != null)
+            sb.append("Oauth2CustomProperties: ").append(getOauth2CustomProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -411,6 +489,10 @@ public class OAuth2Defaults implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOauth2GrantTypesSupported() != null && other.getOauth2GrantTypesSupported().equals(this.getOauth2GrantTypesSupported()) == false)
             return false;
+        if (other.getOauth2CustomProperties() == null ^ this.getOauth2CustomProperties() == null)
+            return false;
+        if (other.getOauth2CustomProperties() != null && other.getOauth2CustomProperties().equals(this.getOauth2CustomProperties()) == false)
+            return false;
         return true;
     }
 
@@ -423,6 +505,7 @@ public class OAuth2Defaults implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTokenUrls() == null) ? 0 : getTokenUrls().hashCode());
         hashCode = prime * hashCode + ((getAuthCodeUrls() == null) ? 0 : getAuthCodeUrls().hashCode());
         hashCode = prime * hashCode + ((getOauth2GrantTypesSupported() == null) ? 0 : getOauth2GrantTypesSupported().hashCode());
+        hashCode = prime * hashCode + ((getOauth2CustomProperties() == null) ? 0 : getOauth2CustomProperties().hashCode());
         return hashCode;
     }
 

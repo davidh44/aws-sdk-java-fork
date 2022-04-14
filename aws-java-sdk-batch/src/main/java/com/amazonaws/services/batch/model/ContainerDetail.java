@@ -249,8 +249,8 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      */
@@ -1784,8 +1784,8 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -1822,7 +1822,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      *        on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before
      *        containers placed on that instance can use these log configuration options. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS
-     *        Container Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
      */
 
@@ -1864,8 +1864,8 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -1901,7 +1901,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      *         available on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable
      *         before containers placed on that instance can use these log configuration options. For more information,
      *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon
-     *         ECS Container Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         ECS container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *         </p>
      */
 
@@ -1943,8 +1943,8 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -1981,7 +1981,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      *        on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before
      *        containers placed on that instance can use these log configuration options. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS
-     *        Container Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

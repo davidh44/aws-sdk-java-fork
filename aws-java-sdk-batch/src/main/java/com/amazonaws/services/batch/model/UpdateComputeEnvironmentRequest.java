@@ -54,8 +54,8 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
     private String state;
     /**
      * <p>
-     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
-     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     * parameter for a managed compute environment. This parameter is only used for fair share scheduling to reserve
      * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
      * capacity will be reserved.
      * </p>
@@ -80,12 +80,16 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * <important>
      * <p>
      * If the compute environment has a service-linked role, it can't be changed to use a regular IAM role. Likewise, if
-     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role.
+     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role. To update the
+     * parameters for the compute environment that require an infrastructure update to change, the
+     * <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * <p>
-     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN (this
-     * is recommended) or prefix the role name with the path.
+     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN
+     * (recommended) or prefix the role name with the path.
      * </p>
      * <note>
      * <p>
@@ -97,6 +101,15 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * </note>
      */
     private String serviceRole;
+    /**
+     * <p>
+     * Specifies the updated infrastructure update policy for the compute environment. For more information about
+     * infrastructure updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     */
+    private UpdatePolicy updatePolicy;
 
     /**
      * <p>
@@ -333,17 +346,17 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
-     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     * parameter for a managed compute environment. This parameter is only used for fair share scheduling to reserve
      * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
      * capacity will be reserved.
      * </p>
      * 
      * @param unmanagedvCpus
-     *        The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter
-     *        should not be specified for a managed compute environment. This parameter is only used for fair share
-     *        scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a
-     *        fair share job queue, no vCPU capacity will be reserved.
+     *        The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     *        parameter for a managed compute environment. This parameter is only used for fair share scheduling to
+     *        reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job
+     *        queue, no vCPU capacity will be reserved.
      */
 
     public void setUnmanagedvCpus(Integer unmanagedvCpus) {
@@ -352,16 +365,16 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
-     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     * parameter for a managed compute environment. This parameter is only used for fair share scheduling to reserve
      * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
      * capacity will be reserved.
      * </p>
      * 
-     * @return The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter
-     *         should not be specified for a managed compute environment. This parameter is only used for fair share
-     *         scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a
-     *         fair share job queue, no vCPU capacity will be reserved.
+     * @return The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     *         parameter for a managed compute environment. This parameter is only used for fair share scheduling to
+     *         reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job
+     *         queue, no vCPU capacity will be reserved.
      */
 
     public Integer getUnmanagedvCpus() {
@@ -370,17 +383,17 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
-     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     * parameter for a managed compute environment. This parameter is only used for fair share scheduling to reserve
      * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
      * capacity will be reserved.
      * </p>
      * 
      * @param unmanagedvCpus
-     *        The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter
-     *        should not be specified for a managed compute environment. This parameter is only used for fair share
-     *        scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a
-     *        fair share job queue, no vCPU capacity will be reserved.
+     *        The maximum number of vCPUs expected to be used for an unmanaged compute environment. Do not specify this
+     *        parameter for a managed compute environment. This parameter is only used for fair share scheduling to
+     *        reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job
+     *        queue, no vCPU capacity will be reserved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -457,12 +470,16 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * <important>
      * <p>
      * If the compute environment has a service-linked role, it can't be changed to use a regular IAM role. Likewise, if
-     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role.
+     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role. To update the
+     * parameters for the compute environment that require an infrastructure update to change, the
+     * <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * <p>
-     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN (this
-     * is recommended) or prefix the role name with the path.
+     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN
+     * (recommended) or prefix the role name with the path.
      * </p>
      * <note>
      * <p>
@@ -481,12 +498,15 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      *        <p>
      *        If the compute environment has a service-linked role, it can't be changed to use a regular IAM role.
      *        Likewise, if the compute environment has a regular IAM role, it can't be changed to use a service-linked
-     *        role.
+     *        role. To update the parameters for the compute environment that require an infrastructure update to
+     *        change, the <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
      *        </p>
      *        </important>
      *        <p>
      *        If your specified role has a path other than <code>/</code>, then you must either specify the full role
-     *        ARN (this is recommended) or prefix the role name with the path.
+     *        ARN (recommended) or prefix the role name with the path.
      *        </p>
      *        <note>
      *        <p>
@@ -511,12 +531,16 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * <important>
      * <p>
      * If the compute environment has a service-linked role, it can't be changed to use a regular IAM role. Likewise, if
-     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role.
+     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role. To update the
+     * parameters for the compute environment that require an infrastructure update to change, the
+     * <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * <p>
-     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN (this
-     * is recommended) or prefix the role name with the path.
+     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN
+     * (recommended) or prefix the role name with the path.
      * </p>
      * <note>
      * <p>
@@ -534,12 +558,15 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      *         <p>
      *         If the compute environment has a service-linked role, it can't be changed to use a regular IAM role.
      *         Likewise, if the compute environment has a regular IAM role, it can't be changed to use a service-linked
-     *         role.
+     *         role. To update the parameters for the compute environment that require an infrastructure update to
+     *         change, the <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *         compute environments</a> in the <i>Batch User Guide</i>.
      *         </p>
      *         </important>
      *         <p>
      *         If your specified role has a path other than <code>/</code>, then you must either specify the full role
-     *         ARN (this is recommended) or prefix the role name with the path.
+     *         ARN (recommended) or prefix the role name with the path.
      *         </p>
      *         <note>
      *         <p>
@@ -564,12 +591,16 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      * <important>
      * <p>
      * If the compute environment has a service-linked role, it can't be changed to use a regular IAM role. Likewise, if
-     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role.
+     * the compute environment has a regular IAM role, it can't be changed to use a service-linked role. To update the
+     * parameters for the compute environment that require an infrastructure update to change, the
+     * <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
      * </p>
      * </important>
      * <p>
-     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN (this
-     * is recommended) or prefix the role name with the path.
+     * If your specified role has a path other than <code>/</code>, then you must either specify the full role ARN
+     * (recommended) or prefix the role name with the path.
      * </p>
      * <note>
      * <p>
@@ -588,12 +619,15 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
      *        <p>
      *        If the compute environment has a service-linked role, it can't be changed to use a regular IAM role.
      *        Likewise, if the compute environment has a regular IAM role, it can't be changed to use a service-linked
-     *        role.
+     *        role. To update the parameters for the compute environment that require an infrastructure update to
+     *        change, the <b>AWSServiceRoleForBatch</b> service-linked role must be used. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
      *        </p>
      *        </important>
      *        <p>
      *        If your specified role has a path other than <code>/</code>, then you must either specify the full role
-     *        ARN (this is recommended) or prefix the role name with the path.
+     *        ARN (recommended) or prefix the role name with the path.
      *        </p>
      *        <note>
      *        <p>
@@ -607,6 +641,64 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
     public UpdateComputeEnvironmentRequest withServiceRole(String serviceRole) {
         setServiceRole(serviceRole);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the updated infrastructure update policy for the compute environment. For more information about
+     * infrastructure updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     * 
+     * @param updatePolicy
+     *        Specifies the updated infrastructure update policy for the compute environment. For more information about
+     *        infrastructure updates, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
+     */
+
+    public void setUpdatePolicy(UpdatePolicy updatePolicy) {
+        this.updatePolicy = updatePolicy;
+    }
+
+    /**
+     * <p>
+     * Specifies the updated infrastructure update policy for the compute environment. For more information about
+     * infrastructure updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     * 
+     * @return Specifies the updated infrastructure update policy for the compute environment. For more information
+     *         about infrastructure updates, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *         compute environments</a> in the <i>Batch User Guide</i>.
+     */
+
+    public UpdatePolicy getUpdatePolicy() {
+        return this.updatePolicy;
+    }
+
+    /**
+     * <p>
+     * Specifies the updated infrastructure update policy for the compute environment. For more information about
+     * infrastructure updates, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+     * environments</a> in the <i>Batch User Guide</i>.
+     * </p>
+     * 
+     * @param updatePolicy
+     *        Specifies the updated infrastructure update policy for the compute environment. For more information about
+     *        infrastructure updates, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+     *        compute environments</a> in the <i>Batch User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComputeEnvironmentRequest withUpdatePolicy(UpdatePolicy updatePolicy) {
+        setUpdatePolicy(updatePolicy);
         return this;
     }
 
@@ -631,7 +723,9 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
         if (getComputeResources() != null)
             sb.append("ComputeResources: ").append(getComputeResources()).append(",");
         if (getServiceRole() != null)
-            sb.append("ServiceRole: ").append(getServiceRole());
+            sb.append("ServiceRole: ").append(getServiceRole()).append(",");
+        if (getUpdatePolicy() != null)
+            sb.append("UpdatePolicy: ").append(getUpdatePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -666,6 +760,10 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getServiceRole() != null && other.getServiceRole().equals(this.getServiceRole()) == false)
             return false;
+        if (other.getUpdatePolicy() == null ^ this.getUpdatePolicy() == null)
+            return false;
+        if (other.getUpdatePolicy() != null && other.getUpdatePolicy().equals(this.getUpdatePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -679,6 +777,7 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getUnmanagedvCpus() == null) ? 0 : getUnmanagedvCpus().hashCode());
         hashCode = prime * hashCode + ((getComputeResources() == null) ? 0 : getComputeResources().hashCode());
         hashCode = prime * hashCode + ((getServiceRole() == null) ? 0 : getServiceRole().hashCode());
+        hashCode = prime * hashCode + ((getUpdatePolicy() == null) ? 0 : getUpdatePolicy().hashCode());
         return hashCode;
     }
 

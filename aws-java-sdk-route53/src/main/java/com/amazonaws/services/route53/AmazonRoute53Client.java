@@ -75,9 +75,18 @@ public class AmazonRoute53Client extends AmazonWebServiceClient implements Amazo
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Route 53. A credentials provider chain will be used that
@@ -268,69 +277,260 @@ public class AmazonRoute53Client extends AmazonWebServiceClient implements Amazo
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("ConcurrentModification") == null) {
+            exceptionUnmarshallersMap.put("ConcurrentModification", new ConcurrentModificationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConcurrentModificationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidKeySigningKeyName") == null) {
+            exceptionUnmarshallersMap.put("InvalidKeySigningKeyName", new InvalidKeySigningKeyNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidKeySigningKeyNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTrafficPolicyVersionsForCurrentPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooManyTrafficPolicyVersionsForCurrentPolicy",
+                    new TooManyTrafficPolicyVersionsForCurrentPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTrafficPolicyVersionsForCurrentPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("IncompatibleVersion") == null) {
+            exceptionUnmarshallersMap.put("IncompatibleVersion", new IncompatibleVersionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new IncompatibleVersionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchTrafficPolicy") == null) {
+            exceptionUnmarshallersMap.put("NoSuchTrafficPolicy", new NoSuchTrafficPolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchTrafficPolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTrafficPolicies") == null) {
+            exceptionUnmarshallersMap.put("TooManyTrafficPolicies", new TooManyTrafficPoliciesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTrafficPoliciesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DelegationSetAlreadyCreated") == null) {
+            exceptionUnmarshallersMap.put("DelegationSetAlreadyCreated", new DelegationSetAlreadyCreatedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DelegationSetAlreadyCreatedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchHostedZone") == null) {
+            exceptionUnmarshallersMap.put("NoSuchHostedZone", new NoSuchHostedZoneExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchHostedZoneExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("QueryLoggingConfigAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("QueryLoggingConfigAlreadyExists", new QueryLoggingConfigAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new QueryLoggingConfigAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("VPCAssociationNotFound") == null) {
+            exceptionUnmarshallersMap.put("VPCAssociationNotFound", new VPCAssociationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new VPCAssociationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HostedZoneNotPrivate") == null) {
+            exceptionUnmarshallersMap.put("HostedZoneNotPrivate", new HostedZoneNotPrivateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HostedZoneNotPrivateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PublicZoneVPCAssociation") == null) {
+            exceptionUnmarshallersMap.put("PublicZoneVPCAssociation", new PublicZoneVPCAssociationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PublicZoneVPCAssociationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchGeoLocation") == null) {
+            exceptionUnmarshallersMap.put("NoSuchGeoLocation", new NoSuchGeoLocationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchGeoLocationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KeySigningKeyInUse") == null) {
+            exceptionUnmarshallersMap.put("KeySigningKeyInUse", new KeySigningKeyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KeySigningKeyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KeySigningKeyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("KeySigningKeyAlreadyExists", new KeySigningKeyAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KeySigningKeyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KeySigningKeyWithActiveStatusNotFound") == null) {
+            exceptionUnmarshallersMap.put("KeySigningKeyWithActiveStatusNotFound", new KeySigningKeyWithActiveStatusNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KeySigningKeyWithActiveStatusNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientCloudWatchLogsResourcePolicy") == null) {
+            exceptionUnmarshallersMap.put("InsufficientCloudWatchLogsResourcePolicy", new InsufficientCloudWatchLogsResourcePolicyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientCloudWatchLogsResourcePolicyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("KeySigningKeyInParentDSRecord") == null) {
+            exceptionUnmarshallersMap.put("KeySigningKeyInParentDSRecord", new KeySigningKeyInParentDSRecordExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new KeySigningKeyInParentDSRecordExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HealthCheckVersionMismatch") == null) {
+            exceptionUnmarshallersMap.put("HealthCheckVersionMismatch", new HealthCheckVersionMismatchExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HealthCheckVersionMismatchExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HealthCheckAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("HealthCheckAlreadyExists", new HealthCheckAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HealthCheckAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchDelegationSet") == null) {
+            exceptionUnmarshallersMap.put("NoSuchDelegationSet", new NoSuchDelegationSetExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchDelegationSetExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NotAuthorizedException") == null) {
+            exceptionUnmarshallersMap.put("NotAuthorizedException", new NotAuthorizedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NotAuthorizedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTrafficPolicyInstances") == null) {
+            exceptionUnmarshallersMap.put("TooManyTrafficPolicyInstances", new TooManyTrafficPolicyInstancesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTrafficPolicyInstancesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidPaginationToken") == null) {
+            exceptionUnmarshallersMap.put("InvalidPaginationToken", new InvalidPaginationTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidPaginationTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DelegationSetNotAvailable") == null) {
+            exceptionUnmarshallersMap.put("DelegationSetNotAvailable", new DelegationSetNotAvailableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DelegationSetNotAvailableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchTrafficPolicyInstance") == null) {
+            exceptionUnmarshallersMap.put("NoSuchTrafficPolicyInstance", new NoSuchTrafficPolicyInstanceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchTrafficPolicyInstanceExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HostedZoneNotEmpty") == null) {
+            exceptionUnmarshallersMap.put("HostedZoneNotEmpty", new HostedZoneNotEmptyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HostedZoneNotEmptyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("VPCAssociationAuthorizationNotFound") == null) {
+            exceptionUnmarshallersMap.put("VPCAssociationAuthorizationNotFound", new VPCAssociationAuthorizationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new VPCAssociationAuthorizationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDomainName") == null) {
+            exceptionUnmarshallersMap.put("InvalidDomainName", new InvalidDomainNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidDomainNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyHealthChecks") == null) {
+            exceptionUnmarshallersMap.put("TooManyHealthChecks", new TooManyHealthChecksExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyHealthChecksExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DNSSECNotFound") == null) {
+            exceptionUnmarshallersMap.put("DNSSECNotFound", new DNSSECNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DNSSECNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HealthCheckInUse") == null) {
+            exceptionUnmarshallersMap.put("HealthCheckInUse", new HealthCheckInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HealthCheckInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidChangeBatch") == null) {
+            exceptionUnmarshallersMap.put("InvalidChangeBatch", new InvalidChangeBatchExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidChangeBatchExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HostedZoneAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("HostedZoneAlreadyExists", new HostedZoneAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HostedZoneAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidTrafficPolicyDocument") == null) {
+            exceptionUnmarshallersMap.put("InvalidTrafficPolicyDocument", new InvalidTrafficPolicyDocumentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTrafficPolicyDocumentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ThrottlingException") == null) {
+            exceptionUnmarshallersMap.put("ThrottlingException", new ThrottlingExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ThrottlingExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrafficPolicyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("TrafficPolicyAlreadyExists", new TrafficPolicyAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrafficPolicyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DelegationSetAlreadyReusable") == null) {
+            exceptionUnmarshallersMap.put("DelegationSetAlreadyReusable", new DelegationSetAlreadyReusableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DelegationSetAlreadyReusableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidVPCId") == null) {
+            exceptionUnmarshallersMap.put("InvalidVPCId", new InvalidVPCIdExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidVPCIdExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrafficPolicyInUse") == null) {
+            exceptionUnmarshallersMap.put("TrafficPolicyInUse", new TrafficPolicyInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrafficPolicyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyHostedZones") == null) {
+            exceptionUnmarshallersMap.put("TooManyHostedZones", new TooManyHostedZonesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyHostedZonesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HostedZonePartiallyDelegated") == null) {
+            exceptionUnmarshallersMap.put("HostedZonePartiallyDelegated", new HostedZonePartiallyDelegatedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HostedZonePartiallyDelegatedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TrafficPolicyInstanceAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("TrafficPolicyInstanceAlreadyExists", new TrafficPolicyInstanceAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TrafficPolicyInstanceAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchChange") == null) {
+            exceptionUnmarshallersMap.put("NoSuchChange", new NoSuchChangeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchChangeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidKeySigningKeyStatus") == null) {
+            exceptionUnmarshallersMap.put("InvalidKeySigningKeyStatus", new InvalidKeySigningKeyStatusExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidKeySigningKeyStatusExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidKMSArn") == null) {
+            exceptionUnmarshallersMap.put("InvalidKMSArn", new InvalidKMSArnExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidKMSArnExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConflictingTypes") == null) {
+            exceptionUnmarshallersMap.put("ConflictingTypes", new ConflictingTypesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConflictingTypesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LastVPCAssociation") == null) {
+            exceptionUnmarshallersMap.put("LastVPCAssociation", new LastVPCAssociationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LastVPCAssociationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DelegationSetNotReusable") == null) {
+            exceptionUnmarshallersMap.put("DelegationSetNotReusable", new DelegationSetNotReusableExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DelegationSetNotReusableExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PriorRequestNotComplete") == null) {
+            exceptionUnmarshallersMap.put("PriorRequestNotComplete", new PriorRequestNotCompleteExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PriorRequestNotCompleteExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("HostedZoneNotFound") == null) {
+            exceptionUnmarshallersMap.put("HostedZoneNotFound", new HostedZoneNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new HostedZoneNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidArgument") == null) {
+            exceptionUnmarshallersMap.put("InvalidArgument", new InvalidArgumentExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidArgumentExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchKeySigningKey") == null) {
+            exceptionUnmarshallersMap.put("NoSuchKeySigningKey", new NoSuchKeySigningKeyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchKeySigningKeyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidInput") == null) {
+            exceptionUnmarshallersMap.put("InvalidInput", new InvalidInputExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidInputExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConflictingDomainExists") == null) {
+            exceptionUnmarshallersMap.put("ConflictingDomainExists", new ConflictingDomainExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ConflictingDomainExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidSigningStatus") == null) {
+            exceptionUnmarshallersMap.put("InvalidSigningStatus", new InvalidSigningStatusExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidSigningStatusExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DelegationSetInUse") == null) {
+            exceptionUnmarshallersMap.put("DelegationSetInUse", new DelegationSetInUseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DelegationSetInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchQueryLoggingConfig") == null) {
+            exceptionUnmarshallersMap.put("NoSuchQueryLoggingConfig", new NoSuchQueryLoggingConfigExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchQueryLoggingConfigExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchHealthCheck") == null) {
+            exceptionUnmarshallersMap.put("NoSuchHealthCheck", new NoSuchHealthCheckExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchHealthCheckExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyVPCAssociationAuthorizations") == null) {
+            exceptionUnmarshallersMap.put("TooManyVPCAssociationAuthorizations", new TooManyVPCAssociationAuthorizationsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyVPCAssociationAuthorizationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchCloudWatchLogsLogGroup") == null) {
+            exceptionUnmarshallersMap.put("NoSuchCloudWatchLogsLogGroup", new NoSuchCloudWatchLogsLogGroupExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchCloudWatchLogsLogGroupExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyKeySigningKeys") == null) {
+            exceptionUnmarshallersMap.put("TooManyKeySigningKeys", new TooManyKeySigningKeysExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyKeySigningKeysExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitsExceeded") == null) {
+            exceptionUnmarshallersMap.put("LimitsExceeded", new LimitsExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitsExceededExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.route53.model.AmazonRoute53Exception.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.route53.model.AmazonRoute53Exception.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -6037,7 +6237,7 @@ public class AmazonRoute53Client extends AmazonWebServiceClient implements Amazo
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

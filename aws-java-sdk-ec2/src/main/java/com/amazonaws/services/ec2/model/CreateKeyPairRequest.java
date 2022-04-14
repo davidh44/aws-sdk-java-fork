@@ -36,8 +36,7 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
     private String keyName;
     /**
      * <p>
-     * The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance Connect, and
-     * EC2 Serial Console.
+     * The type of key pair. Note that ED25519 keys are not supported for Windows instances.
      * </p>
      * <p>
      * Default: <code>rsa</code>
@@ -128,16 +127,14 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance Connect, and
-     * EC2 Serial Console.
+     * The type of key pair. Note that ED25519 keys are not supported for Windows instances.
      * </p>
      * <p>
      * Default: <code>rsa</code>
      * </p>
      * 
      * @param keyType
-     *        The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance
-     *        Connect, and EC2 Serial Console.</p>
+     *        The type of key pair. Note that ED25519 keys are not supported for Windows instances.</p>
      *        <p>
      *        Default: <code>rsa</code>
      * @see KeyType
@@ -149,15 +146,13 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance Connect, and
-     * EC2 Serial Console.
+     * The type of key pair. Note that ED25519 keys are not supported for Windows instances.
      * </p>
      * <p>
      * Default: <code>rsa</code>
      * </p>
      * 
-     * @return The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance
-     *         Connect, and EC2 Serial Console.</p>
+     * @return The type of key pair. Note that ED25519 keys are not supported for Windows instances.</p>
      *         <p>
      *         Default: <code>rsa</code>
      * @see KeyType
@@ -169,16 +164,14 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance Connect, and
-     * EC2 Serial Console.
+     * The type of key pair. Note that ED25519 keys are not supported for Windows instances.
      * </p>
      * <p>
      * Default: <code>rsa</code>
      * </p>
      * 
      * @param keyType
-     *        The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance
-     *        Connect, and EC2 Serial Console.</p>
+     *        The type of key pair. Note that ED25519 keys are not supported for Windows instances.</p>
      *        <p>
      *        Default: <code>rsa</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -192,16 +185,14 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance Connect, and
-     * EC2 Serial Console.
+     * The type of key pair. Note that ED25519 keys are not supported for Windows instances.
      * </p>
      * <p>
      * Default: <code>rsa</code>
      * </p>
      * 
      * @param keyType
-     *        The type of key pair. Note that ED25519 keys are not supported for Windows instances, EC2 Instance
-     *        Connect, and EC2 Serial Console.</p>
+     *        The type of key pair. Note that ED25519 keys are not supported for Windows instances.</p>
      *        <p>
      *        Default: <code>rsa</code>
      * @return Returns a reference to this object so that method calls can be chained together.

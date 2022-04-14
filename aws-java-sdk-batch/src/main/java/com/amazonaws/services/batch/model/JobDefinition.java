@@ -73,8 +73,8 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
      * Default parameters or parameter substitution placeholders that are set in the job definition. Parameters are
      * specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any corresponding
      * parameter defaults from the job definition. For more information about specifying parameters, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     * Parameters</a> in the <i>Batch User Guide</i>.
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     * parameters</a> in the <i>Batch User Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> parameters;
@@ -405,16 +405,16 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
      * Default parameters or parameter substitution placeholders that are set in the job definition. Parameters are
      * specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any corresponding
      * parameter defaults from the job definition. For more information about specifying parameters, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     * Parameters</a> in the <i>Batch User Guide</i>.
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     * parameters</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @return Default parameters or parameter substitution placeholders that are set in the job definition. Parameters
      *         are specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any
      *         corresponding parameter defaults from the job definition. For more information about specifying
      *         parameters, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     *         Parameters</a> in the <i>Batch User Guide</i>.
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     *         parameters</a> in the <i>Batch User Guide</i>.
      */
 
     public java.util.Map<String, String> getParameters() {
@@ -426,8 +426,8 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
      * Default parameters or parameter substitution placeholders that are set in the job definition. Parameters are
      * specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any corresponding
      * parameter defaults from the job definition. For more information about specifying parameters, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     * Parameters</a> in the <i>Batch User Guide</i>.
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     * parameters</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param parameters
@@ -435,8 +435,8 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
      *        are specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any
      *        corresponding parameter defaults from the job definition. For more information about specifying
      *        parameters, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     *        Parameters</a> in the <i>Batch User Guide</i>.
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     *        parameters</a> in the <i>Batch User Guide</i>.
      */
 
     public void setParameters(java.util.Map<String, String> parameters) {
@@ -448,8 +448,8 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
      * Default parameters or parameter substitution placeholders that are set in the job definition. Parameters are
      * specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any corresponding
      * parameter defaults from the job definition. For more information about specifying parameters, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     * Parameters</a> in the <i>Batch User Guide</i>.
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     * parameters</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param parameters
@@ -457,8 +457,8 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
      *        are specified as a key-value pair mapping. Parameters in a <code>SubmitJob</code> request override any
      *        corresponding parameter defaults from the job definition. For more information about specifying
      *        parameters, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job Definition
-     *        Parameters</a> in the <i>Batch User Guide</i>.
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html">Job definition
+     *        parameters</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -81,9 +81,18 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon CloudSearch. A credentials provider chain will be
@@ -275,14 +284,39 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("DisabledAction") == null) {
+            exceptionUnmarshallersMap.put("DisabledAction", new DisabledOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DisabledOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceeded") == null) {
+            exceptionUnmarshallersMap.put("LimitExceeded", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidType") == null) {
+            exceptionUnmarshallersMap.put("InvalidType", new InvalidTypeExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidTypeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFound") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFound", new ResourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ValidationException") == null) {
+            exceptionUnmarshallersMap.put("ValidationException", new ValidationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ValidationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BaseException") == null) {
+            exceptionUnmarshallersMap.put("BaseException", new BaseExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new BaseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ResourceAlreadyExists", new ResourceAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InternalException") == null) {
+            exceptionUnmarshallersMap.put("InternalException", new InternalExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InternalExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.cloudsearchv2.model.AmazonCloudSearchException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.cloudsearchv2.model.AmazonCloudSearchException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -2180,7 +2214,7 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

@@ -72,6 +72,12 @@ public class OAuth2DefaultsJsonUnmarshaller implements Unmarshaller<OAuth2Defaul
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("oauth2CustomProperties", targetDepth)) {
+                    context.nextToken();
+                    oAuth2Defaults.setOauth2CustomProperties(new ListUnmarshaller<OAuth2CustomParameter>(OAuth2CustomParameterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

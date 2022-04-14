@@ -94,9 +94,18 @@ public class AmazonCloudFormationClient extends AmazonWebServiceClient implement
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on AWS CloudFormation. A credentials provider chain will be
@@ -288,28 +297,95 @@ public class AmazonCloudFormationClient extends AmazonWebServiceClient implement
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InvalidOperationException") == null) {
+            exceptionUnmarshallersMap.put("InvalidOperationException", new InvalidOperationExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidOperationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TypeConfigurationNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("TypeConfigurationNotFoundException", new TypeConfigurationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TypeConfigurationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TokenAlreadyExistsException") == null) {
+            exceptionUnmarshallersMap.put("TokenAlreadyExistsException", new TokenAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TokenAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ConditionalCheckFailed") == null) {
+            exceptionUnmarshallersMap.put("ConditionalCheckFailed", new OperationStatusCheckFailedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationStatusCheckFailedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NameAlreadyExistsException") == null) {
+            exceptionUnmarshallersMap.put("NameAlreadyExistsException", new NameAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NameAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("LimitExceededException") == null) {
+            exceptionUnmarshallersMap.put("LimitExceededException", new LimitExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OperationNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("OperationNotFoundException", new OperationNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StackSetNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("StackSetNotFoundException", new StackSetNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StackSetNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientCapabilitiesException") == null) {
+            exceptionUnmarshallersMap.put("InsufficientCapabilitiesException", new InsufficientCapabilitiesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientCapabilitiesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AlreadyExistsException") == null) {
+            exceptionUnmarshallersMap.put("AlreadyExistsException", new AlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OperationInProgressException") == null) {
+            exceptionUnmarshallersMap.put("OperationInProgressException", new OperationInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StaleRequestException") == null) {
+            exceptionUnmarshallersMap.put("StaleRequestException", new StaleRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StaleRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidChangeSetStatus") == null) {
+            exceptionUnmarshallersMap.put("InvalidChangeSetStatus", new InvalidChangeSetStatusExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidChangeSetStatusExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StackSetNotEmptyException") == null) {
+            exceptionUnmarshallersMap.put("StackSetNotEmptyException", new StackSetNotEmptyExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StackSetNotEmptyExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ChangeSetNotFound") == null) {
+            exceptionUnmarshallersMap.put("ChangeSetNotFound", new ChangeSetNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ChangeSetNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StackInstanceNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("StackInstanceNotFoundException", new StackInstanceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StackInstanceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("StackNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("StackNotFoundException", new StackNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new StackNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CFNRegistryException") == null) {
+            exceptionUnmarshallersMap.put("CFNRegistryException", new CFNRegistryExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CFNRegistryExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidStateTransition") == null) {
+            exceptionUnmarshallersMap.put("InvalidStateTransition", new InvalidStateTransitionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidStateTransitionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OperationIdAlreadyExistsException") == null) {
+            exceptionUnmarshallersMap.put("OperationIdAlreadyExistsException", new OperationIdAlreadyExistsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationIdAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TypeNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("TypeNotFoundException", new TypeNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TypeNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CreatedButModifiedException") == null) {
+            exceptionUnmarshallersMap.put("CreatedButModifiedException", new CreatedButModifiedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CreatedButModifiedExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.cloudformation.model.AmazonCloudFormationException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.cloudformation.model.AmazonCloudFormationException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -4925,7 +5001,7 @@ public class AmazonCloudFormationClient extends AmazonWebServiceClient implement
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

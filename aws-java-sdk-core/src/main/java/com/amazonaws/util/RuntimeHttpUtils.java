@@ -51,6 +51,9 @@ public class RuntimeHttpUtils {
 
     private static final String RETRY_MODE_PREFIX = "cfg/retry-mode/";
 
+    private static final String TRACE_ID_ENVIRONMENT_VARIABLE = "_X_AMZN_TRACE_ID";
+    private static final String LAMBDA_FUNCTION_NAME_ENVIRONMENT_VARIABLE = "AWS_LAMBDA_FUNCTION_NAME";
+
 
     /**
      * Fetches a file from the URI given and returns an input stream to it.
@@ -268,5 +271,19 @@ public class RuntimeHttpUtils {
             throw new SdkClientException(
                     "Unable to convert request to well formed URL: " + e.getMessage(), e);
         }
+    }
+
+    /**
+     * Returns the value of the trace id environment variable, if it exists and if there is also
+     * a lambda function name environment variable, indicating that the code executes within a lambda
+     */
+    public static String getLambdaEnvironmentTraceId() {
+        String lambdafunctionName = getEnvironmentVariable(LAMBDA_FUNCTION_NAME_ENVIRONMENT_VARIABLE);
+        String traceId = getEnvironmentVariable(TRACE_ID_ENVIRONMENT_VARIABLE);
+
+        if (!StringUtils.isNullOrEmpty(lambdafunctionName) && !StringUtils.isNullOrEmpty(traceId)) {
+            return traceId;
+        };
+        return null;
     }
 }

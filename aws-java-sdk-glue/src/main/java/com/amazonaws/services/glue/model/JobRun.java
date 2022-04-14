@@ -244,6 +244,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String glueVersion;
+    /**
+     * <p>
+     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
+     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
+     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
+     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * </p>
+     */
+    private Double dPUSeconds;
 
     /**
      * <p>
@@ -1756,6 +1767,79 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
+     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
+     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
+     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * </p>
+     * 
+     * @param dPUSeconds
+     *        This field populates only when an Auto Scaling job run completes, and represents the total time each
+     *        executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for
+     *        <code>G.1X</code> and 2 for <code>G.2X</code> workers). This value may be different than the
+     *        <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
+     *        number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
+     *        is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     *        <code>MaxCapacity</code>.
+     */
+
+    public void setDPUSeconds(Double dPUSeconds) {
+        this.dPUSeconds = dPUSeconds;
+    }
+
+    /**
+     * <p>
+     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
+     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
+     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
+     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * </p>
+     * 
+     * @return This field populates only when an Auto Scaling job run completes, and represents the total time each
+     *         executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for
+     *         <code>G.1X</code> and 2 for <code>G.2X</code> workers). This value may be different than the
+     *         <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
+     *         number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
+     *         is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     *         <code>MaxCapacity</code>.
+     */
+
+    public Double getDPUSeconds() {
+        return this.dPUSeconds;
+    }
+
+    /**
+     * <p>
+     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
+     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
+     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
+     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * </p>
+     * 
+     * @param dPUSeconds
+     *        This field populates only when an Auto Scaling job run completes, and represents the total time each
+     *        executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for
+     *        <code>G.1X</code> and 2 for <code>G.2X</code> workers). This value may be different than the
+     *        <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
+     *        number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
+     *        is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     *        <code>MaxCapacity</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withDPUSeconds(Double dPUSeconds) {
+        setDPUSeconds(dPUSeconds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1810,7 +1894,9 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (getNotificationProperty() != null)
             sb.append("NotificationProperty: ").append(getNotificationProperty()).append(",");
         if (getGlueVersion() != null)
-            sb.append("GlueVersion: ").append(getGlueVersion());
+            sb.append("GlueVersion: ").append(getGlueVersion()).append(",");
+        if (getDPUSeconds() != null)
+            sb.append("DPUSeconds: ").append(getDPUSeconds());
         sb.append("}");
         return sb.toString();
     }
@@ -1913,6 +1999,10 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getGlueVersion() != null && other.getGlueVersion().equals(this.getGlueVersion()) == false)
             return false;
+        if (other.getDPUSeconds() == null ^ this.getDPUSeconds() == null)
+            return false;
+        if (other.getDPUSeconds() != null && other.getDPUSeconds().equals(this.getDPUSeconds()) == false)
+            return false;
         return true;
     }
 
@@ -1943,6 +2033,7 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLogGroupName() == null) ? 0 : getLogGroupName().hashCode());
         hashCode = prime * hashCode + ((getNotificationProperty() == null) ? 0 : getNotificationProperty().hashCode());
         hashCode = prime * hashCode + ((getGlueVersion() == null) ? 0 : getGlueVersion().hashCode());
+        hashCode = prime * hashCode + ((getDPUSeconds() == null) ? 0 : getDPUSeconds().hashCode());
         return hashCode;
     }
 

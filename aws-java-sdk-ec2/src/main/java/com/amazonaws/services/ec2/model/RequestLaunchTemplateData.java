@@ -19,6 +19,11 @@ import javax.annotation.Generated;
  * <p>
  * The information to include in the launch template.
  * </p>
+ * <note>
+ * <p>
+ * You must specify at least one parameter for the launch template data.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RequestLaunchTemplateData" target="_top">AWS API
  *      Documentation</a>

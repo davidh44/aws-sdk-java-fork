@@ -190,7 +190,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private String subnetId;
     /**
      * <p>
-     * The user data to make available to the instance. For more information, see <a
+     * The user data script to make available to the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
      * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
      * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
@@ -1689,7 +1689,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The user data to make available to the instance. For more information, see <a
+     * The user data script to make available to the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
      * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
      * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
@@ -1698,7 +1698,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param userData
-     *        The user data to make available to the instance. For more information, see <a
+     *        The user data script to make available to the instance. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
      *        instance at launch</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
@@ -1713,7 +1713,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The user data to make available to the instance. For more information, see <a
+     * The user data script to make available to the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
      * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
      * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
@@ -1721,7 +1721,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * data is limited to 16 KB.
      * </p>
      * 
-     * @return The user data to make available to the instance. For more information, see <a
+     * @return The user data script to make available to the instance. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
      *         instance at launch</a> and <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
@@ -1736,7 +1736,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The user data to make available to the instance. For more information, see <a
+     * The user data script to make available to the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
      * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
      * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
@@ -1745,7 +1745,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param userData
-     *        The user data to make available to the instance. For more information, see <a
+     *        The user data script to make available to the instance. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
      *        instance at launch</a> and <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on

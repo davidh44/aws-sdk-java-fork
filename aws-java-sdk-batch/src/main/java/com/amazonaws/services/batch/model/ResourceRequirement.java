@@ -65,7 +65,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <p>
      * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
      * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in the
      * <i>Batch User Guide</i>.
      * </p>
      * </note>
@@ -227,7 +227,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <p>
      * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
      * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in the
      * <i>Batch User Guide</i>.
      * </p>
      * </note>
@@ -380,7 +380,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        <p>
      *        If you're trying to maximize your resource utilization by providing your jobs as much memory as possible
      *        for a particular instance type, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in
      *        the <i>Batch User Guide</i>.
      *        </p>
      *        </note>
@@ -540,7 +540,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <p>
      * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
      * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in the
      * <i>Batch User Guide</i>.
      * </p>
      * </note>
@@ -692,7 +692,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *         <p>
      *         If you're trying to maximize your resource utilization by providing your jobs as much memory as possible
      *         for a particular instance type, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in
      *         the <i>Batch User Guide</i>.
      *         </p>
      *         </note>
@@ -852,7 +852,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <p>
      * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
      * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in the
      * <i>Batch User Guide</i>.
      * </p>
      * </note>
@@ -1005,7 +1005,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        <p>
      *        If you're trying to maximize your resource utilization by providing your jobs as much memory as possible
      *        for a particular instance type, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory management</a> in
      *        the <i>Batch User Guide</i>.
      *        </p>
      *        </note>

@@ -40,7 +40,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code> parameter
      * isn't specified, then a recent <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.
+     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in an
+     * update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified, then the
+     * latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.
      * </p>
      * <dl>
      * <dt>ECS_AL2</dt>
@@ -74,6 +76,16 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The AMI ID used for instances launched in the compute environment that match the image type. This setting
      * overrides the <code>imageId</code> set in the <code>computeResource</code> object.
      * </p>
+     * <note>
+     * <p>
+     * The AMI that you choose for a compute environment must match the architecture of the instance types that you
+     * intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the
+     * compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of
+     * the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     * >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * </note>
      */
     private String imageIdOverride;
 
@@ -82,7 +94,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code> parameter
      * isn't specified, then a recent <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.
+     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in an
+     * update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified, then the
+     * latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.
      * </p>
      * <dl>
      * <dt>ECS_AL2</dt>
@@ -114,7 +128,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      *        The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code>
      *        parameter isn't specified, then a recent <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     *        ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.</p>
+     *        ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in
+     *        an update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified,
+     *        then the latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.</p>
      *        <dl>
      *        <dt>ECS_AL2</dt>
      *        <dd>
@@ -150,7 +166,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code> parameter
      * isn't specified, then a recent <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.
+     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in an
+     * update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified, then the
+     * latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.
      * </p>
      * <dl>
      * <dt>ECS_AL2</dt>
@@ -181,7 +199,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * @return The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code>
      *         parameter isn't specified, then a recent <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     *         ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.</p>
+     *         ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in
+     *         an update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified,
+     *         then the latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.</p>
      *         <dl>
      *         <dt>ECS_AL2</dt>
      *         <dd>
@@ -219,7 +239,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code> parameter
      * isn't specified, then a recent <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.
+     * ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in an
+     * update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified, then the
+     * latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.
      * </p>
      * <dl>
      * <dt>ECS_AL2</dt>
@@ -251,7 +273,9 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      *        The image type to match with the instance type to select an AMI. If the <code>imageIdOverride</code>
      *        parameter isn't specified, then a recent <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon
-     *        ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used.</p>
+     *        ECS-optimized Amazon Linux 2 AMI</a> (<code>ECS_AL2</code>) is used. If a new image type is specified in
+     *        an update, but neither an <code>imageId</code> nor a <code>imageIdOverride</code> parameter is specified,
+     *        then the latest Amazon ECS optimized AMI for that image type that's supported by Batch is used.</p>
      *        <dl>
      *        <dt>ECS_AL2</dt>
      *        <dd>
@@ -289,10 +313,29 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The AMI ID used for instances launched in the compute environment that match the image type. This setting
      * overrides the <code>imageId</code> set in the <code>computeResource</code> object.
      * </p>
+     * <note>
+     * <p>
+     * The AMI that you choose for a compute environment must match the architecture of the instance types that you
+     * intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the
+     * compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of
+     * the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     * >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param imageIdOverride
      *        The AMI ID used for instances launched in the compute environment that match the image type. This setting
-     *        overrides the <code>imageId</code> set in the <code>computeResource</code> object.
+     *        overrides the <code>imageId</code> set in the <code>computeResource</code> object.</p> <note>
+     *        <p>
+     *        The AMI that you choose for a compute environment must match the architecture of the instance types that
+     *        you intend to use for that compute environment. For example, if your compute environment uses A1 instance
+     *        types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and
+     *        ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     *        >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer
+     *        Guide</i>.
+     *        </p>
      */
 
     public void setImageIdOverride(String imageIdOverride) {
@@ -304,9 +347,28 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The AMI ID used for instances launched in the compute environment that match the image type. This setting
      * overrides the <code>imageId</code> set in the <code>computeResource</code> object.
      * </p>
+     * <note>
+     * <p>
+     * The AMI that you choose for a compute environment must match the architecture of the instance types that you
+     * intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the
+     * compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of
+     * the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     * >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @return The AMI ID used for instances launched in the compute environment that match the image type. This setting
-     *         overrides the <code>imageId</code> set in the <code>computeResource</code> object.
+     *         overrides the <code>imageId</code> set in the <code>computeResource</code> object.</p> <note>
+     *         <p>
+     *         The AMI that you choose for a compute environment must match the architecture of the instance types that
+     *         you intend to use for that compute environment. For example, if your compute environment uses A1 instance
+     *         types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and
+     *         ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     *         >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer
+     *         Guide</i>.
+     *         </p>
      */
 
     public String getImageIdOverride() {
@@ -318,10 +380,29 @@ public class Ec2Configuration implements Serializable, Cloneable, StructuredPojo
      * The AMI ID used for instances launched in the compute environment that match the image type. This setting
      * overrides the <code>imageId</code> set in the <code>computeResource</code> object.
      * </p>
+     * <note>
+     * <p>
+     * The AMI that you choose for a compute environment must match the architecture of the instance types that you
+     * intend to use for that compute environment. For example, if your compute environment uses A1 instance types, the
+     * compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and ARM versions of
+     * the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     * >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param imageIdOverride
      *        The AMI ID used for instances launched in the compute environment that match the image type. This setting
-     *        overrides the <code>imageId</code> set in the <code>computeResource</code> object.
+     *        overrides the <code>imageId</code> set in the <code>computeResource</code> object.</p> <note>
+     *        <p>
+     *        The AMI that you choose for a compute environment must match the architecture of the instance types that
+     *        you intend to use for that compute environment. For example, if your compute environment uses A1 instance
+     *        types, the compute resource AMI that you choose must support ARM instances. Amazon ECS vends both x86 and
+     *        ARM versions of the Amazon ECS-optimized Amazon Linux 2 AMI. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized-ami-linux-variants.html"
+     *        >Amazon ECS-optimized Amazon Linux 2 AMI</a> in the <i>Amazon Elastic Container Service Developer
+     *        Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

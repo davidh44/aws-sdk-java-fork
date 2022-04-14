@@ -121,7 +121,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services permissions.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for Tasks</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for tasks</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
@@ -276,8 +276,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      */
@@ -891,15 +891,15 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services permissions.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for Tasks</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for tasks</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param jobRoleArn
      *        The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services
      *        permissions. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for
-     *        Tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for
+     *        tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setJobRoleArn(String jobRoleArn) {
@@ -910,14 +910,14 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services permissions.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for Tasks</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for tasks</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services
      *         permissions. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for
-     *         Tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for
+     *         tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public String getJobRoleArn() {
@@ -928,15 +928,15 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services permissions.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for Tasks</a> in
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for tasks</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param jobRoleArn
      *        The Amazon Resource Name (ARN) of the IAM role that the container can assume for Amazon Web Services
      *        permissions. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for
-     *        Tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM roles for
+     *        tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1963,8 +1963,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -2000,7 +2000,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      *        on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before
      *        containers placed on that instance can use these log configuration options. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS
-     *        Container Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
      */
 
@@ -2040,8 +2040,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -2076,7 +2076,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      *         available on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable
      *         before containers placed on that instance can use these log configuration options. For more information,
      *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon
-     *         ECS Container Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         ECS container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *         </p>
      */
 
@@ -2116,8 +2116,8 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      * The Amazon ECS container agent running on a container instance must register the logging drivers available on
      * that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before containers placed
      * on that instance can use these log configuration options. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container
-     * Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS container
+     * agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -2153,7 +2153,7 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
      *        on that instance with the <code>ECS_AVAILABLE_LOGGING_DRIVERS</code> environment variable before
      *        containers placed on that instance can use these log configuration options. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS
-     *        Container Agent Configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        container agent configuration</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

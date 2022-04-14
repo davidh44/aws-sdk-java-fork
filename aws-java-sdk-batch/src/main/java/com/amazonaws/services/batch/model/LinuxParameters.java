@@ -121,8 +121,8 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to use
      * this feature. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance Store Swap
-     * Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance store swap
+     * volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      * href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate memory to
      * work as swap space in an Amazon EC2 instance by using a swap file?</a>
      * </p>
@@ -706,8 +706,8 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to use
      * this feature. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance Store Swap
-     * Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance store swap
+     * volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      * href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate memory to
      * work as swap space in an Amazon EC2 instance by using a swap file?</a>
      * </p>
@@ -752,8 +752,8 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to
      *        use this feature. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance Store
-     *        Swap Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance store
+     *        swap volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      *        href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate
      *        memory to work as swap space in an Amazon EC2 instance by using a swap file?</a>
      *        </p>
@@ -804,8 +804,8 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to use
      * this feature. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance Store Swap
-     * Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance store swap
+     * volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      * href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate memory to
      * work as swap space in an Amazon EC2 instance by using a swap file?</a>
      * </p>
@@ -850,7 +850,7 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *         The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to
      *         use this feature. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance
-     *         Store Swap Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     *         store swap volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      *         href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate
      *         memory to work as swap space in an Amazon EC2 instance by using a swap file?</a>
      *         </p>
@@ -901,8 +901,8 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to use
      * this feature. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance Store Swap
-     * Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance store swap
+     * volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      * href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate memory to
      * work as swap space in an Amazon EC2 instance by using a swap file?</a>
      * </p>
@@ -947,8 +947,8 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        The Amazon ECS optimized AMIs don't have swap enabled by default. You must enable swap on the instance to
      *        use this feature. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance Store
-     *        Swap Volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html">Instance store
+     *        swap volumes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i> or <a
      *        href="http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/">How do I allocate
      *        memory to work as swap space in an Amazon EC2 instance by using a swap file?</a>
      *        </p>

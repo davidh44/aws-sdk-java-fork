@@ -93,9 +93,18 @@ public class AWSElasticBeanstalkClient extends AmazonWebServiceClient implements
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Elastic Beanstalk. A credentials provider chain will be used
@@ -287,25 +296,83 @@ public class AWSElasticBeanstalkClient extends AmazonWebServiceClient implements
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("S3LocationNotInServiceRegionException") == null) {
+            exceptionUnmarshallersMap.put("S3LocationNotInServiceRegionException", new S3LocationNotInServiceRegionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new S3LocationNotInServiceRegionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidRequestException") == null) {
+            exceptionUnmarshallersMap.put("InvalidRequestException", new InvalidRequestExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidRequestExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ManagedActionInvalidStateException") == null) {
+            exceptionUnmarshallersMap.put("ManagedActionInvalidStateException", new ManagedActionInvalidStateExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ManagedActionInvalidStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InsufficientPrivilegesException") == null) {
+            exceptionUnmarshallersMap.put("InsufficientPrivilegesException", new InsufficientPrivilegesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InsufficientPrivilegesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyPlatformsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyPlatformsException", new TooManyPlatformsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyPlatformsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyApplicationVersionsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyApplicationVersionsException", new TooManyApplicationVersionsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyApplicationVersionsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("CodeBuildNotInServiceRegionException") == null) {
+            exceptionUnmarshallersMap.put("CodeBuildNotInServiceRegionException", new CodeBuildNotInServiceRegionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new CodeBuildNotInServiceRegionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("S3SubscriptionRequiredException") == null) {
+            exceptionUnmarshallersMap.put("S3SubscriptionRequiredException", new S3SubscriptionRequiredExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new S3SubscriptionRequiredExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SourceBundleDeletionFailure") == null) {
+            exceptionUnmarshallersMap.put("SourceBundleDeletionFailure", new SourceBundleDeletionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new SourceBundleDeletionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyConfigurationTemplatesException") == null) {
+            exceptionUnmarshallersMap.put("TooManyConfigurationTemplatesException", new TooManyConfigurationTemplatesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyConfigurationTemplatesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceTypeNotSupportedException") == null) {
+            exceptionUnmarshallersMap.put("ResourceTypeNotSupportedException", new ResourceTypeNotSupportedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceTypeNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyTagsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyTagsException", new TooManyTagsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyTagsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFoundException") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFoundException", new ResourceNotFoundExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyApplicationsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyApplicationsException", new TooManyApplicationsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyApplicationsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OperationInProgressFailure") == null) {
+            exceptionUnmarshallersMap.put("OperationInProgressFailure", new OperationInProgressExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new OperationInProgressExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyEnvironmentsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyEnvironmentsException", new TooManyEnvironmentsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyEnvironmentsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyBucketsException") == null) {
+            exceptionUnmarshallersMap.put("TooManyBucketsException", new TooManyBucketsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyBucketsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ElasticBeanstalkServiceException") == null) {
+            exceptionUnmarshallersMap.put("ElasticBeanstalkServiceException", new ElasticBeanstalkServiceExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new ElasticBeanstalkServiceExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("PlatformVersionStillReferencedException") == null) {
+            exceptionUnmarshallersMap.put("PlatformVersionStillReferencedException", new PlatformVersionStillReferencedExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new PlatformVersionStillReferencedExceptionUnmarshaller());
+        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.elasticbeanstalk.model.AWSElasticBeanstalkException.class);
         exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.elasticbeanstalk.model.AWSElasticBeanstalkException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -3527,7 +3594,7 @@ public class AWSElasticBeanstalkClient extends AmazonWebServiceClient implements
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

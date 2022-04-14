@@ -60,11 +60,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * </li>
@@ -201,11 +196,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * </li>
@@ -247,11 +237,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      *         <li>
      *         <p>
      *         <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
      *         </p>
      *         </li>
      *         <li>
@@ -312,11 +297,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * </li>
@@ -359,11 +339,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      *        <li>
      *        <p>
      *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
      *        </p>
      *        </li>
      *        <li>
@@ -426,11 +401,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * </li>
@@ -478,11 +448,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      *        <li>
      *        <p>
      *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
      *        </p>
      *        </li>
      *        <li>
@@ -547,11 +512,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
      * </p>
      * </li>
@@ -594,11 +554,6 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      *        <li>
      *        <p>
      *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
      *        </p>
      *        </li>
      *        <li>

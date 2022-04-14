@@ -83,9 +83,18 @@ public class AmazonSimpleDBClient extends AmazonWebServiceClient implements Amaz
     private final AdvancedConfig advancedConfig;
 
     /**
-     * List of exception unmarshallers for all modeled exceptions
+     * Map of exception unmarshallers for all modeled exceptions
+     */
+    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
+
+    /**
+     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
+     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
+     * performance impact.
      */
     protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
+
+    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
 
     /**
      * Constructs a new client to invoke service methods on Amazon SimpleDB. A credentials provider chain will be used
@@ -276,23 +285,75 @@ public class AmazonSimpleDBClient extends AmazonWebServiceClient implements Amaz
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("NumberItemAttributesExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberItemAttributesExceeded", new NumberItemAttributesExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberItemAttributesExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberSubmittedItemsExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberSubmittedItemsExceeded", new NumberSubmittedItemsExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberSubmittedItemsExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNumberPredicates") == null) {
+            exceptionUnmarshallersMap.put("InvalidNumberPredicates", new InvalidNumberPredicatesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNumberPredicatesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberDomainBytesExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberDomainBytesExceeded", new NumberDomainBytesExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberDomainBytesExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AttributeDoesNotExist") == null) {
+            exceptionUnmarshallersMap.put("AttributeDoesNotExist", new AttributeDoesNotExistExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new AttributeDoesNotExistExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberDomainsExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberDomainsExceeded", new NumberDomainsExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberDomainsExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchDomain") == null) {
+            exceptionUnmarshallersMap.put("NoSuchDomain", new NoSuchDomainExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NoSuchDomainExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("RequestTimeout") == null) {
+            exceptionUnmarshallersMap.put("RequestTimeout", new RequestTimeoutExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new RequestTimeoutExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidParameterValue") == null) {
+            exceptionUnmarshallersMap.put("InvalidParameterValue", new InvalidParameterValueExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidParameterValueExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DuplicateItemName") == null) {
+            exceptionUnmarshallersMap.put("DuplicateItemName", new DuplicateItemNameExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new DuplicateItemNameExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyRequestedAttributes") == null) {
+            exceptionUnmarshallersMap.put("TooManyRequestedAttributes", new TooManyRequestedAttributesExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new TooManyRequestedAttributesExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberSubmittedAttributesExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberSubmittedAttributesExceeded", new NumberSubmittedAttributesExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberSubmittedAttributesExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidQueryExpression") == null) {
+            exceptionUnmarshallersMap.put("InvalidQueryExpression", new InvalidQueryExpressionExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidQueryExpressionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NumberDomainAttributesExceeded") == null) {
+            exceptionUnmarshallersMap.put("NumberDomainAttributesExceeded", new NumberDomainAttributesExceededExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new NumberDomainAttributesExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNumberValueTests") == null) {
+            exceptionUnmarshallersMap.put("InvalidNumberValueTests", new InvalidNumberValueTestsExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNumberValueTestsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidNextToken") == null) {
+            exceptionUnmarshallersMap.put("InvalidNextToken", new InvalidNextTokenExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new InvalidNextTokenExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MissingParameter") == null) {
+            exceptionUnmarshallersMap.put("MissingParameter", new MissingParameterExceptionUnmarshaller());
+        }
         exceptionUnmarshallers.add(new MissingParameterExceptionUnmarshaller());
+        defaultUnmarshaller = new LegacyErrorUnmarshaller(com.amazonaws.services.simpledb.model.AmazonSimpleDBException.class);
         exceptionUnmarshallers.add(new LegacyErrorUnmarshaller(com.amazonaws.services.simpledb.model.AmazonSimpleDBException.class));
 
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
@@ -1128,7 +1189,7 @@ public class AmazonSimpleDBClient extends AmazonWebServiceClient implements Amaz
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallers);
+        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

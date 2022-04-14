@@ -51,7 +51,7 @@ public class SchedulingPolicyDetail implements Serializable, Cloneable, Structur
      * <p>
      * The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag consists of
      * a key and an optional value. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
      * in <i>Amazon Web Services General Reference</i>.
      * </p>
      */
@@ -190,14 +190,14 @@ public class SchedulingPolicyDetail implements Serializable, Cloneable, Structur
      * <p>
      * The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag consists of
      * a key and an optional value. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
      * in <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @return The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag
      *         consists of a key and an optional value. For more information, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
-     *         Resources</a> in <i>Amazon Web Services General Reference</i>.
+     *         resources</a> in <i>Amazon Web Services General Reference</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -208,7 +208,7 @@ public class SchedulingPolicyDetail implements Serializable, Cloneable, Structur
      * <p>
      * The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag consists of
      * a key and an optional value. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
      * in <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
@@ -216,7 +216,7 @@ public class SchedulingPolicyDetail implements Serializable, Cloneable, Structur
      *        The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag
      *        consists of a key and an optional value. For more information, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
-     *        Resources</a> in <i>Amazon Web Services General Reference</i>.
+     *        resources</a> in <i>Amazon Web Services General Reference</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -227,7 +227,7 @@ public class SchedulingPolicyDetail implements Serializable, Cloneable, Structur
      * <p>
      * The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag consists of
      * a key and an optional value. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
      * in <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
@@ -235,7 +235,7 @@ public class SchedulingPolicyDetail implements Serializable, Cloneable, Structur
      *        The tags that you apply to the scheduling policy to categorize and organize your resources. Each tag
      *        consists of a key and an optional value. For more information, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
-     *        Resources</a> in <i>Amazon Web Services General Reference</i>.
+     *        resources</a> in <i>Amazon Web Services General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

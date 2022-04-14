@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This object contains the information for one metric that is to streamed with extended statistics.
+ * This object contains the information for one metric that is to be streamed with additional statistics.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/MetricStreamStatisticsMetric"
@@ -28,7 +28,7 @@ public class MetricStreamStatisticsMetric implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric namespace for the metric.
+     * The namespace of the metric.
      * </p>
      */
     private String namespace;
@@ -41,11 +41,11 @@ public class MetricStreamStatisticsMetric implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric namespace for the metric.
+     * The namespace of the metric.
      * </p>
      * 
      * @param namespace
-     *        The metric namespace for the metric.
+     *        The namespace of the metric.
      */
 
     public void setNamespace(String namespace) {
@@ -54,10 +54,10 @@ public class MetricStreamStatisticsMetric implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric namespace for the metric.
+     * The namespace of the metric.
      * </p>
      * 
-     * @return The metric namespace for the metric.
+     * @return The namespace of the metric.
      */
 
     public String getNamespace() {
@@ -66,11 +66,11 @@ public class MetricStreamStatisticsMetric implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric namespace for the metric.
+     * The namespace of the metric.
      * </p>
      * 
      * @param namespace
-     *        The metric namespace for the metric.
+     *        The namespace of the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

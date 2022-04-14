@@ -93,6 +93,10 @@ public class ComputeEnvironmentDetailJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     computeEnvironmentDetail.setServiceRole(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("updatePolicy", targetDepth)) {
+                    context.nextToken();
+                    computeEnvironmentDetail.setUpdatePolicy(UpdatePolicyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
