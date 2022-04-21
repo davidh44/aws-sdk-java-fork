@@ -81,6 +81,19 @@ public interface AWSMediaTailor {
 
     /**
      * <p>
+     * Creates name for a specific live source in a source location.
+     * </p>
+     * 
+     * @param createLiveSourceRequest
+     * @return Result of the CreateLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.CreateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateLiveSourceResult createLiveSource(CreateLiveSourceRequest createLiveSourceRequest);
+
+    /**
+     * <p>
      * Creates a new prefetch schedule for the specified playback configuration.
      * </p>
      * 
@@ -156,6 +169,19 @@ public interface AWSMediaTailor {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteChannelPolicyResult deleteChannelPolicy(DeleteChannelPolicyRequest deleteChannelPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param deleteLiveSourceRequest
+     * @return Result of the DeleteLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.DeleteLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeleteLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteLiveSourceResult deleteLiveSource(DeleteLiveSourceRequest deleteLiveSourceRequest);
 
     /**
      * <p>
@@ -235,6 +261,19 @@ public interface AWSMediaTailor {
      *      API Documentation</a>
      */
     DescribeChannelResult describeChannel(DescribeChannelRequest describeChannelRequest);
+
+    /**
+     * <p>
+     * Provides details about a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param describeLiveSourceRequest
+     * @return Result of the DescribeLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.DescribeLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DescribeLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeLiveSourceResult describeLiveSource(DescribeLiveSourceRequest describeLiveSourceRequest);
 
     /**
      * <p>
@@ -353,6 +392,19 @@ public interface AWSMediaTailor {
      *      Documentation</a>
      */
     ListChannelsResult listChannels(ListChannelsRequest listChannelsRequest);
+
+    /**
+     * <p>
+     * lists all the live sources in a source location.
+     * </p>
+     * 
+     * @param listLiveSourcesRequest
+     * @return Result of the ListLiveSources operation returned by the service.
+     * @sample AWSMediaTailor.ListLiveSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListLiveSources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListLiveSourcesResult listLiveSources(ListLiveSourcesRequest listLiveSourcesRequest);
 
     /**
      * <p>
@@ -518,6 +570,19 @@ public interface AWSMediaTailor {
      *      Documentation</a>
      */
     UpdateChannelResult updateChannel(UpdateChannelRequest updateChannelRequest);
+
+    /**
+     * <p>
+     * Updates a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param updateLiveSourceRequest
+     * @return Result of the UpdateLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.UpdateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateLiveSourceResult updateLiveSource(UpdateLiveSourceRequest updateLiveSourceRequest);
 
     /**
      * <p>

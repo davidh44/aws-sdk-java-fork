@@ -113,6 +113,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
 
     /**
      * <p>
+     * Creates name for a specific live source in a source location.
+     * </p>
+     * 
+     * @param createLiveSourceRequest
+     * @return A Java Future containing the result of the CreateLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsync.CreateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLiveSourceResult> createLiveSourceAsync(CreateLiveSourceRequest createLiveSourceRequest);
+
+    /**
+     * <p>
+     * Creates name for a specific live source in a source location.
+     * </p>
+     * 
+     * @param createLiveSourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.CreateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLiveSourceResult> createLiveSourceAsync(CreateLiveSourceRequest createLiveSourceRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLiveSourceRequest, CreateLiveSourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new prefetch schedule for the specified playback configuration.
      * </p>
      * 
@@ -296,6 +327,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
      */
     java.util.concurrent.Future<DeleteChannelPolicyResult> deleteChannelPolicyAsync(DeleteChannelPolicyRequest deleteChannelPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteChannelPolicyRequest, DeleteChannelPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param deleteLiveSourceRequest
+     * @return A Java Future containing the result of the DeleteLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsync.DeleteLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeleteLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLiveSourceResult> deleteLiveSourceAsync(DeleteLiveSourceRequest deleteLiveSourceRequest);
+
+    /**
+     * <p>
+     * Deletes a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param deleteLiveSourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.DeleteLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeleteLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLiveSourceResult> deleteLiveSourceAsync(DeleteLiveSourceRequest deleteLiveSourceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLiveSourceRequest, DeleteLiveSourceResult> asyncHandler);
 
     /**
      * <p>
@@ -486,6 +548,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
      */
     java.util.concurrent.Future<DescribeChannelResult> describeChannelAsync(DescribeChannelRequest describeChannelRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeChannelRequest, DescribeChannelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides details about a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param describeLiveSourceRequest
+     * @return A Java Future containing the result of the DescribeLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsync.DescribeLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DescribeLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLiveSourceResult> describeLiveSourceAsync(DescribeLiveSourceRequest describeLiveSourceRequest);
+
+    /**
+     * <p>
+     * Provides details about a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param describeLiveSourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.DescribeLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DescribeLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLiveSourceResult> describeLiveSourceAsync(DescribeLiveSourceRequest describeLiveSourceRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLiveSourceRequest, DescribeLiveSourceResult> asyncHandler);
 
     /**
      * <p>
@@ -767,6 +860,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
      */
     java.util.concurrent.Future<ListChannelsResult> listChannelsAsync(ListChannelsRequest listChannelsRequest,
             com.amazonaws.handlers.AsyncHandler<ListChannelsRequest, ListChannelsResult> asyncHandler);
+
+    /**
+     * <p>
+     * lists all the live sources in a source location.
+     * </p>
+     * 
+     * @param listLiveSourcesRequest
+     * @return A Java Future containing the result of the ListLiveSources operation returned by the service.
+     * @sample AWSMediaTailorAsync.ListLiveSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListLiveSources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLiveSourcesResult> listLiveSourcesAsync(ListLiveSourcesRequest listLiveSourcesRequest);
+
+    /**
+     * <p>
+     * lists all the live sources in a source location.
+     * </p>
+     * 
+     * @param listLiveSourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLiveSources operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.ListLiveSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListLiveSources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLiveSourcesResult> listLiveSourcesAsync(ListLiveSourcesRequest listLiveSourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLiveSourcesRequest, ListLiveSourcesResult> asyncHandler);
 
     /**
      * <p>
@@ -1147,6 +1271,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
      */
     java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest updateChannelRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateChannelRequest, UpdateChannelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param updateLiveSourceRequest
+     * @return A Java Future containing the result of the UpdateLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsync.UpdateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLiveSourceResult> updateLiveSourceAsync(UpdateLiveSourceRequest updateLiveSourceRequest);
+
+    /**
+     * <p>
+     * Updates a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param updateLiveSourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateLiveSource operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.UpdateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLiveSourceResult> updateLiveSourceAsync(UpdateLiveSourceRequest updateLiveSourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateLiveSourceRequest, UpdateLiveSourceResult> asyncHandler);
 
     /**
      * <p>

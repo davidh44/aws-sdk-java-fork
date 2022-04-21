@@ -254,6 +254,61 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
     /**
      * <p>
+     * Creates name for a specific live source in a source location.
+     * </p>
+     * 
+     * @param createLiveSourceRequest
+     * @return Result of the CreateLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.CreateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateLiveSourceResult createLiveSource(CreateLiveSourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLiveSource(request);
+    }
+
+    @SdkInternalApi
+    final CreateLiveSourceResult executeCreateLiveSource(CreateLiveSourceRequest createLiveSourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLiveSourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLiveSourceRequest> request = null;
+        Response<CreateLiveSourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLiveSourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createLiveSourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLiveSource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLiveSourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateLiveSourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new prefetch schedule for the specified playback configuration.
      * </p>
      * 
@@ -573,6 +628,61 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteChannelPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteChannelPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param deleteLiveSourceRequest
+     * @return Result of the DeleteLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.DeleteLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeleteLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteLiveSourceResult deleteLiveSource(DeleteLiveSourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLiveSource(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLiveSourceResult executeDeleteLiveSource(DeleteLiveSourceRequest deleteLiveSourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLiveSourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLiveSourceRequest> request = null;
+        Response<DeleteLiveSourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLiveSourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteLiveSourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLiveSource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteLiveSourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteLiveSourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -907,6 +1017,61 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeChannelResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeChannelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides details about a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param describeLiveSourceRequest
+     * @return Result of the DescribeLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.DescribeLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DescribeLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeLiveSourceResult describeLiveSource(DescribeLiveSourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLiveSource(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLiveSourceResult executeDescribeLiveSource(DescribeLiveSourceRequest describeLiveSourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLiveSourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLiveSourceRequest> request = null;
+        Response<DescribeLiveSourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLiveSourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeLiveSourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLiveSource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLiveSourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeLiveSourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1406,6 +1571,61 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
             HttpResponseHandler<AmazonWebServiceResponse<ListChannelsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListChannelsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * lists all the live sources in a source location.
+     * </p>
+     * 
+     * @param listLiveSourcesRequest
+     * @return Result of the ListLiveSources operation returned by the service.
+     * @sample AWSMediaTailor.ListLiveSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListLiveSources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListLiveSourcesResult listLiveSources(ListLiveSourcesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListLiveSources(request);
+    }
+
+    @SdkInternalApi
+    final ListLiveSourcesResult executeListLiveSources(ListLiveSourcesRequest listLiveSourcesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listLiveSourcesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListLiveSourcesRequest> request = null;
+        Response<ListLiveSourcesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListLiveSourcesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listLiveSourcesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListLiveSources");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListLiveSourcesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListLiveSourcesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2080,6 +2300,61 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateChannelResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateChannelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a specific live source in a specific source location.
+     * </p>
+     * 
+     * @param updateLiveSourceRequest
+     * @return Result of the UpdateLiveSource operation returned by the service.
+     * @sample AWSMediaTailor.UpdateLiveSource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateLiveSource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateLiveSourceResult updateLiveSource(UpdateLiveSourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateLiveSource(request);
+    }
+
+    @SdkInternalApi
+    final UpdateLiveSourceResult executeUpdateLiveSource(UpdateLiveSourceRequest updateLiveSourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateLiveSourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateLiveSourceRequest> request = null;
+        Response<UpdateLiveSourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateLiveSourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateLiveSourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateLiveSource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateLiveSourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateLiveSourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

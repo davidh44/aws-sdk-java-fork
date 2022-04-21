@@ -63,6 +63,12 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The tier of the channel.
+     * </p>
+     */
+    private String tier;
 
     /**
      * <p>
@@ -403,6 +409,65 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The tier of the channel.
+     * </p>
+     * 
+     * @param tier
+     *        The tier of the channel.
+     * @see Tier
+     */
+
+    public void setTier(String tier) {
+        this.tier = tier;
+    }
+
+    /**
+     * <p>
+     * The tier of the channel.
+     * </p>
+     * 
+     * @return The tier of the channel.
+     * @see Tier
+     */
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    /**
+     * <p>
+     * The tier of the channel.
+     * </p>
+     * 
+     * @param tier
+     *        The tier of the channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Tier
+     */
+
+    public CreateChannelRequest withTier(String tier) {
+        setTier(tier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The tier of the channel.
+     * </p>
+     * 
+     * @param tier
+     *        The tier of the channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Tier
+     */
+
+    public CreateChannelRequest withTier(Tier tier) {
+        this.tier = tier.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -423,7 +488,9 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getPlaybackMode() != null)
             sb.append("PlaybackMode: ").append(getPlaybackMode()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getTier() != null)
+            sb.append("Tier: ").append(getTier());
         sb.append("}");
         return sb.toString();
     }
@@ -458,6 +525,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getTier() == null ^ this.getTier() == null)
+            return false;
+        if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
+            return false;
         return true;
     }
 
@@ -471,6 +542,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
         return hashCode;
     }
 

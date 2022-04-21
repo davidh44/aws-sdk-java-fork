@@ -25,7 +25,7 @@ public class GetChannelScheduleResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of schedule entries for the channel.
+     * A list of schedule entries for the channel.
      * </p>
      */
     private java.util.List<ScheduleEntry> items;
@@ -38,10 +38,10 @@ public class GetChannelScheduleResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of schedule entries for the channel.
+     * A list of schedule entries for the channel.
      * </p>
      * 
-     * @return An array of schedule entries for the channel.
+     * @return A list of schedule entries for the channel.
      */
 
     public java.util.List<ScheduleEntry> getItems() {
@@ -50,11 +50,11 @@ public class GetChannelScheduleResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of schedule entries for the channel.
+     * A list of schedule entries for the channel.
      * </p>
      * 
      * @param items
-     *        An array of schedule entries for the channel.
+     *        A list of schedule entries for the channel.
      */
 
     public void setItems(java.util.Collection<ScheduleEntry> items) {
@@ -68,7 +68,7 @@ public class GetChannelScheduleResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of schedule entries for the channel.
+     * A list of schedule entries for the channel.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class GetChannelScheduleResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param items
-     *        An array of schedule entries for the channel.
+     *        A list of schedule entries for the channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class GetChannelScheduleResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of schedule entries for the channel.
+     * A list of schedule entries for the channel.
      * </p>
      * 
      * @param items
-     *        An array of schedule entries for the channel.
+     *        A list of schedule entries for the channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

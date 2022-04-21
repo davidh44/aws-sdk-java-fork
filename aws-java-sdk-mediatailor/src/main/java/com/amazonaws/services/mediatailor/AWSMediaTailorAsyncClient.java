@@ -151,6 +151,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLiveSourceResult> createLiveSourceAsync(CreateLiveSourceRequest request) {
+
+        return createLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLiveSourceResult> createLiveSourceAsync(final CreateLiveSourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLiveSourceRequest, CreateLiveSourceResult> asyncHandler) {
+        final CreateLiveSourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLiveSourceResult>() {
+            @Override
+            public CreateLiveSourceResult call() throws Exception {
+                CreateLiveSourceResult result = null;
+
+                try {
+                    result = executeCreateLiveSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest request) {
 
         return createPrefetchScheduleAsync(request, null);
@@ -349,6 +382,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLiveSourceResult> deleteLiveSourceAsync(DeleteLiveSourceRequest request) {
+
+        return deleteLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLiveSourceResult> deleteLiveSourceAsync(final DeleteLiveSourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteLiveSourceRequest, DeleteLiveSourceResult> asyncHandler) {
+        final DeleteLiveSourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteLiveSourceResult>() {
+            @Override
+            public DeleteLiveSourceResult call() throws Exception {
+                DeleteLiveSourceResult result = null;
+
+                try {
+                    result = executeDeleteLiveSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePlaybackConfigurationResult> deletePlaybackConfigurationAsync(DeletePlaybackConfigurationRequest request) {
 
         return deletePlaybackConfigurationAsync(request, null);
@@ -531,6 +597,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
 
                 try {
                     result = executeDescribeChannel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLiveSourceResult> describeLiveSourceAsync(DescribeLiveSourceRequest request) {
+
+        return describeLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLiveSourceResult> describeLiveSourceAsync(final DescribeLiveSourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLiveSourceRequest, DescribeLiveSourceResult> asyncHandler) {
+        final DescribeLiveSourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLiveSourceResult>() {
+            @Override
+            public DescribeLiveSourceResult call() throws Exception {
+                DescribeLiveSourceResult result = null;
+
+                try {
+                    result = executeDescribeLiveSource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -828,6 +927,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
 
                 try {
                     result = executeListChannels(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLiveSourcesResult> listLiveSourcesAsync(ListLiveSourcesRequest request) {
+
+        return listLiveSourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLiveSourcesResult> listLiveSourcesAsync(final ListLiveSourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLiveSourcesRequest, ListLiveSourcesResult> asyncHandler) {
+        final ListLiveSourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLiveSourcesResult>() {
+            @Override
+            public ListLiveSourcesResult call() throws Exception {
+                ListLiveSourcesResult result = null;
+
+                try {
+                    result = executeListLiveSources(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1224,6 +1356,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
 
                 try {
                     result = executeUpdateChannel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLiveSourceResult> updateLiveSourceAsync(UpdateLiveSourceRequest request) {
+
+        return updateLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLiveSourceResult> updateLiveSourceAsync(final UpdateLiveSourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateLiveSourceRequest, UpdateLiveSourceResult> asyncHandler) {
+        final UpdateLiveSourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateLiveSourceResult>() {
+            @Override
+            public UpdateLiveSourceResult call() throws Exception {
+                UpdateLiveSourceResult result = null;
+
+                try {
+                    result = executeUpdateLiveSource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

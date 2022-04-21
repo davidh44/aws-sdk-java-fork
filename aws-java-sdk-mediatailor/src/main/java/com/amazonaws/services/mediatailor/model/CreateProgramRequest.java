@@ -39,6 +39,12 @@ public class CreateProgramRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String channelName;
     /**
      * <p>
+     * The name of the LiveSource for this Program.
+     * </p>
+     */
+    private String liveSourceName;
+    /**
+     * <p>
      * The identifier for the program you are working on.
      * </p>
      */
@@ -169,6 +175,46 @@ public class CreateProgramRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     public CreateProgramRequest withChannelName(String channelName) {
         setChannelName(channelName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the LiveSource for this Program.
+     * </p>
+     * 
+     * @param liveSourceName
+     *        The name of the LiveSource for this Program.
+     */
+
+    public void setLiveSourceName(String liveSourceName) {
+        this.liveSourceName = liveSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the LiveSource for this Program.
+     * </p>
+     * 
+     * @return The name of the LiveSource for this Program.
+     */
+
+    public String getLiveSourceName() {
+        return this.liveSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the LiveSource for this Program.
+     * </p>
+     * 
+     * @param liveSourceName
+     *        The name of the LiveSource for this Program.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateProgramRequest withLiveSourceName(String liveSourceName) {
+        setLiveSourceName(liveSourceName);
         return this;
     }
 
@@ -348,6 +394,8 @@ public class CreateProgramRequest extends com.amazonaws.AmazonWebServiceRequest 
             sb.append("AdBreaks: ").append(getAdBreaks()).append(",");
         if (getChannelName() != null)
             sb.append("ChannelName: ").append(getChannelName()).append(",");
+        if (getLiveSourceName() != null)
+            sb.append("LiveSourceName: ").append(getLiveSourceName()).append(",");
         if (getProgramName() != null)
             sb.append("ProgramName: ").append(getProgramName()).append(",");
         if (getScheduleConfiguration() != null)
@@ -378,6 +426,10 @@ public class CreateProgramRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getChannelName() != null && other.getChannelName().equals(this.getChannelName()) == false)
             return false;
+        if (other.getLiveSourceName() == null ^ this.getLiveSourceName() == null)
+            return false;
+        if (other.getLiveSourceName() != null && other.getLiveSourceName().equals(this.getLiveSourceName()) == false)
+            return false;
         if (other.getProgramName() == null ^ this.getProgramName() == null)
             return false;
         if (other.getProgramName() != null && other.getProgramName().equals(this.getProgramName()) == false)
@@ -404,6 +456,7 @@ public class CreateProgramRequest extends com.amazonaws.AmazonWebServiceRequest 
 
         hashCode = prime * hashCode + ((getAdBreaks() == null) ? 0 : getAdBreaks().hashCode());
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
+        hashCode = prime * hashCode + ((getLiveSourceName() == null) ? 0 : getLiveSourceName().hashCode());
         hashCode = prime * hashCode + ((getProgramName() == null) ? 0 : getProgramName().hashCode());
         hashCode = prime * hashCode + ((getScheduleConfiguration() == null) ? 0 : getScheduleConfiguration().hashCode());
         hashCode = prime * hashCode + ((getSourceLocationName() == null) ? 0 : getSourceLocationName().hashCode());

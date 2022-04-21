@@ -111,7 +111,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default value is
-     * <code>S3_INTELLIGENT_TIERING</code>. Optional.
+     * <code>S3_STANDARD</code>. Optional.
      * </p>
      * <p>
      * Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code> |
@@ -810,7 +810,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default value is
-     * <code>S3_INTELLIGENT_TIERING</code>. Optional.
+     * <code>S3_STANDARD</code>. Optional.
      * </p>
      * <p>
      * Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code> |
@@ -819,7 +819,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param defaultStorageClass
      *        The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default
-     *        value is <code>S3_INTELLIGENT_TIERING</code>. Optional.</p>
+     *        value is <code>S3_STANDARD</code>. Optional.</p>
      *        <p>
      *        Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code>
      *        | <code>S3_ONEZONE_IA</code>
@@ -832,7 +832,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default value is
-     * <code>S3_INTELLIGENT_TIERING</code>. Optional.
+     * <code>S3_STANDARD</code>. Optional.
      * </p>
      * <p>
      * Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code> |
@@ -840,7 +840,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @return The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default
-     *         value is <code>S3_INTELLIGENT_TIERING</code>. Optional.</p>
+     *         value is <code>S3_STANDARD</code>. Optional.</p>
      *         <p>
      *         Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> |
      *         <code>S3_STANDARD_IA</code> | <code>S3_ONEZONE_IA</code>
@@ -853,7 +853,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default value is
-     * <code>S3_INTELLIGENT_TIERING</code>. Optional.
+     * <code>S3_STANDARD</code>. Optional.
      * </p>
      * <p>
      * Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code> |
@@ -862,7 +862,7 @@ public class CreateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param defaultStorageClass
      *        The default storage class for objects put into an Amazon S3 bucket by the S3 File Gateway. The default
-     *        value is <code>S3_INTELLIGENT_TIERING</code>. Optional.</p>
+     *        value is <code>S3_STANDARD</code>. Optional.</p>
      *        <p>
      *        Valid Values: <code>S3_STANDARD</code> | <code>S3_INTELLIGENT_TIERING</code> | <code>S3_STANDARD_IA</code>
      *        | <code>S3_ONEZONE_IA</code>

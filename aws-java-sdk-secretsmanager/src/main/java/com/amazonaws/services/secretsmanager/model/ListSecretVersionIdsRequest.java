@@ -30,7 +30,9 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
      * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      */
     private String secretId;
@@ -64,13 +66,17 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
      * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * 
      * @param secretId
      *        The ARN or name of the secret whose versions you want to list.</p>
      *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *        >Finding a secret from a partial ARN</a>.
      */
 
     public void setSecretId(String secretId) {
@@ -82,12 +88,16 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
      * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * 
      * @return The ARN or name of the secret whose versions you want to list.</p>
      *         <p>
-     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *         >Finding a secret from a partial ARN</a>.
      */
 
     public String getSecretId() {
@@ -99,13 +109,17 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
      * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * 
      * @param secretId
      *        The ARN or name of the secret whose versions you want to list.</p>
      *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *        >Finding a secret from a partial ARN</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -59,7 +59,11 @@ public class DescribeSourceLocationResult extends com.amazonaws.AmazonWebService
      * </p>
      */
     private java.util.Date lastModifiedTime;
-
+    /**
+     * <p>
+     * A list of the segment delivery configurations associated with this resource.
+     * </p>
+     */
     private java.util.List<SegmentDeliveryConfiguration> segmentDeliveryConfigurations;
     /**
      * <p>
@@ -315,7 +319,11 @@ public class DescribeSourceLocationResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * A list of the segment delivery configurations associated with this resource.
+     * </p>
+     * 
+     * @return A list of the segment delivery configurations associated with this resource.
      */
 
     public java.util.List<SegmentDeliveryConfiguration> getSegmentDeliveryConfigurations() {
@@ -323,7 +331,12 @@ public class DescribeSourceLocationResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A list of the segment delivery configurations associated with this resource.
+     * </p>
+     * 
      * @param segmentDeliveryConfigurations
+     *        A list of the segment delivery configurations associated with this resource.
      */
 
     public void setSegmentDeliveryConfigurations(java.util.Collection<SegmentDeliveryConfiguration> segmentDeliveryConfigurations) {
@@ -337,12 +350,16 @@ public class DescribeSourceLocationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * A list of the segment delivery configurations associated with this resource.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSegmentDeliveryConfigurations(java.util.Collection)} or
      * {@link #withSegmentDeliveryConfigurations(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param segmentDeliveryConfigurations
+     *        A list of the segment delivery configurations associated with this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,7 +374,12 @@ public class DescribeSourceLocationResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A list of the segment delivery configurations associated with this resource.
+     * </p>
+     * 
      * @param segmentDeliveryConfigurations
+     *        A list of the segment delivery configurations associated with this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

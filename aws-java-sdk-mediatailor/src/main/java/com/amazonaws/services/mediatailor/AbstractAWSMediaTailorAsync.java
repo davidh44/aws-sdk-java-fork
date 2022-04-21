@@ -56,6 +56,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLiveSourceResult> createLiveSourceAsync(CreateLiveSourceRequest request) {
+
+        return createLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLiveSourceResult> createLiveSourceAsync(CreateLiveSourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLiveSourceRequest, CreateLiveSourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest request) {
 
         return createPrefetchScheduleAsync(request, null);
@@ -134,6 +147,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLiveSourceResult> deleteLiveSourceAsync(DeleteLiveSourceRequest request) {
+
+        return deleteLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLiveSourceResult> deleteLiveSourceAsync(DeleteLiveSourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLiveSourceRequest, DeleteLiveSourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePlaybackConfigurationResult> deletePlaybackConfigurationAsync(DeletePlaybackConfigurationRequest request) {
 
         return deletePlaybackConfigurationAsync(request, null);
@@ -207,6 +233,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     @Override
     public java.util.concurrent.Future<DescribeChannelResult> describeChannelAsync(DescribeChannelRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeChannelRequest, DescribeChannelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLiveSourceResult> describeLiveSourceAsync(DescribeLiveSourceRequest request) {
+
+        return describeLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLiveSourceResult> describeLiveSourceAsync(DescribeLiveSourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeLiveSourceRequest, DescribeLiveSourceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -324,6 +363,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     @Override
     public java.util.concurrent.Future<ListChannelsResult> listChannelsAsync(ListChannelsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListChannelsRequest, ListChannelsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLiveSourcesResult> listLiveSourcesAsync(ListLiveSourcesRequest request) {
+
+        return listLiveSourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLiveSourcesResult> listLiveSourcesAsync(ListLiveSourcesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLiveSourcesRequest, ListLiveSourcesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -480,6 +532,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     @Override
     public java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateChannelRequest, UpdateChannelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLiveSourceResult> updateLiveSourceAsync(UpdateLiveSourceRequest request) {
+
+        return updateLiveSourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLiveSourceResult> updateLiveSourceAsync(UpdateLiveSourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateLiveSourceRequest, UpdateLiveSourceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

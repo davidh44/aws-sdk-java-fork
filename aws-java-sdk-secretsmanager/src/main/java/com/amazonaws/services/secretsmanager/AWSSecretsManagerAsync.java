@@ -87,7 +87,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </note>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:CancelRotateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -119,7 +119,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </note>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:CancelRotateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -140,10 +140,11 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Creates a new secret. A <i>secret</i> is a set of credentials, such as a user name and password, that you store
-     * in an encrypted form in Secrets Manager. The secret also includes the connection information to access a database
-     * or other service, which Secrets Manager doesn't encrypt. A secret in Secrets Manager consists of both the
-     * protected secret data and the important information needed to manage the secret.
+     * Creates a new secret. A <i>secret</i> can be a password, a set of credentials such as a user name and password,
+     * an OAuth token, or other secret information that you store in an encrypted form in Secrets Manager. The secret
+     * also includes the connection information to access a database or other service, which Secrets Manager doesn't
+     * encrypt. A secret in Secrets Manager consists of both the protected secret data and the important information
+     * needed to manage the secret.
      * </p>
      * <p>
      * For information about creating a secret in the console, see <a
@@ -155,6 +156,12 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * parameter or the <code>SecretBinary</code> parameter, but not both. If you include <code>SecretString</code> or
      * <code>SecretBinary</code> then Secrets Manager creates an initial secret version and automatically attaches the
      * staging label <code>AWSCURRENT</code> to it.
+     * </p>
+     * <p>
+     * For database credentials you want to rotate, for Secrets Manager to be able to rotate the secret, you must make
+     * sure the JSON you store in the <code>SecretString</code> matches the <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html">JSON
+     * structure of a database secret</a>.
      * </p>
      * <p>
      * If you don't specify an KMS encryption key, Secrets Manager uses the Amazon Web Services managed key
@@ -169,11 +176,16 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * key.
      * </p>
      * <p>
-     * <b>Required permissions: </b> <code>secretsmanager:CreateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * <b>Required permissions: </b> <code>secretsmanager:CreateSecret</code>. If you include tags in the secret, you
+     * also need <code>secretsmanager:TagResource</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
+     * </p>
+     * <p>
+     * To encrypt the secret with a KMS key other than <code>aws/secretsmanager</code>, you need
+     * <code>kms:GenerateDataKey</code> and <code>kms:Decrypt</code> permission to the key.
      * </p>
      * 
      * @param createSecretRequest
@@ -186,10 +198,11 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Creates a new secret. A <i>secret</i> is a set of credentials, such as a user name and password, that you store
-     * in an encrypted form in Secrets Manager. The secret also includes the connection information to access a database
-     * or other service, which Secrets Manager doesn't encrypt. A secret in Secrets Manager consists of both the
-     * protected secret data and the important information needed to manage the secret.
+     * Creates a new secret. A <i>secret</i> can be a password, a set of credentials such as a user name and password,
+     * an OAuth token, or other secret information that you store in an encrypted form in Secrets Manager. The secret
+     * also includes the connection information to access a database or other service, which Secrets Manager doesn't
+     * encrypt. A secret in Secrets Manager consists of both the protected secret data and the important information
+     * needed to manage the secret.
      * </p>
      * <p>
      * For information about creating a secret in the console, see <a
@@ -201,6 +214,12 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * parameter or the <code>SecretBinary</code> parameter, but not both. If you include <code>SecretString</code> or
      * <code>SecretBinary</code> then Secrets Manager creates an initial secret version and automatically attaches the
      * staging label <code>AWSCURRENT</code> to it.
+     * </p>
+     * <p>
+     * For database credentials you want to rotate, for Secrets Manager to be able to rotate the secret, you must make
+     * sure the JSON you store in the <code>SecretString</code> matches the <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html">JSON
+     * structure of a database secret</a>.
      * </p>
      * <p>
      * If you don't specify an KMS encryption key, Secrets Manager uses the Amazon Web Services managed key
@@ -215,11 +234,16 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * key.
      * </p>
      * <p>
-     * <b>Required permissions: </b> <code>secretsmanager:CreateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * <b>Required permissions: </b> <code>secretsmanager:CreateSecret</code>. If you include tags in the secret, you
+     * also need <code>secretsmanager:TagResource</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
+     * </p>
+     * <p>
+     * To encrypt the secret with a KMS key other than <code>aws/secretsmanager</code>, you need
+     * <code>kms:GenerateDataKey</code> and <code>kms:Decrypt</code> permission to the key.
      * </p>
      * 
      * @param createSecretRequest
@@ -243,7 +267,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:DeleteResourcePolicy</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -265,7 +289,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:DeleteResourcePolicy</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -311,7 +335,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:DeleteSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -352,7 +376,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:DeleteSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -378,7 +402,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:DescribeSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -399,7 +423,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:DescribeSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -425,7 +449,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:GetRandomPassword</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -446,7 +470,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:GetRandomPassword</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -474,7 +498,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:GetResourcePolicy</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -497,7 +521,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:GetResourcePolicy</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -531,7 +555,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <b>Required permissions: </b> <code>secretsmanager:GetSecretValue</code>. If the secret is encrypted using a
      * customer-managed key instead of the Amazon Web Services managed key <code>aws/secretsmanager</code>, then you
      * also need <code>kms:Decrypt</code> permissions for that key. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -560,7 +584,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <b>Required permissions: </b> <code>secretsmanager:GetSecretValue</code>. If the secret is encrypted using a
      * customer-managed key instead of the Amazon Web Services managed key <code>aws/secretsmanager</code>, then you
      * also need <code>kms:Decrypt</code> permissions for that key. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -592,7 +616,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ListSecretVersionIds</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -619,7 +643,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ListSecretVersionIds</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -656,7 +680,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ListSecrets</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -688,7 +712,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ListSecrets</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -721,7 +745,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:PutResourcePolicy</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -749,7 +773,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:PutResourcePolicy</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -799,7 +823,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:PutSecretValue</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -844,7 +868,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:PutSecretValue</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -870,7 +894,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:RemoveRegionsFromReplication</code>. For more information, see
      * <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -893,7 +917,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:RemoveRegionsFromReplication</code>. For more information, see
      * <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -923,7 +947,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ReplicateSecretToRegions</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -946,7 +970,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ReplicateSecretToRegions</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -972,7 +996,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:RestoreSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -993,7 +1017,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:RestoreSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1014,16 +1038,24 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Configures and starts the asynchronous process of rotating the secret.
+     * Configures and starts the asynchronous process of rotating the secret. For more information about rotation, see
+     * <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotate secrets</a>.
      * </p>
      * <p>
      * If you include the configuration parameters, the operation sets the values for the secret and then immediately
      * starts a rotation. If you don't include the configuration parameters, the operation starts a rotation with the
-     * values already stored in the secret. For more information about rotation, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotate secrets</a>.
+     * values already stored in the secret.
      * </p>
      * <p>
-     * To configure rotation, you include the ARN of an Amazon Web Services Lambda function and the schedule for the
+     * For database credentials you want to rotate, for Secrets Manager to be able to rotate the secret, you must make
+     * sure the secret value is in the <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html"> JSON
+     * structure of a database secret</a>. In particular, if you want to use the <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users"
+     * > alternating users strategy</a>, your secret must contain the ARN of a superuser secret.
+     * </p>
+     * <p>
+     * To configure rotation, you also need the ARN of an Amazon Web Services Lambda function and the schedule for the
      * rotation. The Lambda rotation function creates a new version of the secret and creates or updates the credentials
      * on the database or service to match. After testing the new credentials, the function marks the new secret version
      * with the staging label <code>AWSCURRENT</code>. Then anyone who retrieves the secret gets the new version. For
@@ -1032,17 +1064,22 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * works</a>.
      * </p>
      * <p>
-     * When rotation is successful, the <code>AWSPENDING</code> staging label might be attached to the same version as
-     * the <code>AWSCURRENT</code> version, or it might not be attached to any version.
+     * You can create the Lambda rotation function based on the <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html"
+     * >rotation function templates</a> that Secrets Manager provides. Choose a template that matches your <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html">Rotation
+     * strategy</a>.
      * </p>
      * <p>
-     * If the <code>AWSPENDING</code> staging label is present but not attached to the same version as
-     * <code>AWSCURRENT</code>, then any later invocation of <code>RotateSecret</code> assumes that a previous rotation
-     * request is still in progress and returns an error.
+     * When rotation is successful, the <code>AWSPENDING</code> staging label might be attached to the same version as
+     * the <code>AWSCURRENT</code> version, or it might not be attached to any version. If the <code>AWSPENDING</code>
+     * staging label is present but not attached to the same version as <code>AWSCURRENT</code>, then any later
+     * invocation of <code>RotateSecret</code> assumes that a previous rotation request is still in progress and returns
+     * an error.
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:RotateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>. You also need <code>lambda:InvokeFunction</code> permissions on the rotation
@@ -1061,16 +1098,24 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Configures and starts the asynchronous process of rotating the secret.
+     * Configures and starts the asynchronous process of rotating the secret. For more information about rotation, see
+     * <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotate secrets</a>.
      * </p>
      * <p>
      * If you include the configuration parameters, the operation sets the values for the secret and then immediately
      * starts a rotation. If you don't include the configuration parameters, the operation starts a rotation with the
-     * values already stored in the secret. For more information about rotation, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotate secrets</a>.
+     * values already stored in the secret.
      * </p>
      * <p>
-     * To configure rotation, you include the ARN of an Amazon Web Services Lambda function and the schedule for the
+     * For database credentials you want to rotate, for Secrets Manager to be able to rotate the secret, you must make
+     * sure the secret value is in the <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html"> JSON
+     * structure of a database secret</a>. In particular, if you want to use the <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users"
+     * > alternating users strategy</a>, your secret must contain the ARN of a superuser secret.
+     * </p>
+     * <p>
+     * To configure rotation, you also need the ARN of an Amazon Web Services Lambda function and the schedule for the
      * rotation. The Lambda rotation function creates a new version of the secret and creates or updates the credentials
      * on the database or service to match. After testing the new credentials, the function marks the new secret version
      * with the staging label <code>AWSCURRENT</code>. Then anyone who retrieves the secret gets the new version. For
@@ -1079,17 +1124,22 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * works</a>.
      * </p>
      * <p>
-     * When rotation is successful, the <code>AWSPENDING</code> staging label might be attached to the same version as
-     * the <code>AWSCURRENT</code> version, or it might not be attached to any version.
+     * You can create the Lambda rotation function based on the <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html"
+     * >rotation function templates</a> that Secrets Manager provides. Choose a template that matches your <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html">Rotation
+     * strategy</a>.
      * </p>
      * <p>
-     * If the <code>AWSPENDING</code> staging label is present but not attached to the same version as
-     * <code>AWSCURRENT</code>, then any later invocation of <code>RotateSecret</code> assumes that a previous rotation
-     * request is still in progress and returns an error.
+     * When rotation is successful, the <code>AWSPENDING</code> staging label might be attached to the same version as
+     * the <code>AWSCURRENT</code> version, or it might not be attached to any version. If the <code>AWSPENDING</code>
+     * staging label is present but not attached to the same version as <code>AWSCURRENT</code>, then any later
+     * invocation of <code>RotateSecret</code> assumes that a previous rotation request is still in progress and returns
+     * an error.
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:RotateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>. You also need <code>lambda:InvokeFunction</code> permissions on the rotation
@@ -1122,7 +1172,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:StopReplicationToReplica</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1147,7 +1197,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:StopReplicationToReplica</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1220,7 +1270,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </important>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:TagResource</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1288,7 +1338,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </important>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:TagResource</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1324,7 +1374,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </important>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UntagResource</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1355,7 +1405,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </important>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UntagResource</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1412,7 +1462,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UpdateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>. If you use a customer managed key, you must also have
@@ -1467,7 +1517,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * </p>
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UpdateSecret</code>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>. If you use a customer managed key, you must also have
@@ -1519,7 +1569,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UpdateSecretVersionStage</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1563,7 +1613,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UpdateSecretVersionStage</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1613,7 +1663,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ValidateResourcePolicy</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.
@@ -1658,7 +1708,7 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <p>
      * <b>Required permissions: </b> <code>secretsmanager:ValidateResourcePolicy</code>. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions"
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
      * control in Secrets Manager</a>.

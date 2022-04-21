@@ -56,7 +56,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </li>
      * </ul>
      * <p>
-     * Make sure to include additional field(s); these are indexed and used to source recommendations.
+     * Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * </p>
      */
     private java.util.List<String> objectFields;
@@ -123,7 +123,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </li>
      * </ul>
      * <p>
-     * Make sure to include additional field(s); these are indexed and used to source recommendations.
+     * Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * </p>
      * 
      * @return The fields from the source that are made available to your agents in Wisdom. </p>
@@ -145,7 +145,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      *         </li>
      *         </ul>
      *         <p>
-     *         Make sure to include additional field(s); these are indexed and used to source recommendations.
+     *         Make sure to include additional fields. These fields are indexed and used to source recommendations.
      */
 
     public java.util.List<String> getObjectFields() {
@@ -174,7 +174,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </li>
      * </ul>
      * <p>
-     * Make sure to include additional field(s); these are indexed and used to source recommendations.
+     * Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * </p>
      * 
      * @param objectFields
@@ -197,7 +197,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      *        </li>
      *        </ul>
      *        <p>
-     *        Make sure to include additional field(s); these are indexed and used to source recommendations.
+     *        Make sure to include additional fields. These fields are indexed and used to source recommendations.
      */
 
     public void setObjectFields(java.util.Collection<String> objectFields) {
@@ -231,7 +231,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </li>
      * </ul>
      * <p>
-     * Make sure to include additional field(s); these are indexed and used to source recommendations.
+     * Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -259,7 +259,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      *        </li>
      *        </ul>
      *        <p>
-     *        Make sure to include additional field(s); these are indexed and used to source recommendations.
+     *        Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -295,7 +295,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </li>
      * </ul>
      * <p>
-     * Make sure to include additional field(s); these are indexed and used to source recommendations.
+     * Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * </p>
      * 
      * @param objectFields
@@ -318,7 +318,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      *        </li>
      *        </ul>
      *        <p>
-     *        Make sure to include additional field(s); these are indexed and used to source recommendations.
+     *        Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -44,7 +44,15 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      */
     @Deprecated
     private java.util.Date endDateTime;
-
+    /**
+     * <p>
+     * The ISO8601 DateTime of the latest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     */
     private String endTime;
     /**
      * <p>
@@ -95,7 +103,15 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
      */
     @Deprecated
     private java.util.Date startDateTime;
-
+    /**
+     * <p>
+     * The ISO8601 DateTime of the earliest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     */
     private String startTime;
     /**
      * <p>
@@ -225,7 +241,19 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The ISO8601 DateTime of the latest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     * 
      * @param endTime
+     *        The ISO8601 DateTime of the latest property value to return.</p>
+     *        <p>
+     *        For more information about the ISO8601 DateTime format, see the data type <a
+     *        href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
      */
 
     public void setEndTime(String endTime) {
@@ -233,7 +261,18 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * The ISO8601 DateTime of the latest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     * 
+     * @return The ISO8601 DateTime of the latest property value to return.</p>
+     *         <p>
+     *         For more information about the ISO8601 DateTime format, see the data type <a
+     *         href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
      */
 
     public String getEndTime() {
@@ -241,7 +280,19 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The ISO8601 DateTime of the latest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     * 
      * @param endTime
+     *        The ISO8601 DateTime of the latest property value to return.</p>
+     *        <p>
+     *        For more information about the ISO8601 DateTime format, see the data type <a
+     *        href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -650,7 +701,19 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The ISO8601 DateTime of the earliest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     * 
      * @param startTime
+     *        The ISO8601 DateTime of the earliest property value to return.</p>
+     *        <p>
+     *        For more information about the ISO8601 DateTime format, see the data type <a
+     *        href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
      */
 
     public void setStartTime(String startTime) {
@@ -658,7 +721,18 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * The ISO8601 DateTime of the earliest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     * 
+     * @return The ISO8601 DateTime of the earliest property value to return.</p>
+     *         <p>
+     *         For more information about the ISO8601 DateTime format, see the data type <a
+     *         href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
      */
 
     public String getStartTime() {
@@ -666,7 +740,19 @@ public class GetPropertyValueHistoryRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The ISO8601 DateTime of the earliest property value to return.
+     * </p>
+     * <p>
+     * For more information about the ISO8601 DateTime format, see the data type <a
+     * href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
+     * </p>
+     * 
      * @param startTime
+     *        The ISO8601 DateTime of the earliest property value to return.</p>
+     *        <p>
+     *        For more information about the ISO8601 DateTime format, see the data type <a
+     *        href="https://docs.aws.amazon.com/roci/latest/roci-api/API_PropertyValue.html">PropertyValue</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

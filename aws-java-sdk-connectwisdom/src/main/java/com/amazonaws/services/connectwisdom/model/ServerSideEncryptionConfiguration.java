@@ -31,8 +31,7 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The KMS key. For information about valid ID values, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      */
     private String kmsKeyId;
@@ -40,14 +39,13 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The KMS key. For information about valid ID values, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key. For information about valid ID values, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers
-     *        (KeyId)</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        (KeyId)</a>.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -57,13 +55,12 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The KMS key. For information about valid ID values, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      * 
      * @return The KMS key. For information about valid ID values, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers
-     *         (KeyId)</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         (KeyId)</a>.
      */
 
     public String getKmsKeyId() {
@@ -73,14 +70,13 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The KMS key. For information about valid ID values, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key. For information about valid ID values, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers
-     *        (KeyId)</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        (KeyId)</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

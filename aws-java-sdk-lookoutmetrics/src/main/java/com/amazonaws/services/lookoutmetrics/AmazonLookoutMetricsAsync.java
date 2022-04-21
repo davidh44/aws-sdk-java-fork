@@ -442,6 +442,37 @@ public interface AmazonLookoutMetricsAsync extends AmazonLookoutMetrics {
 
     /**
      * <p>
+     * Detects an Amazon S3 dataset's file format, interval, and offset.
+     * </p>
+     * 
+     * @param detectMetricSetConfigRequest
+     * @return A Java Future containing the result of the DetectMetricSetConfig operation returned by the service.
+     * @sample AmazonLookoutMetricsAsync.DetectMetricSetConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/DetectMetricSetConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetectMetricSetConfigResult> detectMetricSetConfigAsync(DetectMetricSetConfigRequest detectMetricSetConfigRequest);
+
+    /**
+     * <p>
+     * Detects an Amazon S3 dataset's file format, interval, and offset.
+     * </p>
+     * 
+     * @param detectMetricSetConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DetectMetricSetConfig operation returned by the service.
+     * @sample AmazonLookoutMetricsAsyncHandler.DetectMetricSetConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/DetectMetricSetConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetectMetricSetConfigResult> detectMetricSetConfigAsync(DetectMetricSetConfigRequest detectMetricSetConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DetectMetricSetConfigRequest, DetectMetricSetConfigResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns details about a group of anomalous metrics.
      * </p>
      * 

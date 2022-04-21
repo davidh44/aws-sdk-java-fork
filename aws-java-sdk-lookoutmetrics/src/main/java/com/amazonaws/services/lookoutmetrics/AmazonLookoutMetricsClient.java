@@ -987,6 +987,73 @@ public class AmazonLookoutMetricsClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Detects an Amazon S3 dataset's file format, interval, and offset.
+     * </p>
+     * 
+     * @param detectMetricSetConfigRequest
+     * @return Result of the DetectMetricSetConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found. Check the ARN of the resource and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service. Check your input values and try
+     *         again.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws TooManyRequestsException
+     *         The request was denied due to too many requests being submitted at the same time.
+     * @sample AmazonLookoutMetrics.DetectMetricSetConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/DetectMetricSetConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DetectMetricSetConfigResult detectMetricSetConfig(DetectMetricSetConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeDetectMetricSetConfig(request);
+    }
+
+    @SdkInternalApi
+    final DetectMetricSetConfigResult executeDetectMetricSetConfig(DetectMetricSetConfigRequest detectMetricSetConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(detectMetricSetConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DetectMetricSetConfigRequest> request = null;
+        Response<DetectMetricSetConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DetectMetricSetConfigRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(detectMetricSetConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LookoutMetrics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DetectMetricSetConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DetectMetricSetConfigResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DetectMetricSetConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns details about a group of anomalous metrics.
      * </p>
      * 

@@ -18,6 +18,12 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The base URL of the host or path of the segment delivery server that you're using to serve segments. This is
+ * typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL include the
+ * protocol, such as https://example.com/some/path. To use a relative URL specify the relative path, such as
+ * /some/path*.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/SegmentDeliveryConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,12 +31,35 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SegmentDeliveryConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The base URL of the host or path of the segment delivery server that you're using to serve segments. This is
+     * typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL include
+     * the protocol, such as https://example.com/some/path. To use a relative URL specify the relative path, such as
+     * /some/path*.
+     * </p>
+     */
     private String baseUrl;
-
+    /**
+     * <p>
+     * A unique identifier used to distinguish between multiple segment delivery configurations in a source location.
+     * </p>
+     */
     private String name;
 
     /**
+     * <p>
+     * The base URL of the host or path of the segment delivery server that you're using to serve segments. This is
+     * typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL include
+     * the protocol, such as https://example.com/some/path. To use a relative URL specify the relative path, such as
+     * /some/path*.
+     * </p>
+     * 
      * @param baseUrl
+     *        The base URL of the host or path of the segment delivery server that you're using to serve segments. This
+     *        is typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL
+     *        include the protocol, such as https://example.com/some/path. To use a relative URL specify the relative
+     *        path, such as /some/path*.
      */
 
     public void setBaseUrl(String baseUrl) {
@@ -38,7 +67,17 @@ public class SegmentDeliveryConfiguration implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * The base URL of the host or path of the segment delivery server that you're using to serve segments. This is
+     * typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL include
+     * the protocol, such as https://example.com/some/path. To use a relative URL specify the relative path, such as
+     * /some/path*.
+     * </p>
+     * 
+     * @return The base URL of the host or path of the segment delivery server that you're using to serve segments. This
+     *         is typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute
+     *         URL include the protocol, such as https://example.com/some/path. To use a relative URL specify the
+     *         relative path, such as /some/path*.
      */
 
     public String getBaseUrl() {
@@ -46,7 +85,18 @@ public class SegmentDeliveryConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The base URL of the host or path of the segment delivery server that you're using to serve segments. This is
+     * typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL include
+     * the protocol, such as https://example.com/some/path. To use a relative URL specify the relative path, such as
+     * /some/path*.
+     * </p>
+     * 
      * @param baseUrl
+     *        The base URL of the host or path of the segment delivery server that you're using to serve segments. This
+     *        is typically a content delivery network (CDN). The URL can be absolute or relative. To use an absolute URL
+     *        include the protocol, such as https://example.com/some/path. To use a relative URL specify the relative
+     *        path, such as /some/path*.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +106,13 @@ public class SegmentDeliveryConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * A unique identifier used to distinguish between multiple segment delivery configurations in a source location.
+     * </p>
+     * 
      * @param name
+     *        A unique identifier used to distinguish between multiple segment delivery configurations in a source
+     *        location.
      */
 
     public void setName(String name) {
@@ -64,7 +120,12 @@ public class SegmentDeliveryConfiguration implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * A unique identifier used to distinguish between multiple segment delivery configurations in a source location.
+     * </p>
+     * 
+     * @return A unique identifier used to distinguish between multiple segment delivery configurations in a source
+     *         location.
      */
 
     public String getName() {
@@ -72,7 +133,13 @@ public class SegmentDeliveryConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * A unique identifier used to distinguish between multiple segment delivery configurations in a source location.
+     * </p>
+     * 
      * @param name
+     *        A unique identifier used to distinguish between multiple segment delivery configurations in a source
+     *        location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

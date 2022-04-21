@@ -185,6 +185,94 @@ public interface AWSIoTSiteWise {
 
     /**
      * <p>
+     * Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
+     * aggregates</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyAggregatesRequest
+     * @return Result of the BatchGetAssetPropertyAggregates operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ServiceUnavailableException
+     *         The requested service is unavailable.
+     * @sample AWSIoTSiteWise.BatchGetAssetPropertyAggregates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyAggregates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetAssetPropertyAggregatesResult batchGetAssetPropertyAggregates(BatchGetAssetPropertyAggregatesRequest batchGetAssetPropertyAggregatesRequest);
+
+    /**
+     * <p>
+     * Gets the current value for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values"
+     * >Querying current values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueRequest
+     * @return Result of the BatchGetAssetPropertyValue operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ServiceUnavailableException
+     *         The requested service is unavailable.
+     * @sample AWSIoTSiteWise.BatchGetAssetPropertyValue
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValue"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetAssetPropertyValueResult batchGetAssetPropertyValue(BatchGetAssetPropertyValueRequest batchGetAssetPropertyValueRequest);
+
+    /**
+     * <p>
+     * Gets the historical values for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values"
+     * >Querying historical values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueHistoryRequest
+     * @return Result of the BatchGetAssetPropertyValueHistory operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ServiceUnavailableException
+     *         The requested service is unavailable.
+     * @sample AWSIoTSiteWise.BatchGetAssetPropertyValueHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValueHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetAssetPropertyValueHistoryResult batchGetAssetPropertyValueHistory(BatchGetAssetPropertyValueHistoryRequest batchGetAssetPropertyValueHistoryRequest);
+
+    /**
+     * <p>
      * Sends a list of asset property values to IoT SiteWise. Each value is a timestamp-quality-value (TQV) data point.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ingest-api.html">Ingesting data using the API</a>

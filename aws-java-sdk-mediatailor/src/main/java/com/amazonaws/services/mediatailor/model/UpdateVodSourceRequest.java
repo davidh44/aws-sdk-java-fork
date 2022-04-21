@@ -27,7 +27,7 @@ public class UpdateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configurations for the VOD source on this account.
+     * A list of HTTP package configurations for the VOD source on this account.
      * </p>
      */
     private java.util.List<HttpPackageConfiguration> httpPackageConfigurations;
@@ -46,10 +46,10 @@ public class UpdateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configurations for the VOD source on this account.
+     * A list of HTTP package configurations for the VOD source on this account.
      * </p>
      * 
-     * @return An array of HTTP package configurations for the VOD source on this account.
+     * @return A list of HTTP package configurations for the VOD source on this account.
      */
 
     public java.util.List<HttpPackageConfiguration> getHttpPackageConfigurations() {
@@ -58,11 +58,11 @@ public class UpdateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configurations for the VOD source on this account.
+     * A list of HTTP package configurations for the VOD source on this account.
      * </p>
      * 
      * @param httpPackageConfigurations
-     *        An array of HTTP package configurations for the VOD source on this account.
+     *        A list of HTTP package configurations for the VOD source on this account.
      */
 
     public void setHttpPackageConfigurations(java.util.Collection<HttpPackageConfiguration> httpPackageConfigurations) {
@@ -76,7 +76,7 @@ public class UpdateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configurations for the VOD source on this account.
+     * A list of HTTP package configurations for the VOD source on this account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,7 +85,7 @@ public class UpdateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param httpPackageConfigurations
-     *        An array of HTTP package configurations for the VOD source on this account.
+     *        A list of HTTP package configurations for the VOD source on this account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class UpdateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configurations for the VOD source on this account.
+     * A list of HTTP package configurations for the VOD source on this account.
      * </p>
      * 
      * @param httpPackageConfigurations
-     *        An array of HTTP package configurations for the VOD source on this account.
+     *        A list of HTTP package configurations for the VOD source on this account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

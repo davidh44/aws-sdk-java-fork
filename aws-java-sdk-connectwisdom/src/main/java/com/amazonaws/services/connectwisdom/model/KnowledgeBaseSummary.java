@@ -42,7 +42,7 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     private String knowledgeBaseArn;
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
@@ -72,7 +72,7 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     private ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
     /**
      * <p>
-     * [KEVIN]
+     * Configuration information about the external data source.
      * </p>
      */
     private SourceConfiguration sourceConfiguration;
@@ -171,11 +171,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base.
+     *        The identifier of the knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -184,10 +184,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      * 
-     * @return The the identifier of the knowledge base.
+     * @return The identifier of the knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -196,11 +196,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base.
+     *        The identifier of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -390,11 +390,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * [KEVIN]
+     * Configuration information about the external data source.
      * </p>
      * 
      * @param sourceConfiguration
-     *        [KEVIN]
+     *        Configuration information about the external data source.
      */
 
     public void setSourceConfiguration(SourceConfiguration sourceConfiguration) {
@@ -403,10 +403,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * [KEVIN]
+     * Configuration information about the external data source.
      * </p>
      * 
-     * @return [KEVIN]
+     * @return Configuration information about the external data source.
      */
 
     public SourceConfiguration getSourceConfiguration() {
@@ -415,11 +415,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * [KEVIN]
+     * Configuration information about the external data source.
      * </p>
      * 
      * @param sourceConfiguration
-     *        [KEVIN]
+     *        Configuration information about the external data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

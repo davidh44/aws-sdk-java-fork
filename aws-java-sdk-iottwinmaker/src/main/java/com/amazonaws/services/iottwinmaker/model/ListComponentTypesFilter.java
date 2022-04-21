@@ -21,6 +21,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * An object that filters items in a list of component types.
  * </p>
+ * <note>
+ * <p>
+ * Only one object is accepted as a valid input.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ListComponentTypesFilter"
  *      target="_top">AWS API Documentation</a>

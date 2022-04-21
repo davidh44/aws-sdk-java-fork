@@ -29,6 +29,11 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <note>
+     * <p>
+     * Only one object is accepted as a valid input.
+     * </p>
+     * </note>
      */
     private java.util.List<ListEntitiesFilter> filters;
     /**
@@ -54,8 +59,16 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <note>
+     * <p>
+     * Only one object is accepted as a valid input.
+     * </p>
+     * </note>
      * 
-     * @return A list of objects that filter the request.
+     * @return A list of objects that filter the request.</p> <note>
+     *         <p>
+     *         Only one object is accepted as a valid input.
+     *         </p>
      */
 
     public java.util.List<ListEntitiesFilter> getFilters() {
@@ -66,9 +79,17 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <note>
+     * <p>
+     * Only one object is accepted as a valid input.
+     * </p>
+     * </note>
      * 
      * @param filters
-     *        A list of objects that filter the request.
+     *        A list of objects that filter the request.</p> <note>
+     *        <p>
+     *        Only one object is accepted as a valid input.
+     *        </p>
      */
 
     public void setFilters(java.util.Collection<ListEntitiesFilter> filters) {
@@ -84,6 +105,11 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <note>
+     * <p>
+     * Only one object is accepted as a valid input.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -91,7 +117,10 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param filters
-     *        A list of objects that filter the request.
+     *        A list of objects that filter the request.</p> <note>
+     *        <p>
+     *        Only one object is accepted as a valid input.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,9 +138,17 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <note>
+     * <p>
+     * Only one object is accepted as a valid input.
+     * </p>
+     * </note>
      * 
      * @param filters
-     *        A list of objects that filter the request.
+     *        A list of objects that filter the request.</p> <note>
+     *        <p>
+     *        Only one object is accepted as a valid input.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

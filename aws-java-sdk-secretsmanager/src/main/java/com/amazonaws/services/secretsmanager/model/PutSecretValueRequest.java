@@ -30,7 +30,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * <p>
      * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
@@ -131,7 +133,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * <p>
      * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
@@ -140,7 +144,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * @param secretId
      *        The ARN or name of the secret to add a new version to.</p>
      *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *        >Finding a secret from a partial ARN</a>.
      *        </p>
      *        <p>
      *        If the secret doesn't already exist, use <code>CreateSecret</code> instead.
@@ -155,7 +161,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * <p>
      * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
@@ -163,7 +171,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @return The ARN or name of the secret to add a new version to.</p>
      *         <p>
-     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *         >Finding a secret from a partial ARN</a>.
      *         </p>
      *         <p>
      *         If the secret doesn't already exist, use <code>CreateSecret</code> instead.
@@ -178,7 +188,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * <p>
      * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
@@ -187,7 +199,9 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * @param secretId
      *        The ARN or name of the secret to add a new version to.</p>
      *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *        >Finding a secret from a partial ARN</a>.
      *        </p>
      *        <p>
      *        If the secret doesn't already exist, use <code>CreateSecret</code> instead.

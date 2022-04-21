@@ -25,7 +25,7 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of channels that are associated with this account.
+     * A list of channels that are associated with this account.
      * </p>
      */
     private java.util.List<Channel> items;
@@ -39,10 +39,10 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of channels that are associated with this account.
+     * A list of channels that are associated with this account.
      * </p>
      * 
-     * @return An array of channels that are associated with this account.
+     * @return A list of channels that are associated with this account.
      */
 
     public java.util.List<Channel> getItems() {
@@ -51,11 +51,11 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of channels that are associated with this account.
+     * A list of channels that are associated with this account.
      * </p>
      * 
      * @param items
-     *        An array of channels that are associated with this account.
+     *        A list of channels that are associated with this account.
      */
 
     public void setItems(java.util.Collection<Channel> items) {
@@ -69,7 +69,7 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of channels that are associated with this account.
+     * A list of channels that are associated with this account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param items
-     *        An array of channels that are associated with this account.
+     *        A list of channels that are associated with this account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of channels that are associated with this account.
+     * A list of channels that are associated with this account.
      * </p>
      * 
      * @param items
-     *        An array of channels that are associated with this account.
+     *        A list of channels that are associated with this account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

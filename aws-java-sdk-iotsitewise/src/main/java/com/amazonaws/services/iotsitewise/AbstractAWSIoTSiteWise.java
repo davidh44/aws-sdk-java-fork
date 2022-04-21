@@ -49,6 +49,21 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
     }
 
     @Override
+    public BatchGetAssetPropertyAggregatesResult batchGetAssetPropertyAggregates(BatchGetAssetPropertyAggregatesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchGetAssetPropertyValueResult batchGetAssetPropertyValue(BatchGetAssetPropertyValueRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchGetAssetPropertyValueHistoryResult batchGetAssetPropertyValueHistory(BatchGetAssetPropertyValueHistoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchPutAssetPropertyValueResult batchPutAssetPropertyValue(BatchPutAssetPropertyValueRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

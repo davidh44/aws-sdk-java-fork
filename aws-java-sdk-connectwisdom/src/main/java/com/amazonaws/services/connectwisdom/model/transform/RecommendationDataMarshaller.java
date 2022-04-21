@@ -35,6 +35,8 @@ public class RecommendationDataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relevanceLevel").build();
     private static final MarshallingInfo<Double> RELEVANCESCORE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relevanceScore").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
 
     private static final RecommendationDataMarshaller instance = new RecommendationDataMarshaller();
 
@@ -56,6 +58,7 @@ public class RecommendationDataMarshaller {
             protocolMarshaller.marshall(recommendationData.getRecommendationId(), RECOMMENDATIONID_BINDING);
             protocolMarshaller.marshall(recommendationData.getRelevanceLevel(), RELEVANCELEVEL_BINDING);
             protocolMarshaller.marshall(recommendationData.getRelevanceScore(), RELEVANCESCORE_BINDING);
+            protocolMarshaller.marshall(recommendationData.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

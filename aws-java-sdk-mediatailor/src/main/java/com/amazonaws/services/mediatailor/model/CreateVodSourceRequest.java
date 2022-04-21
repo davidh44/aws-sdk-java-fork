@@ -27,7 +27,7 @@ public class CreateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configuration parameters for this VOD source.
+     * A list of HTTP package configuration parameters for this VOD source.
      * </p>
      */
     private java.util.List<HttpPackageConfiguration> httpPackageConfigurations;
@@ -52,10 +52,10 @@ public class CreateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configuration parameters for this VOD source.
+     * A list of HTTP package configuration parameters for this VOD source.
      * </p>
      * 
-     * @return An array of HTTP package configuration parameters for this VOD source.
+     * @return A list of HTTP package configuration parameters for this VOD source.
      */
 
     public java.util.List<HttpPackageConfiguration> getHttpPackageConfigurations() {
@@ -64,11 +64,11 @@ public class CreateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configuration parameters for this VOD source.
+     * A list of HTTP package configuration parameters for this VOD source.
      * </p>
      * 
      * @param httpPackageConfigurations
-     *        An array of HTTP package configuration parameters for this VOD source.
+     *        A list of HTTP package configuration parameters for this VOD source.
      */
 
     public void setHttpPackageConfigurations(java.util.Collection<HttpPackageConfiguration> httpPackageConfigurations) {
@@ -82,7 +82,7 @@ public class CreateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configuration parameters for this VOD source.
+     * A list of HTTP package configuration parameters for this VOD source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -91,7 +91,7 @@ public class CreateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param httpPackageConfigurations
-     *        An array of HTTP package configuration parameters for this VOD source.
+     *        A list of HTTP package configuration parameters for this VOD source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +107,11 @@ public class CreateVodSourceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of HTTP package configuration parameters for this VOD source.
+     * A list of HTTP package configuration parameters for this VOD source.
      * </p>
      * 
      * @param httpPackageConfigurations
-     *        An array of HTTP package configuration parameters for this VOD source.
+     *        A list of HTTP package configuration parameters for this VOD source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

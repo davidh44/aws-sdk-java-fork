@@ -118,6 +118,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetCustomEntityTypesResult> batchGetCustomEntityTypesAsync(BatchGetCustomEntityTypesRequest request) {
+
+        return batchGetCustomEntityTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetCustomEntityTypesResult> batchGetCustomEntityTypesAsync(BatchGetCustomEntityTypesRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetCustomEntityTypesRequest, BatchGetCustomEntityTypesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetDevEndpointsResult> batchGetDevEndpointsAsync(BatchGetDevEndpointsRequest request) {
 
         return batchGetDevEndpointsAsync(request, null);
@@ -295,6 +308,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<CreateCrawlerResult> createCrawlerAsync(CreateCrawlerRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateCrawlerRequest, CreateCrawlerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(CreateCustomEntityTypeRequest request) {
+
+        return createCustomEntityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(CreateCustomEntityTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateCustomEntityTypeRequest, CreateCustomEntityTypeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -570,6 +596,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<DeleteCrawlerResult> deleteCrawlerAsync(DeleteCrawlerRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteCrawlerRequest, DeleteCrawlerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(DeleteCustomEntityTypeRequest request) {
+
+        return deleteCustomEntityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(DeleteCustomEntityTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomEntityTypeRequest, DeleteCustomEntityTypeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -962,6 +1001,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<GetCrawlersResult> getCrawlersAsync(GetCrawlersRequest request,
             com.amazonaws.handlers.AsyncHandler<GetCrawlersRequest, GetCrawlersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(GetCustomEntityTypeRequest request) {
+
+        return getCustomEntityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(GetCustomEntityTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetCustomEntityTypeRequest, GetCustomEntityTypeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1616,6 +1668,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<ListCrawlersResult> listCrawlersAsync(ListCrawlersRequest request,
             com.amazonaws.handlers.AsyncHandler<ListCrawlersRequest, ListCrawlersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest request) {
+
+        return listCustomEntityTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCustomEntityTypesRequest, ListCustomEntityTypesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

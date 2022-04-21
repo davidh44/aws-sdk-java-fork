@@ -47,6 +47,8 @@ public class ChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlaybackMode").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> TIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tier").build();
 
     private static final ChannelMarshaller instance = new ChannelMarshaller();
 
@@ -73,6 +75,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getOutputs(), OUTPUTS_BINDING);
             protocolMarshaller.marshall(channel.getPlaybackMode(), PLAYBACKMODE_BINDING);
             protocolMarshaller.marshall(channel.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(channel.getTier(), TIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,18 +27,18 @@ public class RemoveKnowledgeBaseTemplateUriRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      */
     private String knowledgeBaseId;
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -47,10 +47,10 @@ public class RemoveKnowledgeBaseTemplateUriRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * 
-     * @return The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * @return The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      */
 
     public String getKnowledgeBaseId() {
@@ -59,11 +59,11 @@ public class RemoveKnowledgeBaseTemplateUriRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

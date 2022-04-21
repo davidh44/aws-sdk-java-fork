@@ -204,6 +204,21 @@ public interface AWSGlue {
     BatchGetCrawlersResult batchGetCrawlers(BatchGetCrawlersRequest batchGetCrawlersRequest);
 
     /**
+     * @param batchGetCustomEntityTypesRequest
+     * @return Result of the BatchGetCustomEntityTypes operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.BatchGetCustomEntityTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCustomEntityTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    BatchGetCustomEntityTypesResult batchGetCustomEntityTypes(BatchGetCustomEntityTypesRequest batchGetCustomEntityTypesRequest);
+
+    /**
      * <p>
      * Returns a list of resource metadata for a given list of development endpoint names. After calling the
      * <code>ListDevEndpoints</code> operation, you can call this operation to access the data to which you have been
@@ -515,6 +530,29 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     CreateCrawlerResult createCrawler(CreateCrawlerRequest createCrawlerRequest);
+
+    /**
+     * @param createCustomEntityTypeRequest
+     * @return Result of the CreateCustomEntityType operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws IdempotentParameterMismatchException
+     *         The same unique identifier was associated with two different records.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @sample AWSGlue.CreateCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCustomEntityType" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateCustomEntityTypeResult createCustomEntityType(CreateCustomEntityTypeRequest createCustomEntityTypeRequest);
 
     /**
      * <p>
@@ -1069,6 +1107,25 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     DeleteCrawlerResult deleteCrawler(DeleteCrawlerRequest deleteCrawlerRequest);
+
+    /**
+     * @param deleteCustomEntityTypeRequest
+     * @return Result of the DeleteCustomEntityType operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.DeleteCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCustomEntityType" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteCustomEntityTypeResult deleteCustomEntityType(DeleteCustomEntityTypeRequest deleteCustomEntityTypeRequest);
 
     /**
      * <p>
@@ -1743,6 +1800,25 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     GetCrawlersResult getCrawlers(GetCrawlersRequest getCrawlersRequest);
+
+    /**
+     * @param getCustomEntityTypeRequest
+     * @return Result of the GetCustomEntityType operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.GetCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCustomEntityType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetCustomEntityTypeResult getCustomEntityType(GetCustomEntityTypeRequest getCustomEntityTypeRequest);
 
     /**
      * <p>
@@ -2854,6 +2930,21 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     ListCrawlersResult listCrawlers(ListCrawlersRequest listCrawlersRequest);
+
+    /**
+     * @param listCustomEntityTypesRequest
+     * @return Result of the ListCustomEntityTypes operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.ListCustomEntityTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCustomEntityTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListCustomEntityTypesResult listCustomEntityTypes(ListCustomEntityTypesRequest listCustomEntityTypesRequest);
 
     /**
      * <p>

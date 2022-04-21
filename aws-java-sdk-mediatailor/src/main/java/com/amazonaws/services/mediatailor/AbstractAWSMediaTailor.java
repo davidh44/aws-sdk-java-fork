@@ -38,6 +38,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
     }
 
     @Override
+    public CreateLiveSourceResult createLiveSource(CreateLiveSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreatePrefetchScheduleResult createPrefetchSchedule(CreatePrefetchScheduleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -68,6 +73,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
     }
 
     @Override
+    public DeleteLiveSourceResult deleteLiveSource(DeleteLiveSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeletePlaybackConfigurationResult deletePlaybackConfiguration(DeletePlaybackConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +104,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
 
     @Override
     public DescribeChannelResult describeChannel(DescribeChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeLiveSourceResult describeLiveSource(DescribeLiveSourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -139,6 +154,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
 
     @Override
     public ListChannelsResult listChannels(ListChannelsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListLiveSourcesResult listLiveSources(ListLiveSourcesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -199,6 +219,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
 
     @Override
     public UpdateChannelResult updateChannel(UpdateChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateLiveSourceResult updateLiveSource(UpdateLiveSourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

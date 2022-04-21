@@ -64,7 +64,11 @@ public class SourceLocation implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date lastModifiedTime;
-
+    /**
+     * <p>
+     * The segment delivery configurations for the source location.
+     * </p>
+     */
     private java.util.List<SegmentDeliveryConfiguration> segmentDeliveryConfigurations;
     /**
      * <p>
@@ -320,7 +324,11 @@ public class SourceLocation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The segment delivery configurations for the source location.
+     * </p>
+     * 
+     * @return The segment delivery configurations for the source location.
      */
 
     public java.util.List<SegmentDeliveryConfiguration> getSegmentDeliveryConfigurations() {
@@ -328,7 +336,12 @@ public class SourceLocation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The segment delivery configurations for the source location.
+     * </p>
+     * 
      * @param segmentDeliveryConfigurations
+     *        The segment delivery configurations for the source location.
      */
 
     public void setSegmentDeliveryConfigurations(java.util.Collection<SegmentDeliveryConfiguration> segmentDeliveryConfigurations) {
@@ -342,12 +355,16 @@ public class SourceLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The segment delivery configurations for the source location.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSegmentDeliveryConfigurations(java.util.Collection)} or
      * {@link #withSegmentDeliveryConfigurations(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param segmentDeliveryConfigurations
+     *        The segment delivery configurations for the source location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -362,7 +379,12 @@ public class SourceLocation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The segment delivery configurations for the source location.
+     * </p>
+     * 
      * @param segmentDeliveryConfigurations
+     *        The segment delivery configurations for the source location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

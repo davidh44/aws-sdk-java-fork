@@ -216,6 +216,109 @@ public class AWSIoTSiteWiseAsyncClient extends AWSIoTSiteWiseClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyAggregatesResult> batchGetAssetPropertyAggregatesAsync(
+            BatchGetAssetPropertyAggregatesRequest request) {
+
+        return batchGetAssetPropertyAggregatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyAggregatesResult> batchGetAssetPropertyAggregatesAsync(
+            final BatchGetAssetPropertyAggregatesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyAggregatesRequest, BatchGetAssetPropertyAggregatesResult> asyncHandler) {
+        final BatchGetAssetPropertyAggregatesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetAssetPropertyAggregatesResult>() {
+            @Override
+            public BatchGetAssetPropertyAggregatesResult call() throws Exception {
+                BatchGetAssetPropertyAggregatesResult result = null;
+
+                try {
+                    result = executeBatchGetAssetPropertyAggregates(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueResult> batchGetAssetPropertyValueAsync(BatchGetAssetPropertyValueRequest request) {
+
+        return batchGetAssetPropertyValueAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueResult> batchGetAssetPropertyValueAsync(final BatchGetAssetPropertyValueRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyValueRequest, BatchGetAssetPropertyValueResult> asyncHandler) {
+        final BatchGetAssetPropertyValueRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetAssetPropertyValueResult>() {
+            @Override
+            public BatchGetAssetPropertyValueResult call() throws Exception {
+                BatchGetAssetPropertyValueResult result = null;
+
+                try {
+                    result = executeBatchGetAssetPropertyValue(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueHistoryResult> batchGetAssetPropertyValueHistoryAsync(
+            BatchGetAssetPropertyValueHistoryRequest request) {
+
+        return batchGetAssetPropertyValueHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueHistoryResult> batchGetAssetPropertyValueHistoryAsync(
+            final BatchGetAssetPropertyValueHistoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyValueHistoryRequest, BatchGetAssetPropertyValueHistoryResult> asyncHandler) {
+        final BatchGetAssetPropertyValueHistoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetAssetPropertyValueHistoryResult>() {
+            @Override
+            public BatchGetAssetPropertyValueHistoryResult call() throws Exception {
+                BatchGetAssetPropertyValueHistoryResult result = null;
+
+                try {
+                    result = executeBatchGetAssetPropertyValueHistory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchPutAssetPropertyValueResult> batchPutAssetPropertyValueAsync(BatchPutAssetPropertyValueRequest request) {
 
         return batchPutAssetPropertyValueAsync(request, null);

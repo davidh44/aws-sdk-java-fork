@@ -54,7 +54,7 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
     private String knowledgeBaseArn;
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
@@ -277,11 +277,11 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base.
+     *        The identifier of the knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -290,10 +290,10 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      * 
-     * @return The the identifier of the knowledge base.
+     * @return The identifier of the knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -302,11 +302,11 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The the identifier of the knowledge base.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base.
+     *        The identifier of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

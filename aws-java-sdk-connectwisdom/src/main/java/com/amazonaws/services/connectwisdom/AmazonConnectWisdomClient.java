@@ -51,13 +51,11 @@ import com.amazonaws.services.connectwisdom.model.transform.*;
  * not return until the service call completes.
  * <p>
  * <p>
- * All Amazon Connect Wisdom functionality is accessible using the API. For example, you can create an assistant and a
- * knowledge base.
+ * Amazon Connect Wisdom delivers agents the information they need to solve customer issues as they're actively speaking
+ * with customers. Agents can search across connected repositories from within their agent desktop to find answers
+ * quickly. Use the Amazon Connect Wisdom APIs to create an assistant and a knowledge base, for example, or manage
+ * content by uploading custom files.
  * </p>
- * 
- * <pre>
- * <code> &lt;p&gt;Some more advanced features are only accessible using the Wisdom API. For example, you can manually manage content by uploading custom files and control their lifecycle. &lt;/p&gt; </code>
- * </pre>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -165,7 +163,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
      *         conflicting resource (usually with the same name) is being created or mutated.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws ServiceQuotaExceededException
      *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
      *         resources, or use service quotas to request a service quota increase.
@@ -232,7 +230,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
      *         conflicting resource (usually with the same name) is being created or mutated.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws ServiceQuotaExceededException
      *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
      *         resources, or use service quotas to request a service quota increase.
@@ -304,7 +302,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
      *         conflicting resource (usually with the same name) is being created or mutated.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws ServiceQuotaExceededException
      *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
      *         resources, or use service quotas to request a service quota increase.
@@ -383,7 +381,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
      *         conflicting resource (usually with the same name) is being created or mutated.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws ServiceQuotaExceededException
      *         You've exceeded your service quota. To perform the requested action, remove some of the relevant
      *         resources, or use service quotas to request a service quota increase.
@@ -450,7 +448,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
      *         conflicting resource (usually with the same name) is being created or mutated.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @sample AmazonConnectWisdom.CreateSession
@@ -509,7 +507,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param deleteAssistantRequest
      * @return Result of the DeleteAssistant operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -570,7 +568,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param deleteAssistantAssociationRequest
      * @return Result of the DeleteAssistantAssociation operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -633,7 +631,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param deleteContentRequest
      * @return Result of the DeleteContent operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -709,6 +707,8 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *         The request could not be processed because of conflict in the current state of the resource. For example,
      *         if you're using a <code>Create</code> API (such as <code>CreateAssistant</code>) that accepts name, a
      *         conflicting resource (usually with the same name) is being created or mutated.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -769,7 +769,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getAssistantRequest
      * @return Result of the GetAssistant operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -830,7 +830,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getAssistantAssociationRequest
      * @return Result of the GetAssistantAssociation operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -893,7 +893,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getContentRequest
      * @return Result of the GetContent operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -954,7 +954,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getContentSummaryRequest
      * @return Result of the GetContentSummary operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1015,7 +1015,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getKnowledgeBaseRequest
      * @return Result of the GetKnowledgeBase operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1082,7 +1082,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getRecommendationsRequest
      * @return Result of the GetRecommendations operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1143,7 +1143,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param getSessionRequest
      * @return Result of the GetSession operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1204,7 +1204,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param listAssistantAssociationsRequest
      * @return Result of the ListAssistantAssociations operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1267,7 +1267,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param listAssistantsRequest
      * @return Result of the ListAssistants operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @sample AmazonConnectWisdom.ListAssistants
@@ -1326,7 +1326,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param listContentsRequest
      * @return Result of the ListContents operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1387,7 +1387,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param listKnowledgeBasesRequest
      * @return Result of the ListKnowledgeBases operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @sample AmazonConnectWisdom.ListKnowledgeBases
@@ -1506,7 +1506,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param notifyRecommendationsReceivedRequest
      * @return Result of the NotifyRecommendationsReceived operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1570,7 +1570,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param queryAssistantRequest
      * @return Result of the QueryAssistant operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1631,7 +1631,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param removeKnowledgeBaseTemplateUriRequest
      * @return Result of the RemoveKnowledgeBaseTemplateUri operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1694,7 +1694,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param searchContentRequest
      * @return Result of the SearchContent operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1755,7 +1755,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param searchSessionsRequest
      * @return Result of the SearchSessions operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1821,7 +1821,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param startContentUploadRequest
      * @return Result of the StartContentUpload operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
@@ -1998,7 +1998,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param updateContentRequest
      * @return Result of the UpdateContent operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws PreconditionFailedException
@@ -2065,7 +2065,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      * @param updateKnowledgeBaseTemplateUriRequest
      * @return Result of the UpdateKnowledgeBaseTemplateUri operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by a service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException

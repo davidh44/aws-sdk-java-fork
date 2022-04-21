@@ -25,7 +25,7 @@ public class ListAlertsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * An array of alerts that are associated with this resource.
+     * A list of alerts that are associated with this resource.
      * </p>
      */
     private java.util.List<Alert> items;
@@ -38,10 +38,10 @@ public class ListAlertsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * An array of alerts that are associated with this resource.
+     * A list of alerts that are associated with this resource.
      * </p>
      * 
-     * @return An array of alerts that are associated with this resource.
+     * @return A list of alerts that are associated with this resource.
      */
 
     public java.util.List<Alert> getItems() {
@@ -50,11 +50,11 @@ public class ListAlertsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * An array of alerts that are associated with this resource.
+     * A list of alerts that are associated with this resource.
      * </p>
      * 
      * @param items
-     *        An array of alerts that are associated with this resource.
+     *        A list of alerts that are associated with this resource.
      */
 
     public void setItems(java.util.Collection<Alert> items) {
@@ -68,7 +68,7 @@ public class ListAlertsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * An array of alerts that are associated with this resource.
+     * A list of alerts that are associated with this resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListAlertsResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param items
-     *        An array of alerts that are associated with this resource.
+     *        A list of alerts that are associated with this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListAlertsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * An array of alerts that are associated with this resource.
+     * A list of alerts that are associated with this resource.
      * </p>
      * 
      * @param items
-     *        An array of alerts that are associated with this resource.
+     *        A list of alerts that are associated with this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

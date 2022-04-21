@@ -31,7 +31,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * friendly name of the secret.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      */
     private String secretId;
@@ -55,14 +57,18 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * friendly name of the secret.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * 
      * @param secretId
      *        The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or
      *        the friendly name of the secret.</p>
      *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *        >Finding a secret from a partial ARN</a>.
      */
 
     public void setSecretId(String secretId) {
@@ -75,13 +81,17 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * friendly name of the secret.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * 
      * @return The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or
      *         the friendly name of the secret.</p>
      *         <p>
-     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *         >Finding a secret from a partial ARN</a>.
      */
 
     public String getSecretId() {
@@ -94,14 +104,18 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * friendly name of the secret.
      * </p>
      * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding
+     * a secret from a partial ARN</a>.
      * </p>
      * 
      * @param secretId
      *        The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or
      *        the friendly name of the secret.</p>
      *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen"
+     *        >Finding a secret from a partial ARN</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

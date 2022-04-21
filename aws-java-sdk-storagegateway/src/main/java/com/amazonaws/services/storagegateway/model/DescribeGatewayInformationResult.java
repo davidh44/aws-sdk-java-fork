@@ -74,7 +74,8 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The date on which the last software update was applied to the gateway. If the gateway has never been updated,
-     * this field does not return a value in the response.
+     * this field does not return a value in the response. This only only exist and returns once it have been chosen and
+     * set by the SGW service, based on the OS version of the gateway VM
      * </p>
      */
     private String lastSoftwareUpdate;
@@ -107,6 +108,8 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the gateway.
+     * This field only only exist and returns once it have been chosen and set by the SGW service, based on the OS
+     * version of the gateway VM
      * </p>
      */
     private String cloudWatchLogGroupARN;
@@ -511,12 +514,14 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The date on which the last software update was applied to the gateway. If the gateway has never been updated,
-     * this field does not return a value in the response.
+     * this field does not return a value in the response. This only only exist and returns once it have been chosen and
+     * set by the SGW service, based on the OS version of the gateway VM
      * </p>
      * 
      * @param lastSoftwareUpdate
      *        The date on which the last software update was applied to the gateway. If the gateway has never been
-     *        updated, this field does not return a value in the response.
+     *        updated, this field does not return a value in the response. This only only exist and returns once it have
+     *        been chosen and set by the SGW service, based on the OS version of the gateway VM
      */
 
     public void setLastSoftwareUpdate(String lastSoftwareUpdate) {
@@ -526,11 +531,13 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The date on which the last software update was applied to the gateway. If the gateway has never been updated,
-     * this field does not return a value in the response.
+     * this field does not return a value in the response. This only only exist and returns once it have been chosen and
+     * set by the SGW service, based on the OS version of the gateway VM
      * </p>
      * 
      * @return The date on which the last software update was applied to the gateway. If the gateway has never been
-     *         updated, this field does not return a value in the response.
+     *         updated, this field does not return a value in the response. This only only exist and returns once it
+     *         have been chosen and set by the SGW service, based on the OS version of the gateway VM
      */
 
     public String getLastSoftwareUpdate() {
@@ -540,12 +547,14 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The date on which the last software update was applied to the gateway. If the gateway has never been updated,
-     * this field does not return a value in the response.
+     * this field does not return a value in the response. This only only exist and returns once it have been chosen and
+     * set by the SGW service, based on the OS version of the gateway VM
      * </p>
      * 
      * @param lastSoftwareUpdate
      *        The date on which the last software update was applied to the gateway. If the gateway has never been
-     *        updated, this field does not return a value in the response.
+     *        updated, this field does not return a value in the response. This only only exist and returns once it have
+     *        been chosen and set by the SGW service, based on the OS version of the gateway VM
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -766,11 +775,14 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the gateway.
+     * This field only only exist and returns once it have been chosen and set by the SGW service, based on the OS
+     * version of the gateway VM
      * </p>
      * 
      * @param cloudWatchLogGroupARN
      *        The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the
-     *        gateway.
+     *        gateway. This field only only exist and returns once it have been chosen and set by the SGW service, based
+     *        on the OS version of the gateway VM
      */
 
     public void setCloudWatchLogGroupARN(String cloudWatchLogGroupARN) {
@@ -780,10 +792,13 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the gateway.
+     * This field only only exist and returns once it have been chosen and set by the SGW service, based on the OS
+     * version of the gateway VM
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the
-     *         gateway.
+     *         gateway. This field only only exist and returns once it have been chosen and set by the SGW service,
+     *         based on the OS version of the gateway VM
      */
 
     public String getCloudWatchLogGroupARN() {
@@ -793,11 +808,14 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the gateway.
+     * This field only only exist and returns once it have been chosen and set by the SGW service, based on the OS
+     * version of the gateway VM
      * </p>
      * 
      * @param cloudWatchLogGroupARN
      *        The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor events in the
-     *        gateway.
+     *        gateway. This field only only exist and returns once it have been chosen and set by the SGW service, based
+     *        on the OS version of the gateway VM
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

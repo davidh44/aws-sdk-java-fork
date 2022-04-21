@@ -28,6 +28,66 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * ISO8601 DateTime of a value for a time series property.
+     * </p>
+     * <p>
+     * The time for when the property value was recorded in ISO 8601 format:
+     * <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <i>[YYYY]</i>: year
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[MM]</i>: month
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[DD]</i>: day
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[hh]</i>: hour
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[mm]</i>: minute
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[ss]</i>: seconds
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is equal to
+     * 573123000 nanoseconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>Z</i>: default timezone UTC
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
+     * </p>
+     */
     private String time;
     /**
      * <p>
@@ -44,7 +104,121 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
     private DataValue value;
 
     /**
+     * <p>
+     * ISO8601 DateTime of a value for a time series property.
+     * </p>
+     * <p>
+     * The time for when the property value was recorded in ISO 8601 format:
+     * <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <i>[YYYY]</i>: year
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[MM]</i>: month
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[DD]</i>: day
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[hh]</i>: hour
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[mm]</i>: minute
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[ss]</i>: seconds
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is equal to
+     * 573123000 nanoseconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>Z</i>: default timezone UTC
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
+     * </p>
+     * 
      * @param time
+     *        ISO8601 DateTime of a value for a time series property.</p>
+     *        <p>
+     *        The time for when the property value was recorded in ISO 8601 format:
+     *        <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <i>[YYYY]</i>: year
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[MM]</i>: month
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[DD]</i>: day
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[hh]</i>: hour
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[mm]</i>: minute
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[ss]</i>: seconds
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is equal
+     *        to 573123000 nanoseconds.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>Z</i>: default timezone UTC
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
      */
 
     public void setTime(String time) {
@@ -52,7 +226,120 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * ISO8601 DateTime of a value for a time series property.
+     * </p>
+     * <p>
+     * The time for when the property value was recorded in ISO 8601 format:
+     * <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <i>[YYYY]</i>: year
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[MM]</i>: month
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[DD]</i>: day
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[hh]</i>: hour
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[mm]</i>: minute
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[ss]</i>: seconds
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is equal to
+     * 573123000 nanoseconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>Z</i>: default timezone UTC
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
+     * </p>
+     * 
+     * @return ISO8601 DateTime of a value for a time series property.</p>
+     *         <p>
+     *         The time for when the property value was recorded in ISO 8601 format:
+     *         <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <i>[YYYY]</i>: year
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>[MM]</i>: month
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>[DD]</i>: day
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>[hh]</i>: hour
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>[mm]</i>: minute
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>[ss]</i>: seconds
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is
+     *         equal to 573123000 nanoseconds.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>Z</i>: default timezone UTC
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
      */
 
     public String getTime() {
@@ -60,7 +347,121 @@ public class PropertyValue implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * ISO8601 DateTime of a value for a time series property.
+     * </p>
+     * <p>
+     * The time for when the property value was recorded in ISO 8601 format:
+     * <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <i>[YYYY]</i>: year
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[MM]</i>: month
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[DD]</i>: day
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[hh]</i>: hour
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[mm]</i>: minute
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[ss]</i>: seconds
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is equal to
+     * 573123000 nanoseconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>Z</i>: default timezone UTC
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
+     * </p>
+     * 
      * @param time
+     *        ISO8601 DateTime of a value for a time series property.</p>
+     *        <p>
+     *        The time for when the property value was recorded in ISO 8601 format:
+     *        <i>YYYY-MM-DDThh:mm:ss[.SSSSSSSSS][Z/±HH:mm]</i>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <i>[YYYY]</i>: year
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[MM]</i>: month
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[DD]</i>: day
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[hh]</i>: hour
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[mm]</i>: minute
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[ss]</i>: seconds
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>[.SSSSSSSSS]</i>: additional precision, where precedence is maintained. For example: [.573123] is equal
+     *        to 573123000 nanoseconds.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>Z</i>: default timezone UTC
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>± HH:mm</i>: time zone offset in Hours and Minutes.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        <i>Required sub-fields</i>: YYYY-MM-DDThh:mm:ss and [Z/±HH:mm]
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

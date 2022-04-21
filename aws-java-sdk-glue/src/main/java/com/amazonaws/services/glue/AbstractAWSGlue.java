@@ -63,6 +63,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public BatchGetCustomEntityTypesResult batchGetCustomEntityTypes(BatchGetCustomEntityTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetDevEndpointsResult batchGetDevEndpoints(BatchGetDevEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +134,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public CreateCrawlerResult createCrawler(CreateCrawlerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateCustomEntityTypeResult createCustomEntityType(CreateCustomEntityTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -234,6 +244,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public DeleteCrawlerResult deleteCrawler(DeleteCrawlerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCustomEntityTypeResult deleteCustomEntityType(DeleteCustomEntityTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -384,6 +399,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public GetCrawlersResult getCrawlers(GetCrawlersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetCustomEntityTypeResult getCustomEntityType(GetCustomEntityTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -634,6 +654,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public ListCrawlersResult listCrawlers(ListCrawlersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCustomEntityTypesResult listCustomEntityTypes(ListCustomEntityTypesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

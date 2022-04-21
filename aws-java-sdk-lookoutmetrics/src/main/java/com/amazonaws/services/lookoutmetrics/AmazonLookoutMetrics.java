@@ -366,6 +366,30 @@ public interface AmazonLookoutMetrics {
 
     /**
      * <p>
+     * Detects an Amazon S3 dataset's file format, interval, and offset.
+     * </p>
+     * 
+     * @param detectMetricSetConfigRequest
+     * @return Result of the DetectMetricSetConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found. Check the ARN of the resource and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service. Check your input values and try
+     *         again.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws TooManyRequestsException
+     *         The request was denied due to too many requests being submitted at the same time.
+     * @sample AmazonLookoutMetrics.DetectMetricSetConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/DetectMetricSetConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DetectMetricSetConfigResult detectMetricSetConfig(DetectMetricSetConfigRequest detectMetricSetConfigRequest);
+
+    /**
+     * <p>
      * Returns details about a group of anomalous metrics.
      * </p>
      * 

@@ -90,6 +90,12 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The tier for this channel. STANDARD tier channels can contain live programs.
+     * </p>
+     */
+    private String tier;
 
     /**
      * <p>
@@ -558,6 +564,46 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The tier for this channel. STANDARD tier channels can contain live programs.
+     * </p>
+     * 
+     * @param tier
+     *        The tier for this channel. STANDARD tier channels can contain live programs.
+     */
+
+    public void setTier(String tier) {
+        this.tier = tier;
+    }
+
+    /**
+     * <p>
+     * The tier for this channel. STANDARD tier channels can contain live programs.
+     * </p>
+     * 
+     * @return The tier for this channel. STANDARD tier channels can contain live programs.
+     */
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    /**
+     * <p>
+     * The tier for this channel. STANDARD tier channels can contain live programs.
+     * </p>
+     * 
+     * @param tier
+     *        The tier for this channel. STANDARD tier channels can contain live programs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withTier(String tier) {
+        setTier(tier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -586,7 +632,9 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         if (getPlaybackMode() != null)
             sb.append("PlaybackMode: ").append(getPlaybackMode()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getTier() != null)
+            sb.append("Tier: ").append(getTier());
         sb.append("}");
         return sb.toString();
     }
@@ -637,6 +685,10 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getTier() == null ^ this.getTier() == null)
+            return false;
+        if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
+            return false;
         return true;
     }
 
@@ -654,6 +706,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
         return hashCode;
     }
 

@@ -179,6 +179,123 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
 
     /**
      * <p>
+     * Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
+     * aggregates</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyAggregatesRequest
+     * @return A Java Future containing the result of the BatchGetAssetPropertyAggregates operation returned by the
+     *         service.
+     * @sample AWSIoTSiteWiseAsync.BatchGetAssetPropertyAggregates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyAggregates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAssetPropertyAggregatesResult> batchGetAssetPropertyAggregatesAsync(
+            BatchGetAssetPropertyAggregatesRequest batchGetAssetPropertyAggregatesRequest);
+
+    /**
+     * <p>
+     * Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
+     * aggregates</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyAggregatesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetAssetPropertyAggregates operation returned by the
+     *         service.
+     * @sample AWSIoTSiteWiseAsyncHandler.BatchGetAssetPropertyAggregates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyAggregates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAssetPropertyAggregatesResult> batchGetAssetPropertyAggregatesAsync(
+            BatchGetAssetPropertyAggregatesRequest batchGetAssetPropertyAggregatesRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyAggregatesRequest, BatchGetAssetPropertyAggregatesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the current value for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values"
+     * >Querying current values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueRequest
+     * @return A Java Future containing the result of the BatchGetAssetPropertyValue operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.BatchGetAssetPropertyValue
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValue"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAssetPropertyValueResult> batchGetAssetPropertyValueAsync(
+            BatchGetAssetPropertyValueRequest batchGetAssetPropertyValueRequest);
+
+    /**
+     * <p>
+     * Gets the current value for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values"
+     * >Querying current values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetAssetPropertyValue operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.BatchGetAssetPropertyValue
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValue"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAssetPropertyValueResult> batchGetAssetPropertyValueAsync(
+            BatchGetAssetPropertyValueRequest batchGetAssetPropertyValueRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyValueRequest, BatchGetAssetPropertyValueResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the historical values for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values"
+     * >Querying historical values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueHistoryRequest
+     * @return A Java Future containing the result of the BatchGetAssetPropertyValueHistory operation returned by the
+     *         service.
+     * @sample AWSIoTSiteWiseAsync.BatchGetAssetPropertyValueHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValueHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAssetPropertyValueHistoryResult> batchGetAssetPropertyValueHistoryAsync(
+            BatchGetAssetPropertyValueHistoryRequest batchGetAssetPropertyValueHistoryRequest);
+
+    /**
+     * <p>
+     * Gets the historical values for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values"
+     * >Querying historical values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueHistoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetAssetPropertyValueHistory operation returned by the
+     *         service.
+     * @sample AWSIoTSiteWiseAsyncHandler.BatchGetAssetPropertyValueHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValueHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAssetPropertyValueHistoryResult> batchGetAssetPropertyValueHistoryAsync(
+            BatchGetAssetPropertyValueHistoryRequest batchGetAssetPropertyValueHistoryRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyValueHistoryRequest, BatchGetAssetPropertyValueHistoryResult> asyncHandler);
+
+    /**
+     * <p>
      * Sends a list of asset property values to IoT SiteWise. Each value is a timestamp-quality-value (TQV) data point.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ingest-api.html">Ingesting data using the API</a>

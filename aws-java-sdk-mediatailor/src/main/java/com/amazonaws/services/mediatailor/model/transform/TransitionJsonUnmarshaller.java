@@ -48,6 +48,10 @@ public class TransitionJsonUnmarshaller implements Unmarshaller<Transition, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("DurationMillis", targetDepth)) {
+                    context.nextToken();
+                    transition.setDurationMillis(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("RelativePosition", targetDepth)) {
                     context.nextToken();
                     transition.setRelativePosition(context.getUnmarshaller(String.class).unmarshall(context));

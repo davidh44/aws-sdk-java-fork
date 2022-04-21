@@ -43,7 +43,7 @@ public class DescribeVodSourceResult extends com.amazonaws.AmazonWebServiceResul
     private java.util.List<HttpPackageConfiguration> httpPackageConfigurations;
     /**
      * <p>
-     * The ARN for the VOD source.
+     * The last modified time of the VOD source.
      * </p>
      */
     private java.util.Date lastModifiedTime;
@@ -218,11 +218,11 @@ public class DescribeVodSourceResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN for the VOD source.
+     * The last modified time of the VOD source.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The ARN for the VOD source.
+     *        The last modified time of the VOD source.
      */
 
     public void setLastModifiedTime(java.util.Date lastModifiedTime) {
@@ -231,10 +231,10 @@ public class DescribeVodSourceResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN for the VOD source.
+     * The last modified time of the VOD source.
      * </p>
      * 
-     * @return The ARN for the VOD source.
+     * @return The last modified time of the VOD source.
      */
 
     public java.util.Date getLastModifiedTime() {
@@ -243,11 +243,11 @@ public class DescribeVodSourceResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN for the VOD source.
+     * The last modified time of the VOD source.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The ARN for the VOD source.
+     *        The last modified time of the VOD source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

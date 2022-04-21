@@ -30,6 +30,12 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The duration of the live program in seconds.
+     * </p>
+     */
+    private Long durationMillis;
+    /**
+     * <p>
      * The position where this program will be inserted relative to the RelativePosition.
      * </p>
      */
@@ -70,6 +76,46 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String type;
+
+    /**
+     * <p>
+     * The duration of the live program in seconds.
+     * </p>
+     * 
+     * @param durationMillis
+     *        The duration of the live program in seconds.
+     */
+
+    public void setDurationMillis(Long durationMillis) {
+        this.durationMillis = durationMillis;
+    }
+
+    /**
+     * <p>
+     * The duration of the live program in seconds.
+     * </p>
+     * 
+     * @return The duration of the live program in seconds.
+     */
+
+    public Long getDurationMillis() {
+        return this.durationMillis;
+    }
+
+    /**
+     * <p>
+     * The duration of the live program in seconds.
+     * </p>
+     * 
+     * @param durationMillis
+     *        The duration of the live program in seconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Transition withDurationMillis(Long durationMillis) {
+        setDurationMillis(durationMillis);
+        return this;
+    }
 
     /**
      * <p>
@@ -367,6 +413,8 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getDurationMillis() != null)
+            sb.append("DurationMillis: ").append(getDurationMillis()).append(",");
         if (getRelativePosition() != null)
             sb.append("RelativePosition: ").append(getRelativePosition()).append(",");
         if (getRelativeProgram() != null)
@@ -389,6 +437,10 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Transition == false)
             return false;
         Transition other = (Transition) obj;
+        if (other.getDurationMillis() == null ^ this.getDurationMillis() == null)
+            return false;
+        if (other.getDurationMillis() != null && other.getDurationMillis().equals(this.getDurationMillis()) == false)
+            return false;
         if (other.getRelativePosition() == null ^ this.getRelativePosition() == null)
             return false;
         if (other.getRelativePosition() != null && other.getRelativePosition().equals(this.getRelativePosition()) == false)
@@ -413,6 +465,7 @@ public class Transition implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getDurationMillis() == null) ? 0 : getDurationMillis().hashCode());
         hashCode = prime * hashCode + ((getRelativePosition() == null) ? 0 : getRelativePosition().hashCode());
         hashCode = prime * hashCode + ((getRelativeProgram() == null) ? 0 : getRelativeProgram().hashCode());
         hashCode = prime * hashCode + ((getScheduledStartTimeMillis() == null) ? 0 : getScheduledStartTimeMillis().hashCode());

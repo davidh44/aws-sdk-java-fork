@@ -54,6 +54,12 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
     private String channelName;
     /**
      * <p>
+     * The name of the live source used for the program.
+     * </p>
+     */
+    private String liveSourceName;
+    /**
+     * <p>
      * The name of the program.
      * </p>
      */
@@ -243,6 +249,46 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
 
     public ScheduleEntry withChannelName(String channelName) {
         setChannelName(channelName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the live source used for the program.
+     * </p>
+     * 
+     * @param liveSourceName
+     *        The name of the live source used for the program.
+     */
+
+    public void setLiveSourceName(String liveSourceName) {
+        this.liveSourceName = liveSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the live source used for the program.
+     * </p>
+     * 
+     * @return The name of the live source used for the program.
+     */
+
+    public String getLiveSourceName() {
+        return this.liveSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the live source used for the program.
+     * </p>
+     * 
+     * @param liveSourceName
+     *        The name of the live source used for the program.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScheduleEntry withLiveSourceName(String liveSourceName) {
+        setLiveSourceName(liveSourceName);
         return this;
     }
 
@@ -535,6 +581,8 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
             sb.append("Arn: ").append(getArn()).append(",");
         if (getChannelName() != null)
             sb.append("ChannelName: ").append(getChannelName()).append(",");
+        if (getLiveSourceName() != null)
+            sb.append("LiveSourceName: ").append(getLiveSourceName()).append(",");
         if (getProgramName() != null)
             sb.append("ProgramName: ").append(getProgramName()).append(",");
         if (getScheduleAdBreaks() != null)
@@ -575,6 +623,10 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannelName() != null && other.getChannelName().equals(this.getChannelName()) == false)
             return false;
+        if (other.getLiveSourceName() == null ^ this.getLiveSourceName() == null)
+            return false;
+        if (other.getLiveSourceName() != null && other.getLiveSourceName().equals(this.getLiveSourceName()) == false)
+            return false;
         if (other.getProgramName() == null ^ this.getProgramName() == null)
             return false;
         if (other.getProgramName() != null && other.getProgramName().equals(this.getProgramName()) == false)
@@ -607,6 +659,7 @@ public class ScheduleEntry implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getApproximateStartTime() == null) ? 0 : getApproximateStartTime().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
+        hashCode = prime * hashCode + ((getLiveSourceName() == null) ? 0 : getLiveSourceName().hashCode());
         hashCode = prime * hashCode + ((getProgramName() == null) ? 0 : getProgramName().hashCode());
         hashCode = prime * hashCode + ((getScheduleAdBreaks() == null) ? 0 : getScheduleAdBreaks().hashCode());
         hashCode = prime * hashCode + ((getScheduleEntryType() == null) ? 0 : getScheduleEntryType().hashCode());

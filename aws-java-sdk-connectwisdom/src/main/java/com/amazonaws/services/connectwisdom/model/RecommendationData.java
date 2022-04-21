@@ -52,6 +52,12 @@ public class RecommendationData implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Double relevanceScore;
+    /**
+     * <p>
+     * The type of recommendation.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
@@ -233,6 +239,65 @@ public class RecommendationData implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The type of recommendation.
+     * </p>
+     * 
+     * @param type
+     *        The type of recommendation.
+     * @see RecommendationType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The type of recommendation.
+     * </p>
+     * 
+     * @return The type of recommendation.
+     * @see RecommendationType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The type of recommendation.
+     * </p>
+     * 
+     * @param type
+     *        The type of recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecommendationType
+     */
+
+    public RecommendationData withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of recommendation.
+     * </p>
+     * 
+     * @param type
+     *        The type of recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecommendationType
+     */
+
+    public RecommendationData withType(RecommendationType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -251,7 +316,9 @@ public class RecommendationData implements Serializable, Cloneable, StructuredPo
         if (getRelevanceLevel() != null)
             sb.append("RelevanceLevel: ").append(getRelevanceLevel()).append(",");
         if (getRelevanceScore() != null)
-            sb.append("RelevanceScore: ").append(getRelevanceScore());
+            sb.append("RelevanceScore: ").append(getRelevanceScore()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -282,6 +349,10 @@ public class RecommendationData implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getRelevanceScore() != null && other.getRelevanceScore().equals(this.getRelevanceScore()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +365,7 @@ public class RecommendationData implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getRecommendationId() == null) ? 0 : getRecommendationId().hashCode());
         hashCode = prime * hashCode + ((getRelevanceLevel() == null) ? 0 : getRelevanceLevel().hashCode());
         hashCode = prime * hashCode + ((getRelevanceScore() == null) ? 0 : getRelevanceScore().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

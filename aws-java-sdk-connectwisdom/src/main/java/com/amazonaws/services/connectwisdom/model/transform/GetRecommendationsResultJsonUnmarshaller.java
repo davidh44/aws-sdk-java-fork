@@ -54,6 +54,12 @@ public class GetRecommendationsResultJsonUnmarshaller implements Unmarshaller<Ge
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("triggers", targetDepth)) {
+                    context.nextToken();
+                    getRecommendationsResult.setTriggers(new ListUnmarshaller<RecommendationTrigger>(RecommendationTriggerJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

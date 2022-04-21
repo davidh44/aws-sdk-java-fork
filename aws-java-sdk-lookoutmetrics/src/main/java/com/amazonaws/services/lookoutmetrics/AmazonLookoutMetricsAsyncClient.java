@@ -474,6 +474,39 @@ public class AmazonLookoutMetricsAsyncClient extends AmazonLookoutMetricsClient 
     }
 
     @Override
+    public java.util.concurrent.Future<DetectMetricSetConfigResult> detectMetricSetConfigAsync(DetectMetricSetConfigRequest request) {
+
+        return detectMetricSetConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetectMetricSetConfigResult> detectMetricSetConfigAsync(final DetectMetricSetConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DetectMetricSetConfigRequest, DetectMetricSetConfigResult> asyncHandler) {
+        final DetectMetricSetConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DetectMetricSetConfigResult>() {
+            @Override
+            public DetectMetricSetConfigResult call() throws Exception {
+                DetectMetricSetConfigResult result = null;
+
+                try {
+                    result = executeDetectMetricSetConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAnomalyGroupResult> getAnomalyGroupAsync(GetAnomalyGroupRequest request) {
 
         return getAnomalyGroupAsync(request, null);

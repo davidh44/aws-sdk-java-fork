@@ -64,6 +64,10 @@ public class ScheduleEntryJsonUnmarshaller implements Unmarshaller<ScheduleEntry
                     context.nextToken();
                     scheduleEntry.setChannelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LiveSourceName", targetDepth)) {
+                    context.nextToken();
+                    scheduleEntry.setLiveSourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ProgramName", targetDepth)) {
                     context.nextToken();
                     scheduleEntry.setProgramName(context.getUnmarshaller(String.class).unmarshall(context));

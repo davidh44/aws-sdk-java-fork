@@ -30,7 +30,7 @@ public class AssistantSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Wisdom assistant
+     * The Amazon Resource Name (ARN) of the Wisdom assistant.
      * </p>
      */
     private String assistantArn;
@@ -79,11 +79,11 @@ public class AssistantSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Wisdom assistant
+     * The Amazon Resource Name (ARN) of the Wisdom assistant.
      * </p>
      * 
      * @param assistantArn
-     *        The Amazon Resource Name (ARN) of the Wisdom assistant
+     *        The Amazon Resource Name (ARN) of the Wisdom assistant.
      */
 
     public void setAssistantArn(String assistantArn) {
@@ -92,10 +92,10 @@ public class AssistantSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Wisdom assistant
+     * The Amazon Resource Name (ARN) of the Wisdom assistant.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Wisdom assistant
+     * @return The Amazon Resource Name (ARN) of the Wisdom assistant.
      */
 
     public String getAssistantArn() {
@@ -104,11 +104,11 @@ public class AssistantSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Wisdom assistant
+     * The Amazon Resource Name (ARN) of the Wisdom assistant.
      * </p>
      * 
      * @param assistantArn
-     *        The Amazon Resource Name (ARN) of the Wisdom assistant
+     *        The Amazon Resource Name (ARN) of the Wisdom assistant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

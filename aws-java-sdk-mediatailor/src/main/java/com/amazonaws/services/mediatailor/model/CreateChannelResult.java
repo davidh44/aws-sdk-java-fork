@@ -77,6 +77,12 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The channel's tier.
+     * </p>
+     */
+    private String tier;
 
     /**
      * <p>
@@ -516,6 +522,46 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * The channel's tier.
+     * </p>
+     * 
+     * @param tier
+     *        The channel's tier.
+     */
+
+    public void setTier(String tier) {
+        this.tier = tier;
+    }
+
+    /**
+     * <p>
+     * The channel's tier.
+     * </p>
+     * 
+     * @return The channel's tier.
+     */
+
+    public String getTier() {
+        return this.tier;
+    }
+
+    /**
+     * <p>
+     * The channel's tier.
+     * </p>
+     * 
+     * @param tier
+     *        The channel's tier.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChannelResult withTier(String tier) {
+        setTier(tier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -544,7 +590,9 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getPlaybackMode() != null)
             sb.append("PlaybackMode: ").append(getPlaybackMode()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getTier() != null)
+            sb.append("Tier: ").append(getTier());
         sb.append("}");
         return sb.toString();
     }
@@ -595,6 +643,10 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getTier() == null ^ this.getTier() == null)
+            return false;
+        if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
+            return false;
         return true;
     }
 
@@ -612,6 +664,7 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
         return hashCode;
     }
 

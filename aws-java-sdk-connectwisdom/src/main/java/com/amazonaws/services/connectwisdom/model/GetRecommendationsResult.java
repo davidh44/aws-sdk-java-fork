@@ -29,6 +29,12 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private java.util.List<RecommendationData> recommendations;
+    /**
+     * <p>
+     * The triggers corresponding to recommendations.
+     * </p>
+     */
+    private java.util.List<RecommendationTrigger> triggers;
 
     /**
      * <p>
@@ -101,6 +107,76 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The triggers corresponding to recommendations.
+     * </p>
+     * 
+     * @return The triggers corresponding to recommendations.
+     */
+
+    public java.util.List<RecommendationTrigger> getTriggers() {
+        return triggers;
+    }
+
+    /**
+     * <p>
+     * The triggers corresponding to recommendations.
+     * </p>
+     * 
+     * @param triggers
+     *        The triggers corresponding to recommendations.
+     */
+
+    public void setTriggers(java.util.Collection<RecommendationTrigger> triggers) {
+        if (triggers == null) {
+            this.triggers = null;
+            return;
+        }
+
+        this.triggers = new java.util.ArrayList<RecommendationTrigger>(triggers);
+    }
+
+    /**
+     * <p>
+     * The triggers corresponding to recommendations.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTriggers(java.util.Collection)} or {@link #withTriggers(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param triggers
+     *        The triggers corresponding to recommendations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRecommendationsResult withTriggers(RecommendationTrigger... triggers) {
+        if (this.triggers == null) {
+            setTriggers(new java.util.ArrayList<RecommendationTrigger>(triggers.length));
+        }
+        for (RecommendationTrigger ele : triggers) {
+            this.triggers.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The triggers corresponding to recommendations.
+     * </p>
+     * 
+     * @param triggers
+     *        The triggers corresponding to recommendations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRecommendationsResult withTriggers(java.util.Collection<RecommendationTrigger> triggers) {
+        setTriggers(triggers);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -113,7 +189,9 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getRecommendations() != null)
-            sb.append("Recommendations: ").append(getRecommendations());
+            sb.append("Recommendations: ").append(getRecommendations()).append(",");
+        if (getTriggers() != null)
+            sb.append("Triggers: ").append(getTriggers());
         sb.append("}");
         return sb.toString();
     }
@@ -132,6 +210,10 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getRecommendations() != null && other.getRecommendations().equals(this.getRecommendations()) == false)
             return false;
+        if (other.getTriggers() == null ^ this.getTriggers() == null)
+            return false;
+        if (other.getTriggers() != null && other.getTriggers().equals(this.getTriggers()) == false)
+            return false;
         return true;
     }
 
@@ -141,6 +223,7 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getRecommendations() == null) ? 0 : getRecommendations().hashCode());
+        hashCode = prime * hashCode + ((getTriggers() == null) ? 0 : getTriggers().hashCode());
         return hashCode;
     }
 

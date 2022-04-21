@@ -25,7 +25,7 @@ public class ListSourceLocationsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of source locations.
+     * A list of source locations.
      * </p>
      */
     private java.util.List<SourceLocation> items;
@@ -38,10 +38,10 @@ public class ListSourceLocationsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of source locations.
+     * A list of source locations.
      * </p>
      * 
-     * @return An array of source locations.
+     * @return A list of source locations.
      */
 
     public java.util.List<SourceLocation> getItems() {
@@ -50,11 +50,11 @@ public class ListSourceLocationsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of source locations.
+     * A list of source locations.
      * </p>
      * 
      * @param items
-     *        An array of source locations.
+     *        A list of source locations.
      */
 
     public void setItems(java.util.Collection<SourceLocation> items) {
@@ -68,7 +68,7 @@ public class ListSourceLocationsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of source locations.
+     * A list of source locations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListSourceLocationsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param items
-     *        An array of source locations.
+     *        A list of source locations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListSourceLocationsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of source locations.
+     * A list of source locations.
      * </p>
      * 
      * @param items
-     *        An array of source locations.
+     *        A list of source locations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

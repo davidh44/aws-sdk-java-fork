@@ -82,6 +82,49 @@ public class AbstractAWSIoTSiteWiseAsync extends AbstractAWSIoTSiteWise implemen
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyAggregatesResult> batchGetAssetPropertyAggregatesAsync(
+            BatchGetAssetPropertyAggregatesRequest request) {
+
+        return batchGetAssetPropertyAggregatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyAggregatesResult> batchGetAssetPropertyAggregatesAsync(
+            BatchGetAssetPropertyAggregatesRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyAggregatesRequest, BatchGetAssetPropertyAggregatesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueResult> batchGetAssetPropertyValueAsync(BatchGetAssetPropertyValueRequest request) {
+
+        return batchGetAssetPropertyValueAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueResult> batchGetAssetPropertyValueAsync(BatchGetAssetPropertyValueRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyValueRequest, BatchGetAssetPropertyValueResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueHistoryResult> batchGetAssetPropertyValueHistoryAsync(
+            BatchGetAssetPropertyValueHistoryRequest request) {
+
+        return batchGetAssetPropertyValueHistoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAssetPropertyValueHistoryResult> batchGetAssetPropertyValueHistoryAsync(
+            BatchGetAssetPropertyValueHistoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAssetPropertyValueHistoryRequest, BatchGetAssetPropertyValueHistoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchPutAssetPropertyValueResult> batchPutAssetPropertyValueAsync(BatchPutAssetPropertyValueRequest request) {
 
         return batchPutAssetPropertyValueAsync(request, null);

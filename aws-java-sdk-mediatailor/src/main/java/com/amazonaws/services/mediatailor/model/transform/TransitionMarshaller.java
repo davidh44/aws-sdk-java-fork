@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class TransitionMarshaller {
 
+    private static final MarshallingInfo<Long> DURATIONMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DurationMillis").build();
     private static final MarshallingInfo<String> RELATIVEPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelativePosition").build();
     private static final MarshallingInfo<String> RELATIVEPROGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -52,6 +54,7 @@ public class TransitionMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(transition.getDurationMillis(), DURATIONMILLIS_BINDING);
             protocolMarshaller.marshall(transition.getRelativePosition(), RELATIVEPOSITION_BINDING);
             protocolMarshaller.marshall(transition.getRelativeProgram(), RELATIVEPROGRAM_BINDING);
             protocolMarshaller.marshall(transition.getScheduledStartTimeMillis(), SCHEDULEDSTARTTIMEMILLIS_BINDING);

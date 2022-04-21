@@ -279,6 +279,31 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<BatchGetCrawlersRequest, BatchGetCrawlersResult> asyncHandler);
 
     /**
+     * @param batchGetCustomEntityTypesRequest
+     * @return A Java Future containing the result of the BatchGetCustomEntityTypes operation returned by the service.
+     * @sample AWSGlueAsync.BatchGetCustomEntityTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCustomEntityTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetCustomEntityTypesResult> batchGetCustomEntityTypesAsync(
+            BatchGetCustomEntityTypesRequest batchGetCustomEntityTypesRequest);
+
+    /**
+     * @param batchGetCustomEntityTypesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetCustomEntityTypes operation returned by the service.
+     * @sample AWSGlueAsyncHandler.BatchGetCustomEntityTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCustomEntityTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetCustomEntityTypesResult> batchGetCustomEntityTypesAsync(
+            BatchGetCustomEntityTypesRequest batchGetCustomEntityTypesRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetCustomEntityTypesRequest, BatchGetCustomEntityTypesResult> asyncHandler);
+
+    /**
      * <p>
      * Returns a list of resource metadata for a given list of development endpoint names. After calling the
      * <code>ListDevEndpoints</code> operation, you can call this operation to access the data to which you have been
@@ -747,6 +772,29 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<CreateCrawlerResult> createCrawlerAsync(CreateCrawlerRequest createCrawlerRequest,
             com.amazonaws.handlers.AsyncHandler<CreateCrawlerRequest, CreateCrawlerResult> asyncHandler);
+
+    /**
+     * @param createCustomEntityTypeRequest
+     * @return A Java Future containing the result of the CreateCustomEntityType operation returned by the service.
+     * @sample AWSGlueAsync.CreateCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCustomEntityType" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(CreateCustomEntityTypeRequest createCustomEntityTypeRequest);
+
+    /**
+     * @param createCustomEntityTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateCustomEntityType operation returned by the service.
+     * @sample AWSGlueAsyncHandler.CreateCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCustomEntityType" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(CreateCustomEntityTypeRequest createCustomEntityTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateCustomEntityTypeRequest, CreateCustomEntityTypeResult> asyncHandler);
 
     /**
      * <p>
@@ -1478,6 +1526,29 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<DeleteCrawlerResult> deleteCrawlerAsync(DeleteCrawlerRequest deleteCrawlerRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteCrawlerRequest, DeleteCrawlerResult> asyncHandler);
+
+    /**
+     * @param deleteCustomEntityTypeRequest
+     * @return A Java Future containing the result of the DeleteCustomEntityType operation returned by the service.
+     * @sample AWSGlueAsync.DeleteCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCustomEntityType" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(DeleteCustomEntityTypeRequest deleteCustomEntityTypeRequest);
+
+    /**
+     * @param deleteCustomEntityTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCustomEntityType operation returned by the service.
+     * @sample AWSGlueAsyncHandler.DeleteCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCustomEntityType" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(DeleteCustomEntityTypeRequest deleteCustomEntityTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomEntityTypeRequest, DeleteCustomEntityTypeResult> asyncHandler);
 
     /**
      * <p>
@@ -2534,6 +2605,29 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<GetCrawlersResult> getCrawlersAsync(GetCrawlersRequest getCrawlersRequest,
             com.amazonaws.handlers.AsyncHandler<GetCrawlersRequest, GetCrawlersResult> asyncHandler);
+
+    /**
+     * @param getCustomEntityTypeRequest
+     * @return A Java Future containing the result of the GetCustomEntityType operation returned by the service.
+     * @sample AWSGlueAsync.GetCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCustomEntityType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(GetCustomEntityTypeRequest getCustomEntityTypeRequest);
+
+    /**
+     * @param getCustomEntityTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCustomEntityType operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetCustomEntityType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetCustomEntityType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(GetCustomEntityTypeRequest getCustomEntityTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCustomEntityTypeRequest, GetCustomEntityTypeResult> asyncHandler);
 
     /**
      * <p>
@@ -4172,6 +4266,29 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<ListCrawlersResult> listCrawlersAsync(ListCrawlersRequest listCrawlersRequest,
             com.amazonaws.handlers.AsyncHandler<ListCrawlersRequest, ListCrawlersResult> asyncHandler);
+
+    /**
+     * @param listCustomEntityTypesRequest
+     * @return A Java Future containing the result of the ListCustomEntityTypes operation returned by the service.
+     * @sample AWSGlueAsync.ListCustomEntityTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCustomEntityTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest listCustomEntityTypesRequest);
+
+    /**
+     * @param listCustomEntityTypesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCustomEntityTypes operation returned by the service.
+     * @sample AWSGlueAsyncHandler.ListCustomEntityTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCustomEntityTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest listCustomEntityTypesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCustomEntityTypesRequest, ListCustomEntityTypesResult> asyncHandler);
 
     /**
      * <p>

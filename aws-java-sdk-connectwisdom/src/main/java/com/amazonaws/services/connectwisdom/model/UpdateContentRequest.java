@@ -33,7 +33,7 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String contentId;
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN
+     * The identifier of the knowledge base. Can be either the ID or the ARN
      * </p>
      */
     private String knowledgeBaseId;
@@ -124,11 +124,11 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN
+     * The identifier of the knowledge base. Can be either the ID or the ARN
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base. Can be either the ID or the ARN
+     *        The identifier of the knowledge base. Can be either the ID or the ARN
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -137,10 +137,10 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN
+     * The identifier of the knowledge base. Can be either the ID or the ARN
      * </p>
      * 
-     * @return The the identifier of the knowledge base. Can be either the ID or the ARN
+     * @return The identifier of the knowledge base. Can be either the ID or the ARN
      */
 
     public String getKnowledgeBaseId() {
@@ -149,11 +149,11 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The the identifier of the knowledge base. Can be either the ID or the ARN
+     * The identifier of the knowledge base. Can be either the ID or the ARN
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The the identifier of the knowledge base. Can be either the ID or the ARN
+     *        The identifier of the knowledge base. Can be either the ID or the ARN
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

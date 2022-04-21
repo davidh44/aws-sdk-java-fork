@@ -306,6 +306,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetCustomEntityTypesResult> batchGetCustomEntityTypesAsync(BatchGetCustomEntityTypesRequest request) {
+
+        return batchGetCustomEntityTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetCustomEntityTypesResult> batchGetCustomEntityTypesAsync(final BatchGetCustomEntityTypesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetCustomEntityTypesRequest, BatchGetCustomEntityTypesResult> asyncHandler) {
+        final BatchGetCustomEntityTypesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetCustomEntityTypesResult>() {
+            @Override
+            public BatchGetCustomEntityTypesResult call() throws Exception {
+                BatchGetCustomEntityTypesResult result = null;
+
+                try {
+                    result = executeBatchGetCustomEntityTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetDevEndpointsResult> batchGetDevEndpointsAsync(BatchGetDevEndpointsRequest request) {
 
         return batchGetDevEndpointsAsync(request, null);
@@ -752,6 +785,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeCreateCrawler(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(CreateCustomEntityTypeRequest request) {
+
+        return createCustomEntityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(final CreateCustomEntityTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateCustomEntityTypeRequest, CreateCustomEntityTypeResult> asyncHandler) {
+        final CreateCustomEntityTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateCustomEntityTypeResult>() {
+            @Override
+            public CreateCustomEntityTypeResult call() throws Exception {
+                CreateCustomEntityTypeResult result = null;
+
+                try {
+                    result = executeCreateCustomEntityType(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1448,6 +1514,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeDeleteCrawler(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(DeleteCustomEntityTypeRequest request) {
+
+        return deleteCustomEntityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(final DeleteCustomEntityTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCustomEntityTypeRequest, DeleteCustomEntityTypeResult> asyncHandler) {
+        final DeleteCustomEntityTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCustomEntityTypeResult>() {
+            @Override
+            public DeleteCustomEntityTypeResult call() throws Exception {
+                DeleteCustomEntityTypeResult result = null;
+
+                try {
+                    result = executeDeleteCustomEntityType(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2440,6 +2539,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeGetCrawlers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(GetCustomEntityTypeRequest request) {
+
+        return getCustomEntityTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(final GetCustomEntityTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCustomEntityTypeRequest, GetCustomEntityTypeResult> asyncHandler) {
+        final GetCustomEntityTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCustomEntityTypeResult>() {
+            @Override
+            public GetCustomEntityTypeResult call() throws Exception {
+                GetCustomEntityTypeResult result = null;
+
+                try {
+                    result = executeGetCustomEntityType(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4095,6 +4227,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeListCrawlers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest request) {
+
+        return listCustomEntityTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(final ListCustomEntityTypesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCustomEntityTypesRequest, ListCustomEntityTypesResult> asyncHandler) {
+        final ListCustomEntityTypesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCustomEntityTypesResult>() {
+            @Override
+            public ListCustomEntityTypesResult call() throws Exception {
+                ListCustomEntityTypesResult result = null;
+
+                try {
+                    result = executeListCustomEntityTypes(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

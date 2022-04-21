@@ -511,6 +511,255 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
 
     /**
      * <p>
+     * Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
+     * aggregates</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyAggregatesRequest
+     * @return Result of the BatchGetAssetPropertyAggregates operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ServiceUnavailableException
+     *         The requested service is unavailable.
+     * @sample AWSIoTSiteWise.BatchGetAssetPropertyAggregates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyAggregates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetAssetPropertyAggregatesResult batchGetAssetPropertyAggregates(BatchGetAssetPropertyAggregatesRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetAssetPropertyAggregates(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetAssetPropertyAggregatesResult executeBatchGetAssetPropertyAggregates(
+            BatchGetAssetPropertyAggregatesRequest batchGetAssetPropertyAggregatesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetAssetPropertyAggregatesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetAssetPropertyAggregatesRequest> request = null;
+        Response<BatchGetAssetPropertyAggregatesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetAssetPropertyAggregatesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetAssetPropertyAggregatesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetAssetPropertyAggregates");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "data.";
+                String resolvedHostPrefix = String.format("data.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetAssetPropertyAggregatesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetAssetPropertyAggregatesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the current value for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values"
+     * >Querying current values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueRequest
+     * @return Result of the BatchGetAssetPropertyValue operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ServiceUnavailableException
+     *         The requested service is unavailable.
+     * @sample AWSIoTSiteWise.BatchGetAssetPropertyValue
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValue"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetAssetPropertyValueResult batchGetAssetPropertyValue(BatchGetAssetPropertyValueRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetAssetPropertyValue(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetAssetPropertyValueResult executeBatchGetAssetPropertyValue(BatchGetAssetPropertyValueRequest batchGetAssetPropertyValueRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetAssetPropertyValueRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetAssetPropertyValueRequest> request = null;
+        Response<BatchGetAssetPropertyValueResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetAssetPropertyValueRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetAssetPropertyValueRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetAssetPropertyValue");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "data.";
+                String resolvedHostPrefix = String.format("data.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetAssetPropertyValueResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetAssetPropertyValueResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the historical values for one or more asset properties. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values"
+     * >Querying historical values</a> in the <i>IoT SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param batchGetAssetPropertyValueHistoryRequest
+     * @return Result of the BatchGetAssetPropertyValueHistory operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ServiceUnavailableException
+     *         The requested service is unavailable.
+     * @sample AWSIoTSiteWise.BatchGetAssetPropertyValueHistory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/BatchGetAssetPropertyValueHistory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetAssetPropertyValueHistoryResult batchGetAssetPropertyValueHistory(BatchGetAssetPropertyValueHistoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetAssetPropertyValueHistory(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetAssetPropertyValueHistoryResult executeBatchGetAssetPropertyValueHistory(
+            BatchGetAssetPropertyValueHistoryRequest batchGetAssetPropertyValueHistoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetAssetPropertyValueHistoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetAssetPropertyValueHistoryRequest> request = null;
+        Response<BatchGetAssetPropertyValueHistoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetAssetPropertyValueHistoryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetAssetPropertyValueHistoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetAssetPropertyValueHistory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "data.";
+                String resolvedHostPrefix = String.format("data.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetAssetPropertyValueHistoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetAssetPropertyValueHistoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Sends a list of asset property values to IoT SiteWise. Each value is a timestamp-quality-value (TQV) data point.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ingest-api.html">Ingesting data using the API</a>
