@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -102,25 +102,37 @@
         "documentation" : "<p>The input parameters don't match the service's restrictions.</p>",
         "httpStatusCode" : 400
       }, {
-        "exceptionName" : "UnauthorizedException",
-        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
-        "httpStatusCode" : 401
-      }, {
-        "exceptionName" : "ServiceUnavailableException",
-        "documentation" : "<p>The service is currently unavailable.</p>",
-        "httpStatusCode" : 503
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
+        "httpStatusCode" : 403
       }, {
         "exceptionName" : "NotFoundException",
         "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
         "httpStatusCode" : 404
       }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "UnauthorizedException",
+        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
+        "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "UnprocessableEntityException",
+        "documentation" : "<p>The request was well-formed but was unable to be followed due to semantic errors.</p>",
+        "httpStatusCode" : 422
       }, {
         "exceptionName" : "LimitExceededException",
         "documentation" : "<p>The request exceeds the resource limit.</p>",
         "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -163,6 +175,10 @@
         "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
         "httpStatusCode" : 403
       }, {
+        "exceptionName" : "NotFoundException",
+        "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
+        "httpStatusCode" : 404
+      }, {
         "exceptionName" : "UnauthorizedException",
         "documentation" : "<p>The user isn't authorized to request a resource.</p>",
         "httpStatusCode" : 401
@@ -171,17 +187,21 @@
         "documentation" : "<p>The request was well-formed but was unable to be followed due to semantic errors.</p>",
         "httpStatusCode" : 422
       }, {
+        "exceptionName" : "LimitExceededException",
+        "documentation" : "<p>The request exceeds the resource limit.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "ServiceUnavailableException",
         "documentation" : "<p>The service is currently unavailable.</p>",
         "httpStatusCode" : 503
       }, {
-        "exceptionName" : "NotFoundException",
-        "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
-        "httpStatusCode" : 404
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
       }, {
-        "exceptionName" : "LimitExceededException",
-        "documentation" : "<p>The request exceeds the resource limit.</p>",
-        "httpStatusCode" : 400
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -220,13 +240,25 @@
         "documentation" : "<p>The input parameters don't match the service's restrictions.</p>",
         "httpStatusCode" : 400
       }, {
-        "exceptionName" : "ServiceUnavailableException",
-        "documentation" : "<p>The service is currently unavailable.</p>",
-        "httpStatusCode" : 503
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
+        "httpStatusCode" : 403
       }, {
         "exceptionName" : "UnauthorizedException",
         "documentation" : "<p>The user isn't authorized to request a resource.</p>",
         "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
       }, {
         "exceptionName" : "LimitExceededException",
         "documentation" : "<p>The request exceeds the resource limit.</p>",
@@ -269,13 +301,25 @@
         "documentation" : "<p>The input parameters don't match the service's restrictions.</p>",
         "httpStatusCode" : 400
       }, {
-        "exceptionName" : "ServiceUnavailableException",
-        "documentation" : "<p>The service is currently unavailable.</p>",
-        "httpStatusCode" : 503
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
+        "httpStatusCode" : 403
       }, {
         "exceptionName" : "UnauthorizedException",
         "documentation" : "<p>The user isn't authorized to request a resource.</p>",
         "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
       }, {
         "exceptionName" : "LimitExceededException",
         "documentation" : "<p>The request exceeds the resource limit.</p>",
@@ -314,6 +358,10 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "BadRequestException",
+        "documentation" : "<p>The input parameters don't match the service's restrictions.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "ForbiddenException",
         "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
         "httpStatusCode" : 403
@@ -321,6 +369,22 @@
         "exceptionName" : "NotFoundException",
         "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
         "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "UnauthorizedException",
+        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
+        "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -362,6 +426,26 @@
         "exceptionName" : "ForbiddenException",
         "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
         "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "UnauthorizedException",
+        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
+        "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "NotFoundException",
+        "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -400,13 +484,29 @@
         "documentation" : "<p>The input parameters don't match the service's restrictions.</p>",
         "httpStatusCode" : 400
       }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "NotFoundException",
         "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
         "httpStatusCode" : 404
       }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "UnauthorizedException",
+        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
+        "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -452,6 +552,22 @@
         "exceptionName" : "ForbiddenException",
         "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
         "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "UnauthorizedException",
+        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
+        "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -490,13 +606,29 @@
         "documentation" : "<p>The input parameters don't match the service's restrictions.</p>",
         "httpStatusCode" : 400
       }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
+        "httpStatusCode" : 403
+      }, {
         "exceptionName" : "NotFoundException",
         "documentation" : "<p>One or more of the resources in the request does not exist in the system.</p>",
         "httpStatusCode" : 404
       }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>The client is permanently forbidden from making the request.</p>",
-        "httpStatusCode" : 403
+        "exceptionName" : "UnauthorizedException",
+        "documentation" : "<p>The user isn't authorized to request a resource.</p>",
+        "httpStatusCode" : 401
+      }, {
+        "exceptionName" : "ServiceUnavailableException",
+        "documentation" : "<p>The service is currently unavailable.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -555,9 +687,17 @@
         "documentation" : "<p>The request was well-formed but was unable to be followed due to semantic errors.</p>",
         "httpStatusCode" : 422
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
+      }, {
         "exceptionName" : "ServiceUnavailableException",
         "documentation" : "<p>The service is currently unavailable.</p>",
         "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -612,9 +752,17 @@
         "documentation" : "<p>The request was well-formed but was unable to be followed due to semantic errors.</p>",
         "httpStatusCode" : 422
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+        "httpStatusCode" : 429
+      }, {
         "exceptionName" : "ServiceUnavailableException",
         "documentation" : "<p>The service is currently unavailable.</p>",
         "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ServiceFailureException",
+        "documentation" : "<p>The service encountered an unexpected error.</p>",
+        "httpStatusCode" : 500
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -16392,6 +16540,326 @@
       },
       "wrapper" : false
     },
+    "ServiceFailureException" : {
+      "c2jName" : "ServiceFailureException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The service encountered an unexpected error.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "ServiceFailureException",
+      "fullyQualifiedName" : "com.amazonaws.services.chimesdkmeetings.exception.ServiceFailureException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "Code",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withCode",
+        "getterDocumentation" : "/**\n@return */",
+        "getterMethodName" : "getCode",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "Code",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "Code",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Code",
+        "sensitive" : false,
+        "setterDocumentation" : "/**\n@param code */",
+        "setterMethodName" : "setCode",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "code",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "code",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "RequestId",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withRequestId",
+        "getterDocumentation" : "/**\n@return */",
+        "getterMethodName" : "getRequestId",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "RequestId",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "RequestId",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "RequestId",
+        "sensitive" : false,
+        "setterDocumentation" : "/**\n@param requestId */",
+        "setterMethodName" : "setRequestId",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "requestId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "requestId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "Code" : {
+          "c2jName" : "Code",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withCode",
+          "getterDocumentation" : "/**\n@return */",
+          "getterMethodName" : "getCode",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "Code",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "Code",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Code",
+          "sensitive" : false,
+          "setterDocumentation" : "/**\n@param code */",
+          "setterMethodName" : "setCode",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "code",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "code",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "RequestId" : {
+          "c2jName" : "RequestId",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withRequestId",
+          "getterDocumentation" : "/**\n@return */",
+          "getterMethodName" : "getRequestId",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "RequestId",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "RequestId",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "RequestId",
+          "sensitive" : false,
+          "setterDocumentation" : "/**\n@param requestId */",
+          "setterMethodName" : "setRequestId",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "requestId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "requestId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.chimesdkmeetings.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ServiceFailureException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ServiceFailureException",
+        "variableName" : "serviceFailureException",
+        "variableType" : "ServiceFailureException",
+        "documentation" : null,
+        "simpleType" : "ServiceFailureException",
+        "variableSetterType" : "ServiceFailureException"
+      },
+      "wrapper" : false
+    },
     "ServiceUnavailableException" : {
       "c2jName" : "ServiceUnavailableException",
       "customization" : {
@@ -17451,6 +17919,326 @@
         "documentation" : null,
         "simpleType" : "StopMeetingTranscriptionResult",
         "variableSetterType" : "StopMeetingTranscriptionResult"
+      },
+      "wrapper" : false
+    },
+    "ThrottlingException" : {
+      "c2jName" : "ThrottlingException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The number of customer requests exceeds the request rate limit.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "ThrottlingException",
+      "fullyQualifiedName" : "com.amazonaws.services.chimesdkmeetings.exception.ThrottlingException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "Code",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withCode",
+        "getterDocumentation" : "/**\n@return */",
+        "getterMethodName" : "getCode",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "Code",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "Code",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Code",
+        "sensitive" : false,
+        "setterDocumentation" : "/**\n@param code */",
+        "setterMethodName" : "setCode",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "code",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "code",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "RequestId",
+        "c2jShape" : "String",
+        "deprecated" : false,
+        "documentation" : "",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withRequestId",
+        "getterDocumentation" : "/**\n@return */",
+        "getterMethodName" : "getRequestId",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "RequestId",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "RequestId",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "RequestId",
+        "sensitive" : false,
+        "setterDocumentation" : "/**\n@param requestId */",
+        "setterMethodName" : "setRequestId",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "requestId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "requestId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "Code" : {
+          "c2jName" : "Code",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withCode",
+          "getterDocumentation" : "/**\n@return */",
+          "getterMethodName" : "getCode",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "Code",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "Code",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Code",
+          "sensitive" : false,
+          "setterDocumentation" : "/**\n@param code */",
+          "setterMethodName" : "setCode",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "code",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**\n@param code \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "code",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "RequestId" : {
+          "c2jName" : "RequestId",
+          "c2jShape" : "String",
+          "deprecated" : false,
+          "documentation" : "",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withRequestId",
+          "getterDocumentation" : "/**\n@return */",
+          "getterMethodName" : "getRequestId",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "RequestId",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "RequestId",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "RequestId",
+          "sensitive" : false,
+          "setterDocumentation" : "/**\n@param requestId */",
+          "setterMethodName" : "setRequestId",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "requestId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**\n@param requestId \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "requestId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.chimesdkmeetings.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ThrottlingException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ThrottlingException",
+        "variableName" : "throttlingException",
+        "variableType" : "ThrottlingException",
+        "documentation" : null,
+        "simpleType" : "ThrottlingException",
+        "variableSetterType" : "ThrottlingException"
       },
       "wrapper" : false
     },

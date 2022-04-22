@@ -80,10 +80,9 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
     private Boolean enableDns64;
     /**
      * <p>
-     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
-     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
-     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
-     * instance ID.
+     * The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4 and IPv6)
+     * subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the instance ID
+     * (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID (resource-name).
      * </p>
      */
     private String privateDnsHostnameTypeOnLaunch;
@@ -519,17 +518,16 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
-     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
-     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
-     * instance ID.
+     * The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4 and IPv6)
+     * subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the instance ID
+     * (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID (resource-name).
      * </p>
      * 
      * @param privateDnsHostnameTypeOnLaunch
-     *        The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
-     *        DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
-     *        based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
-     *        address or the instance ID.
+     *        The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4
+     *        and IPv6) subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the
+     *        instance ID (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID
+     *        (resource-name).
      * @see HostnameType
      */
 
@@ -539,16 +537,15 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
-     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
-     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
-     * instance ID.
+     * The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4 and IPv6)
+     * subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the instance ID
+     * (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID (resource-name).
      * </p>
      * 
-     * @return The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
-     *         DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
-     *         based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
-     *         address or the instance ID.
+     * @return The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4
+     *         and IPv6) subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the
+     *         instance ID (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID
+     *         (resource-name).
      * @see HostnameType
      */
 
@@ -558,17 +555,16 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
-     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
-     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
-     * instance ID.
+     * The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4 and IPv6)
+     * subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the instance ID
+     * (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID (resource-name).
      * </p>
      * 
      * @param privateDnsHostnameTypeOnLaunch
-     *        The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
-     *        DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
-     *        based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
-     *        address or the instance ID.
+     *        The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4
+     *        and IPv6) subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the
+     *        instance ID (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID
+     *        (resource-name).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostnameType
      */
@@ -580,17 +576,16 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
-     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
-     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
-     * instance ID.
+     * The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4 and IPv6)
+     * subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the instance ID
+     * (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID (resource-name).
      * </p>
      * 
      * @param privateDnsHostnameTypeOnLaunch
-     *        The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
-     *        DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
-     *        based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
-     *        address or the instance ID.
+     *        The type of hostname to assign to instances in the subnet at launch. For IPv4-only and dual-stack (IPv4
+     *        and IPv6) subnets, an instance DNS name can be based on the instance IPv4 address (ip-name) or the
+     *        instance ID (resource-name). For IPv6 only subnets, an instance DNS name must be based on the instance ID
+     *        (resource-name).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostnameType
      */

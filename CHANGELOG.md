@@ -1,3 +1,12 @@
+# __1.12.205__ __2022-04-22__
+## __Amazon Chime SDK Meetings__
+  - ### Features
+    - Include additional exceptions types.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds support for waiters that automatically poll for a deleted NAT Gateway until it reaches the deleted state.
+
 # __1.12.204__ __2022-04-21__
 ## __AWS Glue__
   - ### Features

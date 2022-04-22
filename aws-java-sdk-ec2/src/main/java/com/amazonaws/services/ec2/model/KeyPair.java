@@ -26,9 +26,19 @@ import javax.annotation.Generated;
 public class KeyPair implements Serializable, Cloneable {
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The SHA-1 digest of the DER encoded private key.
+     * For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with OpenSSH 6.8.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String keyFingerprint;
     /**
@@ -57,12 +67,31 @@ public class KeyPair implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The SHA-1 digest of the DER encoded private key.
+     * For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with OpenSSH 6.8.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param keyFingerprint
-     *        The SHA-1 digest of the DER encoded private key.
+     *        <li>
+     *        <p>
+     *        For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     *        OpenSSH, starting with OpenSSH 6.8.
+     *        </p>
+     *        </li>
      */
 
     public void setKeyFingerprint(String keyFingerprint) {
@@ -70,11 +99,30 @@ public class KeyPair implements Serializable, Cloneable {
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The SHA-1 digest of the DER encoded private key.
+     * For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with OpenSSH 6.8.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The SHA-1 digest of the DER encoded private key.
+     * @return <li>
+     *         <p>
+     *         For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
+     *         </p>
+     *         </li> <li>
+     *         <p>
+     *         For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     *         OpenSSH, starting with OpenSSH 6.8.
+     *         </p>
+     *         </li>
      */
 
     public String getKeyFingerprint() {
@@ -82,12 +130,31 @@ public class KeyPair implements Serializable, Cloneable {
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The SHA-1 digest of the DER encoded private key.
+     * For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with OpenSSH 6.8.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param keyFingerprint
-     *        The SHA-1 digest of the DER encoded private key.
+     *        <li>
+     *        <p>
+     *        For RSA key pairs, the key fingerprint is the SHA-1 digest of the DER encoded private key.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     *        OpenSSH, starting with OpenSSH 6.8.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -201,8 +201,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      * <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can help you
      * track your Amazon EC2 Spot Instance requests. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request status</a> in
+     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * </li>
      * <li>
@@ -441,8 +441,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      * <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can help you
      * track your Amazon EC2 Spot Instance requests. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request status</a> in
+     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * </li>
      * <li>
@@ -658,8 +658,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *         <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      *         <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can
      *         help you track your Amazon EC2 Spot Instance requests. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a>
-     *         in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request
+     *         status</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      *         </p>
      *         </li>
      *         <li>
@@ -884,8 +884,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      * <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can help you
      * track your Amazon EC2 Spot Instance requests. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request status</a> in
+     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * </li>
      * <li>
@@ -1102,8 +1102,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *        <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      *        <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can
      *        help you track your Amazon EC2 Spot Instance requests. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request
+     *        status</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -1330,8 +1330,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      * <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can help you
      * track your Amazon EC2 Spot Instance requests. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request status</a> in
+     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * </li>
      * <li>
@@ -1553,8 +1553,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *        <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      *        <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can
      *        help you track your Amazon EC2 Spot Instance requests. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request
+     *        status</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -1783,8 +1783,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      * <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can help you
      * track your Amazon EC2 Spot Instance requests. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in the
-     * <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request status</a> in
+     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
      * </li>
      * <li>
@@ -2001,8 +2001,8 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      *        <code>state</code> - The state of the Spot Instance request (<code>open</code> | <code>active</code> |
      *        <code>closed</code> | <code>cancelled</code> | <code>failed</code>). Spot request status information can
      *        help you track your Amazon EC2 Spot Instance requests. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">Spot request status</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html">Spot request
+     *        status</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      *        </p>
      *        </li>
      *        <li>

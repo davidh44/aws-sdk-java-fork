@@ -78,6 +78,11 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was launched.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>client-token</code> - The idempotency token you provided when you launched the instance.
      * </p>
      * </li>
@@ -604,6 +609,11 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was launched.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>client-token</code> - The idempotency token you provided when you launched the instance.
      * </p>
      * </li>
@@ -1098,6 +1108,12 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         <li>
      *         <p>
      *         <code>block-device-mapping.volume-id</code> - The volume ID of the EBS volume.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was
+     *         launched.
      *         </p>
      *         </li>
      *         <li>
@@ -1618,6 +1634,11 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was launched.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>client-token</code> - The idempotency token you provided when you launched the instance.
      * </p>
      * </li>
@@ -2113,6 +2134,12 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        <li>
      *        <p>
      *        <code>block-device-mapping.volume-id</code> - The volume ID of the EBS volume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was
+     *        launched.
      *        </p>
      *        </li>
      *        <li>
@@ -2634,6 +2661,11 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was launched.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>client-token</code> - The idempotency token you provided when you launched the instance.
      * </p>
      * </li>
@@ -3134,6 +3166,12 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        <li>
      *        <p>
      *        <code>block-device-mapping.volume-id</code> - The volume ID of the EBS volume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was
+     *        launched.
      *        </p>
      *        </li>
      *        <li>
@@ -3657,6 +3695,11 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was launched.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>client-token</code> - The idempotency token you provided when you launched the instance.
      * </p>
      * </li>
@@ -4152,6 +4195,12 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        <li>
      *        <p>
      *        <code>block-device-mapping.volume-id</code> - The volume ID of the EBS volume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>capacity-reservation-id</code> - The ID of the Capacity Reservation into which the instance was
+     *        launched.
      *        </p>
      *        </li>
      *        <li>

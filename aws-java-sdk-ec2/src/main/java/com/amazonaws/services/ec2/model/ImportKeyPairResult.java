@@ -24,9 +24,19 @@ import com.amazonaws.AmazonWebServiceResult;
 public class ImportKeyPairResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     * For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String keyFingerprint;
     /**
@@ -49,12 +59,32 @@ public class ImportKeyPairResult extends com.amazonaws.AmazonWebServiceResult<co
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     * For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param keyFingerprint
-     *        The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     *        <li>
+     *        <p>
+     *        For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC
+     *        4716.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     *        OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     *        </p>
+     *        </li>
      */
 
     public void setKeyFingerprint(String keyFingerprint) {
@@ -62,11 +92,31 @@ public class ImportKeyPairResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     * For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     * @return <li>
+     *         <p>
+     *         For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC
+     *         4716.
+     *         </p>
+     *         </li> <li>
+     *         <p>
+     *         For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     *         OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     *         </p>
+     *         </li>
      */
 
     public String getKeyFingerprint() {
@@ -74,12 +124,32 @@ public class ImportKeyPairResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     * For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     * OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param keyFingerprint
-     *        The MD5 public key fingerprint as specified in section 4 of RFC 4716.
+     *        <li>
+     *        <p>
+     *        For RSA key pairs, the key fingerprint is the MD5 public key fingerprint as specified in section 4 of RFC
+     *        4716.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For ED25519 key pairs, the key fingerprint is the base64-encoded SHA-256 digest, which is the default for
+     *        OpenSSH, starting with <a href="http://www.openssh.com/txt/release-6.8">OpenSSH 6.8</a>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

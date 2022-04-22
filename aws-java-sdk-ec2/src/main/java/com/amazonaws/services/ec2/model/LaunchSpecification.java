@@ -69,7 +69,7 @@ public class LaunchSpecification implements Serializable, Cloneable {
     private String imageId;
     /**
      * <p>
-     * The instance type.
+     * The instance type. Only one instance type can be specified.
      * </p>
      */
     private String instanceType;
@@ -453,11 +453,11 @@ public class LaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The instance type.
+     * The instance type. Only one instance type can be specified.
      * </p>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type. Only one instance type can be specified.
      * @see InstanceType
      */
 
@@ -467,10 +467,10 @@ public class LaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The instance type.
+     * The instance type. Only one instance type can be specified.
      * </p>
      * 
-     * @return The instance type.
+     * @return The instance type. Only one instance type can be specified.
      * @see InstanceType
      */
 
@@ -480,11 +480,11 @@ public class LaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The instance type.
+     * The instance type. Only one instance type can be specified.
      * </p>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type. Only one instance type can be specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -496,11 +496,11 @@ public class LaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The instance type.
+     * The instance type. Only one instance type can be specified.
      * </p>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type. Only one instance type can be specified.
      * @see InstanceType
      */
 
@@ -510,11 +510,11 @@ public class LaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The instance type.
+     * The instance type. Only one instance type can be specified.
      * </p>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type. Only one instance type can be specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */

@@ -56,16 +56,22 @@ public interface AmazonChimeSDKMeetings {
      * @return Result of the BatchCreateAttendee operation returned by the service.
      * @throws BadRequestException
      *         The input parameters don't match the service's restrictions.
-     * @throws UnauthorizedException
-     *         The user isn't authorized to request a resource.
-     * @throws ServiceUnavailableException
-     *         The service is currently unavailable.
-     * @throws NotFoundException
-     *         One or more of the resources in the request does not exist in the system.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws UnprocessableEntityException
+     *         The request was well-formed but was unable to be followed due to semantic errors.
      * @throws LimitExceededException
      *         The request exceeds the resource limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.BatchCreateAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/BatchCreateAttendee"
      *      target="_top">AWS API Documentation</a>
@@ -85,16 +91,20 @@ public interface AmazonChimeSDKMeetings {
      *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
      * @throws UnauthorizedException
      *         The user isn't authorized to request a resource.
      * @throws UnprocessableEntityException
      *         The request was well-formed but was unable to be followed due to semantic errors.
-     * @throws ServiceUnavailableException
-     *         The service is currently unavailable.
-     * @throws NotFoundException
-     *         One or more of the resources in the request does not exist in the system.
      * @throws LimitExceededException
      *         The request exceeds the resource limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.CreateAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/CreateAttendee"
      *      target="_top">AWS API Documentation</a>
@@ -115,10 +125,16 @@ public interface AmazonChimeSDKMeetings {
      * @return Result of the CreateMeeting operation returned by the service.
      * @throws BadRequestException
      *         The input parameters don't match the service's restrictions.
-     * @throws ServiceUnavailableException
-     *         The service is currently unavailable.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
      * @throws UnauthorizedException
      *         The user isn't authorized to request a resource.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
      * @throws LimitExceededException
      *         The request exceeds the resource limit.
      * @sample AmazonChimeSDKMeetings.CreateMeeting
@@ -141,10 +157,16 @@ public interface AmazonChimeSDKMeetings {
      * @return Result of the CreateMeetingWithAttendees operation returned by the service.
      * @throws BadRequestException
      *         The input parameters don't match the service's restrictions.
-     * @throws ServiceUnavailableException
-     *         The service is currently unavailable.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
      * @throws UnauthorizedException
      *         The user isn't authorized to request a resource.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
      * @throws LimitExceededException
      *         The request exceeds the resource limit.
      * @sample AmazonChimeSDKMeetings.CreateMeetingWithAttendees
@@ -163,10 +185,20 @@ public interface AmazonChimeSDKMeetings {
      * 
      * @param deleteAttendeeRequest
      * @return Result of the DeleteAttendee operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
      * @throws NotFoundException
      *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.DeleteAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/DeleteAttendee"
      *      target="_top">AWS API Documentation</a>
@@ -187,6 +219,16 @@ public interface AmazonChimeSDKMeetings {
      *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.DeleteMeeting
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/DeleteMeeting"
      *      target="_top">AWS API Documentation</a>
@@ -204,10 +246,18 @@ public interface AmazonChimeSDKMeetings {
      * @return Result of the GetAttendee operation returned by the service.
      * @throws BadRequestException
      *         The input parameters don't match the service's restrictions.
-     * @throws NotFoundException
-     *         One or more of the resources in the request does not exist in the system.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.GetAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/GetAttendee" target="_top">AWS
      *      API Documentation</a>
@@ -229,6 +279,14 @@ public interface AmazonChimeSDKMeetings {
      *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.GetMeeting
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/GetMeeting" target="_top">AWS
      *      API Documentation</a>
@@ -246,10 +304,18 @@ public interface AmazonChimeSDKMeetings {
      * @return Result of the ListAttendees operation returned by the service.
      * @throws BadRequestException
      *         The input parameters don't match the service's restrictions.
-     * @throws NotFoundException
-     *         One or more of the resources in the request does not exist in the system.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @sample AmazonChimeSDKMeetings.ListAttendees
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/ListAttendees"
      *      target="_top">AWS API Documentation</a>
@@ -275,8 +341,12 @@ public interface AmazonChimeSDKMeetings {
      *         The request exceeds the resource limit.
      * @throws UnprocessableEntityException
      *         The request was well-formed but was unable to be followed due to semantic errors.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
      * @sample AmazonChimeSDKMeetings.StartMeetingTranscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/StartMeetingTranscription"
      *      target="_top">AWS API Documentation</a>
@@ -300,8 +370,12 @@ public interface AmazonChimeSDKMeetings {
      *         The user isn't authorized to request a resource.
      * @throws UnprocessableEntityException
      *         The request was well-formed but was unable to be followed due to semantic errors.
+     * @throws ThrottlingException
+     *         The number of customer requests exceeds the request rate limit.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
      * @sample AmazonChimeSDKMeetings.StopMeetingTranscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/StopMeetingTranscription"
      *      target="_top">AWS API Documentation</a>

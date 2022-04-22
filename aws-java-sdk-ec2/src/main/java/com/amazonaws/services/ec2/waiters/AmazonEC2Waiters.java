@@ -314,6 +314,19 @@ public class AmazonEC2Waiters {
     }
 
     /**
+     * Builds a NatGatewayDeleted waiter by using custom parameters waiterParameters and other parameters defined in the
+     * waiters specification, and then polls until it determines whether the resource entered the desired state or not,
+     * where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeNatGatewaysRequest> natGatewayDeleted() {
+
+        return new WaiterBuilder<DescribeNatGatewaysRequest, DescribeNatGatewaysResult>().withSdkFunction(new DescribeNatGatewaysFunction(client))
+                .withAcceptors(new NatGatewayDeleted.IsDeletedMatcher(), new NatGatewayDeleted.IsNatGatewayNotFoundMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(40), new FixedDelayStrategy(15)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
      * Builds a InstanceTerminated waiter by using custom parameters waiterParameters and other parameters defined in
      * the waiters specification, and then polls until it determines whether the resource entered the desired state or
      * not, where polling criteria is bound by either default polling strategy or custom polling strategy.
