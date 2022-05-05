@@ -172,6 +172,8 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      */
     private java.util.Map<String, String> documentParameters;
 
+    private Boolean isConcurrent;
+
     /**
      * <p>
      * An ARN identifying the job with format "arn:aws:iot:region:account:job/jobId".
@@ -1255,6 +1257,40 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param isConcurrent
+     */
+
+    public void setIsConcurrent(Boolean isConcurrent) {
+        this.isConcurrent = isConcurrent;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getIsConcurrent() {
+        return this.isConcurrent;
+    }
+
+    /**
+     * @param isConcurrent
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withIsConcurrent(Boolean isConcurrent) {
+        setIsConcurrent(isConcurrent);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isConcurrent() {
+        return this.isConcurrent;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1307,7 +1343,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getJobExecutionsRetryConfig() != null)
             sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig()).append(",");
         if (getDocumentParameters() != null)
-            sb.append("DocumentParameters: ").append(getDocumentParameters());
+            sb.append("DocumentParameters: ").append(getDocumentParameters()).append(",");
+        if (getIsConcurrent() != null)
+            sb.append("IsConcurrent: ").append(getIsConcurrent());
         sb.append("}");
         return sb.toString();
     }
@@ -1406,6 +1444,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDocumentParameters() != null && other.getDocumentParameters().equals(this.getDocumentParameters()) == false)
             return false;
+        if (other.getIsConcurrent() == null ^ this.getIsConcurrent() == null)
+            return false;
+        if (other.getIsConcurrent() != null && other.getIsConcurrent().equals(this.getIsConcurrent()) == false)
+            return false;
         return true;
     }
 
@@ -1435,6 +1477,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getJobTemplateArn() == null) ? 0 : getJobTemplateArn().hashCode());
         hashCode = prime * hashCode + ((getJobExecutionsRetryConfig() == null) ? 0 : getJobExecutionsRetryConfig().hashCode());
         hashCode = prime * hashCode + ((getDocumentParameters() == null) ? 0 : getDocumentParameters().hashCode());
+        hashCode = prime * hashCode + ((getIsConcurrent() == null) ? 0 : getIsConcurrent().hashCode());
         return hashCode;
     }
 

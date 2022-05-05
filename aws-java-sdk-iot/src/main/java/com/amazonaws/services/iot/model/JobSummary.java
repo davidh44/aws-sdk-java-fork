@@ -77,6 +77,8 @@ public class JobSummary implements Serializable, Cloneable, StructuredPojo {
      */
     private java.util.Date completedAt;
 
+    private Boolean isConcurrent;
+
     /**
      * <p>
      * The job ARN.
@@ -460,6 +462,40 @@ public class JobSummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param isConcurrent
+     */
+
+    public void setIsConcurrent(Boolean isConcurrent) {
+        this.isConcurrent = isConcurrent;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getIsConcurrent() {
+        return this.isConcurrent;
+    }
+
+    /**
+     * @param isConcurrent
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobSummary withIsConcurrent(Boolean isConcurrent) {
+        setIsConcurrent(isConcurrent);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isConcurrent() {
+        return this.isConcurrent;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -486,7 +522,9 @@ public class JobSummary implements Serializable, Cloneable, StructuredPojo {
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getCompletedAt() != null)
-            sb.append("CompletedAt: ").append(getCompletedAt());
+            sb.append("CompletedAt: ").append(getCompletedAt()).append(",");
+        if (getIsConcurrent() != null)
+            sb.append("IsConcurrent: ").append(getIsConcurrent());
         sb.append("}");
         return sb.toString();
     }
@@ -533,6 +571,10 @@ public class JobSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCompletedAt() != null && other.getCompletedAt().equals(this.getCompletedAt()) == false)
             return false;
+        if (other.getIsConcurrent() == null ^ this.getIsConcurrent() == null)
+            return false;
+        if (other.getIsConcurrent() != null && other.getIsConcurrent().equals(this.getIsConcurrent()) == false)
+            return false;
         return true;
     }
 
@@ -549,6 +591,7 @@ public class JobSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getCompletedAt() == null) ? 0 : getCompletedAt().hashCode());
+        hashCode = prime * hashCode + ((getIsConcurrent() == null) ? 0 : getIsConcurrent().hashCode());
         return hashCode;
     }
 

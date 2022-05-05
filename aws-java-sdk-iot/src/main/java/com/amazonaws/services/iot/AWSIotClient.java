@@ -1297,6 +1297,8 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      *         The rate exceeds the limit.
      * @throws ServiceUnavailableException
      *         The service is temporarily unavailable.
+     * @throws LimitExceededException
+     *         A limit has been exceeded.
      * @sample AWSIot.CancelJob
      */
     @Override

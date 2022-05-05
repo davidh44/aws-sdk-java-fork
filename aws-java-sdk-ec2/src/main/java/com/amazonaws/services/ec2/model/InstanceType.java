@@ -526,7 +526,14 @@ public enum InstanceType {
     C6a32xlarge("c6a.32xlarge"),
     C6a48xlarge("c6a.48xlarge"),
     C6aMetal("c6a.metal"),
-    M6aMetal("m6a.metal");
+    M6aMetal("m6a.metal"),
+    I4iLarge("i4i.large"),
+    I4iXlarge("i4i.xlarge"),
+    I4i2xlarge("i4i.2xlarge"),
+    I4i4xlarge("i4i.4xlarge"),
+    I4i8xlarge("i4i.8xlarge"),
+    I4i16xlarge("i4i.16xlarge"),
+    I4i32xlarge("i4i.32xlarge");
 
     private String value;
 

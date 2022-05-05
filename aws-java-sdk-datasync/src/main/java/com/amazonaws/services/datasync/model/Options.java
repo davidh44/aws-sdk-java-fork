@@ -52,8 +52,8 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier or S3
-     * Glacier Deep Archive storage classes.
+     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
+     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
      * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -107,7 +107,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
      * PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -339,6 +339,16 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String securityDescriptorCopyFlags;
+    /**
+     * <p>
+     * Specifies whether object tags are maintained when transferring between object storage systems. If you want your
+     * DataSync task to ignore object tags, specify the <code>NONE</code> value.
+     * </p>
+     * <p>
+     * Default Value: <code>PRESERVE</code>
+     * </p>
+     */
+    private String objectTags;
 
     /**
      * <p>
@@ -354,8 +364,8 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier or S3
-     * Glacier Deep Archive storage classes.
+     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
+     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
      * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -376,7 +386,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
      *        verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *        to S3 Glacier or S3 Glacier Deep Archive storage classes.
+     *        to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *        </p>
      *        <p>
      *        NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -402,8 +412,8 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier or S3
-     * Glacier Deep Archive storage classes.
+     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
+     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
      * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -423,7 +433,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
      *         verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *         to S3 Glacier or S3 Glacier Deep Archive storage classes.
+     *         to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *         </p>
      *         <p>
      *         NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -449,8 +459,8 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier or S3
-     * Glacier Deep Archive storage classes.
+     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
+     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
      * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -471,7 +481,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
      *        verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *        to S3 Glacier or S3 Glacier Deep Archive storage classes.
+     *        to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *        </p>
      *        <p>
      *        NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -499,8 +509,8 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier or S3
-     * Glacier Deep Archive storage classes.
+     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
+     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
      * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -521,7 +531,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
      *        verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *        to S3 Glacier or S3 Glacier Deep Archive storage classes.
+     *        to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *        </p>
      *        <p>
      *        NONE: No additional verification is done at the end of the transfer, but all data transmissions are
@@ -887,7 +897,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
      * PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -909,7 +919,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      *        </p>
      *        <p>
-     *        Default value: PRESERVE.
+     *        Default Value: <code>PRESERVE</code>
      *        </p>
      *        <p>
      *        PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -937,7 +947,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
      * PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -958,7 +968,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      *         </p>
      *         <p>
-     *         Default value: PRESERVE.
+     *         Default Value: <code>PRESERVE</code>
      *         </p>
      *         <p>
      *         PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -986,7 +996,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
      * PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -1008,7 +1018,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      *        </p>
      *        <p>
-     *        Default value: PRESERVE.
+     *        Default Value: <code>PRESERVE</code>
      *        </p>
      *        <p>
      *        PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -1038,7 +1048,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
      * PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -1060,7 +1070,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        PREPARING phase. This option is required for cases when you need to run the same task more than one time.
      *        </p>
      *        <p>
-     *        Default value: PRESERVE.
+     *        Default Value: <code>PRESERVE</code>
      *        </p>
      *        <p>
      *        PRESERVE: Preserve original <code>Mtime</code> (recommended)
@@ -2862,6 +2872,93 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether object tags are maintained when transferring between object storage systems. If you want your
+     * DataSync task to ignore object tags, specify the <code>NONE</code> value.
+     * </p>
+     * <p>
+     * Default Value: <code>PRESERVE</code>
+     * </p>
+     * 
+     * @param objectTags
+     *        Specifies whether object tags are maintained when transferring between object storage systems. If you want
+     *        your DataSync task to ignore object tags, specify the <code>NONE</code> value.</p>
+     *        <p>
+     *        Default Value: <code>PRESERVE</code>
+     * @see ObjectTags
+     */
+
+    public void setObjectTags(String objectTags) {
+        this.objectTags = objectTags;
+    }
+
+    /**
+     * <p>
+     * Specifies whether object tags are maintained when transferring between object storage systems. If you want your
+     * DataSync task to ignore object tags, specify the <code>NONE</code> value.
+     * </p>
+     * <p>
+     * Default Value: <code>PRESERVE</code>
+     * </p>
+     * 
+     * @return Specifies whether object tags are maintained when transferring between object storage systems. If you
+     *         want your DataSync task to ignore object tags, specify the <code>NONE</code> value.</p>
+     *         <p>
+     *         Default Value: <code>PRESERVE</code>
+     * @see ObjectTags
+     */
+
+    public String getObjectTags() {
+        return this.objectTags;
+    }
+
+    /**
+     * <p>
+     * Specifies whether object tags are maintained when transferring between object storage systems. If you want your
+     * DataSync task to ignore object tags, specify the <code>NONE</code> value.
+     * </p>
+     * <p>
+     * Default Value: <code>PRESERVE</code>
+     * </p>
+     * 
+     * @param objectTags
+     *        Specifies whether object tags are maintained when transferring between object storage systems. If you want
+     *        your DataSync task to ignore object tags, specify the <code>NONE</code> value.</p>
+     *        <p>
+     *        Default Value: <code>PRESERVE</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ObjectTags
+     */
+
+    public Options withObjectTags(String objectTags) {
+        setObjectTags(objectTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether object tags are maintained when transferring between object storage systems. If you want your
+     * DataSync task to ignore object tags, specify the <code>NONE</code> value.
+     * </p>
+     * <p>
+     * Default Value: <code>PRESERVE</code>
+     * </p>
+     * 
+     * @param objectTags
+     *        Specifies whether object tags are maintained when transferring between object storage systems. If you want
+     *        your DataSync task to ignore object tags, specify the <code>NONE</code> value.</p>
+     *        <p>
+     *        Default Value: <code>PRESERVE</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ObjectTags
+     */
+
+    public Options withObjectTags(ObjectTags objectTags) {
+        this.objectTags = objectTags.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2900,7 +2997,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
         if (getTransferMode() != null)
             sb.append("TransferMode: ").append(getTransferMode()).append(",");
         if (getSecurityDescriptorCopyFlags() != null)
-            sb.append("SecurityDescriptorCopyFlags: ").append(getSecurityDescriptorCopyFlags());
+            sb.append("SecurityDescriptorCopyFlags: ").append(getSecurityDescriptorCopyFlags()).append(",");
+        if (getObjectTags() != null)
+            sb.append("ObjectTags: ").append(getObjectTags());
         sb.append("}");
         return sb.toString();
     }
@@ -2971,6 +3070,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSecurityDescriptorCopyFlags() != null && other.getSecurityDescriptorCopyFlags().equals(this.getSecurityDescriptorCopyFlags()) == false)
             return false;
+        if (other.getObjectTags() == null ^ this.getObjectTags() == null)
+            return false;
+        if (other.getObjectTags() != null && other.getObjectTags().equals(this.getObjectTags()) == false)
+            return false;
         return true;
     }
 
@@ -2993,6 +3096,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLogLevel() == null) ? 0 : getLogLevel().hashCode());
         hashCode = prime * hashCode + ((getTransferMode() == null) ? 0 : getTransferMode().hashCode());
         hashCode = prime * hashCode + ((getSecurityDescriptorCopyFlags() == null) ? 0 : getSecurityDescriptorCopyFlags().hashCode());
+        hashCode = prime * hashCode + ((getObjectTags() == null) ? 0 : getObjectTags().hashCode());
         return hashCode;
     }
 

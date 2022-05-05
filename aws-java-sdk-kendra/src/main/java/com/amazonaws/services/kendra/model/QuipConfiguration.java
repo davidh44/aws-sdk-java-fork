@@ -30,28 +30,21 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The configuration information to connect to your Quip data source domain.
+     * The Quip site domain.
      * </p>
      */
     private String domain;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are required
-     * to connect to your Quip file system. Windows is currently the only supported type. The secret must contain a JSON
-     * structure with the following keys:
+     * to connect to your Quip. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For example,
-     * <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting access to the Quip
-     * file system for Windows.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * password—The password of the Active Directory user account with read and mounting access to the Quip Windows file
-     * system.
+     * accessToken—The token created in Quip. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication">Authentication for
+     * a Quip data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -59,19 +52,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     private String secretArn;
     /**
      * <p>
-     * Specify whether to crawl file comments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      * </p>
      */
     private Boolean crawlFileComments;
     /**
      * <p>
-     * Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      * </p>
      */
     private Boolean crawlChatRooms;
     /**
      * <p>
-     * Specify whether to crawl attachments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      * </p>
      */
     private Boolean crawlAttachments;
@@ -83,19 +76,31 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     private java.util.List<String> folderIds;
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip threads.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip threads
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> threadFieldMappings;
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip messages.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip messages
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> messageFieldMappings;
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip attachments.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> attachmentFieldMappings;
@@ -119,19 +124,20 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     private java.util.List<String> exclusionPatterns;
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your Quip
-     * instance must reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      */
     private DataSourceVpcConfiguration vpcConfiguration;
 
     /**
      * <p>
-     * The configuration information to connect to your Quip data source domain.
+     * The Quip site domain.
      * </p>
      * 
      * @param domain
-     *        The configuration information to connect to your Quip data source domain.
+     *        The Quip site domain.
      */
 
     public void setDomain(String domain) {
@@ -140,10 +146,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The configuration information to connect to your Quip data source domain.
+     * The Quip site domain.
      * </p>
      * 
-     * @return The configuration information to connect to your Quip data source domain.
+     * @return The Quip site domain.
      */
 
     public String getDomain() {
@@ -152,11 +158,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The configuration information to connect to your Quip data source domain.
+     * The Quip site domain.
      * </p>
      * 
      * @param domain
-     *        The configuration information to connect to your Quip data source domain.
+     *        The Quip site domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,41 +174,27 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are required
-     * to connect to your Quip file system. Windows is currently the only supported type. The secret must contain a JSON
-     * structure with the following keys:
+     * to connect to your Quip. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For example,
-     * <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting access to the Quip
-     * file system for Windows.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * password—The password of the Active Directory user account with read and mounting access to the Quip Windows file
-     * system.
+     * accessToken—The token created in Quip. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication">Authentication for
+     * a Quip data source</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param secretArn
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are
-     *        required to connect to your Quip file system. Windows is currently the only supported type. The secret
-     *        must contain a JSON structure with the following keys:</p>
+     *        required to connect to your Quip. The secret must contain a JSON structure with the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For example,
-     *        <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting access to the
-     *        Quip file system for Windows.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        password—The password of the Active Directory user account with read and mounting access to the Quip
-     *        Windows file system.
+     *        accessToken—The token created in Quip. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication"
+     *        >Authentication for a Quip data source</a>.
      *        </p>
      *        </li>
      */
@@ -214,40 +206,26 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are required
-     * to connect to your Quip file system. Windows is currently the only supported type. The secret must contain a JSON
-     * structure with the following keys:
+     * to connect to your Quip. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For example,
-     * <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting access to the Quip
-     * file system for Windows.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * password—The password of the Active Directory user account with read and mounting access to the Quip Windows file
-     * system.
+     * accessToken—The token created in Quip. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication">Authentication for
+     * a Quip data source</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are
-     *         required to connect to your Quip file system. Windows is currently the only supported type. The secret
-     *         must contain a JSON structure with the following keys:</p>
+     *         required to connect to your Quip. The secret must contain a JSON structure with the following keys:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For
-     *         example, <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting
-     *         access to the Quip file system for Windows.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         password—The password of the Active Directory user account with read and mounting access to the Quip
-     *         Windows file system.
+     *         accessToken—The token created in Quip. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication"
+     *         >Authentication for a Quip data source</a>.
      *         </p>
      *         </li>
      */
@@ -259,41 +237,27 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are required
-     * to connect to your Quip file system. Windows is currently the only supported type. The secret must contain a JSON
-     * structure with the following keys:
+     * to connect to your Quip. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For example,
-     * <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting access to the Quip
-     * file system for Windows.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * password—The password of the Active Directory user account with read and mounting access to the Quip Windows file
-     * system.
+     * accessToken—The token created in Quip. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication">Authentication for
+     * a Quip data source</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param secretArn
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs that are
-     *        required to connect to your Quip file system. Windows is currently the only supported type. The secret
-     *        must contain a JSON structure with the following keys:</p>
+     *        required to connect to your Quip. The secret must contain a JSON structure with the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        username—The Active Directory user name, along with the Domain Name System (DNS) domain name. For example,
-     *        <i>user@corp.example.com</i>. The Active Directory user account must have read and mounting access to the
-     *        Quip file system for Windows.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        password—The password of the Active Directory user account with read and mounting access to the Quip
-     *        Windows file system.
+     *        accessToken—The token created in Quip. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-slack.html#quip-authentication"
+     *        >Authentication for a Quip data source</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -306,12 +270,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      * </p>
      * 
      * @param crawlFileComments
-     *        Specify whether to crawl file comments in your Quip data source. You can specify one or more of these
-     *        options.
+     *        Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      */
 
     public void setCrawlFileComments(Boolean crawlFileComments) {
@@ -320,11 +283,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      * </p>
      * 
-     * @return Specify whether to crawl file comments in your Quip data source. You can specify one or more of these
-     *         options.
+     * @return Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      */
 
     public Boolean getCrawlFileComments() {
@@ -333,12 +295,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      * </p>
      * 
      * @param crawlFileComments
-     *        Specify whether to crawl file comments in your Quip data source. You can specify one or more of these
-     *        options.
+     *        Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -349,11 +310,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      * </p>
      * 
-     * @return Specify whether to crawl file comments in your Quip data source. You can specify one or more of these
-     *         options.
+     * @return Specify whether to crawl file comments in Quip. You can specify one or more of these options.
      */
 
     public Boolean isCrawlFileComments() {
@@ -362,12 +322,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      * </p>
      * 
      * @param crawlChatRooms
-     *        Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these
-     *        options.
+     *        Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      */
 
     public void setCrawlChatRooms(Boolean crawlChatRooms) {
@@ -376,11 +335,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      * </p>
      * 
-     * @return Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these
-     *         options.
+     * @return Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      */
 
     public Boolean getCrawlChatRooms() {
@@ -389,12 +347,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      * </p>
      * 
      * @param crawlChatRooms
-     *        Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these
-     *        options.
+     *        Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -405,11 +362,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      * </p>
      * 
-     * @return Specify whether to crawl chat rooms in your Quip data source. You can specify one or more of these
-     *         options.
+     * @return Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
      */
 
     public Boolean isCrawlChatRooms() {
@@ -418,12 +374,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      * </p>
      * 
      * @param crawlAttachments
-     *        Specify whether to crawl attachments in your Quip data source. You can specify one or more of these
-     *        options.
+     *        Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      */
 
     public void setCrawlAttachments(Boolean crawlAttachments) {
@@ -432,11 +387,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      * </p>
      * 
-     * @return Specify whether to crawl attachments in your Quip data source. You can specify one or more of these
-     *         options.
+     * @return Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      */
 
     public Boolean getCrawlAttachments() {
@@ -445,12 +399,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      * </p>
      * 
      * @param crawlAttachments
-     *        Specify whether to crawl attachments in your Quip data source. You can specify one or more of these
-     *        options.
+     *        Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -461,11 +414,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in your Quip data source. You can specify one or more of these options.
+     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      * </p>
      * 
-     * @return Specify whether to crawl attachments in your Quip data source. You can specify one or more of these
-     *         options.
+     * @return Specify whether to crawl attachments in Quip. You can specify one or more of these options.
      */
 
     public Boolean isCrawlAttachments() {
@@ -544,10 +496,18 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip threads.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip threads
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
-     * @return A list of field mappings to apply when indexing Quip threads.
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *         threads to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *         before you map to Quip fields. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
+     *         The Quip field names must exist in your Quip custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getThreadFieldMappings() {
@@ -556,11 +516,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip threads.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip threads
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
      * @param threadFieldMappings
-     *        A list of field mappings to apply when indexing Quip threads.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        threads to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      */
 
     public void setThreadFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> threadFieldMappings) {
@@ -574,7 +542,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip threads.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip threads
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -583,7 +555,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param threadFieldMappings
-     *        A list of field mappings to apply when indexing Quip threads.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        threads to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -599,11 +575,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip threads.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip threads
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
      * @param threadFieldMappings
-     *        A list of field mappings to apply when indexing Quip threads.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        threads to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -614,10 +598,18 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip messages.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip messages
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
-     * @return A list of field mappings to apply when indexing Quip messages.
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *         messages to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to Quip fields. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
+     *         The Quip field names must exist in your Quip custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getMessageFieldMappings() {
@@ -626,11 +618,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip messages.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip messages
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
      * @param messageFieldMappings
-     *        A list of field mappings to apply when indexing Quip messages.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        messages to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      */
 
     public void setMessageFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> messageFieldMappings) {
@@ -644,7 +644,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip messages.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip messages
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -653,7 +657,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param messageFieldMappings
-     *        A list of field mappings to apply when indexing Quip messages.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        messages to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -669,11 +677,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip messages.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip messages
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
      * @param messageFieldMappings
-     *        A list of field mappings to apply when indexing Quip messages.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        messages to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -684,10 +700,18 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip attachments.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
-     * @return A list of field mappings to apply when indexing Quip attachments.
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *         attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to Quip fields. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
+     *         The Quip field names must exist in your Quip custom metadata.
      */
 
     public java.util.List<DataSourceToIndexFieldMapping> getAttachmentFieldMappings() {
@@ -696,11 +720,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip attachments.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        A list of field mappings to apply when indexing Quip attachments.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      */
 
     public void setAttachmentFieldMappings(java.util.Collection<DataSourceToIndexFieldMapping> attachmentFieldMappings) {
@@ -714,7 +746,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip attachments.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -723,7 +759,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        A list of field mappings to apply when indexing Quip attachments.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -739,11 +779,19 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of field mappings to apply when indexing Quip attachments.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Quip fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Quip
+     * field names must exist in your Quip custom metadata.
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        A list of field mappings to apply when indexing Quip attachments.
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Quip
+     *        attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Quip fields. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
+     *        Quip field names must exist in your Quip custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -942,13 +990,15 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your Quip
-     * instance must reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your Quip
-     *        instance must reside inside your VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -957,12 +1007,14 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your Quip
-     * instance must reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      * 
-     * @return Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your
-     *         Quip instance must reside inside your VPC.
+     * @return Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -971,13 +1023,15 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your Quip
-     * instance must reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Configuration information for connecting to an Amazon Virtual Private Cloud (VPC) for your Quip. Your Quip
-     *        instance must reside inside your VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud (VPC) to connect to your Quip. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
