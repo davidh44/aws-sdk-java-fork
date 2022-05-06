@@ -55,7 +55,7 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> periodTriggers;
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output
-     * is enabled.
+     * is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      */
     private String profile;
     /**
@@ -76,7 +76,7 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     private Integer suggestedPresentationDelaySeconds;
     /** Determines the type of UTCTiming included in the Media Presentation Description (MPD) */
     private String utcTiming;
-    /** Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD */
+    /** Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE */
     private String utcTimingUri;
 
     /**
@@ -516,11 +516,11 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output
-     * is enabled.
+     * is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * 
      * @param profile
      *        The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant
-     *        output is enabled.
+     *        output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * @see Profile
      */
 
@@ -530,10 +530,10 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output
-     * is enabled.
+     * is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * 
      * @return The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5
-     *         compliant output is enabled.
+     *         compliant output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * @see Profile
      */
 
@@ -543,11 +543,11 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output
-     * is enabled.
+     * is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * 
      * @param profile
      *        The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant
-     *        output is enabled.
+     *        output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Profile
      */
@@ -559,11 +559,11 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output
-     * is enabled.
+     * is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * 
      * @param profile
      *        The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant
-     *        output is enabled.
+     *        output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Profile
      */
@@ -804,10 +804,11 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
      * 
      * @param utcTimingUri
-     *        Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     *        Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or
+     *        HTTP-XSDATE
      */
 
     public void setUtcTimingUri(String utcTimingUri) {
@@ -815,9 +816,10 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
      * 
-     * @return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     * @return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or
+     *         HTTP-XSDATE
      */
 
     public String getUtcTimingUri() {
@@ -825,10 +827,11 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
      * 
      * @param utcTimingUri
-     *        Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+     *        Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or
+     *        HTTP-XSDATE
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

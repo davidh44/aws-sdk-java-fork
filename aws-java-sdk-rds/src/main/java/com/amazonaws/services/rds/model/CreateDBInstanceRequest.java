@@ -688,17 +688,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * deployment. The specified Availability Zone must be in the same Amazon Web Services Region as the current
      * endpoint.
      * </p>
-     * <note>
-     * <p>
-     * If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     * Availability Zone to create the DB instance in.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * </note>
      */
     private String availabilityZone;
     /**
@@ -5929,17 +5918,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * deployment. The specified Availability Zone must be in the same Amazon Web Services Region as the current
      * endpoint.
      * </p>
-     * <note>
-     * <p>
-     * If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     * Availability Zone to create the DB instance in.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * </note>
      * 
      * @param availabilityZone
      *        The Availability Zone (AZ) where the database will be created. For information on Amazon Web Services
@@ -5964,17 +5942,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Constraint: The <code>AvailabilityZone</code> parameter can't be specified if the DB instance is a
      *        Multi-AZ deployment. The specified Availability Zone must be in the same Amazon Web Services Region as the
      *        current endpoint.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     *        Availability Zone to create the DB instance in.
-     *        </p>
-     *        <p>
-     *        For more information about RDS on VMware, see the <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware
-     *        User Guide.</a>
-     *        </p>
      */
 
     public void setAvailabilityZone(String availabilityZone) {
@@ -6006,17 +5973,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * deployment. The specified Availability Zone must be in the same Amazon Web Services Region as the current
      * endpoint.
      * </p>
-     * <note>
-     * <p>
-     * If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     * Availability Zone to create the DB instance in.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * </note>
      * 
      * @return The Availability Zone (AZ) where the database will be created. For information on Amazon Web Services
      *         Regions and Availability Zones, see <a
@@ -6040,17 +5996,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         Constraint: The <code>AvailabilityZone</code> parameter can't be specified if the DB instance is a
      *         Multi-AZ deployment. The specified Availability Zone must be in the same Amazon Web Services Region as
      *         the current endpoint.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     *         Availability Zone to create the DB instance in.
-     *         </p>
-     *         <p>
-     *         For more information about RDS on VMware, see the <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on
-     *         VMware User Guide.</a>
-     *         </p>
      */
 
     public String getAvailabilityZone() {
@@ -6082,17 +6027,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * deployment. The specified Availability Zone must be in the same Amazon Web Services Region as the current
      * endpoint.
      * </p>
-     * <note>
-     * <p>
-     * If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     * Availability Zone to create the DB instance in.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * </note>
      * 
      * @param availabilityZone
      *        The Availability Zone (AZ) where the database will be created. For information on Amazon Web Services
@@ -6117,17 +6051,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Constraint: The <code>AvailabilityZone</code> parameter can't be specified if the DB instance is a
      *        Multi-AZ deployment. The specified Availability Zone must be in the same Amazon Web Services Region as the
      *        current endpoint.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom
-     *        Availability Zone to create the DB instance in.
-     *        </p>
-     *        <p>
-     *        For more information about RDS on VMware, see the <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware
-     *        User Guide.</a>
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

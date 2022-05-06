@@ -533,6 +533,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String defaultIamRoleArn;
+    /**
+     * <p>
+     * A flag that specifies whether to load sample data once the cluster is created.
+     * </p>
+     */
+    private String loadSampleData;
 
     /**
      * <p>
@@ -3971,6 +3977,46 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * A flag that specifies whether to load sample data once the cluster is created.
+     * </p>
+     * 
+     * @param loadSampleData
+     *        A flag that specifies whether to load sample data once the cluster is created.
+     */
+
+    public void setLoadSampleData(String loadSampleData) {
+        this.loadSampleData = loadSampleData;
+    }
+
+    /**
+     * <p>
+     * A flag that specifies whether to load sample data once the cluster is created.
+     * </p>
+     * 
+     * @return A flag that specifies whether to load sample data once the cluster is created.
+     */
+
+    public String getLoadSampleData() {
+        return this.loadSampleData;
+    }
+
+    /**
+     * <p>
+     * A flag that specifies whether to load sample data once the cluster is created.
+     * </p>
+     * 
+     * @param loadSampleData
+     *        A flag that specifies whether to load sample data once the cluster is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withLoadSampleData(String loadSampleData) {
+        setLoadSampleData(loadSampleData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4047,7 +4093,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getAquaConfigurationStatus() != null)
             sb.append("AquaConfigurationStatus: ").append(getAquaConfigurationStatus()).append(",");
         if (getDefaultIamRoleArn() != null)
-            sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn());
+            sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn()).append(",");
+        if (getLoadSampleData() != null)
+            sb.append("LoadSampleData: ").append(getLoadSampleData());
         sb.append("}");
         return sb.toString();
     }
@@ -4197,6 +4245,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getDefaultIamRoleArn() != null && other.getDefaultIamRoleArn().equals(this.getDefaultIamRoleArn()) == false)
             return false;
+        if (other.getLoadSampleData() == null ^ this.getLoadSampleData() == null)
+            return false;
+        if (other.getLoadSampleData() != null && other.getLoadSampleData().equals(this.getLoadSampleData()) == false)
+            return false;
         return true;
     }
 
@@ -4238,6 +4290,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getAvailabilityZoneRelocation() == null) ? 0 : getAvailabilityZoneRelocation().hashCode());
         hashCode = prime * hashCode + ((getAquaConfigurationStatus() == null) ? 0 : getAquaConfigurationStatus().hashCode());
         hashCode = prime * hashCode + ((getDefaultIamRoleArn() == null) ? 0 : getDefaultIamRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getLoadSampleData() == null) ? 0 : getLoadSampleData().hashCode());
         return hashCode;
     }
 

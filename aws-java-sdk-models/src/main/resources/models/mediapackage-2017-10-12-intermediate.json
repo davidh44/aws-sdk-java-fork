@@ -16580,12 +16580,12 @@
         "c2jName" : "Profile",
         "c2jShape" : "Profile",
         "deprecated" : false,
-        "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.",
+        "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.",
         "endpointDiscoveryId" : false,
         "enumType" : "Profile",
-        "fluentSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
+        "fluentSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
         "fluentSetterMethodName" : "withProfile",
-        "getterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@return The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@see Profile*/",
+        "getterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@return The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@see Profile*/",
         "getterMethodName" : "getProfile",
         "getterModel" : {
           "returnType" : "String",
@@ -16619,7 +16619,7 @@
         "marshallingType" : "STRING",
         "name" : "Profile",
         "sensitive" : false,
-        "setterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@see Profile*/",
+        "setterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@see Profile*/",
         "setterMethodName" : "setProfile",
         "setterModel" : {
           "timestampFormat" : null,
@@ -16634,13 +16634,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
+        "varargSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "profile",
           "variableType" : "String",
-          "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.",
+          "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -16994,12 +16994,12 @@
         "c2jName" : "UtcTimingUri",
         "c2jShape" : "__string",
         "deprecated" : false,
-        "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD",
+        "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withUtcTimingUri",
-        "getterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD*/",
+        "getterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE*/",
         "getterMethodName" : "getUtcTimingUri",
         "getterModel" : {
           "returnType" : "String",
@@ -17033,7 +17033,7 @@
         "marshallingType" : "STRING",
         "name" : "UtcTimingUri",
         "sensitive" : false,
-        "setterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD*/",
+        "setterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE*/",
         "setterMethodName" : "setUtcTimingUri",
         "setterModel" : {
           "timestampFormat" : null,
@@ -17048,13 +17048,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "utcTimingUri",
           "variableType" : "String",
-          "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD",
+          "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -17793,12 +17793,12 @@
           "c2jName" : "Profile",
           "c2jShape" : "Profile",
           "deprecated" : false,
-          "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.",
+          "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.",
           "endpointDiscoveryId" : false,
           "enumType" : "Profile",
-          "fluentSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
+          "fluentSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
           "fluentSetterMethodName" : "withProfile",
-          "getterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@return The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@see Profile*/",
+          "getterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@return The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@see Profile*/",
           "getterMethodName" : "getProfile",
           "getterModel" : {
             "returnType" : "String",
@@ -17832,7 +17832,7 @@
           "marshallingType" : "STRING",
           "name" : "Profile",
           "sensitive" : false,
-          "setterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@see Profile*/",
+          "setterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@see Profile*/",
           "setterMethodName" : "setProfile",
           "setterModel" : {
             "timestampFormat" : null,
@@ -17847,13 +17847,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
+          "varargSetterDocumentation" : "/**The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@param profile The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.\n@return Returns a reference to this object so that method calls can be chained together.\n@see Profile*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "profile",
             "variableType" : "String",
-            "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled.",
+            "documentation" : "The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to \"HBBTV_1_5\", HbbTV 1.5 compliant output is enabled. When set to \"DVB-DASH_2014\", DVB-DASH 2014 compliant output is enabled.",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -18213,12 +18213,12 @@
           "c2jName" : "UtcTimingUri",
           "c2jShape" : "__string",
           "deprecated" : false,
-          "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD",
+          "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withUtcTimingUri",
-          "getterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD*/",
+          "getterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@return Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE*/",
           "getterMethodName" : "getUtcTimingUri",
           "getterModel" : {
             "returnType" : "String",
@@ -18252,7 +18252,7 @@
           "marshallingType" : "STRING",
           "name" : "UtcTimingUri",
           "sensitive" : false,
-          "setterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD*/",
+          "setterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE*/",
           "setterMethodName" : "setUtcTimingUri",
           "setterModel" : {
             "timestampFormat" : null,
@@ -18267,13 +18267,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@param utcTimingUri Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "utcTimingUri",
             "variableType" : "String",
-            "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD",
+            "documentation" : "Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -39887,6 +39887,9 @@
       }, {
         "name" : "HYBRIDCAST",
         "value" : "HYBRIDCAST"
+      }, {
+        "name" : "DVB_DASH_2014",
+        "value" : "DVB_DASH_2014"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mediapackage.enum.Profile",
@@ -52161,6 +52164,9 @@
       }, {
         "name" : "HTTPISO",
         "value" : "HTTP-ISO"
+      }, {
+        "name" : "HTTPXSDATE",
+        "value" : "HTTP-XSDATE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mediapackage.enum.UtcTiming",

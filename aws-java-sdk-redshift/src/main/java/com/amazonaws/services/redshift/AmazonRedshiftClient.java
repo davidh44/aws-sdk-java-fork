@@ -1105,7 +1105,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts or
      * managing entities. To authorize a datashare for a data consumer, the producer account must have the correct
-     * access privileges.
+     * access permissions.
      * </p>
      * 
      * @param authorizeDataShareRequest
@@ -2737,7 +2737,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * From the producer account, removes authorization from the specified datashare.
+     * From a datashare producer account, removes authorization from the specified datashare.
      * </p>
      * 
      * @param deauthorizeDataShareRequest
@@ -6452,7 +6452,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * From a consumer account, remove association for the specified datashare.
+     * From a datashare consumer account, remove association for the specified datashare.
      * </p>
      * 
      * @param disassociateDataShareConsumerRequest
@@ -6685,7 +6685,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <p>
      * In addition, if the <code>AutoCreate</code> parameter is set to <code>True</code>, then the policy must include
-     * the <code>redshift:CreateClusterUser</code> privilege.
+     * the <code>redshift:CreateClusterUser</code> permission.
      * </p>
      * <p>
      * If the <code>DbName</code> parameter is specified, the IAM policy must allow access to the resource
@@ -8195,7 +8195,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * From the consumer account, rejects the specified datashare.
+     * From a datashare consumer account, rejects the specified datashare.
      * </p>
      * 
      * @param rejectDataShareRequest
