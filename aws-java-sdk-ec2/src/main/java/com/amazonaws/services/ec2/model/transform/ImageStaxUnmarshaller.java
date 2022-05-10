@@ -195,6 +195,11 @@ public class ImageStaxUnmarshaller implements Unmarshaller<Image, StaxUnmarshall
                     continue;
                 }
 
+                if (context.testExpression("tpmSupport", targetDepth)) {
+                    image.setTpmSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("deprecationTime", targetDepth)) {
                     image.setDeprecationTime(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

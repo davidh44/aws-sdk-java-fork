@@ -82,6 +82,23 @@ public class ImageAttribute implements Serializable, Cloneable {
     private String bootMode;
     /**
      * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     * </p>
+     */
+    private String tpmSupport;
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private String uefiData;
+    /**
+     * <p>
      * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
      * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
      * reported.
@@ -555,6 +572,117 @@ public class ImageAttribute implements Serializable, Cloneable {
 
     /**
      * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     */
+
+    public void setTpmSupport(String tpmSupport) {
+        this.tpmSupport = tpmSupport;
+    }
+
+    /**
+     * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     * </p>
+     * 
+     * @return If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     */
+
+    public String getTpmSupport() {
+        return this.tpmSupport;
+    }
+
+    /**
+     * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageAttribute withTpmSupport(String tpmSupport) {
+        setTpmSupport(tpmSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param uefiData
+     *        Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData"
+     *        >GetInstanceUefiData</a> command. You can inspect and modify the UEFI data by using the <a
+     *        href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+     *        Secure Boot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public void setUefiData(String uefiData) {
+        this.uefiData = uefiData;
+    }
+
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     *         href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     *         command. You can inspect and modify the UEFI data by using the <a
+     *         href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more
+     *         information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+     *         Secure Boot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public String getUefiData() {
+        return this.uefiData;
+    }
+
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param uefiData
+     *        Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData"
+     *        >GetInstanceUefiData</a> command. You can inspect and modify the UEFI data by using the <a
+     *        href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+     *        Secure Boot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageAttribute withUefiData(String uefiData) {
+        setUefiData(uefiData);
+        return this;
+    }
+
+    /**
+     * <p>
      * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
      * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
      * reported.
@@ -659,6 +787,10 @@ public class ImageAttribute implements Serializable, Cloneable {
             sb.append("SriovNetSupport: ").append(getSriovNetSupport()).append(",");
         if (getBootMode() != null)
             sb.append("BootMode: ").append(getBootMode()).append(",");
+        if (getTpmSupport() != null)
+            sb.append("TpmSupport: ").append(getTpmSupport()).append(",");
+        if (getUefiData() != null)
+            sb.append("UefiData: ").append(getUefiData()).append(",");
         if (getLastLaunchedTime() != null)
             sb.append("LastLaunchedTime: ").append(getLastLaunchedTime());
         sb.append("}");
@@ -711,6 +843,14 @@ public class ImageAttribute implements Serializable, Cloneable {
             return false;
         if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
             return false;
+        if (other.getTpmSupport() == null ^ this.getTpmSupport() == null)
+            return false;
+        if (other.getTpmSupport() != null && other.getTpmSupport().equals(this.getTpmSupport()) == false)
+            return false;
+        if (other.getUefiData() == null ^ this.getUefiData() == null)
+            return false;
+        if (other.getUefiData() != null && other.getUefiData().equals(this.getUefiData()) == false)
+            return false;
         if (other.getLastLaunchedTime() == null ^ this.getLastLaunchedTime() == null)
             return false;
         if (other.getLastLaunchedTime() != null && other.getLastLaunchedTime().equals(this.getLastLaunchedTime()) == false)
@@ -732,6 +872,8 @@ public class ImageAttribute implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getRamdiskId() == null) ? 0 : getRamdiskId().hashCode());
         hashCode = prime * hashCode + ((getSriovNetSupport() == null) ? 0 : getSriovNetSupport().hashCode());
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
+        hashCode = prime * hashCode + ((getTpmSupport() == null) ? 0 : getTpmSupport().hashCode());
+        hashCode = prime * hashCode + ((getUefiData() == null) ? 0 : getUefiData().hashCode());
         hashCode = prime * hashCode + ((getLastLaunchedTime() == null) ? 0 : getLastLaunchedTime().hashCode());
         return hashCode;
     }

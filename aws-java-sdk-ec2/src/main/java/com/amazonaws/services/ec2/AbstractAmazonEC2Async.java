@@ -6277,6 +6277,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<GetInstanceUefiDataResult> getInstanceUefiDataAsync(GetInstanceUefiDataRequest request) {
+
+        return getInstanceUefiDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInstanceUefiDataResult> getInstanceUefiDataAsync(GetInstanceUefiDataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetInstanceUefiDataRequest, GetInstanceUefiDataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIpamAddressHistoryResult> getIpamAddressHistoryAsync(GetIpamAddressHistoryRequest request) {
 
         return getIpamAddressHistoryAsync(request, null);

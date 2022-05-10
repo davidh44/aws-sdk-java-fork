@@ -7808,6 +7808,34 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * A binary representation of the UEFI variable store. Only non-volatile variables are stored. This is a base64
+     * encoded and zlib compressed binary value that must be properly encoded.
+     * </p>
+     * <p>
+     * When you use <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/register-image.html">register-image</a> to create an
+     * AMI, you can create an exact copy of your variable store by passing the UEFI data in the <code>UefiData</code>
+     * parameter. You can modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. You can use the tool to
+     * convert the UEFI data into a human-readable format (JSON), which you can inspect and modify, and then convert
+     * back into the binary format to use with register-image.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceUefiDataRequest
+     * @return Result of the GetInstanceUefiData operation returned by the service.
+     * @sample AmazonEC2.GetInstanceUefiData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceUefiData" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetInstanceUefiDataResult getInstanceUefiData(GetInstanceUefiDataRequest getInstanceUefiDataRequest);
+
+    /**
+     * <p>
      * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
      * href="/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in the <i>Amazon VPC
      * IPAM User Guide</i>.

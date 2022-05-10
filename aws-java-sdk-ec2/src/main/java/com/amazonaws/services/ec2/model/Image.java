@@ -206,6 +206,14 @@ public class Image implements Serializable, Cloneable {
     private String bootMode;
     /**
      * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private String tpmSupport;
+    /**
+     * <p>
      * The date and time to deprecate the AMI, in UTC, in the following format:
      * <i>YYYY</i>-<i>MM</i>-<i>DD</i>T<i>HH</i>:<i>MM</i>:<i>SS</i>Z. If you specified a value for seconds, Amazon EC2
      * rounds the seconds to the nearest minute.
@@ -1803,6 +1811,99 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @see TpmSupportValues
+     */
+
+    public void setTpmSupport(String tpmSupport) {
+        this.tpmSupport = tpmSupport;
+    }
+
+    /**
+     * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the
+     *         <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @see TpmSupportValues
+     */
+
+    public String getTpmSupport() {
+        return this.tpmSupport;
+    }
+
+    /**
+     * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TpmSupportValues
+     */
+
+    public Image withTpmSupport(String tpmSupport) {
+        setTpmSupport(tpmSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @see TpmSupportValues
+     */
+
+    public void setTpmSupport(TpmSupportValues tpmSupport) {
+        withTpmSupport(tpmSupport);
+    }
+
+    /**
+     * <p>
+     * If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        If the image is configured for NitroTPM support, the value is <code>v2.0</code>. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TpmSupportValues
+     */
+
+    public Image withTpmSupport(TpmSupportValues tpmSupport) {
+        this.tpmSupport = tpmSupport.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The date and time to deprecate the AMI, in UTC, in the following format:
      * <i>YYYY</i>-<i>MM</i>-<i>DD</i>T<i>HH</i>:<i>MM</i>:<i>SS</i>Z. If you specified a value for seconds, Amazon EC2
      * rounds the seconds to the nearest minute.
@@ -1919,6 +2020,8 @@ public class Image implements Serializable, Cloneable {
             sb.append("VirtualizationType: ").append(getVirtualizationType()).append(",");
         if (getBootMode() != null)
             sb.append("BootMode: ").append(getBootMode()).append(",");
+        if (getTpmSupport() != null)
+            sb.append("TpmSupport: ").append(getTpmSupport()).append(",");
         if (getDeprecationTime() != null)
             sb.append("DeprecationTime: ").append(getDeprecationTime());
         sb.append("}");
@@ -2043,6 +2146,10 @@ public class Image implements Serializable, Cloneable {
             return false;
         if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
             return false;
+        if (other.getTpmSupport() == null ^ this.getTpmSupport() == null)
+            return false;
+        if (other.getTpmSupport() != null && other.getTpmSupport().equals(this.getTpmSupport()) == false)
+            return false;
         if (other.getDeprecationTime() == null ^ this.getDeprecationTime() == null)
             return false;
         if (other.getDeprecationTime() != null && other.getDeprecationTime().equals(this.getDeprecationTime()) == false)
@@ -2082,6 +2189,7 @@ public class Image implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getVirtualizationType() == null) ? 0 : getVirtualizationType().hashCode());
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
+        hashCode = prime * hashCode + ((getTpmSupport() == null) ? 0 : getTpmSupport().hashCode());
         hashCode = prime * hashCode + ((getDeprecationTime() == null) ? 0 : getDeprecationTime().hashCode());
         return hashCode;
     }

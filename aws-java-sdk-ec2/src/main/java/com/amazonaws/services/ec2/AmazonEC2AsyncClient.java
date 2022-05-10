@@ -14027,6 +14027,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<GetInstanceUefiDataResult> getInstanceUefiDataAsync(GetInstanceUefiDataRequest request) {
+
+        return getInstanceUefiDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInstanceUefiDataResult> getInstanceUefiDataAsync(final GetInstanceUefiDataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetInstanceUefiDataRequest, GetInstanceUefiDataResult> asyncHandler) {
+        final GetInstanceUefiDataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetInstanceUefiDataResult>() {
+            @Override
+            public GetInstanceUefiDataResult call() throws Exception {
+                GetInstanceUefiDataResult result = null;
+
+                try {
+                    result = executeGetInstanceUefiData(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetIpamAddressHistoryResult> getIpamAddressHistoryAsync(GetIpamAddressHistoryRequest request) {
 
         return getIpamAddressHistoryAsync(request, null);

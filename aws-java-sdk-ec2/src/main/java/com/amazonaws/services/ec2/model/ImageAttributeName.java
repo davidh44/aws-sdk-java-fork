@@ -28,6 +28,8 @@ public enum ImageAttributeName {
     BlockDeviceMapping("blockDeviceMapping"),
     SriovNetSupport("sriovNetSupport"),
     BootMode("bootMode"),
+    TpmSupport("tpmSupport"),
+    UefiData("uefiData"),
     LastLaunchedTime("lastLaunchedTime");
 
     private String value;

@@ -1,3 +1,24 @@
+# __1.12.217__ __2022-05-10__
+## __AWS Compute Optimizer__
+  - ### Features
+    - Documentation updates for Compute Optimizer
+
+## __AWS Migration Hub Refactor Spaces__
+  - ### Features
+    - AWS Migration Hub Refactor Spaces documentation only update to fix a formatting issue.
+
+## __Amazon EMR__
+  - ### Features
+    - This release updates the Amazon EMR ModifyInstanceGroups API to support "MERGE" type cluster reconfiguration. Also, added the ability to specify a particular Amazon Linux release for all nodes in a cluster launch request.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Added support for using NitroTPM and UEFI Secure Boot on EC2 instances.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Adds BOTTLEROCKET_ARM_64_NVIDIA and BOTTLEROCKET_x86_64_NVIDIA AMI types to EKS managed nodegroups
+
 # __1.12.216__ __2022-05-09__
 ## __AWS Cloud Control API__
   - ### Features

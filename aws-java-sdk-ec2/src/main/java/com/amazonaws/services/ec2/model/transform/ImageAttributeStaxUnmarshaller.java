@@ -105,6 +105,16 @@ public class ImageAttributeStaxUnmarshaller implements Unmarshaller<ImageAttribu
                     continue;
                 }
 
+                if (context.testExpression("tpmSupport/value", targetDepth)) {
+                    imageAttribute.setTpmSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("uefiData/value", targetDepth)) {
+                    imageAttribute.setUefiData(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("lastLaunchedTime/value", targetDepth)) {
                     imageAttribute.setLastLaunchedTime(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

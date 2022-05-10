@@ -147,6 +147,25 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * </p>
      */
     private String bootMode;
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private String tpmSupport;
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private String uefiData;
 
     /**
      * Default constructor for RegisterImageRequest object. Callers should use the setter or fluent setter (with...)
@@ -1123,6 +1142,170 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     }
 
     /**
+     * <p>
+     * Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @see TpmSupportValues
+     */
+
+    public void setTpmSupport(String tpmSupport) {
+        this.tpmSupport = tpmSupport;
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *         Elastic Compute Cloud User Guide</i>.
+     * @see TpmSupportValues
+     */
+
+    public String getTpmSupport() {
+        return this.tpmSupport;
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TpmSupportValues
+     */
+
+    public RegisterImageRequest withTpmSupport(String tpmSupport) {
+        setTpmSupport(tpmSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @see TpmSupportValues
+     */
+
+    public void setTpmSupport(TpmSupportValues tpmSupport) {
+        withTpmSupport(tpmSupport);
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon Elastic
+     * Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param tpmSupport
+     *        Set to <code>v2.0</code> to enable Trusted Platform Module (TPM) support. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the <i>Amazon
+     *        Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TpmSupportValues
+     */
+
+    public RegisterImageRequest withTpmSupport(TpmSupportValues tpmSupport) {
+        this.tpmSupport = tpmSupport.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param uefiData
+     *        Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData"
+     *        >GetInstanceUefiData</a> command. You can inspect and modify the UEFI data by using the <a
+     *        href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+     *        Secure Boot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public void setUefiData(String uefiData) {
+        this.uefiData = uefiData;
+    }
+
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     *         href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     *         command. You can inspect and modify the UEFI data by using the <a
+     *         href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more
+     *         information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+     *         Secure Boot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     */
+
+    public String getUefiData() {
+        return this.uefiData;
+    }
+
+    /**
+     * <p>
+     * Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData">GetInstanceUefiData</a>
+     * command. You can inspect and modify the UEFI data by using the <a
+     * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI Secure Boot</a> in the
+     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param uefiData
+     *        Base64 representation of the non-volatile UEFI variable store. To retrieve the UEFI data, use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceUefiData"
+     *        >GetInstanceUefiData</a> command. You can inspect and modify the UEFI data by using the <a
+     *        href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. For more
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+     *        Secure Boot</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterImageRequest withUefiData(String uefiData) {
+        setUefiData(uefiData);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1170,7 +1353,11 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         if (getVirtualizationType() != null)
             sb.append("VirtualizationType: ").append(getVirtualizationType()).append(",");
         if (getBootMode() != null)
-            sb.append("BootMode: ").append(getBootMode());
+            sb.append("BootMode: ").append(getBootMode()).append(",");
+        if (getTpmSupport() != null)
+            sb.append("TpmSupport: ").append(getTpmSupport()).append(",");
+        if (getUefiData() != null)
+            sb.append("UefiData: ").append(getUefiData());
         sb.append("}");
         return sb.toString();
     }
@@ -1237,6 +1424,14 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
             return false;
         if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
             return false;
+        if (other.getTpmSupport() == null ^ this.getTpmSupport() == null)
+            return false;
+        if (other.getTpmSupport() != null && other.getTpmSupport().equals(this.getTpmSupport()) == false)
+            return false;
+        if (other.getUefiData() == null ^ this.getUefiData() == null)
+            return false;
+        if (other.getUefiData() != null && other.getUefiData().equals(this.getUefiData()) == false)
+            return false;
         return true;
     }
 
@@ -1258,6 +1453,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getSriovNetSupport() == null) ? 0 : getSriovNetSupport().hashCode());
         hashCode = prime * hashCode + ((getVirtualizationType() == null) ? 0 : getVirtualizationType().hashCode());
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
+        hashCode = prime * hashCode + ((getTpmSupport() == null) ? 0 : getTpmSupport().hashCode());
+        hashCode = prime * hashCode + ((getUefiData() == null) ? 0 : getUefiData().hashCode());
         return hashCode;
     }
 
