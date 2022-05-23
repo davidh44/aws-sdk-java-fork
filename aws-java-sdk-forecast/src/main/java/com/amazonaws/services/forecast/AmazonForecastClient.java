@@ -175,7 +175,8 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
      * </li>
      * <li>
      * <p>
-     * <code>ForecastHorizon</code> - The number of time steps being forecasted.
+     * <code>ForecastHorizon</code> - The number of time-steps that the model predicts. The forecast horizon is also
+     * called the prediction length.
      * </p>
      * </li>
      * </ul>
@@ -294,10 +295,12 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
      * </ul>
      * <p>
      * After creating a dataset, you import your training data into it and add the dataset to a dataset group. You use
-     * the dataset group to create a predictor. For more information, see <a>howitworks-datasets-groups</a>.
+     * the dataset group to create a predictor. For more information, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html">Importing datasets</a>.
      * </p>
      * <p>
-     * To get a list of all your datasets, use the <a>ListDatasets</a> operation.
+     * To get a list of all your datasets, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_ListDatasets.html">ListDatasets</a> operation.
      * </p>
      * <p>
      * For example Forecast datasets, see the <a href="https://github.com/aws-samples/amazon-forecast-samples">Amazon
@@ -305,8 +308,9 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <note>
      * <p>
-     * The <code>Status</code> of a dataset must be <code>ACTIVE</code> before you can import training data. Use the
-     * <a>DescribeDataset</a> operation to get the status.
+     * The <code>Status</code> of a dataset must be <code>ACTIVE</code> before you can import training data. Use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDataset.html">DescribeDataset</a> operation to
+     * get the status.
      * </p>
      * </note>
      * 
@@ -370,19 +374,25 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Creates a dataset group, which holds a collection of related datasets. You can add datasets to the dataset group
-     * when you create the dataset group, or later by using the <a>UpdateDatasetGroup</a> operation.
+     * when you create the dataset group, or later by using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_UpdateDatasetGroup.html">UpdateDatasetGroup</a>
+     * operation.
      * </p>
      * <p>
      * After creating a dataset group and adding datasets, you use the dataset group when you create a predictor. For
-     * more information, see <a>howitworks-datasets-groups</a>.
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html">Dataset groups</a>.
      * </p>
      * <p>
-     * To get a list of all your datasets groups, use the <a>ListDatasetGroups</a> operation.
+     * To get a list of all your datasets groups, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_ListDatasetGroups.html">ListDatasetGroups</a> operation.
      * </p>
      * <note>
      * <p>
      * The <code>Status</code> of a dataset group must be <code>ACTIVE</code> before you can use the dataset group to
-     * create a predictor. To get the status, use the <a>DescribeDatasetGroup</a> operation.
+     * create a predictor. To get the status, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>
+     * operation.
      * </p>
      * </note>
      * 
@@ -454,9 +464,11 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
      * to import the data to.
      * </p>
      * <p>
-     * You must specify a <a>DataSource</a> object that includes an AWS Identity and Access Management (IAM) role that
-     * Amazon Forecast can assume to access the data, as Amazon Forecast makes a copy of your data and processes it in
-     * an internal AWS system. For more information, see <a>aws-forecast-iam-roles</a>.
+     * You must specify a <a href="https://docs.aws.amazon.com/forecast/latest/dg/API_DataSource.html">DataSource</a>
+     * object that includes an AWS Identity and Access Management (IAM) role that Amazon Forecast can assume to access
+     * the data, as Amazon Forecast makes a copy of your data and processes it in an internal AWS system. For more
+     * information, see <a href="https://docs.aws.amazon.com/forecast/latest/dg/aws-forecast-iam-roles.html">Set up
+     * permissions</a>.
      * </p>
      * <p>
      * The training data must be in CSV format. The delimiter must be a comma (,).
@@ -471,8 +483,9 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
      * want to model off of, and not just the new data collected since the previous import.
      * </p>
      * <p>
-     * To get a list of all your dataset import jobs, filtered by specified criteria, use the
-     * <a>ListDatasetImportJobs</a> operation.
+     * To get a list of all your dataset import jobs, filtered by specified criteria, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_ListDatasetImportJobs.html">ListDatasetImportJobs</a>
+     * operation.
      * </p>
      * 
      * @param createDatasetImportJobRequest
@@ -1010,6 +1023,74 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
     }
 
     /**
+     * <p>
+     * Creates a predictor monitor resource for an existing auto predictor. Predictor monitoring allows you to see how
+     * your predictor's performance changes over time. For more information, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/predictor-monitoring.html">Predictor Monitoring</a>.
+     * </p>
+     * 
+     * @param createMonitorRequest
+     * @return Result of the CreateMonitor operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceAlreadyExistsException
+     *         There is already a resource with this name. Try again with a different name.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @throws LimitExceededException
+     *         The limit on the number of resources per account has been exceeded.
+     * @sample AmazonForecast.CreateMonitor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateMonitor" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateMonitorResult createMonitor(CreateMonitorRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMonitor(request);
+    }
+
+    @SdkInternalApi
+    final CreateMonitorResult executeCreateMonitor(CreateMonitorRequest createMonitorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMonitorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMonitorRequest> request = null;
+        Response<CreateMonitorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMonitorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createMonitorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "forecast");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMonitor");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateMonitorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateMonitorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * <note>
      * <p>
      * This operation creates a legacy predictor that does not include all the predictor functionalities provided by
@@ -1245,14 +1326,18 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Deletes an Amazon Forecast dataset that was created using the <a>CreateDataset</a> operation. You can only delete
-     * datasets that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>. To get the status use the
-     * <a>DescribeDataset</a> operation.
+     * Deletes an Amazon Forecast dataset that was created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation. You can
+     * only delete datasets that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>. To get the status
+     * use the <a href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDataset.html">DescribeDataset</a>
+     * operation.
      * </p>
      * <note>
      * <p>
      * Forecast does not automatically update any dataset groups that contain the deleted dataset. In order to update
-     * the dataset group, use the operation, omitting the deleted dataset's ARN.
+     * the dataset group, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_UpdateDatasetGroup.html">UpdateDatasetGroup</a>
+     * operation, omitting the deleted dataset's ARN.
      * </p>
      * </note>
      * 
@@ -1315,9 +1400,12 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Deletes a dataset group created using the <a>CreateDatasetGroup</a> operation. You can only delete dataset groups
-     * that have a status of <code>ACTIVE</code>, <code>CREATE_FAILED</code>, or <code>UPDATE_FAILED</code>. To get the
-     * status, use the <a>DescribeDatasetGroup</a> operation.
+     * Deletes a dataset group created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDatasetGroup.html">CreateDatasetGroup</a>
+     * operation. You can only delete dataset groups that have a status of <code>ACTIVE</code>,
+     * <code>CREATE_FAILED</code>, or <code>UPDATE_FAILED</code>. To get the status, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>
+     * operation.
      * </p>
      * <p>
      * This operation deletes only the dataset group, not the datasets in the group.
@@ -1382,9 +1470,12 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Deletes a dataset import job created using the <a>CreateDatasetImportJob</a> operation. You can delete only
-     * dataset import jobs that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>. To get the status,
-     * use the <a>DescribeDatasetImportJob</a> operation.
+     * Deletes a dataset import job created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDatasetImportJob.html">CreateDatasetImportJob</a>
+     * operation. You can delete only dataset import jobs that have a status of <code>ACTIVE</code> or
+     * <code>CREATE_FAILED</code>. To get the status, use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetImportJob.html"
+     * >DescribeDatasetImportJob</a> operation.
      * </p>
      * 
      * @param deleteDatasetImportJobRequest
@@ -1711,6 +1802,69 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Deletes a monitor resource. You can only delete a monitor resource with a status of <code>ACTIVE</code>,
+     * <code>ACTIVE_STOPPED</code>, <code>CREATE_FAILED</code>, or <code>CREATE_STOPPED</code>.
+     * </p>
+     * 
+     * @param deleteMonitorRequest
+     * @return Result of the DeleteMonitor operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonForecast.DeleteMonitor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteMonitor" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteMonitorResult deleteMonitor(DeleteMonitorRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMonitor(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMonitorResult executeDeleteMonitor(DeleteMonitorRequest deleteMonitorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMonitorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMonitorRequest> request = null;
+        Response<DeleteMonitorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMonitorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteMonitorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "forecast");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMonitor");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMonitorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteMonitorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a predictor created using the <a>DescribePredictor</a> or <a>CreatePredictor</a> operations. You can
      * delete only predictor that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>. To get the status,
      * use the <a>DescribePredictor</a> operation.
@@ -1998,7 +2152,8 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Describes an Amazon Forecast dataset created using the <a>CreateDataset</a> operation.
+     * Describes an Amazon Forecast dataset created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      * </p>
      * <p>
      * In addition to listing the parameters specified in the <code>CreateDataset</code> request, this operation
@@ -2079,7 +2234,9 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Describes a dataset group created using the <a>CreateDatasetGroup</a> operation.
+     * Describes a dataset group created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDatasetGroup.html">CreateDatasetGroup</a>
+     * operation.
      * </p>
      * <p>
      * In addition to listing the parameters provided in the <code>CreateDatasetGroup</code> request, this operation
@@ -2165,7 +2322,9 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Describes a dataset import job created using the <a>CreateDatasetImportJob</a> operation.
+     * Describes a dataset import job created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDatasetImportJob.html">CreateDatasetImportJob</a>
+     * operation.
      * </p>
      * <p>
      * In addition to listing the parameters provided in the <code>CreateDatasetImportJob</code> request, this operation
@@ -2564,6 +2723,104 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
     }
 
     /**
+     * <p>
+     * Describes a monitor resource. In addition to listing the properties provided in the <a>CreateMonitor</a> request,
+     * this operation lists the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Baseline</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CreationTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LastEvaluationTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LastEvaluationState</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LastModificationTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Message</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Status</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param describeMonitorRequest
+     * @return Result of the DescribeMonitor operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @sample AmazonForecast.DescribeMonitor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeMonitor" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeMonitorResult describeMonitor(DescribeMonitorRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeMonitor(request);
+    }
+
+    @SdkInternalApi
+    final DescribeMonitorResult executeDescribeMonitor(DescribeMonitorRequest describeMonitorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeMonitorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeMonitorRequest> request = null;
+        Response<DescribeMonitorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeMonitorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeMonitorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "forecast");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeMonitor");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeMonitorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeMonitorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * <note>
      * <p>
      * This operation is only valid for legacy predictors created with CreatePredictor. If you are not using a legacy
@@ -2839,9 +3096,12 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Returns a list of dataset groups created using the <a>CreateDatasetGroup</a> operation. For each dataset group,
-     * this operation returns a summary of its properties, including its Amazon Resource Name (ARN). You can retrieve
-     * the complete set of properties by using the dataset group ARN with the <a>DescribeDatasetGroup</a> operation.
+     * Returns a list of dataset groups created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDatasetGroup.html">CreateDatasetGroup</a>
+     * operation. For each dataset group, this operation returns a summary of its properties, including its Amazon
+     * Resource Name (ARN). You can retrieve the complete set of properties by using the dataset group ARN with the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>
+     * operation.
      * </p>
      * 
      * @param listDatasetGroupsRequest
@@ -2898,10 +3158,13 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Returns a list of dataset import jobs created using the <a>CreateDatasetImportJob</a> operation. For each import
-     * job, this operation returns a summary of its properties, including its Amazon Resource Name (ARN). You can
-     * retrieve the complete set of properties by using the ARN with the <a>DescribeDatasetImportJob</a> operation. You
-     * can filter the list by providing an array of <a>Filter</a> objects.
+     * Returns a list of dataset import jobs created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDatasetImportJob.html">CreateDatasetImportJob</a>
+     * operation. For each import job, this operation returns a summary of its properties, including its Amazon Resource
+     * Name (ARN). You can retrieve the complete set of properties by using the ARN with the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetImportJob.html"
+     * >DescribeDatasetImportJob</a> operation. You can filter the list by providing an array of <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_Filter.html">Filter</a> objects.
      * </p>
      * 
      * @param listDatasetImportJobsRequest
@@ -2962,9 +3225,11 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Returns a list of datasets created using the <a>CreateDataset</a> operation. For each dataset, a summary of its
-     * properties, including its Amazon Resource Name (ARN), is returned. To retrieve the complete set of properties,
-     * use the ARN with the <a>DescribeDataset</a> operation.
+     * Returns a list of datasets created using the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation. For
+     * each dataset, a summary of its properties, including its Amazon Resource Name (ARN), is returned. To retrieve the
+     * complete set of properties, use the ARN with the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDataset.html">DescribeDataset</a> operation.
      * </p>
      * 
      * @param listDatasetsRequest
@@ -3282,6 +3547,140 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Returns a list of the monitoring evaluation results and predictor events collected by the monitor resource during
+     * different windows of time.
+     * </p>
+     * <p>
+     * For information about monitoring see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/predictor-monitoring-results.html">Viewing Monitoring
+     * Results</a>. For more information about retrieving monitoring results see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/predictor-monitoring-results.html">Viewing Monitoring
+     * Results</a>.
+     * </p>
+     * 
+     * @param listMonitorEvaluationsRequest
+     * @return Result of the ListMonitorEvaluations operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The token is not valid. Tokens expire after 24 hours.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @sample AmazonForecast.ListMonitorEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListMonitorEvaluations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMonitorEvaluationsResult listMonitorEvaluations(ListMonitorEvaluationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMonitorEvaluations(request);
+    }
+
+    @SdkInternalApi
+    final ListMonitorEvaluationsResult executeListMonitorEvaluations(ListMonitorEvaluationsRequest listMonitorEvaluationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMonitorEvaluationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMonitorEvaluationsRequest> request = null;
+        Response<ListMonitorEvaluationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMonitorEvaluationsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listMonitorEvaluationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "forecast");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMonitorEvaluations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMonitorEvaluationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListMonitorEvaluationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of monitors created with the <a>CreateMonitor</a> operation and <a>CreateAutoPredictor</a>
+     * operation. For each monitor resource, this operation returns of a summary of its properties, including its Amazon
+     * Resource Name (ARN). You can retrieve a complete set of properties of a monitor resource by specify the monitor's
+     * ARN in the <a>DescribeMonitor</a> operation.
+     * </p>
+     * 
+     * @param listMonitorsRequest
+     * @return Result of the ListMonitors operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The token is not valid. Tokens expire after 24 hours.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @sample AmazonForecast.ListMonitors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListMonitors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListMonitorsResult listMonitors(ListMonitorsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMonitors(request);
+    }
+
+    @SdkInternalApi
+    final ListMonitorsResult executeListMonitors(ListMonitorsRequest listMonitorsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMonitorsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMonitorsRequest> request = null;
+        Response<ListMonitorsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMonitorsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listMonitorsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "forecast");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMonitors");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMonitorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListMonitorsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of predictor backtest export jobs created using the <a>CreatePredictorBacktestExportJob</a>
      * operation. This operation returns a summary for each backtest export job. You can filter the list using an array
      * of <a>Filter</a> objects.
@@ -3464,6 +3863,70 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Resumes a stopped monitor resource.
+     * </p>
+     * 
+     * @param resumeResourceRequest
+     * @return Result of the ResumeResource operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws LimitExceededException
+     *         The limit on the number of resources per account has been exceeded.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonForecast.ResumeResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ResumeResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ResumeResourceResult resumeResource(ResumeResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeResumeResource(request);
+    }
+
+    @SdkInternalApi
+    final ResumeResourceResult executeResumeResource(ResumeResourceRequest resumeResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(resumeResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ResumeResourceRequest> request = null;
+        Response<ResumeResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ResumeResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(resumeResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "forecast");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ResumeResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ResumeResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ResumeResourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3711,7 +4174,9 @@ public class AmazonForecastClient extends AmazonWebServiceClient implements Amaz
      * <note>
      * <p>
      * The <code>Status</code> of the dataset group must be <code>ACTIVE</code> before you can use the dataset group to
-     * create a predictor. Use the <a>DescribeDatasetGroup</a> operation to get the status.
+     * create a predictor. Use the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>
+     * operation to get the status.
      * </p>
      * </note>
      * 

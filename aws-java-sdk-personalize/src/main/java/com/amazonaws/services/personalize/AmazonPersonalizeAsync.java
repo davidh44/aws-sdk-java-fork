@@ -1106,6 +1106,11 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * </li>
      * <li>
      * <p>
+     * STOP PENDING &gt; STOP IN_PROGRESS &gt; INACTIVE &gt; START PENDING &gt; START IN_PROGRESS &gt; ACTIVE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * DELETE PENDING &gt; DELETE IN_PROGRESS
      * </p>
      * </li>
@@ -1195,6 +1200,11 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * <li>
      * <p>
      * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * STOP PENDING &gt; STOP IN_PROGRESS &gt; INACTIVE &gt; START PENDING &gt; START IN_PROGRESS &gt; ACTIVE
      * </p>
      * </li>
      * <li>
@@ -2580,6 +2590,11 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * </li>
      * <li>
      * <p>
+     * STOP PENDING &gt; STOP IN_PROGRESS &gt; INACTIVE &gt; START PENDING &gt; START IN_PROGRESS &gt; ACTIVE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * DELETE PENDING &gt; DELETE IN_PROGRESS
      * </p>
      * </li>
@@ -2587,6 +2602,9 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * <p>
      * When the <code>status</code> is <code>CREATE FAILED</code>, the response includes the <code>failureReason</code>
      * key, which describes why.
+     * </p>
+     * <p>
+     * The <code>modelMetrics</code> key is null when the recommender is being created or deleted.
      * </p>
      * <p>
      * For more information on recommenders, see <a
@@ -2616,6 +2634,11 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * </li>
      * <li>
      * <p>
+     * STOP PENDING &gt; STOP IN_PROGRESS &gt; INACTIVE &gt; START PENDING &gt; START IN_PROGRESS &gt; ACTIVE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * DELETE PENDING &gt; DELETE IN_PROGRESS
      * </p>
      * </li>
@@ -2623,6 +2646,9 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * <p>
      * When the <code>status</code> is <code>CREATE FAILED</code>, the response includes the <code>failureReason</code>
      * key, which describes why.
+     * </p>
+     * <p>
+     * The <code>modelMetrics</code> key is null when the recommender is being created or deleted.
      * </p>
      * <p>
      * For more information on recommenders, see <a

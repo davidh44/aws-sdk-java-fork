@@ -50,6 +50,8 @@ public class CreateAutoPredictorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExplainPredictor").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> MONITORCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MonitorConfig").build();
 
     private static final CreateAutoPredictorRequestMarshaller instance = new CreateAutoPredictorRequestMarshaller();
 
@@ -78,6 +80,7 @@ public class CreateAutoPredictorRequestMarshaller {
             protocolMarshaller.marshall(createAutoPredictorRequest.getOptimizationMetric(), OPTIMIZATIONMETRIC_BINDING);
             protocolMarshaller.marshall(createAutoPredictorRequest.getExplainPredictor(), EXPLAINPREDICTOR_BINDING);
             protocolMarshaller.marshall(createAutoPredictorRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createAutoPredictorRequest.getMonitorConfig(), MONITORCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

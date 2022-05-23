@@ -132,6 +132,19 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMonitorResult> createMonitorAsync(CreateMonitorRequest request) {
+
+        return createMonitorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMonitorResult> createMonitorAsync(CreateMonitorRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMonitorRequest, CreateMonitorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePredictorResult> createPredictorAsync(CreatePredictorRequest request) {
 
         return createPredictorAsync(request, null);
@@ -246,6 +259,19 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     @Override
     public java.util.concurrent.Future<DeleteForecastExportJobResult> deleteForecastExportJobAsync(DeleteForecastExportJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteForecastExportJobRequest, DeleteForecastExportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMonitorResult> deleteMonitorAsync(DeleteMonitorRequest request) {
+
+        return deleteMonitorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMonitorResult> deleteMonitorAsync(DeleteMonitorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteMonitorRequest, DeleteMonitorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -396,6 +422,19 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeMonitorResult> describeMonitorAsync(DescribeMonitorRequest request) {
+
+        return describeMonitorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMonitorResult> describeMonitorAsync(DescribeMonitorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeMonitorRequest, DescribeMonitorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribePredictorResult> describePredictorAsync(DescribePredictorRequest request) {
 
         return describePredictorAsync(request, null);
@@ -528,6 +567,32 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListMonitorEvaluationsResult> listMonitorEvaluationsAsync(ListMonitorEvaluationsRequest request) {
+
+        return listMonitorEvaluationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMonitorEvaluationsResult> listMonitorEvaluationsAsync(ListMonitorEvaluationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMonitorEvaluationsRequest, ListMonitorEvaluationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMonitorsResult> listMonitorsAsync(ListMonitorsRequest request) {
+
+        return listMonitorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMonitorsResult> listMonitorsAsync(ListMonitorsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMonitorsRequest, ListMonitorsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListPredictorBacktestExportJobsResult> listPredictorBacktestExportJobsAsync(
             ListPredictorBacktestExportJobsRequest request) {
 
@@ -564,6 +629,19 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResumeResourceResult> resumeResourceAsync(ResumeResourceRequest request) {
+
+        return resumeResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResumeResourceResult> resumeResourceAsync(ResumeResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ResumeResourceRequest, ResumeResourceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

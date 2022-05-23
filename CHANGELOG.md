@@ -1,3 +1,16 @@
+# __1.12.226__ __2022-05-23__
+## __Amazon ElastiCache__
+  - ### Features
+    - Added support for encryption in transit for Memcached clusters. Customers can now launch Memcached cluster with encryption in transit enabled when using Memcached version 1.6.12 or later.
+
+## __Amazon Forecast Service__
+  - ### Features
+    - New APIs for Monitor that help you understand how your predictors perform over time.
+
+## __Amazon Personalize__
+  - ### Features
+    - Adding modelMetrics as part of DescribeRecommender API response for Personalize.
+
 # __1.12.225__ __2022-05-20__
 ## __Amazon CloudWatch Logs__
   - ### Features

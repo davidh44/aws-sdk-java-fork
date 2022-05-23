@@ -68,6 +68,11 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public CreateMonitorResult createMonitor(CreateMonitorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreatePredictorResult createPredictor(CreatePredictorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -109,6 +114,11 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public DeleteForecastExportJobResult deleteForecastExportJob(DeleteForecastExportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteMonitorResult deleteMonitor(DeleteMonitorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -168,6 +178,11 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public DescribeMonitorResult describeMonitor(DescribeMonitorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribePredictorResult describePredictor(DescribePredictorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -218,6 +233,16 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public ListMonitorEvaluationsResult listMonitorEvaluations(ListMonitorEvaluationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMonitorsResult listMonitors(ListMonitorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListPredictorBacktestExportJobsResult listPredictorBacktestExportJobs(ListPredictorBacktestExportJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -229,6 +254,11 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ResumeResourceResult resumeResource(ResumeResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

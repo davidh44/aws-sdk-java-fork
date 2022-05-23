@@ -340,6 +340,39 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMonitorResult> createMonitorAsync(CreateMonitorRequest request) {
+
+        return createMonitorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMonitorResult> createMonitorAsync(final CreateMonitorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateMonitorRequest, CreateMonitorResult> asyncHandler) {
+        final CreateMonitorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateMonitorResult>() {
+            @Override
+            public CreateMonitorResult call() throws Exception {
+                CreateMonitorResult result = null;
+
+                try {
+                    result = executeCreateMonitor(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePredictorResult> createPredictorAsync(CreatePredictorRequest request) {
 
         return createPredictorAsync(request, null);
@@ -623,6 +656,39 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
 
                 try {
                     result = executeDeleteForecastExportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMonitorResult> deleteMonitorAsync(DeleteMonitorRequest request) {
+
+        return deleteMonitorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMonitorResult> deleteMonitorAsync(final DeleteMonitorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteMonitorRequest, DeleteMonitorResult> asyncHandler) {
+        final DeleteMonitorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteMonitorResult>() {
+            @Override
+            public DeleteMonitorResult call() throws Exception {
+                DeleteMonitorResult result = null;
+
+                try {
+                    result = executeDeleteMonitor(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1004,6 +1070,39 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeMonitorResult> describeMonitorAsync(DescribeMonitorRequest request) {
+
+        return describeMonitorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMonitorResult> describeMonitorAsync(final DescribeMonitorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeMonitorRequest, DescribeMonitorResult> asyncHandler) {
+        final DescribeMonitorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeMonitorResult>() {
+            @Override
+            public DescribeMonitorResult call() throws Exception {
+                DescribeMonitorResult result = null;
+
+                try {
+                    result = executeDescribeMonitor(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribePredictorResult> describePredictorAsync(DescribePredictorRequest request) {
 
         return describePredictorAsync(request, null);
@@ -1336,6 +1435,72 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListMonitorEvaluationsResult> listMonitorEvaluationsAsync(ListMonitorEvaluationsRequest request) {
+
+        return listMonitorEvaluationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMonitorEvaluationsResult> listMonitorEvaluationsAsync(final ListMonitorEvaluationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMonitorEvaluationsRequest, ListMonitorEvaluationsResult> asyncHandler) {
+        final ListMonitorEvaluationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMonitorEvaluationsResult>() {
+            @Override
+            public ListMonitorEvaluationsResult call() throws Exception {
+                ListMonitorEvaluationsResult result = null;
+
+                try {
+                    result = executeListMonitorEvaluations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMonitorsResult> listMonitorsAsync(ListMonitorsRequest request) {
+
+        return listMonitorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMonitorsResult> listMonitorsAsync(final ListMonitorsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMonitorsRequest, ListMonitorsResult> asyncHandler) {
+        final ListMonitorsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMonitorsResult>() {
+            @Override
+            public ListMonitorsResult call() throws Exception {
+                ListMonitorsResult result = null;
+
+                try {
+                    result = executeListMonitors(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListPredictorBacktestExportJobsResult> listPredictorBacktestExportJobsAsync(
             ListPredictorBacktestExportJobsRequest request) {
 
@@ -1421,6 +1586,39 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResumeResourceResult> resumeResourceAsync(ResumeResourceRequest request) {
+
+        return resumeResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResumeResourceResult> resumeResourceAsync(final ResumeResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ResumeResourceRequest, ResumeResourceResult> asyncHandler) {
+        final ResumeResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ResumeResourceResult>() {
+            @Override
+            public ResumeResourceResult call() throws Exception {
+                ResumeResourceResult result = null;
+
+                try {
+                    result = executeResumeResource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

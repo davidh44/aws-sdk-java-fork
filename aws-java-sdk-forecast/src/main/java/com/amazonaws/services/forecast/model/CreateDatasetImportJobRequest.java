@@ -47,7 +47,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and the IAM
      * role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match those specified
-     * in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     * in the <code>EncryptionConfig</code> parameter of the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      * </p>
      */
     private DataSource dataSource;
@@ -270,7 +271,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and the IAM
      * role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match those specified
-     * in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     * in the <code>EncryptionConfig</code> parameter of the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      * </p>
      * 
      * @param dataSource
@@ -280,7 +282,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and
      *        the IAM role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match
-     *        those specified in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     *        those specified in the <code>EncryptionConfig</code> parameter of the <a
+     *        href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      */
 
     public void setDataSource(DataSource dataSource) {
@@ -295,7 +298,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and the IAM
      * role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match those specified
-     * in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     * in the <code>EncryptionConfig</code> parameter of the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      * </p>
      * 
      * @return The location of the training data to import and an AWS Identity and Access Management (IAM) role that
@@ -304,7 +308,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      *         <p>
      *         If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and
      *         the IAM role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match
-     *         those specified in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     *         those specified in the <code>EncryptionConfig</code> parameter of the <a
+     *         href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      */
 
     public DataSource getDataSource() {
@@ -319,7 +324,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and the IAM
      * role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match those specified
-     * in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     * in the <code>EncryptionConfig</code> parameter of the <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      * </p>
      * 
      * @param dataSource
@@ -329,7 +335,8 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        If encryption is used, <code>DataSource</code> must include an AWS Key Management Service (KMS) key and
      *        the IAM role must allow Amazon Forecast permission to access the key. The KMS key and IAM role must match
-     *        those specified in the <code>EncryptionConfig</code> parameter of the <a>CreateDataset</a> operation.
+     *        those specified in the <code>EncryptionConfig</code> parameter of the <a
+     *        href="https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html">CreateDataset</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
