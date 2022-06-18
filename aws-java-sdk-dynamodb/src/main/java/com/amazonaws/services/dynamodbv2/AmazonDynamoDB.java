@@ -112,13 +112,22 @@ public interface AmazonDynamoDB {
 
     /**
      * <p>
-     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL.
+     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL. Each read
+     * statement in a <code>BatchExecuteStatement</code> must specify an equality condition on all key attributes. This
+     * enforces that each <code>SELECT</code> statement in a batch returns at most a single item.
      * </p>
      * <note>
      * <p>
      * The entire batch must consist of either read statements or write statements, you cannot mix both in one batch.
      * </p>
-     * </note>
+     * </note> <important>
+     * <p>
+     * A HTTP 200 response does not mean that all statements in the BatchExecuteStatement succeeded. Error details for
+     * individual statements can be found under the <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchStatementResponse.html#DDB-Type-BatchStatementResponse-Error"
+     * >Error</a> field of the <code>BatchStatementResponse</code> for each statement.
+     * </p>
+     * </important>
      * 
      * @param batchExecuteStatementRequest
      * @return Result of the BatchExecuteStatement operation returned by the service.
@@ -428,7 +437,7 @@ public interface AmazonDynamoDB {
      * @return Result of the CreateBackup operation returned by the service.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @throws TableInUseException
      *         A target table with the specified name is either being created or deleted.
      * @throws ContinuousBackupsUnavailableException
@@ -439,18 +448,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.CreateBackup
@@ -545,25 +554,25 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @throws GlobalTableAlreadyExistsException
      *         The specified global table already exists.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @sample AmazonDynamoDB.CreateGlobalTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/CreateGlobalTable" target="_top">AWS API
      *      Documentation</a>
@@ -600,18 +609,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.CreateTable
@@ -646,18 +655,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DeleteBackup
@@ -767,18 +776,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DeleteTable
@@ -836,7 +845,7 @@ public interface AmazonDynamoDB {
      * @return Result of the DescribeContinuousBackups operation returned by the service.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DescribeContinuousBackups
@@ -888,18 +897,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DescribeExport
@@ -1174,18 +1183,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
      *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
@@ -1213,18 +1222,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
      *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
@@ -1375,7 +1384,7 @@ public interface AmazonDynamoDB {
      *         <p>
      *         If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property.
      *         This property is not set for other languages. Transaction cancellation reasons are ordered in the order
-     *         of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code>
+     *         of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code>
      *         message.
      *         </p>
      *         </note>
@@ -1390,7 +1399,7 @@ public interface AmazonDynamoDB {
      *         <ul>
      *         <li>
      *         <p>
-     *         Code: <code>NONE</code>
+     *         Code: <code>None</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1635,24 +1644,24 @@ public interface AmazonDynamoDB {
      * @return Result of the ExportTableToPointInTime operation returned by the service.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @throws PointInTimeRecoveryUnavailableException
      *         Point in time recovery has not yet been enabled for this source table.
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InvalidExportTimeException
      *         The specified <code>ExportTime</code> is outside of the point in time recovery window.
      * @throws ExportConflictException
@@ -1767,18 +1776,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.ListExports
@@ -1886,68 +1895,6 @@ public interface AmazonDynamoDB {
      * existing item if it has certain attribute values. You can return the item's attribute values in the same
      * operation, using the <code>ReturnValues</code> parameter.
      * </p>
-     * <important>
-     * <p>
-     * This topic provides general information about the <code>PutItem</code> API.
-     * </p>
-     * <p>
-     * For information on how to call the <code>PutItem</code> API using the Amazon Web Services SDK in specific
-     * languages, see the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the Command Line
-     * Interface</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
-     * .NET</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for C++</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Go</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Java</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
-     * JavaScript</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for PHP
-     * V3</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Python
-     * (Boto)</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Ruby
-     * V2</a>
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
      * <p>
      * When you add an item, the primary key attributes are the only required attributes. Attribute values cannot be
      * null.
@@ -2160,18 +2107,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.RestoreTableFromBackup
@@ -2266,24 +2213,24 @@ public interface AmazonDynamoDB {
      *         A target table with the specified name already exists.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @throws TableInUseException
      *         A target table with the specified name is either being created or deleted.
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InvalidRestoreTimeException
      *         An invalid restore time was specified. RestoreDateTime must be between EarliestRestorableDateTime and
      *         LatestRestorableDateTime.
@@ -2393,18 +2340,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws ResourceNotFoundException
      *         The operation tried to access a nonexistent table or index. The resource might not be specified
      *         correctly, or its status might not be <code>ACTIVE</code>.
@@ -2529,7 +2476,7 @@ public interface AmazonDynamoDB {
      *         <p>
      *         If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property.
      *         This property is not set for other languages. Transaction cancellation reasons are ordered in the order
-     *         of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code>
+     *         of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code>
      *         message.
      *         </p>
      *         </note>
@@ -2544,7 +2491,7 @@ public interface AmazonDynamoDB {
      *         <ul>
      *         <li>
      *         <p>
-     *         Code: <code>NONE</code>
+     *         Code: <code>None</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2932,7 +2879,7 @@ public interface AmazonDynamoDB {
      *         <p>
      *         If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property.
      *         This property is not set for other languages. Transaction cancellation reasons are ordered in the order
-     *         of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code>
+     *         of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code>
      *         message.
      *         </p>
      *         </note>
@@ -2947,7 +2894,7 @@ public interface AmazonDynamoDB {
      *         <ul>
      *         <li>
      *         <p>
-     *         Code: <code>NONE</code>
+     *         Code: <code>None</code>
      *         </p>
      *         </li>
      *         <li>
@@ -3198,18 +3145,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws ResourceNotFoundException
      *         The operation tried to access a nonexistent table or index. The resource might not be specified
      *         correctly, or its status might not be <code>ACTIVE</code>.
@@ -3244,7 +3191,7 @@ public interface AmazonDynamoDB {
      * @return Result of the UpdateContinuousBackups operation returned by the service.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @throws ContinuousBackupsUnavailableException
      *         Backups have not yet been enabled for this table.
      * @throws InternalServerErrorException
@@ -3322,7 +3269,7 @@ public interface AmazonDynamoDB {
      *         The specified replica is no longer part of the global table.
      * @throws TableNotFoundException
      *         A source table with the name <code>TableName</code> does not currently exist within the subscriber's
-     *         account.
+     *         account or the subscriber is operating in the wrong Amazon Web Services Region.
      * @sample AmazonDynamoDB.UpdateGlobalTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateGlobalTable" target="_top">AWS API
      *      Documentation</a>
@@ -3345,18 +3292,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
      *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
@@ -3442,11 +3389,6 @@ public interface AmazonDynamoDB {
      * </li>
      * <li>
      * <p>
-     * Enable or disable DynamoDB Streams on the table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Remove a global secondary index from the table.
      * </p>
      * </li>
@@ -3476,18 +3418,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.UpdateTable
@@ -3526,18 +3468,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.UpdateTableReplicaAutoScaling
@@ -3596,18 +3538,18 @@ public interface AmazonDynamoDB {
      * @throws LimitExceededException
      *         There is no limit to the number of daily on-demand backups that can be taken. </p>
      *         <p>
-     *         Up to 50 simultaneous table operations are allowed per account. These operations include
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
      *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
      *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
      *         <code>RestoreTableToPointInTime</code>.
      *         </p>
      *         <p>
      *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
-     *         to 25 such requests running at a time; however, if the table or index specifications are complex,
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
      *         DynamoDB might temporarily reduce the number of concurrent operations.
      *         </p>
      *         <p>
-     *         There is a soft account quota of 256 tables.
+     *         There is a soft account quota of 2,500 tables.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.UpdateTimeToLive

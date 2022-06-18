@@ -50,13 +50,22 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL.
+     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL. Each read
+     * statement in a <code>BatchExecuteStatement</code> must specify an equality condition on all key attributes. This
+     * enforces that each <code>SELECT</code> statement in a batch returns at most a single item.
      * </p>
      * <note>
      * <p>
      * The entire batch must consist of either read statements or write statements, you cannot mix both in one batch.
      * </p>
-     * </note>
+     * </note> <important>
+     * <p>
+     * A HTTP 200 response does not mean that all statements in the BatchExecuteStatement succeeded. Error details for
+     * individual statements can be found under the <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchStatementResponse.html#DDB-Type-BatchStatementResponse-Error"
+     * >Error</a> field of the <code>BatchStatementResponse</code> for each statement.
+     * </p>
+     * </important>
      * 
      * @param batchExecuteStatementRequest
      * @return A Java Future containing the result of the BatchExecuteStatement operation returned by the service.
@@ -68,13 +77,22 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
-     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL.
+     * This operation allows you to perform batch reads or writes on data stored in DynamoDB, using PartiQL. Each read
+     * statement in a <code>BatchExecuteStatement</code> must specify an equality condition on all key attributes. This
+     * enforces that each <code>SELECT</code> statement in a batch returns at most a single item.
      * </p>
      * <note>
      * <p>
      * The entire batch must consist of either read statements or write statements, you cannot mix both in one batch.
      * </p>
-     * </note>
+     * </note> <important>
+     * <p>
+     * A HTTP 200 response does not mean that all statements in the BatchExecuteStatement succeeded. Error details for
+     * individual statements can be found under the <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchStatementResponse.html#DDB-Type-BatchStatementResponse-Error"
+     * >Error</a> field of the <code>BatchStatementResponse</code> for each statement.
+     * </p>
+     * </important>
      * 
      * @param batchExecuteStatementRequest
      * @param asyncHandler
@@ -2390,68 +2408,6 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * existing item if it has certain attribute values. You can return the item's attribute values in the same
      * operation, using the <code>ReturnValues</code> parameter.
      * </p>
-     * <important>
-     * <p>
-     * This topic provides general information about the <code>PutItem</code> API.
-     * </p>
-     * <p>
-     * For information on how to call the <code>PutItem</code> API using the Amazon Web Services SDK in specific
-     * languages, see the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the Command Line
-     * Interface</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
-     * .NET</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for C++</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Go</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Java</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
-     * JavaScript</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for PHP
-     * V3</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Python
-     * (Boto)</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Ruby
-     * V2</a>
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
      * <p>
      * When you add an item, the primary key attributes are the only required attributes. Attribute values cannot be
      * null.
@@ -2495,68 +2451,6 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * existing item if it has certain attribute values. You can return the item's attribute values in the same
      * operation, using the <code>ReturnValues</code> parameter.
      * </p>
-     * <important>
-     * <p>
-     * This topic provides general information about the <code>PutItem</code> API.
-     * </p>
-     * <p>
-     * For information on how to call the <code>PutItem</code> API using the Amazon Web Services SDK in specific
-     * languages, see the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/aws-cli/dynamodb-2012-08-10/PutItem"> PutItem in the Command Line
-     * Interface</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/DotNetSDKV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
-     * .NET</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForCpp/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for C++</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForGoV1/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Go</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForJava/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Java</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/AWSJavaScriptSDK/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for
-     * JavaScript</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForPHPV3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for PHP
-     * V3</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/boto3/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Python
-     * (Boto)</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the SDK for Ruby
-     * V2</a>
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
      * <p>
      * When you add an item, the primary key attributes are the only required attributes. Attribute values cannot be
      * null.
@@ -3870,11 +3764,6 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * </li>
      * <li>
      * <p>
-     * Enable or disable DynamoDB Streams on the table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Remove a global secondary index from the table.
      * </p>
      * </li>
@@ -3913,11 +3802,6 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * <li>
      * <p>
      * Modify the provisioned throughput settings of the table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Enable or disable DynamoDB Streams on the table.
      * </p>
      * </li>
      * <li>
