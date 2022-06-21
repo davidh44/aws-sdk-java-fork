@@ -175,12 +175,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * container instance where the container is placed. Otherwise, the value of <code>memory</code> is used.
      * </p>
      * <p>
-     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should not
-     * specify fewer than 6 MiB of memory for your containers.
+     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't specify less
+     * than 6 MiB of memory for your containers.
      * </p>
      * <p>
-     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you should not
-     * specify fewer than 4 MiB of memory for your containers.
+     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't specify
+     * less than 4 MiB of memory for your containers.
      * </p>
      */
     private Integer memory;
@@ -1664,12 +1664,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * container instance where the container is placed. Otherwise, the value of <code>memory</code> is used.
      * </p>
      * <p>
-     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should not
-     * specify fewer than 6 MiB of memory for your containers.
+     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't specify less
+     * than 6 MiB of memory for your containers.
      * </p>
      * <p>
-     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you should not
-     * specify fewer than 4 MiB of memory for your containers.
+     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't specify
+     * less than 4 MiB of memory for your containers.
      * </p>
      * 
      * @param memory
@@ -1692,12 +1692,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        container instance where the container is placed. Otherwise, the value of <code>memory</code> is used.
      *        </p>
      *        <p>
-     *        The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should
-     *        not specify fewer than 6 MiB of memory for your containers.
+     *        The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't
+     *        specify less than 6 MiB of memory for your containers.
      *        </p>
      *        <p>
-     *        The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you
-     *        should not specify fewer than 4 MiB of memory for your containers.
+     *        The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't
+     *        specify less than 4 MiB of memory for your containers.
      */
 
     public void setMemory(Integer memory) {
@@ -1725,12 +1725,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * container instance where the container is placed. Otherwise, the value of <code>memory</code> is used.
      * </p>
      * <p>
-     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should not
-     * specify fewer than 6 MiB of memory for your containers.
+     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't specify less
+     * than 6 MiB of memory for your containers.
      * </p>
      * <p>
-     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you should not
-     * specify fewer than 4 MiB of memory for your containers.
+     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't specify
+     * less than 4 MiB of memory for your containers.
      * </p>
      * 
      * @return The amount (in MiB) of memory to present to the container. If your container attempts to exceed the
@@ -1753,12 +1753,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         Otherwise, the value of <code>memory</code> is used.
      *         </p>
      *         <p>
-     *         The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should
-     *         not specify fewer than 6 MiB of memory for your containers.
+     *         The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't
+     *         specify less than 6 MiB of memory for your containers.
      *         </p>
      *         <p>
-     *         The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you
-     *         should not specify fewer than 4 MiB of memory for your containers.
+     *         The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't
+     *         specify less than 4 MiB of memory for your containers.
      */
 
     public Integer getMemory() {
@@ -1786,12 +1786,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * container instance where the container is placed. Otherwise, the value of <code>memory</code> is used.
      * </p>
      * <p>
-     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should not
-     * specify fewer than 6 MiB of memory for your containers.
+     * The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't specify less
+     * than 6 MiB of memory for your containers.
      * </p>
      * <p>
-     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you should not
-     * specify fewer than 4 MiB of memory for your containers.
+     * The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't specify
+     * less than 4 MiB of memory for your containers.
      * </p>
      * 
      * @param memory
@@ -1814,12 +1814,12 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        container instance where the container is placed. Otherwise, the value of <code>memory</code> is used.
      *        </p>
      *        <p>
-     *        The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should
-     *        not specify fewer than 6 MiB of memory for your containers.
+     *        The Docker 20.10.0 or later daemon reserves a minimum of 6 MiB of memory for a container. So, don't
+     *        specify less than 6 MiB of memory for your containers.
      *        </p>
      *        <p>
-     *        The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you
-     *        should not specify fewer than 4 MiB of memory for your containers.
+     *        The Docker 19.03.13-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container. So, don't
+     *        specify less than 4 MiB of memory for your containers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

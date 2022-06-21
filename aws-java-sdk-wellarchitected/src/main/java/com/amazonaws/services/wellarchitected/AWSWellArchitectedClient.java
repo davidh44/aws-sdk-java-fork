@@ -2159,6 +2159,11 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * <p>
      * List the tags for a resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
@@ -2348,6 +2353,11 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * <p>
      * Adds one or more tags to the specified resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
@@ -2407,6 +2417,11 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * <p>
      * Deletes specified tags from a resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * <p>
      * To specify multiple tags, use separate <b>tagKeys</b> parameters, for example:
      * </p>

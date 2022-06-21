@@ -268,6 +268,14 @@ public class CreateVpnConnectionRequestMarshaller implements Marshaller<Request<
             if (options.getRemoteIpv6NetworkCidr() != null) {
                 request.addParameter("Options.RemoteIpv6NetworkCidr", StringUtils.fromString(options.getRemoteIpv6NetworkCidr()));
             }
+
+            if (options.getOutsideIpAddressType() != null) {
+                request.addParameter("Options.OutsideIpAddressType", StringUtils.fromString(options.getOutsideIpAddressType()));
+            }
+
+            if (options.getTransportTransitGatewayAttachmentId() != null) {
+                request.addParameter("Options.TransportTransitGatewayAttachmentId", StringUtils.fromString(options.getTransportTransitGatewayAttachmentId()));
+            }
         }
 
         com.amazonaws.internal.SdkInternalList<TagSpecification> createVpnConnectionRequestTagSpecificationsList = (com.amazonaws.internal.SdkInternalList<TagSpecification>) createVpnConnectionRequest

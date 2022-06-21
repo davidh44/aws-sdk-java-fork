@@ -1215,6 +1215,11 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * List the tags for a resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * 
      * @param listTagsForResourceRequest
      * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
@@ -1228,6 +1233,11 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * List the tags for a resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * 
      * @param listTagsForResourceRequest
      * @param asyncHandler
@@ -1312,6 +1322,11 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Adds one or more tags to the specified resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * 
      * @param tagResourceRequest
      * @return A Java Future containing the result of the TagResource operation returned by the service.
@@ -1325,6 +1340,11 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Adds one or more tags to the specified resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * 
      * @param tagResourceRequest
      * @param asyncHandler
@@ -1343,6 +1363,11 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Deletes specified tags from a resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * <p>
      * To specify multiple tags, use separate <b>tagKeys</b> parameters, for example:
      * </p>
@@ -1362,6 +1387,11 @@ public interface AWSWellArchitectedAsync extends AWSWellArchitected {
      * <p>
      * Deletes specified tags from a resource.
      * </p>
+     * <note>
+     * <p>
+     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * </p>
+     * </note>
      * <p>
      * To specify multiple tags, use separate <b>tagKeys</b> parameters, for example:
      * </p>
