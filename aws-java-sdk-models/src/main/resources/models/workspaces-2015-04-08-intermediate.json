@@ -1866,6 +1866,10 @@
         "documentation" : "<p>Your resource limits have been exceeded.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The resource could not be found.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The user is not authorized to access a resource.</p>",
         "httpStatusCode" : null

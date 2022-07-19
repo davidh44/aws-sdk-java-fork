@@ -139,8 +139,11 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources before
-     * it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours). This overrides
-     * the timeout value set in the parent job.
+     * it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set in the parent
+     * job.
+     * </p>
+     * <p>
+     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      * </p>
      */
     private Integer timeout;
@@ -251,12 +254,13 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     private String glueVersion;
     /**
      * <p>
-     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
-     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
-     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
-     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
-     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
+     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
+     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
+     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
+     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code>.
      * </p>
      */
     private Double dPUSeconds;
@@ -1043,14 +1047,19 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources before
-     * it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours). This overrides
-     * the timeout value set in the parent job.
+     * it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set in the parent
+     * job.
+     * </p>
+     * <p>
+     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      * </p>
      * 
      * @param timeout
      *        The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources
-     *        before it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
-     *        This overrides the timeout value set in the parent job.
+     *        before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set
+     *        in the parent job.</p>
+     *        <p>
+     *        Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      */
 
     public void setTimeout(Integer timeout) {
@@ -1060,13 +1069,18 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources before
-     * it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours). This overrides
-     * the timeout value set in the parent job.
+     * it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set in the parent
+     * job.
+     * </p>
+     * <p>
+     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      * </p>
      * 
      * @return The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources
-     *         before it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
-     *         This overrides the timeout value set in the parent job.
+     *         before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value
+     *         set in the parent job.</p>
+     *         <p>
+     *         Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      */
 
     public Integer getTimeout() {
@@ -1076,14 +1090,19 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources before
-     * it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours). This overrides
-     * the timeout value set in the parent job.
+     * it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set in the parent
+     * job.
+     * </p>
+     * <p>
+     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      * </p>
      * 
      * @param timeout
      *        The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources
-     *        before it is terminated and enters <code>TIMEOUT</code> status. The default is 2,880 minutes (48 hours).
-     *        This overrides the timeout value set in the parent job.
+     *        before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set
+     *        in the parent job.</p>
+     *        <p>
+     *        Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1818,18 +1837,19 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
-     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
-     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
-     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
-     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
+     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
+     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
+     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
+     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code>.
      * </p>
      * 
      * @param dPUSeconds
-     *        This field populates only when an Auto Scaling job run completes, and represents the total time each
-     *        executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for
-     *        <code>G.1X</code> and 2 for <code>G.2X</code> workers). This value may be different than the
+     *        This field populates only for Auto Scaling job runs, and represents the total time each executor ran
+     *        during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for
+     *        <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the
      *        <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
      *        number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
      *        is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
@@ -1842,17 +1862,18 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
-     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
-     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
-     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
-     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
+     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
+     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
+     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
+     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code>.
      * </p>
      * 
-     * @return This field populates only when an Auto Scaling job run completes, and represents the total time each
-     *         executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for
-     *         <code>G.1X</code> and 2 for <code>G.2X</code> workers). This value may be different than the
+     * @return This field populates only for Auto Scaling job runs, and represents the total time each executor ran
+     *         during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for
+     *         <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the
      *         <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
      *         number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
      *         is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
@@ -1865,18 +1886,19 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field populates only when an Auto Scaling job run completes, and represents the total time each executor ran
-     * during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code> and 2 for
-     * <code>G.2X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time
-     * may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
-     * <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
+     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
+     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
+     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
+     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
+     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
+     * <code>MaxCapacity</code>.
      * </p>
      * 
      * @param dPUSeconds
-     *        This field populates only when an Auto Scaling job run completes, and represents the total time each
-     *        executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for
-     *        <code>G.1X</code> and 2 for <code>G.2X</code> workers). This value may be different than the
+     *        This field populates only for Auto Scaling job runs, and represents the total time each executor ran
+     *        during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for
+     *        <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the
      *        <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
      *        number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
      *        is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *

@@ -1083,6 +1083,8 @@ public interface AmazonWorkspaces {
      *         One or more parameter values are not valid.
      * @throws ResourceLimitExceededException
      *         Your resource limits have been exceeded.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
      * @throws AccessDeniedException
      *         The user is not authorized to access a resource.
      * @sample AmazonWorkspaces.ImportClientBranding

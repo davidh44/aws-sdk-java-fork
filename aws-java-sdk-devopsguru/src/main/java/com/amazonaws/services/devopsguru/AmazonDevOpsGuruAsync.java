@@ -646,6 +646,37 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
 
     /**
      * <p>
+     * Returns the list of log groups that contain log anomalies.
+     * </p>
+     * 
+     * @param listAnomalousLogGroupsRequest
+     * @return A Java Future containing the result of the ListAnomalousLogGroups operation returned by the service.
+     * @sample AmazonDevOpsGuruAsync.ListAnomalousLogGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListAnomalousLogGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAnomalousLogGroupsResult> listAnomalousLogGroupsAsync(ListAnomalousLogGroupsRequest listAnomalousLogGroupsRequest);
+
+    /**
+     * <p>
+     * Returns the list of log groups that contain log anomalies.
+     * </p>
+     * 
+     * @param listAnomalousLogGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAnomalousLogGroups operation returned by the service.
+     * @sample AmazonDevOpsGuruAsyncHandler.ListAnomalousLogGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListAnomalousLogGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAnomalousLogGroupsResult> listAnomalousLogGroupsAsync(ListAnomalousLogGroupsRequest listAnomalousLogGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAnomalousLogGroupsRequest, ListAnomalousLogGroupsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the events emitted by the resources that are evaluated by DevOps Guru. You can use filters to
      * specify which events are returned.
      * </p>
@@ -709,6 +740,37 @@ public interface AmazonDevOpsGuruAsync extends AmazonDevOpsGuru {
      */
     java.util.concurrent.Future<ListInsightsResult> listInsightsAsync(ListInsightsRequest listInsightsRequest,
             com.amazonaws.handlers.AsyncHandler<ListInsightsRequest, ListInsightsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the list of all log groups that are being monitored and tagged by DevOps Guru.
+     * </p>
+     * 
+     * @param listMonitoredResourcesRequest
+     * @return A Java Future containing the result of the ListMonitoredResources operation returned by the service.
+     * @sample AmazonDevOpsGuruAsync.ListMonitoredResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListMonitoredResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMonitoredResourcesResult> listMonitoredResourcesAsync(ListMonitoredResourcesRequest listMonitoredResourcesRequest);
+
+    /**
+     * <p>
+     * Returns the list of all log groups that are being monitored and tagged by DevOps Guru.
+     * </p>
+     * 
+     * @param listMonitoredResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMonitoredResources operation returned by the service.
+     * @sample AmazonDevOpsGuruAsyncHandler.ListMonitoredResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListMonitoredResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMonitoredResourcesResult> listMonitoredResourcesAsync(ListMonitoredResourcesRequest listMonitoredResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMonitoredResourcesRequest, ListMonitoredResourcesResult> asyncHandler);
 
     /**
      * <p>
