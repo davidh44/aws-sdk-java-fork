@@ -1235,6 +1235,70 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
+     * Returns query execution runtime statistics related to a single execution of a query if you have access to the
+     * workgroup in which the query ran. The query execution runtime statistics is returned only when
+     * <a>QueryExecutionStatus$State</a> is in a SUCCEEDED or FAILED state.
+     * </p>
+     * 
+     * @param getQueryRuntimeStatisticsRequest
+     * @return Result of the GetQueryRuntimeStatistics operation returned by the service.
+     * @throws InternalServerException
+     *         Indicates a platform issue, which may be due to a transient condition or outage.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a required parameter may be
+     *         missing or out of range.
+     * @sample AmazonAthena.GetQueryRuntimeStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryRuntimeStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetQueryRuntimeStatisticsResult getQueryRuntimeStatistics(GetQueryRuntimeStatisticsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetQueryRuntimeStatistics(request);
+    }
+
+    @SdkInternalApi
+    final GetQueryRuntimeStatisticsResult executeGetQueryRuntimeStatistics(GetQueryRuntimeStatisticsRequest getQueryRuntimeStatisticsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getQueryRuntimeStatisticsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetQueryRuntimeStatisticsRequest> request = null;
+        Response<GetQueryRuntimeStatisticsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetQueryRuntimeStatisticsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getQueryRuntimeStatisticsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Athena");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetQueryRuntimeStatistics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetQueryRuntimeStatisticsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetQueryRuntimeStatisticsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns table metadata for the specified catalog, database, and table.
      * </p>
      * 

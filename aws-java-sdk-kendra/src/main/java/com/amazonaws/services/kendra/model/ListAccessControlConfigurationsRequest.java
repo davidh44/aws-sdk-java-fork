@@ -33,7 +33,7 @@ public class ListAccessControlConfigurationsRequest extends com.amazonaws.Amazon
     private String indexId;
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of access control
      * configurations.
      * </p>
@@ -88,13 +88,13 @@ public class ListAccessControlConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of access control
      * configurations.
      * </p>
      * 
      * @param nextToken
-     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      *        pagination token in the response. You can use this pagination token to retrieve the next set of access
      *        control configurations.
      */
@@ -105,12 +105,12 @@ public class ListAccessControlConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of access control
      * configurations.
      * </p>
      * 
-     * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * @return If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      *         pagination token in the response. You can use this pagination token to retrieve the next set of access
      *         control configurations.
      */
@@ -121,13 +121,13 @@ public class ListAccessControlConfigurationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of access control
      * configurations.
      * </p>
      * 
      * @param nextToken
-     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        If the previous response was incomplete (because there's more data to retrieve), Amazon Kendra returns a
      *        pagination token in the response. You can use this pagination token to retrieve the next set of access
      *        control configurations.
      * @return Returns a reference to this object so that method calls can be chained together.

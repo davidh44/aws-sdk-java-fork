@@ -26,7 +26,7 @@ public class ListAccessControlConfigurationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent request to
      * retrieve the next set of access control configurations.
      * </p>
      */
@@ -40,13 +40,13 @@ public class ListAccessControlConfigurationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent request to
      * retrieve the next set of access control configurations.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
-     *        to retrieve the next set of access control configurations.
+     *        If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent
+     *        request to retrieve the next set of access control configurations.
      */
 
     public void setNextToken(String nextToken) {
@@ -55,12 +55,12 @@ public class ListAccessControlConfigurationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent request to
      * retrieve the next set of access control configurations.
      * </p>
      * 
-     * @return If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
-     *         to retrieve the next set of access control configurations.
+     * @return If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent
+     *         request to retrieve the next set of access control configurations.
      */
 
     public String getNextToken() {
@@ -69,13 +69,13 @@ public class ListAccessControlConfigurationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent request to
      * retrieve the next set of access control configurations.
      * </p>
      * 
      * @param nextToken
-     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
-     *        to retrieve the next set of access control configurations.
+     *        If the response is truncated, Amazon Kendra returns this token, which you can use in the subsequent
+     *        request to retrieve the next set of access control configurations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

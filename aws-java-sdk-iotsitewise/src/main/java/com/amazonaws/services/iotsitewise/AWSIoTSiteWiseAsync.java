@@ -513,6 +513,69 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
             com.amazonaws.handlers.AsyncHandler<CreateAssetModelRequest, CreateAssetModelResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
+     * this operation only with test data, and not in production environments.
+     * </p>
+     * </note>
+     * <p>
+     * Defines a job to ingest data to IoT SiteWise from Amazon S3. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/CreateBulkImportJob.html">Create a bulk import
+     * job (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * You must enable IoT SiteWise to export data to Amazon S3 before you create a bulk import job. For more
+     * information about how to configure storage settings, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_PutStorageConfiguration.html"
+     * >PutStorageConfiguration</a>.
+     * </p>
+     * </important>
+     * 
+     * @param createBulkImportJobRequest
+     * @return A Java Future containing the result of the CreateBulkImportJob operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.CreateBulkImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/CreateBulkImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBulkImportJobResult> createBulkImportJobAsync(CreateBulkImportJobRequest createBulkImportJobRequest);
+
+    /**
+     * <note>
+     * <p>
+     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
+     * this operation only with test data, and not in production environments.
+     * </p>
+     * </note>
+     * <p>
+     * Defines a job to ingest data to IoT SiteWise from Amazon S3. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/CreateBulkImportJob.html">Create a bulk import
+     * job (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * You must enable IoT SiteWise to export data to Amazon S3 before you create a bulk import job. For more
+     * information about how to configure storage settings, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_PutStorageConfiguration.html"
+     * >PutStorageConfiguration</a>.
+     * </p>
+     * </important>
+     * 
+     * @param createBulkImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateBulkImportJob operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.CreateBulkImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/CreateBulkImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBulkImportJobResult> createBulkImportJobAsync(CreateBulkImportJobRequest createBulkImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateBulkImportJobRequest, CreateBulkImportJobResult> asyncHandler);
+
+    /**
      * <p>
      * Creates a dashboard in an IoT SiteWise Monitor project.
      * </p>
@@ -1153,6 +1216,53 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      */
     java.util.concurrent.Future<DescribeAssetPropertyResult> describeAssetPropertyAsync(DescribeAssetPropertyRequest describeAssetPropertyRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAssetPropertyRequest, DescribeAssetPropertyResult> asyncHandler);
+
+    /**
+     * <note>
+     * <p>
+     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
+     * this operation only with test data, and not in production environments.
+     * </p>
+     * </note>
+     * <p>
+     * Retrieves information about a bulk import job request. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/DescribeBulkImportJob.html">Describe a bulk
+     * import job (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @param describeBulkImportJobRequest
+     * @return A Java Future containing the result of the DescribeBulkImportJob operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.DescribeBulkImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DescribeBulkImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBulkImportJobResult> describeBulkImportJobAsync(DescribeBulkImportJobRequest describeBulkImportJobRequest);
+
+    /**
+     * <note>
+     * <p>
+     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
+     * this operation only with test data, and not in production environments.
+     * </p>
+     * </note>
+     * <p>
+     * Retrieves information about a bulk import job request. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/DescribeBulkImportJob.html">Describe a bulk
+     * import job (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @param describeBulkImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeBulkImportJob operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.DescribeBulkImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DescribeBulkImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBulkImportJobResult> describeBulkImportJobAsync(DescribeBulkImportJobRequest describeBulkImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeBulkImportJobRequest, DescribeBulkImportJobResult> asyncHandler);
 
     /**
      * <p>
@@ -2115,6 +2225,53 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      */
     java.util.concurrent.Future<ListAssociatedAssetsResult> listAssociatedAssetsAsync(ListAssociatedAssetsRequest listAssociatedAssetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListAssociatedAssetsRequest, ListAssociatedAssetsResult> asyncHandler);
+
+    /**
+     * <note>
+     * <p>
+     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
+     * this operation only with test data, and not in production environments.
+     * </p>
+     * </note>
+     * <p>
+     * Retrieves a paginated list of bulk import job requests. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ListBulkImportJobs.html">List bulk import jobs
+     * (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @param listBulkImportJobsRequest
+     * @return A Java Future containing the result of the ListBulkImportJobs operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.ListBulkImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/ListBulkImportJobs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBulkImportJobsResult> listBulkImportJobsAsync(ListBulkImportJobsRequest listBulkImportJobsRequest);
+
+    /**
+     * <note>
+     * <p>
+     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
+     * this operation only with test data, and not in production environments.
+     * </p>
+     * </note>
+     * <p>
+     * Retrieves a paginated list of bulk import job requests. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ListBulkImportJobs.html">List bulk import jobs
+     * (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @param listBulkImportJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBulkImportJobs operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.ListBulkImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/ListBulkImportJobs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBulkImportJobsResult> listBulkImportJobsAsync(ListBulkImportJobsRequest listBulkImportJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBulkImportJobsRequest, ListBulkImportJobsResult> asyncHandler);
 
     /**
      * <p>

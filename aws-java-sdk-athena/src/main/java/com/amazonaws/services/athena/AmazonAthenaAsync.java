@@ -664,6 +664,43 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
+     * Returns query execution runtime statistics related to a single execution of a query if you have access to the
+     * workgroup in which the query ran. The query execution runtime statistics is returned only when
+     * <a>QueryExecutionStatus$State</a> is in a SUCCEEDED or FAILED state.
+     * </p>
+     * 
+     * @param getQueryRuntimeStatisticsRequest
+     * @return A Java Future containing the result of the GetQueryRuntimeStatistics operation returned by the service.
+     * @sample AmazonAthenaAsync.GetQueryRuntimeStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryRuntimeStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryRuntimeStatisticsResult> getQueryRuntimeStatisticsAsync(
+            GetQueryRuntimeStatisticsRequest getQueryRuntimeStatisticsRequest);
+
+    /**
+     * <p>
+     * Returns query execution runtime statistics related to a single execution of a query if you have access to the
+     * workgroup in which the query ran. The query execution runtime statistics is returned only when
+     * <a>QueryExecutionStatus$State</a> is in a SUCCEEDED or FAILED state.
+     * </p>
+     * 
+     * @param getQueryRuntimeStatisticsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQueryRuntimeStatistics operation returned by the service.
+     * @sample AmazonAthenaAsyncHandler.GetQueryRuntimeStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryRuntimeStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryRuntimeStatisticsResult> getQueryRuntimeStatisticsAsync(
+            GetQueryRuntimeStatisticsRequest getQueryRuntimeStatisticsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQueryRuntimeStatisticsRequest, GetQueryRuntimeStatisticsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns table metadata for the specified catalog, database, and table.
      * </p>
      * 

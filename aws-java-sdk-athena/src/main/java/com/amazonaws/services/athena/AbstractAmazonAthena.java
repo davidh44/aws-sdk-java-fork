@@ -113,6 +113,11 @@ public class AbstractAmazonAthena implements AmazonAthena {
     }
 
     @Override
+    public GetQueryRuntimeStatisticsResult getQueryRuntimeStatistics(GetQueryRuntimeStatisticsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetTableMetadataResult getTableMetadata(GetTableMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

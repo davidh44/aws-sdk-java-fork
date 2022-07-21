@@ -367,7 +367,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <note>
      * <p>
-     * This action only applies to Aurora MySQL DB clusters.
+     * This action applies only to Aurora MySQL DB clusters.
      * </p>
      * </note>
      * 
@@ -390,7 +390,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <note>
      * <p>
-     * This action only applies to Aurora MySQL DB clusters.
+     * This action applies only to Aurora MySQL DB clusters.
      * </p>
      * </note>
      * 
@@ -483,7 +483,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * You can copy an encrypted DB cluster snapshot from another Amazon Web Services Region. In that case, the Amazon
-     * Web Services Region where you call the <code>CopyDBClusterSnapshot</code> action is the destination Amazon Web
+     * Web Services Region where you call the <code>CopyDBClusterSnapshot</code> operation is the destination Amazon Web
      * Services Region for the encrypted DB cluster snapshot to be copied to. To copy an encrypted DB cluster snapshot
      * from another Amazon Web Services Region, you must provide the following values:
      * </p>
@@ -496,57 +496,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </li>
      * <li>
      * <p>
-     * <code>PreSignedUrl</code> - A URL that contains a Signature Version 4 signed request for the
-     * <code>CopyDBClusterSnapshot</code> action to be called in the source Amazon Web Services Region where the DB
-     * cluster snapshot is copied from. The pre-signed URL must be a valid request for the
-     * <code>CopyDBClusterSnapshot</code> API action that can be executed in the source Amazon Web Services Region that
-     * contains the encrypted DB cluster snapshot to be copied.
-     * </p>
-     * <p>
-     * The pre-signed URL request must contain the following parameter values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
-     * the DB cluster snapshot in the destination Amazon Web Services Region. This is the same identifier for both the
-     * <code>CopyDBClusterSnapshot</code> action that is called in the destination Amazon Web Services Region, and the
-     * action contained in the pre-signed URL.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DestinationRegion</code> - The name of the Amazon Web Services Region that the DB cluster snapshot is to be
-     * created in.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SourceDBClusterSnapshotIdentifier</code> - The DB cluster snapshot identifier for the encrypted DB cluster
-     * snapshot to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source Amazon Web
-     * Services Region. For example, if you are copying an encrypted DB cluster snapshot from the us-west-2 Amazon Web
-     * Services Region, then your <code>SourceDBClusterSnapshotIdentifier</code> looks like the following example:
-     * <code>arn:aws:rds:us-west-2:123456789012:cluster-snapshot:aurora-cluster1-snapshot-20161115</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * To learn how to generate a Signature Version 4 signed request, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html"> Authenticating Requests:
-     * Using Query Parameters (Amazon Web Services Signature Version 4)</a> and <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"> Signature Version 4 Signing
-     * Process</a>.
-     * </p>
-     * <note>
-     * <p>
-     * If you are using an Amazon Web Services SDK tool or the CLI, you can specify <code>SourceRegion</code> (or
-     * <code>--source-region</code> for the CLI) instead of specifying <code>PreSignedUrl</code> manually. Specifying
-     * <code>SourceRegion</code> autogenerates a pre-signed URL that is a valid request for the operation that can be
-     * executed in the source Amazon Web Services Region.
-     * </p>
-     * </note></li>
-     * <li>
-     * <p>
      * <code>TargetDBClusterSnapshotIdentifier</code> - The identifier for the new copy of the DB cluster snapshot in
      * the destination Amazon Web Services Region.
      * </p>
@@ -555,7 +504,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * <code>SourceDBClusterSnapshotIdentifier</code> - The DB cluster snapshot identifier for the encrypted DB cluster
      * snapshot to be copied. This identifier must be in the ARN format for the source Amazon Web Services Region and is
-     * the same value as the <code>SourceDBClusterSnapshotIdentifier</code> in the pre-signed URL.
+     * the same value as the <code>SourceDBClusterSnapshotIdentifier</code> in the presigned URL.
      * </p>
      * </li>
      * </ul>
@@ -598,7 +547,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * You can copy an encrypted DB cluster snapshot from another Amazon Web Services Region. In that case, the Amazon
-     * Web Services Region where you call the <code>CopyDBClusterSnapshot</code> action is the destination Amazon Web
+     * Web Services Region where you call the <code>CopyDBClusterSnapshot</code> operation is the destination Amazon Web
      * Services Region for the encrypted DB cluster snapshot to be copied to. To copy an encrypted DB cluster snapshot
      * from another Amazon Web Services Region, you must provide the following values:
      * </p>
@@ -611,57 +560,6 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </li>
      * <li>
      * <p>
-     * <code>PreSignedUrl</code> - A URL that contains a Signature Version 4 signed request for the
-     * <code>CopyDBClusterSnapshot</code> action to be called in the source Amazon Web Services Region where the DB
-     * cluster snapshot is copied from. The pre-signed URL must be a valid request for the
-     * <code>CopyDBClusterSnapshot</code> API action that can be executed in the source Amazon Web Services Region that
-     * contains the encrypted DB cluster snapshot to be copied.
-     * </p>
-     * <p>
-     * The pre-signed URL request must contain the following parameter values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
-     * the DB cluster snapshot in the destination Amazon Web Services Region. This is the same identifier for both the
-     * <code>CopyDBClusterSnapshot</code> action that is called in the destination Amazon Web Services Region, and the
-     * action contained in the pre-signed URL.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DestinationRegion</code> - The name of the Amazon Web Services Region that the DB cluster snapshot is to be
-     * created in.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SourceDBClusterSnapshotIdentifier</code> - The DB cluster snapshot identifier for the encrypted DB cluster
-     * snapshot to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source Amazon Web
-     * Services Region. For example, if you are copying an encrypted DB cluster snapshot from the us-west-2 Amazon Web
-     * Services Region, then your <code>SourceDBClusterSnapshotIdentifier</code> looks like the following example:
-     * <code>arn:aws:rds:us-west-2:123456789012:cluster-snapshot:aurora-cluster1-snapshot-20161115</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * To learn how to generate a Signature Version 4 signed request, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html"> Authenticating Requests:
-     * Using Query Parameters (Amazon Web Services Signature Version 4)</a> and <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"> Signature Version 4 Signing
-     * Process</a>.
-     * </p>
-     * <note>
-     * <p>
-     * If you are using an Amazon Web Services SDK tool or the CLI, you can specify <code>SourceRegion</code> (or
-     * <code>--source-region</code> for the CLI) instead of specifying <code>PreSignedUrl</code> manually. Specifying
-     * <code>SourceRegion</code> autogenerates a pre-signed URL that is a valid request for the operation that can be
-     * executed in the source Amazon Web Services Region.
-     * </p>
-     * </note></li>
-     * <li>
-     * <p>
      * <code>TargetDBClusterSnapshotIdentifier</code> - The identifier for the new copy of the DB cluster snapshot in
      * the destination Amazon Web Services Region.
      * </p>
@@ -670,7 +568,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * <code>SourceDBClusterSnapshotIdentifier</code> - The DB cluster snapshot identifier for the encrypted DB cluster
      * snapshot to be copied. This identifier must be in the ARN format for the source Amazon Web Services Region and is
-     * the same value as the <code>SourceDBClusterSnapshotIdentifier</code> in the pre-signed URL.
+     * the same value as the <code>SourceDBClusterSnapshotIdentifier</code> in the presigned URL.
      * </p>
      * </li>
      * </ul>
@@ -744,7 +642,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * You can copy a snapshot from one Amazon Web Services Region to another. In that case, the Amazon Web Services
-     * Region where you call the <code>CopyDBSnapshot</code> action is the destination Amazon Web Services Region for
+     * Region where you call the <code>CopyDBSnapshot</code> operation is the destination Amazon Web Services Region for
      * the DB snapshot copy.
      * </p>
      * <p>
@@ -770,7 +668,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * You can copy a snapshot from one Amazon Web Services Region to another. In that case, the Amazon Web Services
-     * Region where you call the <code>CopyDBSnapshot</code> action is the destination Amazon Web Services Region for
+     * Region where you call the <code>CopyDBSnapshot</code> operation is the destination Amazon Web Services Region for
      * the DB snapshot copy.
      * </p>
      * <p>
@@ -957,9 +855,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * You can use the <code>ReplicationSourceIdentifier</code> parameter to create an Amazon Aurora DB cluster as a
-     * read replica of another DB cluster or Amazon RDS MySQL or PostgreSQL DB instance. For cross-Region replication
-     * where the DB cluster identified by <code>ReplicationSourceIdentifier</code> is encrypted, also specify the
-     * <code>PreSignedUrl</code> parameter.
+     * read replica of another DB cluster or Amazon RDS MySQL or PostgreSQL DB instance.
      * </p>
      * <p>
      * For more information on Amazon Aurora, see <a
@@ -986,9 +882,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * You can use the <code>ReplicationSourceIdentifier</code> parameter to create an Amazon Aurora DB cluster as a
-     * read replica of another DB cluster or Amazon RDS MySQL or PostgreSQL DB instance. For cross-Region replication
-     * where the DB cluster identified by <code>ReplicationSourceIdentifier</code> is encrypted, also specify the
-     * <code>PreSignedUrl</code> parameter.
+     * read replica of another DB cluster or Amazon RDS MySQL or PostgreSQL DB instance.
      * </p>
      * <p>
      * For more information on Amazon Aurora, see <a
@@ -1020,7 +914,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <note>
      * <p>
-     * This action only applies to Aurora DB clusters.
+     * This action applies only to Aurora DB clusters.
      * </p>
      * </note>
      * 
@@ -1038,7 +932,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <note>
      * <p>
-     * This action only applies to Aurora DB clusters.
+     * This action applies only to Aurora DB clusters.
      * </p>
      * </note>
      * 
@@ -1085,7 +979,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * cluster, such as the character set for the default database defined by the <code>character_set_database</code>
      * parameter. You can use the <i>Parameter Groups</i> option of the <a
      * href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the <code>DescribeDBClusterParameters</code>
-     * action to verify that your DB cluster parameter group has been created or modified.
+     * operation to verify that your DB cluster parameter group has been created or modified.
      * </p>
      * </important>
      * <p>
@@ -1139,7 +1033,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * cluster, such as the character set for the default database defined by the <code>character_set_database</code>
      * parameter. You can use the <i>Parameter Groups</i> option of the <a
      * href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the <code>DescribeDBClusterParameters</code>
-     * action to verify that your DB cluster parameter group has been created or modified.
+     * operation to verify that your DB cluster parameter group has been created or modified.
      * </p>
      * </important>
      * <p>
@@ -1223,6 +1117,20 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * Creates a new DB instance.
      * </p>
+     * <p>
+     * The new DB instance can be an RDS DB instance, or it can be a DB instance in an Aurora DB cluster. For an Aurora
+     * DB cluster, you can call this operation multiple times to add more than one DB instance to the cluster.
+     * </p>
+     * <p>
+     * For more information about creating an RDS DB instance, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateDBInstance.html"> Creating an Amazon RDS
+     * DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about creating a DB instance in an Aurora DB cluster, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.CreateInstance.html"> Creating an
+     * Amazon Aurora DB cluster</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
      * 
      * @param createDBInstanceRequest
      * @return A Java Future containing the result of the CreateDBInstance operation returned by the service.
@@ -1235,6 +1143,20 @@ public interface AmazonRDSAsync extends AmazonRDS {
     /**
      * <p>
      * Creates a new DB instance.
+     * </p>
+     * <p>
+     * The new DB instance can be an RDS DB instance, or it can be a DB instance in an Aurora DB cluster. For an Aurora
+     * DB cluster, you can call this operation multiple times to add more than one DB instance to the cluster.
+     * </p>
+     * <p>
+     * For more information about creating an RDS DB instance, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateDBInstance.html"> Creating an Amazon RDS
+     * DB instance</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about creating a DB instance in an Aurora DB cluster, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.CreateInstance.html"> Creating an
+     * Amazon Aurora DB cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param createDBInstanceRequest
@@ -1258,8 +1180,8 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
-     * Amazon Aurora doesn't support this action. Call the <code>CreateDBInstance</code> action to create a DB instance
-     * for an Aurora DB cluster.
+     * Amazon Aurora doesn't support this operation. Call the <code>CreateDBInstance</code> operation to create a DB
+     * instance for an Aurora DB cluster.
      * </p>
      * <p>
      * All read replica DB instances are created with backups disabled. All other DB instance attributes (including DB
@@ -1287,8 +1209,8 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
-     * Amazon Aurora doesn't support this action. Call the <code>CreateDBInstance</code> action to create a DB instance
-     * for an Aurora DB cluster.
+     * Amazon Aurora doesn't support this operation. Call the <code>CreateDBInstance</code> operation to create a DB
+     * instance for an Aurora DB cluster.
      * </p>
      * <p>
      * All read replica DB instances are created with backups disabled. All other DB instance attributes (including DB
@@ -1563,9 +1485,9 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
-     * Creates an RDS event notification subscription. This action requires a topic Amazon Resource Name (ARN) created
-     * by either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a topic in
-     * Amazon SNS and subscribe to the topic. The ARN is displayed in the SNS console.
+     * Creates an RDS event notification subscription. This operation requires a topic Amazon Resource Name (ARN)
+     * created by either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a
+     * topic in Amazon SNS and subscribe to the topic. The ARN is displayed in the SNS console.
      * </p>
      * <p>
      * You can specify the type of source (<code>SourceType</code>) that you want to be notified of and provide a list
@@ -1599,9 +1521,9 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
-     * Creates an RDS event notification subscription. This action requires a topic Amazon Resource Name (ARN) created
-     * by either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a topic in
-     * Amazon SNS and subscribe to the topic. The ARN is displayed in the SNS console.
+     * Creates an RDS event notification subscription. This operation requires a topic Amazon Resource Name (ARN)
+     * created by either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a
+     * topic in Amazon SNS and subscribe to the topic. The ARN is displayed in the SNS console.
      * </p>
      * <p>
      * You can specify the type of source (<code>SourceType</code>) that you want to be notified of and provide a list
@@ -1651,7 +1573,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <note>
      * <p>
-     * This action only applies to Aurora DB clusters.
+     * This action applies only to Aurora DB clusters.
      * </p>
      * </note>
      * 
@@ -1676,7 +1598,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <note>
      * <p>
-     * This action only applies to Aurora DB clusters.
+     * This action applies only to Aurora DB clusters.
      * </p>
      * </note>
      * 
@@ -3878,6 +3800,13 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * DB parameter group, DB security group, DB snapshot, DB cluster snapshot group, or RDS Proxy can be obtained by
      * providing the name as a parameter.
      * </p>
+     * <p>
+     * For more information on working with events, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/working-with-events.html">Monitoring Amazon RDS
+     * events</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/working-with-events.html">Monitoring Amazon
+     * Aurora events</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
      * <note>
      * <p>
      * By default, RDS returns events that were generated in the past hour.
@@ -3898,6 +3827,13 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * cluster snapshots, and RDS Proxies for the past 14 days. Events specific to a particular DB instance, DB cluster,
      * DB parameter group, DB security group, DB snapshot, DB cluster snapshot group, or RDS Proxy can be obtained by
      * providing the name as a parameter.
+     * </p>
+     * <p>
+     * For more information on working with events, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/working-with-events.html">Monitoring Amazon RDS
+     * events</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/working-with-events.html">Monitoring Amazon
+     * Aurora events</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -4410,8 +4346,8 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * An Amazon Aurora DB cluster automatically fails over to an Aurora Replica, if one exists, when the primary DB
-     * instance fails. A Multi-AZ DB cluster automatically fails over to a readbable standby DB instance when the
-     * primary DB instance fails.
+     * instance fails. A Multi-AZ DB cluster automatically fails over to a readable standby DB instance when the primary
+     * DB instance fails.
      * </p>
      * <p>
      * To simulate a failure of a primary instance for testing, you can force a failover. Because each instance in a DB
@@ -4451,8 +4387,8 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * An Amazon Aurora DB cluster automatically fails over to an Aurora Replica, if one exists, when the primary DB
-     * instance fails. A Multi-AZ DB cluster automatically fails over to a readbable standby DB instance when the
-     * primary DB instance fails.
+     * instance fails. A Multi-AZ DB cluster automatically fails over to a readable standby DB instance when the primary
+     * DB instance fails.
      * </p>
      * <p>
      * To simulate a failure of a primary instance for testing, you can force a failover. Because each instance in a DB
@@ -4964,8 +4900,8 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * especially important for parameters that are critical when creating the default database for a DB cluster, such
      * as the character set for the default database defined by the <code>character_set_database</code> parameter. You
      * can use the <i>Parameter Groups</i> option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS
-     * console</a> or the <code>DescribeDBClusterParameters</code> action to verify that your DB cluster parameter group
-     * has been created or modified.
+     * console</a> or the <code>DescribeDBClusterParameters</code> operation to verify that your DB cluster parameter
+     * group has been created or modified.
      * </p>
      * <p>
      * If the modified DB cluster parameter group is used by an Aurora Serverless v1 cluster, Aurora applies the update
@@ -5008,8 +4944,8 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * especially important for parameters that are critical when creating the default database for a DB cluster, such
      * as the character set for the default database defined by the <code>character_set_database</code> parameter. You
      * can use the <i>Parameter Groups</i> option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS
-     * console</a> or the <code>DescribeDBClusterParameters</code> action to verify that your DB cluster parameter group
-     * has been created or modified.
+     * console</a> or the <code>DescribeDBClusterParameters</code> operation to verify that your DB cluster parameter
+     * group has been created or modified.
      * </p>
      * <p>
      * If the modified DB cluster parameter group is used by an Aurora Serverless v1 cluster, Aurora applies the update
@@ -5068,7 +5004,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * To view which Amazon Web Services accounts have access to copy or restore a manual DB cluster snapshot, or
      * whether a manual DB cluster snapshot is public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API
-     * action. The accounts are returned as values for the <code>restore</code> attribute.
+     * operation. The accounts are returned as values for the <code>restore</code> attribute.
      * </p>
      * 
      * @param modifyDBClusterSnapshotAttributeRequest
@@ -5106,7 +5042,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * To view which Amazon Web Services accounts have access to copy or restore a manual DB cluster snapshot, or
      * whether a manual DB cluster snapshot is public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API
-     * action. The accounts are returned as values for the <code>restore</code> attribute.
+     * operation. The accounts are returned as values for the <code>restore</code> attribute.
      * </p>
      * 
      * @param modifyDBClusterSnapshotAttributeRequest
@@ -5373,7 +5309,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * To view which Amazon Web Services accounts have access to copy or restore a manual DB snapshot, or whether a
-     * manual DB snapshot public or private, use the <a>DescribeDBSnapshotAttributes</a> API action. The accounts are
+     * manual DB snapshot public or private, use the <a>DescribeDBSnapshotAttributes</a> API operation. The accounts are
      * returned as values for the <code>restore</code> attribute.
      * </p>
      * 
@@ -5408,7 +5344,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * To view which Amazon Web Services accounts have access to copy or restore a manual DB snapshot, or whether a
-     * manual DB snapshot public or private, use the <a>DescribeDBSnapshotAttributes</a> API action. The accounts are
+     * manual DB snapshot public or private, use the <a>DescribeDBSnapshotAttributes</a> API operation. The accounts are
      * returned as values for the <code>restore</code> attribute.
      * </p>
      * 
@@ -5791,6 +5727,10 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * This command doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * If your DB instance is part of a Multi-AZ DB cluster, you can reboot the DB cluster with the
+     * <code>RebootDBCluster</code> operation.
+     * </p>
      * 
      * @param rebootDBInstanceRequest
      * @return A Java Future containing the result of the RebootDBInstance operation returned by the service.
@@ -5817,6 +5757,10 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * This command doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * If your DB instance is part of a Multi-AZ DB cluster, you can reboot the DB cluster with the
+     * <code>RebootDBCluster</code> operation.
      * </p>
      * 
      * @param rebootDBInstanceRequest
@@ -7018,7 +6962,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * Stops automated backup replication for a DB instance.
      * </p>
      * <p>
-     * This command doesn't apply to RDS Custom.
+     * This command doesn't apply to RDS Custom, Aurora MySQL, and Aurora PostgreSQL.
      * </p>
      * <p>
      * For more information, see <a
@@ -7041,7 +6985,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * Stops automated backup replication for a DB instance.
      * </p>
      * <p>
-     * This command doesn't apply to RDS Custom.
+     * This command doesn't apply to RDS Custom, Aurora MySQL, and Aurora PostgreSQL.
      * </p>
      * <p>
      * For more information, see <a

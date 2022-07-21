@@ -84,6 +84,11 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
     }
 
     @Override
+    public CreateBulkImportJobResult createBulkImportJob(CreateBulkImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateDashboardResult createDashboard(CreateDashboardRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -160,6 +165,11 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
 
     @Override
     public DescribeAssetPropertyResult describeAssetProperty(DescribeAssetPropertyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeBulkImportJobResult describeBulkImportJob(DescribeBulkImportJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -260,6 +270,11 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
 
     @Override
     public ListAssociatedAssetsResult listAssociatedAssets(ListAssociatedAssetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListBulkImportJobsResult listBulkImportJobs(ListBulkImportJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

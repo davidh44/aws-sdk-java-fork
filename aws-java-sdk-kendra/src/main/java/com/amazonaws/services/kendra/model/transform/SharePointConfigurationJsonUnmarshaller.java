@@ -105,6 +105,10 @@ public class SharePointConfigurationJsonUnmarshaller implements Unmarshaller<Sha
                     context.nextToken();
                     sharePointConfiguration.setSslCertificateS3Path(S3PathJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AuthenticationType", targetDepth)) {
+                    context.nextToken();
+                    sharePointConfiguration.setAuthenticationType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

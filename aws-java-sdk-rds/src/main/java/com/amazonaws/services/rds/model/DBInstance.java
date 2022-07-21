@@ -464,8 +464,50 @@ public class DBInstance implements Serializable, Cloneable {
     private String performanceInsightsKMSKeyId;
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer performanceInsightsRetentionPeriod;
     /**
@@ -3912,11 +3954,95 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     *        The number of days to retain Performance Insights data. The default is 7 days. The following values are
+     *        valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        7
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For example, the following values are valid:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        93 (3 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        341 (11 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        589 (19 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
      */
 
     public void setPerformanceInsightsRetentionPeriod(Integer performanceInsightsRetentionPeriod) {
@@ -3925,10 +4051,94 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * @return The number of days to retain Performance Insights data. The default is 7 days. The following values are
+     *         valid:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         7
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         731
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For example, the following values are valid:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         93 (3 months * 31)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         341 (11 months * 31)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         589 (19 months * 31)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         731
+     *         </p>
+     *         </li>
      */
 
     public Integer getPerformanceInsightsRetentionPeriod() {
@@ -3937,11 +4147,95 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     *        The number of days to retain Performance Insights data. The default is 7 days. The following values are
+     *        valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        7
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For example, the following values are valid:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        93 (3 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        341 (11 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        589 (19 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

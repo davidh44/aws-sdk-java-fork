@@ -249,6 +249,19 @@ public class AbstractAmazonAthenaAsync extends AbstractAmazonAthena implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetQueryRuntimeStatisticsResult> getQueryRuntimeStatisticsAsync(GetQueryRuntimeStatisticsRequest request) {
+
+        return getQueryRuntimeStatisticsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryRuntimeStatisticsResult> getQueryRuntimeStatisticsAsync(GetQueryRuntimeStatisticsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetQueryRuntimeStatisticsRequest, GetQueryRuntimeStatisticsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTableMetadataResult> getTableMetadataAsync(GetTableMetadataRequest request) {
 
         return getTableMetadataAsync(request, null);

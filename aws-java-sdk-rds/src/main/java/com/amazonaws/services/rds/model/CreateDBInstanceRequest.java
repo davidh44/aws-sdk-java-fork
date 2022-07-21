@@ -445,11 +445,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer allocatedStorage;
     /**
      * <p>
-     * The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     * classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB
+     * instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      */
     private String dBInstanceClass;
@@ -644,7 +646,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of DB security groups to associate with this DB instance.
      * </p>
      * <p>
-     * Default: The default DB security group for the database engine.
+     * This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB instances. Use
+     * the <code>VpcSecurityGroupIds</code> setting instead.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> dBSecurityGroups;
@@ -784,7 +787,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     * Can't be set to 0 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -912,6 +915,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
+     * </p>
      */
     private Boolean multiAZ;
     /**
@@ -919,7 +928,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      * </p>
      * <p>
      * The following are the database engines and links to information about the major and minor versions that are
@@ -1012,6 +1021,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      */
     private String licenseModel;
     /**
@@ -1026,6 +1041,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of the
      * storage amount for the DB instance.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      */
     private Integer iops;
     /**
@@ -1038,6 +1059,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      */
     private String optionGroupName;
@@ -1149,6 +1176,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      */
     private String storageType;
     /**
@@ -1157,6 +1190,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      */
     private String tdeCredentialArn;
@@ -1228,6 +1267,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      */
     private String domain;
     /**
@@ -1285,6 +1330,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      */
     private String domainIAMRoleName;
     /**
@@ -1319,13 +1370,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
-     * database accounts is managed by the DB cluster.
-     * </p>
-     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB cluster.
      * </p>
      */
     private Boolean enableIAMDatabaseAuthentication;
@@ -1359,7 +1415,52 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String performanceInsightsKMSKeyId;
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -1425,6 +1526,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ProcessorFeature> processorFeatures;
     /**
@@ -1455,6 +1562,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
      * </p>
      */
     private Integer maxAllocatedStorage;
@@ -1777,11 +1890,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </ul>
      *        </li>
      * @param dBInstanceClass
-     *        The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes
+     *        The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     *        classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora
+     *        DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      * @param engine
      *        The name of the database engine to be used for this instance.</p>
      *        <p>
@@ -4475,19 +4590,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     * classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB
+     * instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param dBInstanceClass
-     *        The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes
+     *        The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     *        classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora
+     *        DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public void setDBInstanceClass(String dBInstanceClass) {
@@ -4496,18 +4615,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     * classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB
+     * instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
-     * @return The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes
+     * @return The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes
      *         are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *         instance classes, and availability for your engine, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *         Class</a> in the <i>Amazon RDS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     *         classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora
+     *         DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public String getDBInstanceClass() {
@@ -4516,19 +4639,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes are
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     * classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora DB
+     * instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param dBInstanceClass
-     *        The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes
+     *        The compute and memory capacity of the DB instance, for example db.m5.large. Not all DB instance classes
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
+     *        classes</a> in the <i>Amazon RDS User Guide</i> or <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.html">Aurora
+     *        DB instance classes</a> in the <i>Amazon Aurora User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5664,12 +5791,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of DB security groups to associate with this DB instance.
      * </p>
      * <p>
-     * Default: The default DB security group for the database engine.
+     * This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB instances. Use
+     * the <code>VpcSecurityGroupIds</code> setting instead.
      * </p>
      * 
      * @return A list of DB security groups to associate with this DB instance.</p>
      *         <p>
-     *         Default: The default DB security group for the database engine.
+     *         This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB
+     *         instances. Use the <code>VpcSecurityGroupIds</code> setting instead.
      */
 
     public java.util.List<String> getDBSecurityGroups() {
@@ -5684,13 +5813,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of DB security groups to associate with this DB instance.
      * </p>
      * <p>
-     * Default: The default DB security group for the database engine.
+     * This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB instances. Use
+     * the <code>VpcSecurityGroupIds</code> setting instead.
      * </p>
      * 
      * @param dBSecurityGroups
      *        A list of DB security groups to associate with this DB instance.</p>
      *        <p>
-     *        Default: The default DB security group for the database engine.
+     *        This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB
+     *        instances. Use the <code>VpcSecurityGroupIds</code> setting instead.
      */
 
     public void setDBSecurityGroups(java.util.Collection<String> dBSecurityGroups) {
@@ -5707,7 +5838,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of DB security groups to associate with this DB instance.
      * </p>
      * <p>
-     * Default: The default DB security group for the database engine.
+     * This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB instances. Use
+     * the <code>VpcSecurityGroupIds</code> setting instead.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -5718,7 +5850,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param dBSecurityGroups
      *        A list of DB security groups to associate with this DB instance.</p>
      *        <p>
-     *        Default: The default DB security group for the database engine.
+     *        This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB
+     *        instances. Use the <code>VpcSecurityGroupIds</code> setting instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5737,13 +5870,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A list of DB security groups to associate with this DB instance.
      * </p>
      * <p>
-     * Default: The default DB security group for the database engine.
+     * This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB instances. Use
+     * the <code>VpcSecurityGroupIds</code> setting instead.
      * </p>
      * 
      * @param dBSecurityGroups
      *        A list of DB security groups to associate with this DB instance.</p>
      *        <p>
-     *        Default: The default DB security group for the database engine.
+     *        This setting applies to the legacy EC2-Classic platform, which is no longer used to create new DB
+     *        instances. Use the <code>VpcSecurityGroupIds</code> setting instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -6476,7 +6611,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     * Can't be set to 0 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -6509,7 +6644,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     *        Can't be set to 0 for an RDS Custom for Oracle DB instance
      *        </p>
      *        </li>
      */
@@ -6548,7 +6683,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     * Can't be set to 0 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -6580,7 +6715,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     *         Can't be set to 0 for an RDS Custom for Oracle DB instance
      *         </p>
      *         </li>
      */
@@ -6619,7 +6754,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     * Can't be set to 0 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -6652,7 +6787,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
+     *        Can't be set to 0 for an RDS Custom for Oracle DB instance
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -7357,12 +7492,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
+     * </p>
      * 
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      *        <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
      */
 
     public void setMultiAZ(Boolean multiAZ) {
@@ -7377,11 +7524,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
+     * </p>
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      *         <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
      */
 
     public Boolean getMultiAZ() {
@@ -7396,12 +7555,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
+     * </p>
      * 
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      *        <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -7418,11 +7589,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
+     * </p>
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      *         <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. DB instance Availability Zones (AZs) are managed by the DB cluster.
      */
 
     public Boolean isMultiAZ() {
@@ -7434,7 +7617,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      * </p>
      * <p>
      * The following are the database engines and links to information about the major and minor versions that are
@@ -7508,7 +7691,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param engineVersion
      *        The version number of the database engine to use.</p>
      *        <p>
-     *        For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     *        For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      *        </p>
      *        <p>
      *        The following are the database engines and links to information about the major and minor versions that
@@ -7589,7 +7772,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      * </p>
      * <p>
      * The following are the database engines and links to information about the major and minor versions that are
@@ -7662,7 +7845,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The version number of the database engine to use.</p>
      *         <p>
-     *         For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     *         For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      *         </p>
      *         <p>
      *         The following are the database engines and links to information about the major and minor versions that
@@ -7743,7 +7926,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     * For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      * </p>
      * <p>
      * The following are the database engines and links to information about the major and minor versions that are
@@ -7817,7 +8000,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param engineVersion
      *        The version number of the database engine to use.</p>
      *        <p>
-     *        For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> action.
+     *        For a list of valid engine versions, use the <code>DescribeDBEngineVersions</code> operation.
      *        </p>
      *        <p>
      *        The following are the database engines and links to information about the major and minor versions that
@@ -7990,6 +8173,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param licenseModel
      *        License model information for this DB instance.</p>
@@ -7999,6 +8188,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -8016,6 +8211,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @return License model information for this DB instance.</p>
      *         <p>
@@ -8024,6 +8225,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable.
      */
 
     public String getLicenseModel() {
@@ -8041,6 +8248,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param licenseModel
      *        License model information for this DB instance.</p>
@@ -8050,6 +8263,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8070,6 +8289,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of the
      * storage amount for the DB instance.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @param iops
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
@@ -8080,6 +8305,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50
      *        of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and
      *        50 of the storage amount for the DB instance.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Storage is managed by the DB cluster.
      */
 
     public void setIops(Integer iops) {
@@ -8098,6 +8329,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of the
      * storage amount for the DB instance.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @return The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
      *         instance. For information about valid <code>Iops</code> values, see <a
@@ -8107,6 +8344,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and
      *         50 of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1
      *         and 50 of the storage amount for the DB instance.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Storage is managed by the DB cluster.
      */
 
     public Integer getIops() {
@@ -8125,6 +8368,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and 50 of the
      * storage amount for the DB instance.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @param iops
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
@@ -8135,6 +8384,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50
      *        of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and
      *        50 of the storage amount for the DB instance.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Storage is managed by the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8154,6 +8409,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param optionGroupName
      *        A value that indicates that the DB instance should be associated with the specified option group.</p>
@@ -8164,6 +8425,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      */
 
     public void setOptionGroupName(String optionGroupName) {
@@ -8181,6 +8448,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @return A value that indicates that the DB instance should be associated with the specified option group.</p>
      *         <p>
@@ -8190,6 +8463,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable.
      */
 
     public String getOptionGroupName() {
@@ -8207,6 +8486,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param optionGroupName
      *        A value that indicates that the DB instance should be associated with the specified option group.</p>
@@ -8217,6 +8502,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8960,6 +9251,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
@@ -8971,6 +9268,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Storage is managed by the DB cluster.
      */
 
     public void setStorageType(String storageType) {
@@ -8990,6 +9293,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
@@ -9000,6 +9309,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Storage is managed by the DB cluster.
      */
 
     public String getStorageType() {
@@ -9019,6 +9334,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
@@ -9030,6 +9351,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Storage is managed by the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9045,11 +9372,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param tdeCredentialArn
      *        The ARN from the key store with which to associate the instance for TDE encryption.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      */
 
     public void setTdeCredentialArn(String tdeCredentialArn) {
@@ -9063,10 +9402,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @return The ARN from the key store with which to associate the instance for TDE encryption.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable.
      */
 
     public String getTdeCredentialArn() {
@@ -9080,11 +9431,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param tdeCredentialArn
      *        The ARN from the key store with which to associate the instance for TDE encryption.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9473,6 +9836,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      * 
      * @param domain
      *        The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL
@@ -9484,6 +9853,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. The domain is managed by the DB cluster.
      */
 
     public void setDomain(String domain) {
@@ -9503,6 +9878,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      * 
      * @return The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL
      *         Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain.</p>
@@ -9513,6 +9894,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. The domain is managed by the DB cluster.
      */
 
     public String getDomain() {
@@ -9532,6 +9919,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      * 
      * @param domain
      *        The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL
@@ -9543,6 +9936,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. The domain is managed by the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9876,11 +10275,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      * 
      * @param domainIAMRoleName
      *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. The domain is managed by the DB cluster.
      */
 
     public void setDomainIAMRoleName(String domainIAMRoleName) {
@@ -9894,10 +10305,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      * 
      * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. The domain is managed by the DB cluster.
      */
 
     public String getDomainIAMRoleName() {
@@ -9911,11 +10334,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. The domain is managed by the DB cluster.
+     * </p>
      * 
      * @param domainIAMRoleName
      *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. The domain is managed by the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10091,26 +10526,37 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
-     * database accounts is managed by the DB cluster.
-     * </p>
-     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB cluster.
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
-     *        accounts to database accounts is managed by the DB cluster.
-     *        </p>
-     *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB
+     *        cluster.
      */
 
     public void setEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
@@ -10123,25 +10569,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
-     * database accounts is managed by the DB cluster.
-     * </p>
-     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB cluster.
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
-     *         This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
-     *         accounts to database accounts is managed by the DB cluster.
-     *         </p>
-     *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB
+     *         cluster.
      */
 
     public Boolean getEnableIAMDatabaseAuthentication() {
@@ -10154,26 +10611,37 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
-     * database accounts is managed by the DB cluster.
-     * </p>
-     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB cluster.
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
-     *        accounts to database accounts is managed by the DB cluster.
-     *        </p>
-     *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB
+     *        cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10188,25 +10656,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
-     * database accounts is managed by the DB cluster.
-     * </p>
-     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB cluster.
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
-     *         This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
-     *         accounts to database accounts is managed by the DB cluster.
-     *         </p>
-     *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Mapping Amazon Web Services IAM accounts to database accounts is managed by the DB
+     *         cluster.
      */
 
     public Boolean isEnableIAMDatabaseAuthentication() {
@@ -10409,14 +10888,105 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+     *        The number of days to retain Performance Insights data. The default is 7 days. The following values are
+     *        valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        7
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For example, the following values are valid:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        93 (3 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        341 (11 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        589 (19 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
+     *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      */
@@ -10427,14 +10997,104 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2
-     *         years).</p>
+     * @return The number of days to retain Performance Insights data. The default is 7 days. The following values are
+     *         valid:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         7
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         731
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For example, the following values are valid:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         93 (3 months * 31)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         341 (11 months * 31)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         589 (19 months * 31)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         731
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
+     *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -10445,14 +11105,105 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 7
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example, the following values are valid:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * 93 (3 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 341 (11 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 589 (19 months * 31)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * 731
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+     *        The number of days to retain Performance Insights data. The default is 7 days. The following values are
+     *        valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        7
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>month</i> * 31, where <i>month</i> is a number of months from 1-23
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For example, the following values are valid:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        93 (3 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        341 (11 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        589 (19 months * 31)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        731
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.
+     *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -10915,11 +11666,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @return The number of CPU cores and the number of threads per core for the DB instance class of the DB
      *         instance.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable.
      */
 
     public java.util.List<ProcessorFeature> getProcessorFeatures() {
@@ -10936,12 +11699,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param processorFeatures
      *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
      *        instance.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      */
 
     public void setProcessorFeatures(java.util.Collection<ProcessorFeature> processorFeatures) {
@@ -10961,6 +11736,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProcessorFeatures(java.util.Collection)} or {@link #withProcessorFeatures(java.util.Collection)} if
      * you want to override the existing values.
@@ -10971,6 +11752,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        instance.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10991,12 +11778,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable.
+     * </p>
      * 
      * @param processorFeatures
      *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
      *        instance.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -11157,6 +11956,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @param maxAllocatedStorage
      *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
@@ -11169,6 +11974,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Storage is managed by the DB cluster.
      */
 
     public void setMaxAllocatedStorage(Integer maxAllocatedStorage) {
@@ -11187,6 +11998,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @return The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
      *         instance.</p>
@@ -11198,6 +12015,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Storage is managed by the DB cluster.
      */
 
     public Integer getMaxAllocatedStorage() {
@@ -11216,6 +12039,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * This setting doesn't apply to RDS Custom.
      * </p>
+     * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Storage is managed by the DB cluster.
+     * </p>
      * 
      * @param maxAllocatedStorage
      *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
@@ -11228,6 +12057,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
+     *        </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Storage is managed by the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
