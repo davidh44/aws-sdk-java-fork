@@ -1,3 +1,8 @@
+# __1.12.268__ __2022-07-25__
+## __Auto Scaling__
+  - ### Features
+    - Documentation update for Amazon EC2 Auto Scaling.
+
 # __1.12.267__ __2022-07-22__
 ## __AWS Account__
   - ### Features
