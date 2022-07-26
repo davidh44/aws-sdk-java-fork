@@ -94,6 +94,18 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ServiceAdditionalInfo additionalInfo;
+    /**
+     * <p>
+     * The name of the feature that generated a finding.
+     * </p>
+     */
+    private String featureName;
+    /**
+     * <p>
+     * Returns details from the malware scan that created a finding.
+     * </p>
+     */
+    private EbsVolumeScanDetails ebsVolumeScanDetails;
 
     /**
      * <p>
@@ -548,6 +560,86 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the feature that generated a finding.
+     * </p>
+     * 
+     * @param featureName
+     *        The name of the feature that generated a finding.
+     */
+
+    public void setFeatureName(String featureName) {
+        this.featureName = featureName;
+    }
+
+    /**
+     * <p>
+     * The name of the feature that generated a finding.
+     * </p>
+     * 
+     * @return The name of the feature that generated a finding.
+     */
+
+    public String getFeatureName() {
+        return this.featureName;
+    }
+
+    /**
+     * <p>
+     * The name of the feature that generated a finding.
+     * </p>
+     * 
+     * @param featureName
+     *        The name of the feature that generated a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withFeatureName(String featureName) {
+        setFeatureName(featureName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Returns details from the malware scan that created a finding.
+     * </p>
+     * 
+     * @param ebsVolumeScanDetails
+     *        Returns details from the malware scan that created a finding.
+     */
+
+    public void setEbsVolumeScanDetails(EbsVolumeScanDetails ebsVolumeScanDetails) {
+        this.ebsVolumeScanDetails = ebsVolumeScanDetails;
+    }
+
+    /**
+     * <p>
+     * Returns details from the malware scan that created a finding.
+     * </p>
+     * 
+     * @return Returns details from the malware scan that created a finding.
+     */
+
+    public EbsVolumeScanDetails getEbsVolumeScanDetails() {
+        return this.ebsVolumeScanDetails;
+    }
+
+    /**
+     * <p>
+     * Returns details from the malware scan that created a finding.
+     * </p>
+     * 
+     * @param ebsVolumeScanDetails
+     *        Returns details from the malware scan that created a finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withEbsVolumeScanDetails(EbsVolumeScanDetails ebsVolumeScanDetails) {
+        setEbsVolumeScanDetails(ebsVolumeScanDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -580,7 +672,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (getUserFeedback() != null)
             sb.append("UserFeedback: ").append(getUserFeedback()).append(",");
         if (getAdditionalInfo() != null)
-            sb.append("AdditionalInfo: ").append(getAdditionalInfo());
+            sb.append("AdditionalInfo: ").append(getAdditionalInfo()).append(",");
+        if (getFeatureName() != null)
+            sb.append("FeatureName: ").append(getFeatureName()).append(",");
+        if (getEbsVolumeScanDetails() != null)
+            sb.append("EbsVolumeScanDetails: ").append(getEbsVolumeScanDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -639,6 +735,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAdditionalInfo() != null && other.getAdditionalInfo().equals(this.getAdditionalInfo()) == false)
             return false;
+        if (other.getFeatureName() == null ^ this.getFeatureName() == null)
+            return false;
+        if (other.getFeatureName() != null && other.getFeatureName().equals(this.getFeatureName()) == false)
+            return false;
+        if (other.getEbsVolumeScanDetails() == null ^ this.getEbsVolumeScanDetails() == null)
+            return false;
+        if (other.getEbsVolumeScanDetails() != null && other.getEbsVolumeScanDetails().equals(this.getEbsVolumeScanDetails()) == false)
+            return false;
         return true;
     }
 
@@ -658,6 +762,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getServiceName() == null) ? 0 : getServiceName().hashCode());
         hashCode = prime * hashCode + ((getUserFeedback() == null) ? 0 : getUserFeedback().hashCode());
         hashCode = prime * hashCode + ((getAdditionalInfo() == null) ? 0 : getAdditionalInfo().hashCode());
+        hashCode = prime * hashCode + ((getFeatureName() == null) ? 0 : getFeatureName().hashCode());
+        hashCode = prime * hashCode + ((getEbsVolumeScanDetails() == null) ? 0 : getEbsVolumeScanDetails().hashCode());
         return hashCode;
     }
 

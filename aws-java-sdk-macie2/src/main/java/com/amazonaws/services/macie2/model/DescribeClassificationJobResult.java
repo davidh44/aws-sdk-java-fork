@@ -142,7 +142,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this
-     * value indicates when the most recent run started.
+     * value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.
      * </p>
      */
     private java.util.Date lastRunTime;
@@ -1157,12 +1157,13 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this
-     * value indicates when the most recent run started.
+     * value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.
      * </p>
      * 
      * @param lastRunTime
      *        The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring
-     *        job, this value indicates when the most recent run started.
+     *        job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job was
+     *        created.
      */
 
     public void setLastRunTime(java.util.Date lastRunTime) {
@@ -1172,11 +1173,12 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this
-     * value indicates when the most recent run started.
+     * value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.
      * </p>
      * 
      * @return The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring
-     *         job, this value indicates when the most recent run started.
+     *         job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job
+     *         was created.
      */
 
     public java.util.Date getLastRunTime() {
@@ -1186,12 +1188,13 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this
-     * value indicates when the most recent run started.
+     * value indicates when the most recent run started or, if the job hasn't run yet, when the job was created.
      * </p>
      * 
      * @param lastRunTime
      *        The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring
-     *        job, this value indicates when the most recent run started.
+     *        job, this value indicates when the most recent run started or, if the job hasn't run yet, when the job was
+     *        created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

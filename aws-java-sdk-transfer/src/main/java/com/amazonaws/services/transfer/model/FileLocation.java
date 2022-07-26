@@ -30,7 +30,7 @@ public class FileLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     * Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      * </p>
      */
     private S3FileLocation s3FileLocation;
@@ -43,11 +43,11 @@ public class FileLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     * Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      * </p>
      * 
      * @param s3FileLocation
-     *        Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     *        Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      */
 
     public void setS3FileLocation(S3FileLocation s3FileLocation) {
@@ -56,10 +56,10 @@ public class FileLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     * Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      * </p>
      * 
-     * @return Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     * @return Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      */
 
     public S3FileLocation getS3FileLocation() {
@@ -68,11 +68,11 @@ public class FileLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     * Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      * </p>
      * 
      * @param s3FileLocation
-     *        Specifies the S3 details for the file being used, such as bucket, Etag, and so forth.
+     *        Specifies the S3 details for the file being used, such as bucket, ETag, and so forth.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

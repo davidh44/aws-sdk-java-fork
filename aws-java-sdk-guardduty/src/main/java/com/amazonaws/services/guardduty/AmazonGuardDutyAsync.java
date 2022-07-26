@@ -679,6 +679,37 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Returns a list of malware scans.
+     * </p>
+     * 
+     * @param describeMalwareScansRequest
+     * @return A Java Future containing the result of the DescribeMalwareScans operation returned by the service.
+     * @sample AmazonGuardDutyAsync.DescribeMalwareScans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DescribeMalwareScans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMalwareScansResult> describeMalwareScansAsync(DescribeMalwareScansRequest describeMalwareScansRequest);
+
+    /**
+     * <p>
+     * Returns a list of malware scans.
+     * </p>
+     * 
+     * @param describeMalwareScansRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMalwareScans operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.DescribeMalwareScans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DescribeMalwareScans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMalwareScansResult> describeMalwareScansAsync(DescribeMalwareScansRequest describeMalwareScansRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMalwareScansRequest, DescribeMalwareScansResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about the account selected as the delegated administrator for GuardDuty.
      * </p>
      * 
@@ -1142,6 +1173,37 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      */
     java.util.concurrent.Future<GetInvitationsCountResult> getInvitationsCountAsync(GetInvitationsCountRequest getInvitationsCountRequest,
             com.amazonaws.handlers.AsyncHandler<GetInvitationsCountRequest, GetInvitationsCountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the details of the malware scan settings.
+     * </p>
+     * 
+     * @param getMalwareScanSettingsRequest
+     * @return A Java Future containing the result of the GetMalwareScanSettings operation returned by the service.
+     * @sample AmazonGuardDutyAsync.GetMalwareScanSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareScanSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMalwareScanSettingsResult> getMalwareScanSettingsAsync(GetMalwareScanSettingsRequest getMalwareScanSettingsRequest);
+
+    /**
+     * <p>
+     * Returns the details of the malware scan settings.
+     * </p>
+     * 
+     * @param getMalwareScanSettingsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMalwareScanSettings operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.GetMalwareScanSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareScanSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMalwareScanSettingsResult> getMalwareScanSettingsAsync(GetMalwareScanSettingsRequest getMalwareScanSettingsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMalwareScanSettingsRequest, GetMalwareScanSettingsResult> asyncHandler);
 
     /**
      * <p>
@@ -1988,6 +2050,39 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      */
     java.util.concurrent.Future<UpdateIPSetResult> updateIPSetAsync(UpdateIPSetRequest updateIPSetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIPSetRequest, UpdateIPSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the malware scan settings.
+     * </p>
+     * 
+     * @param updateMalwareScanSettingsRequest
+     * @return A Java Future containing the result of the UpdateMalwareScanSettings operation returned by the service.
+     * @sample AmazonGuardDutyAsync.UpdateMalwareScanSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareScanSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMalwareScanSettingsResult> updateMalwareScanSettingsAsync(
+            UpdateMalwareScanSettingsRequest updateMalwareScanSettingsRequest);
+
+    /**
+     * <p>
+     * Updates the malware scan settings.
+     * </p>
+     * 
+     * @param updateMalwareScanSettingsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMalwareScanSettings operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.UpdateMalwareScanSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareScanSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMalwareScanSettingsResult> updateMalwareScanSettingsAsync(
+            UpdateMalwareScanSettingsRequest updateMalwareScanSettingsRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMalwareScanSettingsRequest, UpdateMalwareScanSettingsResult> asyncHandler);
 
     /**
      * <p>

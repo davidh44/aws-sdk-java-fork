@@ -37,6 +37,8 @@ public class DataSourcesFreeTrialMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Logs").build();
     private static final MarshallingInfo<StructuredPojo> KUBERNETES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("kubernetes").build();
+    private static final MarshallingInfo<StructuredPojo> MALWAREPROTECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("malwareProtection").build();
 
     private static final DataSourcesFreeTrialMarshaller instance = new DataSourcesFreeTrialMarshaller();
 
@@ -59,6 +61,7 @@ public class DataSourcesFreeTrialMarshaller {
             protocolMarshaller.marshall(dataSourcesFreeTrial.getFlowLogs(), FLOWLOGS_BINDING);
             protocolMarshaller.marshall(dataSourcesFreeTrial.getS3Logs(), S3LOGS_BINDING);
             protocolMarshaller.marshall(dataSourcesFreeTrial.getKubernetes(), KUBERNETES_BINDING);
+            protocolMarshaller.marshall(dataSourcesFreeTrial.getMalwareProtection(), MALWAREPROTECTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

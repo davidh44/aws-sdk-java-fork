@@ -18,6 +18,7 @@ import com.amazonaws.*;
 import com.amazonaws.regions.*;
 
 import com.amazonaws.services.macie2.model.*;
+import com.amazonaws.services.macie2.waiters.AmazonMacie2Waiters;
 
 /**
  * Interface for accessing Amazon Macie 2.
@@ -1035,6 +1036,77 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
+     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param getRevealConfigurationRequest
+     * @return Result of the GetRevealConfiguration operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.GetRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetRevealConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetRevealConfigurationResult getRevealConfiguration(GetRevealConfigurationRequest getRevealConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesRequest
+     * @return Result of the GetSensitiveDataOccurrences operation returned by the service.
+     * @throws UnprocessableEntityException
+     *         The request failed because it contains instructions that Amazon Macie can't process (Unprocessable
+     *         Entity).
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request failed because fulfilling the request would exceed one or more service quotas for your
+     *         account.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @sample AmazonMacie2.GetSensitiveDataOccurrences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetSensitiveDataOccurrencesResult getSensitiveDataOccurrences(GetSensitiveDataOccurrencesRequest getSensitiveDataOccurrencesRequest);
+
+    /**
+     * <p>
+     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesAvailabilityRequest
+     * @return Result of the GetSensitiveDataOccurrencesAvailability operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.GetSensitiveDataOccurrencesAvailability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrencesAvailability"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetSensitiveDataOccurrencesAvailabilityResult getSensitiveDataOccurrencesAvailability(
+            GetSensitiveDataOccurrencesAvailabilityRequest getSensitiveDataOccurrencesAvailabilityRequest);
+
+    /**
+     * <p>
      * Retrieves (queries) quotas and aggregated usage data for one or more accounts.
      * </p>
      * 
@@ -1597,6 +1669,28 @@ public interface AmazonMacie2 {
     UpdateOrganizationConfigurationResult updateOrganizationConfiguration(UpdateOrganizationConfigurationRequest updateOrganizationConfigurationRequest);
 
     /**
+     * <p>
+     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param updateRevealConfigurationRequest
+     * @return Result of the UpdateRevealConfiguration operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.UpdateRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateRevealConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateRevealConfigurationResult updateRevealConfiguration(UpdateRevealConfigurationRequest updateRevealConfigurationRequest);
+
+    /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and
      * callers are not expected to call it, but can if they want to explicitly release any open resources. Once a client
      * has been shutdown, it should not be used to make any more requests.
@@ -1618,5 +1712,7 @@ public interface AmazonMacie2 {
      * @return The response metadata for the specified request, or null if none is available.
      */
     ResponseMetadata getCachedResponseMetadata(AmazonWebServiceRequest request);
+
+    AmazonMacie2Waiters waiters();
 
 }

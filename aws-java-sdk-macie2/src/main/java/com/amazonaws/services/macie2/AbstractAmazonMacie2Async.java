@@ -493,6 +493,47 @@ public class AbstractAmazonMacie2Async extends AbstractAmazonMacie2 implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetRevealConfigurationResult> getRevealConfigurationAsync(GetRevealConfigurationRequest request) {
+
+        return getRevealConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRevealConfigurationResult> getRevealConfigurationAsync(GetRevealConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRevealConfigurationRequest, GetRevealConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesResult> getSensitiveDataOccurrencesAsync(GetSensitiveDataOccurrencesRequest request) {
+
+        return getSensitiveDataOccurrencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesResult> getSensitiveDataOccurrencesAsync(GetSensitiveDataOccurrencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSensitiveDataOccurrencesRequest, GetSensitiveDataOccurrencesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesAvailabilityResult> getSensitiveDataOccurrencesAvailabilityAsync(
+            GetSensitiveDataOccurrencesAvailabilityRequest request) {
+
+        return getSensitiveDataOccurrencesAvailabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesAvailabilityResult> getSensitiveDataOccurrencesAvailabilityAsync(
+            GetSensitiveDataOccurrencesAvailabilityRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSensitiveDataOccurrencesAvailabilityRequest, GetSensitiveDataOccurrencesAvailabilityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUsageStatisticsResult> getUsageStatisticsAsync(GetUsageStatisticsRequest request) {
 
         return getUsageStatisticsAsync(request, null);
@@ -780,6 +821,19 @@ public class AbstractAmazonMacie2Async extends AbstractAmazonMacie2 implements A
     public java.util.concurrent.Future<UpdateOrganizationConfigurationResult> updateOrganizationConfigurationAsync(
             UpdateOrganizationConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateOrganizationConfigurationRequest, UpdateOrganizationConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRevealConfigurationResult> updateRevealConfigurationAsync(UpdateRevealConfigurationRequest request) {
+
+        return updateRevealConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRevealConfigurationResult> updateRevealConfigurationAsync(UpdateRevealConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateRevealConfigurationRequest, UpdateRevealConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

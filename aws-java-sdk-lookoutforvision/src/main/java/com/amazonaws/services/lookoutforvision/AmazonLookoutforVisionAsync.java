@@ -729,7 +729,8 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
 
     /**
      * <p>
-     * Lists the Amazon Lookout for Vision projects in your AWS account.
+     * Lists the Amazon Lookout for Vision projects in your AWS account that are in the AWS Region in which you call
+     * <code>ListProjects</code>.
      * </p>
      * <p>
      * The <code>ListProjects</code> operation is eventually consistent. Recent calls to <code>CreateProject</code> and
@@ -749,7 +750,8 @@ public interface AmazonLookoutforVisionAsync extends AmazonLookoutforVision {
 
     /**
      * <p>
-     * Lists the Amazon Lookout for Vision projects in your AWS account.
+     * Lists the Amazon Lookout for Vision projects in your AWS account that are in the AWS Region in which you call
+     * <code>ListProjects</code>.
      * </p>
      * <p>
      * The <code>ListProjects</code> operation is eventually consistent. Recent calls to <code>CreateProject</code> and

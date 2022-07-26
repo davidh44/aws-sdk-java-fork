@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+ * Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the workflow.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/WorkflowDetail" target="_top">AWS API

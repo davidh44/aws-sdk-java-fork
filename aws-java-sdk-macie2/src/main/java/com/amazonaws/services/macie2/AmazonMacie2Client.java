@@ -40,6 +40,7 @@ import com.amazonaws.client.AwsSyncClientParams;
 import com.amazonaws.client.builder.AdvancedConfig;
 
 import com.amazonaws.services.macie2.AmazonMacie2ClientBuilder;
+import com.amazonaws.services.macie2.waiters.AmazonMacie2Waiters;
 
 import com.amazonaws.AmazonServiceException;
 
@@ -70,6 +71,8 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /** Default signing name for the service. */
     private static final String DEFAULT_SIGNING_NAME = "macie2";
+
+    private volatile AmazonMacie2Waiters waiters;
 
     /** Client configuration factory providing ClientConfigurations tailored to this client */
     protected static final ClientConfigurationFactory configFactory = new ClientConfigurationFactory();
@@ -103,6 +106,9 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.macie2.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnprocessableEntityException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.macie2.model.transform.UnprocessableEntityExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.macie2.model.AmazonMacie2Exception.class));
 
     public static AmazonMacie2ClientBuilder builder() {
@@ -2640,6 +2646,208 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
+     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param getRevealConfigurationRequest
+     * @return Result of the GetRevealConfiguration operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.GetRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetRevealConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetRevealConfigurationResult getRevealConfiguration(GetRevealConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRevealConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetRevealConfigurationResult executeGetRevealConfiguration(GetRevealConfigurationRequest getRevealConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRevealConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRevealConfigurationRequest> request = null;
+        Response<GetRevealConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRevealConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getRevealConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRevealConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRevealConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetRevealConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesRequest
+     * @return Result of the GetSensitiveDataOccurrences operation returned by the service.
+     * @throws UnprocessableEntityException
+     *         The request failed because it contains instructions that Amazon Macie can't process (Unprocessable
+     *         Entity).
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request failed because fulfilling the request would exceed one or more service quotas for your
+     *         account.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @sample AmazonMacie2.GetSensitiveDataOccurrences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetSensitiveDataOccurrencesResult getSensitiveDataOccurrences(GetSensitiveDataOccurrencesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSensitiveDataOccurrences(request);
+    }
+
+    @SdkInternalApi
+    final GetSensitiveDataOccurrencesResult executeGetSensitiveDataOccurrences(GetSensitiveDataOccurrencesRequest getSensitiveDataOccurrencesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSensitiveDataOccurrencesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSensitiveDataOccurrencesRequest> request = null;
+        Response<GetSensitiveDataOccurrencesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSensitiveDataOccurrencesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getSensitiveDataOccurrencesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSensitiveDataOccurrences");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSensitiveDataOccurrencesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetSensitiveDataOccurrencesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesAvailabilityRequest
+     * @return Result of the GetSensitiveDataOccurrencesAvailability operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.GetSensitiveDataOccurrencesAvailability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrencesAvailability"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetSensitiveDataOccurrencesAvailabilityResult getSensitiveDataOccurrencesAvailability(GetSensitiveDataOccurrencesAvailabilityRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSensitiveDataOccurrencesAvailability(request);
+    }
+
+    @SdkInternalApi
+    final GetSensitiveDataOccurrencesAvailabilityResult executeGetSensitiveDataOccurrencesAvailability(
+            GetSensitiveDataOccurrencesAvailabilityRequest getSensitiveDataOccurrencesAvailabilityRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSensitiveDataOccurrencesAvailabilityRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSensitiveDataOccurrencesAvailabilityRequest> request = null;
+        Response<GetSensitiveDataOccurrencesAvailabilityResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSensitiveDataOccurrencesAvailabilityRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getSensitiveDataOccurrencesAvailabilityRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSensitiveDataOccurrencesAvailability");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSensitiveDataOccurrencesAvailabilityResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetSensitiveDataOccurrencesAvailabilityResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves (queries) quotas and aggregated usage data for one or more accounts.
      * </p>
      * 
@@ -4144,6 +4352,72 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
     }
 
     /**
+     * <p>
+     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param updateRevealConfigurationRequest
+     * @return Result of the UpdateRevealConfiguration operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.UpdateRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateRevealConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateRevealConfigurationResult updateRevealConfiguration(UpdateRevealConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRevealConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRevealConfigurationResult executeUpdateRevealConfiguration(UpdateRevealConfigurationRequest updateRevealConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRevealConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRevealConfigurationRequest> request = null;
+        Response<UpdateRevealConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRevealConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateRevealConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRevealConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRevealConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateRevealConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * Returns additional metadata for a previously executed successful, request, typically used for debugging issues
      * where a service isn't acting as expected. This data isn't considered part of the result data returned by an
      * operation, so it's available through this separate, diagnostic interface.
@@ -4220,8 +4494,23 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
     }
 
     @Override
+    public AmazonMacie2Waiters waiters() {
+        if (waiters == null) {
+            synchronized (this) {
+                if (waiters == null) {
+                    waiters = new AmazonMacie2Waiters(this);
+                }
+            }
+        }
+        return waiters;
+    }
+
+    @Override
     public void shutdown() {
         super.shutdown();
+        if (waiters != null) {
+            waiters.shutdown();
+        }
     }
 
 }

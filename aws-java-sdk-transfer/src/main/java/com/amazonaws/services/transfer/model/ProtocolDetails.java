@@ -112,6 +112,12 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      * </note>
      */
     private String setStatOption;
+    /**
+     * <p>
+     * Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * </p>
+     */
+    private java.util.List<String> as2Transports;
 
     /**
      * <p>
@@ -776,6 +782,104 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * </p>
+     * 
+     * @return Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * @see As2Transport
+     */
+
+    public java.util.List<String> getAs2Transports() {
+        return as2Transports;
+    }
+
+    /**
+     * <p>
+     * Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * </p>
+     * 
+     * @param as2Transports
+     *        Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * @see As2Transport
+     */
+
+    public void setAs2Transports(java.util.Collection<String> as2Transports) {
+        if (as2Transports == null) {
+            this.as2Transports = null;
+            return;
+        }
+
+        this.as2Transports = new java.util.ArrayList<String>(as2Transports);
+    }
+
+    /**
+     * <p>
+     * Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAs2Transports(java.util.Collection)} or {@link #withAs2Transports(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param as2Transports
+     *        Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see As2Transport
+     */
+
+    public ProtocolDetails withAs2Transports(String... as2Transports) {
+        if (this.as2Transports == null) {
+            setAs2Transports(new java.util.ArrayList<String>(as2Transports.length));
+        }
+        for (String ele : as2Transports) {
+            this.as2Transports.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * </p>
+     * 
+     * @param as2Transports
+     *        Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see As2Transport
+     */
+
+    public ProtocolDetails withAs2Transports(java.util.Collection<String> as2Transports) {
+        setAs2Transports(as2Transports);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * </p>
+     * 
+     * @param as2Transports
+     *        Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see As2Transport
+     */
+
+    public ProtocolDetails withAs2Transports(As2Transport... as2Transports) {
+        java.util.ArrayList<String> as2TransportsCopy = new java.util.ArrayList<String>(as2Transports.length);
+        for (As2Transport value : as2Transports) {
+            as2TransportsCopy.add(value.toString());
+        }
+        if (getAs2Transports() == null) {
+            setAs2Transports(as2TransportsCopy);
+        } else {
+            getAs2Transports().addAll(as2TransportsCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -792,7 +896,9 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
         if (getTlsSessionResumptionMode() != null)
             sb.append("TlsSessionResumptionMode: ").append(getTlsSessionResumptionMode()).append(",");
         if (getSetStatOption() != null)
-            sb.append("SetStatOption: ").append(getSetStatOption());
+            sb.append("SetStatOption: ").append(getSetStatOption()).append(",");
+        if (getAs2Transports() != null)
+            sb.append("As2Transports: ").append(getAs2Transports());
         sb.append("}");
         return sb.toString();
     }
@@ -819,6 +925,10 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getSetStatOption() != null && other.getSetStatOption().equals(this.getSetStatOption()) == false)
             return false;
+        if (other.getAs2Transports() == null ^ this.getAs2Transports() == null)
+            return false;
+        if (other.getAs2Transports() != null && other.getAs2Transports().equals(this.getAs2Transports()) == false)
+            return false;
         return true;
     }
 
@@ -830,6 +940,7 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getPassiveIp() == null) ? 0 : getPassiveIp().hashCode());
         hashCode = prime * hashCode + ((getTlsSessionResumptionMode() == null) ? 0 : getTlsSessionResumptionMode().hashCode());
         hashCode = prime * hashCode + ((getSetStatOption() == null) ? 0 : getSetStatOption().hashCode());
+        hashCode = prime * hashCode + ((getAs2Transports() == null) ? 0 : getAs2Transports().hashCode());
         return hashCode;
     }
 

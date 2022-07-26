@@ -396,6 +396,23 @@ public interface AmazonGuardDuty {
 
     /**
      * <p>
+     * Returns a list of malware scans.
+     * </p>
+     * 
+     * @param describeMalwareScansRequest
+     * @return Result of the DescribeMalwareScans operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.DescribeMalwareScans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DescribeMalwareScans" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeMalwareScansResult describeMalwareScans(DescribeMalwareScansRequest describeMalwareScansRequest);
+
+    /**
+     * <p>
      * Returns information about the account selected as the delegated administrator for GuardDuty.
      * </p>
      * 
@@ -636,6 +653,23 @@ public interface AmazonGuardDuty {
      *      API Documentation</a>
      */
     GetInvitationsCountResult getInvitationsCount(GetInvitationsCountRequest getInvitationsCountRequest);
+
+    /**
+     * <p>
+     * Returns the details of the malware scan settings.
+     * </p>
+     * 
+     * @param getMalwareScanSettingsRequest
+     * @return Result of the GetMalwareScanSettings operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.GetMalwareScanSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMalwareScanSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetMalwareScanSettingsResult getMalwareScanSettings(GetMalwareScanSettingsRequest getMalwareScanSettingsRequest);
 
     /**
      * <p>
@@ -1094,6 +1128,23 @@ public interface AmazonGuardDuty {
      *      Documentation</a>
      */
     UpdateIPSetResult updateIPSet(UpdateIPSetRequest updateIPSetRequest);
+
+    /**
+     * <p>
+     * Updates the malware scan settings.
+     * </p>
+     * 
+     * @param updateMalwareScanSettingsRequest
+     * @return Result of the UpdateMalwareScanSettings operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.UpdateMalwareScanSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UpdateMalwareScanSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateMalwareScanSettingsResult updateMalwareScanSettings(UpdateMalwareScanSettingsRequest updateMalwareScanSettingsRequest);
 
     /**
      * <p>

@@ -119,6 +119,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public DescribeMalwareScansResult describeMalwareScans(DescribeMalwareScansRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeOrganizationConfigurationResult describeOrganizationConfiguration(DescribeOrganizationConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -186,6 +191,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
 
     @Override
     public GetInvitationsCountResult getInvitationsCount(GetInvitationsCountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetMalwareScanSettingsResult getMalwareScanSettings(GetMalwareScanSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -317,6 +327,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
 
     @Override
     public UpdateIPSetResult updateIPSet(UpdateIPSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMalwareScanSettingsResult updateMalwareScanSettings(UpdateMalwareScanSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

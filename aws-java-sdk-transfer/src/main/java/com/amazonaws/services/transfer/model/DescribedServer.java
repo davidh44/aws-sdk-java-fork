@@ -60,9 +60,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     * endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic
-     * IP addresses and make it accessible to clients over the internet. Your VPC's default security groups are
-     * automatically assigned to your endpoint.
+     * endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you can
+     * attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your VPC's default
+     * security groups are automatically assigned to your endpoint.
      * </p>
      */
     private EndpointDetails endpointDetails;
@@ -90,38 +90,38 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     private IdentityProviderDetails identityProviderDetails;
     /**
      * <p>
-     * Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which
-     * allows you to store and access user credentials within the Amazon Web Services Transfer Family service.
+     * The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows you to
+     * store and access user credentials within the Transfer Family service.
      * </p>
      * <p>
-     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     * Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web Services
-     * using AD Connectors. This option also requires you to provide a Directory ID using the
+     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service for
+     * Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
+     * Services using AD Connector. This option also requires you to provide a Directory ID by using the
      * <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
      * Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
-     * using the <code>IdentityProviderDetails</code> parameter.
+     * <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     * authentication by using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      */
     private String identityProviderType;
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM) role
-     * that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When set, user
-     * activity can be viewed in your CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to turn on
+     * Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity in your
+     * CloudWatch logs.
      * </p>
      */
     private String loggingRole;
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * Specifies a string to display when users connect to a server. This string is displayed after the user
      * authenticates.
      * </p>
      * <note>
@@ -133,8 +133,8 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     private String postAuthenticationLoginBanner;
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed before the user
-     * authenticates. For example, the following banner displays details about using the system.
+     * Specifies a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system:
      * </p>
      * <p>
      * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
@@ -179,9 +179,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     private String serverId;
     /**
      * <p>
-     * Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code> indicates
-     * that the server can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that
-     * the server cannot perform file transfer operations.
+     * The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server can
+     * accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the server cannot
+     * perform file transfer operations.
      * </p>
      * <p>
      * The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an intermediate
@@ -205,7 +205,8 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     private Integer userCount;
     /**
      * <p>
-     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
+     * workflow.
      * </p>
      */
     private WorkflowDetails workflowDetails;
@@ -419,16 +420,16 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     * endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic
-     * IP addresses and make it accessible to clients over the internet. Your VPC's default security groups are
-     * automatically assigned to your endpoint.
+     * endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you can
+     * attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your VPC's default
+     * security groups are automatically assigned to your endpoint.
      * </p>
      * 
      * @param endpointDetails
      *        The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     *        endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach
-     *        Elastic IP addresses and make it accessible to clients over the internet. Your VPC's default security
-     *        groups are automatically assigned to your endpoint.
+     *        endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you
+     *        can attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your VPC's
+     *        default security groups are automatically assigned to your endpoint.
      */
 
     public void setEndpointDetails(EndpointDetails endpointDetails) {
@@ -438,15 +439,15 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     * endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic
-     * IP addresses and make it accessible to clients over the internet. Your VPC's default security groups are
-     * automatically assigned to your endpoint.
+     * endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you can
+     * attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your VPC's default
+     * security groups are automatically assigned to your endpoint.
      * </p>
      * 
      * @return The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     *         endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach
-     *         Elastic IP addresses and make it accessible to clients over the internet. Your VPC's default security
-     *         groups are automatically assigned to your endpoint.
+     *         endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you
+     *         can attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your
+     *         VPC's default security groups are automatically assigned to your endpoint.
      */
 
     public EndpointDetails getEndpointDetails() {
@@ -456,16 +457,16 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     * endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic
-     * IP addresses and make it accessible to clients over the internet. Your VPC's default security groups are
-     * automatically assigned to your endpoint.
+     * endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you can
+     * attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your VPC's default
+     * security groups are automatically assigned to your endpoint.
      * </p>
      * 
      * @param endpointDetails
      *        The virtual private cloud (VPC) endpoint settings that are configured for your server. When you host your
-     *        endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach
-     *        Elastic IP addresses and make it accessible to clients over the internet. Your VPC's default security
-     *        groups are automatically assigned to your endpoint.
+     *        endpoint within your VPC, you can make your endpoint accessible only to resources within your VPC, or you
+     *        can attach Elastic IP addresses and make your endpoint accessible to clients over the internet. Your VPC's
+     *        default security groups are automatically assigned to your endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,45 +642,44 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which
-     * allows you to store and access user credentials within the Amazon Web Services Transfer Family service.
+     * The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows you to
+     * store and access user credentials within the Transfer Family service.
      * </p>
      * <p>
-     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     * Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web Services
-     * using AD Connectors. This option also requires you to provide a Directory ID using the
+     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service for
+     * Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
+     * Services using AD Connector. This option also requires you to provide a Directory ID by using the
      * <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
      * Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
-     * using the <code>IdentityProviderDetails</code> parameter.
+     * <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     * authentication by using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
      * @param identityProviderType
-     *        Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
-     *        which allows you to store and access user credentials within the Amazon Web Services Transfer Family
-     *        service.</p>
+     *        The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows
+     *        you to store and access user credentials within the Transfer Family service.</p>
      *        <p>
-     *        Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     *        Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
-     *        Services using AD Connectors. This option also requires you to provide a Directory ID using the
+     *        Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service
+     *        for Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon
+     *        Web Services using AD Connector. This option also requires you to provide a Directory ID by using the
      *        <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
      *        Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     *        <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
-     *        authentication using the <code>IdentityProviderDetails</code> parameter.
+     *        <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     *        authentication by using the <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
-     *        Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
-     *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
-     *        for the <code>IdentityProviderDetails</code> data type.
+     *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
+     *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
+     *        or the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -689,44 +689,43 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which
-     * allows you to store and access user credentials within the Amazon Web Services Transfer Family service.
+     * The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows you to
+     * store and access user credentials within the Transfer Family service.
      * </p>
      * <p>
-     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     * Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web Services
-     * using AD Connectors. This option also requires you to provide a Directory ID using the
+     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service for
+     * Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
+     * Services using AD Connector. This option also requires you to provide a Directory ID by using the
      * <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
      * Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
-     * using the <code>IdentityProviderDetails</code> parameter.
+     * <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     * authentication by using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
-     * @return Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
-     *         which allows you to store and access user credentials within the Amazon Web Services Transfer Family
-     *         service.</p>
+     * @return The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows
+     *         you to store and access user credentials within the Transfer Family service.</p>
      *         <p>
-     *         Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web
-     *         Services Managed Active Directory or Microsoft Active Directory in your on-premises environment or in
-     *         Amazon Web Services using AD Connectors. This option also requires you to provide a Directory ID using
-     *         the <code>IdentityProviderDetails</code> parameter.
+     *         Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service
+     *         for Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon
+     *         Web Services using AD Connector. This option also requires you to provide a Directory ID by using the
+     *         <code>IdentityProviderDetails</code> parameter.
      *         </p>
      *         <p>
      *         Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     *         <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
-     *         authentication using the <code>IdentityProviderDetails</code> parameter.
+     *         <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     *         authentication by using the <code>IdentityProviderDetails</code> parameter.
      *         </p>
      *         <p>
-     *         Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
-     *         choose this value, you must specify the ARN for the lambda function in the <code>Function</code>
-     *         parameter for the <code>IdentityProviderDetails</code> data type.
+     *         Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If
+     *         you choose this value, you must specify the ARN for the Lambda function in the <code>Function</code>
+     *         parameter or the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -736,45 +735,44 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which
-     * allows you to store and access user credentials within the Amazon Web Services Transfer Family service.
+     * The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows you to
+     * store and access user credentials within the Transfer Family service.
      * </p>
      * <p>
-     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     * Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web Services
-     * using AD Connectors. This option also requires you to provide a Directory ID using the
+     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service for
+     * Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
+     * Services using AD Connector. This option also requires you to provide a Directory ID by using the
      * <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
      * Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
-     * using the <code>IdentityProviderDetails</code> parameter.
+     * <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     * authentication by using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
      * @param identityProviderType
-     *        Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
-     *        which allows you to store and access user credentials within the Amazon Web Services Transfer Family
-     *        service.</p>
+     *        The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows
+     *        you to store and access user credentials within the Transfer Family service.</p>
      *        <p>
-     *        Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     *        Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
-     *        Services using AD Connectors. This option also requires you to provide a Directory ID using the
+     *        Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service
+     *        for Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon
+     *        Web Services using AD Connector. This option also requires you to provide a Directory ID by using the
      *        <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
      *        Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     *        <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
-     *        authentication using the <code>IdentityProviderDetails</code> parameter.
+     *        <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     *        authentication by using the <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
-     *        Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
-     *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
-     *        for the <code>IdentityProviderDetails</code> data type.
+     *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
+     *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
+     *        or the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -786,45 +784,44 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which
-     * allows you to store and access user credentials within the Amazon Web Services Transfer Family service.
+     * The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows you to
+     * store and access user credentials within the Transfer Family service.
      * </p>
      * <p>
-     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     * Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web Services
-     * using AD Connectors. This option also requires you to provide a Directory ID using the
+     * Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service for
+     * Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
+     * Services using AD Connector. This option also requires you to provide a Directory ID by using the
      * <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
      * Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
-     * using the <code>IdentityProviderDetails</code> parameter.
+     * <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     * authentication by using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
-     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter or the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
      * @param identityProviderType
-     *        Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
-     *        which allows you to store and access user credentials within the Amazon Web Services Transfer Family
-     *        service.</p>
+     *        The mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>, which allows
+     *        you to store and access user credentials within the Transfer Family service.</p>
      *        <p>
-     *        Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Amazon Web Services
-     *        Managed Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon Web
-     *        Services using AD Connectors. This option also requires you to provide a Directory ID using the
+     *        Use <code>AWS_DIRECTORY_SERVICE</code> to provide access to Active Directory groups in Directory Service
+     *        for Microsoft Active Directory or Microsoft Active Directory in your on-premises environment or in Amazon
+     *        Web Services using AD Connector. This option also requires you to provide a Directory ID by using the
      *        <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
      *        Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
-     *        <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
-     *        authentication using the <code>IdentityProviderDetails</code> parameter.
+     *        <code>API_GATEWAY</code> setting requires you to provide an Amazon API Gateway endpoint URL to call for
+     *        authentication by using the <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
-     *        Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
-     *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
-     *        for the <code>IdentityProviderDetails</code> data type.
+     *        Use the <code>AWS_LAMBDA</code> value to directly use an Lambda function as your identity provider. If you
+     *        choose this value, you must specify the ARN for the Lambda function in the <code>Function</code> parameter
+     *        or the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -836,15 +833,15 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM) role
-     * that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When set, user
-     * activity can be viewed in your CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to turn on
+     * Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity in your
+     * CloudWatch logs.
      * </p>
      * 
      * @param loggingRole
-     *        Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM)
-     *        role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When
-     *        set, user activity can be viewed in your CloudWatch logs.
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to
+     *        turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity
+     *        in your CloudWatch logs.
      */
 
     public void setLoggingRole(String loggingRole) {
@@ -853,14 +850,14 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM) role
-     * that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When set, user
-     * activity can be viewed in your CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to turn on
+     * Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity in your
+     * CloudWatch logs.
      * </p>
      * 
-     * @return Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM)
-     *         role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When
-     *         set, user activity can be viewed in your CloudWatch logs.
+     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to
+     *         turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity
+     *         in your CloudWatch logs.
      */
 
     public String getLoggingRole() {
@@ -869,15 +866,15 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM) role
-     * that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When set, user
-     * activity can be viewed in your CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to turn on
+     * Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity in your
+     * CloudWatch logs.
      * </p>
      * 
      * @param loggingRole
-     *        Specifies the Amazon Resource Name (ARN) of the Amazon Web Services Identity and Access Management (IAM)
-     *        role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events. When
-     *        set, user activity can be viewed in your CloudWatch logs.
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that allows a server to
+     *        turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents. When set, you can view user activity
+     *        in your CloudWatch logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -888,7 +885,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * Specifies a string to display when users connect to a server. This string is displayed after the user
      * authenticates.
      * </p>
      * <note>
@@ -898,7 +895,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </note>
      * 
      * @param postAuthenticationLoginBanner
-     *        Specify a string to display when users connect to a server. This string is displayed after the user
+     *        Specifies a string to display when users connect to a server. This string is displayed after the user
      *        authenticates.</p> <note>
      *        <p>
      *        The SFTP protocol does not support post-authentication display banners.
@@ -911,7 +908,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * Specifies a string to display when users connect to a server. This string is displayed after the user
      * authenticates.
      * </p>
      * <note>
@@ -920,7 +917,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * </note>
      * 
-     * @return Specify a string to display when users connect to a server. This string is displayed after the user
+     * @return Specifies a string to display when users connect to a server. This string is displayed after the user
      *         authenticates.</p> <note>
      *         <p>
      *         The SFTP protocol does not support post-authentication display banners.
@@ -933,7 +930,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed after the user
+     * Specifies a string to display when users connect to a server. This string is displayed after the user
      * authenticates.
      * </p>
      * <note>
@@ -943,7 +940,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </note>
      * 
      * @param postAuthenticationLoginBanner
-     *        Specify a string to display when users connect to a server. This string is displayed after the user
+     *        Specifies a string to display when users connect to a server. This string is displayed after the user
      *        authenticates.</p> <note>
      *        <p>
      *        The SFTP protocol does not support post-authentication display banners.
@@ -958,16 +955,16 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed before the user
-     * authenticates. For example, the following banner displays details about using the system.
+     * Specifies a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system:
      * </p>
      * <p>
      * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      * </p>
      * 
      * @param preAuthenticationLoginBanner
-     *        Specify a string to display when users connect to a server. This string is displayed before the user
-     *        authenticates. For example, the following banner displays details about using the system.</p>
+     *        Specifies a string to display when users connect to a server. This string is displayed before the user
+     *        authenticates. For example, the following banner displays details about using the system:</p>
      *        <p>
      *        <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      */
@@ -978,15 +975,15 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed before the user
-     * authenticates. For example, the following banner displays details about using the system.
+     * Specifies a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system:
      * </p>
      * <p>
      * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      * </p>
      * 
-     * @return Specify a string to display when users connect to a server. This string is displayed before the user
-     *         authenticates. For example, the following banner displays details about using the system.</p>
+     * @return Specifies a string to display when users connect to a server. This string is displayed before the user
+     *         authenticates. For example, the following banner displays details about using the system:</p>
      *         <p>
      *         <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      */
@@ -997,16 +994,16 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify a string to display when users connect to a server. This string is displayed before the user
-     * authenticates. For example, the following banner displays details about using the system.
+     * Specifies a string to display when users connect to a server. This string is displayed before the user
+     * authenticates. For example, the following banner displays details about using the system:
      * </p>
      * <p>
      * <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      * </p>
      * 
      * @param preAuthenticationLoginBanner
-     *        Specify a string to display when users connect to a server. This string is displayed before the user
-     *        authenticates. For example, the following banner displays details about using the system.</p>
+     *        Specifies a string to display when users connect to a server. This string is displayed before the user
+     *        authenticates. For example, the following banner displays details about using the system:</p>
      *        <p>
      *        <code>This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1372,9 +1369,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code> indicates
-     * that the server can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that
-     * the server cannot perform file transfer operations.
+     * The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server can
+     * accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the server cannot
+     * perform file transfer operations.
      * </p>
      * <p>
      * The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an intermediate
@@ -1383,9 +1380,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param state
-     *        Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code>
-     *        indicates that the server can accept jobs and transfer files. A <code>State</code> value of
-     *        <code>OFFLINE</code> means that the server cannot perform file transfer operations.</p>
+     *        The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server
+     *        can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the
+     *        server cannot perform file transfer operations.</p>
      *        <p>
      *        The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an
      *        intermediate state, either not fully able to respond, or not fully offline. The values of
@@ -1399,9 +1396,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code> indicates
-     * that the server can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that
-     * the server cannot perform file transfer operations.
+     * The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server can
+     * accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the server cannot
+     * perform file transfer operations.
      * </p>
      * <p>
      * The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an intermediate
@@ -1409,9 +1406,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * <code>STOP_FAILED</code> can indicate an error condition.
      * </p>
      * 
-     * @return Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code>
-     *         indicates that the server can accept jobs and transfer files. A <code>State</code> value of
-     *         <code>OFFLINE</code> means that the server cannot perform file transfer operations.</p>
+     * @return The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server
+     *         can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the
+     *         server cannot perform file transfer operations.</p>
      *         <p>
      *         The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an
      *         intermediate state, either not fully able to respond, or not fully offline. The values of
@@ -1425,9 +1422,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code> indicates
-     * that the server can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that
-     * the server cannot perform file transfer operations.
+     * The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server can
+     * accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the server cannot
+     * perform file transfer operations.
      * </p>
      * <p>
      * The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an intermediate
@@ -1436,9 +1433,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param state
-     *        Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code>
-     *        indicates that the server can accept jobs and transfer files. A <code>State</code> value of
-     *        <code>OFFLINE</code> means that the server cannot perform file transfer operations.</p>
+     *        The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server
+     *        can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the
+     *        server cannot perform file transfer operations.</p>
      *        <p>
      *        The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an
      *        intermediate state, either not fully able to respond, or not fully offline. The values of
@@ -1454,9 +1451,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code> indicates
-     * that the server can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that
-     * the server cannot perform file transfer operations.
+     * The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server can
+     * accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the server cannot
+     * perform file transfer operations.
      * </p>
      * <p>
      * The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an intermediate
@@ -1465,9 +1462,9 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param state
-     *        Specifies the condition of a server for the server that was described. A value of <code>ONLINE</code>
-     *        indicates that the server can accept jobs and transfer files. A <code>State</code> value of
-     *        <code>OFFLINE</code> means that the server cannot perform file transfer operations.</p>
+     *        The condition of the server that was described. A value of <code>ONLINE</code> indicates that the server
+     *        can accept jobs and transfer files. A <code>State</code> value of <code>OFFLINE</code> means that the
+     *        server cannot perform file transfer operations.</p>
      *        <p>
      *        The states of <code>STARTING</code> and <code>STOPPING</code> indicate that the server is in an
      *        intermediate state, either not fully able to respond, or not fully offline. The values of
@@ -1601,11 +1598,12 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
+     * workflow.
      * </p>
      * 
      * @param workflowDetails
-     *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *        Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *        workflow.
      */
 
@@ -1615,10 +1613,11 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
+     * workflow.
      * </p>
      * 
-     * @return Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     * @return Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *         workflow.
      */
 
@@ -1628,11 +1627,12 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow.
+     * Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
+     * workflow.
      * </p>
      * 
      * @param workflowDetails
-     *        Specifies the workflow ID for the workflow to assign and the execution role used for executing the
+     *        Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *        workflow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

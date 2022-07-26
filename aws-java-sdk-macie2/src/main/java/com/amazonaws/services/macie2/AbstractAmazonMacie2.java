@@ -16,6 +16,7 @@ import javax.annotation.Generated;
 
 import com.amazonaws.services.macie2.model.*;
 import com.amazonaws.*;
+import com.amazonaws.services.macie2.waiters.AmazonMacie2Waiters;
 
 /**
  * Abstract implementation of {@code AmazonMacie2}. Convenient method forms pass through to the corresponding overload
@@ -203,6 +204,21 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
     }
 
     @Override
+    public GetRevealConfigurationResult getRevealConfiguration(GetRevealConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSensitiveDataOccurrencesResult getSensitiveDataOccurrences(GetSensitiveDataOccurrencesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSensitiveDataOccurrencesAvailabilityResult getSensitiveDataOccurrencesAvailability(GetSensitiveDataOccurrencesAvailabilityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetUsageStatisticsResult getUsageStatistics(GetUsageStatisticsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -313,12 +329,22 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
     }
 
     @Override
+    public UpdateRevealConfigurationResult updateRevealConfiguration(UpdateRevealConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public com.amazonaws.ResponseMetadata getCachedResponseMetadata(com.amazonaws.AmazonWebServiceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AmazonMacie2Waiters waiters() {
         throw new java.lang.UnsupportedOperationException();
     }
 

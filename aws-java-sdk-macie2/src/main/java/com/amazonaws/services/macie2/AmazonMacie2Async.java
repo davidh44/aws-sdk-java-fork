@@ -1170,6 +1170,107 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
+     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param getRevealConfigurationRequest
+     * @return A Java Future containing the result of the GetRevealConfiguration operation returned by the service.
+     * @sample AmazonMacie2Async.GetRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetRevealConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRevealConfigurationResult> getRevealConfigurationAsync(GetRevealConfigurationRequest getRevealConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param getRevealConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRevealConfiguration operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.GetRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetRevealConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRevealConfigurationResult> getRevealConfigurationAsync(GetRevealConfigurationRequest getRevealConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRevealConfigurationRequest, GetRevealConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesRequest
+     * @return A Java Future containing the result of the GetSensitiveDataOccurrences operation returned by the service.
+     * @sample AmazonMacie2Async.GetSensitiveDataOccurrences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSensitiveDataOccurrencesResult> getSensitiveDataOccurrencesAsync(
+            GetSensitiveDataOccurrencesRequest getSensitiveDataOccurrencesRequest);
+
+    /**
+     * <p>
+     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSensitiveDataOccurrences operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.GetSensitiveDataOccurrences
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSensitiveDataOccurrencesResult> getSensitiveDataOccurrencesAsync(
+            GetSensitiveDataOccurrencesRequest getSensitiveDataOccurrencesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSensitiveDataOccurrencesRequest, GetSensitiveDataOccurrencesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesAvailabilityRequest
+     * @return A Java Future containing the result of the GetSensitiveDataOccurrencesAvailability operation returned by
+     *         the service.
+     * @sample AmazonMacie2Async.GetSensitiveDataOccurrencesAvailability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrencesAvailability"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSensitiveDataOccurrencesAvailabilityResult> getSensitiveDataOccurrencesAvailabilityAsync(
+            GetSensitiveDataOccurrencesAvailabilityRequest getSensitiveDataOccurrencesAvailabilityRequest);
+
+    /**
+     * <p>
+     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * </p>
+     * 
+     * @param getSensitiveDataOccurrencesAvailabilityRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSensitiveDataOccurrencesAvailability operation returned by
+     *         the service.
+     * @sample AmazonMacie2AsyncHandler.GetSensitiveDataOccurrencesAvailability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetSensitiveDataOccurrencesAvailability"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSensitiveDataOccurrencesAvailabilityResult> getSensitiveDataOccurrencesAvailabilityAsync(
+            GetSensitiveDataOccurrencesAvailabilityRequest getSensitiveDataOccurrencesAvailabilityRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSensitiveDataOccurrencesAvailabilityRequest, GetSensitiveDataOccurrencesAvailabilityResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves (queries) quotas and aggregated usage data for one or more accounts.
      * </p>
      * 
@@ -1879,5 +1980,40 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
     java.util.concurrent.Future<UpdateOrganizationConfigurationResult> updateOrganizationConfigurationAsync(
             UpdateOrganizationConfigurationRequest updateOrganizationConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateOrganizationConfigurationRequest, UpdateOrganizationConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param updateRevealConfigurationRequest
+     * @return A Java Future containing the result of the UpdateRevealConfiguration operation returned by the service.
+     * @sample AmazonMacie2Async.UpdateRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateRevealConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRevealConfigurationResult> updateRevealConfigurationAsync(
+            UpdateRevealConfigurationRequest updateRevealConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
+     * by findings.
+     * </p>
+     * 
+     * @param updateRevealConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRevealConfiguration operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.UpdateRevealConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateRevealConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRevealConfigurationResult> updateRevealConfigurationAsync(
+            UpdateRevealConfigurationRequest updateRevealConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRevealConfigurationRequest, UpdateRevealConfigurationResult> asyncHandler);
 
 }

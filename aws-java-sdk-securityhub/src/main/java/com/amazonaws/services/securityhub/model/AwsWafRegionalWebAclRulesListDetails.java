@@ -31,8 +31,8 @@ public class AwsWafRegionalWebAclRulesListDetails implements Serializable, Clone
 
     /**
      * <p>
-     * The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or
-     * count the request.
+     * The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or count
+     * the request.
      * </p>
      */
     private AwsWafRegionalWebAclRulesListActionDetails action;
@@ -64,13 +64,13 @@ public class AwsWafRegionalWebAclRulesListDetails implements Serializable, Clone
 
     /**
      * <p>
-     * The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or
-     * count the request.
+     * The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or count
+     * the request.
      * </p>
      * 
      * @param action
-     *        The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block,
-     *        or count the request.
+     *        The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or
+     *        count the request.
      */
 
     public void setAction(AwsWafRegionalWebAclRulesListActionDetails action) {
@@ -79,12 +79,12 @@ public class AwsWafRegionalWebAclRulesListDetails implements Serializable, Clone
 
     /**
      * <p>
-     * The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or
-     * count the request.
+     * The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or count
+     * the request.
      * </p>
      * 
-     * @return The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow,
-     *         block, or count the request.
+     * @return The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or
+     *         count the request.
      */
 
     public AwsWafRegionalWebAclRulesListActionDetails getAction() {
@@ -93,13 +93,13 @@ public class AwsWafRegionalWebAclRulesListDetails implements Serializable, Clone
 
     /**
      * <p>
-     * The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block, or
-     * count the request.
+     * The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or count
+     * the request.
      * </p>
      * 
      * @param action
-     *        The action that AWS WAF takes when a web request matches all conditions in the rule, such as allow, block,
-     *        or count the request.
+     *        The action that WAF takes when a web request matches all conditions in the rule, such as allow, block, or
+     *        count the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

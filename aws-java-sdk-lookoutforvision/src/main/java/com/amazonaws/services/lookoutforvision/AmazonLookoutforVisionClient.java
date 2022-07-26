@@ -1244,7 +1244,8 @@ public class AmazonLookoutforVisionClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Lists the Amazon Lookout for Vision projects in your AWS account.
+     * Lists the Amazon Lookout for Vision projects in your AWS account that are in the AWS Region in which you call
+     * <code>ListProjects</code>.
      * </p>
      * <p>
      * The <code>ListProjects</code> operation is eventually consistent. Recent calls to <code>CreateProject</code> and

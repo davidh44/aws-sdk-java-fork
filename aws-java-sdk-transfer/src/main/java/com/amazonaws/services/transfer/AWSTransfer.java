@@ -28,14 +28,13 @@ import com.amazonaws.services.transfer.waiters.AWSTransferWaiters;
  * </p>
  * <p>
  * <p>
- * Amazon Web Services Transfer Family is a fully managed service that enables the transfer of files over the File
- * Transfer Protocol (FTP), File Transfer Protocol over SSL (FTPS), or Secure Shell (SSH) File Transfer Protocol (SFTP)
- * directly into and out of Amazon Simple Storage Service (Amazon S3). Amazon Web Services helps you seamlessly migrate
- * your file transfer workflows to Amazon Web Services Transfer Family by integrating with existing authentication
- * systems, and providing DNS routing with Amazon Route 53 so nothing changes for your customers and partners, or their
- * applications. With your data in Amazon S3, you can use it with Amazon Web Services services for processing,
- * analytics, machine learning, and archiving. Getting started with Amazon Web Services Transfer Family is easy since
- * there is no infrastructure to buy and set up.
+ * Transfer Family is a fully managed service that enables the transfer of files over the File Transfer Protocol (FTP),
+ * File Transfer Protocol over SSL (FTPS), or Secure Shell (SSH) File Transfer Protocol (SFTP) directly into and out of
+ * Amazon Simple Storage Service (Amazon S3). Amazon Web Services helps you seamlessly migrate your file transfer
+ * workflows to Transfer Family by integrating with existing authentication systems, and providing DNS routing with
+ * Amazon Route 53 so nothing changes for your customers and partners, or their applications. With your data in Amazon
+ * S3, you can use it with Amazon Web Services for processing, analytics, machine learning, and archiving. Getting
+ * started with Transfer Family is easy since there is no infrastructure to buy and set up.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -52,10 +51,9 @@ public interface AWSTransfer {
     /**
      * <p>
      * Used by administrators to choose which groups in the directory should have access to upload and download files
-     * over the enabled protocols using Amazon Web Services Transfer Family. For example, a Microsoft Active Directory
-     * might contain 50,000 users, but only a small fraction might need the ability to transfer files to the server. An
-     * administrator can use <code>CreateAccess</code> to limit the access to the correct set of users who need this
-     * ability.
+     * over the enabled protocols using Transfer Family. For example, a Microsoft Active Directory might contain 50,000
+     * users, but only a small fraction might need the ability to transfer files to the server. An administrator can use
+     * <code>CreateAccess</code> to limit the access to the correct set of users who need this ability.
      * </p>
      * 
      * @param createAccessRequest
@@ -75,6 +73,81 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     CreateAccessResult createAccess(CreateAccessRequest createAccessRequest);
+
+    /**
+     * <p>
+     * Creates an agreement. An agreement is a bilateral trading partner agreement, or partnership, between an Transfer
+     * Family server and an AS2 process. The agreement defines the file and message transfer relationship between the
+     * server and the AS2 process. To define an agreement, Transfer Family combines a server, local profile, partner
+     * profile, certificate, and other attributes.
+     * </p>
+     * <p>
+     * The partner is identified with the <code>PartnerProfileId</code>, and the AS2 process is identified with the
+     * <code>LocalProfileId</code>.
+     * </p>
+     * 
+     * @param createAgreementRequest
+     * @return Result of the CreateAgreement operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.CreateAgreement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateAgreement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateAgreementResult createAgreement(CreateAgreementRequest createAgreementRequest);
+
+    /**
+     * <p>
+     * Creates the connector, which captures the parameters for an outbound connection for the AS2 protocol. The
+     * connector is required for sending files from a customer's non Amazon Web Services server.
+     * </p>
+     * 
+     * @param createConnectorRequest
+     * @return Result of the CreateConnector operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.CreateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateConnectorResult createConnector(CreateConnectorRequest createConnectorRequest);
+
+    /**
+     * <p>
+     * Creates the profile for the AS2 process. The agreement is between the partner and the AS2 process.
+     * </p>
+     * 
+     * @param createProfileRequest
+     * @return Result of the CreateProfile operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.CreateProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/CreateProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateProfileResult createProfile(CreateProfileRequest createProfileRequest);
 
     /**
      * <p>
@@ -110,9 +183,9 @@ public interface AWSTransfer {
      * Creates a user and associates them with an existing file transfer protocol-enabled server. You can only create
      * and associate users with servers that have the <code>IdentityProviderType</code> set to
      * <code>SERVICE_MANAGED</code>. Using parameters for <code>CreateUser</code>, you can specify the user name, set
-     * the home directory, store the user's public key, and assign the user's Amazon Web Services Identity and Access
-     * Management (IAM) role. You can also optionally add a session policy, and assign metadata with tags that can be
-     * used to group and search for users.
+     * the home directory, store the user's public key, and assign the user's Identity and Access Management (IAM) role.
+     * You can also optionally add a session policy, and assign metadata with tags that can be used to group and search
+     * for users.
      * </p>
      * 
      * @param createUserRequest
@@ -181,6 +254,90 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     DeleteAccessResult deleteAccess(DeleteAccessRequest deleteAccessRequest);
+
+    /**
+     * <p>
+     * Delete the agreement that's specified in the provided <code>AgreementId</code>.
+     * </p>
+     * 
+     * @param deleteAgreementRequest
+     * @return Result of the DeleteAgreement operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DeleteAgreement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteAgreement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteAgreementResult deleteAgreement(DeleteAgreementRequest deleteAgreementRequest);
+
+    /**
+     * <p>
+     * Deletes the certificate that's specified in the <code>CertificateId</code> parameter.
+     * </p>
+     * 
+     * @param deleteCertificateRequest
+     * @return Result of the DeleteCertificate operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DeleteCertificate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteCertificate" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteCertificateResult deleteCertificate(DeleteCertificateRequest deleteCertificateRequest);
+
+    /**
+     * <p>
+     * Deletes the agreement that's specified in the provided <code>ConnectorId</code>.
+     * </p>
+     * 
+     * @param deleteConnectorRequest
+     * @return Result of the DeleteConnector operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DeleteConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteConnectorResult deleteConnector(DeleteConnectorRequest deleteConnectorRequest);
+
+    /**
+     * <p>
+     * Deletes the profile that's specified in the <code>ProfileId</code> parameter.
+     * </p>
+     * 
+     * @param deleteProfileRequest
+     * @return Result of the DeleteProfile operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DeleteProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteProfileResult deleteProfile(DeleteProfileRequest deleteProfileRequest);
 
     /**
      * <p>
@@ -286,7 +443,7 @@ public interface AWSTransfer {
     /**
      * <p>
      * Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its
-     * <code>ServerId</code> property and its <code>ExternalID</code>.
+     * <code>ServerId</code> property and its <code>ExternalId</code>.
      * </p>
      * <p>
      * The response from this call returns the properties of the access that is associated with the
@@ -311,6 +468,69 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Describes the agreement that's identified by the <code>AgreementId</code>.
+     * </p>
+     * 
+     * @param describeAgreementRequest
+     * @return Result of the DescribeAgreement operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeAgreement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeAgreement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeAgreementResult describeAgreement(DescribeAgreementRequest describeAgreementRequest);
+
+    /**
+     * <p>
+     * Describes the certificate that's identified by the <code>CertificateId</code>.
+     * </p>
+     * 
+     * @param describeCertificateRequest
+     * @return Result of the DescribeCertificate operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeCertificate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeCertificate" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeCertificateResult describeCertificate(DescribeCertificateRequest describeCertificateRequest);
+
+    /**
+     * <p>
+     * Describes the connector that's identified by the <code>ConnectorId.</code>
+     * </p>
+     * 
+     * @param describeConnectorRequest
+     * @return Result of the DescribeConnector operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeConnectorResult describeConnector(DescribeConnectorRequest describeConnectorRequest);
+
+    /**
+     * <p>
      * You can use <code>DescribeExecution</code> to check the details of the execution of the specified workflow.
      * </p>
      * 
@@ -329,6 +549,27 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     DescribeExecutionResult describeExecution(DescribeExecutionRequest describeExecutionRequest);
+
+    /**
+     * <p>
+     * Returns the details of the profile that's specified by the <code>ProfileId</code>.
+     * </p>
+     * 
+     * @param describeProfileRequest
+     * @return Result of the DescribeProfile operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeProfileResult describeProfile(DescribeProfileRequest describeProfileRequest);
 
     /**
      * <p>
@@ -429,6 +670,28 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Imports the signing and encryption certificates that you need to create local (AS2) profiles and partner
+     * profiles.
+     * </p>
+     * 
+     * @param importCertificateRequest
+     * @return Result of the ImportCertificate operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ImportCertificate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ImportCertificate" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportCertificateResult importCertificate(ImportCertificateRequest importCertificateRequest);
+
+    /**
+     * <p>
      * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to
      * the specific file transfer protocol-enabled server, identified by <code>ServerId</code>.
      * </p>
@@ -482,6 +745,81 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Returns a list of the agreements for the server that's identified by the <code>ServerId</code> that you supply.
+     * If you want to limit the results to a certain number, supply a value for the <code>MaxResults</code> parameter.
+     * If you ran the command previously and received a value for <code>NextToken</code>, you can supply that value to
+     * continue listing agreements from where you left off.
+     * </p>
+     * 
+     * @param listAgreementsRequest
+     * @return Result of the ListAgreements operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListAgreements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListAgreements" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListAgreementsResult listAgreements(ListAgreementsRequest listAgreementsRequest);
+
+    /**
+     * <p>
+     * Returns a list of the current certificates that have been imported into Transfer Family. If you want to limit the
+     * results to a certain number, supply a value for the <code>MaxResults</code> parameter. If you ran the command
+     * previously and received a value for the <code>NextToken</code> parameter, you can supply that value to continue
+     * listing certificates from where you left off.
+     * </p>
+     * 
+     * @param listCertificatesRequest
+     * @return Result of the ListCertificates operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListCertificates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListCertificates" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListCertificatesResult listCertificates(ListCertificatesRequest listCertificatesRequest);
+
+    /**
+     * <p>
+     * Lists the connectors for the specified Region.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @return Result of the ListConnectors operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListConnectorsResult listConnectors(ListConnectorsRequest listConnectorsRequest);
+
+    /**
+     * <p>
      * Lists all executions for the specified workflow.
      * </p>
      * 
@@ -502,6 +840,31 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     ListExecutionsResult listExecutions(ListExecutionsRequest listExecutionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of the profiles for your system. If you want to limit the results to a certain number, supply a
+     * value for the <code>MaxResults</code> parameter. If you ran the command previously and received a value for
+     * <code>NextToken</code>, you can supply that value to continue listing profiles from where you left off.
+     * </p>
+     * 
+     * @param listProfilesRequest
+     * @return Result of the ListProfiles operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListProfiles" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListProfilesResult listProfiles(ListProfilesRequest listProfilesRequest);
 
     /**
      * <p>
@@ -644,6 +1007,30 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Begins an outbound file transfer. You specify the <code>ConnectorId</code> and the file paths for where to send
+     * the files.
+     * </p>
+     * 
+     * @param startFileTransferRequest
+     * @return Result of the StartFileTransfer operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.StartFileTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/StartFileTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartFileTransferResult startFileTransfer(StartFileTransferRequest startFileTransferRequest);
+
+    /**
+     * <p>
      * Changes the state of a file transfer protocol-enabled server from <code>OFFLINE</code> to <code>ONLINE</code>. It
      * has no impact on a server that is already <code>ONLINE</code>. An <code>ONLINE</code> server can accept and
      * process file transfer jobs.
@@ -682,7 +1069,7 @@ public interface AWSTransfer {
      * </p>
      * <note>
      * <p>
-     * Stopping the server will not reduce or impact your file transfer protocol endpoint billing; you must delete the
+     * Stopping the server does not reduce or impact your file transfer protocol endpoint billing; you must delete the
      * server to stop being billed.
      * </p>
      * </note>
@@ -844,6 +1231,98 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     UpdateAccessResult updateAccess(UpdateAccessRequest updateAccessRequest);
+
+    /**
+     * <p>
+     * Updates some of the parameters for an existing agreement. Provide the <code>AgreementId</code> and the
+     * <code>ServerId</code> for the agreement that you want to update, along with the new values for the parameters to
+     * update.
+     * </p>
+     * 
+     * @param updateAgreementRequest
+     * @return Result of the UpdateAgreement operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.UpdateAgreement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateAgreement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateAgreementResult updateAgreement(UpdateAgreementRequest updateAgreementRequest);
+
+    /**
+     * <p>
+     * Updates the active and inactive dates for a certificate.
+     * </p>
+     * 
+     * @param updateCertificateRequest
+     * @return Result of the UpdateCertificate operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.UpdateCertificate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateCertificate" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateCertificateResult updateCertificate(UpdateCertificateRequest updateCertificateRequest);
+
+    /**
+     * <p>
+     * Updates some of the parameters for an existing connector. Provide the <code>ConnectorId</code> for the connector
+     * that you want to update, along with the new values for the parameters to update.
+     * </p>
+     * 
+     * @param updateConnectorRequest
+     * @return Result of the UpdateConnector operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.UpdateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateConnectorResult updateConnector(UpdateConnectorRequest updateConnectorRequest);
+
+    /**
+     * <p>
+     * Updates some of the parameters for an existing profile. Provide the <code>ProfileId</code> for the profile that
+     * you want to update, along with the new values for the parameters to update.
+     * </p>
+     * 
+     * @param updateProfileRequest
+     * @return Result of the UpdateProfile operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.UpdateProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateProfileResult updateProfile(UpdateProfileRequest updateProfileRequest);
 
     /**
      * <p>

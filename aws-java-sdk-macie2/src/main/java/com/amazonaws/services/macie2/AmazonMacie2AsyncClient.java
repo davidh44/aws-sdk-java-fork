@@ -1247,6 +1247,107 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
     }
 
     @Override
+    public java.util.concurrent.Future<GetRevealConfigurationResult> getRevealConfigurationAsync(GetRevealConfigurationRequest request) {
+
+        return getRevealConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRevealConfigurationResult> getRevealConfigurationAsync(final GetRevealConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRevealConfigurationRequest, GetRevealConfigurationResult> asyncHandler) {
+        final GetRevealConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRevealConfigurationResult>() {
+            @Override
+            public GetRevealConfigurationResult call() throws Exception {
+                GetRevealConfigurationResult result = null;
+
+                try {
+                    result = executeGetRevealConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesResult> getSensitiveDataOccurrencesAsync(GetSensitiveDataOccurrencesRequest request) {
+
+        return getSensitiveDataOccurrencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesResult> getSensitiveDataOccurrencesAsync(final GetSensitiveDataOccurrencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSensitiveDataOccurrencesRequest, GetSensitiveDataOccurrencesResult> asyncHandler) {
+        final GetSensitiveDataOccurrencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSensitiveDataOccurrencesResult>() {
+            @Override
+            public GetSensitiveDataOccurrencesResult call() throws Exception {
+                GetSensitiveDataOccurrencesResult result = null;
+
+                try {
+                    result = executeGetSensitiveDataOccurrences(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesAvailabilityResult> getSensitiveDataOccurrencesAvailabilityAsync(
+            GetSensitiveDataOccurrencesAvailabilityRequest request) {
+
+        return getSensitiveDataOccurrencesAvailabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSensitiveDataOccurrencesAvailabilityResult> getSensitiveDataOccurrencesAvailabilityAsync(
+            final GetSensitiveDataOccurrencesAvailabilityRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSensitiveDataOccurrencesAvailabilityRequest, GetSensitiveDataOccurrencesAvailabilityResult> asyncHandler) {
+        final GetSensitiveDataOccurrencesAvailabilityRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSensitiveDataOccurrencesAvailabilityResult>() {
+            @Override
+            public GetSensitiveDataOccurrencesAvailabilityResult call() throws Exception {
+                GetSensitiveDataOccurrencesAvailabilityResult result = null;
+
+                try {
+                    result = executeGetSensitiveDataOccurrencesAvailability(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUsageStatisticsResult> getUsageStatisticsAsync(GetUsageStatisticsRequest request) {
 
         return getUsageStatisticsAsync(request, null);
@@ -1964,6 +2065,39 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
 
                 try {
                     result = executeUpdateOrganizationConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRevealConfigurationResult> updateRevealConfigurationAsync(UpdateRevealConfigurationRequest request) {
+
+        return updateRevealConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRevealConfigurationResult> updateRevealConfigurationAsync(final UpdateRevealConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRevealConfigurationRequest, UpdateRevealConfigurationResult> asyncHandler) {
+        final UpdateRevealConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRevealConfigurationResult>() {
+            @Override
+            public UpdateRevealConfigurationResult call() throws Exception {
+                UpdateRevealConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateRevealConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
