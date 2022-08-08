@@ -27,7 +27,7 @@ public class PutPermissionsBoundaryToPermissionSetRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      */
     private String instanceArn;
@@ -46,11 +46,11 @@ public class PutPermissionsBoundaryToPermissionSetRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      * 
      * @param instanceArn
-     *        The ARN of the SSO instance under which the operation will be executed.
+     *        The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      */
 
     public void setInstanceArn(String instanceArn) {
@@ -59,10 +59,10 @@ public class PutPermissionsBoundaryToPermissionSetRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      * 
-     * @return The ARN of the SSO instance under which the operation will be executed.
+     * @return The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      */
 
     public String getInstanceArn() {
@@ -71,11 +71,11 @@ public class PutPermissionsBoundaryToPermissionSetRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      * 
      * @param instanceArn
-     *        The ARN of the SSO instance under which the operation will be executed.
+     *        The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

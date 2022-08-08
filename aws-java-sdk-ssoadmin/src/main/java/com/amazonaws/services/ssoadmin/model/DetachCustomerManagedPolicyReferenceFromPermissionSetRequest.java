@@ -28,7 +28,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      */
     private String instanceArn;
@@ -40,19 +40,19 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
     private String permissionSetArn;
     /**
      * <p>
-     * Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches the name
-     * and path in each Amazon Web Services account where you want to deploy your permission set.
+     * Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and
+     * path in each Amazon Web Services account where you want to deploy your permission set.
      * </p>
      */
     private CustomerManagedPolicyReference customerManagedPolicyReference;
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      * 
      * @param instanceArn
-     *        The ARN of the SSO instance under which the operation will be executed.
+     *        The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      */
 
     public void setInstanceArn(String instanceArn) {
@@ -61,10 +61,10 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      * 
-     * @return The ARN of the SSO instance under which the operation will be executed.
+     * @return The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      */
 
     public String getInstanceArn() {
@@ -73,11 +73,11 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * </p>
      * 
      * @param instanceArn
-     *        The ARN of the SSO instance under which the operation will be executed.
+     *        The ARN of the Amazon Web Services SSO instance under which the operation will be executed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,13 +128,13 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
 
     /**
      * <p>
-     * Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches the name
-     * and path in each Amazon Web Services account where you want to deploy your permission set.
+     * Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and
+     * path in each Amazon Web Services account where you want to deploy your permission set.
      * </p>
      * 
      * @param customerManagedPolicyReference
-     *        Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches
-     *        the name and path in each Amazon Web Services account where you want to deploy your permission set.
+     *        Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the
+     *        name and path in each Amazon Web Services account where you want to deploy your permission set.
      */
 
     public void setCustomerManagedPolicyReference(CustomerManagedPolicyReference customerManagedPolicyReference) {
@@ -143,12 +143,12 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
 
     /**
      * <p>
-     * Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches the name
-     * and path in each Amazon Web Services account where you want to deploy your permission set.
+     * Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and
+     * path in each Amazon Web Services account where you want to deploy your permission set.
      * </p>
      * 
-     * @return Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches
-     *         the name and path in each Amazon Web Services account where you want to deploy your permission set.
+     * @return Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the
+     *         name and path in each Amazon Web Services account where you want to deploy your permission set.
      */
 
     public CustomerManagedPolicyReference getCustomerManagedPolicyReference() {
@@ -157,13 +157,13 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest extend
 
     /**
      * <p>
-     * Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches the name
-     * and path in each Amazon Web Services account where you want to deploy your permission set.
+     * Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and
+     * path in each Amazon Web Services account where you want to deploy your permission set.
      * </p>
      * 
      * @param customerManagedPolicyReference
-     *        Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches
-     *        the name and path in each Amazon Web Services account where you want to deploy your permission set.
+     *        Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the
+     *        name and path in each Amazon Web Services account where you want to deploy your permission set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

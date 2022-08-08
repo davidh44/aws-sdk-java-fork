@@ -27,9 +27,9 @@ public class DeletePermissionSetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
-     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information
+     * about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon
+     * Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      */
     private String instanceArn;
@@ -42,15 +42,16 @@ public class DeletePermissionSetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
-     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information
+     * about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon
+     * Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param instanceArn
-     *        The ARN of the SSO instance under which the operation will be executed. For more information about ARNs,
-     *        see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
-     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     *        The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more
+     *        information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource
+     *        Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General
+     *        Reference</i>.
      */
 
     public void setInstanceArn(String instanceArn) {
@@ -59,14 +60,15 @@ public class DeletePermissionSetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
-     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information
+     * about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon
+     * Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
-     * @return The ARN of the SSO instance under which the operation will be executed. For more information about ARNs,
-     *         see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
-     *         Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     * @return The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more
+     *         information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource
+     *         Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General
+     *         Reference</i>.
      */
 
     public String getInstanceArn() {
@@ -75,15 +77,16 @@ public class DeletePermissionSetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
-     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     * The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more information
+     * about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon
+     * Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param instanceArn
-     *        The ARN of the SSO instance under which the operation will be executed. For more information about ARNs,
-     *        see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
-     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
+     *        The ARN of the Amazon Web Services SSO instance under which the operation will be executed. For more
+     *        information about ARNs, see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource
+     *        Names (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

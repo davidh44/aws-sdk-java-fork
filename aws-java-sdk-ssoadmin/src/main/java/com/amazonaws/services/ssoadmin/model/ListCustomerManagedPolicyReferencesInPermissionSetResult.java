@@ -27,7 +27,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResult extends co
 
     /**
      * <p>
-     * Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.
+     * Specifies the names and paths of the customer managed policies that you have attached to your permission set.
      * </p>
      */
     private java.util.List<CustomerManagedPolicyReference> customerManagedPolicyReferences;
@@ -41,11 +41,11 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResult extends co
 
     /**
      * <p>
-     * Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.
+     * Specifies the names and paths of the customer managed policies that you have attached to your permission set.
      * </p>
      * 
-     * @return Specifies the names and paths of the IAM customer managed policies that you have attached to your
-     *         permission set.
+     * @return Specifies the names and paths of the customer managed policies that you have attached to your permission
+     *         set.
      */
 
     public java.util.List<CustomerManagedPolicyReference> getCustomerManagedPolicyReferences() {
@@ -54,12 +54,12 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResult extends co
 
     /**
      * <p>
-     * Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.
+     * Specifies the names and paths of the customer managed policies that you have attached to your permission set.
      * </p>
      * 
      * @param customerManagedPolicyReferences
-     *        Specifies the names and paths of the IAM customer managed policies that you have attached to your
-     *        permission set.
+     *        Specifies the names and paths of the customer managed policies that you have attached to your permission
+     *        set.
      */
 
     public void setCustomerManagedPolicyReferences(java.util.Collection<CustomerManagedPolicyReference> customerManagedPolicyReferences) {
@@ -73,7 +73,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResult extends co
 
     /**
      * <p>
-     * Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.
+     * Specifies the names and paths of the customer managed policies that you have attached to your permission set.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,8 +82,8 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResult extends co
      * </p>
      * 
      * @param customerManagedPolicyReferences
-     *        Specifies the names and paths of the IAM customer managed policies that you have attached to your
-     *        permission set.
+     *        Specifies the names and paths of the customer managed policies that you have attached to your permission
+     *        set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,12 +100,12 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResult extends co
 
     /**
      * <p>
-     * Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.
+     * Specifies the names and paths of the customer managed policies that you have attached to your permission set.
      * </p>
      * 
      * @param customerManagedPolicyReferences
-     *        Specifies the names and paths of the IAM customer managed policies that you have attached to your
-     *        permission set.
+     *        Specifies the names and paths of the customer managed policies that you have attached to your permission
+     *        set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

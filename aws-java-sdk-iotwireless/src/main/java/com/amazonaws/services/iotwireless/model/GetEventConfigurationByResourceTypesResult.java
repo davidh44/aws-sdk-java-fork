@@ -48,6 +48,12 @@ public class GetEventConfigurationByResourceTypesResult extends com.amazonaws.Am
      * </p>
      */
     private ConnectionStatusResourceTypeEventConfiguration connectionStatus;
+    /**
+     * <p>
+     * Resource type event configuration object for the message delivery status event.
+     * </p>
+     */
+    private MessageDeliveryStatusResourceTypeEventConfiguration messageDeliveryStatus;
 
     /**
      * <p>
@@ -210,6 +216,46 @@ public class GetEventConfigurationByResourceTypesResult extends com.amazonaws.Am
     }
 
     /**
+     * <p>
+     * Resource type event configuration object for the message delivery status event.
+     * </p>
+     * 
+     * @param messageDeliveryStatus
+     *        Resource type event configuration object for the message delivery status event.
+     */
+
+    public void setMessageDeliveryStatus(MessageDeliveryStatusResourceTypeEventConfiguration messageDeliveryStatus) {
+        this.messageDeliveryStatus = messageDeliveryStatus;
+    }
+
+    /**
+     * <p>
+     * Resource type event configuration object for the message delivery status event.
+     * </p>
+     * 
+     * @return Resource type event configuration object for the message delivery status event.
+     */
+
+    public MessageDeliveryStatusResourceTypeEventConfiguration getMessageDeliveryStatus() {
+        return this.messageDeliveryStatus;
+    }
+
+    /**
+     * <p>
+     * Resource type event configuration object for the message delivery status event.
+     * </p>
+     * 
+     * @param messageDeliveryStatus
+     *        Resource type event configuration object for the message delivery status event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEventConfigurationByResourceTypesResult withMessageDeliveryStatus(MessageDeliveryStatusResourceTypeEventConfiguration messageDeliveryStatus) {
+        setMessageDeliveryStatus(messageDeliveryStatus);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -228,7 +274,9 @@ public class GetEventConfigurationByResourceTypesResult extends com.amazonaws.Am
         if (getJoin() != null)
             sb.append("Join: ").append(getJoin()).append(",");
         if (getConnectionStatus() != null)
-            sb.append("ConnectionStatus: ").append(getConnectionStatus());
+            sb.append("ConnectionStatus: ").append(getConnectionStatus()).append(",");
+        if (getMessageDeliveryStatus() != null)
+            sb.append("MessageDeliveryStatus: ").append(getMessageDeliveryStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -259,6 +307,10 @@ public class GetEventConfigurationByResourceTypesResult extends com.amazonaws.Am
             return false;
         if (other.getConnectionStatus() != null && other.getConnectionStatus().equals(this.getConnectionStatus()) == false)
             return false;
+        if (other.getMessageDeliveryStatus() == null ^ this.getMessageDeliveryStatus() == null)
+            return false;
+        if (other.getMessageDeliveryStatus() != null && other.getMessageDeliveryStatus().equals(this.getMessageDeliveryStatus()) == false)
+            return false;
         return true;
     }
 
@@ -271,6 +323,7 @@ public class GetEventConfigurationByResourceTypesResult extends com.amazonaws.Am
         hashCode = prime * hashCode + ((getProximity() == null) ? 0 : getProximity().hashCode());
         hashCode = prime * hashCode + ((getJoin() == null) ? 0 : getJoin().hashCode());
         hashCode = prime * hashCode + ((getConnectionStatus() == null) ? 0 : getConnectionStatus().hashCode());
+        hashCode = prime * hashCode + ((getMessageDeliveryStatus() == null) ? 0 : getMessageDeliveryStatus().hashCode());
         return hashCode;
     }
 

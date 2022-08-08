@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The value used for mapping a specified attribute to an identity source. For more information, see <a
  * href="https://docs.aws.amazon.com/singlesignon/latest/userguide/attributemappingsconcept.html">Attribute mappings</a>
- * in the Amazon Web Services Single Sign-On User Guide.
+ * in the <i>Amazon Web Services SSO User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AccessControlAttributeValue"

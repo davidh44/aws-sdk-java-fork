@@ -167,6 +167,20 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private Integer numberOfWorkers;
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     */
+    private String executionClass;
 
     /**
      * <p>
@@ -1145,6 +1159,134 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @param executionClass
+     *        Indicates whether the job is run with a standard or flexible execution class. The standard execution-class
+     *        is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *        <p>
+     *        The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may
+     *        vary.
+     *        </p>
+     *        <p>
+     *        Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *        <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *        jobs.
+     * @see ExecutionClass
+     */
+
+    public void setExecutionClass(String executionClass) {
+        this.executionClass = executionClass;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @return Indicates whether the job is run with a standard or flexible execution class. The standard
+     *         execution-class is ideal for time-sensitive workloads that require fast job startup and dedicated
+     *         resources.</p>
+     *         <p>
+     *         The flexible execution class is appropriate for time-insensitive jobs whose start and completion times
+     *         may vary.
+     *         </p>
+     *         <p>
+     *         Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *         <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *         jobs.
+     * @see ExecutionClass
+     */
+
+    public String getExecutionClass() {
+        return this.executionClass;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @param executionClass
+     *        Indicates whether the job is run with a standard or flexible execution class. The standard execution-class
+     *        is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *        <p>
+     *        The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may
+     *        vary.
+     *        </p>
+     *        <p>
+     *        Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *        <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *        jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionClass
+     */
+
+    public StartJobRunRequest withExecutionClass(String executionClass) {
+        setExecutionClass(executionClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @param executionClass
+     *        Indicates whether the job is run with a standard or flexible execution class. The standard execution-class
+     *        is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *        <p>
+     *        The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may
+     *        vary.
+     *        </p>
+     *        <p>
+     *        Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *        <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *        jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionClass
+     */
+
+    public StartJobRunRequest withExecutionClass(ExecutionClass executionClass) {
+        this.executionClass = executionClass.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1175,7 +1317,9 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getWorkerType() != null)
             sb.append("WorkerType: ").append(getWorkerType()).append(",");
         if (getNumberOfWorkers() != null)
-            sb.append("NumberOfWorkers: ").append(getNumberOfWorkers());
+            sb.append("NumberOfWorkers: ").append(getNumberOfWorkers()).append(",");
+        if (getExecutionClass() != null)
+            sb.append("ExecutionClass: ").append(getExecutionClass());
         sb.append("}");
         return sb.toString();
     }
@@ -1230,6 +1374,10 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getNumberOfWorkers() != null && other.getNumberOfWorkers().equals(this.getNumberOfWorkers()) == false)
             return false;
+        if (other.getExecutionClass() == null ^ this.getExecutionClass() == null)
+            return false;
+        if (other.getExecutionClass() != null && other.getExecutionClass().equals(this.getExecutionClass()) == false)
+            return false;
         return true;
     }
 
@@ -1248,6 +1396,7 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getNotificationProperty() == null) ? 0 : getNotificationProperty().hashCode());
         hashCode = prime * hashCode + ((getWorkerType() == null) ? 0 : getWorkerType().hashCode());
         hashCode = prime * hashCode + ((getNumberOfWorkers() == null) ? 0 : getNumberOfWorkers().hashCode());
+        hashCode = prime * hashCode + ((getExecutionClass() == null) ? 0 : getExecutionClass().hashCode());
         return hashCode;
     }
 

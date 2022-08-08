@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the name and path of the IAM customer managed policy. You must have an IAM policy that matches the name and
- * path in each Amazon Web Services account where you want to deploy your permission set.
+ * Specifies the name and path of a customer managed policy. You must have an IAM policy that matches the name and path
+ * in each Amazon Web Services account where you want to deploy your permission set.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/CustomerManagedPolicyReference"
@@ -31,26 +31,28 @@ public class CustomerManagedPolicyReference implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the policy document.
+     * The name of the IAM policy that you have configured in each account where you want to deploy your permission set.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The path for the policy. The default is <code>/</code>. For more information, see <a
+     * The path to the IAM policy that you have configured in each account where you want to deploy your permission set.
+     * The default is <code>/</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     * >Friendly names and paths</a> in the Identity and Access Management user guide.
+     * >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      */
     private String path;
 
     /**
      * <p>
-     * The name of the policy document.
+     * The name of the IAM policy that you have configured in each account where you want to deploy your permission set.
      * </p>
      * 
      * @param name
-     *        The name of the policy document.
+     *        The name of the IAM policy that you have configured in each account where you want to deploy your
+     *        permission set.
      */
 
     public void setName(String name) {
@@ -59,10 +61,11 @@ public class CustomerManagedPolicyReference implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the policy document.
+     * The name of the IAM policy that you have configured in each account where you want to deploy your permission set.
      * </p>
      * 
-     * @return The name of the policy document.
+     * @return The name of the IAM policy that you have configured in each account where you want to deploy your
+     *         permission set.
      */
 
     public String getName() {
@@ -71,11 +74,12 @@ public class CustomerManagedPolicyReference implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the policy document.
+     * The name of the IAM policy that you have configured in each account where you want to deploy your permission set.
      * </p>
      * 
      * @param name
-     *        The name of the policy document.
+     *        The name of the IAM policy that you have configured in each account where you want to deploy your
+     *        permission set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,15 +90,17 @@ public class CustomerManagedPolicyReference implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The path for the policy. The default is <code>/</code>. For more information, see <a
+     * The path to the IAM policy that you have configured in each account where you want to deploy your permission set.
+     * The default is <code>/</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     * >Friendly names and paths</a> in the Identity and Access Management user guide.
+     * >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * 
      * @param path
-     *        The path for the policy. The default is <code>/</code>. For more information, see <a
+     *        The path to the IAM policy that you have configured in each account where you want to deploy your
+     *        permission set. The default is <code>/</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     *        >Friendly names and paths</a> in the Identity and Access Management user guide.
+     *        >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      */
 
     public void setPath(String path) {
@@ -103,14 +109,16 @@ public class CustomerManagedPolicyReference implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The path for the policy. The default is <code>/</code>. For more information, see <a
+     * The path to the IAM policy that you have configured in each account where you want to deploy your permission set.
+     * The default is <code>/</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     * >Friendly names and paths</a> in the Identity and Access Management user guide.
+     * >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * 
-     * @return The path for the policy. The default is <code>/</code>. For more information, see <a
+     * @return The path to the IAM policy that you have configured in each account where you want to deploy your
+     *         permission set. The default is <code>/</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     *         >Friendly names and paths</a> in the Identity and Access Management user guide.
+     *         >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      */
 
     public String getPath() {
@@ -119,15 +127,17 @@ public class CustomerManagedPolicyReference implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The path for the policy. The default is <code>/</code>. For more information, see <a
+     * The path to the IAM policy that you have configured in each account where you want to deploy your permission set.
+     * The default is <code>/</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     * >Friendly names and paths</a> in the Identity and Access Management user guide.
+     * >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * 
      * @param path
-     *        The path for the policy. The default is <code>/</code>. For more information, see <a
+     *        The path to the IAM policy that you have configured in each account where you want to deploy your
+     *        permission set. The default is <code>/</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names"
-     *        >Friendly names and paths</a> in the Identity and Access Management user guide.
+     *        >Friendly names and paths</a> in the <i>Identity and Access Management User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

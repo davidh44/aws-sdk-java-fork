@@ -242,6 +242,20 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, CodeGenConfigurationNode> codeGenConfigurationNodes;
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     */
+    private String executionClass;
 
     /**
      * <p>
@@ -1759,6 +1773,133 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @param executionClass
+     *        Indicates whether the job is run with a standard or flexible execution class. The standard execution class
+     *        is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *        <p>
+     *        The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may
+     *        vary.
+     *        </p>
+     *        <p>
+     *        Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *        <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *        jobs.
+     * @see ExecutionClass
+     */
+
+    public void setExecutionClass(String executionClass) {
+        this.executionClass = executionClass;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @return Indicates whether the job is run with a standard or flexible execution class. The standard execution
+     *         class is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *         <p>
+     *         The flexible execution class is appropriate for time-insensitive jobs whose start and completion times
+     *         may vary.
+     *         </p>
+     *         <p>
+     *         Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *         <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *         jobs.
+     * @see ExecutionClass
+     */
+
+    public String getExecutionClass() {
+        return this.executionClass;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @param executionClass
+     *        Indicates whether the job is run with a standard or flexible execution class. The standard execution class
+     *        is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *        <p>
+     *        The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may
+     *        vary.
+     *        </p>
+     *        <p>
+     *        Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *        <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *        jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionClass
+     */
+
+    public Job withExecutionClass(String executionClass) {
+        setExecutionClass(executionClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is run with a standard or flexible execution class. The standard execution class is
+     * ideal for time-sensitive workloads that require fast job startup and dedicated resources.
+     * </p>
+     * <p>
+     * The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary.
+     * </p>
+     * <p>
+     * Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     * <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.
+     * </p>
+     * 
+     * @param executionClass
+     *        Indicates whether the job is run with a standard or flexible execution class. The standard execution class
+     *        is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+     *        <p>
+     *        The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may
+     *        vary.
+     *        </p>
+     *        <p>
+     *        Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set
+     *        <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark
+     *        jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExecutionClass
+     */
+
+    public Job withExecutionClass(ExecutionClass executionClass) {
+        this.executionClass = executionClass.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1811,7 +1952,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getGlueVersion() != null)
             sb.append("GlueVersion: ").append(getGlueVersion()).append(",");
         if (getCodeGenConfigurationNodes() != null)
-            sb.append("CodeGenConfigurationNodes: ").append("***Sensitive Data Redacted***");
+            sb.append("CodeGenConfigurationNodes: ").append("***Sensitive Data Redacted***").append(",");
+        if (getExecutionClass() != null)
+            sb.append("ExecutionClass: ").append(getExecutionClass());
         sb.append("}");
         return sb.toString();
     }
@@ -1910,6 +2053,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCodeGenConfigurationNodes() != null && other.getCodeGenConfigurationNodes().equals(this.getCodeGenConfigurationNodes()) == false)
             return false;
+        if (other.getExecutionClass() == null ^ this.getExecutionClass() == null)
+            return false;
+        if (other.getExecutionClass() != null && other.getExecutionClass().equals(this.getExecutionClass()) == false)
+            return false;
         return true;
     }
 
@@ -1939,6 +2086,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getNotificationProperty() == null) ? 0 : getNotificationProperty().hashCode());
         hashCode = prime * hashCode + ((getGlueVersion() == null) ? 0 : getGlueVersion().hashCode());
         hashCode = prime * hashCode + ((getCodeGenConfigurationNodes() == null) ? 0 : getCodeGenConfigurationNodes().hashCode());
+        hashCode = prime * hashCode + ((getExecutionClass() == null) ? 0 : getExecutionClass().hashCode());
         return hashCode;
     }
 

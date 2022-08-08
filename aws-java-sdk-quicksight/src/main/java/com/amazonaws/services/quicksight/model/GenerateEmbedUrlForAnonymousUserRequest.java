@@ -76,13 +76,12 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * <p>
      * The domains that you want to add to the allow list for access to the generated URL that is then embedded. This
      * optional parameter overrides the static domains that are configured in the Manage QuickSight menu in the Amazon
-     * QuickSight console and instead allows only the domains that you include in this parameter. You can list up to
+     * QuickSight console. Instead, it allows only the domains that you include in this parameter. You can list up to
      * three domains or subdomains in each API call.
      * </p>
      * <p>
-     * To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow list.
-     * For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     * <code>https://sapp.amazon.com</code>.
+     * To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     * <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * </p>
      */
     private java.util.List<String> allowedDomains;
@@ -473,23 +472,21 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * <p>
      * The domains that you want to add to the allow list for access to the generated URL that is then embedded. This
      * optional parameter overrides the static domains that are configured in the Manage QuickSight menu in the Amazon
-     * QuickSight console and instead allows only the domains that you include in this parameter. You can list up to
+     * QuickSight console. Instead, it allows only the domains that you include in this parameter. You can list up to
      * three domains or subdomains in each API call.
      * </p>
      * <p>
-     * To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow list.
-     * For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     * <code>https://sapp.amazon.com</code>.
+     * To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     * <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * </p>
      * 
      * @return The domains that you want to add to the allow list for access to the generated URL that is then embedded.
      *         This optional parameter overrides the static domains that are configured in the Manage QuickSight menu in
-     *         the Amazon QuickSight console and instead allows only the domains that you include in this parameter. You
-     *         can list up to three domains or subdomains in each API call.</p>
+     *         the Amazon QuickSight console. Instead, it allows only the domains that you include in this parameter.
+     *         You can list up to three domains or subdomains in each API call.</p>
      *         <p>
-     *         To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow
-     *         list. For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     *         <code>https://sapp.amazon.com</code>.
+     *         To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     *         <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      */
 
     public java.util.List<String> getAllowedDomains() {
@@ -500,24 +497,22 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * <p>
      * The domains that you want to add to the allow list for access to the generated URL that is then embedded. This
      * optional parameter overrides the static domains that are configured in the Manage QuickSight menu in the Amazon
-     * QuickSight console and instead allows only the domains that you include in this parameter. You can list up to
+     * QuickSight console. Instead, it allows only the domains that you include in this parameter. You can list up to
      * three domains or subdomains in each API call.
      * </p>
      * <p>
-     * To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow list.
-     * For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     * <code>https://sapp.amazon.com</code>.
+     * To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     * <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * </p>
      * 
      * @param allowedDomains
      *        The domains that you want to add to the allow list for access to the generated URL that is then embedded.
      *        This optional parameter overrides the static domains that are configured in the Manage QuickSight menu in
-     *        the Amazon QuickSight console and instead allows only the domains that you include in this parameter. You
+     *        the Amazon QuickSight console. Instead, it allows only the domains that you include in this parameter. You
      *        can list up to three domains or subdomains in each API call.</p>
      *        <p>
-     *        To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow
-     *        list. For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     *        <code>https://sapp.amazon.com</code>.
+     *        To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     *        <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      */
 
     public void setAllowedDomains(java.util.Collection<String> allowedDomains) {
@@ -533,13 +528,12 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * <p>
      * The domains that you want to add to the allow list for access to the generated URL that is then embedded. This
      * optional parameter overrides the static domains that are configured in the Manage QuickSight menu in the Amazon
-     * QuickSight console and instead allows only the domains that you include in this parameter. You can list up to
+     * QuickSight console. Instead, it allows only the domains that you include in this parameter. You can list up to
      * three domains or subdomains in each API call.
      * </p>
      * <p>
-     * To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow list.
-     * For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     * <code>https://sapp.amazon.com</code>.
+     * To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     * <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -550,12 +544,11 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * @param allowedDomains
      *        The domains that you want to add to the allow list for access to the generated URL that is then embedded.
      *        This optional parameter overrides the static domains that are configured in the Manage QuickSight menu in
-     *        the Amazon QuickSight console and instead allows only the domains that you include in this parameter. You
+     *        the Amazon QuickSight console. Instead, it allows only the domains that you include in this parameter. You
      *        can list up to three domains or subdomains in each API call.</p>
      *        <p>
-     *        To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow
-     *        list. For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     *        <code>https://sapp.amazon.com</code>.
+     *        To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     *        <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -573,24 +566,22 @@ public class GenerateEmbedUrlForAnonymousUserRequest extends com.amazonaws.Amazo
      * <p>
      * The domains that you want to add to the allow list for access to the generated URL that is then embedded. This
      * optional parameter overrides the static domains that are configured in the Manage QuickSight menu in the Amazon
-     * QuickSight console and instead allows only the domains that you include in this parameter. You can list up to
+     * QuickSight console. Instead, it allows only the domains that you include in this parameter. You can list up to
      * three domains or subdomains in each API call.
      * </p>
      * <p>
-     * To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow list.
-     * For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     * <code>https://sapp.amazon.com</code>.
+     * To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     * <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * </p>
      * 
      * @param allowedDomains
      *        The domains that you want to add to the allow list for access to the generated URL that is then embedded.
      *        This optional parameter overrides the static domains that are configured in the Manage QuickSight menu in
-     *        the Amazon QuickSight console and instead allows only the domains that you include in this parameter. You
+     *        the Amazon QuickSight console. Instead, it allows only the domains that you include in this parameter. You
      *        can list up to three domains or subdomains in each API call.</p>
      *        <p>
-     *        To include a subdomain, use <code>*</code> to include all subdomains under a specific domain to the allow
-     *        list. For example, <code>https://*.sapp.amazon.com,</code> includes all subdomains under
-     *        <code>https://sapp.amazon.com</code>.
+     *        To include all subdomains under a specific domain to the allow list, use <code>*</code>. For example,
+     *        <code>https://*.sapp.amazon.com</code> includes all subdomains under <code>https://sapp.amazon.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

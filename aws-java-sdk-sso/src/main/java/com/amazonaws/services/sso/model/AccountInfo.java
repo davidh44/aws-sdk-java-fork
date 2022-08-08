@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about your AWS account.
+ * Provides information about your Amazon Web Services account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/AccountInfo" target="_top">AWS API
@@ -30,30 +30,30 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account that is assigned to the user.
+     * The identifier of the Amazon Web Services account that is assigned to the user.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The display name of the AWS account that is assigned to the user.
+     * The display name of the Amazon Web Services account that is assigned to the user.
      * </p>
      */
     private String accountName;
     /**
      * <p>
-     * The email address of the AWS account that is assigned to the user.
+     * The email address of the Amazon Web Services account that is assigned to the user.
      * </p>
      */
     private String emailAddress;
 
     /**
      * <p>
-     * The identifier of the AWS account that is assigned to the user.
+     * The identifier of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param accountId
-     *        The identifier of the AWS account that is assigned to the user.
+     *        The identifier of the Amazon Web Services account that is assigned to the user.
      */
 
     public void setAccountId(String accountId) {
@@ -62,10 +62,10 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account that is assigned to the user.
+     * The identifier of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
-     * @return The identifier of the AWS account that is assigned to the user.
+     * @return The identifier of the Amazon Web Services account that is assigned to the user.
      */
 
     public String getAccountId() {
@@ -74,11 +74,11 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account that is assigned to the user.
+     * The identifier of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param accountId
-     *        The identifier of the AWS account that is assigned to the user.
+     *        The identifier of the Amazon Web Services account that is assigned to the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The display name of the AWS account that is assigned to the user.
+     * The display name of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param accountName
-     *        The display name of the AWS account that is assigned to the user.
+     *        The display name of the Amazon Web Services account that is assigned to the user.
      */
 
     public void setAccountName(String accountName) {
@@ -102,10 +102,10 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The display name of the AWS account that is assigned to the user.
+     * The display name of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
-     * @return The display name of the AWS account that is assigned to the user.
+     * @return The display name of the Amazon Web Services account that is assigned to the user.
      */
 
     public String getAccountName() {
@@ -114,11 +114,11 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The display name of the AWS account that is assigned to the user.
+     * The display name of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param accountName
-     *        The display name of the AWS account that is assigned to the user.
+     *        The display name of the Amazon Web Services account that is assigned to the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address of the AWS account that is assigned to the user.
+     * The email address of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param emailAddress
-     *        The email address of the AWS account that is assigned to the user.
+     *        The email address of the Amazon Web Services account that is assigned to the user.
      */
 
     public void setEmailAddress(String emailAddress) {
@@ -142,10 +142,10 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address of the AWS account that is assigned to the user.
+     * The email address of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
-     * @return The email address of the AWS account that is assigned to the user.
+     * @return The email address of the Amazon Web Services account that is assigned to the user.
      */
 
     public String getEmailAddress() {
@@ -154,11 +154,11 @@ public class AccountInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address of the AWS account that is assigned to the user.
+     * The email address of the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param emailAddress
-     *        The email address of the AWS account that is assigned to the user.
+     *        The email address of the Amazon Web Services account that is assigned to the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

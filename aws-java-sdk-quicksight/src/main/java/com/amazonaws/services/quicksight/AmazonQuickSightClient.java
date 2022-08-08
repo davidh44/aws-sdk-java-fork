@@ -918,7 +918,8 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Creates an Amazon QuickSight group.
+     * Use the <code>CreateGroup</code> operation to create a group in Amazon QuickSight. You can create up to 10,000
+     * groups in a namespace. If you want to create more than 10,000 groups in a namespace, contact AWS Support.
      * </p>
      * <p>
      * The permissions resource is
@@ -5123,9 +5124,9 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Generates a temporary session URL and authorization code that you can use to embed an Amazon QuickSight read-only
-     * dashboard in your website or application. Before you use this command, make sure that you have configured the
-     * dashboards and permissions.
+     * Generates a temporary session URL and authorization code(bearer token) that you can use to embed an Amazon
+     * QuickSight read-only dashboard in your website or application. Before you use this command, make sure that you
+     * have configured the dashboards and permissions.
      * </p>
      * <p>
      * Currently, you can use <code>GetDashboardEmbedURL</code> only from the server, not from the user's browser. The
@@ -5149,8 +5150,13 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
      * </li>
      * <li>
      * <p>
+     * You are charged only when the URL is used or there is interaction with Amazon QuickSight.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * The resulting user session is valid for 15 minutes (default) up to 10 hours (maximum). You can use the optional
-     * <code>SessionLifetimeInMinutes</code> parameter to customi session duration.
+     * <code>SessionLifetimeInMinutes</code> parameter to customize session duration.
      * </p>
      * </li>
      * </ul>
@@ -6219,7 +6225,8 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Lists the namespaces for the specified Amazon Web Services account.
+     * Lists the namespaces for the specified Amazon Web Services account. This operation doesn't list deleted
+     * namespaces.
      * </p>
      * 
      * @param listNamespacesRequest

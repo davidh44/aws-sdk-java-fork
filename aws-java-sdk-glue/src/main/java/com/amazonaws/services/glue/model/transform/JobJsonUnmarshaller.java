@@ -135,6 +135,10 @@ public class JobJsonUnmarshaller implements Unmarshaller<Job, JsonUnmarshallerCo
                     job.setCodeGenConfigurationNodes(new MapUnmarshaller<String, CodeGenConfigurationNode>(context.getUnmarshaller(String.class),
                             CodeGenConfigurationNodeJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
+                if (context.testExpression("ExecutionClass", targetDepth)) {
+                    context.nextToken();
+                    job.setExecutionClass(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

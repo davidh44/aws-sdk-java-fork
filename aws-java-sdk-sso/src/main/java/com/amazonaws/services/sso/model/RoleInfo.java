@@ -35,7 +35,7 @@ public class RoleInfo implements Serializable, Cloneable, StructuredPojo {
     private String roleName;
     /**
      * <p>
-     * The identifier of the AWS account assigned to the user.
+     * The identifier of the Amazon Web Services account assigned to the user.
      * </p>
      */
     private String accountId;
@@ -82,11 +82,11 @@ public class RoleInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account assigned to the user.
+     * The identifier of the Amazon Web Services account assigned to the user.
      * </p>
      * 
      * @param accountId
-     *        The identifier of the AWS account assigned to the user.
+     *        The identifier of the Amazon Web Services account assigned to the user.
      */
 
     public void setAccountId(String accountId) {
@@ -95,10 +95,10 @@ public class RoleInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account assigned to the user.
+     * The identifier of the Amazon Web Services account assigned to the user.
      * </p>
      * 
-     * @return The identifier of the AWS account assigned to the user.
+     * @return The identifier of the Amazon Web Services account assigned to the user.
      */
 
     public String getAccountId() {
@@ -107,11 +107,11 @@ public class RoleInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account assigned to the user.
+     * The identifier of the Amazon Web Services account assigned to the user.
      * </p>
      * 
      * @param accountId
-     *        The identifier of the AWS account assigned to the user.
+     *        The identifier of the Amazon Web Services account assigned to the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

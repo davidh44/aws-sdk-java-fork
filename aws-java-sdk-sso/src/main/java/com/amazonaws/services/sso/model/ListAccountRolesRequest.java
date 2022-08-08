@@ -41,13 +41,13 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The token issued by the <code>CreateToken</code> API call. For more information, see <a
      * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html">CreateToken</a> in
-     * the <i>AWS SSO OIDC API Reference Guide</i>.
+     * the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      * </p>
      */
     private String accessToken;
     /**
      * <p>
-     * The identifier for the AWS account that is assigned to the user.
+     * The identifier for the Amazon Web Services account that is assigned to the user.
      * </p>
      */
     private String accountId;
@@ -136,13 +136,13 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The token issued by the <code>CreateToken</code> API call. For more information, see <a
      * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html">CreateToken</a> in
-     * the <i>AWS SSO OIDC API Reference Guide</i>.
+     * the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      * </p>
      * 
      * @param accessToken
      *        The token issued by the <code>CreateToken</code> API call. For more information, see <a
      *        href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html"
-     *        >CreateToken</a> in the <i>AWS SSO OIDC API Reference Guide</i>.
+     *        >CreateToken</a> in the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      */
 
     public void setAccessToken(String accessToken) {
@@ -153,12 +153,12 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The token issued by the <code>CreateToken</code> API call. For more information, see <a
      * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html">CreateToken</a> in
-     * the <i>AWS SSO OIDC API Reference Guide</i>.
+     * the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      * </p>
      * 
      * @return The token issued by the <code>CreateToken</code> API call. For more information, see <a
      *         href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html"
-     *         >CreateToken</a> in the <i>AWS SSO OIDC API Reference Guide</i>.
+     *         >CreateToken</a> in the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      */
 
     public String getAccessToken() {
@@ -169,13 +169,13 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The token issued by the <code>CreateToken</code> API call. For more information, see <a
      * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html">CreateToken</a> in
-     * the <i>AWS SSO OIDC API Reference Guide</i>.
+     * the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      * </p>
      * 
      * @param accessToken
      *        The token issued by the <code>CreateToken</code> API call. For more information, see <a
      *        href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html"
-     *        >CreateToken</a> in the <i>AWS SSO OIDC API Reference Guide</i>.
+     *        >CreateToken</a> in the <i>Amazon Web Services SSO OIDC API Reference Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,11 +186,11 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the AWS account that is assigned to the user.
+     * The identifier for the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param accountId
-     *        The identifier for the AWS account that is assigned to the user.
+     *        The identifier for the Amazon Web Services account that is assigned to the user.
      */
 
     public void setAccountId(String accountId) {
@@ -199,10 +199,10 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the AWS account that is assigned to the user.
+     * The identifier for the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
-     * @return The identifier for the AWS account that is assigned to the user.
+     * @return The identifier for the Amazon Web Services account that is assigned to the user.
      */
 
     public String getAccountId() {
@@ -211,11 +211,11 @@ public class ListAccountRolesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the AWS account that is assigned to the user.
+     * The identifier for the Amazon Web Services account that is assigned to the user.
      * </p>
      * 
      * @param accountId
-     *        The identifier for the AWS account that is assigned to the user.
+     *        The identifier for the Amazon Web Services account that is assigned to the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
