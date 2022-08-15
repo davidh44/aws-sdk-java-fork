@@ -806,6 +806,39 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    public java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest request) {
+
+        return putFeedbackAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(final PutFeedbackRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutFeedbackRequest, PutFeedbackResult> asyncHandler) {
+        final PutFeedbackRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutFeedbackResult>() {
+            @Override
+            public PutFeedbackResult call() throws Exception {
+                PutFeedbackResult result = null;
+
+                try {
+                    result = executePutFeedback(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest request) {
 
         return queryAssistantAsync(request, null);

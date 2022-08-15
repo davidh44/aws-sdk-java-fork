@@ -522,6 +522,29 @@ public interface AmazonConnectWisdom {
 
     /**
      * <p>
+     * Submits feedback to Wisdom. The feedback is used to improve future recommendations from <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a>
+     * or results from <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QueryAssistant.html">QueryAssistant</a>.
+     * Feedback can be resubmitted up to 6 hours after submission.
+     * </p>
+     * 
+     * @param putFeedbackRequest
+     * @return Result of the PutFeedback operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonConnectWisdom.PutFeedback
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/PutFeedback" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PutFeedbackResult putFeedback(PutFeedbackRequest putFeedbackRequest);
+
+    /**
+     * <p>
      * Performs a manual search against the specified assistant. To retrieve recommendations for an assistant, use <a
      * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a>.
      * </p>

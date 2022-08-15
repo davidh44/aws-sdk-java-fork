@@ -26,8 +26,8 @@
  * </p>
  * </note>
  * <p>
- * This API reference guide describes the Amazon Web Services SSO Portal operations that you can call programatically
- * and includes detailed information on data types and errors.
+ * This reference guide describes the Amazon Web Services SSO Portal operations that you can call programatically and
+ * includes detailed information on data types and errors.
  * </p>
  * <note>
  * <p>

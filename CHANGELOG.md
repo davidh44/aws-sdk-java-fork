@@ -1,3 +1,20 @@
+# __1.12.282__ __2022-08-15__
+## __AWS SSO Identity Store__
+  - ### Features
+    - Documentation updates to reflect service rename - AWS IAM Identity Center (successor to AWS Single Sign-On)
+
+## __AWS Single Sign-On__
+  - ### Features
+    - Documentation updates to reflect service rename - AWS IAM Identity Center (successor to AWS Single Sign-On)
+
+## __Amazon CloudFront__
+  - ### Features
+    - Adds Http 3 support to distributions
+
+## __Amazon Connect Wisdom Service__
+  - ### Features
+    - This release introduces a new API PutFeedback that allows submitting feedback to Wisdom on content relevance.
+
 # __1.12.281__ __2022-08-12__
 ## __Amazon Chime SDK Messaging__
   - ### Features
