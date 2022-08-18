@@ -1431,6 +1431,37 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
+     * Represents the properties of the import.
+     * </p>
+     * 
+     * @param describeImportRequest
+     * @return A Java Future containing the result of the DescribeImport operation returned by the service.
+     * @sample AmazonDynamoDBAsync.DescribeImport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeImport" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeImportResult> describeImportAsync(DescribeImportRequest describeImportRequest);
+
+    /**
+     * <p>
+     * Represents the properties of the import.
+     * </p>
+     * 
+     * @param describeImportRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeImport operation returned by the service.
+     * @sample AmazonDynamoDBAsyncHandler.DescribeImport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeImport" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeImportResult> describeImportAsync(DescribeImportRequest describeImportRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeImportRequest, DescribeImportResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about the status of Kinesis streaming.
      * </p>
      * 
@@ -2109,6 +2140,37 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
 
     /**
      * <p>
+     * Imports table data from an S3 bucket.
+     * </p>
+     * 
+     * @param importTableRequest
+     * @return A Java Future containing the result of the ImportTable operation returned by the service.
+     * @sample AmazonDynamoDBAsync.ImportTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ImportTable" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportTableResult> importTableAsync(ImportTableRequest importTableRequest);
+
+    /**
+     * <p>
+     * Imports table data from an S3 bucket.
+     * </p>
+     * 
+     * @param importTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportTable operation returned by the service.
+     * @sample AmazonDynamoDBAsyncHandler.ImportTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ImportTable" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportTableResult> importTableAsync(ImportTableRequest importTableRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportTableRequest, ImportTableResult> asyncHandler);
+
+    /**
+     * <p>
      * List backups associated with an Amazon Web Services account. To list backups for a given table, specify
      * <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of
      * items in a page. You can also specify a maximum number of entries to be returned in a page.
@@ -2262,6 +2324,37 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      */
     java.util.concurrent.Future<ListGlobalTablesResult> listGlobalTablesAsync(ListGlobalTablesRequest listGlobalTablesRequest,
             com.amazonaws.handlers.AsyncHandler<ListGlobalTablesRequest, ListGlobalTablesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists completed imports within the past 90 days.
+     * </p>
+     * 
+     * @param listImportsRequest
+     * @return A Java Future containing the result of the ListImports operation returned by the service.
+     * @sample AmazonDynamoDBAsync.ListImports
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListImports" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListImportsResult> listImportsAsync(ListImportsRequest listImportsRequest);
+
+    /**
+     * <p>
+     * Lists completed imports within the past 90 days.
+     * </p>
+     * 
+     * @param listImportsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListImports operation returned by the service.
+     * @sample AmazonDynamoDBAsyncHandler.ListImports
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListImports" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListImportsResult> listImportsAsync(ListImportsRequest listImportsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListImportsRequest, ListImportsResult> asyncHandler);
 
     /**
      * <p>

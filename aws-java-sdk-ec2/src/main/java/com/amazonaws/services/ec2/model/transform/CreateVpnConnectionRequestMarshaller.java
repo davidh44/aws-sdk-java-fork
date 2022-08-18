@@ -249,6 +249,29 @@ public class CreateVpnConnectionRequestMarshaller implements Marshaller<Request<
                         request.addParameter("Options.TunnelOptions." + tunnelOptionsListIndex + ".StartupAction",
                                 StringUtils.fromString(vpnConnectionOptionsSpecificationTunnelOptionsListValue.getStartupAction()));
                     }
+
+                    VpnTunnelLogOptionsSpecification logOptions = vpnConnectionOptionsSpecificationTunnelOptionsListValue.getLogOptions();
+                    if (logOptions != null) {
+
+                        CloudWatchLogOptionsSpecification cloudWatchLogOptions = logOptions.getCloudWatchLogOptions();
+                        if (cloudWatchLogOptions != null) {
+
+                            if (cloudWatchLogOptions.getLogEnabled() != null) {
+                                request.addParameter("Options.TunnelOptions." + tunnelOptionsListIndex + ".LogOptions.CloudWatchLogOptions.LogEnabled",
+                                        StringUtils.fromBoolean(cloudWatchLogOptions.getLogEnabled()));
+                            }
+
+                            if (cloudWatchLogOptions.getLogGroupArn() != null) {
+                                request.addParameter("Options.TunnelOptions." + tunnelOptionsListIndex + ".LogOptions.CloudWatchLogOptions.LogGroupArn",
+                                        StringUtils.fromString(cloudWatchLogOptions.getLogGroupArn()));
+                            }
+
+                            if (cloudWatchLogOptions.getLogOutputFormat() != null) {
+                                request.addParameter("Options.TunnelOptions." + tunnelOptionsListIndex + ".LogOptions.CloudWatchLogOptions.LogOutputFormat",
+                                        StringUtils.fromString(cloudWatchLogOptions.getLogOutputFormat()));
+                            }
+                        }
+                    }
                     tunnelOptionsListIndex++;
                 }
             }

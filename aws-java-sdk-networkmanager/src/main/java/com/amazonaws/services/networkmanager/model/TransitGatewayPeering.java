@@ -40,6 +40,12 @@ public class TransitGatewayPeering implements Serializable, Cloneable, Structure
      * </p>
      */
     private String transitGatewayArn;
+    /**
+     * <p>
+     * The ID of the transit gateway peering attachment.
+     * </p>
+     */
+    private String transitGatewayPeeringAttachmentId;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class TransitGatewayPeering implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The ID of the transit gateway peering attachment.
+     * </p>
+     * 
+     * @param transitGatewayPeeringAttachmentId
+     *        The ID of the transit gateway peering attachment.
+     */
+
+    public void setTransitGatewayPeeringAttachmentId(String transitGatewayPeeringAttachmentId) {
+        this.transitGatewayPeeringAttachmentId = transitGatewayPeeringAttachmentId;
+    }
+
+    /**
+     * <p>
+     * The ID of the transit gateway peering attachment.
+     * </p>
+     * 
+     * @return The ID of the transit gateway peering attachment.
+     */
+
+    public String getTransitGatewayPeeringAttachmentId() {
+        return this.transitGatewayPeeringAttachmentId;
+    }
+
+    /**
+     * <p>
+     * The ID of the transit gateway peering attachment.
+     * </p>
+     * 
+     * @param transitGatewayPeeringAttachmentId
+     *        The ID of the transit gateway peering attachment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TransitGatewayPeering withTransitGatewayPeeringAttachmentId(String transitGatewayPeeringAttachmentId) {
+        setTransitGatewayPeeringAttachmentId(transitGatewayPeeringAttachmentId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class TransitGatewayPeering implements Serializable, Cloneable, Structure
         if (getPeering() != null)
             sb.append("Peering: ").append(getPeering()).append(",");
         if (getTransitGatewayArn() != null)
-            sb.append("TransitGatewayArn: ").append(getTransitGatewayArn());
+            sb.append("TransitGatewayArn: ").append(getTransitGatewayArn()).append(",");
+        if (getTransitGatewayPeeringAttachmentId() != null)
+            sb.append("TransitGatewayPeeringAttachmentId: ").append(getTransitGatewayPeeringAttachmentId());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,11 @@ public class TransitGatewayPeering implements Serializable, Cloneable, Structure
             return false;
         if (other.getTransitGatewayArn() != null && other.getTransitGatewayArn().equals(this.getTransitGatewayArn()) == false)
             return false;
+        if (other.getTransitGatewayPeeringAttachmentId() == null ^ this.getTransitGatewayPeeringAttachmentId() == null)
+            return false;
+        if (other.getTransitGatewayPeeringAttachmentId() != null
+                && other.getTransitGatewayPeeringAttachmentId().equals(this.getTransitGatewayPeeringAttachmentId()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +222,7 @@ public class TransitGatewayPeering implements Serializable, Cloneable, Structure
 
         hashCode = prime * hashCode + ((getPeering() == null) ? 0 : getPeering().hashCode());
         hashCode = prime * hashCode + ((getTransitGatewayArn() == null) ? 0 : getTransitGatewayArn().hashCode());
+        hashCode = prime * hashCode + ((getTransitGatewayPeeringAttachmentId() == null) ? 0 : getTransitGatewayPeeringAttachmentId().hashCode());
         return hashCode;
     }
 

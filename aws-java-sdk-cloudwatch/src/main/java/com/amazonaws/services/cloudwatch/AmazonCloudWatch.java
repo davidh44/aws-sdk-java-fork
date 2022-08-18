@@ -774,6 +774,25 @@ public interface AmazonCloudWatch {
 
     /**
      * <p>
+     * Returns a list that contains the number of managed Contributor Insights rules in your account.
+     * </p>
+     * 
+     * @param listManagedInsightRulesRequest
+     * @return Result of the ListManagedInsightRules operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of an input parameter is bad or out-of-range.
+     * @throws MissingRequiredParameterException
+     *         An input parameter that is required is missing.
+     * @throws InvalidNextTokenException
+     *         The next token specified is invalid.
+     * @sample AmazonCloudWatch.ListManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListManagedInsightRulesResult listManagedInsightRules(ListManagedInsightRulesRequest listManagedInsightRulesRequest);
+
+    /**
+     * <p>
      * Returns a list of metric streams in this account.
      * </p>
      * 
@@ -1011,6 +1030,28 @@ public interface AmazonCloudWatch {
      *      Documentation</a>
      */
     PutInsightRuleResult putInsightRule(PutInsightRuleRequest putInsightRuleRequest);
+
+    /**
+     * <p>
+     * Creates a managed Contributor Insights rule for a specified Amazon Web Services resource. When you enable a
+     * managed rule, you create a Contributor Insights rule that collects data from Amazon Web Services services. You
+     * cannot edit these rules with <code>PutInsightRule</code>. The rules can be enabled, disabled, and deleted using
+     * <code>EnableInsightRules</code>, <code>DisableInsightRules</code>, and <code>DeleteInsightRules</code>. If a
+     * previously created managed rule is currently disabled, a subsequent call to this API will re-enable it. Use
+     * <code>ListManagedInsightRules</code> to describe all available rules.
+     * </p>
+     * 
+     * @param putManagedInsightRulesRequest
+     * @return Result of the PutManagedInsightRules operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of an input parameter is bad or out-of-range.
+     * @throws MissingRequiredParameterException
+     *         An input parameter that is required is missing.
+     * @sample AmazonCloudWatch.PutManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutManagedInsightRulesResult putManagedInsightRules(PutManagedInsightRulesRequest putManagedInsightRulesRequest);
 
     /**
      * <p>

@@ -1308,6 +1308,37 @@ public interface AmazonCloudWatchAsync extends AmazonCloudWatch {
 
     /**
      * <p>
+     * Returns a list that contains the number of managed Contributor Insights rules in your account.
+     * </p>
+     * 
+     * @param listManagedInsightRulesRequest
+     * @return A Java Future containing the result of the ListManagedInsightRules operation returned by the service.
+     * @sample AmazonCloudWatchAsync.ListManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListManagedInsightRulesResult> listManagedInsightRulesAsync(ListManagedInsightRulesRequest listManagedInsightRulesRequest);
+
+    /**
+     * <p>
+     * Returns a list that contains the number of managed Contributor Insights rules in your account.
+     * </p>
+     * 
+     * @param listManagedInsightRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListManagedInsightRules operation returned by the service.
+     * @sample AmazonCloudWatchAsyncHandler.ListManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListManagedInsightRulesResult> listManagedInsightRulesAsync(ListManagedInsightRulesRequest listManagedInsightRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListManagedInsightRulesRequest, ListManagedInsightRulesResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of metric streams in this account.
      * </p>
      * 
@@ -1740,6 +1771,47 @@ public interface AmazonCloudWatchAsync extends AmazonCloudWatch {
      */
     java.util.concurrent.Future<PutInsightRuleResult> putInsightRuleAsync(PutInsightRuleRequest putInsightRuleRequest,
             com.amazonaws.handlers.AsyncHandler<PutInsightRuleRequest, PutInsightRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a managed Contributor Insights rule for a specified Amazon Web Services resource. When you enable a
+     * managed rule, you create a Contributor Insights rule that collects data from Amazon Web Services services. You
+     * cannot edit these rules with <code>PutInsightRule</code>. The rules can be enabled, disabled, and deleted using
+     * <code>EnableInsightRules</code>, <code>DisableInsightRules</code>, and <code>DeleteInsightRules</code>. If a
+     * previously created managed rule is currently disabled, a subsequent call to this API will re-enable it. Use
+     * <code>ListManagedInsightRules</code> to describe all available rules.
+     * </p>
+     * 
+     * @param putManagedInsightRulesRequest
+     * @return A Java Future containing the result of the PutManagedInsightRules operation returned by the service.
+     * @sample AmazonCloudWatchAsync.PutManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutManagedInsightRulesResult> putManagedInsightRulesAsync(PutManagedInsightRulesRequest putManagedInsightRulesRequest);
+
+    /**
+     * <p>
+     * Creates a managed Contributor Insights rule for a specified Amazon Web Services resource. When you enable a
+     * managed rule, you create a Contributor Insights rule that collects data from Amazon Web Services services. You
+     * cannot edit these rules with <code>PutInsightRule</code>. The rules can be enabled, disabled, and deleted using
+     * <code>EnableInsightRules</code>, <code>DisableInsightRules</code>, and <code>DeleteInsightRules</code>. If a
+     * previously created managed rule is currently disabled, a subsequent call to this API will re-enable it. Use
+     * <code>ListManagedInsightRules</code> to describe all available rules.
+     * </p>
+     * 
+     * @param putManagedInsightRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutManagedInsightRules operation returned by the service.
+     * @sample AmazonCloudWatchAsyncHandler.PutManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutManagedInsightRulesResult> putManagedInsightRulesAsync(PutManagedInsightRulesRequest putManagedInsightRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<PutManagedInsightRulesRequest, PutManagedInsightRulesResult> asyncHandler);
 
     /**
      * <p>

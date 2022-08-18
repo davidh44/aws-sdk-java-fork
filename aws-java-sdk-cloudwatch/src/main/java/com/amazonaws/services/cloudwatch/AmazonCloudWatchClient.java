@@ -1910,6 +1910,68 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Returns a list that contains the number of managed Contributor Insights rules in your account.
+     * </p>
+     * 
+     * @param listManagedInsightRulesRequest
+     * @return Result of the ListManagedInsightRules operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of an input parameter is bad or out-of-range.
+     * @throws MissingRequiredParameterException
+     *         An input parameter that is required is missing.
+     * @throws InvalidNextTokenException
+     *         The next token specified is invalid.
+     * @sample AmazonCloudWatch.ListManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/ListManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListManagedInsightRulesResult listManagedInsightRules(ListManagedInsightRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListManagedInsightRules(request);
+    }
+
+    @SdkInternalApi
+    final ListManagedInsightRulesResult executeListManagedInsightRules(ListManagedInsightRulesRequest listManagedInsightRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listManagedInsightRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListManagedInsightRulesRequest> request = null;
+        Response<ListManagedInsightRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListManagedInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(listManagedInsightRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListManagedInsightRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ListManagedInsightRulesResult> responseHandler = new StaxResponseHandler<ListManagedInsightRulesResult>(
+                    new ListManagedInsightRulesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of metric streams in this account.
      * </p>
      * 
@@ -2434,6 +2496,71 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
             StaxResponseHandler<PutInsightRuleResult> responseHandler = new StaxResponseHandler<PutInsightRuleResult>(
                     new PutInsightRuleResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a managed Contributor Insights rule for a specified Amazon Web Services resource. When you enable a
+     * managed rule, you create a Contributor Insights rule that collects data from Amazon Web Services services. You
+     * cannot edit these rules with <code>PutInsightRule</code>. The rules can be enabled, disabled, and deleted using
+     * <code>EnableInsightRules</code>, <code>DisableInsightRules</code>, and <code>DeleteInsightRules</code>. If a
+     * previously created managed rule is currently disabled, a subsequent call to this API will re-enable it. Use
+     * <code>ListManagedInsightRules</code> to describe all available rules.
+     * </p>
+     * 
+     * @param putManagedInsightRulesRequest
+     * @return Result of the PutManagedInsightRules operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of an input parameter is bad or out-of-range.
+     * @throws MissingRequiredParameterException
+     *         An input parameter that is required is missing.
+     * @sample AmazonCloudWatch.PutManagedInsightRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutManagedInsightRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutManagedInsightRulesResult putManagedInsightRules(PutManagedInsightRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executePutManagedInsightRules(request);
+    }
+
+    @SdkInternalApi
+    final PutManagedInsightRulesResult executePutManagedInsightRules(PutManagedInsightRulesRequest putManagedInsightRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putManagedInsightRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutManagedInsightRulesRequest> request = null;
+        Response<PutManagedInsightRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutManagedInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(putManagedInsightRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutManagedInsightRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<PutManagedInsightRulesResult> responseHandler = new StaxResponseHandler<PutManagedInsightRulesResult>(
+                    new PutManagedInsightRulesResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

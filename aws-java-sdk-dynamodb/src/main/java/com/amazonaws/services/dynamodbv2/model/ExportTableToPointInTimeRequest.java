@@ -50,7 +50,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <p>
      * If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency
-     * window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     * window, DynamoDB returns an <code>ImportConflictException</code>.
      * </p>
      */
     private String clientToken;
@@ -203,7 +203,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <p>
      * If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency
-     * window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     * window, DynamoDB returns an <code>ImportConflictException</code>.
      * </p>
      * 
      * @param clientToken
@@ -216,7 +216,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *        </p>
      *        <p>
      *        If you submit a request with the same client token but a change in other parameters within the 8-hour
-     *        idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     *        idempotency window, DynamoDB returns an <code>ImportConflictException</code>.
      */
 
     public void setClientToken(String clientToken) {
@@ -235,7 +235,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <p>
      * If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency
-     * window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     * window, DynamoDB returns an <code>ImportConflictException</code>.
      * </p>
      * 
      * @return Providing a <code>ClientToken</code> makes the call to <code>ExportTableToPointInTimeInput</code>
@@ -247,7 +247,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *         </p>
      *         <p>
      *         If you submit a request with the same client token but a change in other parameters within the 8-hour
-     *         idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     *         idempotency window, DynamoDB returns an <code>ImportConflictException</code>.
      */
 
     public String getClientToken() {
@@ -266,7 +266,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * <p>
      * If you submit a request with the same client token but a change in other parameters within the 8-hour idempotency
-     * window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     * window, DynamoDB returns an <code>ImportConflictException</code>.
      * </p>
      * 
      * @param clientToken
@@ -279,7 +279,7 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      *        </p>
      *        <p>
      *        If you submit a request with the same client token but a change in other parameters within the 8-hour
-     *        idempotency window, DynamoDB returns an <code>IdempotentParameterMismatch</code> exception.
+     *        idempotency window, DynamoDB returns an <code>ImportConflictException</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

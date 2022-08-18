@@ -31,6 +31,8 @@ public class TransitGatewayPeeringMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Peering").build();
     private static final MarshallingInfo<String> TRANSITGATEWAYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransitGatewayArn").build();
+    private static final MarshallingInfo<String> TRANSITGATEWAYPEERINGATTACHMENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransitGatewayPeeringAttachmentId").build();
 
     private static final TransitGatewayPeeringMarshaller instance = new TransitGatewayPeeringMarshaller();
 
@@ -50,6 +52,7 @@ public class TransitGatewayPeeringMarshaller {
         try {
             protocolMarshaller.marshall(transitGatewayPeering.getPeering(), PEERING_BINDING);
             protocolMarshaller.marshall(transitGatewayPeering.getTransitGatewayArn(), TRANSITGATEWAYARN_BINDING);
+            protocolMarshaller.marshall(transitGatewayPeering.getTransitGatewayPeeringAttachmentId(), TRANSITGATEWAYPEERINGATTACHMENTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

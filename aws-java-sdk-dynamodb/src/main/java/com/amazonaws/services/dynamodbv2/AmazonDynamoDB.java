@@ -971,6 +971,21 @@ public interface AmazonDynamoDB {
 
     /**
      * <p>
+     * Represents the properties of the import.
+     * </p>
+     * 
+     * @param describeImportRequest
+     * @return Result of the DescribeImport operation returned by the service.
+     * @throws ImportNotFoundException
+     *         The specified import was not found.
+     * @sample AmazonDynamoDB.DescribeImport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/DescribeImport" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeImportResult describeImport(DescribeImportRequest describeImportRequest);
+
+    /**
+     * <p>
      * Returns information about the status of Kinesis streaming.
      * </p>
      * 
@@ -1726,6 +1741,40 @@ public interface AmazonDynamoDB {
 
     /**
      * <p>
+     * Imports table data from an S3 bucket.
+     * </p>
+     * 
+     * @param importTableRequest
+     * @return Result of the ImportTable operation returned by the service.
+     * @throws ResourceInUseException
+     *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
+     *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
+     * @throws LimitExceededException
+     *         There is no limit to the number of daily on-demand backups that can be taken. </p>
+     *         <p>
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
+     *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
+     *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
+     *         <code>RestoreTableToPointInTime</code>.
+     *         </p>
+     *         <p>
+     *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
+     *         DynamoDB might temporarily reduce the number of concurrent operations.
+     *         </p>
+     *         <p>
+     *         There is a soft account quota of 2,500 tables.
+     * @throws ImportConflictException
+     *         There was a conflict when importing from the specified S3 source. This can occur when the current import
+     *         conflicts with a previous import request that had the same client token.
+     * @sample AmazonDynamoDB.ImportTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ImportTable" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportTableResult importTable(ImportTableRequest importTableRequest);
+
+    /**
+     * <p>
      * List backups associated with an Amazon Web Services account. To list backups for a given table, specify
      * <code>TableName</code>. <code>ListBackups</code> returns a paginated list of results with at most 1 MB worth of
      * items in a page. You can also specify a maximum number of entries to be returned in a page.
@@ -1817,6 +1866,34 @@ public interface AmazonDynamoDB {
      *      Documentation</a>
      */
     ListGlobalTablesResult listGlobalTables(ListGlobalTablesRequest listGlobalTablesRequest);
+
+    /**
+     * <p>
+     * Lists completed imports within the past 90 days.
+     * </p>
+     * 
+     * @param listImportsRequest
+     * @return Result of the ListImports operation returned by the service.
+     * @throws LimitExceededException
+     *         There is no limit to the number of daily on-demand backups that can be taken. </p>
+     *         <p>
+     *         Up to 500 simultaneous table operations are allowed per account. These operations include
+     *         <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,
+     *         <code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and
+     *         <code>RestoreTableToPointInTime</code>.
+     *         </p>
+     *         <p>
+     *         The only exception is when you are creating a table with one or more secondary indexes. You can have up
+     *         to 250 such requests running at a time; however, if the table or index specifications are complex,
+     *         DynamoDB might temporarily reduce the number of concurrent operations.
+     *         </p>
+     *         <p>
+     *         There is a soft account quota of 2,500 tables.
+     * @sample AmazonDynamoDB.ListImports
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListImports" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListImportsResult listImports(ListImportsRequest listImportsRequest);
 
     /**
      * <p>
