@@ -52,7 +52,7 @@ public class CreateMetricSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
-     * supported for S3 and Redshift datasources.
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      */
     private Integer offset;
@@ -287,12 +287,12 @@ public class CreateMetricSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
-     * supported for S3 and Redshift datasources.
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      * 
      * @param offset
      *        After an interval ends, the amount of seconds that the detector waits before importing data. Offset is
-     *        only supported for S3 and Redshift datasources.
+     *        only supported for S3, Redshift, Athena and datasources.
      */
 
     public void setOffset(Integer offset) {
@@ -302,11 +302,11 @@ public class CreateMetricSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
-     * supported for S3 and Redshift datasources.
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      * 
      * @return After an interval ends, the amount of seconds that the detector waits before importing data. Offset is
-     *         only supported for S3 and Redshift datasources.
+     *         only supported for S3, Redshift, Athena and datasources.
      */
 
     public Integer getOffset() {
@@ -316,12 +316,12 @@ public class CreateMetricSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
-     * supported for S3 and Redshift datasources.
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      * 
      * @param offset
      *        After an interval ends, the amount of seconds that the detector waits before importing data. Offset is
-     *        only supported for S3 and Redshift datasources.
+     *        only supported for S3, Redshift, Athena and datasources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

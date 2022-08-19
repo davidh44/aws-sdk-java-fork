@@ -46,7 +46,7 @@ import com.amazonaws.services.connect.model.*;
  * </p>
  * <note>
  * <p>
- * Working with contact flows? Check out the <a
+ * Working with flows? Check out the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
  * </p>
  * </note>
@@ -292,7 +292,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Associates a contact flow with a phone number claimed to your Amazon Connect instance.
+     * Associates a flow with a phone number claimed to your Amazon Connect instance.
      * </p>
      * 
      * @param associatePhoneNumberContactFlowRequest
@@ -307,7 +307,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Associates a contact flow with a phone number claimed to your Amazon Connect instance.
+     * Associates a flow with a phone number claimed to your Amazon Connect instance.
      * </p>
      * 
      * @param associatePhoneNumberContactFlowRequest
@@ -506,10 +506,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates a contact flow for the specified Amazon Connect instance.
+     * Creates a flow for the specified Amazon Connect instance.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -523,10 +523,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates a contact flow for the specified Amazon Connect instance.
+     * Creates a flow for the specified Amazon Connect instance.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -545,7 +545,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates a contact flow module for the specified Amazon Connect instance.
+     * Creates a flow module for the specified Amazon Connect instance.
      * </p>
      * 
      * @param createContactFlowModuleRequest
@@ -558,7 +558,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates a contact flow module for the specified Amazon Connect instance.
+     * Creates a flow module for the specified Amazon Connect instance.
      * </p>
      * 
      * @param createContactFlowModuleRequest
@@ -1006,7 +1006,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes a contact flow for the specified Amazon Connect instance.
+     * Deletes a flow for the specified Amazon Connect instance.
      * </p>
      * 
      * @param deleteContactFlowRequest
@@ -1019,7 +1019,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes a contact flow for the specified Amazon Connect instance.
+     * Deletes a flow for the specified Amazon Connect instance.
      * </p>
      * 
      * @param deleteContactFlowRequest
@@ -1037,7 +1037,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes the specified contact flow module.
+     * Deletes the specified flow module.
      * </p>
      * 
      * @param deleteContactFlowModuleRequest
@@ -1050,7 +1050,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes the specified contact flow module.
+     * Deletes the specified flow module.
      * </p>
      * 
      * @param deleteContactFlowModuleRequest
@@ -1510,10 +1510,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified contact flow.
+     * Describes the specified flow.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -1527,10 +1527,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified contact flow.
+     * Describes the specified flow.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -1549,7 +1549,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified contact flow module.
+     * Describes the specified flow module.
      * </p>
      * 
      * @param describeContactFlowModuleRequest
@@ -1563,7 +1563,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Describes the specified contact flow module.
+     * Describes the specified flow module.
      * </p>
      * 
      * @param describeContactFlowModuleRequest
@@ -2165,7 +2165,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Remove the Lambda function from the dropdown options available in the relevant contact flow blocks.
+     * Remove the Lambda function from the dropdown options available in the relevant flow blocks.
      * </p>
      * 
      * @param disassociateLambdaFunctionRequest
@@ -2182,7 +2182,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Remove the Lambda function from the dropdown options available in the relevant contact flow blocks.
+     * Remove the Lambda function from the dropdown options available in the relevant flow blocks.
      * </p>
      * 
      * @param disassociateLambdaFunctionRequest
@@ -2238,8 +2238,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Removes the contact flow association from a phone number claimed to your Amazon Connect instance, if a contact
-     * flow association exists.
+     * Removes the flow association from a phone number claimed to your Amazon Connect instance, if a flow association
+     * exists.
      * </p>
      * 
      * @param disassociatePhoneNumberContactFlowRequest
@@ -2254,8 +2254,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Removes the contact flow association from a phone number claimed to your Amazon Connect instance, if a contact
-     * flow association exists.
+     * Removes the flow association from a phone number claimed to your Amazon Connect instance, if a flow association
+     * exists.
      * </p>
      * 
      * @param disassociatePhoneNumberContactFlowRequest
@@ -2725,7 +2725,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides information about the contact flow modules for the specified Amazon Connect instance.
+     * Provides information about the flow modules for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listContactFlowModulesRequest
@@ -2738,7 +2738,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides information about the contact flow modules for the specified Amazon Connect instance.
+     * Provides information about the flow modules for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listContactFlowModulesRequest
@@ -2756,15 +2756,15 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides information about the contact flows for the specified Amazon Connect instance.
+     * Provides information about the flows for the specified Amazon Connect instance.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * <p>
-     * For more information about contact flows, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/concepts-contact-flows.html">Contact Flows</a> in the
+     * For more information about flows, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/concepts-contact-flows.html">Flows</a> in the
      * <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * 
@@ -2778,15 +2778,15 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides information about the contact flows for the specified Amazon Connect instance.
+     * Provides information about the flows for the specified Amazon Connect instance.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * <p>
-     * For more information about contact flows, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/concepts-contact-flows.html">Contact Flows</a> in the
+     * For more information about flows, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/concepts-contact-flows.html">Flows</a> in the
      * <i>Amazon Connect Administrator Guide</i>.
      * </p>
      * 
@@ -3069,8 +3069,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Returns a paginated list of all Lambda functions that display in the dropdown options in the relevant contact
-     * flow blocks.
+     * Returns a paginated list of all Lambda functions that display in the dropdown options in the relevant flow
+     * blocks.
      * </p>
      * 
      * @param listLambdaFunctionsRequest
@@ -3086,8 +3086,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Returns a paginated list of all Lambda functions that display in the dropdown options in the relevant contact
-     * flow blocks.
+     * Returns a paginated list of all Lambda functions that display in the dropdown options in the relevant flow
+     * blocks.
      * </p>
      * 
      * @param listLambdaFunctionsRequest
@@ -3892,6 +3892,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches security profiles in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchSecurityProfilesRequest
+     * @return A Java Future containing the result of the SearchSecurityProfiles operation returned by the service.
+     * @sample AmazonConnectAsync.SearchSecurityProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchSecurityProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest searchSecurityProfilesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches security profiles in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchSecurityProfilesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchSecurityProfiles operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchSecurityProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchSecurityProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest searchSecurityProfilesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchSecurityProfilesRequest, SearchSecurityProfilesResult> asyncHandler);
+
+    /**
+     * <p>
      * Searches users in an Amazon Connect instance, with optional filtering.
      * </p>
      * 
@@ -3956,8 +3993,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new chat for the customer. Response of this API provides a token required to
-     * obtain credentials from the <a
+     * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain
+     * credentials from the <a
      * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_CreateParticipantConnection.html"
      * >CreateParticipantConnection</a> API in the Amazon Connect Participant Service.
      * </p>
@@ -4003,8 +4040,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new chat for the customer. Response of this API provides a token required to
-     * obtain credentials from the <a
+     * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain
+     * credentials from the <a
      * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_CreateParticipantConnection.html"
      * >CreateParticipantConnection</a> API in the Amazon Connect Participant Service.
      * </p>
@@ -4179,13 +4216,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Places an outbound call to a contact, and then initiates the contact flow. It performs the actions in the contact
-     * flow that's specified (in <code>ContactFlowId</code>).
+     * Places an outbound call to a contact, and then initiates the flow. It performs the actions in the flow that's
+     * specified (in <code>ContactFlowId</code>).
      * </p>
      * <p>
-     * Agents do not initiate the outbound API, which means that they do not dial the contact. If the contact flow
-     * places an outbound call to a contact, and then puts the contact in queue, the call is then routed to the agent,
-     * like any other inbound case.
+     * Agents do not initiate the outbound API, which means that they do not dial the contact. If the flow places an
+     * outbound call to a contact, and then puts the contact in queue, the call is then routed to the agent, like any
+     * other inbound case.
      * </p>
      * <p>
      * There is a 60-second dialing timeout for this operation. If the call is not connected after 60 seconds, it fails.
@@ -4200,9 +4237,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </note> <note>
      * <p>
      * Campaign calls are not allowed by default. Before you can make a call with <code>TrafficType</code> =
-     * <code>CAMPAIGN</code>, you must submit a service quota increase request. For more information, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
-     * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * <code>CAMPAIGN</code>, you must submit a service quota increase request to the quota <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#outbound-communications-quotas"
+     * >Amazon Connect campaigns</a>.
      * </p>
      * </note>
      * 
@@ -4217,13 +4254,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Places an outbound call to a contact, and then initiates the contact flow. It performs the actions in the contact
-     * flow that's specified (in <code>ContactFlowId</code>).
+     * Places an outbound call to a contact, and then initiates the flow. It performs the actions in the flow that's
+     * specified (in <code>ContactFlowId</code>).
      * </p>
      * <p>
-     * Agents do not initiate the outbound API, which means that they do not dial the contact. If the contact flow
-     * places an outbound call to a contact, and then puts the contact in queue, the call is then routed to the agent,
-     * like any other inbound case.
+     * Agents do not initiate the outbound API, which means that they do not dial the contact. If the flow places an
+     * outbound call to a contact, and then puts the contact in queue, the call is then routed to the agent, like any
+     * other inbound case.
      * </p>
      * <p>
      * There is a 60-second dialing timeout for this operation. If the call is not connected after 60 seconds, it fails.
@@ -4238,9 +4275,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </note> <note>
      * <p>
      * Campaign calls are not allowed by default. Before you can make a call with <code>TrafficType</code> =
-     * <code>CAMPAIGN</code>, you must submit a service quota increase request. For more information, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
-     * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * <code>CAMPAIGN</code>, you must submit a service quota increase request to the quota <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#outbound-communications-quotas"
+     * >Amazon Connect campaigns</a>.
      * </p>
      * </note>
      * 
@@ -4260,7 +4297,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new task.
+     * Initiates a flow to start a new task.
      * </p>
      * 
      * @param startTaskContactRequest
@@ -4273,7 +4310,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Initiates a contact flow to start a new task.
+     * Initiates a flow to start a new task.
      * </p>
      * 
      * @param startTaskContactRequest
@@ -4484,8 +4521,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Adds the specified tags to the specified resource.
      * </p>
      * <p>
-     * The supported resource types are users, routing profiles, queues, quick connects, contact flows, agent status,
-     * hours of operation, phone number, security profiles, and task templates.
+     * Some of the supported resource types are agents, routing profiles, queues, quick connects, contact flows, agent
+     * statuses, hours of operation, phone numbers, security profiles, and task templates. For a complete list, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/tagging.html">Tagging resources in Amazon
+     * Connect</a>.
      * </p>
      * <p>
      * For sample policies that use tags, see <a
@@ -4506,8 +4545,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Adds the specified tags to the specified resource.
      * </p>
      * <p>
-     * The supported resource types are users, routing profiles, queues, quick connects, contact flows, agent status,
-     * hours of operation, phone number, security profiles, and task templates.
+     * Some of the supported resource types are agents, routing profiles, queues, quick connects, contact flows, agent
+     * statuses, hours of operation, phone numbers, security profiles, and task templates. For a complete list, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/tagging.html">Tagging resources in Amazon
+     * Connect</a>.
      * </p>
      * <p>
      * For sample policies that use tags, see <a
@@ -4531,9 +4572,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * Transfers contacts from one agent or queue to another agent or queue at any point after a contact is created. You
-     * can transfer a contact to another queue by providing the contact flow which orchestrates the contact to the
-     * destination queue. This gives you more control over contact handling and helps you adhere to the service level
-     * agreement (SLA) guaranteed to your customers.
+     * can transfer a contact to another queue by providing the flow which orchestrates the contact to the destination
+     * queue. This gives you more control over contact handling and helps you adhere to the service level agreement
+     * (SLA) guaranteed to your customers.
      * </p>
      * <p>
      * Note the following requirements:
@@ -4551,8 +4592,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </li>
      * <li>
      * <p>
-     * The following contact flow types are supported: Inbound contact flow, Transfer to agent flow, and Transfer to
-     * queue flow.
+     * The following flow types are supported: Inbound flow, Transfer to agent flow, and Transfer to queue flow.
      * </p>
      * </li>
      * <li>
@@ -4578,9 +4618,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * Transfers contacts from one agent or queue to another agent or queue at any point after a contact is created. You
-     * can transfer a contact to another queue by providing the contact flow which orchestrates the contact to the
-     * destination queue. This gives you more control over contact handling and helps you adhere to the service level
-     * agreement (SLA) guaranteed to your customers.
+     * can transfer a contact to another queue by providing the flow which orchestrates the contact to the destination
+     * queue. This gives you more control over contact handling and helps you adhere to the service level agreement
+     * (SLA) guaranteed to your customers.
      * </p>
      * <p>
      * Note the following requirements:
@@ -4598,8 +4638,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </li>
      * <li>
      * <p>
-     * The following contact flow types are supported: Inbound contact flow, Transfer to agent flow, and Transfer to
-     * queue flow.
+     * The following flow types are supported: Inbound flow, Transfer to agent flow, and Transfer to queue flow.
      * </p>
      * </li>
      * <li>
@@ -4756,17 +4795,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Connect. You could also flag calls for additional analysis, such as legal review or to identify abusive callers.
      * </p>
      * <p>
-     * Contact attributes are available in Amazon Connect for 24 months, and are then deleted. For information about CTR
-     * retention and the maximum size of the CTR attributes section, see <a
+     * Contact attributes are available in Amazon Connect for 24 months, and are then deleted. For information about
+     * contact record retention and the maximum size of the contact record attributes section, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#feature-limits"
      * >Feature specifications</a> in the <i>Amazon Connect Administrator Guide</i>.
-     * </p>
-     * <p>
-     * <b>Important:</b> You cannot use the operation to update attributes for contacts that occurred prior to the
-     * release of the API, which was September 12, 2018. You can update attributes only for contacts that started after
-     * the release of the API. If you attempt to update attributes for a contact that occurred prior to the release of
-     * the API, a 400 error is returned. This applies also to queued callbacks that were initiated prior to the release
-     * of the API but are still active in your instance.
      * </p>
      * 
      * @param updateContactAttributesRequest
@@ -4789,17 +4821,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Connect. You could also flag calls for additional analysis, such as legal review or to identify abusive callers.
      * </p>
      * <p>
-     * Contact attributes are available in Amazon Connect for 24 months, and are then deleted. For information about CTR
-     * retention and the maximum size of the CTR attributes section, see <a
+     * Contact attributes are available in Amazon Connect for 24 months, and are then deleted. For information about
+     * contact record retention and the maximum size of the contact record attributes section, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#feature-limits"
      * >Feature specifications</a> in the <i>Amazon Connect Administrator Guide</i>.
-     * </p>
-     * <p>
-     * <b>Important:</b> You cannot use the operation to update attributes for contacts that occurred prior to the
-     * release of the API, which was September 12, 2018. You can update attributes only for contacts that started after
-     * the release of the API. If you attempt to update attributes for a contact that occurred prior to the release of
-     * the API, a 400 error is returned. This applies also to queued callbacks that were initiated prior to the release
-     * of the API but are still active in your instance.
      * </p>
      * 
      * @param updateContactAttributesRequest
@@ -4817,10 +4842,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates the specified contact flow.
+     * Updates the specified flow.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -4834,10 +4859,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates the specified contact flow.
+     * Updates the specified flow.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -4856,7 +4881,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates metadata about specified contact flow.
+     * Updates metadata about specified flow.
      * </p>
      * 
      * @param updateContactFlowMetadataRequest
@@ -4870,7 +4895,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates metadata about specified contact flow.
+     * Updates metadata about specified flow.
      * </p>
      * 
      * @param updateContactFlowMetadataRequest
@@ -4889,7 +4914,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates specified contact flow module for the specified Amazon Connect instance.
+     * Updates specified flow module for the specified Amazon Connect instance.
      * </p>
      * 
      * @param updateContactFlowModuleContentRequest
@@ -4904,7 +4929,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates specified contact flow module for the specified Amazon Connect instance.
+     * Updates specified flow module for the specified Amazon Connect instance.
      * </p>
      * 
      * @param updateContactFlowModuleContentRequest
@@ -4924,7 +4949,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates metadata about specified contact flow module.
+     * Updates metadata about specified flow module.
      * </p>
      * 
      * @param updateContactFlowModuleMetadataRequest
@@ -4939,7 +4964,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates metadata about specified contact flow module.
+     * Updates metadata about specified flow module.
      * </p>
      * 
      * @param updateContactFlowModuleMetadataRequest
@@ -4959,10 +4984,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * The name of the contact flow.
+     * The name of the flow.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 
@@ -4976,10 +5001,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * The name of the contact flow.
+     * The name of the flow.
      * </p>
      * <p>
-     * You can also create and update contact flows using the <a
+     * You can also create and update flows using the <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
      * </p>
      * 

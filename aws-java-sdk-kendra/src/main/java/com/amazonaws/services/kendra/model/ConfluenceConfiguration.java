@@ -39,10 +39,15 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
+     * connect to the Confluence instance. If you use Confluence Cloud, you use a generated API token as the password.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
+     * </p>
+     * <p>
+     * You can also provide authentication credentials in the form of a personal access token. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication">
+     * Authentication for a Confluence data source</a>.
      * </p>
      */
     private String secretArn;
@@ -123,6 +128,13 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private ProxyConfiguration proxyConfiguration;
+    /**
+     * <p>
+     * Whether you want to connect to Confluence using basic authentication of user name and password, or a personal
+     * access token. You can use a personal access token for Confluence Server.
+     * </p>
+     */
+    private String authenticationType;
 
     /**
      * <p>
@@ -179,18 +191,28 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
+     * connect to the Confluence instance. If you use Confluence Cloud, you use a generated API token as the password.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
+     * <p>
+     * You can also provide authentication credentials in the form of a personal access token. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication">
+     * Authentication for a Confluence data source</a>.
+     * </p>
      * 
      * @param secretArn
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
-     *        required to connect to the Confluence instance. If you use Confluence cloud, you use a generated API token
+     *        required to connect to the Confluence instance. If you use Confluence Cloud, you use a generated API token
      *        as the password. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
-     *        source</a>.
+     *        source</a>.</p>
+     *        <p>
+     *        You can also provide authentication credentials in the form of a personal access token. For more
+     *        information, see <a href=
+     *        "https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication"
+     *        >Authentication for a Confluence data source</a>.
      */
 
     public void setSecretArn(String secretArn) {
@@ -200,17 +222,27 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
+     * connect to the Confluence instance. If you use Confluence Cloud, you use a generated API token as the password.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
+     * <p>
+     * You can also provide authentication credentials in the form of a personal access token. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication">
+     * Authentication for a Confluence data source</a>.
+     * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
-     *         required to connect to the Confluence instance. If you use Confluence cloud, you use a generated API
+     *         required to connect to the Confluence instance. If you use Confluence Cloud, you use a generated API
      *         token as the password. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
-     *         source</a>.
+     *         source</a>.</p>
+     *         <p>
+     *         You can also provide authentication credentials in the form of a personal access token. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication"
+     *         >Authentication for a Confluence data source</a>.
      */
 
     public String getSecretArn() {
@@ -220,18 +252,28 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
-     * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
+     * connect to the Confluence instance. If you use Confluence Cloud, you use a generated API token as the password.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
+     * <p>
+     * You can also provide authentication credentials in the form of a personal access token. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication">
+     * Authentication for a Confluence data source</a>.
+     * </p>
      * 
      * @param secretArn
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
-     *        required to connect to the Confluence instance. If you use Confluence cloud, you use a generated API token
+     *        required to connect to the Confluence instance. If you use Confluence Cloud, you use a generated API token
      *        as the password. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
-     *        source</a>.
+     *        source</a>.</p>
+     *        <p>
+     *        You can also provide authentication credentials in the form of a personal access token. For more
+     *        information, see <a href=
+     *        "https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html#confluence-authentication"
+     *        >Authentication for a Confluence data source</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -836,6 +878,73 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Whether you want to connect to Confluence using basic authentication of user name and password, or a personal
+     * access token. You can use a personal access token for Confluence Server.
+     * </p>
+     * 
+     * @param authenticationType
+     *        Whether you want to connect to Confluence using basic authentication of user name and password, or a
+     *        personal access token. You can use a personal access token for Confluence Server.
+     * @see ConfluenceAuthenticationType
+     */
+
+    public void setAuthenticationType(String authenticationType) {
+        this.authenticationType = authenticationType;
+    }
+
+    /**
+     * <p>
+     * Whether you want to connect to Confluence using basic authentication of user name and password, or a personal
+     * access token. You can use a personal access token for Confluence Server.
+     * </p>
+     * 
+     * @return Whether you want to connect to Confluence using basic authentication of user name and password, or a
+     *         personal access token. You can use a personal access token for Confluence Server.
+     * @see ConfluenceAuthenticationType
+     */
+
+    public String getAuthenticationType() {
+        return this.authenticationType;
+    }
+
+    /**
+     * <p>
+     * Whether you want to connect to Confluence using basic authentication of user name and password, or a personal
+     * access token. You can use a personal access token for Confluence Server.
+     * </p>
+     * 
+     * @param authenticationType
+     *        Whether you want to connect to Confluence using basic authentication of user name and password, or a
+     *        personal access token. You can use a personal access token for Confluence Server.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfluenceAuthenticationType
+     */
+
+    public ConfluenceConfiguration withAuthenticationType(String authenticationType) {
+        setAuthenticationType(authenticationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether you want to connect to Confluence using basic authentication of user name and password, or a personal
+     * access token. You can use a personal access token for Confluence Server.
+     * </p>
+     * 
+     * @param authenticationType
+     *        Whether you want to connect to Confluence using basic authentication of user name and password, or a
+     *        personal access token. You can use a personal access token for Confluence Server.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfluenceAuthenticationType
+     */
+
+    public ConfluenceConfiguration withAuthenticationType(ConfluenceAuthenticationType authenticationType) {
+        this.authenticationType = authenticationType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -868,7 +977,9 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
         if (getExclusionPatterns() != null)
             sb.append("ExclusionPatterns: ").append(getExclusionPatterns()).append(",");
         if (getProxyConfiguration() != null)
-            sb.append("ProxyConfiguration: ").append(getProxyConfiguration());
+            sb.append("ProxyConfiguration: ").append(getProxyConfiguration()).append(",");
+        if (getAuthenticationType() != null)
+            sb.append("AuthenticationType: ").append(getAuthenticationType());
         sb.append("}");
         return sb.toString();
     }
@@ -927,6 +1038,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getProxyConfiguration() != null && other.getProxyConfiguration().equals(this.getProxyConfiguration()) == false)
             return false;
+        if (other.getAuthenticationType() == null ^ this.getAuthenticationType() == null)
+            return false;
+        if (other.getAuthenticationType() != null && other.getAuthenticationType().equals(this.getAuthenticationType()) == false)
+            return false;
         return true;
     }
 
@@ -946,6 +1061,7 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getInclusionPatterns() == null) ? 0 : getInclusionPatterns().hashCode());
         hashCode = prime * hashCode + ((getExclusionPatterns() == null) ? 0 : getExclusionPatterns().hashCode());
         hashCode = prime * hashCode + ((getProxyConfiguration() == null) ? 0 : getProxyConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getAuthenticationType() == null) ? 0 : getAuthenticationType().hashCode());
         return hashCode;
     }
 

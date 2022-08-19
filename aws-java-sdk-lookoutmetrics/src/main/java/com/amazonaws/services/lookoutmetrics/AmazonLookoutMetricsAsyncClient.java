@@ -540,6 +540,39 @@ public class AmazonLookoutMetricsAsyncClient extends AmazonLookoutMetricsClient 
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataQualityMetricsResult> getDataQualityMetricsAsync(GetDataQualityMetricsRequest request) {
+
+        return getDataQualityMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataQualityMetricsResult> getDataQualityMetricsAsync(final GetDataQualityMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDataQualityMetricsRequest, GetDataQualityMetricsResult> asyncHandler) {
+        final GetDataQualityMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDataQualityMetricsResult>() {
+            @Override
+            public GetDataQualityMetricsResult call() throws Exception {
+                GetDataQualityMetricsResult result = null;
+
+                try {
+                    result = executeGetDataQualityMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFeedbackResult> getFeedbackAsync(GetFeedbackRequest request) {
 
         return getFeedbackAsync(request, null);

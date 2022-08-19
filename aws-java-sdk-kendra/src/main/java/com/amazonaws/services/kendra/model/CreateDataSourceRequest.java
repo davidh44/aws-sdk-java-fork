@@ -84,8 +84,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String schedule;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
      * Kendra</a>.
      * </p>
      * <p>
@@ -518,8 +518,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
      * Kendra</a>.
      * </p>
      * <p>
@@ -531,9 +531,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for
-     *        Amazon Kendra</a>.</p>
+     *        The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources.
+     *        For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles
+     *        for Amazon Kendra</a>.</p>
      *        <p>
      *        You can't specify the <code>RoleArn</code> parameter when the <code>Type</code> parameter is set to
      *        <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -548,8 +548,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
      * Kendra</a>.
      * </p>
      * <p>
@@ -560,9 +560,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The <code>RoleArn</code> parameter is required for all other data sources.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     *         information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for
-     *         Amazon Kendra</a>.</p>
+     * @return The Amazon Resource Name (ARN) of a role with permission to access the data source and required
+     *         resources. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.</p>
      *         <p>
      *         You can't specify the <code>RoleArn</code> parameter when the <code>Type</code> parameter is set to
      *         <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -577,8 +577,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
      * Kendra</a>.
      * </p>
      * <p>
@@ -590,9 +590,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more
-     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for
-     *        Amazon Kendra</a>.</p>
+     *        The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources.
+     *        For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles
+     *        for Amazon Kendra</a>.</p>
      *        <p>
      *        You can't specify the <code>RoleArn</code> parameter when the <code>Type</code> parameter is set to
      *        <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.

@@ -15,7 +15,9 @@ package com.amazonaws.services.connect.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The property is not valid.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PropertyValidationException extends com.amazonaws.services.connect.model.AmazonConnectException {

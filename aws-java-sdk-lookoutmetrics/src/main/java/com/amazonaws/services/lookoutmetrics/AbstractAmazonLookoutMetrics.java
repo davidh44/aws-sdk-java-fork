@@ -98,6 +98,11 @@ public class AbstractAmazonLookoutMetrics implements AmazonLookoutMetrics {
     }
 
     @Override
+    public GetDataQualityMetricsResult getDataQualityMetrics(GetDataQualityMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetFeedbackResult getFeedback(GetFeedbackRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

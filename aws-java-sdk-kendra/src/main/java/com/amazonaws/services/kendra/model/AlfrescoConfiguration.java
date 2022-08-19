@@ -67,7 +67,14 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
     private String secretArn;
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you require
+     * a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      */
     private S3Path sslCertificateS3Path;
@@ -345,11 +352,24 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you require
+     * a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      * 
      * @param sslCertificateS3Path
-     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you
+     *        require a secure SSL connection.</p>
+     *        <p>
+     *        You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
+     *        using OpenSSL to create an X509 certificate, see <a
+     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
+     *        an X509 certificate</a>.
      */
 
     public void setSslCertificateS3Path(S3Path sslCertificateS3Path) {
@@ -358,10 +378,23 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you require
+     * a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      * 
-     * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you
+     *         require a secure SSL connection.</p>
+     *         <p>
+     *         You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
+     *         using OpenSSL to create an X509 certificate, see <a
+     *         href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
+     *         an X509 certificate</a>.
      */
 
     public S3Path getSslCertificateS3Path() {
@@ -370,11 +403,24 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you require
+     * a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      * 
      * @param sslCertificateS3Path
-     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco.
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to Alfresco if you
+     *        require a secure SSL connection.</p>
+     *        <p>
+     *        You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
+     *        using OpenSSL to create an X509 certificate, see <a
+     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
+     *        an X509 certificate</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

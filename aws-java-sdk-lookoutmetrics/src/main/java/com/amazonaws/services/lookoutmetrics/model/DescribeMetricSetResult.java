@@ -61,7 +61,8 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
     private java.util.Date lastModificationTime;
     /**
      * <p>
-     * The offset in seconds. Only supported for S3 and Redshift datasources.
+     * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      */
     private Integer offset;
@@ -344,11 +345,13 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The offset in seconds. Only supported for S3 and Redshift datasources.
+     * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      * 
      * @param offset
-     *        The offset in seconds. Only supported for S3 and Redshift datasources.
+     *        After an interval ends, the amount of seconds that the detector waits before importing data. Offset is
+     *        only supported for S3, Redshift, Athena and datasources.
      */
 
     public void setOffset(Integer offset) {
@@ -357,10 +360,12 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The offset in seconds. Only supported for S3 and Redshift datasources.
+     * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      * 
-     * @return The offset in seconds. Only supported for S3 and Redshift datasources.
+     * @return After an interval ends, the amount of seconds that the detector waits before importing data. Offset is
+     *         only supported for S3, Redshift, Athena and datasources.
      */
 
     public Integer getOffset() {
@@ -369,11 +374,13 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The offset in seconds. Only supported for S3 and Redshift datasources.
+     * After an interval ends, the amount of seconds that the detector waits before importing data. Offset is only
+     * supported for S3, Redshift, Athena and datasources.
      * </p>
      * 
      * @param offset
-     *        The offset in seconds. Only supported for S3 and Redshift datasources.
+     *        After an interval ends, the amount of seconds that the detector waits before importing data. Offset is
+     *        only supported for S3, Redshift, Athena and datasources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

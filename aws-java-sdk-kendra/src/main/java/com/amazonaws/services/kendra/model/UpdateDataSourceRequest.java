@@ -27,7 +27,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the data source you want to update.
+     * The identifier of the data source connector you want to update.
      * </p>
      */
     private String id;
@@ -71,8 +71,9 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String schedule;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
+     * Kendra</a>.
      * </p>
      */
     private String roleArn;
@@ -102,11 +103,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the data source you want to update.
+     * The identifier of the data source connector you want to update.
      * </p>
      * 
      * @param id
-     *        The identifier of the data source you want to update.
+     *        The identifier of the data source connector you want to update.
      */
 
     public void setId(String id) {
@@ -115,10 +116,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the data source you want to update.
+     * The identifier of the data source connector you want to update.
      * </p>
      * 
-     * @return The identifier of the data source you want to update.
+     * @return The identifier of the data source connector you want to update.
      */
 
     public String getId() {
@@ -127,11 +128,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the data source you want to update.
+     * The identifier of the data source connector you want to update.
      * </p>
      * 
      * @param id
-     *        The identifier of the data source you want to update.
+     *        The identifier of the data source connector you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -394,13 +395,15 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
+     * Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information,
-     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     *        The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources.
+     *        For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles
+     *        for Amazon Kendra</a>.
      */
 
     public void setRoleArn(String roleArn) {
@@ -409,13 +412,14 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
+     * Kendra</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information,
-     *         see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
-     *         Kendra</a>.
+     * @return The Amazon Resource Name (ARN) of a role with permission to access the data source and required
+     *         resources. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      */
 
     public String getRoleArn() {
@@ -424,13 +428,15 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources. For
+     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon
+     * Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information,
-     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     *        The Amazon Resource Name (ARN) of a role with permission to access the data source and required resources.
+     *        For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles
+     *        for Amazon Kendra</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

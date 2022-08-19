@@ -1120,6 +1120,73 @@ public class AmazonLookoutMetricsClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Returns details about the requested data quality metrics.
+     * </p>
+     * 
+     * @param getDataQualityMetricsRequest
+     * @return Result of the GetDataQualityMetrics operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found. Check the ARN of the resource and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service. Check your input values and try
+     *         again.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws TooManyRequestsException
+     *         The request was denied due to too many requests being submitted at the same time.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure.
+     * @sample AmazonLookoutMetrics.GetDataQualityMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/GetDataQualityMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDataQualityMetricsResult getDataQualityMetrics(GetDataQualityMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDataQualityMetrics(request);
+    }
+
+    @SdkInternalApi
+    final GetDataQualityMetricsResult executeGetDataQualityMetrics(GetDataQualityMetricsRequest getDataQualityMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDataQualityMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDataQualityMetricsRequest> request = null;
+        Response<GetDataQualityMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDataQualityMetricsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDataQualityMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LookoutMetrics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDataQualityMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDataQualityMetricsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetDataQualityMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get feedback for an anomaly group.
      * </p>
      * 

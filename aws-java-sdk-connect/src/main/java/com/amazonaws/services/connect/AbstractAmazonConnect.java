@@ -548,6 +548,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SearchSecurityProfilesResult searchSecurityProfiles(SearchSecurityProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchUsersResult searchUsers(SearchUsersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -46,7 +46,7 @@ import java.util.concurrent.ExecutorService;
  * </p>
  * <note>
  * <p>
- * Working with contact flows? Check out the <a
+ * Working with flows? Check out the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
  * </p>
  * </note>
@@ -3526,6 +3526,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeSearchAvailablePhoneNumbers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest request) {
+
+        return searchSecurityProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(final SearchSecurityProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchSecurityProfilesRequest, SearchSecurityProfilesResult> asyncHandler) {
+        final SearchSecurityProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchSecurityProfilesResult>() {
+            @Override
+            public SearchSecurityProfilesResult call() throws Exception {
+                SearchSecurityProfilesResult result = null;
+
+                try {
+                    result = executeSearchSecurityProfiles(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

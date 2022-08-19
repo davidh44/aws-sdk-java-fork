@@ -30,7 +30,8 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Quip site domain.
+     * The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this example
+     * is "quipdomain".
      * </p>
      */
     private String domain;
@@ -70,8 +71,9 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     private Boolean crawlAttachments;
     /**
      * <p>
-     * The identifiers of the Quip folders you want to index. You can find in your browser URL when you access your
-     * folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     * The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when you
+     * access your folder in Quip. For example, <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The
+     * folder ID in this example is "zlLuOVNSarTL".
      * </p>
      */
     private java.util.List<String> folderIds;
@@ -134,11 +136,13 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Quip site domain.
+     * The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this example
+     * is "quipdomain".
      * </p>
      * 
      * @param domain
-     *        The Quip site domain.
+     *        The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this
+     *        example is "quipdomain".
      */
 
     public void setDomain(String domain) {
@@ -147,10 +151,12 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Quip site domain.
+     * The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this example
+     * is "quipdomain".
      * </p>
      * 
-     * @return The Quip site domain.
+     * @return The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this
+     *         example is "quipdomain".
      */
 
     public String getDomain() {
@@ -159,11 +165,13 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Quip site domain.
+     * The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this example
+     * is "quipdomain".
      * </p>
      * 
      * @param domain
-     *        The Quip site domain.
+     *        The Quip site domain. For example, <i>https://quip-company.quipdomain.com/browse</i>. The domain in this
+     *        example is "quipdomain".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -427,12 +435,15 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifiers of the Quip folders you want to index. You can find in your browser URL when you access your
-     * folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     * The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when you
+     * access your folder in Quip. For example, <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The
+     * folder ID in this example is "zlLuOVNSarTL".
      * </p>
      * 
-     * @return The identifiers of the Quip folders you want to index. You can find in your browser URL when you access
-     *         your folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     * @return The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL
+     *         when you access your folder in Quip. For example,
+     *         <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The folder ID in this example is
+     *         "zlLuOVNSarTL".
      */
 
     public java.util.List<String> getFolderIds() {
@@ -441,13 +452,16 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifiers of the Quip folders you want to index. You can find in your browser URL when you access your
-     * folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     * The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when you
+     * access your folder in Quip. For example, <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The
+     * folder ID in this example is "zlLuOVNSarTL".
      * </p>
      * 
      * @param folderIds
-     *        The identifiers of the Quip folders you want to index. You can find in your browser URL when you access
-     *        your folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     *        The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when
+     *        you access your folder in Quip. For example,
+     *        <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The folder ID in this example is
+     *        "zlLuOVNSarTL".
      */
 
     public void setFolderIds(java.util.Collection<String> folderIds) {
@@ -461,8 +475,9 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifiers of the Quip folders you want to index. You can find in your browser URL when you access your
-     * folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     * The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when you
+     * access your folder in Quip. For example, <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The
+     * folder ID in this example is "zlLuOVNSarTL".
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -471,8 +486,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param folderIds
-     *        The identifiers of the Quip folders you want to index. You can find in your browser URL when you access
-     *        your folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     *        The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when
+     *        you access your folder in Quip. For example,
+     *        <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The folder ID in this example is
+     *        "zlLuOVNSarTL".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -488,13 +505,16 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifiers of the Quip folders you want to index. You can find in your browser URL when you access your
-     * folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     * The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when you
+     * access your folder in Quip. For example, <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The
+     * folder ID in this example is "zlLuOVNSarTL".
      * </p>
      * 
      * @param folderIds
-     *        The identifiers of the Quip folders you want to index. You can find in your browser URL when you access
-     *        your folder in Quip. For example, <i>https://quip-company.com/zlLuOVNSarTL/folder-name</i>.
+     *        The identifiers of the Quip folders you want to index. You can find the folder ID in your browser URL when
+     *        you access your folder in Quip. For example,
+     *        <i>https://quip-company.quipdomain.com/zlLuOVNSarTL/folder-name</i>. The folder ID in this example is
+     *        "zlLuOVNSarTL".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

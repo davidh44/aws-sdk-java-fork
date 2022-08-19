@@ -1,3 +1,20 @@
+# __1.12.286__ __2022-08-19__
+## __AWSKendraFrontendService__
+  - ### Features
+    - This release adds support for a new authentication type - Personal Access Token (PAT) for confluence server.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds SearchSecurityProfiles API which can be used to search for Security Profile resources within a Connect Instance.
+
+## __Amazon Interactive Video Service Chat__
+  - ### Features
+    - Documentation Change for IVS Chat API Reference - Doc-only update to change text/description for tags field.
+
+## __Amazon Lookout for Metrics__
+  - ### Features
+    - This release is to make GetDataQualityMetrics API publicly available.
+
 # __1.12.285__ __2022-08-18__
 ## __AWS Network Manager__
   - ### Features

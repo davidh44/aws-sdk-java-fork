@@ -212,6 +212,19 @@ public class AbstractAmazonLookoutMetricsAsync extends AbstractAmazonLookoutMetr
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataQualityMetricsResult> getDataQualityMetricsAsync(GetDataQualityMetricsRequest request) {
+
+        return getDataQualityMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataQualityMetricsResult> getDataQualityMetricsAsync(GetDataQualityMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDataQualityMetricsRequest, GetDataQualityMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFeedbackResult> getFeedbackAsync(GetFeedbackRequest request) {
 
         return getFeedbackAsync(request, null);

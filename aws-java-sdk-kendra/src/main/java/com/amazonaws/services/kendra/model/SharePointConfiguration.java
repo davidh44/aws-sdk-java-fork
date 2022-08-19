@@ -36,7 +36,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private String sharePointVersion;
     /**
      * <p>
-     * The Microsoft SharePoint site URLs for the documents you want to indext.
+     * The Microsoft SharePoint site URLs for the documents you want to index.
      * </p>
      */
     private java.util.List<String> urls;
@@ -126,7 +126,14 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private Boolean disableLocalGroups;
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint Server if
+     * you require a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      */
     private S3Path sslCertificateS3Path;
@@ -221,10 +228,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Microsoft SharePoint site URLs for the documents you want to indext.
+     * The Microsoft SharePoint site URLs for the documents you want to index.
      * </p>
      * 
-     * @return The Microsoft SharePoint site URLs for the documents you want to indext.
+     * @return The Microsoft SharePoint site URLs for the documents you want to index.
      */
 
     public java.util.List<String> getUrls() {
@@ -233,11 +240,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Microsoft SharePoint site URLs for the documents you want to indext.
+     * The Microsoft SharePoint site URLs for the documents you want to index.
      * </p>
      * 
      * @param urls
-     *        The Microsoft SharePoint site URLs for the documents you want to indext.
+     *        The Microsoft SharePoint site URLs for the documents you want to index.
      */
 
     public void setUrls(java.util.Collection<String> urls) {
@@ -251,7 +258,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Microsoft SharePoint site URLs for the documents you want to indext.
+     * The Microsoft SharePoint site URLs for the documents you want to index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -260,7 +267,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param urls
-     *        The Microsoft SharePoint site URLs for the documents you want to indext.
+     *        The Microsoft SharePoint site URLs for the documents you want to index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,11 +283,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Microsoft SharePoint site URLs for the documents you want to indext.
+     * The Microsoft SharePoint site URLs for the documents you want to index.
      * </p>
      * 
      * @param urls
-     *        The Microsoft SharePoint site URLs for the documents you want to indext.
+     *        The Microsoft SharePoint site URLs for the documents you want to index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -982,11 +989,24 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint Server if
+     * you require a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      * 
      * @param sslCertificateS3Path
-     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint
+     *        Server if you require a secure SSL connection.</p>
+     *        <p>
+     *        You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
+     *        using OpenSSL to create an X509 certificate, see <a
+     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
+     *        an X509 certificate</a>.
      */
 
     public void setSslCertificateS3Path(S3Path sslCertificateS3Path) {
@@ -995,10 +1015,23 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint Server if
+     * you require a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      * 
-     * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint
+     *         Server if you require a secure SSL connection.</p>
+     *         <p>
+     *         You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
+     *         using OpenSSL to create an X509 certificate, see <a
+     *         href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
+     *         an X509 certificate</a>.
      */
 
     public S3Path getSslCertificateS3Path() {
@@ -1007,11 +1040,24 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint Server if
+     * you require a secure SSL connection.
+     * </p>
+     * <p>
+     * You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of using
+     * OpenSSL to create an X509 certificate, see <a
+     * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign an X509
+     * certificate</a>.
      * </p>
      * 
      * @param sslCertificateS3Path
-     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint
+     *        Server if you require a secure SSL connection.</p>
+     *        <p>
+     *        You can simply generate a self-signed X509 certificate on any computer using OpenSSL. For an example of
+     *        using OpenSSL to create an X509 certificate, see <a
+     *        href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-ssl.html">Create and sign
+     *        an X509 certificate</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

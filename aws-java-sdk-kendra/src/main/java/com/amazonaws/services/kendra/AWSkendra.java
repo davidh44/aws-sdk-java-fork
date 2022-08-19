@@ -249,7 +249,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Creates a data source that you want to use with an Amazon Kendra index.
+     * Creates a data source connector that you want to use with an Amazon Kendra index.
      * </p>
      * <p>
      * You specify a name, data source connector type and description for your data source. You also specify
@@ -457,8 +457,8 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Deletes an Amazon Kendra data source. An exception is not thrown if the data source is already being deleted.
-     * While the data source is being deleted, the <code>Status</code> field returned by a call to the
+     * Deletes an Amazon Kendra data source connector. An exception is not thrown if the data source is already being
+     * deleted. While the data source is being deleted, the <code>Status</code> field returned by a call to the
      * <code>DescribeDataSource</code> API is set to <code>DELETING</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/delete-data-source.html">Deleting Data Sources</a>.
      * </p>
@@ -643,7 +643,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Gets information about an Amazon Kendra data source.
+     * Gets information about an Amazon Kendra data source connector.
      * </p>
      * 
      * @param describeDataSourceRequest
@@ -918,7 +918,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Gets statistics about synchronizing Amazon Kendra with a data source.
+     * Gets statistics about synchronizing a data source connector.
      * </p>
      * 
      * @param listDataSourceSyncJobsRequest
@@ -937,7 +937,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Lists the data sources that you have created.
+     * Lists the data source connectors that you have created.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -1228,8 +1228,8 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Starts a synchronization job for a data source. If a synchronization job is already in progress, Amazon Kendra
-     * returns a <code>ResourceInUseException</code> exception.
+     * Starts a synchronization job for a data source connector. If a synchronization job is already in progress, Amazon
+     * Kendra returns a <code>ResourceInUseException</code> exception.
      * </p>
      * 
      * @param startDataSourceSyncJobRequest
@@ -1365,7 +1365,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Updates an existing Amazon Kendra data source.
+     * Updates an existing Amazon Kendra data source connector.
      * </p>
      * 
      * @param updateDataSourceRequest
