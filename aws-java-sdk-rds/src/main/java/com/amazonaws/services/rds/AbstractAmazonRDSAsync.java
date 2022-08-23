@@ -2275,4 +2275,17 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<DBInstance> switchoverReadReplicaAsync(SwitchoverReadReplicaRequest request) {
+
+        return switchoverReadReplicaAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DBInstance> switchoverReadReplicaAsync(SwitchoverReadReplicaRequest request,
+            com.amazonaws.handlers.AsyncHandler<SwitchoverReadReplicaRequest, DBInstance> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

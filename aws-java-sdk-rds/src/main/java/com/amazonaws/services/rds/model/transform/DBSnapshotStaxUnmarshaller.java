@@ -205,6 +205,11 @@ public class DBSnapshotStaxUnmarshaller implements Unmarshaller<DBSnapshot, Stax
                     continue;
                 }
 
+                if (context.testExpression("SnapshotDatabaseTime", targetDepth)) {
+                    dBSnapshot.setSnapshotDatabaseTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SnapshotTarget", targetDepth)) {
                     dBSnapshot.setSnapshotTarget(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

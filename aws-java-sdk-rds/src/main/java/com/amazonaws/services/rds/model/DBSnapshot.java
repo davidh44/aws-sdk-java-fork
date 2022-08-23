@@ -219,6 +219,19 @@ public class DBSnapshot implements Serializable, Cloneable {
     private java.util.Date originalSnapshotCreateTime;
     /**
      * <p>
+     * The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you restore
+     * a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In contrast,
+     * originalSnapshotCreateTime specifies the system time that the snapshot completed.
+     * </p>
+     * <p>
+     * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * </p>
+     */
+    private java.util.Date snapshotDatabaseTime;
+    /**
+     * <p>
      * Specifies where manual snapshots are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
      * </p>
      */
@@ -1581,6 +1594,85 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you restore
+     * a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In contrast,
+     * originalSnapshotCreateTime specifies the system time that the snapshot completed.
+     * </p>
+     * <p>
+     * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * </p>
+     * 
+     * @param snapshotDatabaseTime
+     *        The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you
+     *        restore a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In
+     *        contrast, originalSnapshotCreateTime specifies the system time that the snapshot completed.</p>
+     *        <p>
+     *        If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     *        originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     *        SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     */
+
+    public void setSnapshotDatabaseTime(java.util.Date snapshotDatabaseTime) {
+        this.snapshotDatabaseTime = snapshotDatabaseTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you restore
+     * a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In contrast,
+     * originalSnapshotCreateTime specifies the system time that the snapshot completed.
+     * </p>
+     * <p>
+     * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * </p>
+     * 
+     * @return The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you
+     *         restore a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In
+     *         contrast, originalSnapshotCreateTime specifies the system time that the snapshot completed.</p>
+     *         <p>
+     *         If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     *         originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     *         SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     */
+
+    public java.util.Date getSnapshotDatabaseTime() {
+        return this.snapshotDatabaseTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you restore
+     * a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In contrast,
+     * originalSnapshotCreateTime specifies the system time that the snapshot completed.
+     * </p>
+     * <p>
+     * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * </p>
+     * 
+     * @param snapshotDatabaseTime
+     *        The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you
+     *        restore a snapshot, SnapshotDatabaseTime is the most recent transaction in the restored DB instance. In
+     *        contrast, originalSnapshotCreateTime specifies the system time that the snapshot completed.</p>
+     *        <p>
+     *        If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
+     *        originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
+     *        SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBSnapshot withSnapshotDatabaseTime(java.util.Date snapshotDatabaseTime) {
+        setSnapshotDatabaseTime(snapshotDatabaseTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies where manual snapshots are stored: Amazon Web Services Outposts or the Amazon Web Services Region.
      * </p>
      * 
@@ -1694,6 +1786,8 @@ public class DBSnapshot implements Serializable, Cloneable {
             sb.append("TagList: ").append(getTagList()).append(",");
         if (getOriginalSnapshotCreateTime() != null)
             sb.append("OriginalSnapshotCreateTime: ").append(getOriginalSnapshotCreateTime()).append(",");
+        if (getSnapshotDatabaseTime() != null)
+            sb.append("SnapshotDatabaseTime: ").append(getSnapshotDatabaseTime()).append(",");
         if (getSnapshotTarget() != null)
             sb.append("SnapshotTarget: ").append(getSnapshotTarget());
         sb.append("}");
@@ -1831,6 +1925,10 @@ public class DBSnapshot implements Serializable, Cloneable {
             return false;
         if (other.getOriginalSnapshotCreateTime() != null && other.getOriginalSnapshotCreateTime().equals(this.getOriginalSnapshotCreateTime()) == false)
             return false;
+        if (other.getSnapshotDatabaseTime() == null ^ this.getSnapshotDatabaseTime() == null)
+            return false;
+        if (other.getSnapshotDatabaseTime() != null && other.getSnapshotDatabaseTime().equals(this.getSnapshotDatabaseTime()) == false)
+            return false;
         if (other.getSnapshotTarget() == null ^ this.getSnapshotTarget() == null)
             return false;
         if (other.getSnapshotTarget() != null && other.getSnapshotTarget().equals(this.getSnapshotTarget()) == false)
@@ -1873,6 +1971,7 @@ public class DBSnapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDbiResourceId() == null) ? 0 : getDbiResourceId().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
         hashCode = prime * hashCode + ((getOriginalSnapshotCreateTime() == null) ? 0 : getOriginalSnapshotCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getSnapshotDatabaseTime() == null) ? 0 : getSnapshotDatabaseTime().hashCode());
         hashCode = prime * hashCode + ((getSnapshotTarget() == null) ? 0 : getSnapshotTarget().hashCode());
         return hashCode;
     }

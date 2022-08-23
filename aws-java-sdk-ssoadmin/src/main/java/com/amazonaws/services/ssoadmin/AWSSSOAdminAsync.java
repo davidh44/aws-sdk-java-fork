@@ -25,7 +25,40 @@ import com.amazonaws.services.ssoadmin.model.*;
  * {@link com.amazonaws.services.ssoadmin.AbstractAWSSSOAdminAsync} instead.
  * </p>
  * <p>
- * <p/>
+ * <p>
+ * Amazon Web Services Single Sign On helps you securely create, or connect, your workforce identities and manage their
+ * access centrally across Amazon Web Services accounts and applications. Amazon Web Services SSO is the recommended
+ * approach for workforce authentication and authorization in Amazon Web Services, for organizations of any size and
+ * type.
+ * </p>
+ * <note>
+ * <p>
+ * Although Amazon Web Services Single Sign-On was renamed, the <code>sso</code> and <code>identitystore</code> API
+ * namespaces will continue to retain their original name for backward compatibility purposes. For more information, see
+ * <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed">Amazon Web Services SSO
+ * rename</a>.
+ * </p>
+ * </note>
+ * <p>
+ * This reference guide provides information on single sign-on operations which could be used for access management of
+ * Amazon Web Services accounts. For information about Amazon Web Services SSO features, see the <a
+ * href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">Amazon Web Services SSO User Guide</a>.
+ * </p>
+ * <p>
+ * Many operations in the Amazon Web Services SSO APIs rely on identifiers for users and groups, known as principals.
+ * For more information about how to work with principals and principal IDs in Amazon Web Services SSO, see the <a
+ * href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Identity Store API
+ * Reference</a>.
+ * </p>
+ * <note>
+ * <p>
+ * Amazon Web Services provides SDKs that consist of libraries and sample code for various programming languages and
+ * platforms (Java, Ruby, .Net, iOS, Android, and more). The SDKs provide a convenient way to create programmatic access
+ * to Amazon Web Services SSO and other Amazon Web Services services. For more information about the Amazon Web Services
+ * SDKs, including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * Services</a>.
+ * </p>
+ * </note>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSSSOAdminAsync extends AWSSSOAdmin {
@@ -132,6 +165,11 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
      * attached to roles in your accounts will not be updated automatically. In this case, you must call
      * <code> <a>ProvisionPermissionSet</a> </code> to make these updates.
      * </p>
+     * </note> <note>
+     * <p>
+     * After a successful response, call <code>DescribeAccountAssignmentCreationStatus</code> to describe the status of
+     * an assignment creation request.
+     * </p>
      * </note>
      * 
      * @param createAccountAssignmentRequest
@@ -158,6 +196,11 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
      * attached to roles in your accounts will not be updated automatically. In this case, you must call
      * <code> <a>ProvisionPermissionSet</a> </code> to make these updates.
      * </p>
+     * </note> <note>
+     * <p>
+     * After a successful response, call <code>DescribeAccountAssignmentCreationStatus</code> to describe the status of
+     * an assignment creation request.
+     * </p>
      * </note>
      * 
      * @param createAccountAssignmentRequest
@@ -180,6 +223,12 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
      * information about ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a>
      * in the <i>Amazon Web Services SSO User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * After a successful response, call <code>DescribeInstanceAccessControlAttributeConfiguration</code> to validate
+     * that <code>InstanceAccessControlAttributeConfiguration</code> was created.
+     * </p>
+     * </note>
      * 
      * @param createInstanceAccessControlAttributeConfigurationRequest
      * @return A Java Future containing the result of the CreateInstanceAccessControlAttributeConfiguration operation
@@ -199,6 +248,12 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
      * information about ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a>
      * in the <i>Amazon Web Services SSO User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * After a successful response, call <code>DescribeInstanceAccessControlAttributeConfiguration</code> to validate
+     * that <code>InstanceAccessControlAttributeConfiguration</code> was created.
+     * </p>
+     * </note>
      * 
      * @param createInstanceAccessControlAttributeConfigurationRequest
      * @param asyncHandler
@@ -263,6 +318,12 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
      * <p>
      * Deletes a principal's access from a specified Amazon Web Services account using a specified permission set.
      * </p>
+     * <note>
+     * <p>
+     * After a successful response, call <code>DescribeAccountAssignmentCreationStatus</code> to describe the status of
+     * an assignment deletion request.
+     * </p>
+     * </note>
      * 
      * @param deleteAccountAssignmentRequest
      * @return A Java Future containing the result of the DeleteAccountAssignment operation returned by the service.
@@ -276,6 +337,12 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
      * <p>
      * Deletes a principal's access from a specified Amazon Web Services account using a specified permission set.
      * </p>
+     * <note>
+     * <p>
+     * After a successful response, call <code>DescribeAccountAssignmentCreationStatus</code> to describe the status of
+     * an assignment deletion request.
+     * </p>
+     * </note>
      * 
      * @param deleteAccountAssignmentRequest
      * @param asyncHandler

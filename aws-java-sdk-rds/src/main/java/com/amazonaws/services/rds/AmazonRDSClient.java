@@ -10911,6 +10911,66 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     }
 
     /**
+     * <p>
+     * Switches over an Oracle standby database in an Oracle Data Guard environment, making it the new primary database.
+     * Issue this command in the AWS Region that hosts the current standby database.
+     * </p>
+     * 
+     * @param switchoverReadReplicaRequest
+     * @return Result of the SwitchoverReadReplica operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @sample AmazonRDS.SwitchoverReadReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/SwitchoverReadReplica" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DBInstance switchoverReadReplica(SwitchoverReadReplicaRequest request) {
+        request = beforeClientExecution(request);
+        return executeSwitchoverReadReplica(request);
+    }
+
+    @SdkInternalApi
+    final DBInstance executeSwitchoverReadReplica(SwitchoverReadReplicaRequest switchoverReadReplicaRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(switchoverReadReplicaRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SwitchoverReadReplicaRequest> request = null;
+        Response<DBInstance> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SwitchoverReadReplicaRequestMarshaller().marshall(super.beforeMarshalling(switchoverReadReplicaRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SwitchoverReadReplica");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DBInstance> responseHandler = new StaxResponseHandler<DBInstance>(new DBInstanceStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * Returns additional metadata for a previously executed successful, request, typically used for debugging issues
      * where a service isn't acting as expected. This data isn't considered part of the result data returned by an
      * operation, so it's available through this separate, diagnostic interface.

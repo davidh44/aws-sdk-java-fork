@@ -7171,4 +7171,37 @@ public interface AmazonRDSAsync extends AmazonRDS {
             StopDBInstanceAutomatedBackupsReplicationRequest stopDBInstanceAutomatedBackupsReplicationRequest,
             com.amazonaws.handlers.AsyncHandler<StopDBInstanceAutomatedBackupsReplicationRequest, DBInstanceAutomatedBackup> asyncHandler);
 
+    /**
+     * <p>
+     * Switches over an Oracle standby database in an Oracle Data Guard environment, making it the new primary database.
+     * Issue this command in the AWS Region that hosts the current standby database.
+     * </p>
+     * 
+     * @param switchoverReadReplicaRequest
+     * @return A Java Future containing the result of the SwitchoverReadReplica operation returned by the service.
+     * @sample AmazonRDSAsync.SwitchoverReadReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/SwitchoverReadReplica" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DBInstance> switchoverReadReplicaAsync(SwitchoverReadReplicaRequest switchoverReadReplicaRequest);
+
+    /**
+     * <p>
+     * Switches over an Oracle standby database in an Oracle Data Guard environment, making it the new primary database.
+     * Issue this command in the AWS Region that hosts the current standby database.
+     * </p>
+     * 
+     * @param switchoverReadReplicaRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SwitchoverReadReplica operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.SwitchoverReadReplica
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/SwitchoverReadReplica" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DBInstance> switchoverReadReplicaAsync(SwitchoverReadReplicaRequest switchoverReadReplicaRequest,
+            com.amazonaws.handlers.AsyncHandler<SwitchoverReadReplicaRequest, DBInstance> asyncHandler);
+
 }

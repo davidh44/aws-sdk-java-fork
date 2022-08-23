@@ -1,3 +1,12 @@
+# __1.12.288__ __2022-08-23__
+## __AWS Single Sign-On Admin__
+  - ### Features
+    - Documentation updates to reflect service rename - AWS IAM Identity Center (successor to AWS Single Sign-On)
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - RDS for Oracle supports Oracle Data Guard switchover and read replica backups.
+
 # __1.12.287__ __2022-08-22__
 ## __AWS IoT SiteWise__
   - ### Features

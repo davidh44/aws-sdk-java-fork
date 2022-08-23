@@ -297,6 +297,8 @@ public enum RDSActions implements Action {
     StopDBInstance("rds:StopDBInstance"),
     /** Action for the StopDBInstanceAutomatedBackupsReplication operation. */
     StopDBInstanceAutomatedBackupsReplication("rds:StopDBInstanceAutomatedBackupsReplication"),
+    /** Action for the SwitchoverReadReplica operation. */
+    SwitchoverReadReplica("rds:SwitchoverReadReplica"),
 
     ;
 
