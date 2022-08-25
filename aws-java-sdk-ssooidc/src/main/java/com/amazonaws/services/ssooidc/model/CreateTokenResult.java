@@ -25,7 +25,7 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     * An opaque token to access AWS SSO resources assigned to a user.
      * </p>
      */
     private String accessToken;
@@ -44,25 +44,11 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
     private Integer expiresIn;
     /**
      * <p>
-     * Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * A token that, if present, can be used to refresh a previously issued access token that might have expired.
      * </p>
      */
     private String refreshToken;
     /**
-     * <p>
-     * Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
      * <p>
      * The identifier of the user that associated with the access token, if present.
      * </p>
@@ -71,11 +57,11 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     * An opaque token to access AWS SSO resources assigned to a user.
      * </p>
      * 
      * @param accessToken
-     *        An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     *        An opaque token to access AWS SSO resources assigned to a user.
      */
 
     public void setAccessToken(String accessToken) {
@@ -84,10 +70,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     * An opaque token to access AWS SSO resources assigned to a user.
      * </p>
      * 
-     * @return An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     * @return An opaque token to access AWS SSO resources assigned to a user.
      */
 
     public String getAccessToken() {
@@ -96,11 +82,11 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     * An opaque token to access AWS SSO resources assigned to a user.
      * </p>
      * 
      * @param accessToken
-     *        An opaque token to access Amazon Web Services SSO resources assigned to a user.
+     *        An opaque token to access AWS SSO resources assigned to a user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -197,23 +183,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * A token that, if present, can be used to refresh a previously issued access token that might have expired.
      * </p>
      * 
      * @param refreshToken
-     *        Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information
-     *        about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see
-     *        <i>Considerations for Using this Guide</i> in the <a
-     *        href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services
-     *        SSO OIDC API Reference</a>.</p>
-     *        <p>
      *        A token that, if present, can be used to refresh a previously issued access token that might have expired.
      */
 
@@ -223,23 +196,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * A token that, if present, can be used to refresh a previously issued access token that might have expired.
      * </p>
      * 
-     * @return Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information
-     *         about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see
-     *         <i>Considerations for Using this Guide</i> in the <a
-     *         href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services
-     *         SSO OIDC API Reference</a>.</p>
-     *         <p>
-     *         A token that, if present, can be used to refresh a previously issued access token that might have
+     * @return A token that, if present, can be used to refresh a previously issued access token that might have
      *         expired.
      */
 
@@ -249,23 +209,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * A token that, if present, can be used to refresh a previously issued access token that might have expired.
      * </p>
      * 
      * @param refreshToken
-     *        Currently, <code>refreshToken</code> is not yet implemented and is not supported. For more information
-     *        about the features and limitations of the current Amazon Web Services SSO OIDC implementation, see
-     *        <i>Considerations for Using this Guide</i> in the <a
-     *        href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services
-     *        SSO OIDC API Reference</a>.</p>
-     *        <p>
      *        A token that, if present, can be used to refresh a previously issued access token that might have expired.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -277,23 +224,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * The identifier of the user that associated with the access token, if present.
      * </p>
      * 
      * @param idToken
-     *        Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about
-     *        the features and limitations of the current Amazon Web Services SSO OIDC implementation, see
-     *        <i>Considerations for Using this Guide</i> in the <a
-     *        href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services
-     *        SSO OIDC API Reference</a>.</p>
-     *        <p>
      *        The identifier of the user that associated with the access token, if present.
      */
 
@@ -303,23 +237,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * The identifier of the user that associated with the access token, if present.
      * </p>
      * 
-     * @return Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about
-     *         the features and limitations of the current Amazon Web Services SSO OIDC implementation, see
-     *         <i>Considerations for Using this Guide</i> in the <a
-     *         href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services
-     *         SSO OIDC API Reference</a>.</p>
-     *         <p>
-     *         The identifier of the user that associated with the access token, if present.
+     * @return The identifier of the user that associated with the access token, if present.
      */
 
     public String getIdToken() {
@@ -328,23 +249,10 @@ public class CreateTokenResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about the
-     * features and limitations of the current Amazon Web Services SSO OIDC implementation, see <i>Considerations for
-     * Using this Guide</i> in the <a
-     * href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services SSO OIDC
-     * API Reference</a>.
-     * </p>
-     * <p>
      * The identifier of the user that associated with the access token, if present.
      * </p>
      * 
      * @param idToken
-     *        Currently, <code>idToken</code> is not yet implemented and is not supported. For more information about
-     *        the features and limitations of the current Amazon Web Services SSO OIDC implementation, see
-     *        <i>Considerations for Using this Guide</i> in the <a
-     *        href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">Amazon Web Services
-     *        SSO OIDC API Reference</a>.</p>
-     *        <p>
      *        The identifier of the user that associated with the access token, if present.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

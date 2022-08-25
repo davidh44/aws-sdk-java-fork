@@ -31,7 +31,7 @@ public class MessageDeliveryStatusEventConfiguration implements Serializable, Cl
     private SidewalkEventNotificationConfigurations sidewalk;
     /**
      * <p>
-     * Enum to denote whether the wireless device id device registration state event topic is enabled or disabled.
+     * Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * </p>
      */
     private String wirelessDeviceIdEventTopic;
@@ -64,12 +64,11 @@ public class MessageDeliveryStatusEventConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Enum to denote whether the wireless device id device registration state event topic is enabled or disabled.
+     * Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * </p>
      * 
      * @param wirelessDeviceIdEventTopic
-     *        Enum to denote whether the wireless device id device registration state event topic is enabled or
-     *        disabled.
+     *        Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * @see EventNotificationTopicStatus
      */
 
@@ -79,11 +78,10 @@ public class MessageDeliveryStatusEventConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Enum to denote whether the wireless device id device registration state event topic is enabled or disabled.
+     * Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * </p>
      * 
-     * @return Enum to denote whether the wireless device id device registration state event topic is enabled or
-     *         disabled.
+     * @return Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * @see EventNotificationTopicStatus
      */
 
@@ -93,12 +91,11 @@ public class MessageDeliveryStatusEventConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Enum to denote whether the wireless device id device registration state event topic is enabled or disabled.
+     * Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * </p>
      * 
      * @param wirelessDeviceIdEventTopic
-     *        Enum to denote whether the wireless device id device registration state event topic is enabled or
-     *        disabled.
+     *        Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventNotificationTopicStatus
      */
@@ -110,12 +107,11 @@ public class MessageDeliveryStatusEventConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Enum to denote whether the wireless device id device registration state event topic is enabled or disabled.
+     * Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * </p>
      * 
      * @param wirelessDeviceIdEventTopic
-     *        Enum to denote whether the wireless device id device registration state event topic is enabled or
-     *        disabled.
+     *        Denotes whether the wireless device ID device registration state event topic is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventNotificationTopicStatus
      */
