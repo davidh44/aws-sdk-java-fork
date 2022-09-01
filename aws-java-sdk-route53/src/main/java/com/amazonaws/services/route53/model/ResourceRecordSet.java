@@ -499,12 +499,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted zone is
-     * unsupported.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * For information about creating failover resource record sets in a private hosted zone, see <a
      * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html"
      * >Configuring Failover in a Private Hosted Zone</a> in the <i>Amazon Route 53 Developer Guide</i>.
@@ -4770,12 +4764,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted zone is
-     * unsupported.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * For information about creating failover resource record sets in a private hosted zone, see <a
      * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html"
      * >Configuring Failover in a Private Hosted Zone</a> in the <i>Amazon Route 53 Developer Guide</i>.
@@ -4794,12 +4782,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        <p>
      *        You can't create an alias resource record set in a private hosted zone to route traffic to a CloudFront
      *        distribution.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted
-     *        zone is unsupported.
      *        </p>
      *        </li>
      *        <li>
@@ -4832,12 +4814,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted zone is
-     * unsupported.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * For information about creating failover resource record sets in a private hosted zone, see <a
      * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html"
      * >Configuring Failover in a Private Hosted Zone</a> in the <i>Amazon Route 53 Developer Guide</i>.
@@ -4855,12 +4831,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *         <p>
      *         You can't create an alias resource record set in a private hosted zone to route traffic to a CloudFront
      *         distribution.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted
-     *         zone is unsupported.
      *         </p>
      *         </li>
      *         <li>
@@ -4893,12 +4863,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted zone is
-     * unsupported.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * For information about creating failover resource record sets in a private hosted zone, see <a
      * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html"
      * >Configuring Failover in a Private Hosted Zone</a> in the <i>Amazon Route 53 Developer Guide</i>.
@@ -4917,12 +4881,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        <p>
      *        You can't create an alias resource record set in a private hosted zone to route traffic to a CloudFront
      *        distribution.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted
-     *        zone is unsupported.
      *        </p>
      *        </li>
      *        <li>

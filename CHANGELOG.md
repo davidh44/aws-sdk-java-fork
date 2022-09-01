@@ -1,3 +1,16 @@
+# __1.12.295__ __2022-09-01__
+## __AWS Control Tower__
+  - ### Features
+    - This release contains the first SDK for AWS Control Tower. It introduces  a new set of APIs: EnableControl, DisableControl, GetControlOperation, and ListEnabledControls.
+
+## __Amazon CodeGuru Reviewer__
+  - ### Features
+    - Documentation updates to fix formatting issues in CLI and SDK documentation.
+
+## __Amazon Route 53__
+  - ### Features
+    - Documentation updates for Amazon Route 53.
+
 # __1.12.294__ __2022-08-31__
 ## __AWS IoT Things Graph__
   - ### Features
