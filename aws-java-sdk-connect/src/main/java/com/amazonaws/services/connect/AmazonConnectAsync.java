@@ -1472,6 +1472,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <p>
      * Contact information remains available in Amazon Connect for 24 months, and then it is deleted.
      * </p>
+     * <p>
+     * Only data from November 12, 2021, and later is returned by this API.
+     * </p>
      * </important>
      * 
      * @param describeContactRequest
@@ -1492,6 +1495,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <important>
      * <p>
      * Contact information remains available in Amazon Connect for 24 months, and then it is deleted.
+     * </p>
+     * <p>
+     * Only data from November 12, 2021, and later is returned by this API.
      * </p>
      * </important>
      * 
@@ -2690,7 +2696,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * For the specified version of Amazon Lex, returns a paginated list of all the Amazon Lex bots currently associated
-     * with the instance.
+     * with the instance. Use this API to returns both Amazon Lex V1 and V2 bots.
      * </p>
      * 
      * @param listBotsRequest
@@ -2707,7 +2713,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * For the specified version of Amazon Lex, returns a paginated list of all the Amazon Lex bots currently associated
-     * with the instance.
+     * with the instance. Use this API to returns both Amazon Lex V1 and V2 bots.
      * </p>
      * 
      * @param listBotsRequest
@@ -3108,7 +3114,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Returns a paginated list of all the Amazon Lex bots currently associated with the instance.
+     * Returns a paginated list of all the Amazon Lex V1 bots currently associated with the instance. To return both
+     * Amazon Lex V1 and V2 bots, use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListBots.html">ListBots</a> API.
      * </p>
      * 
      * @param listLexBotsRequest
@@ -3124,7 +3132,9 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Returns a paginated list of all the Amazon Lex bots currently associated with the instance.
+     * Returns a paginated list of all the Amazon Lex V1 bots currently associated with the instance. To return both
+     * Amazon Lex V1 and V2 bots, use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListBots.html">ListBots</a> API.
      * </p>
      * 
      * @param listLexBotsRequest
@@ -3889,6 +3899,80 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(
             SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest,
             com.amazonaws.handlers.AsyncHandler<SearchAvailablePhoneNumbersRequest, SearchAvailablePhoneNumbersResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches queues in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQueuesRequest
+     * @return A Java Future containing the result of the SearchQueues operation returned by the service.
+     * @sample AmazonConnectAsync.SearchQueues
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQueues" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest searchQueuesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches queues in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQueuesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchQueues operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchQueues
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQueues" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest searchQueuesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchQueuesRequest, SearchQueuesResult> asyncHandler);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches routing profiles in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchRoutingProfilesRequest
+     * @return A Java Future containing the result of the SearchRoutingProfiles operation returned by the service.
+     * @sample AmazonConnectAsync.SearchRoutingProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchRoutingProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchRoutingProfilesResult> searchRoutingProfilesAsync(SearchRoutingProfilesRequest searchRoutingProfilesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches routing profiles in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchRoutingProfilesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchRoutingProfiles operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchRoutingProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchRoutingProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchRoutingProfilesResult> searchRoutingProfilesAsync(SearchRoutingProfilesRequest searchRoutingProfilesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchRoutingProfilesRequest, SearchRoutingProfilesResult> asyncHandler);
 
     /**
      * <p>

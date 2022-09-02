@@ -3542,6 +3542,72 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(SearchQueuesRequest request) {
+
+        return searchQueuesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchQueuesResult> searchQueuesAsync(final SearchQueuesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchQueuesRequest, SearchQueuesResult> asyncHandler) {
+        final SearchQueuesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchQueuesResult>() {
+            @Override
+            public SearchQueuesResult call() throws Exception {
+                SearchQueuesResult result = null;
+
+                try {
+                    result = executeSearchQueues(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchRoutingProfilesResult> searchRoutingProfilesAsync(SearchRoutingProfilesRequest request) {
+
+        return searchRoutingProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchRoutingProfilesResult> searchRoutingProfilesAsync(final SearchRoutingProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchRoutingProfilesRequest, SearchRoutingProfilesResult> asyncHandler) {
+        final SearchRoutingProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchRoutingProfilesResult>() {
+            @Override
+            public SearchRoutingProfilesResult call() throws Exception {
+                SearchRoutingProfilesResult result = null;
+
+                try {
+                    result = executeSearchRoutingProfiles(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchSecurityProfilesResult> searchSecurityProfilesAsync(SearchSecurityProfilesRequest request) {
 
         return searchSecurityProfilesAsync(request, null);

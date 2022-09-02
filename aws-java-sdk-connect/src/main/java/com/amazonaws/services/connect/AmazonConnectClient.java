@@ -2955,6 +2955,9 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * <p>
      * Contact information remains available in Amazon Connect for 24 months, and then it is deleted.
      * </p>
+     * <p>
+     * Only data from November 12, 2021, and later is returned by this API.
+     * </p>
      * </important>
      * 
      * @param describeContactRequest
@@ -5206,7 +5209,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * </p>
      * <p>
      * For the specified version of Amazon Lex, returns a paginated list of all the Amazon Lex bots currently associated
-     * with the instance.
+     * with the instance. Use this API to returns both Amazon Lex V1 and V2 bots.
      * </p>
      * 
      * @param listBotsRequest
@@ -5957,7 +5960,9 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Returns a paginated list of all the Amazon Lex bots currently associated with the instance.
+     * Returns a paginated list of all the Amazon Lex V1 bots currently associated with the instance. To return both
+     * Amazon Lex V1 and V2 bots, use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListBots.html">ListBots</a> API.
      * </p>
      * 
      * @param listLexBotsRequest
@@ -7380,6 +7385,143 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<SearchAvailablePhoneNumbersResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new SearchAvailablePhoneNumbersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches queues in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQueuesRequest
+     * @return Result of the SearchQueues operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchQueues
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQueues" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public SearchQueuesResult searchQueues(SearchQueuesRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchQueues(request);
+    }
+
+    @SdkInternalApi
+    final SearchQueuesResult executeSearchQueues(SearchQueuesRequest searchQueuesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchQueuesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchQueuesRequest> request = null;
+        Response<SearchQueuesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchQueuesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchQueuesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchQueues");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchQueuesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchQueuesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches routing profiles in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchRoutingProfilesRequest
+     * @return Result of the SearchRoutingProfiles operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchRoutingProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchRoutingProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public SearchRoutingProfilesResult searchRoutingProfiles(SearchRoutingProfilesRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchRoutingProfiles(request);
+    }
+
+    @SdkInternalApi
+    final SearchRoutingProfilesResult executeSearchRoutingProfiles(SearchRoutingProfilesRequest searchRoutingProfilesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchRoutingProfilesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchRoutingProfilesRequest> request = null;
+        Response<SearchRoutingProfilesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchRoutingProfilesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchRoutingProfilesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchRoutingProfiles");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchRoutingProfilesResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new SearchRoutingProfilesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

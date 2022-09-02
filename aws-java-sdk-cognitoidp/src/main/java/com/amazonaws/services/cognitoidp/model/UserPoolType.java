@@ -96,19 +96,25 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> usernameAttributes;
     /**
      * <p>
-     * The contents of the SMS verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      */
     private String smsVerificationMessage;
     /**
      * <p>
-     * The contents of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      */
     private String emailVerificationMessage;
     /**
      * <p>
-     * The subject of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      */
     private String emailVerificationSubject;
@@ -976,11 +982,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The contents of the SMS verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
      * @param smsVerificationMessage
-     *        The contents of the SMS verification message.
+     *        This parameter is no longer used. See <a href=
+     *        "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *        >VerificationMessageTemplateType</a>.
      */
 
     public void setSmsVerificationMessage(String smsVerificationMessage) {
@@ -989,10 +999,14 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The contents of the SMS verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
-     * @return The contents of the SMS verification message.
+     * @return This parameter is no longer used. See <a href=
+     *         "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *         >VerificationMessageTemplateType</a>.
      */
 
     public String getSmsVerificationMessage() {
@@ -1001,11 +1015,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The contents of the SMS verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
      * @param smsVerificationMessage
-     *        The contents of the SMS verification message.
+     *        This parameter is no longer used. See <a href=
+     *        "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *        >VerificationMessageTemplateType</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1016,11 +1034,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The contents of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
      * @param emailVerificationMessage
-     *        The contents of the email verification message.
+     *        This parameter is no longer used. See <a href=
+     *        "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *        >VerificationMessageTemplateType</a>.
      */
 
     public void setEmailVerificationMessage(String emailVerificationMessage) {
@@ -1029,10 +1051,14 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The contents of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
-     * @return The contents of the email verification message.
+     * @return This parameter is no longer used. See <a href=
+     *         "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *         >VerificationMessageTemplateType</a>.
      */
 
     public String getEmailVerificationMessage() {
@@ -1041,11 +1067,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The contents of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
      * @param emailVerificationMessage
-     *        The contents of the email verification message.
+     *        This parameter is no longer used. See <a href=
+     *        "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *        >VerificationMessageTemplateType</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1056,11 +1086,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
      * @param emailVerificationSubject
-     *        The subject of the email verification message.
+     *        This parameter is no longer used. See <a href=
+     *        "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *        >VerificationMessageTemplateType</a>.
      */
 
     public void setEmailVerificationSubject(String emailVerificationSubject) {
@@ -1069,10 +1103,14 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
-     * @return The subject of the email verification message.
+     * @return This parameter is no longer used. See <a href=
+     *         "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *         >VerificationMessageTemplateType</a>.
      */
 
     public String getEmailVerificationSubject() {
@@ -1081,11 +1119,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject of the email verification message.
+     * This parameter is no longer used. See <a href=
+     * "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     * >VerificationMessageTemplateType</a>.
      * </p>
      * 
      * @param emailVerificationSubject
-     *        The subject of the email verification message.
+     *        This parameter is no longer used. See <a href=
+     *        "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerificationMessageTemplateType.html"
+     *        >VerificationMessageTemplateType</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

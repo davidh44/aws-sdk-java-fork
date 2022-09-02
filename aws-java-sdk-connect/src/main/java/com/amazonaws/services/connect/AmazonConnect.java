@@ -1142,6 +1142,9 @@ public interface AmazonConnect {
      * <p>
      * Contact information remains available in Amazon Connect for 24 months, and then it is deleted.
      * </p>
+     * <p>
+     * Only data from November 12, 2021, and later is returned by this API.
+     * </p>
      * </important>
      * 
      * @param describeContactRequest
@@ -1976,7 +1979,7 @@ public interface AmazonConnect {
      * </p>
      * <p>
      * For the specified version of Amazon Lex, returns a paginated list of all the Amazon Lex bots currently associated
-     * with the instance.
+     * with the instance. Use this API to returns both Amazon Lex V1 and V2 bots.
      * </p>
      * 
      * @param listBotsRequest
@@ -2255,7 +2258,9 @@ public interface AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Returns a paginated list of all the Amazon Lex bots currently associated with the instance.
+     * Returns a paginated list of all the Amazon Lex V1 bots currently associated with the instance. To return both
+     * Amazon Lex V1 and V2 bots, use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListBots.html">ListBots</a> API.
      * </p>
      * 
      * @param listLexBotsRequest
@@ -2795,6 +2800,58 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     SearchAvailablePhoneNumbersResult searchAvailablePhoneNumbers(SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches queues in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchQueuesRequest
+     * @return Result of the SearchQueues operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchQueues
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchQueues" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchQueuesResult searchQueues(SearchQueuesRequest searchQueuesRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Searches routing profiles in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchRoutingProfilesRequest
+     * @return Result of the SearchRoutingProfiles operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchRoutingProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchRoutingProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    SearchRoutingProfilesResult searchRoutingProfiles(SearchRoutingProfilesRequest searchRoutingProfilesRequest);
 
     /**
      * <p>

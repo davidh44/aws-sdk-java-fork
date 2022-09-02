@@ -343,6 +343,14 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private Boolean enablePropagateAdditionalUserContextData;
+    /**
+     * <p>
+     * Amazon Cognito creates a session token for each API request in an authentication flow.
+     * <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool native user
+     * must respond to each authentication challenge before the session expires.
+     * </p>
+     */
+    private Integer authSessionValidity;
 
     /**
      * <p>
@@ -3011,6 +3019,58 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Amazon Cognito creates a session token for each API request in an authentication flow.
+     * <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool native user
+     * must respond to each authentication challenge before the session expires.
+     * </p>
+     * 
+     * @param authSessionValidity
+     *        Amazon Cognito creates a session token for each API request in an authentication flow.
+     *        <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool native
+     *        user must respond to each authentication challenge before the session expires.
+     */
+
+    public void setAuthSessionValidity(Integer authSessionValidity) {
+        this.authSessionValidity = authSessionValidity;
+    }
+
+    /**
+     * <p>
+     * Amazon Cognito creates a session token for each API request in an authentication flow.
+     * <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool native user
+     * must respond to each authentication challenge before the session expires.
+     * </p>
+     * 
+     * @return Amazon Cognito creates a session token for each API request in an authentication flow.
+     *         <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool
+     *         native user must respond to each authentication challenge before the session expires.
+     */
+
+    public Integer getAuthSessionValidity() {
+        return this.authSessionValidity;
+    }
+
+    /**
+     * <p>
+     * Amazon Cognito creates a session token for each API request in an authentication flow.
+     * <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool native user
+     * must respond to each authentication challenge before the session expires.
+     * </p>
+     * 
+     * @param authSessionValidity
+     *        Amazon Cognito creates a session token for each API request in an authentication flow.
+     *        <code>AuthSessionValidity</code> is the duration, in minutes, of that session token. Your user pool native
+     *        user must respond to each authentication challenge before the session expires.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateUserPoolClientRequest withAuthSessionValidity(Integer authSessionValidity) {
+        setAuthSessionValidity(authSessionValidity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3063,7 +3123,9 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
         if (getEnableTokenRevocation() != null)
             sb.append("EnableTokenRevocation: ").append(getEnableTokenRevocation()).append(",");
         if (getEnablePropagateAdditionalUserContextData() != null)
-            sb.append("EnablePropagateAdditionalUserContextData: ").append(getEnablePropagateAdditionalUserContextData());
+            sb.append("EnablePropagateAdditionalUserContextData: ").append(getEnablePropagateAdditionalUserContextData()).append(",");
+        if (getAuthSessionValidity() != null)
+            sb.append("AuthSessionValidity: ").append(getAuthSessionValidity());
         sb.append("}");
         return sb.toString();
     }
@@ -3164,6 +3226,10 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getEnablePropagateAdditionalUserContextData() != null
                 && other.getEnablePropagateAdditionalUserContextData().equals(this.getEnablePropagateAdditionalUserContextData()) == false)
             return false;
+        if (other.getAuthSessionValidity() == null ^ this.getAuthSessionValidity() == null)
+            return false;
+        if (other.getAuthSessionValidity() != null && other.getAuthSessionValidity().equals(this.getAuthSessionValidity()) == false)
+            return false;
         return true;
     }
 
@@ -3193,6 +3259,7 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getPreventUserExistenceErrors() == null) ? 0 : getPreventUserExistenceErrors().hashCode());
         hashCode = prime * hashCode + ((getEnableTokenRevocation() == null) ? 0 : getEnableTokenRevocation().hashCode());
         hashCode = prime * hashCode + ((getEnablePropagateAdditionalUserContextData() == null) ? 0 : getEnablePropagateAdditionalUserContextData().hashCode());
+        hashCode = prime * hashCode + ((getAuthSessionValidity() == null) ? 0 : getAuthSessionValidity().hashCode());
         return hashCode;
     }
 
