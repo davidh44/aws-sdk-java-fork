@@ -75,6 +75,8 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
      */
     private String mode;
 
+    private StateReason stateReason;
+
     /**
      * <p>
      * The ID of the local gateway route table.
@@ -448,6 +450,32 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
     }
 
     /**
+     * @param stateReason
+     */
+
+    public void setStateReason(StateReason stateReason) {
+        this.stateReason = stateReason;
+    }
+
+    /**
+     * @return
+     */
+
+    public StateReason getStateReason() {
+        return this.stateReason;
+    }
+
+    /**
+     * @param stateReason
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LocalGatewayRouteTable withStateReason(StateReason stateReason) {
+        setStateReason(stateReason);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -474,7 +502,9 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getMode() != null)
-            sb.append("Mode: ").append(getMode());
+            sb.append("Mode: ").append(getMode()).append(",");
+        if (getStateReason() != null)
+            sb.append("StateReason: ").append(getStateReason());
         sb.append("}");
         return sb.toString();
     }
@@ -521,6 +551,10 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
             return false;
         if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
             return false;
+        if (other.getStateReason() == null ^ this.getStateReason() == null)
+            return false;
+        if (other.getStateReason() != null && other.getStateReason().equals(this.getStateReason()) == false)
+            return false;
         return true;
     }
 
@@ -537,6 +571,7 @@ public class LocalGatewayRouteTable implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
+        hashCode = prime * hashCode + ((getStateReason() == null) ? 0 : getStateReason().hashCode());
         return hashCode;
     }
 

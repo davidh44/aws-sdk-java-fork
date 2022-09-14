@@ -807,6 +807,32 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCoipCidrResult> createCoipCidrAsync(CreateCoipCidrRequest request) {
+
+        return createCoipCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCoipCidrResult> createCoipCidrAsync(CreateCoipCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateCoipCidrRequest, CreateCoipCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCoipPoolResult> createCoipPoolAsync(CreateCoipPoolRequest request) {
+
+        return createCoipPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCoipPoolResult> createCoipPoolAsync(CreateCoipPoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateCoipPoolRequest, CreateCoipPoolResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateCustomerGatewayResult> createCustomerGatewayAsync(CreateCustomerGatewayRequest request) {
 
         return createCustomerGatewayAsync(request, null);
@@ -1074,6 +1100,34 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<CreateLocalGatewayRouteResult> createLocalGatewayRouteAsync(CreateLocalGatewayRouteRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateLocalGatewayRouteRequest, CreateLocalGatewayRouteResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocalGatewayRouteTableResult> createLocalGatewayRouteTableAsync(CreateLocalGatewayRouteTableRequest request) {
+
+        return createLocalGatewayRouteTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocalGatewayRouteTableResult> createLocalGatewayRouteTableAsync(CreateLocalGatewayRouteTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLocalGatewayRouteTableRequest, CreateLocalGatewayRouteTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> createLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest request) {
+
+        return createLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> createLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest, CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1789,6 +1843,32 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteCoipCidrResult> deleteCoipCidrAsync(DeleteCoipCidrRequest request) {
+
+        return deleteCoipCidrAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCoipCidrResult> deleteCoipCidrAsync(DeleteCoipCidrRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCoipCidrRequest, DeleteCoipCidrResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCoipPoolResult> deleteCoipPoolAsync(DeleteCoipPoolRequest request) {
+
+        return deleteCoipPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCoipPoolResult> deleteCoipPoolAsync(DeleteCoipPoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCoipPoolRequest, DeleteCoipPoolResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteCustomerGatewayResult> deleteCustomerGatewayAsync(DeleteCustomerGatewayRequest request) {
 
         return deleteCustomerGatewayAsync(request, null);
@@ -1981,6 +2061,34 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteLocalGatewayRouteResult> deleteLocalGatewayRouteAsync(DeleteLocalGatewayRouteRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteLocalGatewayRouteRequest, DeleteLocalGatewayRouteResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLocalGatewayRouteTableResult> deleteLocalGatewayRouteTableAsync(DeleteLocalGatewayRouteTableRequest request) {
+
+        return deleteLocalGatewayRouteTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLocalGatewayRouteTableResult> deleteLocalGatewayRouteTableAsync(DeleteLocalGatewayRouteTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLocalGatewayRouteTableRequest, DeleteLocalGatewayRouteTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest request) {
+
+        return deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest, DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

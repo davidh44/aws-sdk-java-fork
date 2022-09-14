@@ -1347,6 +1347,32 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Creates a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param createCoipCidrRequest
+     * @return Result of the CreateCoipCidr operation returned by the service.
+     * @sample AmazonEC2.CreateCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateCoipCidrResult createCoipCidr(CreateCoipCidrRequest createCoipCidrRequest);
+
+    /**
+     * <p>
+     * Creates a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param createCoipPoolRequest
+     * @return Result of the CreateCoipPool operation returned by the service.
+     * @sample AmazonEC2.CreateCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateCoipPoolResult createCoipPool(CreateCoipPoolRequest createCoipPoolRequest);
+
+    /**
+     * <p>
      * Provides information to Amazon Web Services about your customer gateway device. The customer gateway device is
      * the appliance at your end of the VPN connection. You must provide the IP address of the customer gateway device’s
      * external interface. The IP address must be static and can be behind a device performing network address
@@ -1869,6 +1895,35 @@ public interface AmazonEC2 {
      *      API Documentation</a>
      */
     CreateLocalGatewayRouteResult createLocalGatewayRoute(CreateLocalGatewayRouteRequest createLocalGatewayRouteRequest);
+
+    /**
+     * <p>
+     * Creates a local gateway route table.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableRequest
+     * @return Result of the CreateLocalGatewayRouteTable operation returned by the service.
+     * @sample AmazonEC2.CreateLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLocalGatewayRouteTableResult createLocalGatewayRouteTable(CreateLocalGatewayRouteTableRequest createLocalGatewayRouteTableRequest);
+
+    /**
+     * <p>
+     * Creates a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @return Result of the CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation operation returned by the
+     *         service.
+     * @sample AmazonEC2.CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult createLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest);
 
     /**
      * <p>
@@ -3074,6 +3129,32 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Deletes a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param deleteCoipCidrRequest
+     * @return Result of the DeleteCoipCidr operation returned by the service.
+     * @sample AmazonEC2.DeleteCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteCoipCidrResult deleteCoipCidr(DeleteCoipCidrRequest deleteCoipCidrRequest);
+
+    /**
+     * <p>
+     * Deletes a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param deleteCoipPoolRequest
+     * @return Result of the DeleteCoipPool operation returned by the service.
+     * @sample AmazonEC2.DeleteCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteCoipPoolResult deleteCoipPool(DeleteCoipPoolRequest deleteCoipPoolRequest);
+
+    /**
+     * <p>
      * Deletes the specified customer gateway. You must delete the VPN connection before you can delete the customer
      * gateway.
      * </p>
@@ -3334,6 +3415,35 @@ public interface AmazonEC2 {
      *      API Documentation</a>
      */
     DeleteLocalGatewayRouteResult deleteLocalGatewayRoute(DeleteLocalGatewayRouteRequest deleteLocalGatewayRouteRequest);
+
+    /**
+     * <p>
+     * Deletes a local gateway route table.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableRequest
+     * @return Result of the DeleteLocalGatewayRouteTable operation returned by the service.
+     * @sample AmazonEC2.DeleteLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteLocalGatewayRouteTableResult deleteLocalGatewayRouteTable(DeleteLocalGatewayRouteTableRequest deleteLocalGatewayRouteTableRequest);
+
+    /**
+     * <p>
+     * Deletes a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @return Result of the DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation operation returned by the
+     *         service.
+     * @sample AmazonEC2.DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest);
 
     /**
      * <p>

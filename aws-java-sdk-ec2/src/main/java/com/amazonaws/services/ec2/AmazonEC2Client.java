@@ -3822,6 +3822,118 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Creates a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param createCoipCidrRequest
+     * @return Result of the CreateCoipCidr operation returned by the service.
+     * @sample AmazonEC2.CreateCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateCoipCidrResult createCoipCidr(CreateCoipCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateCoipCidr(request);
+    }
+
+    @SdkInternalApi
+    final CreateCoipCidrResult executeCreateCoipCidr(CreateCoipCidrRequest createCoipCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createCoipCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateCoipCidrRequest> request = null;
+        Response<CreateCoipCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateCoipCidrRequestMarshaller().marshall(super.beforeMarshalling(createCoipCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCoipCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateCoipCidrResult> responseHandler = new StaxResponseHandler<CreateCoipCidrResult>(
+                    new CreateCoipCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param createCoipPoolRequest
+     * @return Result of the CreateCoipPool operation returned by the service.
+     * @sample AmazonEC2.CreateCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateCoipPoolResult createCoipPool(CreateCoipPoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateCoipPool(request);
+    }
+
+    @SdkInternalApi
+    final CreateCoipPoolResult executeCreateCoipPool(CreateCoipPoolRequest createCoipPoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createCoipPoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateCoipPoolRequest> request = null;
+        Response<CreateCoipPoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateCoipPoolRequestMarshaller().marshall(super.beforeMarshalling(createCoipPoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCoipPool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateCoipPoolResult> responseHandler = new StaxResponseHandler<CreateCoipPoolResult>(
+                    new CreateCoipPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides information to Amazon Web Services about your customer gateway device. The customer gateway device is
      * the appliance at your end of the VPN connection. You must provide the IP address of the customer gateway device’s
      * external interface. The IP address must be static and can be behind a device performing network address
@@ -5146,6 +5258,123 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<CreateLocalGatewayRouteResult> responseHandler = new StaxResponseHandler<CreateLocalGatewayRouteResult>(
                     new CreateLocalGatewayRouteResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a local gateway route table.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableRequest
+     * @return Result of the CreateLocalGatewayRouteTable operation returned by the service.
+     * @sample AmazonEC2.CreateLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLocalGatewayRouteTableResult createLocalGatewayRouteTable(CreateLocalGatewayRouteTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLocalGatewayRouteTable(request);
+    }
+
+    @SdkInternalApi
+    final CreateLocalGatewayRouteTableResult executeCreateLocalGatewayRouteTable(CreateLocalGatewayRouteTableRequest createLocalGatewayRouteTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLocalGatewayRouteTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLocalGatewayRouteTableRequest> request = null;
+        Response<CreateLocalGatewayRouteTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLocalGatewayRouteTableRequestMarshaller().marshall(super.beforeMarshalling(createLocalGatewayRouteTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLocalGatewayRouteTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateLocalGatewayRouteTableResult> responseHandler = new StaxResponseHandler<CreateLocalGatewayRouteTableResult>(
+                    new CreateLocalGatewayRouteTableResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @return Result of the CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation operation returned by the
+     *         service.
+     * @sample AmazonEC2.CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult createLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation(request);
+    }
+
+    @SdkInternalApi
+    final CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult executeCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest> request = null;
+        Response<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestMarshaller().marshall(super
+                        .beforeMarshalling(createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> responseHandler = new StaxResponseHandler<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult>(
+                    new CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -8559,6 +8788,118 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Deletes a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param deleteCoipCidrRequest
+     * @return Result of the DeleteCoipCidr operation returned by the service.
+     * @sample AmazonEC2.DeleteCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteCoipCidrResult deleteCoipCidr(DeleteCoipCidrRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCoipCidr(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCoipCidrResult executeDeleteCoipCidr(DeleteCoipCidrRequest deleteCoipCidrRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCoipCidrRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCoipCidrRequest> request = null;
+        Response<DeleteCoipCidrResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCoipCidrRequestMarshaller().marshall(super.beforeMarshalling(deleteCoipCidrRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCoipCidr");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteCoipCidrResult> responseHandler = new StaxResponseHandler<DeleteCoipCidrResult>(
+                    new DeleteCoipCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param deleteCoipPoolRequest
+     * @return Result of the DeleteCoipPool operation returned by the service.
+     * @sample AmazonEC2.DeleteCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteCoipPoolResult deleteCoipPool(DeleteCoipPoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCoipPool(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCoipPoolResult executeDeleteCoipPool(DeleteCoipPoolRequest deleteCoipPoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCoipPoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCoipPoolRequest> request = null;
+        Response<DeleteCoipPoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCoipPoolRequestMarshaller().marshall(super.beforeMarshalling(deleteCoipPoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCoipPool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteCoipPoolResult> responseHandler = new StaxResponseHandler<DeleteCoipPoolResult>(
+                    new DeleteCoipPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified customer gateway. You must delete the VPN connection before you can delete the customer
      * gateway.
      * </p>
@@ -9452,6 +9793,123 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DeleteLocalGatewayRouteResult> responseHandler = new StaxResponseHandler<DeleteLocalGatewayRouteResult>(
                     new DeleteLocalGatewayRouteResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a local gateway route table.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableRequest
+     * @return Result of the DeleteLocalGatewayRouteTable operation returned by the service.
+     * @sample AmazonEC2.DeleteLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteLocalGatewayRouteTableResult deleteLocalGatewayRouteTable(DeleteLocalGatewayRouteTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLocalGatewayRouteTable(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLocalGatewayRouteTableResult executeDeleteLocalGatewayRouteTable(DeleteLocalGatewayRouteTableRequest deleteLocalGatewayRouteTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLocalGatewayRouteTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLocalGatewayRouteTableRequest> request = null;
+        Response<DeleteLocalGatewayRouteTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLocalGatewayRouteTableRequestMarshaller().marshall(super.beforeMarshalling(deleteLocalGatewayRouteTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLocalGatewayRouteTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteLocalGatewayRouteTableResult> responseHandler = new StaxResponseHandler<DeleteLocalGatewayRouteTableResult>(
+                    new DeleteLocalGatewayRouteTableResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @return Result of the DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation operation returned by the
+     *         service.
+     * @sample AmazonEC2.DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult executeDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest> request = null;
+        Response<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestMarshaller().marshall(super
+                        .beforeMarshalling(deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> responseHandler = new StaxResponseHandler<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult>(
+                    new DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

@@ -24,6 +24,7 @@ public enum ResourceType {
     ClientVpnEndpoint("client-vpn-endpoint"),
     CustomerGateway("customer-gateway"),
     CarrierGateway("carrier-gateway"),
+    CoipPool("coip-pool"),
     DedicatedHost("dedicated-host"),
     DhcpOptions("dhcp-options"),
     EgressOnlyInternetGateway("egress-only-internet-gateway"),

@@ -48,6 +48,11 @@ public class ModifyLocalGatewayRouteRequestMarshaller implements Marshaller<Requ
             request.addParameter("LocalGatewayRouteTableId", StringUtils.fromString(modifyLocalGatewayRouteRequest.getLocalGatewayRouteTableId()));
         }
 
+        if (modifyLocalGatewayRouteRequest.getLocalGatewayVirtualInterfaceGroupId() != null) {
+            request.addParameter("LocalGatewayVirtualInterfaceGroupId",
+                    StringUtils.fromString(modifyLocalGatewayRouteRequest.getLocalGatewayVirtualInterfaceGroupId()));
+        }
+
         if (modifyLocalGatewayRouteRequest.getNetworkInterfaceId() != null) {
             request.addParameter("NetworkInterfaceId", StringUtils.fromString(modifyLocalGatewayRouteRequest.getNetworkInterfaceId()));
         }

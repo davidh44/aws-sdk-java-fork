@@ -2832,6 +2832,68 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Creates a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param createCoipCidrRequest
+     * @return A Java Future containing the result of the CreateCoipCidr operation returned by the service.
+     * @sample AmazonEC2Async.CreateCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCoipCidrResult> createCoipCidrAsync(CreateCoipCidrRequest createCoipCidrRequest);
+
+    /**
+     * <p>
+     * Creates a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param createCoipCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateCoipCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCoipCidrResult> createCoipCidrAsync(CreateCoipCidrRequest createCoipCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateCoipCidrRequest, CreateCoipCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param createCoipPoolRequest
+     * @return A Java Future containing the result of the CreateCoipPool operation returned by the service.
+     * @sample AmazonEC2Async.CreateCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCoipPoolResult> createCoipPoolAsync(CreateCoipPoolRequest createCoipPoolRequest);
+
+    /**
+     * <p>
+     * Creates a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param createCoipPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateCoipPool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCoipPoolResult> createCoipPoolAsync(CreateCoipPoolRequest createCoipPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateCoipPoolRequest, CreateCoipPoolResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides information to Amazon Web Services about your customer gateway device. The customer gateway device is
      * the appliance at your end of the VPN connection. You must provide the IP address of the customer gateway device’s
      * external interface. The IP address must be static and can be behind a device performing network address
@@ -3983,6 +4045,78 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<CreateLocalGatewayRouteResult> createLocalGatewayRouteAsync(CreateLocalGatewayRouteRequest createLocalGatewayRouteRequest,
             com.amazonaws.handlers.AsyncHandler<CreateLocalGatewayRouteRequest, CreateLocalGatewayRouteResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a local gateway route table.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableRequest
+     * @return A Java Future containing the result of the CreateLocalGatewayRouteTable operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.CreateLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocalGatewayRouteTableResult> createLocalGatewayRouteTableAsync(
+            CreateLocalGatewayRouteTableRequest createLocalGatewayRouteTableRequest);
+
+    /**
+     * <p>
+     * Creates a local gateway route table.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLocalGatewayRouteTable operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.CreateLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocalGatewayRouteTableResult> createLocalGatewayRouteTableAsync(
+            CreateLocalGatewayRouteTableRequest createLocalGatewayRouteTableRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLocalGatewayRouteTableRequest, CreateLocalGatewayRouteTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @return A Java Future containing the result of the CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     *         operation returned by the service.
+     * @sample AmazonEC2Async.CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> createLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest);
+
+    /**
+     * <p>
+     * Creates a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     *         operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> createLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest createLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest, CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> asyncHandler);
 
     /**
      * <p>
@@ -6714,6 +6848,68 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Deletes a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param deleteCoipCidrRequest
+     * @return A Java Future containing the result of the DeleteCoipCidr operation returned by the service.
+     * @sample AmazonEC2Async.DeleteCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCoipCidrResult> deleteCoipCidrAsync(DeleteCoipCidrRequest deleteCoipCidrRequest);
+
+    /**
+     * <p>
+     * Deletes a range of customer-owned IP addresses.
+     * </p>
+     * 
+     * @param deleteCoipCidrRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCoipCidr operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteCoipCidr
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipCidr" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCoipCidrResult> deleteCoipCidrAsync(DeleteCoipCidrRequest deleteCoipCidrRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCoipCidrRequest, DeleteCoipCidrResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param deleteCoipPoolRequest
+     * @return A Java Future containing the result of the DeleteCoipPool operation returned by the service.
+     * @sample AmazonEC2Async.DeleteCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCoipPoolResult> deleteCoipPoolAsync(DeleteCoipPoolRequest deleteCoipPoolRequest);
+
+    /**
+     * <p>
+     * Deletes a pool of customer-owned IP (CoIP) addresses.
+     * </p>
+     * 
+     * @param deleteCoipPoolRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCoipPool operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteCoipPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteCoipPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCoipPoolResult> deleteCoipPoolAsync(DeleteCoipPoolRequest deleteCoipPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCoipPoolRequest, DeleteCoipPoolResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified customer gateway. You must delete the VPN connection before you can delete the customer
      * gateway.
      * </p>
@@ -7322,6 +7518,78 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DeleteLocalGatewayRouteResult> deleteLocalGatewayRouteAsync(DeleteLocalGatewayRouteRequest deleteLocalGatewayRouteRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteLocalGatewayRouteRequest, DeleteLocalGatewayRouteResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a local gateway route table.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableRequest
+     * @return A Java Future containing the result of the DeleteLocalGatewayRouteTable operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DeleteLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLocalGatewayRouteTableResult> deleteLocalGatewayRouteTableAsync(
+            DeleteLocalGatewayRouteTableRequest deleteLocalGatewayRouteTableRequest);
+
+    /**
+     * <p>
+     * Deletes a local gateway route table.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLocalGatewayRouteTable operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DeleteLocalGatewayRouteTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLocalGatewayRouteTableResult> deleteLocalGatewayRouteTableAsync(
+            DeleteLocalGatewayRouteTableRequest deleteLocalGatewayRouteTableRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLocalGatewayRouteTableRequest, DeleteLocalGatewayRouteTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @return A Java Future containing the result of the DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     *         operation returned by the service.
+     * @sample AmazonEC2Async.DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes a local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @param deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     *         operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationAsync(
+            DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest, DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult> asyncHandler);
 
     /**
      * <p>

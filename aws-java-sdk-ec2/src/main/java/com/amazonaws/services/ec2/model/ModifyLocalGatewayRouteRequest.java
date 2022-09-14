@@ -41,6 +41,12 @@ public class ModifyLocalGatewayRouteRequest extends AmazonWebServiceRequest impl
     private String localGatewayRouteTableId;
     /**
      * <p>
+     * The ID of the virtual interface group.
+     * </p>
+     */
+    private String localGatewayVirtualInterfaceGroupId;
+    /**
+     * <p>
      * The ID of the network interface.
      * </p>
      */
@@ -134,6 +140,46 @@ public class ModifyLocalGatewayRouteRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * The ID of the virtual interface group.
+     * </p>
+     * 
+     * @param localGatewayVirtualInterfaceGroupId
+     *        The ID of the virtual interface group.
+     */
+
+    public void setLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
+        this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
+    }
+
+    /**
+     * <p>
+     * The ID of the virtual interface group.
+     * </p>
+     * 
+     * @return The ID of the virtual interface group.
+     */
+
+    public String getLocalGatewayVirtualInterfaceGroupId() {
+        return this.localGatewayVirtualInterfaceGroupId;
+    }
+
+    /**
+     * <p>
+     * The ID of the virtual interface group.
+     * </p>
+     * 
+     * @param localGatewayVirtualInterfaceGroupId
+     *        The ID of the virtual interface group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyLocalGatewayRouteRequest withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
+        setLocalGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId);
+        return this;
+    }
+
+    /**
+     * <p>
      * The ID of the network interface.
      * </p>
      * 
@@ -199,6 +245,8 @@ public class ModifyLocalGatewayRouteRequest extends AmazonWebServiceRequest impl
             sb.append("DestinationCidrBlock: ").append(getDestinationCidrBlock()).append(",");
         if (getLocalGatewayRouteTableId() != null)
             sb.append("LocalGatewayRouteTableId: ").append(getLocalGatewayRouteTableId()).append(",");
+        if (getLocalGatewayVirtualInterfaceGroupId() != null)
+            sb.append("LocalGatewayVirtualInterfaceGroupId: ").append(getLocalGatewayVirtualInterfaceGroupId()).append(",");
         if (getNetworkInterfaceId() != null)
             sb.append("NetworkInterfaceId: ").append(getNetworkInterfaceId());
         sb.append("}");
@@ -223,6 +271,11 @@ public class ModifyLocalGatewayRouteRequest extends AmazonWebServiceRequest impl
             return false;
         if (other.getLocalGatewayRouteTableId() != null && other.getLocalGatewayRouteTableId().equals(this.getLocalGatewayRouteTableId()) == false)
             return false;
+        if (other.getLocalGatewayVirtualInterfaceGroupId() == null ^ this.getLocalGatewayVirtualInterfaceGroupId() == null)
+            return false;
+        if (other.getLocalGatewayVirtualInterfaceGroupId() != null
+                && other.getLocalGatewayVirtualInterfaceGroupId().equals(this.getLocalGatewayVirtualInterfaceGroupId()) == false)
+            return false;
         if (other.getNetworkInterfaceId() == null ^ this.getNetworkInterfaceId() == null)
             return false;
         if (other.getNetworkInterfaceId() != null && other.getNetworkInterfaceId().equals(this.getNetworkInterfaceId()) == false)
@@ -237,6 +290,7 @@ public class ModifyLocalGatewayRouteRequest extends AmazonWebServiceRequest impl
 
         hashCode = prime * hashCode + ((getDestinationCidrBlock() == null) ? 0 : getDestinationCidrBlock().hashCode());
         hashCode = prime * hashCode + ((getLocalGatewayRouteTableId() == null) ? 0 : getLocalGatewayRouteTableId().hashCode());
+        hashCode = prime * hashCode + ((getLocalGatewayVirtualInterfaceGroupId() == null) ? 0 : getLocalGatewayVirtualInterfaceGroupId().hashCode());
         hashCode = prime * hashCode + ((getNetworkInterfaceId() == null) ? 0 : getNetworkInterfaceId().hashCode());
         return hashCode;
     }
