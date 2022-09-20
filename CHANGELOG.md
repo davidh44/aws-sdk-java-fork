@@ -1,3 +1,8 @@
+# __1.12.307__ __2022-09-20__
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds support for blocked paths to Amazon VPC Reachability Analyzer.
+
 # __1.12.306__ __2022-09-19__
 ## __AWS CloudTrail__
   - ### Features
