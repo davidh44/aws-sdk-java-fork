@@ -1,3 +1,16 @@
+# __1.12.308__ __2022-09-21__
+## __AWS S3 Control__
+  - ### Features
+    - S3 on Outposts launches support for object versioning for Outposts buckets. With S3 Versioning, you can preserve, retrieve, and restore every version of every object stored in your buckets. You can recover from both unintended user actions and application failures.
+
+## __Amazon Comprehend__
+  - ### Features
+    - Amazon Comprehend now supports synchronous mode for targeted sentiment API operations.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - SageMaker now allows customization on Canvas Application settings, including enabling/disabling time-series forecasting and specifying an Amazon Forecast execution role at both the Domain and UserProfile levels.
+
 # __1.12.307__ __2022-09-20__
 ## __Amazon Elastic Compute Cloud__
   - ### Features

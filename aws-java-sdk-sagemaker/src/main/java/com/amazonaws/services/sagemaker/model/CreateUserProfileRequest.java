@@ -40,16 +40,16 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is
-     * "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the Domain's AuthMode
-     * is not Amazon Web Services SSO, this field cannot be specified.
+     * "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's AuthMode is
+     * not IAM Identity Center, this field cannot be specified.
      * </p>
      */
     private String singleSignOnUserIdentifier;
     /**
      * <p>
      * The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the Domain's
-     * AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of a user in your
-     * directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     * AuthMode is IAM Identity Center, this field is required, and must match a valid username of a user in your
+     * directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be specified.
      * </p>
      */
     private String singleSignOnUserValue;
@@ -152,14 +152,14 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is
-     * "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the Domain's AuthMode
-     * is not Amazon Web Services SSO, this field cannot be specified.
+     * "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's AuthMode is
+     * not IAM Identity Center, this field cannot be specified.
      * </p>
      * 
      * @param singleSignOnUserIdentifier
      *        A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value
-     *        is "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the
-     *        Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     *        is "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's
+     *        AuthMode is not IAM Identity Center, this field cannot be specified.
      */
 
     public void setSingleSignOnUserIdentifier(String singleSignOnUserIdentifier) {
@@ -169,13 +169,13 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is
-     * "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the Domain's AuthMode
-     * is not Amazon Web Services SSO, this field cannot be specified.
+     * "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's AuthMode is
+     * not IAM Identity Center, this field cannot be specified.
      * </p>
      * 
      * @return A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value
-     *         is "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the
-     *         Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     *         is "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's
+     *         AuthMode is not IAM Identity Center, this field cannot be specified.
      */
 
     public String getSingleSignOnUserIdentifier() {
@@ -185,14 +185,14 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is
-     * "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the Domain's AuthMode
-     * is not Amazon Web Services SSO, this field cannot be specified.
+     * "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's AuthMode is
+     * not IAM Identity Center, this field cannot be specified.
      * </p>
      * 
      * @param singleSignOnUserIdentifier
      *        A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value
-     *        is "UserName". If the Domain's AuthMode is Amazon Web Services SSO, this field is required. If the
-     *        Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     *        is "UserName". If the Domain's AuthMode is IAM Identity Center, this field is required. If the Domain's
+     *        AuthMode is not IAM Identity Center, this field cannot be specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -204,14 +204,14 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the Domain's
-     * AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of a user in your
-     * directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     * AuthMode is IAM Identity Center, this field is required, and must match a valid username of a user in your
+     * directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be specified.
      * </p>
      * 
      * @param singleSignOnUserValue
      *        The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the
-     *        Domain's AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of a
-     *        user in your directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be
+     *        Domain's AuthMode is IAM Identity Center, this field is required, and must match a valid username of a
+     *        user in your directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be
      *        specified.
      */
 
@@ -222,13 +222,13 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the Domain's
-     * AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of a user in your
-     * directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     * AuthMode is IAM Identity Center, this field is required, and must match a valid username of a user in your
+     * directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be specified.
      * </p>
      * 
      * @return The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the
-     *         Domain's AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of
-     *         a user in your directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be
+     *         Domain's AuthMode is IAM Identity Center, this field is required, and must match a valid username of a
+     *         user in your directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be
      *         specified.
      */
 
@@ -239,14 +239,14 @@ public class CreateUserProfileRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the Domain's
-     * AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of a user in your
-     * directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be specified.
+     * AuthMode is IAM Identity Center, this field is required, and must match a valid username of a user in your
+     * directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be specified.
      * </p>
      * 
      * @param singleSignOnUserValue
      *        The username of the associated Amazon Web Services Single Sign-On User for this UserProfile. If the
-     *        Domain's AuthMode is Amazon Web Services SSO, this field is required, and must match a valid username of a
-     *        user in your directory. If the Domain's AuthMode is not Amazon Web Services SSO, this field cannot be
+     *        Domain's AuthMode is IAM Identity Center, this field is required, and must match a valid username of a
+     *        user in your directory. If the Domain's AuthMode is not IAM Identity Center, this field cannot be
      *        specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

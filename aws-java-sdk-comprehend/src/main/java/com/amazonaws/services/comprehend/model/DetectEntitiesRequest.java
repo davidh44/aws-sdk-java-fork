@@ -27,7 +27,7 @@ public class DetectEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      */
     private String text;
@@ -61,11 +61,11 @@ public class DetectEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      * 
      * @param text
-     *        A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     *        A UTF-8 text string. The maximum string size is 100 KB.
      */
 
     public void setText(String text) {
@@ -74,10 +74,10 @@ public class DetectEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      * 
-     * @return A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * @return A UTF-8 text string. The maximum string size is 100 KB.
      */
 
     public String getText() {
@@ -86,11 +86,11 @@ public class DetectEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      * 
      * @param text
-     *        A UTF-8 text string. Each string must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     *        A UTF-8 text string. The maximum string size is 100 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

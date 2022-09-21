@@ -27,8 +27,7 @@ public class ContainsPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Creates a new document classification request to analyze a single document in real-time, returning personally
-     * identifiable information (PII) entity labels.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      */
     private String text;
@@ -41,13 +40,11 @@ public class ContainsPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Creates a new document classification request to analyze a single document in real-time, returning personally
-     * identifiable information (PII) entity labels.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      * 
      * @param text
-     *        Creates a new document classification request to analyze a single document in real-time, returning
-     *        personally identifiable information (PII) entity labels.
+     *        A UTF-8 text string. The maximum string size is 100 KB.
      */
 
     public void setText(String text) {
@@ -56,12 +53,10 @@ public class ContainsPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Creates a new document classification request to analyze a single document in real-time, returning personally
-     * identifiable information (PII) entity labels.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      * 
-     * @return Creates a new document classification request to analyze a single document in real-time, returning
-     *         personally identifiable information (PII) entity labels.
+     * @return A UTF-8 text string. The maximum string size is 100 KB.
      */
 
     public String getText() {
@@ -70,13 +65,11 @@ public class ContainsPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Creates a new document classification request to analyze a single document in real-time, returning personally
-     * identifiable information (PII) entity labels.
+     * A UTF-8 text string. The maximum string size is 100 KB.
      * </p>
      * 
      * @param text
-     *        Creates a new document classification request to analyze a single document in real-time, returning
-     *        personally identifiable information (PII) entity labels.
+     *        A UTF-8 text string. The maximum string size is 100 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

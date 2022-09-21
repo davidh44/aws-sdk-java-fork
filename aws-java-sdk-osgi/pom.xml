@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.308-SNAPSHOT</version>
+    <version>1.12.308</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -3308,11 +3308,11 @@
                           ]]>
                       </header>
                       <footer>
-                          &lt;script src="https://a0.awsstatic.com/chrome/js/1.0.46/jquery.1.9.js" type="text/javascript">&lt;/script>
                           &lt;script>
-                          jQuery(function ($) {
-                          $("div.header").prepend('&lt;!--REGION_DISCLAIMER_DO_NOT_REMOVE-->');
-                          });
+                          var header = document.querySelector('div.header');
+                          var firstHeaderElement = header.childNodes[0];
+                          var regionDisclaimerElement = document.createComment('REGION_DISCLAIMER_DO_NOT_REMOVE');
+                          header.insertBefore(regionDisclaimerElement, firstHeaderElement);
                           &lt;/script>
 
                           &lt;meta name="guide-name" content="API Reference"> <!-- Documentation Guide Name for s.prop65 -->
