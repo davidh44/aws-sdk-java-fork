@@ -124,8 +124,8 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private String userContextPolicy;
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web
-     * Services Single Sign On identity source.
+     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
+     * Center (successor to Single Sign-On) identity source.
      * </p>
      */
     private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
@@ -915,13 +915,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web
-     * Services Single Sign On identity source.
+     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
+     * Center (successor to Single Sign-On) identity source.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon
-     *        Web Services Single Sign On identity source.
+     *        Whether you have enabled the configuration for fetching access levels of groups and users from an IAM
+     *        Identity Center (successor to Single Sign-On) identity source.
      */
 
     public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
@@ -930,12 +930,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web
-     * Services Single Sign On identity source.
+     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
+     * Center (successor to Single Sign-On) identity source.
      * </p>
      * 
-     * @return Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon
-     *         Web Services Single Sign On identity source.
+     * @return Whether you have enabled the configuration for fetching access levels of groups and users from an IAM
+     *         Identity Center (successor to Single Sign-On) identity source.
      */
 
     public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
@@ -944,13 +944,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web
-     * Services Single Sign On identity source.
+     * Whether you have enabled the configuration for fetching access levels of groups and users from an IAM Identity
+     * Center (successor to Single Sign-On) identity source.
      * </p>
      * 
      * @param userGroupResolutionConfiguration
-     *        Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon
-     *        Web Services Single Sign On identity source.
+     *        Whether you have enabled the configuration for fetching access levels of groups and users from an IAM
+     *        Identity Center (successor to Single Sign-On) identity source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1518,6 +1518,83 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
+     * Finds a place by its unique ID. A <code>PlaceId</code> is returned by other search operations.
+     * </p>
+     * <note>
+     * <p>
+     * A PlaceId is valid only if all of the following are the same in the original search request and the call to
+     * <code>GetPlace</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Customer AWS account
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * AWS Region
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Data provider specified in the place index resource
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getPlaceRequest
+     * @return A Java Future containing the result of the GetPlace operation returned by the service.
+     * @sample AmazonLocationAsync.GetPlace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetPlace" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPlaceResult> getPlaceAsync(GetPlaceRequest getPlaceRequest);
+
+    /**
+     * <p>
+     * Finds a place by its unique ID. A <code>PlaceId</code> is returned by other search operations.
+     * </p>
+     * <note>
+     * <p>
+     * A PlaceId is valid only if all of the following are the same in the original search request and the call to
+     * <code>GetPlace</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Customer AWS account
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * AWS Region
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Data provider specified in the place index resource
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param getPlaceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPlace operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.GetPlace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetPlace" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPlaceResult> getPlaceAsync(GetPlaceRequest getPlaceRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPlaceRequest, GetPlaceResult> asyncHandler);
+
+    /**
+     * <p>
      * A batch request to retrieve all device positions.
      * </p>
      * 

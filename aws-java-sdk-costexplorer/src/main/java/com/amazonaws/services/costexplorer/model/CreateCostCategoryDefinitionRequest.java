@@ -26,6 +26,14 @@ import com.amazonaws.AmazonWebServiceRequest;
 public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     private String name;
+    /**
+     * <p>
+     * The Cost Category's effective start date. It can only be a billing start date (first day of the month). If the
+     * date isn't provided, it's the first day of the current month. Dates can't be before the previous twelve months,
+     * or in the future.
+     * </p>
+     */
+    private String effectiveStart;
 
     private String ruleVersion;
     /**
@@ -119,6 +127,58 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
 
     public CreateCostCategoryDefinitionRequest withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Cost Category's effective start date. It can only be a billing start date (first day of the month). If the
+     * date isn't provided, it's the first day of the current month. Dates can't be before the previous twelve months,
+     * or in the future.
+     * </p>
+     * 
+     * @param effectiveStart
+     *        The Cost Category's effective start date. It can only be a billing start date (first day of the month). If
+     *        the date isn't provided, it's the first day of the current month. Dates can't be before the previous
+     *        twelve months, or in the future.
+     */
+
+    public void setEffectiveStart(String effectiveStart) {
+        this.effectiveStart = effectiveStart;
+    }
+
+    /**
+     * <p>
+     * The Cost Category's effective start date. It can only be a billing start date (first day of the month). If the
+     * date isn't provided, it's the first day of the current month. Dates can't be before the previous twelve months,
+     * or in the future.
+     * </p>
+     * 
+     * @return The Cost Category's effective start date. It can only be a billing start date (first day of the month).
+     *         If the date isn't provided, it's the first day of the current month. Dates can't be before the previous
+     *         twelve months, or in the future.
+     */
+
+    public String getEffectiveStart() {
+        return this.effectiveStart;
+    }
+
+    /**
+     * <p>
+     * The Cost Category's effective start date. It can only be a billing start date (first day of the month). If the
+     * date isn't provided, it's the first day of the current month. Dates can't be before the previous twelve months,
+     * or in the future.
+     * </p>
+     * 
+     * @param effectiveStart
+     *        The Cost Category's effective start date. It can only be a billing start date (first day of the month). If
+     *        the date isn't provided, it's the first day of the current month. Dates can't be before the previous
+     *        twelve months, or in the future.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCostCategoryDefinitionRequest withEffectiveStart(String effectiveStart) {
+        setEffectiveStart(effectiveStart);
         return this;
     }
 
@@ -789,6 +849,8 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
         sb.append("{");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getEffectiveStart() != null)
+            sb.append("EffectiveStart: ").append(getEffectiveStart()).append(",");
         if (getRuleVersion() != null)
             sb.append("RuleVersion: ").append(getRuleVersion()).append(",");
         if (getRules() != null)
@@ -816,6 +878,10 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getEffectiveStart() == null ^ this.getEffectiveStart() == null)
+            return false;
+        if (other.getEffectiveStart() != null && other.getEffectiveStart().equals(this.getEffectiveStart()) == false)
             return false;
         if (other.getRuleVersion() == null ^ this.getRuleVersion() == null)
             return false;
@@ -846,6 +912,7 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getEffectiveStart() == null) ? 0 : getEffectiveStart().hashCode());
         hashCode = prime * hashCode + ((getRuleVersion() == null) ? 0 : getRuleVersion().hashCode());
         hashCode = prime * hashCode + ((getRules() == null) ? 0 : getRules().hashCode());
         hashCode = prime * hashCode + ((getDefaultValue() == null) ? 0 : getDefaultValue().hashCode());

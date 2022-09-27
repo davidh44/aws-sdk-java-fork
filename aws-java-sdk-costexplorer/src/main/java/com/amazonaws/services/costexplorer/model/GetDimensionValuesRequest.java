@@ -43,7 +43,10 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>. For
-     * more information, see <code>Context</code>.
+     * more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only
+     * be used in <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     * >CostCategoryRule</a>.
      * </p>
      */
     private String dimension;
@@ -473,12 +476,18 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>. For
-     * more information, see <code>Context</code>.
+     * more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only
+     * be used in <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     * >CostCategoryRule</a>.
      * </p>
      * 
      * @param dimension
      *        The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>.
-     *        For more information, see <code>Context</code>.
+     *        For more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and
+     *        <code>SERVICE_CODE</code> can only be used in <a
+     *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     *        >CostCategoryRule</a>.
      * @see Dimension
      */
 
@@ -489,11 +498,17 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>. For
-     * more information, see <code>Context</code>.
+     * more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only
+     * be used in <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     * >CostCategoryRule</a>.
      * </p>
      * 
      * @return The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>.
-     *         For more information, see <code>Context</code>.
+     *         For more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and
+     *         <code>SERVICE_CODE</code> can only be used in <a
+     *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     *         >CostCategoryRule</a>.
      * @see Dimension
      */
 
@@ -504,12 +519,18 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>. For
-     * more information, see <code>Context</code>.
+     * more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only
+     * be used in <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     * >CostCategoryRule</a>.
      * </p>
      * 
      * @param dimension
      *        The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>.
-     *        For more information, see <code>Context</code>.
+     *        For more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and
+     *        <code>SERVICE_CODE</code> can only be used in <a
+     *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     *        >CostCategoryRule</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Dimension
      */
@@ -522,12 +543,18 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>. For
-     * more information, see <code>Context</code>.
+     * more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and <code>SERVICE_CODE</code> can only
+     * be used in <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     * >CostCategoryRule</a>.
      * </p>
      * 
      * @param dimension
      *        The name of the dimension. Each <code>Dimension</code> is available for a different <code>Context</code>.
-     *        For more information, see <code>Context</code>.
+     *        For more information, see <code>Context</code>. <code>LINK_ACCOUNT_NAME</code> and
+     *        <code>SERVICE_CODE</code> can only be used in <a
+     *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/AAPI_CostCategoryRule.html"
+     *        >CostCategoryRule</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Dimension
      */

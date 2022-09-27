@@ -1134,6 +1134,39 @@ public class AmazonLocationAsyncClient extends AmazonLocationClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetPlaceResult> getPlaceAsync(GetPlaceRequest request) {
+
+        return getPlaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPlaceResult> getPlaceAsync(final GetPlaceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPlaceRequest, GetPlaceResult> asyncHandler) {
+        final GetPlaceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPlaceResult>() {
+            @Override
+            public GetPlaceResult call() throws Exception {
+                GetPlaceResult result = null;
+
+                try {
+                    result = executeGetPlace(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDevicePositionsResult> listDevicePositionsAsync(ListDevicePositionsRequest request) {
 
         return listDevicePositionsAsync(request, null);

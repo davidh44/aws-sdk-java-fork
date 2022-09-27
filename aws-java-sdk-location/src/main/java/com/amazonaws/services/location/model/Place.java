@@ -114,6 +114,25 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private TimeZone timeZone;
+    /**
+     * <p>
+     * For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     * <code>3B</code> or <code>Unit 123</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Returned only for a place index that uses Esri as a data provider. Is not returned for
+     * <code>SearchPlaceIndexForPosition</code>.
+     * </p>
+     * </note>
+     */
+    private String unitNumber;
+    /**
+     * <p>
+     * For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     * </p>
+     */
+    private String unitType;
 
     /**
      * <p>
@@ -705,6 +724,122 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     * <code>3B</code> or <code>Unit 123</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Returned only for a place index that uses Esri as a data provider. Is not returned for
+     * <code>SearchPlaceIndexForPosition</code>.
+     * </p>
+     * </note>
+     * 
+     * @param unitNumber
+     *        For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     *        <code>3B</code> or <code>Unit 123</code>.</p> <note>
+     *        <p>
+     *        Returned only for a place index that uses Esri as a data provider. Is not returned for
+     *        <code>SearchPlaceIndexForPosition</code>.
+     *        </p>
+     */
+
+    public void setUnitNumber(String unitNumber) {
+        this.unitNumber = unitNumber;
+    }
+
+    /**
+     * <p>
+     * For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     * <code>3B</code> or <code>Unit 123</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Returned only for a place index that uses Esri as a data provider. Is not returned for
+     * <code>SearchPlaceIndexForPosition</code>.
+     * </p>
+     * </note>
+     * 
+     * @return For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     *         <code>3B</code> or <code>Unit 123</code>.</p> <note>
+     *         <p>
+     *         Returned only for a place index that uses Esri as a data provider. Is not returned for
+     *         <code>SearchPlaceIndexForPosition</code>.
+     *         </p>
+     */
+
+    public String getUnitNumber() {
+        return this.unitNumber;
+    }
+
+    /**
+     * <p>
+     * For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     * <code>3B</code> or <code>Unit 123</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Returned only for a place index that uses Esri as a data provider. Is not returned for
+     * <code>SearchPlaceIndexForPosition</code>.
+     * </p>
+     * </note>
+     * 
+     * @param unitNumber
+     *        For addresses with multiple units, the unit identifier. Can include numbers and letters, for example
+     *        <code>3B</code> or <code>Unit 123</code>.</p> <note>
+     *        <p>
+     *        Returned only for a place index that uses Esri as a data provider. Is not returned for
+     *        <code>SearchPlaceIndexForPosition</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Place withUnitNumber(String unitNumber) {
+        setUnitNumber(unitNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     * </p>
+     * 
+     * @param unitType
+     *        For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     */
+
+    public void setUnitType(String unitType) {
+        this.unitType = unitType;
+    }
+
+    /**
+     * <p>
+     * For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     * </p>
+     * 
+     * @return For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     */
+
+    public String getUnitType() {
+        return this.unitType;
+    }
+
+    /**
+     * <p>
+     * For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     * </p>
+     * 
+     * @param unitType
+     *        For addresses with a <code>UnitNumber</code>, the type of unit. For example, <code>Apartment</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Place withUnitType(String unitType) {
+        setUnitType(unitType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -739,7 +874,11 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
         if (getSubRegion() != null)
             sb.append("SubRegion: ").append(getSubRegion()).append(",");
         if (getTimeZone() != null)
-            sb.append("TimeZone: ").append(getTimeZone());
+            sb.append("TimeZone: ").append(getTimeZone()).append(",");
+        if (getUnitNumber() != null)
+            sb.append("UnitNumber: ").append(getUnitNumber()).append(",");
+        if (getUnitType() != null)
+            sb.append("UnitType: ").append(getUnitType());
         sb.append("}");
         return sb.toString();
     }
@@ -802,6 +941,14 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTimeZone() != null && other.getTimeZone().equals(this.getTimeZone()) == false)
             return false;
+        if (other.getUnitNumber() == null ^ this.getUnitNumber() == null)
+            return false;
+        if (other.getUnitNumber() != null && other.getUnitNumber().equals(this.getUnitNumber()) == false)
+            return false;
+        if (other.getUnitType() == null ^ this.getUnitType() == null)
+            return false;
+        if (other.getUnitType() != null && other.getUnitType().equals(this.getUnitType()) == false)
+            return false;
         return true;
     }
 
@@ -822,6 +969,8 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStreet() == null) ? 0 : getStreet().hashCode());
         hashCode = prime * hashCode + ((getSubRegion() == null) ? 0 : getSubRegion().hashCode());
         hashCode = prime * hashCode + ((getTimeZone() == null) ? 0 : getTimeZone().hashCode());
+        hashCode = prime * hashCode + ((getUnitNumber() == null) ? 0 : getUnitNumber().hashCode());
+        hashCode = prime * hashCode + ((getUnitType() == null) ? 0 : getUnitType().hashCode());
         return hashCode;
     }
 
