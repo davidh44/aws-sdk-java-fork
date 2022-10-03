@@ -30,7 +30,8 @@ public enum ImageAttributeName {
     BootMode("bootMode"),
     TpmSupport("tpmSupport"),
     UefiData("uefiData"),
-    LastLaunchedTime("lastLaunchedTime");
+    LastLaunchedTime("lastLaunchedTime"),
+    ImdsSupport("imdsSupport");
 
     private String value;
 

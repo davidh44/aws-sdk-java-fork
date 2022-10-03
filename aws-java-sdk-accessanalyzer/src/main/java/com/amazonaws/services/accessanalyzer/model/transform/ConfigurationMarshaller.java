@@ -31,10 +31,10 @@ public class ConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("iamRole").build();
     private static final MarshallingInfo<StructuredPojo> KMSKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("kmsKey").build();
-    private static final MarshallingInfo<StructuredPojo> S3BUCKET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Bucket").build();
     private static final MarshallingInfo<StructuredPojo> SECRETSMANAGERSECRET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("secretsManagerSecret").build();
+    private static final MarshallingInfo<StructuredPojo> S3BUCKET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Bucket").build();
     private static final MarshallingInfo<StructuredPojo> SQSQUEUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sqsQueue").build();
 
@@ -56,8 +56,8 @@ public class ConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(configuration.getIamRole(), IAMROLE_BINDING);
             protocolMarshaller.marshall(configuration.getKmsKey(), KMSKEY_BINDING);
-            protocolMarshaller.marshall(configuration.getS3Bucket(), S3BUCKET_BINDING);
             protocolMarshaller.marshall(configuration.getSecretsManagerSecret(), SECRETSMANAGERSECRET_BINDING);
+            protocolMarshaller.marshall(configuration.getS3Bucket(), S3BUCKET_BINDING);
             protocolMarshaller.marshall(configuration.getSqsQueue(), SQSQUEUE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

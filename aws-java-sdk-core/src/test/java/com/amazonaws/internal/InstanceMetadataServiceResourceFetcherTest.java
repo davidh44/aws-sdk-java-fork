@@ -33,8 +33,6 @@ import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.SDKGlobalConfiguration;
 import com.amazonaws.SdkClientException;
-import com.amazonaws.retry.internal.CredentialsEndpointRetryParameters;
-import com.amazonaws.retry.internal.CredentialsEndpointRetryPolicy;
 import com.amazonaws.util.VersionInfoUtils;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import com.github.tomakehurst.wiremock.stubbing.Scenario;
@@ -105,15 +103,6 @@ public class InstanceMetadataServiceResourceFetcherTest {
         generateStub(200, SUCCESS_BODY);
 
         assertEquals(SUCCESS_BODY, resourceFetcher.readResource(endpoint));
-        verifySecureWorkflowHeaders();
-    }
-
-    @Test
-    public void tokenRetryableError_shouldRetryAndSucceed() {
-        generateRetrySucceedTokenStub();
-        generateStub(200, SUCCESS_BODY);
-
-        assertEquals(SUCCESS_BODY, resourceFetcher.readResource(endpoint, new CredentialsRetryPolicy()));
         verifySecureWorkflowHeaders();
     }
 
@@ -308,22 +297,6 @@ public class InstanceMetadataServiceResourceFetcherTest {
     private void verifyInsecureWorkflowHeaders() {
         verify(putRequestedFor(urlPathEqualTo(TOKEN_PATH)).withHeader("x-aws-ec2-metadata-token-ttl-seconds", equalTo("21600")));
         verify(getRequestedFor(urlPathEqualTo(CREDENTIALS_PATH)).withoutHeader("x-aws-ec2-metadata-token"));
-    }
-
-    private static class CredentialsRetryPolicy implements CredentialsEndpointRetryPolicy {
-        @Override
-        public boolean shouldRetry(int retriesAttempted, CredentialsEndpointRetryParameters retryParams) {
-            if (retriesAttempted >= 3) {
-                return false;
-            }
-
-            Integer statusCode = retryParams.getStatusCode();
-            if (statusCode != null && statusCode >= 500 && statusCode < 600) {
-                return true;
-            }
-
-            return retryParams.getException() != null && retryParams.getException() instanceof IOException;
-        }
     }
 
 }

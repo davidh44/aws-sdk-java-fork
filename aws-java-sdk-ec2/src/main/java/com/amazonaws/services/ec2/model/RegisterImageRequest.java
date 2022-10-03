@@ -166,6 +166,22 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * </p>
      */
     private String uefiData;
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     * </p>
+     * </note>
+     */
+    private String imdsSupport;
 
     /**
      * Default constructor for RegisterImageRequest object. Callers should use the setter or fluent setter (with...)
@@ -1306,6 +1322,169 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     }
 
     /**
+     * <p>
+     * Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     * </p>
+     * </note>
+     * 
+     * @param imdsSupport
+     *        Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <note>
+     *        <p>
+     *        If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     *        </p>
+     * @see ImdsSupportValues
+     */
+
+    public void setImdsSupport(String imdsSupport) {
+        this.imdsSupport = imdsSupport;
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     * </p>
+     * </note>
+     * 
+     * @return Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this
+     *         AMI will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *         instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *         <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *         >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <note>
+     *         <p>
+     *         If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     *         </p>
+     * @see ImdsSupportValues
+     */
+
+    public String getImdsSupport() {
+        return this.imdsSupport;
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     * </p>
+     * </note>
+     * 
+     * @param imdsSupport
+     *        Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <note>
+     *        <p>
+     *        If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ImdsSupportValues
+     */
+
+    public RegisterImageRequest withImdsSupport(String imdsSupport) {
+        setImdsSupport(imdsSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     * </p>
+     * </note>
+     * 
+     * @param imdsSupport
+     *        Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <note>
+     *        <p>
+     *        If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     *        </p>
+     * @see ImdsSupportValues
+     */
+
+    public void setImdsSupport(ImdsSupportValues imdsSupport) {
+        withImdsSupport(imdsSupport);
+    }
+
+    /**
+     * <p>
+     * Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     * </p>
+     * </note>
+     * 
+     * @param imdsSupport
+     *        Set to <code>v2.0</code> to indicate that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <note>
+     *        <p>
+     *        If you set the value to <code>v2.0</code>, make sure that your AMI software can support IMDSv2.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ImdsSupportValues
+     */
+
+    public RegisterImageRequest withImdsSupport(ImdsSupportValues imdsSupport) {
+        this.imdsSupport = imdsSupport.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1357,7 +1536,9 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         if (getTpmSupport() != null)
             sb.append("TpmSupport: ").append(getTpmSupport()).append(",");
         if (getUefiData() != null)
-            sb.append("UefiData: ").append(getUefiData());
+            sb.append("UefiData: ").append(getUefiData()).append(",");
+        if (getImdsSupport() != null)
+            sb.append("ImdsSupport: ").append(getImdsSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -1432,6 +1613,10 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
             return false;
         if (other.getUefiData() != null && other.getUefiData().equals(this.getUefiData()) == false)
             return false;
+        if (other.getImdsSupport() == null ^ this.getImdsSupport() == null)
+            return false;
+        if (other.getImdsSupport() != null && other.getImdsSupport().equals(this.getImdsSupport()) == false)
+            return false;
         return true;
     }
 
@@ -1455,6 +1640,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
         hashCode = prime * hashCode + ((getTpmSupport() == null) ? 0 : getTpmSupport().hashCode());
         hashCode = prime * hashCode + ((getUefiData() == null) ? 0 : getUefiData().hashCode());
+        hashCode = prime * hashCode + ((getImdsSupport() == null) ? 0 : getImdsSupport().hashCode());
         return hashCode;
     }
 

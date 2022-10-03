@@ -66,7 +66,7 @@ public final class InstanceMetadataServiceResourceFetcher extends EC2ResourceFet
         }
 
         Map<String, String> newHeaders = addDefaultHeaders(headers);
-        String token = getToken(retryPolicy);
+        String token = getToken();
 
         if (token != null) {
             newHeaders.put(TOKEN_HEADER, token);
@@ -80,7 +80,7 @@ public final class InstanceMetadataServiceResourceFetcher extends EC2ResourceFet
      *
      * @return the token
      */
-    private String getToken(CredentialsEndpointRetryPolicy retryPolicy) {
+    private String getToken() {
         Map<String, String> headers = new HashMap<String, String>();
         headers.put(TOKEN_TTL_HEADER, DEFAULT_TOKEN_TTL);
 
@@ -88,7 +88,7 @@ public final class InstanceMetadataServiceResourceFetcher extends EC2ResourceFet
         String host = EC2MetadataUtils.getHostAddressForEC2MetadataService();
 
         try {
-            token = doReadResource(URI.create(host + EC2_TOKEN_ROOT), retryPolicy, headers, "PUT");
+            token = doReadResource(URI.create(host + EC2_TOKEN_ROOT), CredentialsEndpointRetryPolicy.NO_RETRY, headers, "PUT");
         } catch (SdkClientException e) {
            handleException(e);
         }

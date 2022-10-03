@@ -56,13 +56,13 @@ public class ConfigurationJsonUnmarshaller implements Unmarshaller<Configuration
                     context.nextToken();
                     configuration.setKmsKey(KmsKeyConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("s3Bucket", targetDepth)) {
-                    context.nextToken();
-                    configuration.setS3Bucket(S3BucketConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("secretsManagerSecret", targetDepth)) {
                     context.nextToken();
                     configuration.setSecretsManagerSecret(SecretsManagerSecretConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("s3Bucket", targetDepth)) {
+                    context.nextToken();
+                    configuration.setS3Bucket(S3BucketConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("sqsQueue", targetDepth)) {
                     context.nextToken();

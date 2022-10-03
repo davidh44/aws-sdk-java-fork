@@ -43,16 +43,16 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
     private KmsKeyConfiguration kmsKey;
     /**
      * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
-     * </p>
-     */
-    private S3BucketConfiguration s3Bucket;
-    /**
-     * <p>
      * The access control configuration is for a Secrets Manager secret.
      * </p>
      */
     private SecretsManagerSecretConfiguration secretsManagerSecret;
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 Bucket.
+     * </p>
+     */
+    private S3BucketConfiguration s3Bucket;
     /**
      * <p>
      * The access control configuration is for an Amazon SQS queue.
@@ -142,46 +142,6 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
-     * </p>
-     * 
-     * @param s3Bucket
-     *        The access control configuration is for an Amazon S3 Bucket.
-     */
-
-    public void setS3Bucket(S3BucketConfiguration s3Bucket) {
-        this.s3Bucket = s3Bucket;
-    }
-
-    /**
-     * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
-     * </p>
-     * 
-     * @return The access control configuration is for an Amazon S3 Bucket.
-     */
-
-    public S3BucketConfiguration getS3Bucket() {
-        return this.s3Bucket;
-    }
-
-    /**
-     * <p>
-     * The access control configuration is for an Amazon S3 Bucket.
-     * </p>
-     * 
-     * @param s3Bucket
-     *        The access control configuration is for an Amazon S3 Bucket.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Configuration withS3Bucket(S3BucketConfiguration s3Bucket) {
-        setS3Bucket(s3Bucket);
-        return this;
-    }
-
-    /**
-     * <p>
      * The access control configuration is for a Secrets Manager secret.
      * </p>
      * 
@@ -217,6 +177,46 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
     public Configuration withSecretsManagerSecret(SecretsManagerSecretConfiguration secretsManagerSecret) {
         setSecretsManagerSecret(secretsManagerSecret);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 Bucket.
+     * </p>
+     * 
+     * @param s3Bucket
+     *        The access control configuration is for an Amazon S3 Bucket.
+     */
+
+    public void setS3Bucket(S3BucketConfiguration s3Bucket) {
+        this.s3Bucket = s3Bucket;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 Bucket.
+     * </p>
+     * 
+     * @return The access control configuration is for an Amazon S3 Bucket.
+     */
+
+    public S3BucketConfiguration getS3Bucket() {
+        return this.s3Bucket;
+    }
+
+    /**
+     * <p>
+     * The access control configuration is for an Amazon S3 Bucket.
+     * </p>
+     * 
+     * @param s3Bucket
+     *        The access control configuration is for an Amazon S3 Bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Configuration withS3Bucket(S3BucketConfiguration s3Bucket) {
+        setS3Bucket(s3Bucket);
         return this;
     }
 
@@ -276,10 +276,10 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
             sb.append("IamRole: ").append(getIamRole()).append(",");
         if (getKmsKey() != null)
             sb.append("KmsKey: ").append(getKmsKey()).append(",");
-        if (getS3Bucket() != null)
-            sb.append("S3Bucket: ").append(getS3Bucket()).append(",");
         if (getSecretsManagerSecret() != null)
             sb.append("SecretsManagerSecret: ").append(getSecretsManagerSecret()).append(",");
+        if (getS3Bucket() != null)
+            sb.append("S3Bucket: ").append(getS3Bucket()).append(",");
         if (getSqsQueue() != null)
             sb.append("SqsQueue: ").append(getSqsQueue());
         sb.append("}");
@@ -304,13 +304,13 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getKmsKey() != null && other.getKmsKey().equals(this.getKmsKey()) == false)
             return false;
-        if (other.getS3Bucket() == null ^ this.getS3Bucket() == null)
-            return false;
-        if (other.getS3Bucket() != null && other.getS3Bucket().equals(this.getS3Bucket()) == false)
-            return false;
         if (other.getSecretsManagerSecret() == null ^ this.getSecretsManagerSecret() == null)
             return false;
         if (other.getSecretsManagerSecret() != null && other.getSecretsManagerSecret().equals(this.getSecretsManagerSecret()) == false)
+            return false;
+        if (other.getS3Bucket() == null ^ this.getS3Bucket() == null)
+            return false;
+        if (other.getS3Bucket() != null && other.getS3Bucket().equals(this.getS3Bucket()) == false)
             return false;
         if (other.getSqsQueue() == null ^ this.getSqsQueue() == null)
             return false;
@@ -326,8 +326,8 @@ public class Configuration implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getIamRole() == null) ? 0 : getIamRole().hashCode());
         hashCode = prime * hashCode + ((getKmsKey() == null) ? 0 : getKmsKey().hashCode());
-        hashCode = prime * hashCode + ((getS3Bucket() == null) ? 0 : getS3Bucket().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerSecret() == null) ? 0 : getSecretsManagerSecret().hashCode());
+        hashCode = prime * hashCode + ((getS3Bucket() == null) ? 0 : getS3Bucket().hashCode());
         hashCode = prime * hashCode + ((getSqsQueue() == null) ? 0 : getSqsQueue().hashCode());
         return hashCode;
     }

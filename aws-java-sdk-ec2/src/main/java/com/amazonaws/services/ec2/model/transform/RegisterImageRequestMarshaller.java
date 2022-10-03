@@ -177,6 +177,10 @@ public class RegisterImageRequestMarshaller implements Marshaller<Request<Regist
             request.addParameter("UefiData", StringUtils.fromString(registerImageRequest.getUefiData()));
         }
 
+        if (registerImageRequest.getImdsSupport() != null) {
+            request.addParameter("ImdsSupport", StringUtils.fromString(registerImageRequest.getImdsSupport()));
+        }
+
         return request;
     }
 

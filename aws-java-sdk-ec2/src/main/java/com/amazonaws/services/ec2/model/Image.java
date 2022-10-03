@@ -220,6 +220,17 @@ public class Image implements Serializable, Cloneable {
      * </p>
      */
     private String deprecationTime;
+    /**
+     * <p>
+     * If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     */
+    private String imdsSupport;
 
     /**
      * <p>
@@ -1955,6 +1966,129 @@ public class Image implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param imdsSupport
+     *        If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @see ImdsSupportValues
+     */
+
+    public void setImdsSupport(String imdsSupport) {
+        this.imdsSupport = imdsSupport;
+    }
+
+    /**
+     * <p>
+     * If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @return If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *         will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *         instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *         <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *         >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @see ImdsSupportValues
+     */
+
+    public String getImdsSupport() {
+        return this.imdsSupport;
+    }
+
+    /**
+     * <p>
+     * If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param imdsSupport
+     *        If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ImdsSupportValues
+     */
+
+    public Image withImdsSupport(String imdsSupport) {
+        setImdsSupport(imdsSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param imdsSupport
+     *        If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @see ImdsSupportValues
+     */
+
+    public void setImdsSupport(ImdsSupportValues imdsSupport) {
+        withImdsSupport(imdsSupport);
+    }
+
+    /**
+     * <p>
+     * If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI will
+     * have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the instance
+     * requires that IMDSv2 is used when requesting instance metadata. In addition, <code>HttpPutResponseHopLimit</code>
+     * is set to <code>2</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     * >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param imdsSupport
+     *        If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched from this AMI
+     *        will have <code>HttpTokens</code> automatically set to <code>required</code> so that, by default, the
+     *        instance requires that IMDSv2 is used when requesting instance metadata. In addition,
+     *        <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration"
+     *        >Configure the AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ImdsSupportValues
+     */
+
+    public Image withImdsSupport(ImdsSupportValues imdsSupport) {
+        this.imdsSupport = imdsSupport.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2023,7 +2157,9 @@ public class Image implements Serializable, Cloneable {
         if (getTpmSupport() != null)
             sb.append("TpmSupport: ").append(getTpmSupport()).append(",");
         if (getDeprecationTime() != null)
-            sb.append("DeprecationTime: ").append(getDeprecationTime());
+            sb.append("DeprecationTime: ").append(getDeprecationTime()).append(",");
+        if (getImdsSupport() != null)
+            sb.append("ImdsSupport: ").append(getImdsSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -2154,6 +2290,10 @@ public class Image implements Serializable, Cloneable {
             return false;
         if (other.getDeprecationTime() != null && other.getDeprecationTime().equals(this.getDeprecationTime()) == false)
             return false;
+        if (other.getImdsSupport() == null ^ this.getImdsSupport() == null)
+            return false;
+        if (other.getImdsSupport() != null && other.getImdsSupport().equals(this.getImdsSupport()) == false)
+            return false;
         return true;
     }
 
@@ -2191,6 +2331,7 @@ public class Image implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
         hashCode = prime * hashCode + ((getTpmSupport() == null) ? 0 : getTpmSupport().hashCode());
         hashCode = prime * hashCode + ((getDeprecationTime() == null) ? 0 : getDeprecationTime().hashCode());
+        hashCode = prime * hashCode + ((getImdsSupport() == null) ? 0 : getImdsSupport().hashCode());
         return hashCode;
     }
 

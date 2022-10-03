@@ -204,6 +204,11 @@ public class ImageStaxUnmarshaller implements Unmarshaller<Image, StaxUnmarshall
                     image.setDeprecationTime(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("imdsSupport", targetDepth)) {
+                    image.setImdsSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return image;
