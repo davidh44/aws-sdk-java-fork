@@ -1,3 +1,8 @@
+# __1.12.318__ __2022-10-06__
+## __AWS Resilience Hub__
+  - ### Features
+    - Documentation change for AWS Resilience Hub. Doc-only update to fix Documentation layout
+
 # __1.12.317__ __2022-10-05__
 ## __AWS Glue__
   - ### Features
