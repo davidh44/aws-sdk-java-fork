@@ -1,3 +1,20 @@
+# __1.12.319__ __2022-10-07__
+## __AWS IoT Greengrass V2__
+  - ### Features
+    - This release adds error status details for deployments and components that failed on a device and adds features to improve visibility into component installation.
+
+## __Amazon CodeGuru Reviewer__
+  - ### Features
+    - Documentation update to replace broken link.
+
+## __Amazon QuickSight__
+  - ### Features
+    - Amazon QuickSight now supports SecretsManager Secret ARN in place of CredentialPair for DataSource creation and update. This release also has some minor documentation updates and removes CountryCode as a required parameter in GeoSpatialColumnGroup
+
+## __Elastic Load Balancing__
+  - ### Features
+    - Gateway Load Balancer adds a new feature (target_failover) for customers to rebalance existing flows to a healthy target after marked unhealthy or deregistered. This allows graceful patching/upgrades of target appliances during maintenance windows, and helps reduce unhealthy target failover time.
+
 # __1.12.318__ __2022-10-06__
 ## __AWS Resilience Hub__
   - ### Features

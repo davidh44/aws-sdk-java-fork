@@ -4104,7 +4104,8 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Updates a dataset. This operation doesn't support datasets that include uploaded files as a source.
+     * Updates a dataset. This operation doesn't support datasets that include uploaded files as a source. Partial
+     * updates are not supported by this operation.
      * </p>
      * 
      * @param updateDataSetRequest
@@ -4117,7 +4118,8 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Updates a dataset. This operation doesn't support datasets that include uploaded files as a source.
+     * Updates a dataset. This operation doesn't support datasets that include uploaded files as a source. Partial
+     * updates are not supported by this operation.
      * </p>
      * 
      * @param updateDataSetRequest

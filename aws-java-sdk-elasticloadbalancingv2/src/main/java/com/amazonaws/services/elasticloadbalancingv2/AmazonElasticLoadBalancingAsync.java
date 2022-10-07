@@ -1561,8 +1561,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Sets the type of IP addresses used by the subnets of the specified Application Load Balancer or Network Load
-     * Balancer.
+     * Sets the type of IP addresses used by the subnets of the specified load balancer.
      * </p>
      * 
      * @param setIpAddressTypeRequest
@@ -1575,8 +1574,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Sets the type of IP addresses used by the subnets of the specified Application Load Balancer or Network Load
-     * Balancer.
+     * Sets the type of IP addresses used by the subnets of the specified load balancer.
      * </p>
      * 
      * @param setIpAddressTypeRequest

@@ -61,17 +61,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip</code> for Network Load Balancers
+     * <code>source_ip</code> for Network Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      * </p>
      * </li>
      * </ul>
@@ -156,6 +156,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <p>
      * <code>proxy_protocol_v2.enabled</code> - Indicates whether Proxy Protocol version 2 is enabled. The value is
      * <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following attributes are supported only by Gateway Load Balancers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing flows
+     * when a target is deregistered. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The
+     * default is <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) can't be set independently. The value you set for both attributes must
+     * be the same.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing flows when a
+     * target is unhealthy. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The default is
+     * <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) cannot be set independently. The value you set for both attributes
+     * must be the same.
      * </p>
      * </li>
      * </ul>
@@ -203,17 +226,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip</code> for Network Load Balancers
+     * <code>source_ip</code> for Network Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      * </p>
      * </li>
      * </ul>
@@ -301,6 +324,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following attributes are supported only by Gateway Load Balancers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing flows
+     * when a target is deregistered. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The
+     * default is <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) can't be set independently. The value you set for both attributes must
+     * be the same.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing flows when a
+     * target is unhealthy. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The default is
+     * <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) cannot be set independently. The value you set for both attributes
+     * must be the same.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param key
      *        The name of the attribute.</p>
@@ -335,17 +381,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     *        <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>source_ip</code> for Network Load Balancers
+     *        <code>source_ip</code> for Network Load Balancers.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     *        <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      *        </p>
      *        </li>
      *        </ul>
@@ -435,6 +481,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *        is <code>true</code> or <code>false</code>. The default is <code>false</code>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        The following attributes are supported only by Gateway Load Balancers:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing
+     *        flows when a target is deregistered. The possible values are <code>rebalance</code> and
+     *        <code>no_rebalance</code>. The default is <code>no_rebalance</code>. The two attributes (
+     *        <code>target_failover.on_deregistration</code> and <code>target_failover.on_unhealthy</code>) can't be set
+     *        independently. The value you set for both attributes must be the same.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing flows
+     *        when a target is unhealthy. The possible values are <code>rebalance</code> and <code>no_rebalance</code>.
+     *        The default is <code>no_rebalance</code>. The two attributes (
+     *        <code>target_failover.on_deregistration</code> and <code>target_failover.on_unhealthy</code>) cannot be
+     *        set independently. The value you set for both attributes must be the same.
+     *        </p>
+     *        </li>
      */
 
     public void setKey(String key) {
@@ -476,17 +545,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip</code> for Network Load Balancers
+     * <code>source_ip</code> for Network Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      * </p>
      * </li>
      * </ul>
@@ -574,6 +643,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following attributes are supported only by Gateway Load Balancers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing flows
+     * when a target is deregistered. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The
+     * default is <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) can't be set independently. The value you set for both attributes must
+     * be the same.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing flows when a
+     * target is unhealthy. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The default is
+     * <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) cannot be set independently. The value you set for both attributes
+     * must be the same.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The name of the attribute.</p>
      *         <p>
@@ -607,17 +699,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     *         <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>source_ip</code> for Network Load Balancers
+     *         <code>source_ip</code> for Network Load Balancers.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     *         <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      *         </p>
      *         </li>
      *         </ul>
@@ -707,6 +799,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *         is <code>true</code> or <code>false</code>. The default is <code>false</code>.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         The following attributes are supported only by Gateway Load Balancers:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing
+     *         flows when a target is deregistered. The possible values are <code>rebalance</code> and
+     *         <code>no_rebalance</code>. The default is <code>no_rebalance</code>. The two attributes (
+     *         <code>target_failover.on_deregistration</code> and <code>target_failover.on_unhealthy</code>) can't be
+     *         set independently. The value you set for both attributes must be the same.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing
+     *         flows when a target is unhealthy. The possible values are <code>rebalance</code> and
+     *         <code>no_rebalance</code>. The default is <code>no_rebalance</code>. The two attributes (
+     *         <code>target_failover.on_deregistration</code> and <code>target_failover.on_unhealthy</code>) cannot be
+     *         set independently. The value you set for both attributes must be the same.
+     *         </p>
+     *         </li>
      */
 
     public String getKey() {
@@ -748,17 +863,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     * <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip</code> for Network Load Balancers
+     * <code>source_ip</code> for Network Load Balancers.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     * <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      * </p>
      * </li>
      * </ul>
@@ -846,6 +961,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following attributes are supported only by Gateway Load Balancers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing flows
+     * when a target is deregistered. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The
+     * default is <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) can't be set independently. The value you set for both attributes must
+     * be the same.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing flows when a
+     * target is unhealthy. The possible values are <code>rebalance</code> and <code>no_rebalance</code>. The default is
+     * <code>no_rebalance</code>. The two attributes (<code>target_failover.on_deregistration</code> and
+     * <code>target_failover.on_unhealthy</code>) cannot be set independently. The value you set for both attributes
+     * must be the same.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param key
      *        The name of the attribute.</p>
@@ -880,17 +1018,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers
+     *        <code>lb_cookie</code> and <code>app_cookie</code> for Application Load Balancers.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>source_ip</code> for Network Load Balancers
+     *        <code>source_ip</code> for Network Load Balancers.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers
+     *        <code>source_ip_dest_ip</code> and <code>source_ip_dest_ip_proto</code> for Gateway Load Balancers.
      *        </p>
      *        </li>
      *        </ul>
@@ -978,6 +1116,29 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *        <p>
      *        <code>proxy_protocol_v2.enabled</code> - Indicates whether Proxy Protocol version 2 is enabled. The value
      *        is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following attributes are supported only by Gateway Load Balancers:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>target_failover.on_deregistration</code> - Indicates how the Gateway Load Balancer handles existing
+     *        flows when a target is deregistered. The possible values are <code>rebalance</code> and
+     *        <code>no_rebalance</code>. The default is <code>no_rebalance</code>. The two attributes (
+     *        <code>target_failover.on_deregistration</code> and <code>target_failover.on_unhealthy</code>) can't be set
+     *        independently. The value you set for both attributes must be the same.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>target_failover.on_unhealthy</code> - Indicates how the Gateway Load Balancer handles existing flows
+     *        when a target is unhealthy. The possible values are <code>rebalance</code> and <code>no_rebalance</code>.
+     *        The default is <code>no_rebalance</code>. The two attributes (
+     *        <code>target_failover.on_deregistration</code> and <code>target_failover.on_unhealthy</code>) cannot be
+     *        set independently. The value you set for both attributes must be the same.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
