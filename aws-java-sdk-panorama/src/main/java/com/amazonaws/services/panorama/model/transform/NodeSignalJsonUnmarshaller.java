@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model.transform;
+package com.amazonaws.services.panorama.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.connectwisdom.model.*;
+import com.amazonaws.services.panorama.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * PutFeedbackResult JSON Unmarshaller
+ * NodeSignal JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PutFeedbackResultJsonUnmarshaller implements Unmarshaller<PutFeedbackResult, JsonUnmarshallerContext> {
+public class NodeSignalJsonUnmarshaller implements Unmarshaller<NodeSignal, JsonUnmarshallerContext> {
 
-    public PutFeedbackResult unmarshall(JsonUnmarshallerContext context) throws Exception {
-        PutFeedbackResult putFeedbackResult = new PutFeedbackResult();
+    public NodeSignal unmarshall(JsonUnmarshallerContext context) throws Exception {
+        NodeSignal nodeSignal = new NodeSignal();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -40,7 +40,7 @@ public class PutFeedbackResultJsonUnmarshaller implements Unmarshaller<PutFeedba
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return putFeedbackResult;
+            return null;
         }
 
         while (true) {
@@ -48,25 +48,13 @@ public class PutFeedbackResultJsonUnmarshaller implements Unmarshaller<PutFeedba
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("assistantArn", targetDepth)) {
+                if (context.testExpression("NodeInstanceId", targetDepth)) {
                     context.nextToken();
-                    putFeedbackResult.setAssistantArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    nodeSignal.setNodeInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("assistantId", targetDepth)) {
+                if (context.testExpression("Signal", targetDepth)) {
                     context.nextToken();
-                    putFeedbackResult.setAssistantId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("feedback", targetDepth)) {
-                    context.nextToken();
-                    putFeedbackResult.setFeedback(FeedbackDataJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("targetId", targetDepth)) {
-                    context.nextToken();
-                    putFeedbackResult.setTargetId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("targetType", targetDepth)) {
-                    context.nextToken();
-                    putFeedbackResult.setTargetType(context.getUnmarshaller(String.class).unmarshall(context));
+                    nodeSignal.setSignal(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -77,14 +65,14 @@ public class PutFeedbackResultJsonUnmarshaller implements Unmarshaller<PutFeedba
             token = context.nextToken();
         }
 
-        return putFeedbackResult;
+        return nodeSignal;
     }
 
-    private static PutFeedbackResultJsonUnmarshaller instance;
+    private static NodeSignalJsonUnmarshaller instance;
 
-    public static PutFeedbackResultJsonUnmarshaller getInstance() {
+    public static NodeSignalJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new PutFeedbackResultJsonUnmarshaller();
+            instance = new NodeSignalJsonUnmarshaller();
         return instance;
     }
 }

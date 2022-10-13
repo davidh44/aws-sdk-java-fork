@@ -28,7 +28,8 @@ public enum DeviceAggregatedStatus {
     ONLINE("ONLINE"),
     OFFLINE("OFFLINE"),
     LEASE_EXPIRED("LEASE_EXPIRED"),
-    UPDATE_NEEDED("UPDATE_NEEDED");
+    UPDATE_NEEDED("UPDATE_NEEDED"),
+    REBOOTING("REBOOTING");
 
     private String value;
 

@@ -40,7 +40,7 @@ public class ListHostKeysRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String nextToken;
     /**
      * <p>
-     * Provide the ID of the server that contains the host keys that you want to view.
+     * The identifier of the server that contains the host keys that you want to view.
      * </p>
      */
     private String serverId;
@@ -133,11 +133,11 @@ public class ListHostKeysRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Provide the ID of the server that contains the host keys that you want to view.
+     * The identifier of the server that contains the host keys that you want to view.
      * </p>
      * 
      * @param serverId
-     *        Provide the ID of the server that contains the host keys that you want to view.
+     *        The identifier of the server that contains the host keys that you want to view.
      */
 
     public void setServerId(String serverId) {
@@ -146,10 +146,10 @@ public class ListHostKeysRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Provide the ID of the server that contains the host keys that you want to view.
+     * The identifier of the server that contains the host keys that you want to view.
      * </p>
      * 
-     * @return Provide the ID of the server that contains the host keys that you want to view.
+     * @return The identifier of the server that contains the host keys that you want to view.
      */
 
     public String getServerId() {
@@ -158,11 +158,11 @@ public class ListHostKeysRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Provide the ID of the server that contains the host keys that you want to view.
+     * The identifier of the server that contains the host keys that you want to view.
      * </p>
      * 
      * @param serverId
-     *        Provide the ID of the server that contains the host keys that you want to view.
+     *        The identifier of the server that contains the host keys that you want to view.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,7 +33,7 @@ public class DescribeAgreementRequest extends com.amazonaws.AmazonWebServiceRequ
     private String agreementId;
     /**
      * <p>
-     * The server ID that's associated with the agreement.
+     * The server identifier that's associated with the agreement.
      * </p>
      */
     private String serverId;
@@ -80,11 +80,11 @@ public class DescribeAgreementRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The server ID that's associated with the agreement.
+     * The server identifier that's associated with the agreement.
      * </p>
      * 
      * @param serverId
-     *        The server ID that's associated with the agreement.
+     *        The server identifier that's associated with the agreement.
      */
 
     public void setServerId(String serverId) {
@@ -93,10 +93,10 @@ public class DescribeAgreementRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The server ID that's associated with the agreement.
+     * The server identifier that's associated with the agreement.
      * </p>
      * 
-     * @return The server ID that's associated with the agreement.
+     * @return The server identifier that's associated with the agreement.
      */
 
     public String getServerId() {
@@ -105,11 +105,11 @@ public class DescribeAgreementRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The server ID that's associated with the agreement.
+     * The server identifier that's associated with the agreement.
      * </p>
      * 
      * @param serverId
-     *        The server ID that's associated with the agreement.
+     *        The server identifier that's associated with the agreement.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

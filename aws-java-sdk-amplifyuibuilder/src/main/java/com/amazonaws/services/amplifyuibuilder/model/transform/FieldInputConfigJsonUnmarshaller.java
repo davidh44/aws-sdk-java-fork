@@ -64,6 +64,10 @@ public class FieldInputConfigJsonUnmarshaller implements Unmarshaller<FieldInput
                     context.nextToken();
                     fieldInputConfig.setDescriptiveText(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("isArray", targetDepth)) {
+                    context.nextToken();
+                    fieldInputConfig.setIsArray(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("maxValue", targetDepth)) {
                     context.nextToken();
                     fieldInputConfig.setMaxValue(context.getUnmarshaller(Float.class).unmarshall(context));

@@ -20315,6 +20315,9 @@
       }, {
         "name" : "INVOLVED_RESOURCE",
         "value" : "INVOLVED_RESOURCE"
+      }, {
+        "name" : "TASK",
+        "value" : "TASK"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.ssmincidents.enum.ItemType",

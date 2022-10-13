@@ -47,6 +47,19 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String email;
+    /**
+     * <p>
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
+     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * </p>
+     */
+    private String secondaryEmail;
+    /**
+     * <p>
+     * The user's mobile number.
+     * </p>
+     */
+    private String mobile;
 
     /**
      * <p>
@@ -175,6 +188,95 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
+     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * </p>
+     * 
+     * @param secondaryEmail
+     *        The user's secondary email address. If you provide a secondary email, the user receives email
+     *        notifications -- other than password reset notifications -- to this email address instead of to their
+     *        primary email address.
+     */
+
+    public void setSecondaryEmail(String secondaryEmail) {
+        this.secondaryEmail = secondaryEmail;
+    }
+
+    /**
+     * <p>
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
+     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * </p>
+     * 
+     * @return The user's secondary email address. If you provide a secondary email, the user receives email
+     *         notifications -- other than password reset notifications -- to this email address instead of to their
+     *         primary email address.
+     */
+
+    public String getSecondaryEmail() {
+        return this.secondaryEmail;
+    }
+
+    /**
+     * <p>
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
+     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * </p>
+     * 
+     * @param secondaryEmail
+     *        The user's secondary email address. If you provide a secondary email, the user receives email
+     *        notifications -- other than password reset notifications -- to this email address instead of to their
+     *        primary email address.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserIdentityInfo withSecondaryEmail(String secondaryEmail) {
+        setSecondaryEmail(secondaryEmail);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The user's mobile number.
+     * </p>
+     * 
+     * @param mobile
+     *        The user's mobile number.
+     */
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    /**
+     * <p>
+     * The user's mobile number.
+     * </p>
+     * 
+     * @return The user's mobile number.
+     */
+
+    public String getMobile() {
+        return this.mobile;
+    }
+
+    /**
+     * <p>
+     * The user's mobile number.
+     * </p>
+     * 
+     * @param mobile
+     *        The user's mobile number.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserIdentityInfo withMobile(String mobile) {
+        setMobile(mobile);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -191,7 +293,11 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
         if (getLastName() != null)
             sb.append("LastName: ").append(getLastName()).append(",");
         if (getEmail() != null)
-            sb.append("Email: ").append(getEmail());
+            sb.append("Email: ").append(getEmail()).append(",");
+        if (getSecondaryEmail() != null)
+            sb.append("SecondaryEmail: ").append(getSecondaryEmail()).append(",");
+        if (getMobile() != null)
+            sb.append("Mobile: ").append(getMobile());
         sb.append("}");
         return sb.toString();
     }
@@ -218,6 +324,14 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getEmail() != null && other.getEmail().equals(this.getEmail()) == false)
             return false;
+        if (other.getSecondaryEmail() == null ^ this.getSecondaryEmail() == null)
+            return false;
+        if (other.getSecondaryEmail() != null && other.getSecondaryEmail().equals(this.getSecondaryEmail()) == false)
+            return false;
+        if (other.getMobile() == null ^ this.getMobile() == null)
+            return false;
+        if (other.getMobile() != null && other.getMobile().equals(this.getMobile()) == false)
+            return false;
         return true;
     }
 
@@ -229,6 +343,8 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getFirstName() == null) ? 0 : getFirstName().hashCode());
         hashCode = prime * hashCode + ((getLastName() == null) ? 0 : getLastName().hashCode());
         hashCode = prime * hashCode + ((getEmail() == null) ? 0 : getEmail().hashCode());
+        hashCode = prime * hashCode + ((getSecondaryEmail() == null) ? 0 : getSecondaryEmail().hashCode());
+        hashCode = prime * hashCode + ((getMobile() == null) ? 0 : getMobile().hashCode());
         return hashCode;
     }
 

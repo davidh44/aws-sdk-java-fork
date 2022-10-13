@@ -25,24 +25,24 @@ public class ImportHostKeyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns the server ID that contains the imported key.
+     * Returns the server identifier that contains the imported key.
      * </p>
      */
     private String serverId;
     /**
      * <p>
-     * Returns the host key ID for the imported key.
+     * Returns the host key identifier for the imported key.
      * </p>
      */
     private String hostKeyId;
 
     /**
      * <p>
-     * Returns the server ID that contains the imported key.
+     * Returns the server identifier that contains the imported key.
      * </p>
      * 
      * @param serverId
-     *        Returns the server ID that contains the imported key.
+     *        Returns the server identifier that contains the imported key.
      */
 
     public void setServerId(String serverId) {
@@ -51,10 +51,10 @@ public class ImportHostKeyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns the server ID that contains the imported key.
+     * Returns the server identifier that contains the imported key.
      * </p>
      * 
-     * @return Returns the server ID that contains the imported key.
+     * @return Returns the server identifier that contains the imported key.
      */
 
     public String getServerId() {
@@ -63,11 +63,11 @@ public class ImportHostKeyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns the server ID that contains the imported key.
+     * Returns the server identifier that contains the imported key.
      * </p>
      * 
      * @param serverId
-     *        Returns the server ID that contains the imported key.
+     *        Returns the server identifier that contains the imported key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class ImportHostKeyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns the host key ID for the imported key.
+     * Returns the host key identifier for the imported key.
      * </p>
      * 
      * @param hostKeyId
-     *        Returns the host key ID for the imported key.
+     *        Returns the host key identifier for the imported key.
      */
 
     public void setHostKeyId(String hostKeyId) {
@@ -91,10 +91,10 @@ public class ImportHostKeyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns the host key ID for the imported key.
+     * Returns the host key identifier for the imported key.
      * </p>
      * 
-     * @return Returns the host key ID for the imported key.
+     * @return Returns the host key identifier for the imported key.
      */
 
     public String getHostKeyId() {
@@ -103,11 +103,11 @@ public class ImportHostKeyResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns the host key ID for the imported key.
+     * Returns the host key identifier for the imported key.
      * </p>
      * 
      * @param hostKeyId
-     *        Returns the host key ID for the imported key.
+     *        Returns the host key identifier for the imported key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

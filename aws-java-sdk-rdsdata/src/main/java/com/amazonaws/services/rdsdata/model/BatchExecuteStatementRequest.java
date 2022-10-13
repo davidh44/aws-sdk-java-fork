@@ -62,6 +62,11 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The name of the database schema.
      * </p>
+     * <note>
+     * <p>
+     * Currently, the <code>schema</code> parameter isn't supported.
+     * </p>
+     * </note>
      */
     private String schema;
     /**
@@ -299,9 +304,17 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The name of the database schema.
      * </p>
+     * <note>
+     * <p>
+     * Currently, the <code>schema</code> parameter isn't supported.
+     * </p>
+     * </note>
      * 
      * @param schema
-     *        The name of the database schema.
+     *        The name of the database schema.</p> <note>
+     *        <p>
+     *        Currently, the <code>schema</code> parameter isn't supported.
+     *        </p>
      */
 
     public void setSchema(String schema) {
@@ -312,8 +325,16 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The name of the database schema.
      * </p>
+     * <note>
+     * <p>
+     * Currently, the <code>schema</code> parameter isn't supported.
+     * </p>
+     * </note>
      * 
-     * @return The name of the database schema.
+     * @return The name of the database schema.</p> <note>
+     *         <p>
+     *         Currently, the <code>schema</code> parameter isn't supported.
+     *         </p>
      */
 
     public String getSchema() {
@@ -324,9 +345,17 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The name of the database schema.
      * </p>
+     * <note>
+     * <p>
+     * Currently, the <code>schema</code> parameter isn't supported.
+     * </p>
+     * </note>
      * 
      * @param schema
-     *        The name of the database schema.
+     *        The name of the database schema.</p> <note>
+     *        <p>
+     *        Currently, the <code>schema</code> parameter isn't supported.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

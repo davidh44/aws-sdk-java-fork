@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model.transform;
+package com.amazonaws.services.directory.model.transform;
 
 import javax.annotation.Generated;
 
@@ -18,7 +18,7 @@ import com.amazonaws.SdkClientException;
 import com.amazonaws.Request;
 
 import com.amazonaws.http.HttpMethodName;
-import com.amazonaws.services.connectwisdom.model.*;
+import com.amazonaws.services.directory.model.*;
 import com.amazonaws.transform.Marshaller;
 
 import com.amazonaws.protocol.*;
@@ -26,34 +26,34 @@ import com.amazonaws.protocol.Protocol;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * PutFeedbackRequest Marshaller
+ * UpdateDirectorySetupRequest Marshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class PutFeedbackRequestProtocolMarshaller implements Marshaller<Request<PutFeedbackRequest>, PutFeedbackRequest> {
+public class UpdateDirectorySetupRequestProtocolMarshaller implements Marshaller<Request<UpdateDirectorySetupRequest>, UpdateDirectorySetupRequest> {
 
-    private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
-            .requestUri("/assistants/{assistantId}/feedback").httpMethodName(HttpMethodName.PUT).hasExplicitPayloadMember(false).hasPayloadMembers(true)
-            .serviceName("AmazonConnectWisdom").build();
+    private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.AWS_JSON).requestUri("/")
+            .httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false).hasPayloadMembers(true)
+            .operationIdentifier("DirectoryService_20150416.UpdateDirectorySetup").serviceName("AWSDirectoryService").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 
-    public PutFeedbackRequestProtocolMarshaller(com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory) {
+    public UpdateDirectorySetupRequestProtocolMarshaller(com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory) {
         this.protocolFactory = protocolFactory;
     }
 
-    public Request<PutFeedbackRequest> marshall(PutFeedbackRequest putFeedbackRequest) {
+    public Request<UpdateDirectorySetupRequest> marshall(UpdateDirectorySetupRequest updateDirectorySetupRequest) {
 
-        if (putFeedbackRequest == null) {
+        if (updateDirectorySetupRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            final ProtocolRequestMarshaller<PutFeedbackRequest> protocolMarshaller = protocolFactory.createProtocolMarshaller(SDK_OPERATION_BINDING,
-                    putFeedbackRequest);
+            final ProtocolRequestMarshaller<UpdateDirectorySetupRequest> protocolMarshaller = protocolFactory.createProtocolMarshaller(SDK_OPERATION_BINDING,
+                    updateDirectorySetupRequest);
 
             protocolMarshaller.startMarshalling();
-            PutFeedbackRequestMarshaller.getInstance().marshall(putFeedbackRequest, protocolMarshaller);
+            UpdateDirectorySetupRequestMarshaller.getInstance().marshall(updateDirectorySetupRequest, protocolMarshaller);
             return protocolMarshaller.finishMarshalling();
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

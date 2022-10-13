@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model;
+package com.amazonaws.services.panorama.model;
 
 import javax.annotation.Generated;
 
@@ -18,14 +18,15 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum Relevance {
+public enum DesiredState {
 
-    HELPFUL("HELPFUL"),
-    NOT_HELPFUL("NOT_HELPFUL");
+    RUNNING("RUNNING"),
+    STOPPED("STOPPED"),
+    REMOVED("REMOVED");
 
     private String value;
 
-    private Relevance(String value) {
+    private DesiredState(String value) {
         this.value = value;
     }
 
@@ -39,17 +40,17 @@ public enum Relevance {
      *
      * @param value
      *        real value
-     * @return Relevance corresponding to the value
+     * @return DesiredState corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static Relevance fromValue(String value) {
+    public static DesiredState fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (Relevance enumEntry : Relevance.values()) {
+        for (DesiredState enumEntry : DesiredState.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

@@ -1220,7 +1220,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * @throws InvalidTargetMapsException
      *         TargetMap parameter isn't valid.
      * @throws InvalidTagException
-     *         The tag key or value isn't valid.
+     *         The specified tag key or value isn't valid.
      * @sample AWSSimpleSystemsManagement.CreateAssociation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateAssociation" target="_top">AWS API
      *      Documentation</a>
@@ -8011,9 +8011,15 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * @throws InvalidPermissionTypeException
      *         The permission type isn't supported. <i>Share</i> is the only supported permission type.
      * @throws DocumentPermissionLimitException
-     *         The document can't be shared with more Amazon Web Services user accounts. You can share a document with a
-     *         maximum of 20 accounts. You can publicly share up to five documents. If you need to increase this limit,
-     *         contact Amazon Web Services Support.
+     *         The document can't be shared with more Amazon Web Services user accounts. You can specify a maximum of 20
+     *         accounts per API operation to share a private document.</p>
+     *         <p>
+     *         By default, you can share a private document with a maximum of 1,000 accounts and publicly share up to
+     *         five documents.
+     *         </p>
+     *         <p>
+     *         If you need to increase the quota for privately or publicly shared Systems Manager documents, contact
+     *         Amazon Web Services Support.
      * @throws DocumentLimitExceededException
      *         You can have at most 500 active SSM documents.
      * @sample AWSSimpleSystemsManagement.ModifyDocumentPermission

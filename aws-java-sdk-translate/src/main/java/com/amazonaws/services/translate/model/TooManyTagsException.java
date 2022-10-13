@@ -15,7 +15,9 @@ package com.amazonaws.services.translate.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * You have added too many tags to this resource. The maximum is 50 tags.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TooManyTagsException extends com.amazonaws.services.translate.model.AmazonTranslateException {

@@ -314,19 +314,6 @@ public class AbstractAmazonConnectWisdomAsync extends AbstractAmazonConnectWisdo
     }
 
     @Override
-    public java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest request) {
-
-        return putFeedbackAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest request,
-            com.amazonaws.handlers.AsyncHandler<PutFeedbackRequest, PutFeedbackResult> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest request) {
 
         return queryAssistantAsync(request, null);

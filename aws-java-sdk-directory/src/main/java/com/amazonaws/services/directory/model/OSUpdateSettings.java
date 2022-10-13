@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model;
+package com.amazonaws.services.directory.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
@@ -19,78 +19,78 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The feedback to submit to Wisdom.
+ * OS version that the directory needs to be updated to.
  * </p>
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/FeedbackData" target="_top">AWS API
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/OSUpdateSettings" target="_top">AWS API
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class FeedbackData implements Serializable, Cloneable, StructuredPojo {
+public class OSUpdateSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The relevance of the target this feedback is for.
+     * OS version that the directory needs to be updated to.
      * </p>
      */
-    private String relevance;
+    private String oSVersion;
 
     /**
      * <p>
-     * The relevance of the target this feedback is for.
+     * OS version that the directory needs to be updated to.
      * </p>
      * 
-     * @param relevance
-     *        The relevance of the target this feedback is for.
-     * @see Relevance
+     * @param oSVersion
+     *        OS version that the directory needs to be updated to.
+     * @see OSVersion
      */
 
-    public void setRelevance(String relevance) {
-        this.relevance = relevance;
+    public void setOSVersion(String oSVersion) {
+        this.oSVersion = oSVersion;
     }
 
     /**
      * <p>
-     * The relevance of the target this feedback is for.
+     * OS version that the directory needs to be updated to.
      * </p>
      * 
-     * @return The relevance of the target this feedback is for.
-     * @see Relevance
+     * @return OS version that the directory needs to be updated to.
+     * @see OSVersion
      */
 
-    public String getRelevance() {
-        return this.relevance;
+    public String getOSVersion() {
+        return this.oSVersion;
     }
 
     /**
      * <p>
-     * The relevance of the target this feedback is for.
+     * OS version that the directory needs to be updated to.
      * </p>
      * 
-     * @param relevance
-     *        The relevance of the target this feedback is for.
+     * @param oSVersion
+     *        OS version that the directory needs to be updated to.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see Relevance
+     * @see OSVersion
      */
 
-    public FeedbackData withRelevance(String relevance) {
-        setRelevance(relevance);
+    public OSUpdateSettings withOSVersion(String oSVersion) {
+        setOSVersion(oSVersion);
         return this;
     }
 
     /**
      * <p>
-     * The relevance of the target this feedback is for.
+     * OS version that the directory needs to be updated to.
      * </p>
      * 
-     * @param relevance
-     *        The relevance of the target this feedback is for.
+     * @param oSVersion
+     *        OS version that the directory needs to be updated to.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see Relevance
+     * @see OSVersion
      */
 
-    public FeedbackData withRelevance(Relevance relevance) {
-        this.relevance = relevance.toString();
+    public OSUpdateSettings withOSVersion(OSVersion oSVersion) {
+        this.oSVersion = oSVersion.toString();
         return this;
     }
 
@@ -106,8 +106,8 @@ public class FeedbackData implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getRelevance() != null)
-            sb.append("Relevance: ").append(getRelevance());
+        if (getOSVersion() != null)
+            sb.append("OSVersion: ").append(getOSVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -119,12 +119,12 @@ public class FeedbackData implements Serializable, Cloneable, StructuredPojo {
         if (obj == null)
             return false;
 
-        if (obj instanceof FeedbackData == false)
+        if (obj instanceof OSUpdateSettings == false)
             return false;
-        FeedbackData other = (FeedbackData) obj;
-        if (other.getRelevance() == null ^ this.getRelevance() == null)
+        OSUpdateSettings other = (OSUpdateSettings) obj;
+        if (other.getOSVersion() == null ^ this.getOSVersion() == null)
             return false;
-        if (other.getRelevance() != null && other.getRelevance().equals(this.getRelevance()) == false)
+        if (other.getOSVersion() != null && other.getOSVersion().equals(this.getOSVersion()) == false)
             return false;
         return true;
     }
@@ -134,14 +134,14 @@ public class FeedbackData implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getRelevance() == null) ? 0 : getRelevance().hashCode());
+        hashCode = prime * hashCode + ((getOSVersion() == null) ? 0 : getOSVersion().hashCode());
         return hashCode;
     }
 
     @Override
-    public FeedbackData clone() {
+    public OSUpdateSettings clone() {
         try {
-            return (FeedbackData) super.clone();
+            return (OSUpdateSettings) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
         }
@@ -150,6 +150,6 @@ public class FeedbackData implements Serializable, Cloneable, StructuredPojo {
     @com.amazonaws.annotation.SdkInternalApi
     @Override
     public void marshall(ProtocolMarshaller protocolMarshaller) {
-        com.amazonaws.services.connectwisdom.model.transform.FeedbackDataMarshaller.getInstance().marshall(this, protocolMarshaller);
+        com.amazonaws.services.directory.model.transform.OSUpdateSettingsMarshaller.getInstance().marshall(this, protocolMarshaller);
     }
 }

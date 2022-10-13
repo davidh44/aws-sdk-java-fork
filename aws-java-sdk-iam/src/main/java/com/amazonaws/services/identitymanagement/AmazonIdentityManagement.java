@@ -1108,8 +1108,9 @@ public interface AmazonIdentityManagement {
 
     /**
      * <p>
-     * Deletes the password for the specified IAM user, which terminates the user's ability to access Amazon Web
-     * Services services through the Amazon Web Services Management Console.
+     * Deletes the password for the specified IAM user, For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_admin-change-user.html">Managing
+     * passwords for IAM users</a>.
      * </p>
      * <p>
      * You can use the CLI, the Amazon Web Services API, or the <b>Users</b> page in the IAM console to delete a

@@ -52,6 +52,10 @@ public class LatestDeviceJobJsonUnmarshaller implements Unmarshaller<LatestDevic
                     context.nextToken();
                     latestDeviceJob.setImageVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobType", targetDepth)) {
+                    context.nextToken();
+                    latestDeviceJob.setJobType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     latestDeviceJob.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

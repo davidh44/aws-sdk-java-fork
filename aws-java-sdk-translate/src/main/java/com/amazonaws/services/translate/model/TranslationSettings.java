@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Settings that configure the translation output.
+ * Optional settings that configure the translation output. Use these settings for real time translations and
+ * asynchronous translation jobs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/TranslationSettings" target="_top">AWS API
@@ -30,20 +31,20 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * You can optionally specify the desired level of formality for real-time translations to supported target
-     * languages. The formality setting controls the level of formal language usage (also known as <a
+     * You can optionally specify the desired level of formality for translations to supported target languages. The
+     * formality setting controls the level of formal language usage (also known as <a
      * href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can
      * set the value to informal or formal. If you don't specify a value for formality, or if the target language
      * doesn't support formality, the translation will ignore the formality setting.
      * </p>
      * <p>
-     * Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     * <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     * If you specify multiple target languages for the job, translate ignores the formality setting for any unsupported
+     * target language.
      * </p>
      * <p>
-     * For target languages that support formality, see <a
-     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the
-     * Amazon Translate Developer Guide</a>.
+     * For a list of target languages that support formality, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     * Formality</a> in the Amazon Translate Developer Guide.
      * </p>
      */
     private String formality;
@@ -58,44 +59,50 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity
-     * detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and
-     * Language Codes in the Amazon Translate Developer Guide</a>.
+     * detection, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     * profanity</a> in the Amazon Translate Developer Guide.
+     * </p>
+     * <p>
+     * If you specify multiple target languages for the job, all the target languages must support profanity masking. If
+     * any of the target languages don't support profanity masking, the translation job won't mask profanity for any
+     * target language.
      * </p>
      */
     private String profanity;
 
     /**
      * <p>
-     * You can optionally specify the desired level of formality for real-time translations to supported target
-     * languages. The formality setting controls the level of formal language usage (also known as <a
+     * You can optionally specify the desired level of formality for translations to supported target languages. The
+     * formality setting controls the level of formal language usage (also known as <a
      * href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can
      * set the value to informal or formal. If you don't specify a value for formality, or if the target language
      * doesn't support formality, the translation will ignore the formality setting.
      * </p>
      * <p>
-     * Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     * <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     * If you specify multiple target languages for the job, translate ignores the formality setting for any unsupported
+     * target language.
      * </p>
      * <p>
-     * For target languages that support formality, see <a
-     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the
-     * Amazon Translate Developer Guide</a>.
+     * For a list of target languages that support formality, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     * Formality</a> in the Amazon Translate Developer Guide.
      * </p>
      * 
      * @param formality
-     *        You can optionally specify the desired level of formality for real-time translations to supported target
-     *        languages. The formality setting controls the level of formal language usage (also known as <a
+     *        You can optionally specify the desired level of formality for translations to supported target languages.
+     *        The formality setting controls the level of formal language usage (also known as <a
      *        href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output.
      *        You can set the value to informal or formal. If you don't specify a value for formality, or if the target
      *        language doesn't support formality, the translation will ignore the formality setting.</p>
      *        <p>
-     *        Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     *        <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     *        If you specify multiple target languages for the job, translate ignores the formality setting for any
+     *        unsupported target language.
      *        </p>
      *        <p>
-     *        For target languages that support formality, see <a
-     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes
-     *        in the Amazon Translate Developer Guide</a>.
+     *        For a list of target languages that support formality, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     *        Formality</a> in the Amazon Translate Developer Guide.
      * @see Formality
      */
 
@@ -105,35 +112,35 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * You can optionally specify the desired level of formality for real-time translations to supported target
-     * languages. The formality setting controls the level of formal language usage (also known as <a
+     * You can optionally specify the desired level of formality for translations to supported target languages. The
+     * formality setting controls the level of formal language usage (also known as <a
      * href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can
      * set the value to informal or formal. If you don't specify a value for formality, or if the target language
      * doesn't support formality, the translation will ignore the formality setting.
      * </p>
      * <p>
-     * Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     * <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     * If you specify multiple target languages for the job, translate ignores the formality setting for any unsupported
+     * target language.
      * </p>
      * <p>
-     * For target languages that support formality, see <a
-     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the
-     * Amazon Translate Developer Guide</a>.
+     * For a list of target languages that support formality, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     * Formality</a> in the Amazon Translate Developer Guide.
      * </p>
      * 
-     * @return You can optionally specify the desired level of formality for real-time translations to supported target
-     *         languages. The formality setting controls the level of formal language usage (also known as <a
+     * @return You can optionally specify the desired level of formality for translations to supported target languages.
+     *         The formality setting controls the level of formal language usage (also known as <a
      *         href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output.
      *         You can set the value to informal or formal. If you don't specify a value for formality, or if the target
      *         language doesn't support formality, the translation will ignore the formality setting.</p>
      *         <p>
-     *         Note that asynchronous translation jobs don't support formality. If you provide a value for formality,
-     *         the <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     *         If you specify multiple target languages for the job, translate ignores the formality setting for any
+     *         unsupported target language.
      *         </p>
      *         <p>
-     *         For target languages that support formality, see <a
-     *         href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language
-     *         Codes in the Amazon Translate Developer Guide</a>.
+     *         For a list of target languages that support formality, see <a
+     *         href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     *         Formality</a> in the Amazon Translate Developer Guide.
      * @see Formality
      */
 
@@ -143,36 +150,36 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * You can optionally specify the desired level of formality for real-time translations to supported target
-     * languages. The formality setting controls the level of formal language usage (also known as <a
+     * You can optionally specify the desired level of formality for translations to supported target languages. The
+     * formality setting controls the level of formal language usage (also known as <a
      * href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can
      * set the value to informal or formal. If you don't specify a value for formality, or if the target language
      * doesn't support formality, the translation will ignore the formality setting.
      * </p>
      * <p>
-     * Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     * <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     * If you specify multiple target languages for the job, translate ignores the formality setting for any unsupported
+     * target language.
      * </p>
      * <p>
-     * For target languages that support formality, see <a
-     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the
-     * Amazon Translate Developer Guide</a>.
+     * For a list of target languages that support formality, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     * Formality</a> in the Amazon Translate Developer Guide.
      * </p>
      * 
      * @param formality
-     *        You can optionally specify the desired level of formality for real-time translations to supported target
-     *        languages. The formality setting controls the level of formal language usage (also known as <a
+     *        You can optionally specify the desired level of formality for translations to supported target languages.
+     *        The formality setting controls the level of formal language usage (also known as <a
      *        href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output.
      *        You can set the value to informal or formal. If you don't specify a value for formality, or if the target
      *        language doesn't support formality, the translation will ignore the formality setting.</p>
      *        <p>
-     *        Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     *        <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     *        If you specify multiple target languages for the job, translate ignores the formality setting for any
+     *        unsupported target language.
      *        </p>
      *        <p>
-     *        For target languages that support formality, see <a
-     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes
-     *        in the Amazon Translate Developer Guide</a>.
+     *        For a list of target languages that support formality, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     *        Formality</a> in the Amazon Translate Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Formality
      */
@@ -184,36 +191,36 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * You can optionally specify the desired level of formality for real-time translations to supported target
-     * languages. The formality setting controls the level of formal language usage (also known as <a
+     * You can optionally specify the desired level of formality for translations to supported target languages. The
+     * formality setting controls the level of formal language usage (also known as <a
      * href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output. You can
      * set the value to informal or formal. If you don't specify a value for formality, or if the target language
      * doesn't support formality, the translation will ignore the formality setting.
      * </p>
      * <p>
-     * Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     * <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     * If you specify multiple target languages for the job, translate ignores the formality setting for any unsupported
+     * target language.
      * </p>
      * <p>
-     * For target languages that support formality, see <a
-     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes in the
-     * Amazon Translate Developer Guide</a>.
+     * For a list of target languages that support formality, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     * Formality</a> in the Amazon Translate Developer Guide.
      * </p>
      * 
      * @param formality
-     *        You can optionally specify the desired level of formality for real-time translations to supported target
-     *        languages. The formality setting controls the level of formal language usage (also known as <a
+     *        You can optionally specify the desired level of formality for translations to supported target languages.
+     *        The formality setting controls the level of formal language usage (also known as <a
      *        href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)">register</a>) in the translation output.
      *        You can set the value to informal or formal. If you don't specify a value for formality, or if the target
      *        language doesn't support formality, the translation will ignore the formality setting.</p>
      *        <p>
-     *        Note that asynchronous translation jobs don't support formality. If you provide a value for formality, the
-     *        <code>StartTextTranslationJob</code> API throws an exception (InvalidRequestException).
+     *        If you specify multiple target languages for the job, translate ignores the formality setting for any
+     *        unsupported target language.
      *        </p>
      *        <p>
-     *        For target languages that support formality, see <a
-     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and Language Codes
-     *        in the Amazon Translate Developer Guide</a>.
+     *        For a list of target languages that support formality, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-formality.html">Setting
+     *        Formality</a> in the Amazon Translate Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Formality
      */
@@ -234,8 +241,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity
-     * detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and
-     * Language Codes in the Amazon Translate Developer Guide</a>.
+     * detection, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     * profanity</a> in the Amazon Translate Developer Guide.
+     * </p>
+     * <p>
+     * If you specify multiple target languages for the job, all the target languages must support profanity masking. If
+     * any of the target languages don't support profanity masking, the translation job won't mask profanity for any
+     * target language.
      * </p>
      * 
      * @param profanity
@@ -247,8 +260,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support
-     *        profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported
-     *        Languages and Language Codes in the Amazon Translate Developer Guide</a>.
+     *        profanity detection, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     *        profanity</a> in the Amazon Translate Developer Guide.
+     *        </p>
+     *        <p>
+     *        If you specify multiple target languages for the job, all the target languages must support profanity
+     *        masking. If any of the target languages don't support profanity masking, the translation job won't mask
+     *        profanity for any target language.
      * @see Profanity
      */
 
@@ -267,8 +286,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity
-     * detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and
-     * Language Codes in the Amazon Translate Developer Guide</a>.
+     * detection, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     * profanity</a> in the Amazon Translate Developer Guide.
+     * </p>
+     * <p>
+     * If you specify multiple target languages for the job, all the target languages must support profanity masking. If
+     * any of the target languages don't support profanity masking, the translation job won't mask profanity for any
+     * target language.
      * </p>
      * 
      * @return Enable the profanity setting if you want Amazon Translate to mask profane words and phrases in your
@@ -280,8 +305,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      *         </p>
      *         <p>
      *         Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support
-     *         profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported
-     *         Languages and Language Codes in the Amazon Translate Developer Guide</a>.
+     *         profanity detection, see <a
+     *         href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     *         profanity</a> in the Amazon Translate Developer Guide.
+     *         </p>
+     *         <p>
+     *         If you specify multiple target languages for the job, all the target languages must support profanity
+     *         masking. If any of the target languages don't support profanity masking, the translation job won't mask
+     *         profanity for any target language.
      * @see Profanity
      */
 
@@ -300,8 +331,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity
-     * detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and
-     * Language Codes in the Amazon Translate Developer Guide</a>.
+     * detection, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     * profanity</a> in the Amazon Translate Developer Guide.
+     * </p>
+     * <p>
+     * If you specify multiple target languages for the job, all the target languages must support profanity masking. If
+     * any of the target languages don't support profanity masking, the translation job won't mask profanity for any
+     * target language.
      * </p>
      * 
      * @param profanity
@@ -313,8 +350,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support
-     *        profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported
-     *        Languages and Language Codes in the Amazon Translate Developer Guide</a>.
+     *        profanity detection, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     *        profanity</a> in the Amazon Translate Developer Guide.
+     *        </p>
+     *        <p>
+     *        If you specify multiple target languages for the job, all the target languages must support profanity
+     *        masking. If any of the target languages don't support profanity masking, the translation job won't mask
+     *        profanity for any target language.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Profanity
      */
@@ -335,8 +378,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support profanity
-     * detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported Languages and
-     * Language Codes in the Amazon Translate Developer Guide</a>.
+     * detection, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     * profanity</a> in the Amazon Translate Developer Guide.
+     * </p>
+     * <p>
+     * If you specify multiple target languages for the job, all the target languages must support profanity masking. If
+     * any of the target languages don't support profanity masking, the translation job won't mask profanity for any
+     * target language.
      * </p>
      * 
      * @param profanity
@@ -348,8 +397,14 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        Amazon Translate doesn't detect profanity in all of its supported languages. For languages that support
-     *        profanity detection, see <a href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">Supported
-     *        Languages and Language Codes in the Amazon Translate Developer Guide</a>.
+     *        profanity detection, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/customizing-translations-profanity.html">Masking
+     *        profanity</a> in the Amazon Translate Developer Guide.
+     *        </p>
+     *        <p>
+     *        If you specify multiple target languages for the job, all the target languages must support profanity
+     *        masking. If any of the target languages don't support profanity masking, the translation job won't mask
+     *        profanity for any target language.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Profanity
      */

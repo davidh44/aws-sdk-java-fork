@@ -54,7 +54,7 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * The landing directory (folder) for files transferred by using the AS2 protocol.
      * </p>
      * <p>
-     * A <code>BaseDirectory</code> example is <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     * A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      * </p>
      */
     private String baseDirectory;
@@ -252,14 +252,13 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * The landing directory (folder) for files transferred by using the AS2 protocol.
      * </p>
      * <p>
-     * A <code>BaseDirectory</code> example is <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     * A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      * </p>
      * 
      * @param baseDirectory
      *        The landing directory (folder) for files transferred by using the AS2 protocol.</p>
      *        <p>
-     *        A <code>BaseDirectory</code> example is
-     *        <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     *        A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      */
 
     public void setBaseDirectory(String baseDirectory) {
@@ -271,13 +270,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * The landing directory (folder) for files transferred by using the AS2 protocol.
      * </p>
      * <p>
-     * A <code>BaseDirectory</code> example is <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     * A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      * </p>
      * 
      * @return The landing directory (folder) for files transferred by using the AS2 protocol.</p>
      *         <p>
-     *         A <code>BaseDirectory</code> example is
-     *         <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     *         A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      */
 
     public String getBaseDirectory() {
@@ -289,14 +287,13 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * The landing directory (folder) for files transferred by using the AS2 protocol.
      * </p>
      * <p>
-     * A <code>BaseDirectory</code> example is <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     * A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      * </p>
      * 
      * @param baseDirectory
      *        The landing directory (folder) for files transferred by using the AS2 protocol.</p>
      *        <p>
-     *        A <code>BaseDirectory</code> example is
-     *        <code>/<i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i> </code>.
+     *        A <code>BaseDirectory</code> example is <i>DOC-EXAMPLE-BUCKET</i>/<i>home</i>/<i>mydirectory</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

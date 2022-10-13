@@ -27,18 +27,18 @@ public class DeleteCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the certificate object that you are deleting.
+     * The identifier of the certificate object that you are deleting.
      * </p>
      */
     private String certificateId;
 
     /**
      * <p>
-     * The ID of the certificate object that you are deleting.
+     * The identifier of the certificate object that you are deleting.
      * </p>
      * 
      * @param certificateId
-     *        The ID of the certificate object that you are deleting.
+     *        The identifier of the certificate object that you are deleting.
      */
 
     public void setCertificateId(String certificateId) {
@@ -47,10 +47,10 @@ public class DeleteCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the certificate object that you are deleting.
+     * The identifier of the certificate object that you are deleting.
      * </p>
      * 
-     * @return The ID of the certificate object that you are deleting.
+     * @return The identifier of the certificate object that you are deleting.
      */
 
     public String getCertificateId() {
@@ -59,11 +59,11 @@ public class DeleteCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the certificate object that you are deleting.
+     * The identifier of the certificate object that you are deleting.
      * </p>
      * 
      * @param certificateId
-     *        The ID of the certificate object that you are deleting.
+     *        The identifier of the certificate object that you are deleting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

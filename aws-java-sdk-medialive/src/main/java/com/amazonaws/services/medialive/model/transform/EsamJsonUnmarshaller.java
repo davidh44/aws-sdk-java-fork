@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model.transform;
+package com.amazonaws.services.medialive.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.connectwisdom.model.*;
+import com.amazonaws.services.medialive.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * FeedbackData JSON Unmarshaller
+ * Esam JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class FeedbackDataJsonUnmarshaller implements Unmarshaller<FeedbackData, JsonUnmarshallerContext> {
+public class EsamJsonUnmarshaller implements Unmarshaller<Esam, JsonUnmarshallerContext> {
 
-    public FeedbackData unmarshall(JsonUnmarshallerContext context) throws Exception {
-        FeedbackData feedbackData = new FeedbackData();
+    public Esam unmarshall(JsonUnmarshallerContext context) throws Exception {
+        Esam esam = new Esam();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -48,9 +48,29 @@ public class FeedbackDataJsonUnmarshaller implements Unmarshaller<FeedbackData, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("relevance", targetDepth)) {
+                if (context.testExpression("acquisitionPointId", targetDepth)) {
                     context.nextToken();
-                    feedbackData.setRelevance(context.getUnmarshaller(String.class).unmarshall(context));
+                    esam.setAcquisitionPointId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("adAvailOffset", targetDepth)) {
+                    context.nextToken();
+                    esam.setAdAvailOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("passwordParam", targetDepth)) {
+                    context.nextToken();
+                    esam.setPasswordParam(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("poisEndpoint", targetDepth)) {
+                    context.nextToken();
+                    esam.setPoisEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("username", targetDepth)) {
+                    context.nextToken();
+                    esam.setUsername(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("zoneIdentity", targetDepth)) {
+                    context.nextToken();
+                    esam.setZoneIdentity(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -61,14 +81,14 @@ public class FeedbackDataJsonUnmarshaller implements Unmarshaller<FeedbackData, 
             token = context.nextToken();
         }
 
-        return feedbackData;
+        return esam;
     }
 
-    private static FeedbackDataJsonUnmarshaller instance;
+    private static EsamJsonUnmarshaller instance;
 
-    public static FeedbackDataJsonUnmarshaller getInstance() {
+    public static EsamJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new FeedbackDataJsonUnmarshaller();
+            instance = new EsamJsonUnmarshaller();
         return instance;
     }
 }

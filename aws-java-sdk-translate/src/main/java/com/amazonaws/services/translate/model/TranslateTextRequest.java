@@ -42,7 +42,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The language code for the language of the source text. The language must be a language supported by Amazon
-     * Translate. For a list of language codes, see <a>what-is-languages</a>.
+     * Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * <p>
      * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
@@ -204,7 +205,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The language code for the language of the source text. The language must be a language supported by Amazon
-     * Translate. For a list of language codes, see <a>what-is-languages</a>.
+     * Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * <p>
      * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
@@ -221,7 +223,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param sourceLanguageCode
      *        The language code for the language of the source text. The language must be a language supported by Amazon
-     *        Translate. For a list of language codes, see <a>what-is-languages</a>.</p>
+     *        Translate. For a list of language codes, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.</p>
      *        <p>
      *        To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in
      *        the <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon Translate will call <a
@@ -243,7 +246,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The language code for the language of the source text. The language must be a language supported by Amazon
-     * Translate. For a list of language codes, see <a>what-is-languages</a>.
+     * Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * <p>
      * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
@@ -259,7 +263,9 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </note>
      * 
      * @return The language code for the language of the source text. The language must be a language supported by
-     *         Amazon Translate. For a list of language codes, see <a>what-is-languages</a>.</p>
+     *         Amazon Translate. For a list of language codes, see <a
+     *         href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
+     *         languages</a>.</p>
      *         <p>
      *         To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in
      *         the <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon Translate will call
@@ -281,7 +287,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The language code for the language of the source text. The language must be a language supported by Amazon
-     * Translate. For a list of language codes, see <a>what-is-languages</a>.
+     * Translate. For a list of language codes, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * <p>
      * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
@@ -298,7 +305,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param sourceLanguageCode
      *        The language code for the language of the source text. The language must be a language supported by Amazon
-     *        Translate. For a list of language codes, see <a>what-is-languages</a>.</p>
+     *        Translate. For a list of language codes, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.</p>
      *        <p>
      *        To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in
      *        the <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon Translate will call <a

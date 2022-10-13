@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model;
+package com.amazonaws.services.directory.model;
 
 import javax.annotation.Generated;
 
@@ -18,14 +18,13 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum TargetType {
+public enum UpdateType {
 
-    RECOMMENDATION("RECOMMENDATION"),
-    RESULT("RESULT");
+    OS("OS");
 
     private String value;
 
-    private TargetType(String value) {
+    private UpdateType(String value) {
         this.value = value;
     }
 
@@ -39,17 +38,17 @@ public enum TargetType {
      *
      * @param value
      *        real value
-     * @return TargetType corresponding to the value
+     * @return UpdateType corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static TargetType fromValue(String value) {
+    public static UpdateType fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (TargetType enumEntry : TargetType.values()) {
+        for (UpdateType enumEntry : UpdateType.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

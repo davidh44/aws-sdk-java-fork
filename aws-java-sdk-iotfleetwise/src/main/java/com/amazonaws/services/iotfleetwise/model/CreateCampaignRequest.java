@@ -141,6 +141,11 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * (Optional) A list of vehicle attributes to associate with a campaign.
      * </p>
      * <p>
+     * Enrich the data with specified vehicle attributes. For example, add <code>make</code> and <code>model</code> to
+     * the campaign, and Amazon Web Services IoT FleetWise will associate the data with those attributes as dimensions
+     * in Amazon Timestream. You can then query the data against <code>make</code> and <code>model</code>.
+     * </p>
+     * <p>
      * Default: An empty array
      * </p>
      */
@@ -972,10 +977,21 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * (Optional) A list of vehicle attributes to associate with a campaign.
      * </p>
      * <p>
+     * Enrich the data with specified vehicle attributes. For example, add <code>make</code> and <code>model</code> to
+     * the campaign, and Amazon Web Services IoT FleetWise will associate the data with those attributes as dimensions
+     * in Amazon Timestream. You can then query the data against <code>make</code> and <code>model</code>.
+     * </p>
+     * <p>
      * Default: An empty array
      * </p>
      * 
      * @return (Optional) A list of vehicle attributes to associate with a campaign. </p>
+     *         <p>
+     *         Enrich the data with specified vehicle attributes. For example, add <code>make</code> and
+     *         <code>model</code> to the campaign, and Amazon Web Services IoT FleetWise will associate the data with
+     *         those attributes as dimensions in Amazon Timestream. You can then query the data against
+     *         <code>make</code> and <code>model</code>.
+     *         </p>
      *         <p>
      *         Default: An empty array
      */
@@ -989,11 +1005,22 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * (Optional) A list of vehicle attributes to associate with a campaign.
      * </p>
      * <p>
+     * Enrich the data with specified vehicle attributes. For example, add <code>make</code> and <code>model</code> to
+     * the campaign, and Amazon Web Services IoT FleetWise will associate the data with those attributes as dimensions
+     * in Amazon Timestream. You can then query the data against <code>make</code> and <code>model</code>.
+     * </p>
+     * <p>
      * Default: An empty array
      * </p>
      * 
      * @param dataExtraDimensions
      *        (Optional) A list of vehicle attributes to associate with a campaign. </p>
+     *        <p>
+     *        Enrich the data with specified vehicle attributes. For example, add <code>make</code> and
+     *        <code>model</code> to the campaign, and Amazon Web Services IoT FleetWise will associate the data with
+     *        those attributes as dimensions in Amazon Timestream. You can then query the data against <code>make</code>
+     *        and <code>model</code>.
+     *        </p>
      *        <p>
      *        Default: An empty array
      */
@@ -1012,6 +1039,11 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * (Optional) A list of vehicle attributes to associate with a campaign.
      * </p>
      * <p>
+     * Enrich the data with specified vehicle attributes. For example, add <code>make</code> and <code>model</code> to
+     * the campaign, and Amazon Web Services IoT FleetWise will associate the data with those attributes as dimensions
+     * in Amazon Timestream. You can then query the data against <code>make</code> and <code>model</code>.
+     * </p>
+     * <p>
      * Default: An empty array
      * </p>
      * <p>
@@ -1022,6 +1054,12 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param dataExtraDimensions
      *        (Optional) A list of vehicle attributes to associate with a campaign. </p>
+     *        <p>
+     *        Enrich the data with specified vehicle attributes. For example, add <code>make</code> and
+     *        <code>model</code> to the campaign, and Amazon Web Services IoT FleetWise will associate the data with
+     *        those attributes as dimensions in Amazon Timestream. You can then query the data against <code>make</code>
+     *        and <code>model</code>.
+     *        </p>
      *        <p>
      *        Default: An empty array
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1042,11 +1080,22 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * (Optional) A list of vehicle attributes to associate with a campaign.
      * </p>
      * <p>
+     * Enrich the data with specified vehicle attributes. For example, add <code>make</code> and <code>model</code> to
+     * the campaign, and Amazon Web Services IoT FleetWise will associate the data with those attributes as dimensions
+     * in Amazon Timestream. You can then query the data against <code>make</code> and <code>model</code>.
+     * </p>
+     * <p>
      * Default: An empty array
      * </p>
      * 
      * @param dataExtraDimensions
      *        (Optional) A list of vehicle attributes to associate with a campaign. </p>
+     *        <p>
+     *        Enrich the data with specified vehicle attributes. For example, add <code>make</code> and
+     *        <code>model</code> to the campaign, and Amazon Web Services IoT FleetWise will associate the data with
+     *        those attributes as dimensions in Amazon Timestream. You can then query the data against <code>make</code>
+     *        and <code>model</code>.
+     *        </p>
      *        <p>
      *        Default: An empty array
      * @return Returns a reference to this object so that method calls can be chained together.

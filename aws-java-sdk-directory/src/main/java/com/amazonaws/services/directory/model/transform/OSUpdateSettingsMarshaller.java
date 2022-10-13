@@ -10,43 +10,43 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.connectwisdom.model.transform;
+package com.amazonaws.services.directory.model.transform;
 
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.services.connectwisdom.model.*;
+import com.amazonaws.services.directory.model.*;
 
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * FeedbackDataMarshaller
+ * OSUpdateSettingsMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class FeedbackDataMarshaller {
+public class OSUpdateSettingsMarshaller {
 
-    private static final MarshallingInfo<String> RELEVANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("relevance").build();
+    private static final MarshallingInfo<String> OSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("OSVersion").build();
 
-    private static final FeedbackDataMarshaller instance = new FeedbackDataMarshaller();
+    private static final OSUpdateSettingsMarshaller instance = new OSUpdateSettingsMarshaller();
 
-    public static FeedbackDataMarshaller getInstance() {
+    public static OSUpdateSettingsMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(FeedbackData feedbackData, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(OSUpdateSettings oSUpdateSettings, ProtocolMarshaller protocolMarshaller) {
 
-        if (feedbackData == null) {
+        if (oSUpdateSettings == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(feedbackData.getRelevance(), RELEVANCE_BINDING);
+            protocolMarshaller.marshall(oSUpdateSettings.getOSVersion(), OSVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

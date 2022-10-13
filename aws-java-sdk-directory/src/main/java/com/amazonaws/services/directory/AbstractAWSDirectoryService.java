@@ -213,6 +213,11 @@ public class AbstractAWSDirectoryService implements AWSDirectoryService {
     }
 
     @Override
+    public DescribeUpdateDirectoryResult describeUpdateDirectory(DescribeUpdateDirectoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableClientAuthenticationResult disableClientAuthentication(DisableClientAuthenticationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -349,6 +354,11 @@ public class AbstractAWSDirectoryService implements AWSDirectoryService {
 
     @Override
     public UpdateConditionalForwarderResult updateConditionalForwarder(UpdateConditionalForwarderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDirectorySetupResult updateDirectorySetup(UpdateDirectorySetupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

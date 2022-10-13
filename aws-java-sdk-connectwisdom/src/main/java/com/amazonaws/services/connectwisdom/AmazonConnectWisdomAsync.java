@@ -801,45 +801,6 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
 
     /**
      * <p>
-     * Submits feedback to Wisdom. The feedback is used to improve future recommendations from <a
-     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a>
-     * or results from <a
-     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QueryAssistant.html">QueryAssistant</a>.
-     * Feedback can be resubmitted up to 6 hours after submission.
-     * </p>
-     * 
-     * @param putFeedbackRequest
-     * @return A Java Future containing the result of the PutFeedback operation returned by the service.
-     * @sample AmazonConnectWisdomAsync.PutFeedback
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/PutFeedback" target="_top">AWS API
-     *      Documentation</a>
-     */
-    java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest putFeedbackRequest);
-
-    /**
-     * <p>
-     * Submits feedback to Wisdom. The feedback is used to improve future recommendations from <a
-     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a>
-     * or results from <a
-     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QueryAssistant.html">QueryAssistant</a>.
-     * Feedback can be resubmitted up to 6 hours after submission.
-     * </p>
-     * 
-     * @param putFeedbackRequest
-     * @param asyncHandler
-     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
-     *        implementation of the callback methods in this interface to receive notification of successful or
-     *        unsuccessful completion of the operation.
-     * @return A Java Future containing the result of the PutFeedback operation returned by the service.
-     * @sample AmazonConnectWisdomAsyncHandler.PutFeedback
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/PutFeedback" target="_top">AWS API
-     *      Documentation</a>
-     */
-    java.util.concurrent.Future<PutFeedbackResult> putFeedbackAsync(PutFeedbackRequest putFeedbackRequest,
-            com.amazonaws.handlers.AsyncHandler<PutFeedbackRequest, PutFeedbackResult> asyncHandler);
-
-    /**
-     * <p>
      * Performs a manual search against the specified assistant. To retrieve recommendations for an assistant, use <a
      * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a>.
      * </p>
