@@ -1,3 +1,8 @@
+# __1.12.321__ __2022-10-14__
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - MediaConvert now supports specifying the minimum percentage of the HRD buffer available at the end of each encoded video segment.
+
 # __1.12.320__ __2022-10-13__
 ## __AWS Amplify UI Builder__
   - ### Features
