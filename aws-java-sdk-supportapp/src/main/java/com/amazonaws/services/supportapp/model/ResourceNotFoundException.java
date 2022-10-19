@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified resource is missing or doesn't exist, such as an account alias or Slack channel configuration.
+ * The specified resource is missing or doesn't exist, such as an account alias, Slack channel configuration, or Slack
+ * workspace configuration.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

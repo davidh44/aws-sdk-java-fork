@@ -48,6 +48,11 @@ public class SearchSecurityProfilesRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The search criteria to be used to return security profiles.
      * </p>
+     * <note>
+     * <p>
+     * The currently supported value for <code>FieldName</code>: <code>name</code>
+     * </p>
+     * </note>
      */
     private SecurityProfileSearchCriteria searchCriteria;
     /**
@@ -187,9 +192,17 @@ public class SearchSecurityProfilesRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The search criteria to be used to return security profiles.
      * </p>
+     * <note>
+     * <p>
+     * The currently supported value for <code>FieldName</code>: <code>name</code>
+     * </p>
+     * </note>
      * 
      * @param searchCriteria
-     *        The search criteria to be used to return security profiles.
+     *        The search criteria to be used to return security profiles. </p> <note>
+     *        <p>
+     *        The currently supported value for <code>FieldName</code>: <code>name</code>
+     *        </p>
      */
 
     public void setSearchCriteria(SecurityProfileSearchCriteria searchCriteria) {
@@ -200,8 +213,16 @@ public class SearchSecurityProfilesRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The search criteria to be used to return security profiles.
      * </p>
+     * <note>
+     * <p>
+     * The currently supported value for <code>FieldName</code>: <code>name</code>
+     * </p>
+     * </note>
      * 
-     * @return The search criteria to be used to return security profiles.
+     * @return The search criteria to be used to return security profiles. </p> <note>
+     *         <p>
+     *         The currently supported value for <code>FieldName</code>: <code>name</code>
+     *         </p>
      */
 
     public SecurityProfileSearchCriteria getSearchCriteria() {
@@ -212,9 +233,17 @@ public class SearchSecurityProfilesRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The search criteria to be used to return security profiles.
      * </p>
+     * <note>
+     * <p>
+     * The currently supported value for <code>FieldName</code>: <code>name</code>
+     * </p>
+     * </note>
      * 
      * @param searchCriteria
-     *        The search criteria to be used to return security profiles.
+     *        The search criteria to be used to return security profiles. </p> <note>
+     *        <p>
+     *        The currently supported value for <code>FieldName</code>: <code>name</code>
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

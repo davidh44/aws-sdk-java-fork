@@ -30,7 +30,7 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the channel.
+     * The Amazon Resource Name (ARN) of a channel.
      * </p>
      */
     private String channelArn;
@@ -46,11 +46,11 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the channel.
+     * The Amazon Resource Name (ARN) of a channel.
      * </p>
      * 
      * @param channelArn
-     *        The Amazon Resource Name (ARN) of the channel.
+     *        The Amazon Resource Name (ARN) of a channel.
      */
 
     public void setChannelArn(String channelArn) {
@@ -59,10 +59,10 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the channel.
+     * The Amazon Resource Name (ARN) of a channel.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the channel.
+     * @return The Amazon Resource Name (ARN) of a channel.
      */
 
     public String getChannelArn() {
@@ -71,11 +71,11 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the channel.
+     * The Amazon Resource Name (ARN) of a channel.
      * </p>
      * 
      * @param channelArn
-     *        The Amazon Resource Name (ARN) of the channel.
+     *        The Amazon Resource Name (ARN) of a channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

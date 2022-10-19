@@ -30,7 +30,8 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     * Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN of the
+     * user.
      * </p>
      */
     private UserReference user;
@@ -65,7 +66,7 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
      * A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number of
      * slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a> of
-     * the RoutingProfile assigned to the agent.
+     * the <code>RoutingProfile</code> assigned to the agent.
      * </p>
      */
     private java.util.Map<String, Integer> maxSlotsByChannel;
@@ -84,11 +85,13 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     * Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN of the
+     * user.
      * </p>
      * 
      * @param user
-     *        Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     *        Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN
+     *        of the user.
      */
 
     public void setUser(UserReference user) {
@@ -97,10 +100,12 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     * Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN of the
+     * user.
      * </p>
      * 
-     * @return Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     * @return Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN
+     *         of the user.
      */
 
     public UserReference getUser() {
@@ -109,11 +114,13 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     * Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN of the
+     * user.
      * </p>
      * 
      * @param user
-     *        Information about the user for the data that is returned. It contains resourceId and ARN of the user.
+     *        Information about the user for the data that is returned. It contains the <code>resourceId</code> and ARN
+     *        of the user.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -327,13 +334,13 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
      * A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number of
      * slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a> of
-     * the RoutingProfile assigned to the agent.
+     * the <code>RoutingProfile</code> assigned to the agent.
      * </p>
      * 
      * @return A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number
      *         of slots. This is calculated from <a
      *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html"
-     *         >MediaConcurrency</a> of the RoutingProfile assigned to the agent.
+     *         >MediaConcurrency</a> of the <code>RoutingProfile</code> assigned to the agent.
      */
 
     public java.util.Map<String, Integer> getMaxSlotsByChannel() {
@@ -345,14 +352,14 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
      * A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number of
      * slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a> of
-     * the RoutingProfile assigned to the agent.
+     * the <code>RoutingProfile</code> assigned to the agent.
      * </p>
      * 
      * @param maxSlotsByChannel
      *        A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number
      *        of slots. This is calculated from <a
      *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html"
-     *        >MediaConcurrency</a> of the RoutingProfile assigned to the agent.
+     *        >MediaConcurrency</a> of the <code>RoutingProfile</code> assigned to the agent.
      */
 
     public void setMaxSlotsByChannel(java.util.Map<String, Integer> maxSlotsByChannel) {
@@ -364,14 +371,14 @@ public class UserData implements Serializable, Cloneable, StructuredPojo {
      * A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number of
      * slots. This is calculated from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html">MediaConcurrency</a> of
-     * the RoutingProfile assigned to the agent.
+     * the <code>RoutingProfile</code> assigned to the agent.
      * </p>
      * 
      * @param maxSlotsByChannel
      *        A map of maximum slots by channel. The key is a channel name. The value is an integer: the maximum number
      *        of slots. This is calculated from <a
      *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_MediaConcurrency.html"
-     *        >MediaConcurrency</a> of the RoutingProfile assigned to the agent.
+     *        >MediaConcurrency</a> of the <code>RoutingProfile</code> assigned to the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

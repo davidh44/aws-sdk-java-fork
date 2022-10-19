@@ -140,6 +140,21 @@ public class AbstractAWSSupportAppAsync extends AbstractAWSSupportApp implements
     }
 
     @Override
+    public java.util.concurrent.Future<RegisterSlackWorkspaceForOrganizationResult> registerSlackWorkspaceForOrganizationAsync(
+            RegisterSlackWorkspaceForOrganizationRequest request) {
+
+        return registerSlackWorkspaceForOrganizationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterSlackWorkspaceForOrganizationResult> registerSlackWorkspaceForOrganizationAsync(
+            RegisterSlackWorkspaceForOrganizationRequest request,
+            com.amazonaws.handlers.AsyncHandler<RegisterSlackWorkspaceForOrganizationRequest, RegisterSlackWorkspaceForOrganizationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateSlackChannelConfigurationResult> updateSlackChannelConfigurationAsync(
             UpdateSlackChannelConfigurationRequest request) {
 

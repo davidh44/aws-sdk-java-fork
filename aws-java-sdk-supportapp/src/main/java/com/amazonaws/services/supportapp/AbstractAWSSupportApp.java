@@ -68,6 +68,11 @@ public class AbstractAWSSupportApp implements AWSSupportApp {
     }
 
     @Override
+    public RegisterSlackWorkspaceForOrganizationResult registerSlackWorkspaceForOrganization(RegisterSlackWorkspaceForOrganizationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateSlackChannelConfigurationResult updateSlackChannelConfiguration(UpdateSlackChannelConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

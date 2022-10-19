@@ -25,23 +25,23 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of CloudTrail channels.
+     * The list of channels in the account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Channel> channels;
     /**
      * <p>
-     * A token used to get the next page of results.
+     * The token to use to get the next page of results after a previous API call.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The list of CloudTrail channels.
+     * The list of channels in the account.
      * </p>
      * 
-     * @return The list of CloudTrail channels.
+     * @return The list of channels in the account.
      */
 
     public java.util.List<Channel> getChannels() {
@@ -53,11 +53,11 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of CloudTrail channels.
+     * The list of channels in the account.
      * </p>
      * 
      * @param channels
-     *        The list of CloudTrail channels.
+     *        The list of channels in the account.
      */
 
     public void setChannels(java.util.Collection<Channel> channels) {
@@ -71,7 +71,7 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of CloudTrail channels.
+     * The list of channels in the account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +80,7 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param channels
-     *        The list of CloudTrail channels.
+     *        The list of channels in the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +96,11 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of CloudTrail channels.
+     * The list of channels in the account.
      * </p>
      * 
      * @param channels
-     *        The list of CloudTrail channels.
+     *        The list of channels in the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,11 +111,11 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token used to get the next page of results.
+     * The token to use to get the next page of results after a previous API call.
      * </p>
      * 
      * @param nextToken
-     *        A token used to get the next page of results.
+     *        The token to use to get the next page of results after a previous API call.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,10 +124,10 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token used to get the next page of results.
+     * The token to use to get the next page of results after a previous API call.
      * </p>
      * 
-     * @return A token used to get the next page of results.
+     * @return The token to use to get the next page of results after a previous API call.
      */
 
     public String getNextToken() {
@@ -136,11 +136,11 @@ public class ListChannelsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token used to get the next page of results.
+     * The token to use to get the next page of results after a previous API call.
      * </p>
      * 
      * @param nextToken
-     *        A token used to get the next page of results.
+     *        The token to use to get the next page of results after a previous API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

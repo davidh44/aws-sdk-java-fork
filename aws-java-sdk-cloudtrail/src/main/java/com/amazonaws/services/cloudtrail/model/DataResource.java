@@ -119,7 +119,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * <p>
-     * The following resource types are also availble through <i>advanced</i> event selectors. Basic event selector
+     * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
      * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      * </p>
@@ -248,7 +248,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * <p>
-     * The following resource types are also availble through <i>advanced</i> event selectors. Basic event selector
+     * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
      * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      * </p>
@@ -311,7 +311,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        </ul>
      *        <p>
-     *        The following resource types are also availble through <i>advanced</i> event selectors. Basic event
+     *        The following resource types are also available through <i>advanced</i> event selectors. Basic event
      *        selector resource types are valid in advanced event selectors, but advanced event selector resource types
      *        are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      *        </p>
@@ -380,7 +380,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * <p>
-     * The following resource types are also availble through <i>advanced</i> event selectors. Basic event selector
+     * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
      * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      * </p>
@@ -442,7 +442,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         </ul>
      *         <p>
-     *         The following resource types are also availble through <i>advanced</i> event selectors. Basic event
+     *         The following resource types are also available through <i>advanced</i> event selectors. Basic event
      *         selector resource types are valid in advanced event selectors, but advanced event selector resource types
      *         are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      *         </p>
@@ -511,7 +511,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * <p>
-     * The following resource types are also availble through <i>advanced</i> event selectors. Basic event selector
+     * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
      * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      * </p>
@@ -574,7 +574,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        </ul>
      *        <p>
-     *        The following resource types are also availble through <i>advanced</i> event selectors. Basic event
+     *        The following resource types are also available through <i>advanced</i> event selectors. Basic event
      *        selector resource types are valid in advanced event selectors, but advanced event selector resource types
      *        are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      *        </p>

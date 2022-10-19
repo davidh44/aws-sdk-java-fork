@@ -33,7 +33,9 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private Integer maxResults;
     /**
      * <p>
-     * A token you can use to get the next page of results.
+     * The token to use to get the next page of results after a previous API call. This token must be passed in with the
+     * same parameters that were specified in the original call. For example, if the original call specified an
+     * AttributeKey of 'Username' with a value of 'root', the call with NextToken should include those same parameters.
      * </p>
      */
     private String nextToken;
@@ -80,11 +82,16 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token you can use to get the next page of results.
+     * The token to use to get the next page of results after a previous API call. This token must be passed in with the
+     * same parameters that were specified in the original call. For example, if the original call specified an
+     * AttributeKey of 'Username' with a value of 'root', the call with NextToken should include those same parameters.
      * </p>
      * 
      * @param nextToken
-     *        A token you can use to get the next page of results.
+     *        The token to use to get the next page of results after a previous API call. This token must be passed in
+     *        with the same parameters that were specified in the original call. For example, if the original call
+     *        specified an AttributeKey of 'Username' with a value of 'root', the call with NextToken should include
+     *        those same parameters.
      */
 
     public void setNextToken(String nextToken) {
@@ -93,10 +100,15 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token you can use to get the next page of results.
+     * The token to use to get the next page of results after a previous API call. This token must be passed in with the
+     * same parameters that were specified in the original call. For example, if the original call specified an
+     * AttributeKey of 'Username' with a value of 'root', the call with NextToken should include those same parameters.
      * </p>
      * 
-     * @return A token you can use to get the next page of results.
+     * @return The token to use to get the next page of results after a previous API call. This token must be passed in
+     *         with the same parameters that were specified in the original call. For example, if the original call
+     *         specified an AttributeKey of 'Username' with a value of 'root', the call with NextToken should include
+     *         those same parameters.
      */
 
     public String getNextToken() {
@@ -105,11 +117,16 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token you can use to get the next page of results.
+     * The token to use to get the next page of results after a previous API call. This token must be passed in with the
+     * same parameters that were specified in the original call. For example, if the original call specified an
+     * AttributeKey of 'Username' with a value of 'root', the call with NextToken should include those same parameters.
      * </p>
      * 
      * @param nextToken
-     *        A token you can use to get the next page of results.
+     *        The token to use to get the next page of results after a previous API call. This token must be passed in
+     *        with the same parameters that were specified in the original call. For example, if the original call
+     *        specified an AttributeKey of 'Username' with a value of 'root', the call with NextToken should include
+     *        those same parameters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

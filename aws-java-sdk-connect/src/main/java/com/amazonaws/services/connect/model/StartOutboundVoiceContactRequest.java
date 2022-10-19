@@ -52,8 +52,11 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
     private String instanceId;
     /**
      * <p>
-     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token is valid
-     * for 7 days after creation. If a contact is already started, the contact ID is returned.
+     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided,
+     * the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
+     * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
+     * idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is already started, the contact
+     * ID is returned.
      * </p>
      */
     private String clientToken;
@@ -265,13 +268,19 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token is valid
-     * for 7 days after creation. If a contact is already started, the contact ID is returned.
+     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided,
+     * the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
+     * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
+     * idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is already started, the contact
+     * ID is returned.
      * </p>
      * 
      * @param clientToken
-     *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token
-     *        is valid for 7 days after creation. If a contact is already started, the contact ID is returned.
+     *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not
+     *        provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
+     *        href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries
+     *        safe with idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is already
+     *        started, the contact ID is returned.
      */
 
     public void setClientToken(String clientToken) {
@@ -280,12 +289,18 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token is valid
-     * for 7 days after creation. If a contact is already started, the contact ID is returned.
+     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided,
+     * the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
+     * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
+     * idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is already started, the contact
+     * ID is returned.
      * </p>
      * 
-     * @return A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token
-     *         is valid for 7 days after creation. If a contact is already started, the contact ID is returned.
+     * @return A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not
+     *         provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see
+     *         <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making
+     *         retries safe with idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is
+     *         already started, the contact ID is returned.
      */
 
     public String getClientToken() {
@@ -294,13 +309,19 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token is valid
-     * for 7 days after creation. If a contact is already started, the contact ID is returned.
+     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided,
+     * the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
+     * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
+     * idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is already started, the contact
+     * ID is returned.
      * </p>
      * 
      * @param clientToken
-     *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. The token
-     *        is valid for 7 days after creation. If a contact is already started, the contact ID is returned.
+     *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not
+     *        provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
+     *        href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries
+     *        safe with idempotent APIs</a>. The token is valid for 7 days after creation. If a contact is already
+     *        started, the contact ID is returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

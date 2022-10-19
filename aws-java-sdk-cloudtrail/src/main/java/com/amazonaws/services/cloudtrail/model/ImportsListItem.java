@@ -42,7 +42,7 @@ public class ImportsListItem implements Serializable, Cloneable, StructuredPojo 
     private String importStatus;
     /**
      * <p>
-     * The destination event data store.
+     * The ARN of the destination event data store.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> destinations;
@@ -160,10 +160,10 @@ public class ImportsListItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The destination event data store.
+     * The ARN of the destination event data store.
      * </p>
      * 
-     * @return The destination event data store.
+     * @return The ARN of the destination event data store.
      */
 
     public java.util.List<String> getDestinations() {
@@ -175,11 +175,11 @@ public class ImportsListItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The destination event data store.
+     * The ARN of the destination event data store.
      * </p>
      * 
      * @param destinations
-     *        The destination event data store.
+     *        The ARN of the destination event data store.
      */
 
     public void setDestinations(java.util.Collection<String> destinations) {
@@ -193,7 +193,7 @@ public class ImportsListItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The destination event data store.
+     * The ARN of the destination event data store.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -202,7 +202,7 @@ public class ImportsListItem implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param destinations
-     *        The destination event data store.
+     *        The ARN of the destination event data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +218,11 @@ public class ImportsListItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The destination event data store.
+     * The ARN of the destination event data store.
      * </p>
      * 
      * @param destinations
-     *        The destination event data store.
+     *        The ARN of the destination event data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

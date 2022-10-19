@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the event data store category is not valid for the import.
+ * This exception is thrown when event categories of specified event data stores are not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -49,8 +49,11 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
     private String email;
     /**
      * <p>
-     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
-     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications -
+     * other than password reset notifications - to this email address instead of to their primary email address.
+     * </p>
+     * <p>
+     * Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      * </p>
      */
     private String secondaryEmail;
@@ -189,14 +192,19 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
-     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications -
+     * other than password reset notifications - to this email address instead of to their primary email address.
+     * </p>
+     * <p>
+     * Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      * </p>
      * 
      * @param secondaryEmail
      *        The user's secondary email address. If you provide a secondary email, the user receives email
-     *        notifications -- other than password reset notifications -- to this email address instead of to their
-     *        primary email address.
+     *        notifications - other than password reset notifications - to this email address instead of to their
+     *        primary email address.</p>
+     *        <p>
+     *        Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      */
 
     public void setSecondaryEmail(String secondaryEmail) {
@@ -205,13 +213,18 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
-     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications -
+     * other than password reset notifications - to this email address instead of to their primary email address.
+     * </p>
+     * <p>
+     * Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      * </p>
      * 
      * @return The user's secondary email address. If you provide a secondary email, the user receives email
-     *         notifications -- other than password reset notifications -- to this email address instead of to their
-     *         primary email address.
+     *         notifications - other than password reset notifications - to this email address instead of to their
+     *         primary email address.</p>
+     *         <p>
+     *         Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      */
 
     public String getSecondaryEmail() {
@@ -220,14 +233,19 @@ public class UserIdentityInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The user's secondary email address. If you provide a secondary email, the user receives email notifications --
-     * other than password reset notifications -- to this email address instead of to their primary email address.
+     * The user's secondary email address. If you provide a secondary email, the user receives email notifications -
+     * other than password reset notifications - to this email address instead of to their primary email address.
+     * </p>
+     * <p>
+     * Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      * </p>
      * 
      * @param secondaryEmail
      *        The user's secondary email address. If you provide a secondary email, the user receives email
-     *        notifications -- other than password reset notifications -- to this email address instead of to their
-     *        primary email address.
+     *        notifications - other than password reset notifications - to this email address instead of to their
+     *        primary email address.</p>
+     *        <p>
+     *        Pattern: <code>(?=^.{0,265}$)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

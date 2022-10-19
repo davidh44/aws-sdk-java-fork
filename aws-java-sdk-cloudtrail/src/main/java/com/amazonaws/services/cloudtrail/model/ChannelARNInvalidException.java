@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified channel ARN is not valid or does not map to a channel in your account.
+ * This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

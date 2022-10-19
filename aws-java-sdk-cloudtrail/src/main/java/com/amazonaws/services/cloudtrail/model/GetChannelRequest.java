@@ -27,18 +27,18 @@ public class GetChannelRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     * The ARN or <code>UUID</code> of a channel.
      * </p>
      */
     private String channel;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     * The ARN or <code>UUID</code> of a channel.
      * </p>
      * 
      * @param channel
-     *        The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     *        The ARN or <code>UUID</code> of a channel.
      */
 
     public void setChannel(String channel) {
@@ -47,10 +47,10 @@ public class GetChannelRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     * The ARN or <code>UUID</code> of a channel.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     * @return The ARN or <code>UUID</code> of a channel.
      */
 
     public String getChannel() {
@@ -59,11 +59,11 @@ public class GetChannelRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     * The ARN or <code>UUID</code> of a channel.
      * </p>
      * 
      * @param channel
-     *        The Amazon Resource Name (ARN) of the CloudTrail service-linked channel.
+     *        The ARN or <code>UUID</code> of a channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
