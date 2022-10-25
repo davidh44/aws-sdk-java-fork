@@ -58,7 +58,7 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
      * Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this
      * value is set to DEDICATED. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own Windows
-     * Desktop Images.</a>
+     * Desktop Images.</a>.
      * </p>
      */
     private String requiredTenancy;
@@ -299,14 +299,14 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
      * Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this
      * value is set to DEDICATED. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own Windows
-     * Desktop Images.</a>
+     * Desktop Images.</a>.
      * </p>
      * 
      * @param requiredTenancy
      *        Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is
      *        enabled, this value is set to DEDICATED. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own
-     *        Windows Desktop Images.</a>
+     *        Windows Desktop Images.</a>.
      * @see WorkspaceImageRequiredTenancy
      */
 
@@ -319,13 +319,13 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
      * Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this
      * value is set to DEDICATED. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own Windows
-     * Desktop Images.</a>
+     * Desktop Images.</a>.
      * </p>
      * 
      * @return Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is
      *         enabled, this value is set to DEDICATED. For more information, see <a
      *         href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own
-     *         Windows Desktop Images.</a>
+     *         Windows Desktop Images.</a>.
      * @see WorkspaceImageRequiredTenancy
      */
 
@@ -338,14 +338,14 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
      * Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this
      * value is set to DEDICATED. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own Windows
-     * Desktop Images.</a>
+     * Desktop Images.</a>.
      * </p>
      * 
      * @param requiredTenancy
      *        Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is
      *        enabled, this value is set to DEDICATED. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own
-     *        Windows Desktop Images.</a>
+     *        Windows Desktop Images.</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WorkspaceImageRequiredTenancy
      */
@@ -360,14 +360,14 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
      * Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this
      * value is set to DEDICATED. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own Windows
-     * Desktop Images.</a>
+     * Desktop Images.</a>.
      * </p>
      * 
      * @param requiredTenancy
      *        Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is
      *        enabled, this value is set to DEDICATED. For more information, see <a
      *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.htm"> Bring Your Own
-     *        Windows Desktop Images.</a>
+     *        Windows Desktop Images.</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WorkspaceImageRequiredTenancy
      */

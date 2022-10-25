@@ -1168,6 +1168,13 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      * <p>
      * This operation is asynchronous and returns before the WorkSpaces are created.
      * </p>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> running mode value is only supported by Amazon WorkSpaces Core. Contact your account team
+     * to be allow-listed to use this value. For more information, see <a
+     * href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
+     * </p>
+     * </note>
      * 
      * @param createWorkspacesRequest
      * @return Result of the CreateWorkspaces operation returned by the service.
@@ -3021,9 +3028,9 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Imports the specified Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an
-     * already licensed Amazon EC2 image that is in your Amazon Web Services account, and you must own the image. For
-     * more information about creating BYOL images, see <a
+     * Imports the specified Windows 10 Bring Your Own License (BYOL) or Windows Server 2016 BYOL image into Amazon
+     * WorkSpaces. The image must be an already licensed Amazon EC2 image that is in your Amazon Web Services account,
+     * and you must own the image. For more information about creating BYOL images, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html"> Bring Your Own Windows
      * Desktop Licenses</a>.
      * </p>
@@ -3634,6 +3641,13 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      * and user volumes, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html">
      * Modify a WorkSpace</a>.
      * </p>
+     * <note>
+     * <p>
+     * The <code>MANUAL</code> running mode value is only supported by Amazon WorkSpaces Core. Contact your account team
+     * to be allow-listed to use this value. For more information, see <a
+     * href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
+     * </p>
+     * </note>
      * 
      * @param modifyWorkspacePropertiesRequest
      * @return Result of the ModifyWorkspaceProperties operation returned by the service.

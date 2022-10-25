@@ -76,9 +76,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     * <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code> |
-     * <code>Noto Sans CJK JP Regular</code>
+     * VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     * <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     * <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      * </p>
      * </li>
      * </ul>
@@ -150,9 +150,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     * <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code> |
-     * <code>Noto Sans CJK JP Regular</code>
+     * VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     * <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     * <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      * </p>
      * </li>
      * </ul>
@@ -206,9 +206,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     *        <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code> |
-     *        <code>Noto Sans CJK JP Regular</code>
+     *        VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     *        <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     *        <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      *        </p>
      *        </li>
      */
@@ -268,9 +268,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     * <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code> |
-     * <code>Noto Sans CJK JP Regular</code>
+     * VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     * <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     * <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      * </p>
      * </li>
      * </ul>
@@ -324,9 +324,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
-     *         VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     *         <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code>
-     *         | <code>Noto Sans CJK JP Regular</code>
+     *         VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     *         <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     *         <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      *         </p>
      *         </li>
      */
@@ -386,9 +386,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     * <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code> |
-     * <code>Noto Sans CJK JP Regular</code>
+     * VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     * <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     * <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      * </p>
      * </li>
      * </ul>
@@ -442,9 +442,9 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        VectorHereExplore, VectorHereExploreTruck – <code>Firo GO Italic</code> | <code>Fira GO Map</code> |
-     *        <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> | <code>Noto Sans CJK JP Light</code> |
-     *        <code>Noto Sans CJK JP Regular</code>
+     *        VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite – <code>Fira GO Italic</code> |
+     *        <code>Fira GO Map</code> | <code>Fira GO Map Bold</code> | <code>Noto Sans CJK JP Bold</code> |
+     *        <code>Noto Sans CJK JP Light</code> | <code>Noto Sans CJK JP Regular</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

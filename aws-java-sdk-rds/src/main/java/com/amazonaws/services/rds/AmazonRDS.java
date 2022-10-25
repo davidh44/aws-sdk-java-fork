@@ -4339,6 +4339,8 @@ public interface AmazonRDS {
      *         <code>DBSnapshotIdentifier</code> doesn't refer to an existing DB snapshot.
      * @throws DBClusterSnapshotNotFoundException
      *         <code>DBClusterSnapshotIdentifier</code> doesn't refer to an existing DB cluster snapshot.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
      * @throws ExportTaskAlreadyExistsException
      *         You can't start an export task that's already running.
      * @throws InvalidS3BucketException

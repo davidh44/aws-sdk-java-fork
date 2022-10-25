@@ -30,7 +30,7 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     * The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * </p>
      */
     private String messageType;
@@ -49,19 +49,19 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
     private SlateSource slate;
     /**
      * <p>
-     * This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     * splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     * This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information about using
+     * <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      * </p>
      */
     private SpliceInsertMessage spliceInsertMessage;
 
     /**
      * <p>
-     * The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     * The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * </p>
      * 
      * @param messageType
-     *        The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     *        The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * @see MessageType
      */
 
@@ -71,10 +71,10 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     * The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * </p>
      * 
-     * @return The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     * @return The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * @see MessageType
      */
 
@@ -84,11 +84,11 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     * The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * </p>
      * 
      * @param messageType
-     *        The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     *        The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MessageType
      */
@@ -100,11 +100,11 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     * The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * </p>
      * 
      * @param messageType
-     *        The SCTE-35 ad insertion type. Accepted value: SPLICE_INSERT.
+     *        The SCTE-35 ad insertion type. Accepted value: <code>SPLICE_INSERT</code>, <code>TIME_SIGNAL</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MessageType
      */
@@ -202,13 +202,13 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     * splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     * This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information about using
+     * <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      * </p>
      * 
      * @param spliceInsertMessage
-     *        This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     *        splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     *        This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information
+     *        about using <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      */
 
     public void setSpliceInsertMessage(SpliceInsertMessage spliceInsertMessage) {
@@ -217,12 +217,12 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     * splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     * This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information about using
+     * <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      * </p>
      * 
-     * @return This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     *         splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     * @return This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information
+     *         about using <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      */
 
     public SpliceInsertMessage getSpliceInsertMessage() {
@@ -231,13 +231,13 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     * splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     * This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information about using
+     * <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      * </p>
      * 
      * @param spliceInsertMessage
-     *        This defines the SCTE-35 splice_insert() message inserted around the ad. For information about using
-     *        splice_insert(), see the SCTE-35 specficiaiton, section 9.7.3.1.
+     *        This defines the SCTE-35 <code>splice_insert()</code> message inserted around the ad. For information
+     *        about using <code>splice_insert()</code>, see the SCTE-35 specficiaiton, section 9.7.3.1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

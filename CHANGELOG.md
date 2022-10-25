@@ -1,3 +1,24 @@
+# __1.12.328__ __2022-10-25__
+## __AWS MediaTailor__
+  - ### Features
+    - This release is a documentation update
+
+## __Access Analyzer__
+  - ### Features
+    - This release adds support for six new resource types in IAM Access Analyzer to help you easily identify public and cross-account access to your AWS resources. Updated service API, documentation, and paginators.
+
+## __Amazon Location Service__
+  - ### Features
+    - Added new map styles with satellite imagery for map resources using HERE as a data provider.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Relational Database Service - This release adds support for exporting DB cluster data to Amazon S3.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - This release adds new enums for supporting Workspaces Core features, including creating Manual running mode workspaces, importing regular Workspaces Core images and importing g4dn Workspaces Core images.
+
 # __1.12.327__ __2022-10-24__
 ## __AWS Batch__
   - ### Features
