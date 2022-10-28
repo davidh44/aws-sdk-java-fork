@@ -71,7 +71,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     * <code>UNION</code>: StackSets includes additional accounts deployment targets.
      * </p>
      * <p>
      * This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an
@@ -294,7 +294,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     * <code>UNION</code>: StackSets includes additional accounts deployment targets.
      * </p>
      * <p>
      * This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an
@@ -327,7 +327,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     *        <code>UNION</code>: StackSets includes additional accounts deployment targets.
      *        </p>
      *        <p>
      *        This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update
@@ -368,7 +368,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     * <code>UNION</code>: StackSets includes additional accounts deployment targets.
      * </p>
      * <p>
      * This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an
@@ -401,7 +401,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     *         <code>UNION</code>: StackSets includes additional accounts deployment targets.
      *         </p>
      *         <p>
      *         This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update
@@ -442,7 +442,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     * <code>UNION</code>: StackSets includes additional accounts deployment targets.
      * </p>
      * <p>
      * This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an
@@ -475,7 +475,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     *        <code>UNION</code>: StackSets includes additional accounts deployment targets.
      *        </p>
      *        <p>
      *        This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update
@@ -518,7 +518,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     * <code>UNION</code>: StackSets includes additional accounts deployment targets.
      * </p>
      * <p>
      * This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an
@@ -551,7 +551,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets.
+     *        <code>UNION</code>: StackSets includes additional accounts deployment targets.
      *        </p>
      *        <p>
      *        This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update

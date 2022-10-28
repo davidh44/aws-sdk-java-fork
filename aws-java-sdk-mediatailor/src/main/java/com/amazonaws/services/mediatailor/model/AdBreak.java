@@ -54,6 +54,20 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SpliceInsertMessage spliceInsertMessage;
+    /**
+     * <p>
+     * Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.
+     * </p>
+     * <p>
+     * Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     * <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about the ad
+     * break.
+     * </p>
+     * <p>
+     * See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     * </p>
+     */
+    private TimeSignalMessage timeSignalMessage;
 
     /**
      * <p>
@@ -247,6 +261,91 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.
+     * </p>
+     * <p>
+     * Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     * <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about the ad
+     * break.
+     * </p>
+     * <p>
+     * See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     * </p>
+     * 
+     * @param timeSignalMessage
+     *        Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.</p>
+     *        <p>
+     *        Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     *        <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about the
+     *        ad break.
+     *        </p>
+     *        <p>
+     *        See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     */
+
+    public void setTimeSignalMessage(TimeSignalMessage timeSignalMessage) {
+        this.timeSignalMessage = timeSignalMessage;
+    }
+
+    /**
+     * <p>
+     * Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.
+     * </p>
+     * <p>
+     * Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     * <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about the ad
+     * break.
+     * </p>
+     * <p>
+     * See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     * </p>
+     * 
+     * @return Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.</p>
+     *         <p>
+     *         Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     *         <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about
+     *         the ad break.
+     *         </p>
+     *         <p>
+     *         See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     */
+
+    public TimeSignalMessage getTimeSignalMessage() {
+        return this.timeSignalMessage;
+    }
+
+    /**
+     * <p>
+     * Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.
+     * </p>
+     * <p>
+     * Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     * <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about the ad
+     * break.
+     * </p>
+     * <p>
+     * See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     * </p>
+     * 
+     * @param timeSignalMessage
+     *        Defines the SCTE-35 <code>time_signal</code> message inserted around the ad.</p>
+     *        <p>
+     *        Programs on a channel's schedule can be configured with one or more ad breaks. You can attach a
+     *        <code>splice_insert</code> SCTE-35 message to the ad break. This message provides basic metadata about the
+     *        ad break.
+     *        </p>
+     *        <p>
+     *        See section 9.7.4 of the 2022 SCTE-35 specification for more information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AdBreak withTimeSignalMessage(TimeSignalMessage timeSignalMessage) {
+        setTimeSignalMessage(timeSignalMessage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -265,7 +364,9 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
         if (getSlate() != null)
             sb.append("Slate: ").append(getSlate()).append(",");
         if (getSpliceInsertMessage() != null)
-            sb.append("SpliceInsertMessage: ").append(getSpliceInsertMessage());
+            sb.append("SpliceInsertMessage: ").append(getSpliceInsertMessage()).append(",");
+        if (getTimeSignalMessage() != null)
+            sb.append("TimeSignalMessage: ").append(getTimeSignalMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -296,6 +397,10 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSpliceInsertMessage() != null && other.getSpliceInsertMessage().equals(this.getSpliceInsertMessage()) == false)
             return false;
+        if (other.getTimeSignalMessage() == null ^ this.getTimeSignalMessage() == null)
+            return false;
+        if (other.getTimeSignalMessage() != null && other.getTimeSignalMessage().equals(this.getTimeSignalMessage()) == false)
+            return false;
         return true;
     }
 
@@ -308,6 +413,7 @@ public class AdBreak implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOffsetMillis() == null) ? 0 : getOffsetMillis().hashCode());
         hashCode = prime * hashCode + ((getSlate() == null) ? 0 : getSlate().hashCode());
         hashCode = prime * hashCode + ((getSpliceInsertMessage() == null) ? 0 : getSpliceInsertMessage().hashCode());
+        hashCode = prime * hashCode + ((getTimeSignalMessage() == null) ? 0 : getTimeSignalMessage().hashCode());
         return hashCode;
     }
 

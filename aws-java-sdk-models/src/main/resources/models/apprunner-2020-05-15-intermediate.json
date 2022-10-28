@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -34370,6 +34370,18 @@
       }, {
         "name" : "NODEJS_16",
         "value" : "NODEJS_16"
+      }, {
+        "name" : "GO_1",
+        "value" : "GO_1"
+      }, {
+        "name" : "DOTNET_6",
+        "value" : "DOTNET_6"
+      }, {
+        "name" : "PHP_81",
+        "value" : "PHP_81"
+      }, {
+        "name" : "RUBY_31",
+        "value" : "RUBY_31"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.apprunner.enum.Runtime",

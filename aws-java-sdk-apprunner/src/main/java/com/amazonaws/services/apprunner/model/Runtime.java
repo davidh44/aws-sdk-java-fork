@@ -25,7 +25,11 @@ public enum Runtime {
     NODEJS_14("NODEJS_14"),
     CORRETTO_8("CORRETTO_8"),
     CORRETTO_11("CORRETTO_11"),
-    NODEJS_16("NODEJS_16");
+    NODEJS_16("NODEJS_16"),
+    GO_1("GO_1"),
+    DOTNET_6("DOTNET_6"),
+    PHP_81("PHP_81"),
+    RUBY_31("RUBY_31");
 
     private String value;
 
