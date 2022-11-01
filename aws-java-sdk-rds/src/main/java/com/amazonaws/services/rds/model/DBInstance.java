@@ -305,7 +305,7 @@ public class DBInstance implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<DBInstanceStatusInfo> statusInfos;
     /**
      * <p>
-     * Specifies the storage type associated with DB instance.
+     * Specifies the storage type associated with the DB instance.
      * </p>
      */
     private String storageType;
@@ -711,6 +711,12 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private String activityStreamPolicyStatus;
+    /**
+     * <p>
+     * Specifies the storage throughput for the DB instance.
+     * </p>
+     */
+    private Integer storageThroughput;
 
     /**
      * <p>
@@ -2798,11 +2804,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage type associated with DB instance.
+     * Specifies the storage type associated with the DB instance.
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type associated with DB instance.
+     *        Specifies the storage type associated with the DB instance.
      */
 
     public void setStorageType(String storageType) {
@@ -2811,10 +2817,10 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage type associated with DB instance.
+     * Specifies the storage type associated with the DB instance.
      * </p>
      * 
-     * @return Specifies the storage type associated with DB instance.
+     * @return Specifies the storage type associated with the DB instance.
      */
 
     public String getStorageType() {
@@ -2823,11 +2829,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the storage type associated with DB instance.
+     * Specifies the storage type associated with the DB instance.
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type associated with DB instance.
+     *        Specifies the storage type associated with the DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5876,6 +5882,46 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Specifies the storage throughput for the DB instance.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        Specifies the storage throughput for the DB instance.
+     */
+
+    public void setStorageThroughput(Integer storageThroughput) {
+        this.storageThroughput = storageThroughput;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage throughput for the DB instance.
+     * </p>
+     * 
+     * @return Specifies the storage throughput for the DB instance.
+     */
+
+    public Integer getStorageThroughput() {
+        return this.storageThroughput;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage throughput for the DB instance.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        Specifies the storage throughput for the DB instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withStorageThroughput(Integer storageThroughput) {
+        setStorageThroughput(storageThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6038,7 +6084,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getNetworkType() != null)
             sb.append("NetworkType: ").append(getNetworkType()).append(",");
         if (getActivityStreamPolicyStatus() != null)
-            sb.append("ActivityStreamPolicyStatus: ").append(getActivityStreamPolicyStatus());
+            sb.append("ActivityStreamPolicyStatus: ").append(getActivityStreamPolicyStatus()).append(",");
+        if (getStorageThroughput() != null)
+            sb.append("StorageThroughput: ").append(getStorageThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -6366,6 +6414,10 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getActivityStreamPolicyStatus() != null && other.getActivityStreamPolicyStatus().equals(this.getActivityStreamPolicyStatus()) == false)
             return false;
+        if (other.getStorageThroughput() == null ^ this.getStorageThroughput() == null)
+            return false;
+        if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -6451,6 +6503,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getBackupTarget() == null) ? 0 : getBackupTarget().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getActivityStreamPolicyStatus() == null) ? 0 : getActivityStreamPolicyStatus().hashCode());
+        hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         return hashCode;
     }
 

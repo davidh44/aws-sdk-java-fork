@@ -30,8 +30,70 @@ public class ExpenseCurrency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Currency code for detected currency.
+     * Currency code for detected currency. the current supported codes are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * USD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * GBP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CAD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * JPY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CHF
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * AUD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CNY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * BZR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SEK
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * HKD
+     * </p>
+     * </li>
+     * </ul>
      */
     private String code;
     /**
@@ -43,11 +105,134 @@ public class ExpenseCurrency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Currency code for detected currency.
+     * Currency code for detected currency. the current supported codes are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * USD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * GBP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CAD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * JPY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CHF
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * AUD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CNY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * BZR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SEK
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * HKD
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param code
-     *        Currency code for detected currency.
+     *        Currency code for detected currency. the current supported codes are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        USD
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        EUR
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GBP
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CAD
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        INR
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        JPY
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CHF
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        AUD
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CNY
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        BZR
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SEK
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        HKD
+     *        </p>
+     *        </li>
      */
 
     public void setCode(String code) {
@@ -56,10 +241,133 @@ public class ExpenseCurrency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Currency code for detected currency.
+     * Currency code for detected currency. the current supported codes are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * USD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * GBP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CAD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * JPY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CHF
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * AUD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CNY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * BZR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SEK
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * HKD
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Currency code for detected currency.
+     * @return Currency code for detected currency. the current supported codes are:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         USD
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         EUR
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         GBP
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         CAD
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INR
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         JPY
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         CHF
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         AUD
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         CNY
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         BZR
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SEK
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         HKD
+     *         </p>
+     *         </li>
      */
 
     public String getCode() {
@@ -68,11 +376,134 @@ public class ExpenseCurrency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Currency code for detected currency.
+     * Currency code for detected currency. the current supported codes are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * USD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EUR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * GBP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CAD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * JPY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CHF
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * AUD
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CNY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * BZR
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * SEK
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * HKD
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param code
-     *        Currency code for detected currency.
+     *        Currency code for detected currency. the current supported codes are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        USD
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        EUR
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        GBP
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CAD
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        INR
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        JPY
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CHF
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        AUD
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        CNY
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        BZR
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SEK
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        HKD
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

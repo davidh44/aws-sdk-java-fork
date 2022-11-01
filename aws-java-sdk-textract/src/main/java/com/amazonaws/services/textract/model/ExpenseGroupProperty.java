@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Shows the group that a certain key belongs to. This helps differentiate responses like addresses that can appear
- * similar in response JSON.
+ * Shows the group that a certain key belongs to. This helps differentiate between names and addresses for different
+ * organizations, that can be hard to determine via JSON response.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/ExpenseGroupProperty" target="_top">AWS API
@@ -31,7 +31,7 @@ public class ExpenseGroupProperty implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Informs you on the kind of label associated with the group
+     * Informs you on whether the expense group is a name or an address.
      * </p>
      */
     private java.util.List<String> types;
@@ -44,10 +44,10 @@ public class ExpenseGroupProperty implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Informs you on the kind of label associated with the group
+     * Informs you on whether the expense group is a name or an address.
      * </p>
      * 
-     * @return Informs you on the kind of label associated with the group
+     * @return Informs you on whether the expense group is a name or an address.
      */
 
     public java.util.List<String> getTypes() {
@@ -56,11 +56,11 @@ public class ExpenseGroupProperty implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Informs you on the kind of label associated with the group
+     * Informs you on whether the expense group is a name or an address.
      * </p>
      * 
      * @param types
-     *        Informs you on the kind of label associated with the group
+     *        Informs you on whether the expense group is a name or an address.
      */
 
     public void setTypes(java.util.Collection<String> types) {
@@ -74,7 +74,7 @@ public class ExpenseGroupProperty implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Informs you on the kind of label associated with the group
+     * Informs you on whether the expense group is a name or an address.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class ExpenseGroupProperty implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param types
-     *        Informs you on the kind of label associated with the group
+     *        Informs you on whether the expense group is a name or an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class ExpenseGroupProperty implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Informs you on the kind of label associated with the group
+     * Informs you on whether the expense group is a name or an address.
      * </p>
      * 
      * @param types
-     *        Informs you on the kind of label associated with the group
+     *        Informs you on whether the expense group is a name or an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

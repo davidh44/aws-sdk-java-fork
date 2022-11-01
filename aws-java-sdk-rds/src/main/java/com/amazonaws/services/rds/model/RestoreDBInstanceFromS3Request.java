@@ -314,9 +314,9 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB instance.
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     * IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      */
     private Integer iops;
@@ -359,10 +359,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -629,6 +630,15 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String networkType;
+    /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     */
+    private Integer storageThroughput;
 
     /**
      * <p>
@@ -2489,16 +2499,16 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB instance.
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     * IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param iops
      *        The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB
-     *        instance. For information about valid Iops values, see <a
+     *        instance. For information about valid IOPS values, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     *        Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      */
 
     public void setIops(Integer iops) {
@@ -2508,15 +2518,15 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB instance.
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     * IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @return The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB
-     *         instance. For information about valid Iops values, see <a
+     *         instance. For information about valid IOPS values, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *         Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     *         Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      */
 
     public Integer getIops() {
@@ -2526,16 +2536,16 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB instance.
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     * IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param iops
      *        The amount of Provisioned IOPS (input/output operations per second) to allocate initially for the DB
-     *        instance. For information about valid Iops values, see <a
+     *        instance. For information about valid IOPS values, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide.</i>
+     *        Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2840,10 +2850,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -2852,10 +2863,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     *        Valid values: <code>gp2 | gp3 | io1 | standard</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     *        <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -2870,10 +2882,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -2881,10 +2894,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
-     *         Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     *         Valid values: <code>gp2 | gp3 | io1 | standard</code>
      *         </p>
      *         <p>
-     *         If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     *         If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     *         <code>Iops</code> parameter.
      *         </p>
      *         <p>
      *         Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -2899,10 +2913,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -2911,10 +2926,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
+     *        Valid values: <code>gp2 | gp3 | io1 | standard</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     *        <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -4726,6 +4742,61 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        Specifies the storage throughput value for the DB instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom or Amazon Aurora.
+     */
+
+    public void setStorageThroughput(Integer storageThroughput) {
+        this.storageThroughput = storageThroughput;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     * 
+     * @return Specifies the storage throughput value for the DB instance.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom or Amazon Aurora.
+     */
+
+    public Integer getStorageThroughput() {
+        return this.storageThroughput;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        Specifies the storage throughput value for the DB instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBInstanceFromS3Request withStorageThroughput(Integer storageThroughput) {
+        setStorageThroughput(storageThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4826,7 +4897,9 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
         if (getMaxAllocatedStorage() != null)
             sb.append("MaxAllocatedStorage: ").append(getMaxAllocatedStorage()).append(",");
         if (getNetworkType() != null)
-            sb.append("NetworkType: ").append(getNetworkType());
+            sb.append("NetworkType: ").append(getNetworkType()).append(",");
+        if (getStorageThroughput() != null)
+            sb.append("StorageThroughput: ").append(getStorageThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -5023,6 +5096,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
             return false;
+        if (other.getStorageThroughput() == null ^ this.getStorageThroughput() == null)
+            return false;
+        if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -5076,6 +5153,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getMaxAllocatedStorage() == null) ? 0 : getMaxAllocatedStorage().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
+        hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         return hashCode;
     }
 

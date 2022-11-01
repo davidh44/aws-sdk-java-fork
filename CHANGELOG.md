@@ -1,3 +1,12 @@
+# __1.12.333__ __2022-11-01__
+## __Amazon Relational Database Service__
+  - ### Features
+    - Relational Database Service - This release adds support for configuring Storage Throughput on RDS database instances.
+
+## __Amazon Textract__
+  - ### Features
+    - Add ocr results in AnalyzeIDResponse as blocks
+
 # __1.12.332__ __2022-10-31__
 ## __AWS App Runner__
   - ### Features

@@ -502,9 +502,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.
@@ -3759,9 +3759,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.
@@ -3774,9 +3774,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB
      *        instance in the Multi-AZ DB cluster.</p>
      *        <p>
-     *        For information about valid Iops values, see <a
+     *        For information about valid IOPS values, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     *        Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.
@@ -3795,9 +3795,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.
@@ -3809,9 +3809,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * @return The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB
      *         instance in the Multi-AZ DB cluster.</p>
      *         <p>
-     *         For information about valid Iops values, see <a
+     *         For information about valid IOPS values, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *         Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     *         Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.
@@ -3830,9 +3830,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * For information about valid Iops values, see <a
+     * For information about valid IOPS values, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.
@@ -3845,9 +3845,9 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB
      *        instance in the Multi-AZ DB cluster.</p>
      *        <p>
-     *        For information about valid Iops values, see <a
+     *        For information about valid IOPS values, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS Storage to Improve Performance</a> in the <i>Amazon RDS User Guide</i>.
+     *        Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB instance.

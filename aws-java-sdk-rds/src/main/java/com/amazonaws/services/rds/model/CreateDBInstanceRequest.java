@@ -278,8 +278,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
-     * Custom for SQL Server.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     * for RDS Custom for SQL Server.
      * </p>
      * </li>
      * <li>
@@ -298,7 +298,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -321,7 +321,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -344,7 +344,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -367,7 +367,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -390,7 +390,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2):
+     * General Purpose (SSD) storage (gp2, gp3):
      * </p>
      * <ul>
      * <li>
@@ -1031,9 +1031,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     * instance. For information about valid <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.
+     * instance. For information about valid IOPS values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50 of the
@@ -1167,10 +1167,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -1669,6 +1670,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String networkType;
+    /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     */
+    private Integer storageThroughput;
 
     /**
      * Default constructor for CreateDBInstanceRequest object. Callers should use the setter or fluent setter (with...)
@@ -1727,8 +1737,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
-     *        for RDS Custom for SQL Server.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle,
+     *        16384 for RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        <li>
@@ -1747,7 +1757,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -1770,7 +1780,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -1793,7 +1803,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -1816,7 +1826,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -1839,7 +1849,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2):
+     *        General Purpose (SSD) storage (gp2, gp3):
      *        </p>
      *        <ul>
      *        <li>
@@ -3481,8 +3491,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
-     * Custom for SQL Server.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     * for RDS Custom for SQL Server.
      * </p>
      * </li>
      * <li>
@@ -3501,7 +3511,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3524,7 +3534,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3547,7 +3557,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3570,7 +3580,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3593,7 +3603,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2):
+     * General Purpose (SSD) storage (gp2, gp3):
      * </p>
      * <ul>
      * <li>
@@ -3665,8 +3675,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
-     *        for RDS Custom for SQL Server.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle,
+     *        16384 for RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        <li>
@@ -3685,7 +3695,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -3708,7 +3718,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -3731,7 +3741,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -3754,7 +3764,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -3777,7 +3787,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2):
+     *        General Purpose (SSD) storage (gp2, gp3):
      *        </p>
      *        <ul>
      *        <li>
@@ -3855,8 +3865,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
-     * Custom for SQL Server.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     * for RDS Custom for SQL Server.
      * </p>
      * </li>
      * <li>
@@ -3875,7 +3885,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3898,7 +3908,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3921,7 +3931,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3944,7 +3954,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -3967,7 +3977,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2):
+     * General Purpose (SSD) storage (gp2, gp3):
      * </p>
      * <ul>
      * <li>
@@ -4038,8 +4048,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
-     *         for RDS Custom for SQL Server.
+     *         General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle,
+     *         16384 for RDS Custom for SQL Server.
      *         </p>
      *         </li>
      *         <li>
@@ -4058,7 +4068,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *         General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *         </p>
      *         </li>
      *         <li>
@@ -4081,7 +4091,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *         General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *         </p>
      *         </li>
      *         <li>
@@ -4104,7 +4114,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *         General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *         </p>
      *         </li>
      *         <li>
@@ -4127,7 +4137,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *         General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *         </p>
      *         </li>
      *         <li>
@@ -4150,7 +4160,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2):
+     *         General Purpose (SSD) storage (gp2, gp3):
      *         </p>
      *         <ul>
      *         <li>
@@ -4228,8 +4238,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
-     * Custom for SQL Server.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     * for RDS Custom for SQL Server.
      * </p>
      * </li>
      * <li>
@@ -4248,7 +4258,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -4271,7 +4281,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -4294,7 +4304,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -4317,7 +4327,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     * General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      * </p>
      * </li>
      * <li>
@@ -4340,7 +4350,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2):
+     * General Purpose (SSD) storage (gp2, gp3):
      * </p>
      * <ul>
      * <li>
@@ -4412,8 +4422,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
-     *        for RDS Custom for SQL Server.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 40 to 65536 for RDS Custom for Oracle,
+     *        16384 for RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        <li>
@@ -4432,7 +4442,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -4455,7 +4465,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -4478,7 +4488,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -4501,7 +4511,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 20 to 65536.
+     *        General Purpose (SSD) storage (gp2, gp3): Must be an integer from 20 to 65536.
      *        </p>
      *        </li>
      *        <li>
@@ -4524,7 +4534,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2):
+     *        General Purpose (SSD) storage (gp2, gp3):
      *        </p>
      *        <ul>
      *        <li>
@@ -8273,9 +8283,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     * instance. For information about valid <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.
+     * instance. For information about valid IOPS values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50 of the
@@ -8291,9 +8301,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param iops
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     *        instance. For information about valid <code>Iops</code> values, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *        instance. For information about valid IOPS values, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     *        storage</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50
      *        of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and
@@ -8313,9 +8323,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     * instance. For information about valid <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.
+     * instance. For information about valid IOPS values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50 of the
@@ -8330,9 +8340,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     *         instance. For information about valid <code>Iops</code> values, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *         Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *         instance. For information about valid IOPS values, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     *         storage</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and
      *         50 of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1
@@ -8352,9 +8362,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     * instance. For information about valid <code>Iops</code> values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.
+     * instance. For information about valid IOPS values, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50 of the
@@ -8370,9 +8380,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param iops
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
-     *        instance. For information about valid <code>Iops</code> values, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *        instance. For information about valid IOPS values, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS DB instance
+     *        storage</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50
      *        of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and
@@ -9236,10 +9246,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -9254,10 +9265,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid values: <code>standard | gp2 | io1</code>
+     *        Valid values: <code>gp2 | gp3 | io1 | standard</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     *        <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -9278,10 +9290,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -9295,10 +9308,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
-     *         Valid values: <code>standard | gp2 | io1</code>
+     *         Valid values: <code>gp2 | gp3 | io1 | standard</code>
      *         </p>
      *         <p>
-     *         If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     *         If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     *         <code>Iops</code> parameter.
      *         </p>
      *         <p>
      *         Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -9319,10 +9333,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>gp2 | gp3 | io1 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
+     * parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -9337,10 +9352,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid values: <code>standard | gp2 | io1</code>
+     *        Valid values: <code>gp2 | gp3 | io1 | standard</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, you must also include a value for the <code>Iops</code> parameter.
+     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
+     *        <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
@@ -12711,6 +12727,61 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        Specifies the storage throughput value for the DB instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom or Amazon Aurora.
+     */
+
+    public void setStorageThroughput(Integer storageThroughput) {
+        this.storageThroughput = storageThroughput;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     * 
+     * @return Specifies the storage throughput value for the DB instance.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom or Amazon Aurora.
+     */
+
+    public Integer getStorageThroughput() {
+        return this.storageThroughput;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage throughput value for the DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        Specifies the storage throughput value for the DB instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom or Amazon Aurora.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withStorageThroughput(Integer storageThroughput) {
+        setStorageThroughput(storageThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -12823,7 +12894,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getBackupTarget() != null)
             sb.append("BackupTarget: ").append(getBackupTarget()).append(",");
         if (getNetworkType() != null)
-            sb.append("NetworkType: ").append(getNetworkType());
+            sb.append("NetworkType: ").append(getNetworkType()).append(",");
+        if (getStorageThroughput() != null)
+            sb.append("StorageThroughput: ").append(getStorageThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -13044,6 +13117,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
             return false;
+        if (other.getStorageThroughput() == null ^ this.getStorageThroughput() == null)
+            return false;
+        if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -13103,6 +13180,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getCustomIamInstanceProfile() == null) ? 0 : getCustomIamInstanceProfile().hashCode());
         hashCode = prime * hashCode + ((getBackupTarget() == null) ? 0 : getBackupTarget().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
+        hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         return hashCode;
     }
 
