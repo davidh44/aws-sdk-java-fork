@@ -39,6 +39,8 @@ public class SnapshotMarshaller {
             .marshallLocationName("ARN").build();
     private static final MarshallingInfo<StructuredPojo> CLUSTERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClusterConfiguration").build();
+    private static final MarshallingInfo<String> DATATIERING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataTiering").build();
 
     private static final SnapshotMarshaller instance = new SnapshotMarshaller();
 
@@ -62,6 +64,7 @@ public class SnapshotMarshaller {
             protocolMarshaller.marshall(snapshot.getKmsKeyId(), KMSKEYID_BINDING);
             protocolMarshaller.marshall(snapshot.getARN(), ARN_BINDING);
             protocolMarshaller.marshall(snapshot.getClusterConfiguration(), CLUSTERCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(snapshot.getDataTiering(), DATATIERING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

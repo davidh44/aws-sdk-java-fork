@@ -66,7 +66,9 @@ public enum TrainingInstanceType {
     MlG516xlarge("ml.g5.16xlarge"),
     MlG512xlarge("ml.g5.12xlarge"),
     MlG524xlarge("ml.g5.24xlarge"),
-    MlG548xlarge("ml.g5.48xlarge");
+    MlG548xlarge("ml.g5.48xlarge"),
+    MlTrn12xlarge("ml.trn1.2xlarge"),
+    MlTrn132xlarge("ml.trn1.32xlarge");
 
     private String value;
 

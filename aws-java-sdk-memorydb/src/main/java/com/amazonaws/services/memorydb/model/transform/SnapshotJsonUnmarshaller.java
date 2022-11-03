@@ -72,6 +72,10 @@ public class SnapshotJsonUnmarshaller implements Unmarshaller<Snapshot, JsonUnma
                     context.nextToken();
                     snapshot.setClusterConfiguration(ClusterConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DataTiering", targetDepth)) {
+                    context.nextToken();
+                    snapshot.setDataTiering(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

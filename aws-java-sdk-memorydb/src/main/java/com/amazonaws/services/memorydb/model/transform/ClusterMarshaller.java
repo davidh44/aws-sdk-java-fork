@@ -78,6 +78,8 @@ public class ClusterMarshaller {
             .marshallLocationName("ACLName").build();
     private static final MarshallingInfo<Boolean> AUTOMINORVERSIONUPGRADE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoMinorVersionUpgrade").build();
+    private static final MarshallingInfo<String> DATATIERING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataTiering").build();
 
     private static final ClusterMarshaller instance = new ClusterMarshaller();
 
@@ -120,6 +122,7 @@ public class ClusterMarshaller {
             protocolMarshaller.marshall(cluster.getSnapshotWindow(), SNAPSHOTWINDOW_BINDING);
             protocolMarshaller.marshall(cluster.getACLName(), ACLNAME_BINDING);
             protocolMarshaller.marshall(cluster.getAutoMinorVersionUpgrade(), AUTOMINORVERSIONUPGRADE_BINDING);
+            protocolMarshaller.marshall(cluster.getDataTiering(), DATATIERING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
