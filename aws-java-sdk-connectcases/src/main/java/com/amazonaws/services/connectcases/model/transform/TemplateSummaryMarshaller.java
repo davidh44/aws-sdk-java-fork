@@ -29,6 +29,8 @@ public class TemplateSummaryMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("status").build();
     private static final MarshallingInfo<String> TEMPLATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("templateArn").build();
     private static final MarshallingInfo<String> TEMPLATEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -51,6 +53,7 @@ public class TemplateSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(templateSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(templateSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(templateSummary.getTemplateArn(), TEMPLATEARN_BINDING);
             protocolMarshaller.marshall(templateSummary.getTemplateId(), TEMPLATEID_BINDING);
         } catch (Exception e) {

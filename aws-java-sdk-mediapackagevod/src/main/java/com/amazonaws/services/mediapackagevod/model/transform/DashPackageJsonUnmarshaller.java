@@ -62,6 +62,10 @@ public class DashPackageJsonUnmarshaller implements Unmarshaller<DashPackage, Js
                     context.nextToken();
                     dashPackage.setIncludeEncoderConfigurationInSegments(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("includeIframeOnlyStream", targetDepth)) {
+                    context.nextToken();
+                    dashPackage.setIncludeIframeOnlyStream(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("periodTriggers", targetDepth)) {
                     context.nextToken();
                     dashPackage.setPeriodTriggers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

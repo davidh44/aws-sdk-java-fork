@@ -52,6 +52,10 @@ public class TemplateSummaryJsonUnmarshaller implements Unmarshaller<TemplateSum
                     context.nextToken();
                     templateSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    templateSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("templateArn", targetDepth)) {
                     context.nextToken();
                     templateSummary.setTemplateArn(context.getUnmarshaller(String.class).unmarshall(context));

@@ -48,6 +48,10 @@ public class GetSatelliteResultJsonUnmarshaller implements Unmarshaller<GetSatel
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("currentEphemeris", targetDepth)) {
+                    context.nextToken();
+                    getSatelliteResult.setCurrentEphemeris(EphemerisMetaDataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("groundStations", targetDepth)) {
                     context.nextToken();
                     getSatelliteResult.setGroundStations(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

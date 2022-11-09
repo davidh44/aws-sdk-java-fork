@@ -36,7 +36,7 @@ public class S3RecordingDetails implements Serializable, Cloneable, StructuredPo
     private String bucketArn;
     /**
      * <p>
-     * Template of the S3 key used.
+     * Key template used for the S3 Recording Configuration
      * </p>
      */
     private String keyTemplate;
@@ -83,11 +83,11 @@ public class S3RecordingDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Template of the S3 key used.
+     * Key template used for the S3 Recording Configuration
      * </p>
      * 
      * @param keyTemplate
-     *        Template of the S3 key used.
+     *        Key template used for the S3 Recording Configuration
      */
 
     public void setKeyTemplate(String keyTemplate) {
@@ -96,10 +96,10 @@ public class S3RecordingDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Template of the S3 key used.
+     * Key template used for the S3 Recording Configuration
      * </p>
      * 
-     * @return Template of the S3 key used.
+     * @return Key template used for the S3 Recording Configuration
      */
 
     public String getKeyTemplate() {
@@ -108,11 +108,11 @@ public class S3RecordingDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Template of the S3 key used.
+     * Key template used for the S3 Recording Configuration
      * </p>
      * 
      * @param keyTemplate
-     *        Template of the S3 key used.
+     *        Key template used for the S3 Recording Configuration
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

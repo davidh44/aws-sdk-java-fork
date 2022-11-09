@@ -23,7 +23,8 @@ public enum ArchitectureType {
     I386("i386"),
     X86_64("x86_64"),
     Arm64("arm64"),
-    X86_64_mac("x86_64_mac");
+    X86_64_mac("x86_64_mac"),
+    Arm64_mac("arm64_mac");
 
     private String value;
 

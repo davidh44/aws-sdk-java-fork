@@ -59,6 +59,9 @@ public class ClaimPhoneNumberRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
      * idempotent APIs</a>.
      * </p>
+     * <p>
+     * Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
+     * </p>
      */
     private String clientToken;
 
@@ -275,12 +278,17 @@ public class ClaimPhoneNumberRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
      * idempotent APIs</a>.
      * </p>
+     * <p>
+     * Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
+     * </p>
      * 
      * @param clientToken
      *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not
      *        provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
      *        href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries
-     *        safe with idempotent APIs</a>.
+     *        safe with idempotent APIs</a>.</p>
+     *        <p>
+     *        Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
      */
 
     public void setClientToken(String clientToken) {
@@ -294,11 +302,16 @@ public class ClaimPhoneNumberRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
      * idempotent APIs</a>.
      * </p>
+     * <p>
+     * Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
+     * </p>
      * 
      * @return A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not
      *         provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see
      *         <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making
-     *         retries safe with idempotent APIs</a>.
+     *         retries safe with idempotent APIs</a>.</p>
+     *         <p>
+     *         Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
      */
 
     public String getClientToken() {
@@ -312,12 +325,17 @@ public class ClaimPhoneNumberRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with
      * idempotent APIs</a>.
      * </p>
+     * <p>
+     * Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
+     * </p>
      * 
      * @param clientToken
      *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not
      *        provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a
      *        href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries
-     *        safe with idempotent APIs</a>.
+     *        safe with idempotent APIs</a>.</p>
+     *        <p>
+     *        Pattern: <code>^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

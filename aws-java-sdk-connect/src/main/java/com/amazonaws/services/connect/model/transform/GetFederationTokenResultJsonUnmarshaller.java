@@ -52,6 +52,18 @@ public class GetFederationTokenResultJsonUnmarshaller implements Unmarshaller<Ge
                     context.nextToken();
                     getFederationTokenResult.setCredentials(CredentialsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SignInUrl", targetDepth)) {
+                    context.nextToken();
+                    getFederationTokenResult.setSignInUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("UserArn", targetDepth)) {
+                    context.nextToken();
+                    getFederationTokenResult.setUserArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("UserId", targetDepth)) {
+                    context.nextToken();
+                    getFederationTokenResult.setUserId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

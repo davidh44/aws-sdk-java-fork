@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SatelliteListItemMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> CURRENTEPHEMERIS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("currentEphemeris").build();
     private static final MarshallingInfo<List> GROUNDSTATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("groundStations").build();
     private static final MarshallingInfo<Integer> NORADSATELLITEID_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -53,6 +55,7 @@ public class SatelliteListItemMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(satelliteListItem.getCurrentEphemeris(), CURRENTEPHEMERIS_BINDING);
             protocolMarshaller.marshall(satelliteListItem.getGroundStations(), GROUNDSTATIONS_BINDING);
             protocolMarshaller.marshall(satelliteListItem.getNoradSatelliteID(), NORADSATELLITEID_BINDING);
             protocolMarshaller.marshall(satelliteListItem.getSatelliteArn(), SATELLITEARN_BINDING);

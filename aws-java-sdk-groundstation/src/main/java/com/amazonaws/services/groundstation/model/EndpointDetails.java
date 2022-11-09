@@ -36,7 +36,8 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
     private DataflowEndpoint endpoint;
     /**
      * <p>
-     * Endpoint security details.
+     * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to
+     * instances.
      * </p>
      */
     private SecurityDetails securityDetails;
@@ -83,11 +84,13 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Endpoint security details.
+     * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to
+     * instances.
      * </p>
      * 
      * @param securityDetails
-     *        Endpoint security details.
+     *        Endpoint security details including a list of subnets, a list of security groups and a role to connect
+     *        streams to instances.
      */
 
     public void setSecurityDetails(SecurityDetails securityDetails) {
@@ -96,10 +99,12 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Endpoint security details.
+     * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to
+     * instances.
      * </p>
      * 
-     * @return Endpoint security details.
+     * @return Endpoint security details including a list of subnets, a list of security groups and a role to connect
+     *         streams to instances.
      */
 
     public SecurityDetails getSecurityDetails() {
@@ -108,11 +113,13 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Endpoint security details.
+     * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to
+     * instances.
      * </p>
      * 
      * @param securityDetails
-     *        Endpoint security details.
+     *        Endpoint security details including a list of subnets, a list of security groups and a role to connect
+     *        streams to instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
