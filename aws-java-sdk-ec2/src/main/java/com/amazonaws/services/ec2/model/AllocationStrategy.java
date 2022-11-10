@@ -23,7 +23,8 @@ public enum AllocationStrategy {
     LowestPrice("lowestPrice"),
     Diversified("diversified"),
     CapacityOptimized("capacityOptimized"),
-    CapacityOptimizedPrioritized("capacityOptimizedPrioritized");
+    CapacityOptimizedPrioritized("capacityOptimizedPrioritized"),
+    PriceCapacityOptimized("priceCapacityOptimized");
 
     private String value;
 

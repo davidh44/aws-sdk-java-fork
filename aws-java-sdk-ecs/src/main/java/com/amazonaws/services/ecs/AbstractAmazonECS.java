@@ -159,6 +159,11 @@ public class AbstractAmazonECS implements AmazonECS {
     }
 
     @Override
+    public GetTaskProtectionResult getTaskProtection(GetTaskProtectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAccountSettingsResult listAccountSettings(ListAccountSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -340,6 +345,11 @@ public class AbstractAmazonECS implements AmazonECS {
 
     @Override
     public UpdateServicePrimaryTaskSetResult updateServicePrimaryTaskSet(UpdateServicePrimaryTaskSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTaskProtectionResult updateTaskProtection(UpdateTaskProtectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

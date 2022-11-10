@@ -114,8 +114,8 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      */
     private Integer healthCheckGracePeriod;
@@ -810,8 +810,8 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param healthCheckGracePeriod
@@ -819,8 +819,8 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or
      *        custom health check. This is useful if your instances do not immediately pass these health checks after
      *        they enter the <code>InService</code> state. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health
+     *        check grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
@@ -833,16 +833,16 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of
      *         an EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load
      *         Balancing or custom health check. This is useful if your instances do not immediately pass these health
      *         checks after they enter the <code>InService</code> state. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *         >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the
+     *         health check grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Integer getHealthCheckGracePeriod() {
@@ -855,8 +855,8 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param healthCheckGracePeriod
@@ -864,8 +864,8 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or
      *        custom health check. This is useful if your instances do not immediately pass these health checks after
      *        they enter the <code>InService</code> state. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health
+     *        check grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

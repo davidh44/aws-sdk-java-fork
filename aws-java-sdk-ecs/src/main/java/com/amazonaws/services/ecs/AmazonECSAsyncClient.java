@@ -1032,6 +1032,39 @@ public class AmazonECSAsyncClient extends AmazonECSClient implements AmazonECSAs
     }
 
     @Override
+    public java.util.concurrent.Future<GetTaskProtectionResult> getTaskProtectionAsync(GetTaskProtectionRequest request) {
+
+        return getTaskProtectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTaskProtectionResult> getTaskProtectionAsync(final GetTaskProtectionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTaskProtectionRequest, GetTaskProtectionResult> asyncHandler) {
+        final GetTaskProtectionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTaskProtectionResult>() {
+            @Override
+            public GetTaskProtectionResult call() throws Exception {
+                GetTaskProtectionResult result = null;
+
+                try {
+                    result = executeGetTaskProtection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAccountSettingsResult> listAccountSettingsAsync(ListAccountSettingsRequest request) {
 
         return listAccountSettingsAsync(request, null);
@@ -2167,6 +2200,39 @@ public class AmazonECSAsyncClient extends AmazonECSClient implements AmazonECSAs
 
                 try {
                     result = executeUpdateServicePrimaryTaskSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTaskProtectionResult> updateTaskProtectionAsync(UpdateTaskProtectionRequest request) {
+
+        return updateTaskProtectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTaskProtectionResult> updateTaskProtectionAsync(final UpdateTaskProtectionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateTaskProtectionRequest, UpdateTaskProtectionResult> asyncHandler) {
+        final UpdateTaskProtectionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateTaskProtectionResult>() {
+            @Override
+            public UpdateTaskProtectionResult call() throws Exception {
+                UpdateTaskProtectionResult result = null;
+
+                try {
+                    result = executeUpdateTaskProtection(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

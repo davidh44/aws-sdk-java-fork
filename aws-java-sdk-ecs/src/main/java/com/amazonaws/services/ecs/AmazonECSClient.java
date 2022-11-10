@@ -2058,6 +2058,78 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
 
     /**
      * <p>
+     * Retrieves the protection status of tasks in an Amazon ECS service.
+     * </p>
+     * 
+     * @param getTaskProtectionRequest
+     * @return Result of the GetTaskProtection operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have authorization to perform the requested action.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. This client action might be using an action or
+     *         resource on behalf of a user that doesn't have permissions to use the action or resource,. Or, it might
+     *         be specifying an identifier that isn't valid.
+     * @throws ClusterNotFoundException
+     *         The specified cluster wasn't found. You can view your available clusters with <a>ListClusters</a>. Amazon
+     *         ECS clusters are Region specific.
+     * @throws InvalidParameterException
+     *         The specified parameter isn't valid. Review the available parameters for the API request.
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @throws UnsupportedFeatureException
+     *         The specified task isn't supported in this Region.
+     * @sample AmazonECS.GetTaskProtection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/GetTaskProtection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetTaskProtectionResult getTaskProtection(GetTaskProtectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTaskProtection(request);
+    }
+
+    @SdkInternalApi
+    final GetTaskProtectionResult executeGetTaskProtection(GetTaskProtectionRequest getTaskProtectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTaskProtectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTaskProtectionRequest> request = null;
+        Response<GetTaskProtectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTaskProtectionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getTaskProtectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ECS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTaskProtection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTaskProtectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetTaskProtectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the account settings for a specified principal.
      * </p>
      * 
@@ -4501,6 +4573,112 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
             HttpResponseHandler<AmazonWebServiceResponse<UpdateServicePrimaryTaskSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateServicePrimaryTaskSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the protection status of a task. You can set <code>protectionEnabled</code> to <code>true</code> to
+     * protect your task from termination during scale-in events from <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service
+     * Autoscaling</a> or <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">deployments</a>.
+     * </p>
+     * <p>
+     * Task-protection, by default, expires after 2 hours at which point Amazon ECS unsets the
+     * <code>protectionEnabled</code> property making the task eligible for termination by a subsequent scale-in event.
+     * </p>
+     * <p>
+     * You can specify a custom expiration period for task protection from 1 minute to up to 2,880 minutes (48 hours).
+     * To specify the custom expiration period, set the <code>expiresInMinutes</code> property. The
+     * <code>expiresInMinutes</code> property is always reset when you invoke this operation for a task that already has
+     * <code>protectionEnabled</code> set to <code>true</code>. You can keep extending the protection expiration period
+     * of a task by invoking this operation repeatedly.
+     * </p>
+     * <p>
+     * To learn more about Amazon ECS task protection, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection.html">Task scale-in
+     * protection</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for tasks belonging to an Amazon ECS service. Invoking this operation for a
+     * standalone task will result in an <code>TASK_NOT_VALID</code> failure. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html.html">API failure
+     * reasons</a>.
+     * </p>
+     * </note> <important>
+     * <p>
+     * If you prefer to set task protection from within the container, we recommend using the <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-endpoint.html">Amazon ECS container
+     * agent endpoint</a>.
+     * </p>
+     * </important>
+     * 
+     * @param updateTaskProtectionRequest
+     * @return Result of the UpdateTaskProtection operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have authorization to perform the requested action.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. This client action might be using an action or
+     *         resource on behalf of a user that doesn't have permissions to use the action or resource,. Or, it might
+     *         be specifying an identifier that isn't valid.
+     * @throws ClusterNotFoundException
+     *         The specified cluster wasn't found. You can view your available clusters with <a>ListClusters</a>. Amazon
+     *         ECS clusters are Region specific.
+     * @throws InvalidParameterException
+     *         The specified parameter isn't valid. Review the available parameters for the API request.
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @throws UnsupportedFeatureException
+     *         The specified task isn't supported in this Region.
+     * @sample AmazonECS.UpdateTaskProtection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateTaskProtection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateTaskProtectionResult updateTaskProtection(UpdateTaskProtectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateTaskProtection(request);
+    }
+
+    @SdkInternalApi
+    final UpdateTaskProtectionResult executeUpdateTaskProtection(UpdateTaskProtectionRequest updateTaskProtectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateTaskProtectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateTaskProtectionRequest> request = null;
+        Response<UpdateTaskProtectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateTaskProtectionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateTaskProtectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ECS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateTaskProtection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateTaskProtectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateTaskProtectionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

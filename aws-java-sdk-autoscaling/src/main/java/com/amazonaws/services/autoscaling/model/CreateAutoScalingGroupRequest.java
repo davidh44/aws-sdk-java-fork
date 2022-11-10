@@ -29,6 +29,15 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The name of the Auto Scaling group. This name must be unique per Region per account.
      * </p>
+     * <p>
+     * The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and upper and
+     * lowercased letters.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use a colon (:) in the name.
+     * </p>
+     * </note>
      */
     private String autoScalingGroupName;
     /**
@@ -168,8 +177,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: <code>0</code> seconds
@@ -324,9 +333,26 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The name of the Auto Scaling group. This name must be unique per Region per account.
      * </p>
+     * <p>
+     * The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and upper and
+     * lowercased letters.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use a colon (:) in the name.
+     * </p>
+     * </note>
      * 
      * @param autoScalingGroupName
-     *        The name of the Auto Scaling group. This name must be unique per Region per account.
+     *        The name of the Auto Scaling group. This name must be unique per Region per account.</p>
+     *        <p>
+     *        The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and
+     *        upper and lowercased letters.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You cannot use a colon (:) in the name.
+     *        </p>
      */
 
     public void setAutoScalingGroupName(String autoScalingGroupName) {
@@ -337,8 +363,25 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The name of the Auto Scaling group. This name must be unique per Region per account.
      * </p>
+     * <p>
+     * The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and upper and
+     * lowercased letters.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use a colon (:) in the name.
+     * </p>
+     * </note>
      * 
-     * @return The name of the Auto Scaling group. This name must be unique per Region per account.
+     * @return The name of the Auto Scaling group. This name must be unique per Region per account.</p>
+     *         <p>
+     *         The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and
+     *         upper and lowercased letters.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You cannot use a colon (:) in the name.
+     *         </p>
      */
 
     public String getAutoScalingGroupName() {
@@ -349,9 +392,26 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The name of the Auto Scaling group. This name must be unique per Region per account.
      * </p>
+     * <p>
+     * The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and upper and
+     * lowercased letters.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot use a colon (:) in the name.
+     * </p>
+     * </note>
      * 
      * @param autoScalingGroupName
-     *        The name of the Auto Scaling group. This name must be unique per Region per account.
+     *        The name of the Auto Scaling group. This name must be unique per Region per account.</p>
+     *        <p>
+     *        The name can contain any ASCII character 33 to 126 including most punctuation characters, digits, and
+     *        upper and lowercased letters.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You cannot use a colon (:) in the name.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1314,8 +1374,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: <code>0</code> seconds
@@ -1326,8 +1386,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or
      *        custom health check. This is useful if your instances do not immediately pass these health checks after
      *        they enter the <code>InService</code> state. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health
+     *        check grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *        <p>
      *        Default: <code>0</code> seconds
      */
@@ -1342,8 +1402,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: <code>0</code> seconds
@@ -1353,8 +1413,9 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *         an EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load
      *         Balancing or custom health check. This is useful if your instances do not immediately pass these health
      *         checks after they enter the <code>InService</code> state. For more information, see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *         >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the
+     *         health check grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
+     *         Guide</i>.</p>
      *         <p>
      *         Default: <code>0</code> seconds
      */
@@ -1369,8 +1430,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
      * health check. This is useful if your instances do not immediately pass these health checks after they enter the
      * <code>InService</code> state. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
-     * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health check
+     * grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
      * Default: <code>0</code> seconds
@@ -1381,8 +1442,8 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or
      *        custom health check. This is useful if your instances do not immediately pass these health checks after
      *        they enter the <code>InService</code> state. For more information, see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/health-check-grace-period.html">Set the health
+     *        check grace period for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *        <p>
      *        Default: <code>0</code> seconds
      * @return Returns a reference to this object so that method calls can be chained together.

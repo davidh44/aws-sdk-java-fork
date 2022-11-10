@@ -37,10 +37,11 @@
  * Explorer. As a result, views in the aggregator index Region include resources from all of the indexed Regions in your
  * account.
  * </p>
- * 
- * <pre>
- * <code> &lt;p&gt;For more information about Amazon Web Services Resource Explorer, including how to enable and configure the service, see the &lt;a href=&quot;https://docs.aws.amazon.com/resource-explorer/latest/userguide/&quot;&gt;Amazon Web Services Resource Explorer User Guide&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The example HTTP query requests and responses in this guide are displayed with the &lt;a href=&quot;https://json.org&quot;&gt;JSON&lt;/a&gt; formatted across multiple lines for readability. The actual query responses from the Resource Explorer service do not include this extra whitespace.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;We want your feedback about this documentation&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Our goal is to help you get everything you can from Resource Explorer. If this guide helps you to do that, then let us know. If the guide isn't helping you, then we want to hear from you so we can address the issue. Use the &lt;b&gt;Feedback&lt;/b&gt; link that's in the upper-right corner of every page. That sends your comments directly to the writers of this guide. We review every submission, looking for opportunities to improve the documentation. Thank you in advance for your help!&lt;/p&gt; </code>
- * </pre>
+ * <p>
+ * For more information about Amazon Web Services Resource Explorer, including how to enable and configure the service,
+ * see the <a href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/">Amazon Web Services Resource
+ * Explorer User Guide</a>.
+ * </p>
  */
 package com.amazonaws.services.resourceexplorer2;
 
