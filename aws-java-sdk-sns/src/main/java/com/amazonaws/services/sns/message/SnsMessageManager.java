@@ -140,6 +140,7 @@ public class SnsMessageManager {
             case ME_SOUTH_1:
             case ME_CENTRAL_1:
             case EU_SOUTH_1:
+            case EU_CENTRAL_2:
             case AF_SOUTH_1:
             case AP_SOUTHEAST_3:
                 return "sns-signing." + regionStr + ".amazonaws.com";

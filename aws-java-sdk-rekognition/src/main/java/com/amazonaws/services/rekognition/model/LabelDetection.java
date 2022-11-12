@@ -27,7 +27,8 @@ public class LabelDetection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Time, in milliseconds from the start of the video, that the label was detected.
+     * Time, in milliseconds from the start of the video, that the label was detected. Note that <code>Timestamp</code>
+     * is not guaranteed to be accurate to the individual frame where the label first appears.
      * </p>
      */
     private Long timestamp;
@@ -40,11 +41,14 @@ public class LabelDetection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Time, in milliseconds from the start of the video, that the label was detected.
+     * Time, in milliseconds from the start of the video, that the label was detected. Note that <code>Timestamp</code>
+     * is not guaranteed to be accurate to the individual frame where the label first appears.
      * </p>
      * 
      * @param timestamp
-     *        Time, in milliseconds from the start of the video, that the label was detected.
+     *        Time, in milliseconds from the start of the video, that the label was detected. Note that
+     *        <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the label first
+     *        appears.
      */
 
     public void setTimestamp(Long timestamp) {
@@ -53,10 +57,13 @@ public class LabelDetection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Time, in milliseconds from the start of the video, that the label was detected.
+     * Time, in milliseconds from the start of the video, that the label was detected. Note that <code>Timestamp</code>
+     * is not guaranteed to be accurate to the individual frame where the label first appears.
      * </p>
      * 
-     * @return Time, in milliseconds from the start of the video, that the label was detected.
+     * @return Time, in milliseconds from the start of the video, that the label was detected. Note that
+     *         <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the label first
+     *         appears.
      */
 
     public Long getTimestamp() {
@@ -65,11 +72,14 @@ public class LabelDetection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Time, in milliseconds from the start of the video, that the label was detected.
+     * Time, in milliseconds from the start of the video, that the label was detected. Note that <code>Timestamp</code>
+     * is not guaranteed to be accurate to the individual frame where the label first appears.
      * </p>
      * 
      * @param timestamp
-     *        Time, in milliseconds from the start of the video, that the label was detected.
+     *        Time, in milliseconds from the start of the video, that the label was detected. Note that
+     *        <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the label first
+     *        appears.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

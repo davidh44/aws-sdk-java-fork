@@ -153,7 +153,7 @@ public class DevEndpoint implements Serializable, Cloneable, StructuredPojo {
     private Integer numberOfNodes;
     /**
      * <p>
-     * The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     * The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      * </p>
      */
     private String availabilityZone;
@@ -1148,11 +1148,11 @@ public class DevEndpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     * The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      * </p>
      * 
      * @param availabilityZone
-     *        The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     *        The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      */
 
     public void setAvailabilityZone(String availabilityZone) {
@@ -1161,10 +1161,10 @@ public class DevEndpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     * The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      * </p>
      * 
-     * @return The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     * @return The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      */
 
     public String getAvailabilityZone() {
@@ -1173,11 +1173,11 @@ public class DevEndpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     * The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      * </p>
      * 
      * @param availabilityZone
-     *        The AWS Availability Zone where this <code>DevEndpoint</code> is located.
+     *        The Amazon Web Services Availability Zone where this <code>DevEndpoint</code> is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

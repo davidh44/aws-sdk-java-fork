@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An array of <code>CopyAction</code> objects, which contains the details of the copy operation.
+ * An array of <code>CopyAction</code> objects, each of which contains details of the copy operation.
  * </p>
  * 
  * @see <a

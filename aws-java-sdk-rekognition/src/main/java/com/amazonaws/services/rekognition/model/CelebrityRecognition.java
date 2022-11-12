@@ -28,7 +28,9 @@ public class CelebrityRecognition implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     * The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     * appears.
      * </p>
      */
     private Long timestamp;
@@ -41,11 +43,15 @@ public class CelebrityRecognition implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     * The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     * appears.
      * </p>
      * 
      * @param timestamp
-     *        The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     *        The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     *        <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     *        appears.
      */
 
     public void setTimestamp(Long timestamp) {
@@ -54,10 +60,14 @@ public class CelebrityRecognition implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     * The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     * appears.
      * </p>
      * 
-     * @return The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     * @return The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     *         <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     *         appears.
      */
 
     public Long getTimestamp() {
@@ -66,11 +76,15 @@ public class CelebrityRecognition implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     * The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     * appears.
      * </p>
      * 
      * @param timestamp
-     *        The time, in milliseconds from the start of the video, that the celebrity was recognized.
+     *        The time, in milliseconds from the start of the video, that the celebrity was recognized. Note that
+     *        <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the celebrity first
+     *        appears.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -56,6 +56,12 @@ public class TimelineEventJsonUnmarshaller implements Unmarshaller<TimelineEvent
                     context.nextToken();
                     timelineEvent.setEventId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("eventReferences", targetDepth)) {
+                    context.nextToken();
+                    timelineEvent.setEventReferences(new ListUnmarshaller<EventReference>(EventReferenceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("eventTime", targetDepth)) {
                     context.nextToken();
                     timelineEvent.setEventTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

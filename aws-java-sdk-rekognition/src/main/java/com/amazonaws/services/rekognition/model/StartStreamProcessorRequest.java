@@ -29,7 +29,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Specifies the starting point in the Kinesis stream to start processing. You can use the producer timestamp or the
-     * fragment number. For more information, see <a
+     * fragment number. If you use the producer timestamp, you must put the time in milliseconds. For more information
+     * about fragment numbers, see <a
      * href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      * </p>
      * <p>
@@ -92,7 +93,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Specifies the starting point in the Kinesis stream to start processing. You can use the producer timestamp or the
-     * fragment number. For more information, see <a
+     * fragment number. If you use the producer timestamp, you must put the time in milliseconds. For more information
+     * about fragment numbers, see <a
      * href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      * </p>
      * <p>
@@ -102,7 +104,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param startSelector
      *        Specifies the starting point in the Kinesis stream to start processing. You can use the producer timestamp
-     *        or the fragment number. For more information, see <a
+     *        or the fragment number. If you use the producer timestamp, you must put the time in milliseconds. For more
+     *        information about fragment numbers, see <a
      *        href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      *        </p>
      *        <p>
@@ -117,7 +120,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Specifies the starting point in the Kinesis stream to start processing. You can use the producer timestamp or the
-     * fragment number. For more information, see <a
+     * fragment number. If you use the producer timestamp, you must put the time in milliseconds. For more information
+     * about fragment numbers, see <a
      * href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      * </p>
      * <p>
@@ -126,7 +130,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @return Specifies the starting point in the Kinesis stream to start processing. You can use the producer
-     *         timestamp or the fragment number. For more information, see <a
+     *         timestamp or the fragment number. If you use the producer timestamp, you must put the time in
+     *         milliseconds. For more information about fragment numbers, see <a
      *         href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      *         </p>
      *         <p>
@@ -141,7 +146,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Specifies the starting point in the Kinesis stream to start processing. You can use the producer timestamp or the
-     * fragment number. For more information, see <a
+     * fragment number. If you use the producer timestamp, you must put the time in milliseconds. For more information
+     * about fragment numbers, see <a
      * href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      * </p>
      * <p>
@@ -151,7 +157,8 @@ public class StartStreamProcessorRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param startSelector
      *        Specifies the starting point in the Kinesis stream to start processing. You can use the producer timestamp
-     *        or the fragment number. For more information, see <a
+     *        or the fragment number. If you use the producer timestamp, you must put the time in milliseconds. For more
+     *        information about fragment numbers, see <a
      *        href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html">Fragment</a>.
      *        </p>
      *        <p>

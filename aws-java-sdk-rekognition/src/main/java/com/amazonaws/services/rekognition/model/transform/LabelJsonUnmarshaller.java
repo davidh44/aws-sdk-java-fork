@@ -68,6 +68,18 @@ public class LabelJsonUnmarshaller implements Unmarshaller<Label, JsonUnmarshall
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Aliases", targetDepth)) {
+                    context.nextToken();
+                    label.setAliases(new ListUnmarshaller<LabelAlias>(LabelAliasJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Categories", targetDepth)) {
+                    context.nextToken();
+                    label.setCategories(new ListUnmarshaller<LabelCategory>(LabelCategoryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

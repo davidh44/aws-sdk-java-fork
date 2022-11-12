@@ -34,6 +34,7 @@ public enum Regions {
     EU_WEST_2("eu-west-2", "EU (London)"),
     EU_WEST_3("eu-west-3", "EU (Paris)"),
     EU_CENTRAL_1("eu-central-1", "EU (Frankfurt)"),
+    EU_CENTRAL_2("eu-central-2", "EU (Zurich)"),
     EU_NORTH_1("eu-north-1", "EU (Stockholm)"),
     EU_SOUTH_1("eu-south-1", "EU (Milan)"),
     AP_EAST_1("ap-east-1", "Asia Pacific (Hong Kong)"),

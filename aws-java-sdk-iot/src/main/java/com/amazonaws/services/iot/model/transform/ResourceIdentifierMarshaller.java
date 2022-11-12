@@ -43,6 +43,10 @@ public class ResourceIdentifierMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("iamRoleArn").build();
     private static final MarshallingInfo<String> ROLEALIASARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("roleAliasArn").build();
+    private static final MarshallingInfo<StructuredPojo> ISSUERCERTIFICATEIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("issuerCertificateIdentifier").build();
+    private static final MarshallingInfo<String> DEVICECERTIFICATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deviceCertificateArn").build();
 
     private static final ResourceIdentifierMarshaller instance = new ResourceIdentifierMarshaller();
 
@@ -68,6 +72,8 @@ public class ResourceIdentifierMarshaller {
             protocolMarshaller.marshall(resourceIdentifier.getAccount(), ACCOUNT_BINDING);
             protocolMarshaller.marshall(resourceIdentifier.getIamRoleArn(), IAMROLEARN_BINDING);
             protocolMarshaller.marshall(resourceIdentifier.getRoleAliasArn(), ROLEALIASARN_BINDING);
+            protocolMarshaller.marshall(resourceIdentifier.getIssuerCertificateIdentifier(), ISSUERCERTIFICATEIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(resourceIdentifier.getDeviceCertificateArn(), DEVICECERTIFICATEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

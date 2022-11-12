@@ -56,6 +56,12 @@ public class ChangeJsonUnmarshaller implements Unmarshaller<Change, JsonUnmarsha
                     context.nextToken();
                     change.setEntity(EntityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("EntityTags", targetDepth)) {
+                    context.nextToken();
+                    change.setEntityTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Details", targetDepth)) {
                     context.nextToken();
                     change.setDetails(context.getUnmarshaller(String.class).unmarshall(context));

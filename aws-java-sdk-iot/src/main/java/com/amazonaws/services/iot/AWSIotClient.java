@@ -12141,6 +12141,127 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
 
     /**
      * <p>
+     * The related resources of an Audit finding. The following resources can be returned from calling this API:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * DEVICE_CERTIFICATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CA_CERTIFICATE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * IOT_POLICY
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * COGNITO_IDENTITY_POOL
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CLIENT_ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ACCOUNT_SETTINGS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ROLE_ALIAS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * IAM_ROLE
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * ISSUER_CERTIFICATE
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * This API is similar to DescribeAuditFinding's <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAuditFinding.html">RelatedResources</a> but
+     * provides pagination and is not limited to 10 resources. When calling <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAuditFinding.html">DescribeAuditFinding</a>
+     * for the intermediate CA revoked for active device certificates check, RelatedResources will not be populated. You
+     * must use this API, ListRelatedResourcesForAuditFinding, to list the certificates.
+     * </p>
+     * </note>
+     * 
+     * @param listRelatedResourcesForAuditFindingRequest
+     * @return Result of the ListRelatedResourcesForAuditFinding operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws InternalFailureException
+     *         An unexpected error has occurred.
+     * @sample AWSIot.ListRelatedResourcesForAuditFinding
+     */
+    @Override
+    public ListRelatedResourcesForAuditFindingResult listRelatedResourcesForAuditFinding(ListRelatedResourcesForAuditFindingRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRelatedResourcesForAuditFinding(request);
+    }
+
+    @SdkInternalApi
+    final ListRelatedResourcesForAuditFindingResult executeListRelatedResourcesForAuditFinding(
+            ListRelatedResourcesForAuditFindingRequest listRelatedResourcesForAuditFindingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRelatedResourcesForAuditFindingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRelatedResourcesForAuditFindingRequest> request = null;
+        Response<ListRelatedResourcesForAuditFindingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRelatedResourcesForAuditFindingRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listRelatedResourcesForAuditFindingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRelatedResourcesForAuditFinding");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRelatedResourcesForAuditFindingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListRelatedResourcesForAuditFindingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the role aliases registered in your account.
      * </p>
      * <p>
@@ -13096,7 +13217,9 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * <p>
      * Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For
      * example, calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in
-     * the registry that contain an attribute <b>Color</b> with the value <b>Red</b>.
+     * the registry that contain an attribute <b>Color</b> with the value <b>Red</b>. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html#list-things">List Things</a> from
+     * the <i>Amazon Web Services IoT Core Developer Guide</i>.
      * </p>
      * <p>
      * Requires permission to access the <a href=

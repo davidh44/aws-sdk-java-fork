@@ -872,6 +872,11 @@ public class AbstractAWSIot implements AWSIot {
     }
 
     @Override
+    public ListRelatedResourcesForAuditFindingResult listRelatedResourcesForAuditFinding(ListRelatedResourcesForAuditFindingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListRoleAliasesResult listRoleAliases(ListRoleAliasesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -209,7 +209,17 @@ public class AbstractAWSLicenseManager implements AWSLicenseManager {
     }
 
     @Override
+    public ListReceivedGrantsForOrganizationResult listReceivedGrantsForOrganization(ListReceivedGrantsForOrganizationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListReceivedLicensesResult listReceivedLicenses(ListReceivedLicensesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListReceivedLicensesForOrganizationResult listReceivedLicensesForOrganization(ListReceivedLicensesForOrganizationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -132,6 +132,22 @@ public enum Region {
     EU_Frankfurt("eu-central-1"),
 
     /**
+     * The EU (Zurich) Amazon S3 Region. This region uses Amazon S3 servers
+     * located in Zurich.
+     * <p>
+     *
+     * <pre>
+     * AmazonS3Client s3 = new AmazonS3Client();
+     * s3.setRegion(RegionUtils.getRegion("eu-central-2"));
+     * </pre>
+     *
+     * </p>
+     *
+     * @see AmazonS3Client#setRegion(com.amazonaws.regions.Region)
+     */
+    EU_Zurich("eu-central-2"),
+
+    /**
      * The EU (Stockholm) Amazon S3 Region. This region uses Amazon S3 servers
      * located in Stockholm.
      * <p>

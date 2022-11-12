@@ -45,7 +45,7 @@ public class CreateGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String licenseArn;
     /**
      * <p>
-     * The grant principals.
+     * The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * </p>
      */
     private java.util.List<String> principals;
@@ -184,10 +184,10 @@ public class CreateGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The grant principals.
+     * The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return The grant principals.
+     * @return The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      */
 
     public java.util.List<String> getPrincipals() {
@@ -196,11 +196,11 @@ public class CreateGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The grant principals.
+     * The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * </p>
      * 
      * @param principals
-     *        The grant principals.
+     *        The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      */
 
     public void setPrincipals(java.util.Collection<String> principals) {
@@ -214,7 +214,7 @@ public class CreateGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The grant principals.
+     * The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -223,7 +223,7 @@ public class CreateGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param principals
-     *        The grant principals.
+     *        The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -239,11 +239,11 @@ public class CreateGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The grant principals.
+     * The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * </p>
      * 
      * @param principals
-     *        The grant principals.
+     *        The grant principals. This value should be specified as an Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

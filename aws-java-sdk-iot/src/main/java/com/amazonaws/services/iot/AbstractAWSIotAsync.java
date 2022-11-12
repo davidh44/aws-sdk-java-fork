@@ -2223,6 +2223,21 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListRelatedResourcesForAuditFindingResult> listRelatedResourcesForAuditFindingAsync(
+            ListRelatedResourcesForAuditFindingRequest request) {
+
+        return listRelatedResourcesForAuditFindingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRelatedResourcesForAuditFindingResult> listRelatedResourcesForAuditFindingAsync(
+            ListRelatedResourcesForAuditFindingRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRelatedResourcesForAuditFindingRequest, ListRelatedResourcesForAuditFindingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListRoleAliasesResult> listRoleAliasesAsync(ListRoleAliasesRequest request) {
 
         return listRoleAliasesAsync(request, null);

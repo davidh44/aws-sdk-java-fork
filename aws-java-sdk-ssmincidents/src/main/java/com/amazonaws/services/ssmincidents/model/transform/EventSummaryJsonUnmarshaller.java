@@ -52,6 +52,12 @@ public class EventSummaryJsonUnmarshaller implements Unmarshaller<EventSummary, 
                     context.nextToken();
                     eventSummary.setEventId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("eventReferences", targetDepth)) {
+                    context.nextToken();
+                    eventSummary.setEventReferences(new ListUnmarshaller<EventReference>(EventReferenceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("eventTime", targetDepth)) {
                     context.nextToken();
                     eventSummary.setEventTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -32,7 +32,9 @@ public class PersonDetection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the person's path was tracked.
+     * The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path first
+     * appears.
      * </p>
      */
     private Long timestamp;
@@ -45,11 +47,15 @@ public class PersonDetection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the person's path was tracked.
+     * The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path first
+     * appears.
      * </p>
      * 
      * @param timestamp
-     *        The time, in milliseconds from the start of the video, that the person's path was tracked.
+     *        The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     *        <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path
+     *        first appears.
      */
 
     public void setTimestamp(Long timestamp) {
@@ -58,10 +64,14 @@ public class PersonDetection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the person's path was tracked.
+     * The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path first
+     * appears.
      * </p>
      * 
-     * @return The time, in milliseconds from the start of the video, that the person's path was tracked.
+     * @return The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     *         <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path
+     *         first appears.
      */
 
     public Long getTimestamp() {
@@ -70,11 +80,15 @@ public class PersonDetection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time, in milliseconds from the start of the video, that the person's path was tracked.
+     * The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     * <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path first
+     * appears.
      * </p>
      * 
      * @param timestamp
-     *        The time, in milliseconds from the start of the video, that the person's path was tracked.
+     *        The time, in milliseconds from the start of the video, that the person's path was tracked. Note that
+     *        <code>Timestamp</code> is not guaranteed to be accurate to the individual frame where the person's path
+     *        first appears.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

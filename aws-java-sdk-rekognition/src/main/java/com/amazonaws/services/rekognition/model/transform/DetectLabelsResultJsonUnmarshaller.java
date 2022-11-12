@@ -62,6 +62,10 @@ public class DetectLabelsResultJsonUnmarshaller implements Unmarshaller<DetectLa
                     context.nextToken();
                     detectLabelsResult.setLabelModelVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ImageProperties", targetDepth)) {
+                    context.nextToken();
+                    detectLabelsResult.setImageProperties(DetectLabelsImagePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -48,6 +48,10 @@ public class RelatedItemJsonUnmarshaller implements Unmarshaller<RelatedItem, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("generatedId", targetDepth)) {
+                    context.nextToken();
+                    relatedItem.setGeneratedId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("identifier", targetDepth)) {
                     context.nextToken();
                     relatedItem.setIdentifier(ItemIdentifierJsonUnmarshaller.getInstance().unmarshall(context));

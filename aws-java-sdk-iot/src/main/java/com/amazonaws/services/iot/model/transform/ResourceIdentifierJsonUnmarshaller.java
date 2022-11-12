@@ -80,6 +80,14 @@ public class ResourceIdentifierJsonUnmarshaller implements Unmarshaller<Resource
                     context.nextToken();
                     resourceIdentifier.setRoleAliasArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("issuerCertificateIdentifier", targetDepth)) {
+                    context.nextToken();
+                    resourceIdentifier.setIssuerCertificateIdentifier(IssuerCertificateIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("deviceCertificateArn", targetDepth)) {
+                    context.nextToken();
+                    resourceIdentifier.setDeviceCertificateArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
