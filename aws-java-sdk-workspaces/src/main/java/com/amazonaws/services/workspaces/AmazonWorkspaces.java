@@ -339,6 +339,29 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a Standby WorkSpace in a secondary region.
+     * </p>
+     * 
+     * @param createStandbyWorkspacesRequest
+     * @return Result of the CreateStandbyWorkspaces operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @sample AmazonWorkspaces.CreateStandbyWorkspaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateStandbyWorkspaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateStandbyWorkspacesResult createStandbyWorkspaces(CreateStandbyWorkspacesRequest createStandbyWorkspacesRequest);
+
+    /**
+     * <p>
      * Creates the specified tags for the specified WorkSpaces resource.
      * </p>
      * 
@@ -1425,6 +1448,8 @@ public interface AmazonWorkspaces {
      *         The state of the resource is not valid for this operation.
      * @throws ResourceNotFoundException
      *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.ModifyWorkspaceState
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyWorkspaceState"
      *      target="_top">AWS API Documentation</a>
@@ -1444,6 +1469,8 @@ public interface AmazonWorkspaces {
      * 
      * @param rebootWorkspacesRequest
      * @return Result of the RebootWorkspaces operation returned by the service.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.RebootWorkspaces
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebootWorkspaces" target="_top">AWS
      *      API Documentation</a>
@@ -1469,6 +1496,8 @@ public interface AmazonWorkspaces {
      * 
      * @param rebuildWorkspacesRequest
      * @return Result of the RebuildWorkspaces operation returned by the service.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.RebuildWorkspaces
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebuildWorkspaces" target="_top">AWS
      *      API Documentation</a>
@@ -1540,6 +1569,8 @@ public interface AmazonWorkspaces {
      *         The resource could not be found.
      * @throws AccessDeniedException
      *         The user is not authorized to access a resource.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.RestoreWorkspace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RestoreWorkspace" target="_top">AWS
      *      API Documentation</a>
@@ -1764,6 +1795,8 @@ public interface AmazonWorkspaces {
      *         The resource could not be found.
      * @throws ResourceUnavailableException
      *         The specified resource is not available.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.UpdateWorkspaceBundle
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateWorkspaceBundle"
      *      target="_top">AWS API Documentation</a>

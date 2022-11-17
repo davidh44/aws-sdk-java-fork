@@ -118,6 +118,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
     }
 
     @Override
+    public EvaluateCodeResult evaluateCode(EvaluateCodeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public EvaluateMappingTemplateResult evaluateMappingTemplate(EvaluateMappingTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

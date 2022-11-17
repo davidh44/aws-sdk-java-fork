@@ -45,6 +45,8 @@ public class CreateFlowRequestMarshaller {
             .marshallLocationName("tasks").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> METADATACATALOGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadataCatalogConfig").build();
 
     private static final CreateFlowRequestMarshaller instance = new CreateFlowRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class CreateFlowRequestMarshaller {
             protocolMarshaller.marshall(createFlowRequest.getDestinationFlowConfigList(), DESTINATIONFLOWCONFIGLIST_BINDING);
             protocolMarshaller.marshall(createFlowRequest.getTasks(), TASKS_BINDING);
             protocolMarshaller.marshall(createFlowRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createFlowRequest.getMetadataCatalogConfig(), METADATACATALOGCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

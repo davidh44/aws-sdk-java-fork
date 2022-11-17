@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the list of errors generated when attempting to evaluate a mapping template.
+ * Contains the list of errors generated. When using JavaScript, this will apply to the request or response function
+ * evaluation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ErrorDetail" target="_top">AWS API

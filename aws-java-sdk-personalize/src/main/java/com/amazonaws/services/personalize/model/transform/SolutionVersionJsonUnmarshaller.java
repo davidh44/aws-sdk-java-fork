@@ -48,6 +48,10 @@ public class SolutionVersionJsonUnmarshaller implements Unmarshaller<SolutionVer
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    solutionVersion.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("solutionVersionArn", targetDepth)) {
                     context.nextToken();
                     solutionVersion.setSolutionVersionArn(context.getUnmarshaller(String.class).unmarshall(context));

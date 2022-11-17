@@ -111,6 +111,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * as part of a Key-Value pair or a detected cell.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attaches it
      * to its answer.
      * </p>
@@ -318,6 +324,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * as part of a Key-Value pair or a detected cell.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attaches it
      * to its answer.
      * </p>
@@ -395,6 +407,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *        that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *        of the selection element.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *        returned as part of a Key-Value pair or a detected cell.
      *        </p>
      *        </li>
      *        <li>
@@ -486,6 +504,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * as part of a Key-Value pair or a detected cell.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attaches it
      * to its answer.
      * </p>
@@ -563,6 +587,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *         <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *         that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *         of the selection element.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *         returned as part of a Key-Value pair or a detected cell.
      *         </p>
      *         </li>
      *         <li>
@@ -654,6 +684,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * as part of a Key-Value pair or a detected cell.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attaches it
      * to its answer.
      * </p>
@@ -731,6 +767,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *        that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *        of the selection element.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *        returned as part of a Key-Value pair or a detected cell.
      *        </p>
      *        </li>
      *        <li>
@@ -824,6 +866,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * as part of a Key-Value pair or a detected cell.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attaches it
      * to its answer.
      * </p>
@@ -901,6 +949,12 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *        that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *        of the selection element.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *        returned as part of a Key-Value pair or a detected cell.
      *        </p>
      *        </li>
      *        <li>

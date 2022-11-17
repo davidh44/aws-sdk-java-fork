@@ -59,6 +59,8 @@ public class ApplicationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoStopConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("networkConfiguration").build();
+    private static final MarshallingInfo<String> ARCHITECTURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("architecture").build();
 
     private static final ApplicationMarshaller instance = new ApplicationMarshaller();
 
@@ -91,6 +93,7 @@ public class ApplicationMarshaller {
             protocolMarshaller.marshall(application.getAutoStartConfiguration(), AUTOSTARTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(application.getAutoStopConfiguration(), AUTOSTOPCONFIGURATION_BINDING);
             protocolMarshaller.marshall(application.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(application.getArchitecture(), ARCHITECTURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

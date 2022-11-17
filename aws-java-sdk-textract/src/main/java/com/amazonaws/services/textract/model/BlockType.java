@@ -30,7 +30,8 @@ public enum BlockType {
     MERGED_CELL("MERGED_CELL"),
     TITLE("TITLE"),
     QUERY("QUERY"),
-    QUERY_RESULT("QUERY_RESULT");
+    QUERY_RESULT("QUERY_RESULT"),
+    SIGNATURE("SIGNATURE");
 
     private String value;
 

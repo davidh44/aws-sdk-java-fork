@@ -45,6 +45,8 @@ public class ApplicationSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> ARCHITECTURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("architecture").build();
 
     private static final ApplicationSummaryMarshaller instance = new ApplicationSummaryMarshaller();
 
@@ -71,6 +73,7 @@ public class ApplicationSummaryMarshaller {
             protocolMarshaller.marshall(applicationSummary.getStateDetails(), STATEDETAILS_BINDING);
             protocolMarshaller.marshall(applicationSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(applicationSummary.getUpdatedAt(), UPDATEDAT_BINDING);
+            protocolMarshaller.marshall(applicationSummary.getArchitecture(), ARCHITECTURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

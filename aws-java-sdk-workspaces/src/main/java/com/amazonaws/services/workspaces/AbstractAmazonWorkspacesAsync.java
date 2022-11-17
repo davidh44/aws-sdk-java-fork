@@ -119,6 +119,19 @@ public class AbstractAmazonWorkspacesAsync extends AbstractAmazonWorkspaces impl
     }
 
     @Override
+    public java.util.concurrent.Future<CreateStandbyWorkspacesResult> createStandbyWorkspacesAsync(CreateStandbyWorkspacesRequest request) {
+
+        return createStandbyWorkspacesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateStandbyWorkspacesResult> createStandbyWorkspacesAsync(CreateStandbyWorkspacesRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateStandbyWorkspacesRequest, CreateStandbyWorkspacesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTagsResult> createTagsAsync(CreateTagsRequest request) {
 
         return createTagsAsync(request, null);

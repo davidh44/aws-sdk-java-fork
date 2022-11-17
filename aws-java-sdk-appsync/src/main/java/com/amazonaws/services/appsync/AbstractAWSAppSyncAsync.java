@@ -262,6 +262,19 @@ public class AbstractAWSAppSyncAsync extends AbstractAWSAppSync implements AWSAp
     }
 
     @Override
+    public java.util.concurrent.Future<EvaluateCodeResult> evaluateCodeAsync(EvaluateCodeRequest request) {
+
+        return evaluateCodeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EvaluateCodeResult> evaluateCodeAsync(EvaluateCodeRequest request,
+            com.amazonaws.handlers.AsyncHandler<EvaluateCodeRequest, EvaluateCodeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<EvaluateMappingTemplateResult> evaluateMappingTemplateAsync(EvaluateMappingTemplateRequest request) {
 
         return evaluateMappingTemplateAsync(request, null);

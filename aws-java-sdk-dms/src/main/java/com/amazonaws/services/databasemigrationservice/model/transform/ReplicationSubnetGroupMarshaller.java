@@ -38,6 +38,8 @@ public class ReplicationSubnetGroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubnetGroupStatus").build();
     private static final MarshallingInfo<List> SUBNETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Subnets").build();
+    private static final MarshallingInfo<List> SUPPORTEDNETWORKTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedNetworkTypes").build();
 
     private static final ReplicationSubnetGroupMarshaller instance = new ReplicationSubnetGroupMarshaller();
 
@@ -60,6 +62,7 @@ public class ReplicationSubnetGroupMarshaller {
             protocolMarshaller.marshall(replicationSubnetGroup.getVpcId(), VPCID_BINDING);
             protocolMarshaller.marshall(replicationSubnetGroup.getSubnetGroupStatus(), SUBNETGROUPSTATUS_BINDING);
             protocolMarshaller.marshall(replicationSubnetGroup.getSubnets(), SUBNETS_BINDING);
+            protocolMarshaller.marshall(replicationSubnetGroup.getSupportedNetworkTypes(), SUPPORTEDNETWORKTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

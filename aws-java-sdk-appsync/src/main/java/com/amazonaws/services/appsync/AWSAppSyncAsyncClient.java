@@ -668,6 +668,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
     }
 
     @Override
+    public java.util.concurrent.Future<EvaluateCodeResult> evaluateCodeAsync(EvaluateCodeRequest request) {
+
+        return evaluateCodeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EvaluateCodeResult> evaluateCodeAsync(final EvaluateCodeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EvaluateCodeRequest, EvaluateCodeResult> asyncHandler) {
+        final EvaluateCodeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EvaluateCodeResult>() {
+            @Override
+            public EvaluateCodeResult call() throws Exception {
+                EvaluateCodeResult result = null;
+
+                try {
+                    result = executeEvaluateCode(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<EvaluateMappingTemplateResult> evaluateMappingTemplateAsync(EvaluateMappingTemplateRequest request) {
 
         return evaluateMappingTemplateAsync(request, null);

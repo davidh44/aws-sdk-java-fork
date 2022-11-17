@@ -52,6 +52,10 @@ public class AggregationConfigJsonUnmarshaller implements Unmarshaller<Aggregati
                     context.nextToken();
                     aggregationConfig.setAggregationType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("targetFileSize", targetDepth)) {
+                    context.nextToken();
+                    aggregationConfig.setTargetFileSize(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

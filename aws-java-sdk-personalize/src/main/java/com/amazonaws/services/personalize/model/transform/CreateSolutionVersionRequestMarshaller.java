@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateSolutionVersionRequestMarshaller {
 
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
     private static final MarshallingInfo<String> SOLUTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("solutionArn").build();
     private static final MarshallingInfo<String> TRAININGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -51,6 +53,7 @@ public class CreateSolutionVersionRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createSolutionVersionRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createSolutionVersionRequest.getSolutionArn(), SOLUTIONARN_BINDING);
             protocolMarshaller.marshall(createSolutionVersionRequest.getTrainingMode(), TRAININGMODE_BINDING);
             protocolMarshaller.marshall(createSolutionVersionRequest.getTags(), TAGS_BINDING);

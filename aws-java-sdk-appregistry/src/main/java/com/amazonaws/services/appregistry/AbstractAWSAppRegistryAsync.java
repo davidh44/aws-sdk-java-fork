@@ -171,6 +171,19 @@ public class AbstractAWSAppRegistryAsync extends AbstractAWSAppRegistry implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetConfigurationResult> getConfigurationAsync(GetConfigurationRequest request) {
+
+        return getConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationResult> getConfigurationAsync(GetConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetConfigurationRequest, GetConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListApplicationsResult> listApplicationsAsync(ListApplicationsRequest request) {
 
         return listApplicationsAsync(request, null);
@@ -246,6 +259,19 @@ public class AbstractAWSAppRegistryAsync extends AbstractAWSAppRegistry implemen
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutConfigurationResult> putConfigurationAsync(PutConfigurationRequest request) {
+
+        return putConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutConfigurationResult> putConfigurationAsync(PutConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutConfigurationRequest, PutConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

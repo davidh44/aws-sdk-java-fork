@@ -53,7 +53,8 @@ public enum LanguageCode {
     EnZA("en-ZA"),
     CaES("ca-ES"),
     DeAT("de-AT"),
-    YueCN("yue-CN");
+    YueCN("yue-CN"),
+    ArAE("ar-AE");
 
     private String value;
 

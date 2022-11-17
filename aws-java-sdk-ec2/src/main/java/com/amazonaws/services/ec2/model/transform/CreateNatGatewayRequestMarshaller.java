@@ -90,6 +90,10 @@ public class CreateNatGatewayRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("ConnectivityType", StringUtils.fromString(createNatGatewayRequest.getConnectivityType()));
         }
 
+        if (createNatGatewayRequest.getPrivateIpAddress() != null) {
+            request.addParameter("PrivateIpAddress", StringUtils.fromString(createNatGatewayRequest.getPrivateIpAddress()));
+        }
+
         return request;
     }
 

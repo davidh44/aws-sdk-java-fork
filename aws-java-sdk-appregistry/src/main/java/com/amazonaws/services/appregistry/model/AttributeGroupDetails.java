@@ -41,10 +41,17 @@ public class AttributeGroupDetails implements Serializable, Cloneable, Structure
      */
     private String arn;
     /**
+     * <important>
+     * <p>
+     * This field is no longer supported. We recommend you don't use the field when using
+     * <code>ListAttributeGroupsForApplication</code>.
+     * </p>
+     * </important>
      * <p>
      * The name of the attribute group.
      * </p>
      */
+    @Deprecated
     private String name;
 
     /**
@@ -128,40 +135,76 @@ public class AttributeGroupDetails implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <important>
+     * <p>
+     * This field is no longer supported. We recommend you don't use the field when using
+     * <code>ListAttributeGroupsForApplication</code>.
+     * </p>
+     * </important>
      * <p>
      * The name of the attribute group.
      * </p>
      * 
      * @param name
+     *        <p>
+     *        This field is no longer supported. We recommend you don't use the field when using
+     *        <code>ListAttributeGroupsForApplication</code>.
+     *        </p>
+     *        </important>
+     *        <p>
      *        The name of the attribute group.
      */
-
+    @Deprecated
     public void setName(String name) {
         this.name = name;
     }
 
     /**
+     * <important>
+     * <p>
+     * This field is no longer supported. We recommend you don't use the field when using
+     * <code>ListAttributeGroupsForApplication</code>.
+     * </p>
+     * </important>
      * <p>
      * The name of the attribute group.
      * </p>
      * 
-     * @return The name of the attribute group.
+     * @return <p>
+     *         This field is no longer supported. We recommend you don't use the field when using
+     *         <code>ListAttributeGroupsForApplication</code>.
+     *         </p>
+     *         </important>
+     *         <p>
+     *         The name of the attribute group.
      */
-
+    @Deprecated
     public String getName() {
         return this.name;
     }
 
     /**
+     * <important>
+     * <p>
+     * This field is no longer supported. We recommend you don't use the field when using
+     * <code>ListAttributeGroupsForApplication</code>.
+     * </p>
+     * </important>
      * <p>
      * The name of the attribute group.
      * </p>
      * 
      * @param name
+     *        <p>
+     *        This field is no longer supported. We recommend you don't use the field when using
+     *        <code>ListAttributeGroupsForApplication</code>.
+     *        </p>
+     *        </important>
+     *        <p>
      *        The name of the attribute group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public AttributeGroupDetails withName(String name) {
         setName(name);
         return this;

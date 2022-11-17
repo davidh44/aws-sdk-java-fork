@@ -46,7 +46,8 @@ public enum Runtime {
     Ruby25("ruby2.5"),
     Ruby27("ruby2.7"),
     Provided("provided"),
-    ProvidedAl2("provided.al2");
+    ProvidedAl2("provided.al2"),
+    Nodejs18X("nodejs18.x");
 
     private String value;
 

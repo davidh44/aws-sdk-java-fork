@@ -122,6 +122,16 @@ public class AwsLambdaFunctionDetailsJsonUnmarshaller implements Unmarshaller<Aw
                     context.nextToken();
                     awsLambdaFunctionDetails.setVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Architectures", targetDepth)) {
+                    context.nextToken();
+                    awsLambdaFunctionDetails.setArchitectures(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("PackageType", targetDepth)) {
+                    context.nextToken();
+                    awsLambdaFunctionDetails.setPackageType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -33,8 +33,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String resourceArn;
     /**
      * <p>
-     * Array of tags to be added or updated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
+     * Array of tags to be added or updated. Array of maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS Chat has no
      * constraints beyond what is documented there.
      * </p>
@@ -83,13 +83,14 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Array of tags to be added or updated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
+     * Array of tags to be added or updated. Array of maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS Chat has no
      * constraints beyond what is documented there.
      * </p>
      * 
-     * @return Array of tags to be added or updated. See <a
+     * @return Array of tags to be added or updated. Array of maps, each of the form
+     *         <code>string:string (key:value)</code>. See <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for
      *         details, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS
      *         Chat has no constraints beyond what is documented there.
@@ -101,14 +102,15 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Array of tags to be added or updated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
+     * Array of tags to be added or updated. Array of maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS Chat has no
      * constraints beyond what is documented there.
      * </p>
      * 
      * @param tags
-     *        Array of tags to be added or updated. See <a
+     *        Array of tags to be added or updated. Array of maps, each of the form
+     *        <code>string:string (key:value)</code>. See <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for
      *        details, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS
      *        Chat has no constraints beyond what is documented there.
@@ -120,14 +122,15 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Array of tags to be added or updated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
+     * Array of tags to be added or updated. Array of maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for details,
      * including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS Chat has no
      * constraints beyond what is documented there.
      * </p>
      * 
      * @param tags
-     *        Array of tags to be added or updated. See <a
+     *        Array of tags to be added or updated. Array of maps, each of the form
+     *        <code>string:string (key:value)</code>. See <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for
      *        details, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon IVS
      *        Chat has no constraints beyond what is documented there.

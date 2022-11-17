@@ -865,6 +865,73 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Creates a Standby WorkSpace in a secondary region.
+     * </p>
+     * 
+     * @param createStandbyWorkspacesRequest
+     * @return Result of the CreateStandbyWorkspaces operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @sample AmazonWorkspaces.CreateStandbyWorkspaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateStandbyWorkspaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateStandbyWorkspacesResult createStandbyWorkspaces(CreateStandbyWorkspacesRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateStandbyWorkspaces(request);
+    }
+
+    @SdkInternalApi
+    final CreateStandbyWorkspacesResult executeCreateStandbyWorkspaces(CreateStandbyWorkspacesRequest createStandbyWorkspacesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createStandbyWorkspacesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateStandbyWorkspacesRequest> request = null;
+        Response<CreateStandbyWorkspacesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateStandbyWorkspacesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createStandbyWorkspacesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateStandbyWorkspaces");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateStandbyWorkspacesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateStandbyWorkspacesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates the specified tags for the specified WorkSpaces resource.
      * </p>
      * 
@@ -3802,6 +3869,8 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      *         The state of the resource is not valid for this operation.
      * @throws ResourceNotFoundException
      *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.ModifyWorkspaceState
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyWorkspaceState"
      *      target="_top">AWS API Documentation</a>
@@ -3863,6 +3932,8 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      * 
      * @param rebootWorkspacesRequest
      * @return Result of the RebootWorkspaces operation returned by the service.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.RebootWorkspaces
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebootWorkspaces" target="_top">AWS
      *      API Documentation</a>
@@ -3930,6 +4001,8 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      * 
      * @param rebuildWorkspacesRequest
      * @return Result of the RebuildWorkspaces operation returned by the service.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.RebuildWorkspaces
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebuildWorkspaces" target="_top">AWS
      *      API Documentation</a>
@@ -4087,6 +4160,8 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      *         The resource could not be found.
      * @throws AccessDeniedException
      *         The user is not authorized to access a resource.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.RestoreWorkspace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RestoreWorkspace" target="_top">AWS
      *      API Documentation</a>
@@ -4652,6 +4727,8 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
      *         The resource could not be found.
      * @throws ResourceUnavailableException
      *         The specified resource is not available.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
      * @sample AmazonWorkspaces.UpdateWorkspaceBundle
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/UpdateWorkspaceBundle"
      *      target="_top">AWS API Documentation</a>

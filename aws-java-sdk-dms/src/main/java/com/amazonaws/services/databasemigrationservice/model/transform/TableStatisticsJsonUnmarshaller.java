@@ -72,6 +72,22 @@ public class TableStatisticsJsonUnmarshaller implements Unmarshaller<TableStatis
                     context.nextToken();
                     tableStatistics.setDdls(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("AppliedInserts", targetDepth)) {
+                    context.nextToken();
+                    tableStatistics.setAppliedInserts(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("AppliedDeletes", targetDepth)) {
+                    context.nextToken();
+                    tableStatistics.setAppliedDeletes(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("AppliedUpdates", targetDepth)) {
+                    context.nextToken();
+                    tableStatistics.setAppliedUpdates(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("AppliedDdls", targetDepth)) {
+                    context.nextToken();
+                    tableStatistics.setAppliedDdls(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("FullLoadRows", targetDepth)) {
                     context.nextToken();
                     tableStatistics.setFullLoadRows(context.getUnmarshaller(Long.class).unmarshall(context));

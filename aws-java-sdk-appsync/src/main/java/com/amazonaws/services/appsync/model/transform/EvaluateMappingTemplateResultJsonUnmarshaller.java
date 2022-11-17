@@ -56,6 +56,12 @@ public class EvaluateMappingTemplateResultJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     evaluateMappingTemplateResult.setError(ErrorDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("logs", targetDepth)) {
+                    context.nextToken();
+                    evaluateMappingTemplateResult.setLogs(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

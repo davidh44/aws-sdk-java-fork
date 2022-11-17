@@ -439,6 +439,39 @@ public class AWSAppRegistryAsyncClient extends AWSAppRegistryClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetConfigurationResult> getConfigurationAsync(GetConfigurationRequest request) {
+
+        return getConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfigurationResult> getConfigurationAsync(final GetConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetConfigurationRequest, GetConfigurationResult> asyncHandler) {
+        final GetConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetConfigurationResult>() {
+            @Override
+            public GetConfigurationResult call() throws Exception {
+                GetConfigurationResult result = null;
+
+                try {
+                    result = executeGetConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListApplicationsResult> listApplicationsAsync(ListApplicationsRequest request) {
 
         return listApplicationsAsync(request, null);
@@ -624,6 +657,39 @@ public class AWSAppRegistryAsyncClient extends AWSAppRegistryClient implements A
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutConfigurationResult> putConfigurationAsync(PutConfigurationRequest request) {
+
+        return putConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutConfigurationResult> putConfigurationAsync(final PutConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutConfigurationRequest, PutConfigurationResult> asyncHandler) {
+        final PutConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutConfigurationResult>() {
+            @Override
+            public PutConfigurationResult call() throws Exception {
+                PutConfigurationResult result = null;
+
+                try {
+                    result = executePutConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

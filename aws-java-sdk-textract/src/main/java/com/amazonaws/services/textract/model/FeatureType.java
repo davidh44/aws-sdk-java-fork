@@ -22,7 +22,8 @@ public enum FeatureType {
 
     TABLES("TABLES"),
     FORMS("FORMS"),
-    QUERIES("QUERIES");
+    QUERIES("QUERIES"),
+    SIGNATURES("SIGNATURES");
 
     private String value;
 

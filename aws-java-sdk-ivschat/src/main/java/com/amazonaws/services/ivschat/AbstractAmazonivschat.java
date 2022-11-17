@@ -33,7 +33,17 @@ public class AbstractAmazonivschat implements Amazonivschat {
     }
 
     @Override
+    public CreateLoggingConfigurationResult createLoggingConfiguration(CreateLoggingConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateRoomResult createRoom(CreateRoomRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteLoggingConfigurationResult deleteLoggingConfiguration(DeleteLoggingConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -53,7 +63,17 @@ public class AbstractAmazonivschat implements Amazonivschat {
     }
 
     @Override
+    public GetLoggingConfigurationResult getLoggingConfiguration(GetLoggingConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetRoomResult getRoom(GetRoomRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListLoggingConfigurationsResult listLoggingConfigurations(ListLoggingConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -79,6 +99,11 @@ public class AbstractAmazonivschat implements Amazonivschat {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateLoggingConfigurationResult updateLoggingConfiguration(UpdateLoggingConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

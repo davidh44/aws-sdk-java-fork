@@ -510,6 +510,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateStandbyWorkspacesResult> createStandbyWorkspacesAsync(CreateStandbyWorkspacesRequest request) {
+
+        return createStandbyWorkspacesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateStandbyWorkspacesResult> createStandbyWorkspacesAsync(final CreateStandbyWorkspacesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateStandbyWorkspacesRequest, CreateStandbyWorkspacesResult> asyncHandler) {
+        final CreateStandbyWorkspacesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateStandbyWorkspacesResult>() {
+            @Override
+            public CreateStandbyWorkspacesResult call() throws Exception {
+                CreateStandbyWorkspacesResult result = null;
+
+                try {
+                    result = executeCreateStandbyWorkspaces(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTagsResult> createTagsAsync(CreateTagsRequest request) {
 
         return createTagsAsync(request, null);

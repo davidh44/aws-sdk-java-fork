@@ -81,10 +81,9 @@ public class AppMonitorConfiguration implements Serializable, Cloneable, Structu
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those
      * pages.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
+     * </p>
      */
     private java.util.List<String> includedPages;
     /**
@@ -546,15 +545,14 @@ public class AppMonitorConfiguration implements Serializable, Cloneable, Structu
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those
      * pages.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
+     * </p>
      * 
      * @return If this app monitor is to collect data from only certain pages in your application, this structure lists
      *         those pages. </p>
-     * 
-     * <pre><code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
+     *         <p>
+     *         You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
      */
 
     public java.util.List<String> getIncludedPages() {
@@ -566,16 +564,15 @@ public class AppMonitorConfiguration implements Serializable, Cloneable, Structu
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those
      * pages.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
+     * </p>
      * 
      * @param includedPages
      *        If this app monitor is to collect data from only certain pages in your application, this structure lists
      *        those pages. </p>
-     * 
-     * <pre><code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
+     *        <p>
+     *        You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
      */
 
     public void setIncludedPages(java.util.Collection<String> includedPages) {
@@ -592,10 +589,9 @@ public class AppMonitorConfiguration implements Serializable, Cloneable, Structu
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those
      * pages.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setIncludedPages(java.util.Collection)} or {@link #withIncludedPages(java.util.Collection)} if you want
@@ -605,9 +601,8 @@ public class AppMonitorConfiguration implements Serializable, Cloneable, Structu
      * @param includedPages
      *        If this app monitor is to collect data from only certain pages in your application, this structure lists
      *        those pages. </p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
+     *        <p>
+     *        You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -626,17 +621,15 @@ public class AppMonitorConfiguration implements Serializable, Cloneable, Structu
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those
      * pages.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
+     * </p>
      * 
      * @param includedPages
      *        If this app monitor is to collect data from only certain pages in your application, this structure lists
      *        those pages. </p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;You can't include both &lt;code&gt;ExcludedPages&lt;/code&gt; and &lt;code&gt;IncludedPages&lt;/code&gt; in the same operation.&lt;/p&gt; </code>
+     *        <p>
+     *        You can't include both <code>ExcludedPages</code> and <code>IncludedPages</code> in the same operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

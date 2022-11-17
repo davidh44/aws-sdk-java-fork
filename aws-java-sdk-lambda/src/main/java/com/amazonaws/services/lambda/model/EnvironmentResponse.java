@@ -31,7 +31,7 @@ public class EnvironmentResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Environment variable key-value pairs.
+     * Environment variable key-value pairs. Omitted from CloudTrail logs.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalMap<String, String> variables;
@@ -44,10 +44,10 @@ public class EnvironmentResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Environment variable key-value pairs.
+     * Environment variable key-value pairs. Omitted from CloudTrail logs.
      * </p>
      * 
-     * @return Environment variable key-value pairs.
+     * @return Environment variable key-value pairs. Omitted from CloudTrail logs.
      */
 
     public java.util.Map<String, String> getVariables() {
@@ -59,11 +59,11 @@ public class EnvironmentResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Environment variable key-value pairs.
+     * Environment variable key-value pairs. Omitted from CloudTrail logs.
      * </p>
      * 
      * @param variables
-     *        Environment variable key-value pairs.
+     *        Environment variable key-value pairs. Omitted from CloudTrail logs.
      */
 
     public void setVariables(java.util.Map<String, String> variables) {
@@ -72,11 +72,11 @@ public class EnvironmentResponse implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Environment variable key-value pairs.
+     * Environment variable key-value pairs. Omitted from CloudTrail logs.
      * </p>
      * 
      * @param variables
-     *        Environment variable key-value pairs.
+     *        Environment variable key-value pairs. Omitted from CloudTrail logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

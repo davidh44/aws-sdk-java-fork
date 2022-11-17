@@ -131,6 +131,12 @@ public class ReplicationInstanceJsonUnmarshaller implements Unmarshaller<Replica
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ReplicationInstanceIpv6Addresses", targetDepth)) {
+                    context.nextToken();
+                    replicationInstance.setReplicationInstanceIpv6Addresses(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("PubliclyAccessible", targetDepth)) {
                     context.nextToken();
                     replicationInstance.setPubliclyAccessible(context.getUnmarshaller(Boolean.class).unmarshall(context));
@@ -146,6 +152,10 @@ public class ReplicationInstanceJsonUnmarshaller implements Unmarshaller<Replica
                 if (context.testExpression("DnsNameServers", targetDepth)) {
                     context.nextToken();
                     replicationInstance.setDnsNameServers(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("NetworkType", targetDepth)) {
+                    context.nextToken();
+                    replicationInstance.setNetworkType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

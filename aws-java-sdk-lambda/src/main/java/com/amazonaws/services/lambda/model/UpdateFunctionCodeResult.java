@@ -114,7 +114,7 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     /**
      * <p>
      * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment
-     * variables</a>.
+     * variables</a>. Omitted from CloudTrail logs.
      * </p>
      */
     private EnvironmentResponse environment;
@@ -837,12 +837,13 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     /**
      * <p>
      * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment
-     * variables</a>.
+     * variables</a>. Omitted from CloudTrail logs.
      * </p>
      * 
      * @param environment
      *        The function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment variables</a>.
+     *        Omitted from CloudTrail logs.
      */
 
     public void setEnvironment(EnvironmentResponse environment) {
@@ -852,11 +853,12 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     /**
      * <p>
      * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment
-     * variables</a>.
+     * variables</a>. Omitted from CloudTrail logs.
      * </p>
      * 
      * @return The function's <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment variables</a>.
+     *         Omitted from CloudTrail logs.
      */
 
     public EnvironmentResponse getEnvironment() {
@@ -866,12 +868,13 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     /**
      * <p>
      * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment
-     * variables</a>.
+     * variables</a>. Omitted from CloudTrail logs.
      * </p>
      * 
      * @param environment
      *        The function's <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html">environment variables</a>.
+     *        Omitted from CloudTrail logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

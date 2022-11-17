@@ -64,6 +64,13 @@ public interface AmazonTextractAsync extends AmazonTextract {
      * </li>
      * <li>
      * <p>
+     * Signatures. A SIGNATURE <code>Block</code> object contains the location information of a signature in a document.
+     * If used in conjunction with forms or tables, a signature can be given a Key-Value pairing or be detected in the
+     * cell of a table.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Query. A QUERY Block object contains the query text, alias and link to the associated Query results block object.
      * </p>
      * </li>
@@ -129,6 +136,13 @@ public interface AmazonTextractAsync extends AmazonTextract {
      * Lines and words of text. A LINE <code>Block</code> object contains one or more WORD <code>Block</code> objects.
      * All lines and words that are detected in the document are returned (including text that doesn't have a
      * relationship with the value of <code>FeatureTypes</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Signatures. A SIGNATURE <code>Block</code> object contains the location information of a signature in a document.
+     * If used in conjunction with forms or tables, a signature can be given a Key-Value pairing or be detected in the
+     * cell of a table.
      * </p>
      * </li>
      * <li>

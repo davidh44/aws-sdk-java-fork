@@ -96,7 +96,9 @@ public enum VoiceId {
     Laura("Laura"),
     Elin("Elin"),
     Ida("Ida"),
-    Suvi("Suvi");
+    Suvi("Suvi"),
+    Ola("Ola"),
+    Hala("Hala");
 
     private String value;
 

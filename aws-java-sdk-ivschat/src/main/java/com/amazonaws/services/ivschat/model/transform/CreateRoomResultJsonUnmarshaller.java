@@ -60,6 +60,12 @@ public class CreateRoomResultJsonUnmarshaller implements Unmarshaller<CreateRoom
                     context.nextToken();
                     createRoomResult.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("loggingConfigurationIdentifiers", targetDepth)) {
+                    context.nextToken();
+                    createRoomResult.setLoggingConfigurationIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("maximumMessageLength", targetDepth)) {
                     context.nextToken();
                     createRoomResult.setMaximumMessageLength(context.getUnmarshaller(Integer.class).unmarshall(context));

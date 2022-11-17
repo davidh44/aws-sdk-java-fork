@@ -52,6 +52,21 @@ public class AccountLevelStaxUnmarshaller implements Unmarshaller<AccountLevel, 
                     accountLevel.setBucketLevel(BucketLevelStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("AdvancedCostOptimizationMetrics", targetDepth)) {
+                    accountLevel.setAdvancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AdvancedDataProtectionMetrics", targetDepth)) {
+                    accountLevel.setAdvancedDataProtectionMetrics(AdvancedDataProtectionMetricsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DetailedStatusCodesMetrics", targetDepth)) {
+                    accountLevel.setDetailedStatusCodesMetrics(DetailedStatusCodesMetricsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return accountLevel;

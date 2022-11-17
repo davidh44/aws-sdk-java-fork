@@ -3341,6 +3341,9 @@
       }, {
         "name" : "YueCN",
         "value" : "yue-CN"
+      }, {
+        "name" : "ArAE",
+        "value" : "ar-AE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.LanguageCode",
@@ -16013,6 +16016,12 @@
       }, {
         "name" : "Suvi",
         "value" : "Suvi"
+      }, {
+        "name" : "Ola",
+        "value" : "Ola"
+      }, {
+        "name" : "Hala",
+        "value" : "Hala"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

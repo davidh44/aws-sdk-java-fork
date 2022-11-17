@@ -29,6 +29,8 @@ public class UpdateAppMonitorRequestMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> APPMONITORCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AppMonitorConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMEVENTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomEvents").build();
     private static final MarshallingInfo<Boolean> CWLOGENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CwLogEnabled").build();
     private static final MarshallingInfo<String> DOMAIN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -53,6 +55,7 @@ public class UpdateAppMonitorRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateAppMonitorRequest.getAppMonitorConfiguration(), APPMONITORCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateAppMonitorRequest.getCustomEvents(), CUSTOMEVENTS_BINDING);
             protocolMarshaller.marshall(updateAppMonitorRequest.getCwLogEnabled(), CWLOGENABLED_BINDING);
             protocolMarshaller.marshall(updateAppMonitorRequest.getDomain(), DOMAIN_BINDING);
             protocolMarshaller.marshall(updateAppMonitorRequest.getName(), NAME_BINDING);

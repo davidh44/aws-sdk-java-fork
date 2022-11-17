@@ -52,6 +52,21 @@ public class BucketLevelStaxUnmarshaller implements Unmarshaller<BucketLevel, St
                     bucketLevel.setPrefixLevel(PrefixLevelStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("AdvancedCostOptimizationMetrics", targetDepth)) {
+                    bucketLevel.setAdvancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AdvancedDataProtectionMetrics", targetDepth)) {
+                    bucketLevel.setAdvancedDataProtectionMetrics(AdvancedDataProtectionMetricsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DetailedStatusCodesMetrics", targetDepth)) {
+                    bucketLevel.setDetailedStatusCodesMetrics(DetailedStatusCodesMetricsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return bucketLevel;

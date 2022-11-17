@@ -88,6 +88,14 @@ public class FunctionConfigurationJsonUnmarshaller implements Unmarshaller<Funct
                     context.nextToken();
                     functionConfiguration.setMaxBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("runtime", targetDepth)) {
+                    context.nextToken();
+                    functionConfiguration.setRuntime(AppSyncRuntimeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("code", targetDepth)) {
+                    context.nextToken();
+                    functionConfiguration.setCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

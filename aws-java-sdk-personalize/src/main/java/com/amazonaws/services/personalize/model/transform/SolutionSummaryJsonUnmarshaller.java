@@ -68,6 +68,10 @@ public class SolutionSummaryJsonUnmarshaller implements Unmarshaller<SolutionSum
                     context.nextToken();
                     solutionSummary.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("recipeArn", targetDepth)) {
+                    context.nextToken();
+                    solutionSummary.setRecipeArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

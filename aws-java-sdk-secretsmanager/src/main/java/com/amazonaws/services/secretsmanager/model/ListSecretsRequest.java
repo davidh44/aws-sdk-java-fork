@@ -50,7 +50,7 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * Lists secrets in the requested order.
+     * Secrets are listed by <code>CreatedDate</code>.
      * </p>
      */
     private String sortOrder;
@@ -234,11 +234,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists secrets in the requested order.
+     * Secrets are listed by <code>CreatedDate</code>.
      * </p>
      * 
      * @param sortOrder
-     *        Lists secrets in the requested order.
+     *        Secrets are listed by <code>CreatedDate</code>.
      * @see SortOrderType
      */
 
@@ -248,10 +248,10 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists secrets in the requested order.
+     * Secrets are listed by <code>CreatedDate</code>.
      * </p>
      * 
-     * @return Lists secrets in the requested order.
+     * @return Secrets are listed by <code>CreatedDate</code>.
      * @see SortOrderType
      */
 
@@ -261,11 +261,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists secrets in the requested order.
+     * Secrets are listed by <code>CreatedDate</code>.
      * </p>
      * 
      * @param sortOrder
-     *        Lists secrets in the requested order.
+     *        Secrets are listed by <code>CreatedDate</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SortOrderType
      */
@@ -277,11 +277,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists secrets in the requested order.
+     * Secrets are listed by <code>CreatedDate</code>.
      * </p>
      * 
      * @param sortOrder
-     *        Lists secrets in the requested order.
+     *        Secrets are listed by <code>CreatedDate</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SortOrderType
      */

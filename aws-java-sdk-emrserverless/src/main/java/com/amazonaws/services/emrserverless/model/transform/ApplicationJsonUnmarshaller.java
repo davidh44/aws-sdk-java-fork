@@ -110,6 +110,10 @@ public class ApplicationJsonUnmarshaller implements Unmarshaller<Application, Js
                     context.nextToken();
                     application.setNetworkConfiguration(NetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("architecture", targetDepth)) {
+                    context.nextToken();
+                    application.setArchitecture(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

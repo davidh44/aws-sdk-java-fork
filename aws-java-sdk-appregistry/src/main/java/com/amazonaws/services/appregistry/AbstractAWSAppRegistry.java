@@ -83,6 +83,11 @@ public class AbstractAWSAppRegistry implements AWSAppRegistry {
     }
 
     @Override
+    public GetConfigurationResult getConfiguration(GetConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListApplicationsResult listApplications(ListApplicationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -109,6 +114,11 @@ public class AbstractAWSAppRegistry implements AWSAppRegistry {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutConfigurationResult putConfiguration(PutConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

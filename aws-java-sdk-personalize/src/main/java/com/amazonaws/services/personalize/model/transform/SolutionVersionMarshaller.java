@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SolutionVersionMarshaller {
 
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
     private static final MarshallingInfo<String> SOLUTIONVERSIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("solutionVersionArn").build();
     private static final MarshallingInfo<String> SOLUTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -74,6 +76,7 @@ public class SolutionVersionMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(solutionVersion.getName(), NAME_BINDING);
             protocolMarshaller.marshall(solutionVersion.getSolutionVersionArn(), SOLUTIONVERSIONARN_BINDING);
             protocolMarshaller.marshall(solutionVersion.getSolutionArn(), SOLUTIONARN_BINDING);
             protocolMarshaller.marshall(solutionVersion.getPerformHPO(), PERFORMHPO_BINDING);

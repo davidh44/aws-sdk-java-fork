@@ -152,10 +152,9 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </p>
      * </li>
      * </ul>
-     * 
-     * <pre>
-     * <code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * All dimensions listed in this field must also be included in <code>EventPattern</code>.
+     * </p>
      */
     private java.util.Map<String, String> dimensionKeys;
     /**
@@ -316,10 +315,9 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </p>
      * </li>
      * </ul>
-     * 
-     * <pre>
-     * <code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * All dimensions listed in this field must also be included in <code>EventPattern</code>.
+     * </p>
      * 
      * @return Use this field only if you are sending the metric to CloudWatch.</p>
      *         <p>
@@ -358,8 +356,8 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      *         </p>
      *         </li>
      *         </ul>
-     * 
-     * <pre><code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
+     *         <p>
+     *         All dimensions listed in this field must also be included in <code>EventPattern</code>.
      */
 
     public java.util.Map<String, String> getDimensionKeys() {
@@ -406,10 +404,9 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </p>
      * </li>
      * </ul>
-     * 
-     * <pre>
-     * <code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * All dimensions listed in this field must also be included in <code>EventPattern</code>.
+     * </p>
      * 
      * @param dimensionKeys
      *        Use this field only if you are sending the metric to CloudWatch.</p>
@@ -449,8 +446,8 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      *        </p>
      *        </li>
      *        </ul>
-     * 
-     * <pre><code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
+     *        <p>
+     *        All dimensions listed in this field must also be included in <code>EventPattern</code>.
      */
 
     public void setDimensionKeys(java.util.Map<String, String> dimensionKeys) {
@@ -497,10 +494,9 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      * </p>
      * </li>
      * </ul>
-     * 
-     * <pre>
-     * <code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * All dimensions listed in this field must also be included in <code>EventPattern</code>.
+     * </p>
      * 
      * @param dimensionKeys
      *        Use this field only if you are sending the metric to CloudWatch.</p>
@@ -540,9 +536,8 @@ public class MetricDefinitionRequest implements Serializable, Cloneable, Structu
      *        </p>
      *        </li>
      *        </ul>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt; All dimensions listed in this field must also be included in &lt;code&gt;EventPattern&lt;/code&gt;.&lt;/p&gt; </code>
+     *        <p>
+     *        All dimensions listed in this field must also be included in <code>EventPattern</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

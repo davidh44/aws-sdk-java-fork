@@ -84,6 +84,10 @@ public class ApplicationSummaryJsonUnmarshaller implements Unmarshaller<Applicat
                     context.nextToken();
                     applicationSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("architecture", targetDepth)) {
+                    context.nextToken();
+                    applicationSummary.setArchitecture(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

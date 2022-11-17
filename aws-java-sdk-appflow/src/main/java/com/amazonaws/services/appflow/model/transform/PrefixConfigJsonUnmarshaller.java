@@ -56,6 +56,12 @@ public class PrefixConfigJsonUnmarshaller implements Unmarshaller<PrefixConfig, 
                     context.nextToken();
                     prefixConfig.setPrefixFormat(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("pathPrefixHierarchy", targetDepth)) {
+                    context.nextToken();
+                    prefixConfig.setPathPrefixHierarchy(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

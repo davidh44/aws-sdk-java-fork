@@ -56,6 +56,10 @@ public class AppMonitorJsonUnmarshaller implements Unmarshaller<AppMonitor, Json
                     context.nextToken();
                     appMonitor.setCreated(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CustomEvents", targetDepth)) {
+                    context.nextToken();
+                    appMonitor.setCustomEvents(CustomEventsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("DataStorage", targetDepth)) {
                     context.nextToken();
                     appMonitor.setDataStorage(DataStorageJsonUnmarshaller.getInstance().unmarshall(context));

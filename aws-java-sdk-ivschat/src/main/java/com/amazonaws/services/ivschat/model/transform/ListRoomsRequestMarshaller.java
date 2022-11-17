@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListRoomsRequestMarshaller {
 
+    private static final MarshallingInfo<String> LOGGINGCONFIGURATIONIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifier").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> MESSAGEREVIEWHANDLERURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -52,6 +54,7 @@ public class ListRoomsRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listRoomsRequest.getLoggingConfigurationIdentifier(), LOGGINGCONFIGURATIONIDENTIFIER_BINDING);
             protocolMarshaller.marshall(listRoomsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listRoomsRequest.getMessageReviewHandlerUri(), MESSAGEREVIEWHANDLERURI_BINDING);
             protocolMarshaller.marshall(listRoomsRequest.getName(), NAME_BINDING);

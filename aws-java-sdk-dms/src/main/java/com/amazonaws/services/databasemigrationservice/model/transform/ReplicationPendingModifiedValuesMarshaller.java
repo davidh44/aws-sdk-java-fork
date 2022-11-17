@@ -35,6 +35,8 @@ public class ReplicationPendingModifiedValuesMarshaller {
             .marshallLocationName("MultiAZ").build();
     private static final MarshallingInfo<String> ENGINEVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EngineVersion").build();
+    private static final MarshallingInfo<String> NETWORKTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkType").build();
 
     private static final ReplicationPendingModifiedValuesMarshaller instance = new ReplicationPendingModifiedValuesMarshaller();
 
@@ -56,6 +58,7 @@ public class ReplicationPendingModifiedValuesMarshaller {
             protocolMarshaller.marshall(replicationPendingModifiedValues.getAllocatedStorage(), ALLOCATEDSTORAGE_BINDING);
             protocolMarshaller.marshall(replicationPendingModifiedValues.getMultiAZ(), MULTIAZ_BINDING);
             protocolMarshaller.marshall(replicationPendingModifiedValues.getEngineVersion(), ENGINEVERSION_BINDING);
+            protocolMarshaller.marshall(replicationPendingModifiedValues.getNetworkType(), NETWORKTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

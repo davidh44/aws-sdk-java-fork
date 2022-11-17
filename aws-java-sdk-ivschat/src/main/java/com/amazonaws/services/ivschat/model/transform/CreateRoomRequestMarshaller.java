@@ -13,7 +13,7 @@
 package com.amazonaws.services.ivschat.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateRoomRequestMarshaller {
 
+    private static final MarshallingInfo<List> LOGGINGCONFIGURATIONIDENTIFIERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingConfigurationIdentifiers").build();
     private static final MarshallingInfo<Integer> MAXIMUMMESSAGELENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maximumMessageLength").build();
     private static final MarshallingInfo<Integer> MAXIMUMMESSAGERATEPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -56,6 +58,7 @@ public class CreateRoomRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createRoomRequest.getLoggingConfigurationIdentifiers(), LOGGINGCONFIGURATIONIDENTIFIERS_BINDING);
             protocolMarshaller.marshall(createRoomRequest.getMaximumMessageLength(), MAXIMUMMESSAGELENGTH_BINDING);
             protocolMarshaller.marshall(createRoomRequest.getMaximumMessageRatePerSecond(), MAXIMUMMESSAGERATEPERSECOND_BINDING);
             protocolMarshaller.marshall(createRoomRequest.getMessageReviewHandler(), MESSAGEREVIEWHANDLER_BINDING);

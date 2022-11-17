@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum Platform {
 
     WEB("WEB"),
-    WEB_DYNAMIC("WEB_DYNAMIC");
+    WEB_DYNAMIC("WEB_DYNAMIC"),
+    WEB_COMPUTE("WEB_COMPUTE");
 
     private String value;
 

@@ -47,6 +47,10 @@ public class WorkspaceBundleMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("State").build();
+    private static final MarshallingInfo<String> BUNDLETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BundleType").build();
 
     private static final WorkspaceBundleMarshaller instance = new WorkspaceBundleMarshaller();
 
@@ -74,6 +78,8 @@ public class WorkspaceBundleMarshaller {
             protocolMarshaller.marshall(workspaceBundle.getComputeType(), COMPUTETYPE_BINDING);
             protocolMarshaller.marshall(workspaceBundle.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
             protocolMarshaller.marshall(workspaceBundle.getCreationTime(), CREATIONTIME_BINDING);
+            protocolMarshaller.marshall(workspaceBundle.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(workspaceBundle.getBundleType(), BUNDLETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

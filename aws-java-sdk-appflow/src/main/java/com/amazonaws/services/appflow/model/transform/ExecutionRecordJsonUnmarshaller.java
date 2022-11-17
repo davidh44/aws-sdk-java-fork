@@ -76,6 +76,12 @@ public class ExecutionRecordJsonUnmarshaller implements Unmarshaller<ExecutionRe
                     context.nextToken();
                     executionRecord.setDataPullEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("metadataCatalogDetails", targetDepth)) {
+                    context.nextToken();
+                    executionRecord.setMetadataCatalogDetails(new ListUnmarshaller<MetadataCatalogDetail>(MetadataCatalogDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -28,7 +28,8 @@ public enum TaskType {
     Merge("Merge"),
     Passthrough("Passthrough"),
     Truncate("Truncate"),
-    Validate("Validate");
+    Validate("Validate"),
+    Partition("Partition");
 
     private String value;
 

@@ -31,6 +31,10 @@ public class ResourceInfoMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
+    private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceType").build();
+    private static final MarshallingInfo<StructuredPojo> RESOURCEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceDetails").build();
 
     private static final ResourceInfoMarshaller instance = new ResourceInfoMarshaller();
 
@@ -50,6 +54,8 @@ public class ResourceInfoMarshaller {
         try {
             protocolMarshaller.marshall(resourceInfo.getName(), NAME_BINDING);
             protocolMarshaller.marshall(resourceInfo.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(resourceInfo.getResourceType(), RESOURCETYPE_BINDING);
+            protocolMarshaller.marshall(resourceInfo.getResourceDetails(), RESOURCEDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

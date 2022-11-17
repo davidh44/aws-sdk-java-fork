@@ -119,6 +119,21 @@ public class DescribeFlowResultJsonUnmarshaller implements Unmarshaller<Describe
                             .setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                                     .unmarshall(context));
                 }
+                if (context.testExpression("metadataCatalogConfig", targetDepth)) {
+                    context.nextToken();
+                    describeFlowResult.setMetadataCatalogConfig(MetadataCatalogConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("lastRunMetadataCatalogDetails", targetDepth)) {
+                    context.nextToken();
+                    describeFlowResult.setLastRunMetadataCatalogDetails(new ListUnmarshaller<MetadataCatalogDetail>(MetadataCatalogDetailJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("schemaVersion", targetDepth)) {
+                    context.nextToken();
+                    describeFlowResult.setSchemaVersion(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

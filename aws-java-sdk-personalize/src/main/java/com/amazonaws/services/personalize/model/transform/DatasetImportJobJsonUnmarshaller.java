@@ -88,6 +88,10 @@ public class DatasetImportJobJsonUnmarshaller implements Unmarshaller<DatasetImp
                     context.nextToken();
                     datasetImportJob.setImportMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("publishAttributionMetricsToS3", targetDepth)) {
+                    context.nextToken();
+                    datasetImportJob.setPublishAttributionMetricsToS3(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

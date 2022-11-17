@@ -56,6 +56,14 @@ public class ResourceInfoJsonUnmarshaller implements Unmarshaller<ResourceInfo, 
                     context.nextToken();
                     resourceInfo.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("resourceType", targetDepth)) {
+                    context.nextToken();
+                    resourceInfo.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("resourceDetails", targetDepth)) {
+                    context.nextToken();
+                    resourceInfo.setResourceDetails(ResourceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -64,6 +64,10 @@ public class ReplicationPendingModifiedValuesJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     replicationPendingModifiedValues.setEngineVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NetworkType", targetDepth)) {
+                    context.nextToken();
+                    replicationPendingModifiedValues.setNetworkType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

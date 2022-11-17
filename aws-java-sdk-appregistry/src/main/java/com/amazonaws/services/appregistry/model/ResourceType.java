@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ResourceType {
 
-    CFN_STACK("CFN_STACK");
+    CFN_STACK("CFN_STACK"),
+    RESOURCE_TAG_VALUE("RESOURCE_TAG_VALUE");
 
     private String value;
 

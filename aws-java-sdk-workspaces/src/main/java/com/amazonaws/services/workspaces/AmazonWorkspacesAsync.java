@@ -376,6 +376,37 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a Standby WorkSpace in a secondary region.
+     * </p>
+     * 
+     * @param createStandbyWorkspacesRequest
+     * @return A Java Future containing the result of the CreateStandbyWorkspaces operation returned by the service.
+     * @sample AmazonWorkspacesAsync.CreateStandbyWorkspaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateStandbyWorkspaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateStandbyWorkspacesResult> createStandbyWorkspacesAsync(CreateStandbyWorkspacesRequest createStandbyWorkspacesRequest);
+
+    /**
+     * <p>
+     * Creates a Standby WorkSpace in a secondary region.
+     * </p>
+     * 
+     * @param createStandbyWorkspacesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateStandbyWorkspaces operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.CreateStandbyWorkspaces
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateStandbyWorkspaces"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateStandbyWorkspacesResult> createStandbyWorkspacesAsync(CreateStandbyWorkspacesRequest createStandbyWorkspacesRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateStandbyWorkspacesRequest, CreateStandbyWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates the specified tags for the specified WorkSpaces resource.
      * </p>
      * 

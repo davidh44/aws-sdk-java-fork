@@ -60,6 +60,12 @@ public class RoomSummaryJsonUnmarshaller implements Unmarshaller<RoomSummary, Js
                     context.nextToken();
                     roomSummary.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("loggingConfigurationIdentifiers", targetDepth)) {
+                    context.nextToken();
+                    roomSummary.setLoggingConfigurationIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("messageReviewHandler", targetDepth)) {
                     context.nextToken();
                     roomSummary.setMessageReviewHandler(MessageReviewHandlerJsonUnmarshaller.getInstance().unmarshall(context));
