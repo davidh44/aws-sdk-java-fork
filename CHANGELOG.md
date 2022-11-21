@@ -1,3 +1,12 @@
+# __1.12.347__ __2022-11-21__
+## __AWS SDK for Java__
+  - ### Features
+    - Adding support for ap-south-2 that is AP_Hyderabad region.
+
+## __Amazon Route 53__
+  - ### Features
+    - Amazon Route 53 now supports the Asia Pacific (Hyderabad) Region (ap-south-2) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region.
+
 # __1.12.346__ __2022-11-18__
 ## __AWS Audit Manager__
   - ### Features

@@ -286,6 +286,18 @@ public enum Region {
     AP_Mumbai("ap-south-1"),
 
     /**
+     * The Asia Pacific (Hyderabad) Region. This region uses Amazon S3 servers
+     * located in Hyderabad.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.ap-south-2.amazonaws.com</code> on all requests to these
+     * buckets to reduce any latency experienced after the first hour of
+     * creating a bucket in this region.
+     * </p>
+     */
+    AP_Hyderabad("ap-south-2"),
+
+    /**
      * The South America (Sao Paulo) Region. This region uses Amazon S3 servers
      * located in Sao Paulo.
      * <p>

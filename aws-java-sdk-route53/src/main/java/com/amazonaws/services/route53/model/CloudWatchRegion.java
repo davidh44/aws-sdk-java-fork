@@ -34,6 +34,7 @@ public enum CloudWatchRegion {
     MeSouth1("me-south-1"),
     MeCentral1("me-central-1"),
     ApSouth1("ap-south-1"),
+    ApSouth2("ap-south-2"),
     ApSoutheast1("ap-southeast-1"),
     ApSoutheast2("ap-southeast-2"),
     ApSoutheast3("ap-southeast-3"),

@@ -40,6 +40,7 @@ public enum Regions {
     EU_SOUTH_2("eu-south-2", "EU (Spain)"),
     AP_EAST_1("ap-east-1", "Asia Pacific (Hong Kong)"),
     AP_SOUTH_1("ap-south-1", "Asia Pacific (Mumbai)"),
+    AP_SOUTH_2("ap-south-2", "Asia Pacific (Hyderabad)"),
     AP_SOUTHEAST_1("ap-southeast-1", "Asia Pacific (Singapore)"),
     AP_SOUTHEAST_2("ap-southeast-2", "Asia Pacific (Sydney)"),
     AP_SOUTHEAST_3("ap-southeast-3", "Asia Pacific (Jakarta)"),
