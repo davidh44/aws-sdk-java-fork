@@ -77,6 +77,14 @@ public class ListMetricsRequestMarshaller implements Marshaller<Request<ListMetr
             request.addParameter("RecentlyActive", StringUtils.fromString(listMetricsRequest.getRecentlyActive()));
         }
 
+        if (listMetricsRequest.getIncludeLinkedAccounts() != null) {
+            request.addParameter("IncludeLinkedAccounts", StringUtils.fromBoolean(listMetricsRequest.getIncludeLinkedAccounts()));
+        }
+
+        if (listMetricsRequest.getOwningAccount() != null) {
+            request.addParameter("OwningAccount", StringUtils.fromString(listMetricsRequest.getOwningAccount()));
+        }
+
         return request;
     }
 

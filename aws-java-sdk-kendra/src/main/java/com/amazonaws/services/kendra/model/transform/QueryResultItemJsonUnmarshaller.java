@@ -56,6 +56,10 @@ public class QueryResultItemJsonUnmarshaller implements Unmarshaller<QueryResult
                     context.nextToken();
                     queryResultItem.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Format", targetDepth)) {
+                    context.nextToken();
+                    queryResultItem.setFormat(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("AdditionalAttributes", targetDepth)) {
                     context.nextToken();
                     queryResultItem.setAdditionalAttributes(new ListUnmarshaller<AdditionalResultAttribute>(AdditionalResultAttributeJsonUnmarshaller
@@ -92,6 +96,10 @@ public class QueryResultItemJsonUnmarshaller implements Unmarshaller<QueryResult
                 if (context.testExpression("FeedbackToken", targetDepth)) {
                     context.nextToken();
                     queryResultItem.setFeedbackToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TableExcerpt", targetDepth)) {
+                    context.nextToken();
+                    queryResultItem.setTableExcerpt(TableExcerptJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

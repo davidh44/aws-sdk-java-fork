@@ -20,6 +20,7 @@ import javax.annotation.Generated;
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListPositionConfigurations"
  *      target="_top">AWS API Documentation</a>
  */
+@Deprecated
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListPositionConfigurationsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 

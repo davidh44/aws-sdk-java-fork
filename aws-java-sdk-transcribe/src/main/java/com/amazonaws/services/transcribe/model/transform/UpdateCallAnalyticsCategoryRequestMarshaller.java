@@ -32,6 +32,8 @@ public class UpdateCallAnalyticsCategoryRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CategoryName").build();
     private static final MarshallingInfo<List> RULES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Rules").build();
+    private static final MarshallingInfo<String> INPUTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("InputType").build();
 
     private static final UpdateCallAnalyticsCategoryRequestMarshaller instance = new UpdateCallAnalyticsCategoryRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class UpdateCallAnalyticsCategoryRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateCallAnalyticsCategoryRequest.getCategoryName(), CATEGORYNAME_BINDING);
             protocolMarshaller.marshall(updateCallAnalyticsCategoryRequest.getRules(), RULES_BINDING);
+            protocolMarshaller.marshall(updateCallAnalyticsCategoryRequest.getInputType(), INPUTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

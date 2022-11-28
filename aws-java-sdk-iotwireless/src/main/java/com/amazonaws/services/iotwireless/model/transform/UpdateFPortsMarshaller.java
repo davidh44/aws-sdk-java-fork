@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iotwireless.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class UpdateFPortsMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> POSITIONING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Positioning").build();
+    private static final MarshallingInfo<List> APPLICATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Applications").build();
 
     private static final UpdateFPortsMarshaller instance = new UpdateFPortsMarshaller();
 
@@ -47,6 +50,7 @@ public class UpdateFPortsMarshaller {
 
         try {
             protocolMarshaller.marshall(updateFPorts.getPositioning(), POSITIONING_BINDING);
+            protocolMarshaller.marshall(updateFPorts.getApplications(), APPLICATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

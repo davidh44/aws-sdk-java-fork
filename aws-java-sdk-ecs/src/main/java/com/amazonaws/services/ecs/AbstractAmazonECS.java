@@ -204,6 +204,11 @@ public class AbstractAmazonECS implements AmazonECS {
     }
 
     @Override
+    public ListServicesByNamespaceResult listServicesByNamespace(ListServicesByNamespaceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

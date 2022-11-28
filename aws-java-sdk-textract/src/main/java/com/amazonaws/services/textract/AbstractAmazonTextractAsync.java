@@ -119,6 +119,32 @@ public class AbstractAmazonTextractAsync extends AbstractAmazonTextract implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetLendingAnalysisResult> getLendingAnalysisAsync(GetLendingAnalysisRequest request) {
+
+        return getLendingAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLendingAnalysisResult> getLendingAnalysisAsync(GetLendingAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLendingAnalysisRequest, GetLendingAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLendingAnalysisSummaryResult> getLendingAnalysisSummaryAsync(GetLendingAnalysisSummaryRequest request) {
+
+        return getLendingAnalysisSummaryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLendingAnalysisSummaryResult> getLendingAnalysisSummaryAsync(GetLendingAnalysisSummaryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLendingAnalysisSummaryRequest, GetLendingAnalysisSummaryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartDocumentAnalysisResult> startDocumentAnalysisAsync(StartDocumentAnalysisRequest request) {
 
         return startDocumentAnalysisAsync(request, null);
@@ -153,6 +179,19 @@ public class AbstractAmazonTextractAsync extends AbstractAmazonTextract implemen
     @Override
     public java.util.concurrent.Future<StartExpenseAnalysisResult> startExpenseAnalysisAsync(StartExpenseAnalysisRequest request,
             com.amazonaws.handlers.AsyncHandler<StartExpenseAnalysisRequest, StartExpenseAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartLendingAnalysisResult> startLendingAnalysisAsync(StartLendingAnalysisRequest request) {
+
+        return startLendingAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartLendingAnalysisResult> startLendingAnalysisAsync(StartLendingAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartLendingAnalysisRequest, StartLendingAnalysisResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

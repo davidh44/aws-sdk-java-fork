@@ -25,18 +25,18 @@ public class CreateFaqResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      */
     private String id;
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the FAQ.
+     *        The identifier of the FAQ.
      */
 
     public void setId(String id) {
@@ -45,10 +45,10 @@ public class CreateFaqResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      * 
-     * @return The unique identifier of the FAQ.
+     * @return The identifier of the FAQ.
      */
 
     public String getId() {
@@ -57,11 +57,11 @@ public class CreateFaqResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the FAQ.
+     *        The identifier of the FAQ.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

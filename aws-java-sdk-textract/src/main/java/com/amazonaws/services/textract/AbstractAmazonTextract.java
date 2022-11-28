@@ -63,6 +63,16 @@ public class AbstractAmazonTextract implements AmazonTextract {
     }
 
     @Override
+    public GetLendingAnalysisResult getLendingAnalysis(GetLendingAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetLendingAnalysisSummaryResult getLendingAnalysisSummary(GetLendingAnalysisSummaryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartDocumentAnalysisResult startDocumentAnalysis(StartDocumentAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +84,11 @@ public class AbstractAmazonTextract implements AmazonTextract {
 
     @Override
     public StartExpenseAnalysisResult startExpenseAnalysis(StartExpenseAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartLendingAnalysisResult startLendingAnalysis(StartLendingAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

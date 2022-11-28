@@ -1299,6 +1299,39 @@ public class AmazonECSAsyncClient extends AmazonECSClient implements AmazonECSAs
     }
 
     @Override
+    public java.util.concurrent.Future<ListServicesByNamespaceResult> listServicesByNamespaceAsync(ListServicesByNamespaceRequest request) {
+
+        return listServicesByNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicesByNamespaceResult> listServicesByNamespaceAsync(final ListServicesByNamespaceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListServicesByNamespaceRequest, ListServicesByNamespaceResult> asyncHandler) {
+        final ListServicesByNamespaceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListServicesByNamespaceResult>() {
+            @Override
+            public ListServicesByNamespaceResult call() throws Exception {
+                ListServicesByNamespaceResult result = null;
+
+                try {
+                    result = executeListServicesByNamespace(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);

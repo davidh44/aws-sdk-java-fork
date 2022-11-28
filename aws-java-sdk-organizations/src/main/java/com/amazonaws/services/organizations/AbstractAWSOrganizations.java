@@ -103,6 +103,11 @@ public class AbstractAWSOrganizations implements AWSOrganizations {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeregisterDelegatedAdministratorResult deregisterDelegatedAdministrator(DeregisterDelegatedAdministratorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -139,6 +144,11 @@ public class AbstractAWSOrganizations implements AWSOrganizations {
 
     @Override
     public DescribePolicyResult describePolicy(DescribePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeResourcePolicyResult describeResourcePolicy(DescribeResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -264,6 +274,11 @@ public class AbstractAWSOrganizations implements AWSOrganizations {
 
     @Override
     public MoveAccountResult moveAccount(MoveAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

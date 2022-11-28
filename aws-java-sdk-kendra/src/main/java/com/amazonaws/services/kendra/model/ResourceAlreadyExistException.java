@@ -15,7 +15,9 @@ package com.amazonaws.services.kendra.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The resource you want to use already exists. Please check you have provided the correct resource and try again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceAlreadyExistException extends com.amazonaws.services.kendra.model.AWSkendraException {

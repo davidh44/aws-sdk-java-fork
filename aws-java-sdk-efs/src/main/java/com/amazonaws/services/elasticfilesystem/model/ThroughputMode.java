@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ThroughputMode {
 
     Bursting("bursting"),
-    Provisioned("provisioned");
+    Provisioned("provisioned"),
+    Elastic("elastic");
 
     private String value;
 

@@ -51,7 +51,7 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional.
+     * This value is optional. If this value is included, it must be at least 60 minutes to avoid errors.
      * </p>
      */
     private Long startWindowMinutes;
@@ -236,12 +236,13 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional.
+     * This value is optional. If this value is included, it must be at least 60 minutes to avoid errors.
      * </p>
      * 
      * @param startWindowMinutes
      *        A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start
-     *        successfully. This value is optional.
+     *        successfully. This value is optional. If this value is included, it must be at least 60 minutes to avoid
+     *        errors.
      */
 
     public void setStartWindowMinutes(Long startWindowMinutes) {
@@ -251,11 +252,12 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional.
+     * This value is optional. If this value is included, it must be at least 60 minutes to avoid errors.
      * </p>
      * 
      * @return A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start
-     *         successfully. This value is optional.
+     *         successfully. This value is optional. If this value is included, it must be at least 60 minutes to avoid
+     *         errors.
      */
 
     public Long getStartWindowMinutes() {
@@ -265,12 +267,13 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional.
+     * This value is optional. If this value is included, it must be at least 60 minutes to avoid errors.
      * </p>
      * 
      * @param startWindowMinutes
      *        A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start
-     *        successfully. This value is optional.
+     *        successfully. This value is optional. If this value is included, it must be at least 60 minutes to avoid
+     *        errors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -344,6 +344,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     }
 
     private void init() {
+        if (exceptionUnmarshallersMap.get("InvalidBlueGreenDeploymentStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidBlueGreenDeploymentStateFault", new InvalidBlueGreenDeploymentStateExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new InvalidBlueGreenDeploymentStateExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("IamRoleNotFound") == null) {
             exceptionUnmarshallersMap.put("IamRoleNotFound", new IamRoleNotFoundExceptionUnmarshaller());
         }
@@ -412,6 +416,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBSecurityGroupNotFound", new DBSecurityGroupNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBSecurityGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BlueGreenDeploymentAlreadyExistsFault") == null) {
+            exceptionUnmarshallersMap.put("BlueGreenDeploymentAlreadyExistsFault", new BlueGreenDeploymentAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new BlueGreenDeploymentAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("CustomDBEngineVersionNotFoundFault") == null) {
             exceptionUnmarshallersMap.put("CustomDBEngineVersionNotFoundFault", new CustomDBEngineVersionNotFoundExceptionUnmarshaller());
         }
@@ -516,6 +524,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBProxyTargetAlreadyRegisteredFault", new DBProxyTargetAlreadyRegisteredExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBProxyTargetAlreadyRegisteredExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("BlueGreenDeploymentNotFoundFault") == null) {
+            exceptionUnmarshallersMap.put("BlueGreenDeploymentNotFoundFault", new BlueGreenDeploymentNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new BlueGreenDeploymentNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("SharedSnapshotQuotaExceeded") == null) {
             exceptionUnmarshallersMap.put("SharedSnapshotQuotaExceeded", new SharedSnapshotQuotaExceededExceptionUnmarshaller());
         }
@@ -532,6 +544,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("ReservedDBInstanceQuotaExceeded", new ReservedDBInstanceQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new ReservedDBInstanceQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SourceDatabaseNotSupportedFault") == null) {
+            exceptionUnmarshallersMap.put("SourceDatabaseNotSupportedFault", new SourceDatabaseNotSupportedExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new SourceDatabaseNotSupportedExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBInstanceRoleNotFound") == null) {
             exceptionUnmarshallersMap.put("DBInstanceRoleNotFound", new DBInstanceRoleNotFoundExceptionUnmarshaller());
         }
@@ -756,6 +772,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("InvalidGlobalClusterStateFault", new InvalidGlobalClusterStateExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidGlobalClusterStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("SourceClusterNotSupportedFault") == null) {
+            exceptionUnmarshallersMap.put("SourceClusterNotSupportedFault", new SourceClusterNotSupportedExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new SourceClusterNotSupportedExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("IamRoleMissingPermissions") == null) {
             exceptionUnmarshallersMap.put("IamRoleMissingPermissions", new IamRoleMissingPermissionsExceptionUnmarshaller());
         }
@@ -1753,6 +1773,105 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             }
 
             StaxResponseHandler<OptionGroup> responseHandler = new StaxResponseHandler<OptionGroup>(new OptionGroupStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a blue/green deployment.
+     * </p>
+     * <p>
+     * A blue/green deployment creates a staging environment that copies the production environment. In a blue/green
+     * deployment, the blue environment is the current production environment. The green environment is the staging
+     * environment. The staging environment stays in sync with the current production environment using logical
+     * replication.
+     * </p>
+     * <p>
+     * You can make changes to the databases in the green environment without affecting production workloads. For
+     * example, you can upgrade the major or minor DB engine version, change database parameters, or make schema changes
+     * in the staging environment. You can thoroughly test changes in the green environment. When ready, you can switch
+     * over the environments to promote the green environment to be the new production environment. The switchover
+     * typically takes under a minute.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createBlueGreenDeploymentRequest
+     * @return Result of the CreateBlueGreenDeployment operation returned by the service.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @throws SourceDatabaseNotSupportedException
+     *         The source DB instance isn't supported for a blue/green deployment.
+     * @throws SourceClusterNotSupportedException
+     *         The source DB cluster isn't supported for a blue/green deployment.
+     * @throws BlueGreenDeploymentAlreadyExistsException
+     *         A blue/green deployment with the specified name already exists.
+     * @throws DBParameterGroupNotFoundException
+     *         <code>DBParameterGroupName</code> doesn't refer to an existing DB parameter group.
+     * @throws DBClusterParameterGroupNotFoundException
+     *         <code>DBClusterParameterGroupName</code> doesn't refer to an existing DB cluster parameter group.
+     * @throws InstanceQuotaExceededException
+     *         The request would result in the user exceeding the allowed number of DB instances.
+     * @throws DBClusterQuotaExceededException
+     *         The user attempted to create a new DB cluster and the user has already reached the maximum allowed DB
+     *         cluster quota.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @sample AmazonRDS.CreateBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateBlueGreenDeployment" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateBlueGreenDeploymentResult createBlueGreenDeployment(CreateBlueGreenDeploymentRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateBlueGreenDeployment(request);
+    }
+
+    @SdkInternalApi
+    final CreateBlueGreenDeploymentResult executeCreateBlueGreenDeployment(CreateBlueGreenDeploymentRequest createBlueGreenDeploymentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createBlueGreenDeploymentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateBlueGreenDeploymentRequest> request = null;
+        Response<CreateBlueGreenDeploymentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateBlueGreenDeploymentRequestMarshaller().marshall(super.beforeMarshalling(createBlueGreenDeploymentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateBlueGreenDeployment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateBlueGreenDeploymentResult> responseHandler = new StaxResponseHandler<CreateBlueGreenDeploymentResult>(
+                    new CreateBlueGreenDeploymentResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -3115,6 +3234,74 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Deletes a blue/green deployment.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param deleteBlueGreenDeploymentRequest
+     * @return Result of the DeleteBlueGreenDeployment operation returned by the service.
+     * @throws BlueGreenDeploymentNotFoundException
+     *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws InvalidBlueGreenDeploymentStateException
+     *         The blue/green deployment can't be switched over or deleted because there is an invalid configuration in
+     *         the green environment.
+     * @sample AmazonRDS.DeleteBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteBlueGreenDeployment" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteBlueGreenDeploymentResult deleteBlueGreenDeployment(DeleteBlueGreenDeploymentRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteBlueGreenDeployment(request);
+    }
+
+    @SdkInternalApi
+    final DeleteBlueGreenDeploymentResult executeDeleteBlueGreenDeployment(DeleteBlueGreenDeploymentRequest deleteBlueGreenDeploymentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteBlueGreenDeploymentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteBlueGreenDeploymentRequest> request = null;
+        Response<DeleteBlueGreenDeploymentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteBlueGreenDeploymentRequestMarshaller().marshall(super.beforeMarshalling(deleteBlueGreenDeploymentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteBlueGreenDeployment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteBlueGreenDeploymentResult> responseHandler = new StaxResponseHandler<DeleteBlueGreenDeploymentResult>(
+                    new DeleteBlueGreenDeploymentResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a custom engine version. To run this command, make sure you meet the following prerequisites:
      * </p>
      * <ul>
@@ -4363,6 +4550,71 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     @Override
     public DescribeAccountAttributesResult describeAccountAttributes() {
         return describeAccountAttributes(new DescribeAccountAttributesRequest());
+    }
+
+    /**
+     * <p>
+     * Returns information about blue/green deployments.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param describeBlueGreenDeploymentsRequest
+     * @return Result of the DescribeBlueGreenDeployments operation returned by the service.
+     * @throws BlueGreenDeploymentNotFoundException
+     *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @sample AmazonRDS.DescribeBlueGreenDeployments
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeBlueGreenDeployments"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeBlueGreenDeploymentsResult describeBlueGreenDeployments(DescribeBlueGreenDeploymentsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeBlueGreenDeployments(request);
+    }
+
+    @SdkInternalApi
+    final DescribeBlueGreenDeploymentsResult executeDescribeBlueGreenDeployments(DescribeBlueGreenDeploymentsRequest describeBlueGreenDeploymentsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeBlueGreenDeploymentsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeBlueGreenDeploymentsRequest> request = null;
+        Response<DescribeBlueGreenDeploymentsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeBlueGreenDeploymentsRequestMarshaller().marshall(super.beforeMarshalling(describeBlueGreenDeploymentsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeBlueGreenDeployments");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeBlueGreenDeploymentsResult> responseHandler = new StaxResponseHandler<DescribeBlueGreenDeploymentsResult>(
+                    new DescribeBlueGreenDeploymentsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -10912,6 +11164,78 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<DBInstanceAutomatedBackup> responseHandler = new StaxResponseHandler<DBInstanceAutomatedBackup>(
                     new DBInstanceAutomatedBackupStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Switches over a blue/green deployment.
+     * </p>
+     * <p>
+     * Before you switch over, production traffic is routed to the databases in the blue environment. After you switch
+     * over, production traffic is routed to the databases in the green environment.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param switchoverBlueGreenDeploymentRequest
+     * @return Result of the SwitchoverBlueGreenDeployment operation returned by the service.
+     * @throws BlueGreenDeploymentNotFoundException
+     *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
+     * @throws InvalidBlueGreenDeploymentStateException
+     *         The blue/green deployment can't be switched over or deleted because there is an invalid configuration in
+     *         the green environment.
+     * @sample AmazonRDS.SwitchoverBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/SwitchoverBlueGreenDeployment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SwitchoverBlueGreenDeploymentResult switchoverBlueGreenDeployment(SwitchoverBlueGreenDeploymentRequest request) {
+        request = beforeClientExecution(request);
+        return executeSwitchoverBlueGreenDeployment(request);
+    }
+
+    @SdkInternalApi
+    final SwitchoverBlueGreenDeploymentResult executeSwitchoverBlueGreenDeployment(SwitchoverBlueGreenDeploymentRequest switchoverBlueGreenDeploymentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(switchoverBlueGreenDeploymentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SwitchoverBlueGreenDeploymentRequest> request = null;
+        Response<SwitchoverBlueGreenDeploymentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SwitchoverBlueGreenDeploymentRequestMarshaller().marshall(super.beforeMarshalling(switchoverBlueGreenDeploymentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SwitchoverBlueGreenDeployment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<SwitchoverBlueGreenDeploymentResult> responseHandler = new StaxResponseHandler<SwitchoverBlueGreenDeploymentResult>(
+                    new SwitchoverBlueGreenDeploymentResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

@@ -30,7 +30,7 @@ public class BatchPutDocumentResponseFailedDocument implements Serializable, Clo
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      */
     private String id;
@@ -49,11 +49,11 @@ public class BatchPutDocumentResponseFailedDocument implements Serializable, Clo
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the document.
+     *        The identifier of the document.
      */
 
     public void setId(String id) {
@@ -62,10 +62,10 @@ public class BatchPutDocumentResponseFailedDocument implements Serializable, Clo
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      * 
-     * @return The unique identifier of the document.
+     * @return The identifier of the document.
      */
 
     public String getId() {
@@ -74,11 +74,11 @@ public class BatchPutDocumentResponseFailedDocument implements Serializable, Clo
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the document.
+     *        The identifier of the document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,18 @@ public class CreateThesaurusResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The unique identifier of the thesaurus.
+     * The identifier of the thesaurus.
      * </p>
      */
     private String id;
 
     /**
      * <p>
-     * The unique identifier of the thesaurus.
+     * The identifier of the thesaurus.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the thesaurus.
+     *        The identifier of the thesaurus.
      */
 
     public void setId(String id) {
@@ -45,10 +45,10 @@ public class CreateThesaurusResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The unique identifier of the thesaurus.
+     * The identifier of the thesaurus.
      * </p>
      * 
-     * @return The unique identifier of the thesaurus.
+     * @return The identifier of the thesaurus.
      */
 
     public String getId() {
@@ -57,11 +57,11 @@ public class CreateThesaurusResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The unique identifier of the thesaurus.
+     * The identifier of the thesaurus.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the thesaurus.
+     *        The identifier of the thesaurus.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

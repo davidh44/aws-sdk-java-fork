@@ -60,6 +60,10 @@ public class DeploymentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rolloutState").build();
     private static final MarshallingInfo<String> ROLLOUTSTATEREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rolloutStateReason").build();
+    private static final MarshallingInfo<StructuredPojo> SERVICECONNECTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectConfiguration").build();
+    private static final MarshallingInfo<List> SERVICECONNECTRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectResources").build();
 
     private static final DeploymentMarshaller instance = new DeploymentMarshaller();
 
@@ -93,6 +97,8 @@ public class DeploymentMarshaller {
             protocolMarshaller.marshall(deployment.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(deployment.getRolloutState(), ROLLOUTSTATE_BINDING);
             protocolMarshaller.marshall(deployment.getRolloutStateReason(), ROLLOUTSTATEREASON_BINDING);
+            protocolMarshaller.marshall(deployment.getServiceConnectConfiguration(), SERVICECONNECTCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(deployment.getServiceConnectResources(), SERVICECONNECTRESOURCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

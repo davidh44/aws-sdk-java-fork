@@ -30,7 +30,7 @@ public class Status implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      */
     private String documentId;
@@ -59,11 +59,11 @@ public class Status implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      * 
      * @param documentId
-     *        The unique identifier of the document.
+     *        The identifier of the document.
      */
 
     public void setDocumentId(String documentId) {
@@ -72,10 +72,10 @@ public class Status implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      * 
-     * @return The unique identifier of the document.
+     * @return The identifier of the document.
      */
 
     public String getDocumentId() {
@@ -84,11 +84,11 @@ public class Status implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the document.
+     * The identifier of the document.
      * </p>
      * 
      * @param documentId
-     *        The unique identifier of the document.
+     *        The identifier of the document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -35,7 +35,7 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of data source
-     * connectors (<code>DataSourceSummaryItems</code>).
+     * connectors.
      * </p>
      */
     private String nextToken;
@@ -90,13 +90,13 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of data source
-     * connectors (<code>DataSourceSummaryItems</code>).
+     * connectors.
      * </p>
      * 
      * @param nextToken
      *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      *        pagination token in the response. You can use this pagination token to retrieve the next set of data
-     *        source connectors (<code>DataSourceSummaryItems</code>).
+     *        source connectors.
      */
 
     public void setNextToken(String nextToken) {
@@ -107,12 +107,12 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of data source
-     * connectors (<code>DataSourceSummaryItems</code>).
+     * connectors.
      * </p>
      * 
      * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      *         pagination token in the response. You can use this pagination token to retrieve the next set of data
-     *         source connectors (<code>DataSourceSummaryItems</code>).
+     *         source connectors.
      */
 
     public String getNextToken() {
@@ -123,13 +123,13 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      * pagination token in the response. You can use this pagination token to retrieve the next set of data source
-     * connectors (<code>DataSourceSummaryItems</code>).
+     * connectors.
      * </p>
      * 
      * @param nextToken
      *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
      *        pagination token in the response. You can use this pagination token to retrieve the next set of data
-     *        source connectors (<code>DataSourceSummaryItems</code>).
+     *        source connectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -115,6 +115,17 @@ public class DeploymentJsonUnmarshaller implements Unmarshaller<Deployment, Json
                     context.nextToken();
                     deployment.setRolloutStateReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("serviceConnectConfiguration", targetDepth)) {
+                    context.nextToken();
+                    deployment.setServiceConnectConfiguration(ServiceConnectConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("serviceConnectResources", targetDepth)) {
+                    context.nextToken();
+                    deployment.setServiceConnectResources(new ListUnmarshaller<ServiceConnectServiceResource>(ServiceConnectServiceResourceJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

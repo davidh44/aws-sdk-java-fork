@@ -29,6 +29,8 @@ public class DescribeLogStreamsRequestMarshaller {
 
     private static final MarshallingInfo<String> LOGGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupName").build();
+    private static final MarshallingInfo<String> LOGGROUPIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupIdentifier").build();
     private static final MarshallingInfo<String> LOGSTREAMNAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logStreamNamePrefix").build();
     private static final MarshallingInfo<String> ORDERBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -57,6 +59,7 @@ public class DescribeLogStreamsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeLogStreamsRequest.getLogGroupName(), LOGGROUPNAME_BINDING);
+            protocolMarshaller.marshall(describeLogStreamsRequest.getLogGroupIdentifier(), LOGGROUPIDENTIFIER_BINDING);
             protocolMarshaller.marshall(describeLogStreamsRequest.getLogStreamNamePrefix(), LOGSTREAMNAMEPREFIX_BINDING);
             protocolMarshaller.marshall(describeLogStreamsRequest.getOrderBy(), ORDERBY_BINDING);
             protocolMarshaller.marshall(describeLogStreamsRequest.getDescending(), DESCENDING_BINDING);

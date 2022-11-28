@@ -32,24 +32,28 @@ public class Accuracy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The horizontal accuracy of the estimated position in meters.
+     * The horizontal accuracy of the estimated position, which is the difference between the estimated location and the
+     * actual device location.
      * </p>
      */
     private Float horizontalAccuracy;
     /**
      * <p>
-     * The vertical accuracy of the estimated position in meters.
+     * The vertical accuracy of the estimated position, which is the difference between the estimated altitude and
+     * actual device latitude in meters.
      * </p>
      */
     private Float verticalAccuracy;
 
     /**
      * <p>
-     * The horizontal accuracy of the estimated position in meters.
+     * The horizontal accuracy of the estimated position, which is the difference between the estimated location and the
+     * actual device location.
      * </p>
      * 
      * @param horizontalAccuracy
-     *        The horizontal accuracy of the estimated position in meters.
+     *        The horizontal accuracy of the estimated position, which is the difference between the estimated location
+     *        and the actual device location.
      */
 
     public void setHorizontalAccuracy(Float horizontalAccuracy) {
@@ -58,10 +62,12 @@ public class Accuracy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The horizontal accuracy of the estimated position in meters.
+     * The horizontal accuracy of the estimated position, which is the difference between the estimated location and the
+     * actual device location.
      * </p>
      * 
-     * @return The horizontal accuracy of the estimated position in meters.
+     * @return The horizontal accuracy of the estimated position, which is the difference between the estimated location
+     *         and the actual device location.
      */
 
     public Float getHorizontalAccuracy() {
@@ -70,11 +76,13 @@ public class Accuracy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The horizontal accuracy of the estimated position in meters.
+     * The horizontal accuracy of the estimated position, which is the difference between the estimated location and the
+     * actual device location.
      * </p>
      * 
      * @param horizontalAccuracy
-     *        The horizontal accuracy of the estimated position in meters.
+     *        The horizontal accuracy of the estimated position, which is the difference between the estimated location
+     *        and the actual device location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,11 +93,13 @@ public class Accuracy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The vertical accuracy of the estimated position in meters.
+     * The vertical accuracy of the estimated position, which is the difference between the estimated altitude and
+     * actual device latitude in meters.
      * </p>
      * 
      * @param verticalAccuracy
-     *        The vertical accuracy of the estimated position in meters.
+     *        The vertical accuracy of the estimated position, which is the difference between the estimated altitude
+     *        and actual device latitude in meters.
      */
 
     public void setVerticalAccuracy(Float verticalAccuracy) {
@@ -98,10 +108,12 @@ public class Accuracy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The vertical accuracy of the estimated position in meters.
+     * The vertical accuracy of the estimated position, which is the difference between the estimated altitude and
+     * actual device latitude in meters.
      * </p>
      * 
-     * @return The vertical accuracy of the estimated position in meters.
+     * @return The vertical accuracy of the estimated position, which is the difference between the estimated altitude
+     *         and actual device latitude in meters.
      */
 
     public Float getVerticalAccuracy() {
@@ -110,11 +122,13 @@ public class Accuracy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The vertical accuracy of the estimated position in meters.
+     * The vertical accuracy of the estimated position, which is the difference between the estimated altitude and
+     * actual device latitude in meters.
      * </p>
      * 
      * @param verticalAccuracy
-     *        The vertical accuracy of the estimated position in meters.
+     *        The vertical accuracy of the estimated position, which is the difference between the estimated altitude
+     *        and actual device latitude in meters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

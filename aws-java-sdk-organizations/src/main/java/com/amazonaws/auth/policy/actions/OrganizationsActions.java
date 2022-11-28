@@ -51,6 +51,8 @@ public enum OrganizationsActions implements Action {
     DeleteOrganizationalUnit("organizations:DeleteOrganizationalUnit"),
     /** Action for the DeletePolicy operation. */
     DeletePolicy("organizations:DeletePolicy"),
+    /** Action for the DeleteResourcePolicy operation. */
+    DeleteResourcePolicy("organizations:DeleteResourcePolicy"),
     /** Action for the DeregisterDelegatedAdministrator operation. */
     DeregisterDelegatedAdministrator("organizations:DeregisterDelegatedAdministrator"),
     /** Action for the DescribeAccount operation. */
@@ -67,6 +69,8 @@ public enum OrganizationsActions implements Action {
     DescribeOrganizationalUnit("organizations:DescribeOrganizationalUnit"),
     /** Action for the DescribePolicy operation. */
     DescribePolicy("organizations:DescribePolicy"),
+    /** Action for the DescribeResourcePolicy operation. */
+    DescribeResourcePolicy("organizations:DescribeResourcePolicy"),
     /** Action for the DetachPolicy operation. */
     DetachPolicy("organizations:DetachPolicy"),
     /** Action for the DisableAWSServiceAccess operation. */
@@ -117,6 +121,8 @@ public enum OrganizationsActions implements Action {
     ListTargetsForPolicy("organizations:ListTargetsForPolicy"),
     /** Action for the MoveAccount operation. */
     MoveAccount("organizations:MoveAccount"),
+    /** Action for the PutResourcePolicy operation. */
+    PutResourcePolicy("organizations:PutResourcePolicy"),
     /** Action for the RegisterDelegatedAdministrator operation. */
     RegisterDelegatedAdministrator("organizations:RegisterDelegatedAdministrator"),
     /** Action for the RemoveAccountFromOrganization operation. */

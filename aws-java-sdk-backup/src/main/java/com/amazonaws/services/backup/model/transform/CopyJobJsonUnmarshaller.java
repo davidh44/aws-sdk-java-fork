@@ -108,6 +108,27 @@ public class CopyJobJsonUnmarshaller implements Unmarshaller<CopyJob, JsonUnmars
                     context.nextToken();
                     copyJob.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ParentJobId", targetDepth)) {
+                    context.nextToken();
+                    copyJob.setParentJobId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IsParent", targetDepth)) {
+                    context.nextToken();
+                    copyJob.setIsParent(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("CompositeMemberIdentifier", targetDepth)) {
+                    context.nextToken();
+                    copyJob.setCompositeMemberIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("NumberOfChildJobs", targetDepth)) {
+                    context.nextToken();
+                    copyJob.setNumberOfChildJobs(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("ChildJobsInState", targetDepth)) {
+                    context.nextToken();
+                    copyJob.setChildJobsInState(new MapUnmarshaller<String, Long>(context.getUnmarshaller(String.class), context.getUnmarshaller(Long.class))
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -58,7 +58,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional, and the default is 8 hours.
+     * This value is optional, and the default is 8 hours. If this value is included, it must be at least 60 minutes to
+     * avoid errors.
      * </p>
      */
     private Long startWindowMinutes;
@@ -307,12 +308,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional, and the default is 8 hours.
+     * This value is optional, and the default is 8 hours. If this value is included, it must be at least 60 minutes to
+     * avoid errors.
      * </p>
      * 
      * @param startWindowMinutes
      *        A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start
-     *        successfully. This value is optional, and the default is 8 hours.
+     *        successfully. This value is optional, and the default is 8 hours. If this value is included, it must be at
+     *        least 60 minutes to avoid errors.
      */
 
     public void setStartWindowMinutes(Long startWindowMinutes) {
@@ -322,11 +325,13 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional, and the default is 8 hours.
+     * This value is optional, and the default is 8 hours. If this value is included, it must be at least 60 minutes to
+     * avoid errors.
      * </p>
      * 
      * @return A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start
-     *         successfully. This value is optional, and the default is 8 hours.
+     *         successfully. This value is optional, and the default is 8 hours. If this value is included, it must be
+     *         at least 60 minutes to avoid errors.
      */
 
     public Long getStartWindowMinutes() {
@@ -336,12 +341,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start successfully.
-     * This value is optional, and the default is 8 hours.
+     * This value is optional, and the default is 8 hours. If this value is included, it must be at least 60 minutes to
+     * avoid errors.
      * </p>
      * 
      * @param startWindowMinutes
      *        A value in minutes after a backup is scheduled before a job will be canceled if it doesn't start
-     *        successfully. This value is optional, and the default is 8 hours.
+     *        successfully. This value is optional, and the default is 8 hours. If this value is included, it must be at
+     *        least 60 minutes to avoid errors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

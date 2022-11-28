@@ -63,6 +63,11 @@ public class AbstractAWSLogs implements AWSLogs {
     }
 
     @Override
+    public DeleteDataProtectionPolicyResult deleteDataProtectionPolicy(DeleteDataProtectionPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteDestinationResult deleteDestination(DeleteDestinationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -168,6 +173,11 @@ public class AbstractAWSLogs implements AWSLogs {
     }
 
     @Override
+    public GetDataProtectionPolicyResult getDataProtectionPolicy(GetDataProtectionPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLogEventsResult getLogEvents(GetLogEventsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -195,6 +205,11 @@ public class AbstractAWSLogs implements AWSLogs {
     @Override
     @Deprecated
     public ListTagsLogGroupResult listTagsLogGroup(ListTagsLogGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutDataProtectionPolicyResult putDataProtectionPolicy(PutDataProtectionPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

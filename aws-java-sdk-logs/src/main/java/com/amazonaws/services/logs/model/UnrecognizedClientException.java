@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The most likely cause is an invalid Amazon Web Services access key ID or secret key.
+ * The most likely cause is an Amazon Web Services access key ID or secret key that's not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

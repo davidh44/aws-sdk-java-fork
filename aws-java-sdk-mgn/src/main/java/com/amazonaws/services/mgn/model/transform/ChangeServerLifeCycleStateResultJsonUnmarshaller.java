@@ -48,6 +48,10 @@ public class ChangeServerLifeCycleStateResultJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationID", targetDepth)) {
+                    context.nextToken();
+                    changeServerLifeCycleStateResult.setApplicationID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     changeServerLifeCycleStateResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

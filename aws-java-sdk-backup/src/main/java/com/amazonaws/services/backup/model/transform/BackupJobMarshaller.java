@@ -69,6 +69,10 @@ public class BackupJobMarshaller {
             .marshallLocationName("BackupOptions").build();
     private static final MarshallingInfo<String> BACKUPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BackupType").build();
+    private static final MarshallingInfo<String> PARENTJOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParentJobId").build();
+    private static final MarshallingInfo<Boolean> ISPARENT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsParent").build();
 
     private static final BackupJobMarshaller instance = new BackupJobMarshaller();
 
@@ -106,6 +110,8 @@ public class BackupJobMarshaller {
             protocolMarshaller.marshall(backupJob.getBytesTransferred(), BYTESTRANSFERRED_BINDING);
             protocolMarshaller.marshall(backupJob.getBackupOptions(), BACKUPOPTIONS_BINDING);
             protocolMarshaller.marshall(backupJob.getBackupType(), BACKUPTYPE_BINDING);
+            protocolMarshaller.marshall(backupJob.getParentJobId(), PARENTJOBID_BINDING);
+            protocolMarshaller.marshall(backupJob.getIsParent(), ISPARENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

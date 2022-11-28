@@ -27,7 +27,7 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     * The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      * </p>
      */
     private String taskId;
@@ -52,11 +52,11 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     * The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      * </p>
      * 
      * @param taskId
-     *        The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     *        The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      */
 
     public void setTaskId(String taskId) {
@@ -65,10 +65,10 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     * The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      * </p>
      * 
-     * @return The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     * @return The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      */
 
     public String getTaskId() {
@@ -77,11 +77,11 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     * The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      * </p>
      * 
      * @param taskId
-     *        The ID of the export task. Specifying a task ID filters the results to zero or one export tasks.
+     *        The ID of the export task. Specifying a task ID filters the results to one or zero export tasks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

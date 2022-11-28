@@ -130,6 +130,14 @@ public class BackupJobJsonUnmarshaller implements Unmarshaller<BackupJob, JsonUn
                     context.nextToken();
                     backupJob.setBackupType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ParentJobId", targetDepth)) {
+                    context.nextToken();
+                    backupJob.setParentJobId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IsParent", targetDepth)) {
+                    context.nextToken();
+                    backupJob.setIsParent(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

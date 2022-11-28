@@ -43,7 +43,7 @@ public class Attribute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can contain
      * letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs (@), forward
-     * slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end with a space.
+     * slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a space.
      * </p>
      */
     private String value;
@@ -117,14 +117,14 @@ public class Attribute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can contain
      * letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs (@), forward
-     * slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end with a space.
+     * slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a space.
      * </p>
      * 
      * @param value
      *        The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can
      *        contain letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs
-     *        (@), forward slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end with
-     *        a space.
+     *        (@), forward slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a
+     *        space.
      */
 
     public void setValue(String value) {
@@ -135,13 +135,13 @@ public class Attribute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can contain
      * letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs (@), forward
-     * slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end with a space.
+     * slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a space.
      * </p>
      * 
      * @return The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can
      *         contain letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs
-     *         (@), forward slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end
-     *         with a space.
+     *         (@), forward slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a
+     *         space.
      */
 
     public String getValue() {
@@ -152,14 +152,14 @@ public class Attribute implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can contain
      * letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs (@), forward
-     * slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end with a space.
+     * slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a space.
      * </p>
      * 
      * @param value
      *        The value of the attribute. The <code>value</code> must contain between 1 and 128 characters. It can
      *        contain letters (uppercase and lowercase), numbers, hyphens (-), underscores (_), periods (.), at signs
-     *        (@), forward slashes (/), back slashes (\), colons (:), or spaces. The value can't can't start or end with
-     *        a space.
+     *        (@), forward slashes (/), back slashes (\), colons (:), or spaces. The value can't start or end with a
+     *        space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

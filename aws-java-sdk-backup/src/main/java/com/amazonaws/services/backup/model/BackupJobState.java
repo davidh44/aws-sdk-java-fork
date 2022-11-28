@@ -27,7 +27,8 @@ public enum BackupJobState {
     ABORTED("ABORTED"),
     COMPLETED("COMPLETED"),
     FAILED("FAILED"),
-    EXPIRED("EXPIRED");
+    EXPIRED("EXPIRED"),
+    PARTIAL("PARTIAL");
 
     private String value;
 

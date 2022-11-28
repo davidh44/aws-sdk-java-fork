@@ -46,15 +46,15 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
     private String logStreamNamePrefix;
     /**
      * <p>
-     * The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp earlier than this time are not exported.
+     * The start time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      * </p>
      */
     private Long from;
     /**
      * <p>
-     * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp later than this time are not exported.
+     * The end time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.
      * </p>
      * <p>
      * You must specify a time that is not earlier than when this log group was created.
@@ -63,7 +63,7 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
     private Long to;
     /**
      * <p>
-     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services region.
+     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services Region.
      * </p>
      */
     private String destination;
@@ -203,13 +203,13 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp earlier than this time are not exported.
+     * The start time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      * </p>
      * 
      * @param from
-     *        The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *        00:00:00 UTC. Events with a timestamp earlier than this time are not exported.
+     *        The start time of the range for the request, expressed as the number of milliseconds after
+     *        <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      */
 
     public void setFrom(Long from) {
@@ -218,12 +218,12 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp earlier than this time are not exported.
+     * The start time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      * </p>
      * 
-     * @return The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *         00:00:00 UTC. Events with a timestamp earlier than this time are not exported.
+     * @return The start time of the range for the request, expressed as the number of milliseconds after
+     *         <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      */
 
     public Long getFrom() {
@@ -232,13 +232,13 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp earlier than this time are not exported.
+     * The start time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      * </p>
      * 
      * @param from
-     *        The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *        00:00:00 UTC. Events with a timestamp earlier than this time are not exported.
+     *        The start time of the range for the request, expressed as the number of milliseconds after
+     *        <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp earlier than this time are not exported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -249,16 +249,16 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp later than this time are not exported.
+     * The end time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.
      * </p>
      * <p>
      * You must specify a time that is not earlier than when this log group was created.
      * </p>
      * 
      * @param to
-     *        The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *        00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+     *        The end time of the range for the request, expressed as the number of milliseconds after
+     *        <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.</p>
      *        <p>
      *        You must specify a time that is not earlier than when this log group was created.
      */
@@ -269,15 +269,15 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp later than this time are not exported.
+     * The end time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.
      * </p>
      * <p>
      * You must specify a time that is not earlier than when this log group was created.
      * </p>
      * 
-     * @return The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *         00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+     * @return The end time of the range for the request, expressed as the number of milliseconds after
+     *         <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.</p>
      *         <p>
      *         You must specify a time that is not earlier than when this log group was created.
      */
@@ -288,16 +288,16 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
-     * UTC. Events with a timestamp later than this time are not exported.
+     * The end time of the range for the request, expressed as the number of milliseconds after
+     * <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.
      * </p>
      * <p>
      * You must specify a time that is not earlier than when this log group was created.
      * </p>
      * 
      * @param to
-     *        The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *        00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+     *        The end time of the range for the request, expressed as the number of milliseconds after
+     *        <code>Jan 1, 1970 00:00:00 UTC</code>. Events with a timestamp later than this time are not exported.</p>
      *        <p>
      *        You must specify a time that is not earlier than when this log group was created.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -310,12 +310,12 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services region.
+     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services Region.
      * </p>
      * 
      * @param destination
      *        The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services
-     *        region.
+     *        Region.
      */
 
     public void setDestination(String destination) {
@@ -324,11 +324,11 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services region.
+     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services Region.
      * </p>
      * 
      * @return The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services
-     *         region.
+     *         Region.
      */
 
     public String getDestination() {
@@ -337,12 +337,12 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services region.
+     * The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services Region.
      * </p>
      * 
      * @param destination
      *        The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services
-     *        region.
+     *        Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -68,6 +68,18 @@ public class RetryDataReplicationResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     retryDataReplicationResult.setRecoveryInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("replicationDirection", targetDepth)) {
+                    context.nextToken();
+                    retryDataReplicationResult.setReplicationDirection(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("reversedDirectionSourceServerArn", targetDepth)) {
+                    context.nextToken();
+                    retryDataReplicationResult.setReversedDirectionSourceServerArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sourceCloudProperties", targetDepth)) {
+                    context.nextToken();
+                    retryDataReplicationResult.setSourceCloudProperties(SourceCloudPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("sourceProperties", targetDepth)) {
                     context.nextToken();
                     retryDataReplicationResult.setSourceProperties(SourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));

@@ -48,6 +48,10 @@ public class UpdateSourceServerReplicationTypeResultJsonUnmarshaller implements 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationID", targetDepth)) {
+                    context.nextToken();
+                    updateSourceServerReplicationTypeResult.setApplicationID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     updateSourceServerReplicationTypeResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

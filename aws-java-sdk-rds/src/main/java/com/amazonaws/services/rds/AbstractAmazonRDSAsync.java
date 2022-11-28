@@ -196,6 +196,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
+    public java.util.concurrent.Future<CreateBlueGreenDeploymentResult> createBlueGreenDeploymentAsync(CreateBlueGreenDeploymentRequest request) {
+
+        return createBlueGreenDeploymentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBlueGreenDeploymentResult> createBlueGreenDeploymentAsync(CreateBlueGreenDeploymentRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateBlueGreenDeploymentRequest, CreateBlueGreenDeploymentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateCustomDBEngineVersionResult> createCustomDBEngineVersionAsync(CreateCustomDBEngineVersionRequest request) {
 
         return createCustomDBEngineVersionAsync(request, null);
@@ -399,6 +412,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     @Override
     public java.util.concurrent.Future<OptionGroup> createOptionGroupAsync(CreateOptionGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateOptionGroupRequest, OptionGroup> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBlueGreenDeploymentResult> deleteBlueGreenDeploymentAsync(DeleteBlueGreenDeploymentRequest request) {
+
+        return deleteBlueGreenDeploymentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBlueGreenDeploymentResult> deleteBlueGreenDeploymentAsync(DeleteBlueGreenDeploymentRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteBlueGreenDeploymentRequest, DeleteBlueGreenDeploymentResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -658,6 +684,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
             com.amazonaws.handlers.AsyncHandler<DescribeAccountAttributesRequest, DescribeAccountAttributesResult> asyncHandler) {
 
         return describeAccountAttributesAsync(new DescribeAccountAttributesRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBlueGreenDeploymentsResult> describeBlueGreenDeploymentsAsync(DescribeBlueGreenDeploymentsRequest request) {
+
+        return describeBlueGreenDeploymentsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBlueGreenDeploymentsResult> describeBlueGreenDeploymentsAsync(DescribeBlueGreenDeploymentsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeBlueGreenDeploymentsRequest, DescribeBlueGreenDeploymentsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -2271,6 +2310,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     public java.util.concurrent.Future<DBInstanceAutomatedBackup> stopDBInstanceAutomatedBackupsReplicationAsync(
             StopDBInstanceAutomatedBackupsReplicationRequest request,
             com.amazonaws.handlers.AsyncHandler<StopDBInstanceAutomatedBackupsReplicationRequest, DBInstanceAutomatedBackup> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SwitchoverBlueGreenDeploymentResult> switchoverBlueGreenDeploymentAsync(SwitchoverBlueGreenDeploymentRequest request) {
+
+        return switchoverBlueGreenDeploymentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SwitchoverBlueGreenDeploymentResult> switchoverBlueGreenDeploymentAsync(SwitchoverBlueGreenDeploymentRequest request,
+            com.amazonaws.handlers.AsyncHandler<SwitchoverBlueGreenDeploymentRequest, SwitchoverBlueGreenDeploymentResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

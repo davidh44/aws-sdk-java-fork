@@ -30,7 +30,7 @@ public class ColumnConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The column that provides the document's unique identifier.
+     * The column that provides the document's identifier.
      * </p>
      */
     private String documentIdColumnName;
@@ -62,11 +62,11 @@ public class ColumnConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The column that provides the document's unique identifier.
+     * The column that provides the document's identifier.
      * </p>
      * 
      * @param documentIdColumnName
-     *        The column that provides the document's unique identifier.
+     *        The column that provides the document's identifier.
      */
 
     public void setDocumentIdColumnName(String documentIdColumnName) {
@@ -75,10 +75,10 @@ public class ColumnConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The column that provides the document's unique identifier.
+     * The column that provides the document's identifier.
      * </p>
      * 
-     * @return The column that provides the document's unique identifier.
+     * @return The column that provides the document's identifier.
      */
 
     public String getDocumentIdColumnName() {
@@ -87,11 +87,11 @@ public class ColumnConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The column that provides the document's unique identifier.
+     * The column that provides the document's identifier.
      * </p>
      * 
      * @param documentIdColumnName
-     *        The column that provides the document's unique identifier.
+     *        The column that provides the document's identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

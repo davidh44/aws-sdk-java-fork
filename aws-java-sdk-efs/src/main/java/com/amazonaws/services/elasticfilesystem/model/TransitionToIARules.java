@@ -24,7 +24,8 @@ public enum TransitionToIARules {
     AFTER_14_DAYS("AFTER_14_DAYS"),
     AFTER_30_DAYS("AFTER_30_DAYS"),
     AFTER_60_DAYS("AFTER_60_DAYS"),
-    AFTER_90_DAYS("AFTER_90_DAYS");
+    AFTER_90_DAYS("AFTER_90_DAYS"),
+    AFTER_1_DAY("AFTER_1_DAY");
 
     private String value;
 

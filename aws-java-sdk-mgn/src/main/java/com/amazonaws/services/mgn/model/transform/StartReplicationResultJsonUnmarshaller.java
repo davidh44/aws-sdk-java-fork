@@ -48,6 +48,10 @@ public class StartReplicationResultJsonUnmarshaller implements Unmarshaller<Star
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationID", targetDepth)) {
+                    context.nextToken();
+                    startReplicationResult.setApplicationID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     startReplicationResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

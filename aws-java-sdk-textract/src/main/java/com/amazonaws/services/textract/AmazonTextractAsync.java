@@ -692,6 +692,120 @@ public interface AmazonTextractAsync extends AmazonTextract {
 
     /**
      * <p>
+     * Gets the results for an Amazon Textract asynchronous operation that analyzes text in a lending document.
+     * </p>
+     * <p>
+     * You start asynchronous text analysis by calling <code>StartLendingAnalysis</code>, which returns a job identifier
+     * (<code>JobId</code>). When the text analysis operation finishes, Amazon Textract publishes a completion status to
+     * the Amazon Simple Notification Service (Amazon SNS) topic that's registered in the initial call to
+     * <code>StartLendingAnalysis</code>.
+     * </p>
+     * <p>
+     * To get the results of the text analysis operation, first check that the status value published to the Amazon SNS
+     * topic is SUCCEEDED. If so, call GetLendingAnalysis, and pass the job identifier (<code>JobId</code>) from the
+     * initial call to <code>StartLendingAnalysis</code>.
+     * </p>
+     * 
+     * @param getLendingAnalysisRequest
+     * @return A Java Future containing the result of the GetLendingAnalysis operation returned by the service.
+     * @sample AmazonTextractAsync.GetLendingAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetLendingAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLendingAnalysisResult> getLendingAnalysisAsync(GetLendingAnalysisRequest getLendingAnalysisRequest);
+
+    /**
+     * <p>
+     * Gets the results for an Amazon Textract asynchronous operation that analyzes text in a lending document.
+     * </p>
+     * <p>
+     * You start asynchronous text analysis by calling <code>StartLendingAnalysis</code>, which returns a job identifier
+     * (<code>JobId</code>). When the text analysis operation finishes, Amazon Textract publishes a completion status to
+     * the Amazon Simple Notification Service (Amazon SNS) topic that's registered in the initial call to
+     * <code>StartLendingAnalysis</code>.
+     * </p>
+     * <p>
+     * To get the results of the text analysis operation, first check that the status value published to the Amazon SNS
+     * topic is SUCCEEDED. If so, call GetLendingAnalysis, and pass the job identifier (<code>JobId</code>) from the
+     * initial call to <code>StartLendingAnalysis</code>.
+     * </p>
+     * 
+     * @param getLendingAnalysisRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetLendingAnalysis operation returned by the service.
+     * @sample AmazonTextractAsyncHandler.GetLendingAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetLendingAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLendingAnalysisResult> getLendingAnalysisAsync(GetLendingAnalysisRequest getLendingAnalysisRequest,
+            com.amazonaws.handlers.AsyncHandler<GetLendingAnalysisRequest, GetLendingAnalysisResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets summarized results for the <code>StartLendingAnalysis</code> operation, which analyzes text in a lending
+     * document. The returned summary consists of information about documents grouped together by a common document
+     * type. Information like detected signatures, page numbers, and split documents is returned with respect to the
+     * type of grouped document.
+     * </p>
+     * <p>
+     * You start asynchronous text analysis by calling <code>StartLendingAnalysis</code>, which returns a job identifier
+     * (<code>JobId</code>). When the text analysis operation finishes, Amazon Textract publishes a completion status to
+     * the Amazon Simple Notification Service (Amazon SNS) topic that's registered in the initial call to
+     * <code>StartLendingAnalysis</code>.
+     * </p>
+     * <p>
+     * To get the results of the text analysis operation, first check that the status value published to the Amazon SNS
+     * topic is SUCCEEDED. If so, call <code>GetLendingAnalysisSummary</code>, and pass the job identifier (
+     * <code>JobId</code>) from the initial call to <code>StartLendingAnalysis</code>.
+     * </p>
+     * 
+     * @param getLendingAnalysisSummaryRequest
+     * @return A Java Future containing the result of the GetLendingAnalysisSummary operation returned by the service.
+     * @sample AmazonTextractAsync.GetLendingAnalysisSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetLendingAnalysisSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLendingAnalysisSummaryResult> getLendingAnalysisSummaryAsync(
+            GetLendingAnalysisSummaryRequest getLendingAnalysisSummaryRequest);
+
+    /**
+     * <p>
+     * Gets summarized results for the <code>StartLendingAnalysis</code> operation, which analyzes text in a lending
+     * document. The returned summary consists of information about documents grouped together by a common document
+     * type. Information like detected signatures, page numbers, and split documents is returned with respect to the
+     * type of grouped document.
+     * </p>
+     * <p>
+     * You start asynchronous text analysis by calling <code>StartLendingAnalysis</code>, which returns a job identifier
+     * (<code>JobId</code>). When the text analysis operation finishes, Amazon Textract publishes a completion status to
+     * the Amazon Simple Notification Service (Amazon SNS) topic that's registered in the initial call to
+     * <code>StartLendingAnalysis</code>.
+     * </p>
+     * <p>
+     * To get the results of the text analysis operation, first check that the status value published to the Amazon SNS
+     * topic is SUCCEEDED. If so, call <code>GetLendingAnalysisSummary</code>, and pass the job identifier (
+     * <code>JobId</code>) from the initial call to <code>StartLendingAnalysis</code>.
+     * </p>
+     * 
+     * @param getLendingAnalysisSummaryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetLendingAnalysisSummary operation returned by the service.
+     * @sample AmazonTextractAsyncHandler.GetLendingAnalysisSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetLendingAnalysisSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLendingAnalysisSummaryResult> getLendingAnalysisSummaryAsync(
+            GetLendingAnalysisSummaryRequest getLendingAnalysisSummaryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetLendingAnalysisSummaryRequest, GetLendingAnalysisSummaryResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts the asynchronous analysis of an input document for relationships between detected items such as key-value
      * pairs, tables, and selection elements.
      * </p>
@@ -894,5 +1008,106 @@ public interface AmazonTextractAsync extends AmazonTextract {
      */
     java.util.concurrent.Future<StartExpenseAnalysisResult> startExpenseAnalysisAsync(StartExpenseAnalysisRequest startExpenseAnalysisRequest,
             com.amazonaws.handlers.AsyncHandler<StartExpenseAnalysisRequest, StartExpenseAnalysisResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts the classification and analysis of an input document. <code>StartLendingAnalysis</code> initiates the
+     * classification and analysis of a packet of lending documents. <code>StartLendingAnalysis</code> operates on a
+     * document file located in an Amazon S3 bucket.
+     * </p>
+     * <p>
+     * <code>StartLendingAnalysis</code> can analyze text in documents that are in one of the following formats: JPEG,
+     * PNG, TIFF, PDF. Use <code>DocumentLocation</code> to specify the bucket name and the file name of the document.
+     * </p>
+     * <p>
+     * <code>StartLendingAnalysis</code> returns a job identifier (<code>JobId</code>) that you use to get the results
+     * of the operation. When the text analysis is finished, Amazon Textract publishes a completion status to the Amazon
+     * Simple Notification Service (Amazon SNS) topic that you specify in <code>NotificationChannel</code>. To get the
+     * results of the text analysis operation, first check that the status value published to the Amazon SNS topic is
+     * SUCCEEDED. If the status is SUCCEEDED you can call either <code>GetLendingAnalysis</code> or
+     * <code>GetLendingAnalysisSummary</code> and provide the <code>JobId</code> to obtain the results of the analysis.
+     * </p>
+     * <p>
+     * If using <code>OutputConfig</code> to specify an Amazon S3 bucket, the output will be contained within the
+     * specified prefix in a directory labeled with the job-id. In the directory there are 3 sub-directories:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * detailedResponse (contains the GetLendingAnalysis response)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * summaryResponse (for the GetLendingAnalysisSummary response)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * splitDocuments (documents split across logical boundaries)
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startLendingAnalysisRequest
+     * @return A Java Future containing the result of the StartLendingAnalysis operation returned by the service.
+     * @sample AmazonTextractAsync.StartLendingAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/StartLendingAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartLendingAnalysisResult> startLendingAnalysisAsync(StartLendingAnalysisRequest startLendingAnalysisRequest);
+
+    /**
+     * <p>
+     * Starts the classification and analysis of an input document. <code>StartLendingAnalysis</code> initiates the
+     * classification and analysis of a packet of lending documents. <code>StartLendingAnalysis</code> operates on a
+     * document file located in an Amazon S3 bucket.
+     * </p>
+     * <p>
+     * <code>StartLendingAnalysis</code> can analyze text in documents that are in one of the following formats: JPEG,
+     * PNG, TIFF, PDF. Use <code>DocumentLocation</code> to specify the bucket name and the file name of the document.
+     * </p>
+     * <p>
+     * <code>StartLendingAnalysis</code> returns a job identifier (<code>JobId</code>) that you use to get the results
+     * of the operation. When the text analysis is finished, Amazon Textract publishes a completion status to the Amazon
+     * Simple Notification Service (Amazon SNS) topic that you specify in <code>NotificationChannel</code>. To get the
+     * results of the text analysis operation, first check that the status value published to the Amazon SNS topic is
+     * SUCCEEDED. If the status is SUCCEEDED you can call either <code>GetLendingAnalysis</code> or
+     * <code>GetLendingAnalysisSummary</code> and provide the <code>JobId</code> to obtain the results of the analysis.
+     * </p>
+     * <p>
+     * If using <code>OutputConfig</code> to specify an Amazon S3 bucket, the output will be contained within the
+     * specified prefix in a directory labeled with the job-id. In the directory there are 3 sub-directories:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * detailedResponse (contains the GetLendingAnalysis response)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * summaryResponse (for the GetLendingAnalysisSummary response)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * splitDocuments (documents split across logical boundaries)
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startLendingAnalysisRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartLendingAnalysis operation returned by the service.
+     * @sample AmazonTextractAsyncHandler.StartLendingAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/StartLendingAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartLendingAnalysisResult> startLendingAnalysisAsync(StartLendingAnalysisRequest startLendingAnalysisRequest,
+            com.amazonaws.handlers.AsyncHandler<StartLendingAnalysisRequest, StartLendingAnalysisResult> asyncHandler);
 
 }

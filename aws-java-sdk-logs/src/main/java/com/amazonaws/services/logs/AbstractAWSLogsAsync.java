@@ -92,6 +92,19 @@ public class AbstractAWSLogsAsync extends AbstractAWSLogs implements AWSLogsAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteDataProtectionPolicyResult> deleteDataProtectionPolicyAsync(DeleteDataProtectionPolicyRequest request) {
+
+        return deleteDataProtectionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataProtectionPolicyResult> deleteDataProtectionPolicyAsync(DeleteDataProtectionPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataProtectionPolicyRequest, DeleteDataProtectionPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteDestinationResult> deleteDestinationAsync(DeleteDestinationRequest request) {
 
         return deleteDestinationAsync(request, null);
@@ -385,6 +398,19 @@ public class AbstractAWSLogsAsync extends AbstractAWSLogs implements AWSLogsAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataProtectionPolicyResult> getDataProtectionPolicyAsync(GetDataProtectionPolicyRequest request) {
+
+        return getDataProtectionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataProtectionPolicyResult> getDataProtectionPolicyAsync(GetDataProtectionPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDataProtectionPolicyRequest, GetDataProtectionPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLogEventsResult> getLogEventsAsync(GetLogEventsRequest request) {
 
         return getLogEventsAsync(request, null);
@@ -460,6 +486,19 @@ public class AbstractAWSLogsAsync extends AbstractAWSLogs implements AWSLogsAsyn
     @Deprecated
     public java.util.concurrent.Future<ListTagsLogGroupResult> listTagsLogGroupAsync(ListTagsLogGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsLogGroupRequest, ListTagsLogGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutDataProtectionPolicyResult> putDataProtectionPolicyAsync(PutDataProtectionPolicyRequest request) {
+
+        return putDataProtectionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutDataProtectionPolicyResult> putDataProtectionPolicyAsync(PutDataProtectionPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutDataProtectionPolicyRequest, PutDataProtectionPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -55,9 +55,8 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">Authentication
-     * for a GitHub data source</a>.
+     * personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -381,9 +380,8 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">Authentication
-     * for a GitHub data source</a>.
+     * personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -394,9 +392,9 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">
-     *        Authentication for a GitHub data source</a>.
+     *        personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see
+     *        <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data
+     *        source</a>.
      *        </p>
      *        </li>
      */
@@ -413,9 +411,8 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">Authentication
-     * for a GitHub data source</a>.
+     * personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -425,9 +422,9 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      *         <ul>
      *         <li>
      *         <p>
-     *         githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see
-     *         <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">
-     *         Authentication for a GitHub data source</a>.
+     *         personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see
+     *         <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data
+     *         source</a>.
      *         </p>
      *         </li>
      */
@@ -444,9 +441,8 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">Authentication
-     * for a GitHub data source</a>.
+     * personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -457,9 +453,9 @@ public class GitHubConfiguration implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        githubToken—The access token created in GitHub. For more information on creating a token in GitHub, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html#github-authentication">
-     *        Authentication for a GitHub data source</a>.
+     *        personalToken—The access token created in GitHub. For more information on creating a token in GitHub, see
+     *        <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-github.html">Using a GitHub data
+     *        source</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

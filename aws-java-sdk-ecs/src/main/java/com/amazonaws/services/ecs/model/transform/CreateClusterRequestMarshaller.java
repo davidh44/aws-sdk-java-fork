@@ -40,6 +40,8 @@ public class CreateClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("capacityProviders").build();
     private static final MarshallingInfo<List> DEFAULTCAPACITYPROVIDERSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultCapacityProviderStrategy").build();
+    private static final MarshallingInfo<StructuredPojo> SERVICECONNECTDEFAULTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectDefaults").build();
 
     private static final CreateClusterRequestMarshaller instance = new CreateClusterRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class CreateClusterRequestMarshaller {
             protocolMarshaller.marshall(createClusterRequest.getConfiguration(), CONFIGURATION_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getCapacityProviders(), CAPACITYPROVIDERS_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getDefaultCapacityProviderStrategy(), DEFAULTCAPACITYPROVIDERSTRATEGY_BINDING);
+            protocolMarshaller.marshall(createClusterRequest.getServiceConnectDefaults(), SERVICECONNECTDEFAULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

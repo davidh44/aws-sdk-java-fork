@@ -39,6 +39,8 @@ public class RecoveryInstanceFailbackMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failbackInitiationTime").build();
     private static final MarshallingInfo<String> FAILBACKJOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failbackJobID").build();
+    private static final MarshallingInfo<String> FAILBACKLAUNCHTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failbackLaunchType").build();
     private static final MarshallingInfo<Boolean> FAILBACKTOORIGINALSERVER_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failbackToOriginalServer").build();
     private static final MarshallingInfo<String> FIRSTBYTEDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -68,6 +70,7 @@ public class RecoveryInstanceFailbackMarshaller {
             protocolMarshaller.marshall(recoveryInstanceFailback.getFailbackClientLastSeenByServiceDateTime(), FAILBACKCLIENTLASTSEENBYSERVICEDATETIME_BINDING);
             protocolMarshaller.marshall(recoveryInstanceFailback.getFailbackInitiationTime(), FAILBACKINITIATIONTIME_BINDING);
             protocolMarshaller.marshall(recoveryInstanceFailback.getFailbackJobID(), FAILBACKJOBID_BINDING);
+            protocolMarshaller.marshall(recoveryInstanceFailback.getFailbackLaunchType(), FAILBACKLAUNCHTYPE_BINDING);
             protocolMarshaller.marshall(recoveryInstanceFailback.getFailbackToOriginalServer(), FAILBACKTOORIGINALSERVER_BINDING);
             protocolMarshaller.marshall(recoveryInstanceFailback.getFirstByteDateTime(), FIRSTBYTEDATETIME_BINDING);
             protocolMarshaller.marshall(recoveryInstanceFailback.getState(), STATE_BINDING);

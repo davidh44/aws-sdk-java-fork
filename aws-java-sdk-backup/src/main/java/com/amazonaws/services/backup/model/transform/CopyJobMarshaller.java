@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.backup.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -57,6 +59,16 @@ public class CopyJobMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedBy").build();
     private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceType").build();
+    private static final MarshallingInfo<String> PARENTJOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParentJobId").build();
+    private static final MarshallingInfo<Boolean> ISPARENT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsParent").build();
+    private static final MarshallingInfo<String> COMPOSITEMEMBERIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompositeMemberIdentifier").build();
+    private static final MarshallingInfo<Long> NUMBEROFCHILDJOBS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfChildJobs").build();
+    private static final MarshallingInfo<Map> CHILDJOBSINSTATE_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChildJobsInState").build();
 
     private static final CopyJobMarshaller instance = new CopyJobMarshaller();
 
@@ -89,6 +101,11 @@ public class CopyJobMarshaller {
             protocolMarshaller.marshall(copyJob.getIamRoleArn(), IAMROLEARN_BINDING);
             protocolMarshaller.marshall(copyJob.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(copyJob.getResourceType(), RESOURCETYPE_BINDING);
+            protocolMarshaller.marshall(copyJob.getParentJobId(), PARENTJOBID_BINDING);
+            protocolMarshaller.marshall(copyJob.getIsParent(), ISPARENT_BINDING);
+            protocolMarshaller.marshall(copyJob.getCompositeMemberIdentifier(), COMPOSITEMEMBERIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(copyJob.getNumberOfChildJobs(), NUMBEROFCHILDJOBS_BINDING);
+            protocolMarshaller.marshall(copyJob.getChildJobsInState(), CHILDJOBSINSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

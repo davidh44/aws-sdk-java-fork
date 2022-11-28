@@ -60,6 +60,10 @@ public class StartBackupJobResultJsonUnmarshaller implements Unmarshaller<StartB
                     context.nextToken();
                     startBackupJobResult.setCreationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("IsParent", targetDepth)) {
+                    context.nextToken();
+                    startBackupJobResult.setIsParent(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

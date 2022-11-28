@@ -49,8 +49,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
-     * a Jira data source</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -221,8 +220,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
-     * a Jira data source</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -239,8 +237,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication">
-     *        Authentication for a Jira data source</a>.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      *        </p>
      *        </li>
      */
@@ -263,8 +260,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
-     * a Jira data source</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -280,8 +276,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      *         <li>
      *         <p>
      *         jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication">
-     *         Authentication for a Jira data source</a>.
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      *         </p>
      *         </li>
      */
@@ -304,8 +299,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
-     * a Jira data source</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -322,8 +316,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication">
-     *        Authentication for a Jira data source</a>.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

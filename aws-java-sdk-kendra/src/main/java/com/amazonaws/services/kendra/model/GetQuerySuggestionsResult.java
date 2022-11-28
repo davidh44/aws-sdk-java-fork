@@ -25,7 +25,7 @@ public class GetQuerySuggestionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier for a list of query suggestions for an index.
+     * The identifier for a list of query suggestions for an index.
      * </p>
      */
     private String querySuggestionsId;
@@ -38,11 +38,11 @@ public class GetQuerySuggestionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier for a list of query suggestions for an index.
+     * The identifier for a list of query suggestions for an index.
      * </p>
      * 
      * @param querySuggestionsId
-     *        The unique identifier for a list of query suggestions for an index.
+     *        The identifier for a list of query suggestions for an index.
      */
 
     public void setQuerySuggestionsId(String querySuggestionsId) {
@@ -51,10 +51,10 @@ public class GetQuerySuggestionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier for a list of query suggestions for an index.
+     * The identifier for a list of query suggestions for an index.
      * </p>
      * 
-     * @return The unique identifier for a list of query suggestions for an index.
+     * @return The identifier for a list of query suggestions for an index.
      */
 
     public String getQuerySuggestionsId() {
@@ -63,11 +63,11 @@ public class GetQuerySuggestionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The unique identifier for a list of query suggestions for an index.
+     * The identifier for a list of query suggestions for an index.
      * </p>
      * 
      * @param querySuggestionsId
-     *        The unique identifier for a list of query suggestions for an index.
+     *        The identifier for a list of query suggestions for an index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

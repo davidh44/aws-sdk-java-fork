@@ -121,6 +121,10 @@ public class ClusterJsonUnmarshaller implements Unmarshaller<Cluster, JsonUnmars
                     context.nextToken();
                     cluster.setAttachmentsStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("serviceConnectDefaults", targetDepth)) {
+                    context.nextToken();
+                    cluster.setServiceConnectDefaults(ClusterServiceConnectDefaultsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

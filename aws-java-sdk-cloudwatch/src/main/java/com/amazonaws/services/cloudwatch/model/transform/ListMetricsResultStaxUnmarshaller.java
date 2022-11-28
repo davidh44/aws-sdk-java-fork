@@ -59,6 +59,17 @@ public class ListMetricsResultStaxUnmarshaller implements Unmarshaller<ListMetri
                     listMetricsResult.setNextToken(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("OwningAccounts", targetDepth)) {
+                    listMetricsResult.withOwningAccounts(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("OwningAccounts/member", targetDepth)) {
+                    listMetricsResult.withOwningAccounts(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return listMetricsResult;

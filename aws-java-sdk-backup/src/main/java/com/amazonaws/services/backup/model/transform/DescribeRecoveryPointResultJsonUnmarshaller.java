@@ -124,6 +124,18 @@ public class DescribeRecoveryPointResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     describeRecoveryPointResult.setLastRestoreTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ParentRecoveryPointArn", targetDepth)) {
+                    context.nextToken();
+                    describeRecoveryPointResult.setParentRecoveryPointArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CompositeMemberIdentifier", targetDepth)) {
+                    context.nextToken();
+                    describeRecoveryPointResult.setCompositeMemberIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IsParent", targetDepth)) {
+                    context.nextToken();
+                    describeRecoveryPointResult.setIsParent(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

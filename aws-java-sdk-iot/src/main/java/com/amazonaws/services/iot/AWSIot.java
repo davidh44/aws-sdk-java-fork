@@ -339,8 +339,8 @@ public interface AWSIot {
 
     /**
      * <p>
-     * Attaches the specified principal to the specified thing. A principal can be X.509 certificates, IAM users,
-     * groups, and roles, Amazon Cognito identities or federated identities.
+     * Attaches the specified principal to the specified thing. A principal can be X.509 certificates, Amazon Cognito
+     * identities or federated identities.
      * </p>
      * <p>
      * Requires permission to access the <a href=

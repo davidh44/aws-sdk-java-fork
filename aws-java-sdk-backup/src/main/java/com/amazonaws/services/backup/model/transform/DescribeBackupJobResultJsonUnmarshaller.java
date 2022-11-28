@@ -129,6 +129,23 @@ public class DescribeBackupJobResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeBackupJobResult.setBackupType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ParentJobId", targetDepth)) {
+                    context.nextToken();
+                    describeBackupJobResult.setParentJobId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IsParent", targetDepth)) {
+                    context.nextToken();
+                    describeBackupJobResult.setIsParent(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("NumberOfChildJobs", targetDepth)) {
+                    context.nextToken();
+                    describeBackupJobResult.setNumberOfChildJobs(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("ChildJobsInState", targetDepth)) {
+                    context.nextToken();
+                    describeBackupJobResult.setChildJobsInState(new MapUnmarshaller<String, Long>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(Long.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

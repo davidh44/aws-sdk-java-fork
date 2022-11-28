@@ -38,7 +38,7 @@ public class SidewalkSendDataToDevice implements Serializable, Cloneable, Struct
     private String messageType;
     /**
      * <p>
-     * The duration of time in seconds for which you want to retry sending the ACK.
+     * The duration of time in seconds to retry sending the ACK.
      * </p>
      */
     private Integer ackModeRetryDurationSecs;
@@ -125,11 +125,11 @@ public class SidewalkSendDataToDevice implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The duration of time in seconds for which you want to retry sending the ACK.
+     * The duration of time in seconds to retry sending the ACK.
      * </p>
      * 
      * @param ackModeRetryDurationSecs
-     *        The duration of time in seconds for which you want to retry sending the ACK.
+     *        The duration of time in seconds to retry sending the ACK.
      */
 
     public void setAckModeRetryDurationSecs(Integer ackModeRetryDurationSecs) {
@@ -138,10 +138,10 @@ public class SidewalkSendDataToDevice implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The duration of time in seconds for which you want to retry sending the ACK.
+     * The duration of time in seconds to retry sending the ACK.
      * </p>
      * 
-     * @return The duration of time in seconds for which you want to retry sending the ACK.
+     * @return The duration of time in seconds to retry sending the ACK.
      */
 
     public Integer getAckModeRetryDurationSecs() {
@@ -150,11 +150,11 @@ public class SidewalkSendDataToDevice implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The duration of time in seconds for which you want to retry sending the ACK.
+     * The duration of time in seconds to retry sending the ACK.
      * </p>
      * 
      * @param ackModeRetryDurationSecs
-     *        The duration of time in seconds for which you want to retry sending the ACK.
+     *        The duration of time in seconds to retry sending the ACK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -15,7 +15,11 @@ package com.amazonaws.services.kendra.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * You have exceeded the set limits for your Amazon Kendra service. Please see Quotas[hyperlink Kendra Quotas pg] for
+ * more information, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> to inquire about
+ * an increase of limits.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServiceQuotaExceededException extends com.amazonaws.services.kendra.model.AWSkendraException {

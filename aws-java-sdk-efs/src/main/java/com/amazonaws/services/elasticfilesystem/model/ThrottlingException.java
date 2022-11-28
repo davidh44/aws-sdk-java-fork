@@ -16,8 +16,10 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Returned when the <code>CreateAccessPoint</code> API action is called too quickly and the number of Access Points in
- * the account is nearing the limit of 120.
+ * Returned when the <code>CreateAccessPoint</code> API action is called too quickly and the number of Access Points on
+ * the file system is nearing the <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/limits.html#limits-efs-resources-per-account-per-region">limit of
+ * 120</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

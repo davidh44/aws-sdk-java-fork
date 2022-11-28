@@ -67,8 +67,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      * metric.
      * </p>
      * <p>
-     * To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     * name/value pairs for the dimensions that you have specified within a certain amount of time.
+     * CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your specified
+     * dimensions within a certain amount of time. This helps to prevent accidental high charges.
      * </p>
      * <p>
      * You can also set up a billing alarm to alert you if your charges are higher than expected. For more information,
@@ -276,8 +276,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      * metric.
      * </p>
      * <p>
-     * To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     * name/value pairs for the dimensions that you have specified within a certain amount of time.
+     * CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your specified
+     * dimensions within a certain amount of time. This helps to prevent accidental high charges.
      * </p>
      * <p>
      * You can also set up a billing alarm to alert you if your charges are higher than expected. For more information,
@@ -296,8 +296,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      *         charges as a separate custom metric.
      *         </p>
      *         <p>
-     *         To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     *         name/value pairs for the dimensions that you have specified within a certain amount of time.
+     *         CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your
+     *         specified dimensions within a certain amount of time. This helps to prevent accidental high charges.
      *         </p>
      *         <p>
      *         You can also set up a billing alarm to alert you if your charges are higher than expected. For more
@@ -326,8 +326,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      * metric.
      * </p>
      * <p>
-     * To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     * name/value pairs for the dimensions that you have specified within a certain amount of time.
+     * CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your specified
+     * dimensions within a certain amount of time. This helps to prevent accidental high charges.
      * </p>
      * <p>
      * You can also set up a billing alarm to alert you if your charges are higher than expected. For more information,
@@ -347,8 +347,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      *        as a separate custom metric.
      *        </p>
      *        <p>
-     *        To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     *        name/value pairs for the dimensions that you have specified within a certain amount of time.
+     *        CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your
+     *        specified dimensions within a certain amount of time. This helps to prevent accidental high charges.
      *        </p>
      *        <p>
      *        You can also set up a billing alarm to alert you if your charges are higher than expected. For more
@@ -374,8 +374,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      * metric.
      * </p>
      * <p>
-     * To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     * name/value pairs for the dimensions that you have specified within a certain amount of time.
+     * CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your specified
+     * dimensions within a certain amount of time. This helps to prevent accidental high charges.
      * </p>
      * <p>
      * You can also set up a billing alarm to alert you if your charges are higher than expected. For more information,
@@ -395,8 +395,8 @@ public class MetricTransformation implements Serializable, Cloneable, Structured
      *        as a separate custom metric.
      *        </p>
      *        <p>
-     *        To help prevent accidental high charges, Amazon disables a metric filter if it generates 1000 different
-     *        name/value pairs for the dimensions that you have specified within a certain amount of time.
+     *        CloudWatch Logs disables a metric filter if it generates 1000 different name/value pairs for your
+     *        specified dimensions within a certain amount of time. This helps to prevent accidental high charges.
      *        </p>
      *        <p>
      *        You can also set up a billing alarm to alert you if your charges are higher than expected. For more

@@ -124,6 +124,9 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
                             new JsonErrorShapeMetadata().withErrorCode("UpdateInProgressException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ecs.model.transform.UpdateInProgressExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("NamespaceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.ecs.model.transform.NamespaceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ClusterContainsTasksException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ecs.model.transform.ClusterContainsTasksExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -639,6 +642,8 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      *         The specified platform version doesn't satisfy the required capabilities of the task definition.
      * @throws AccessDeniedException
      *         You don't have authorization to perform the requested action.
+     * @throws NamespaceNotFoundException
+     *         The specified namespace wasn't found.
      * @sample AmazonECS.CreateService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CreateService" target="_top">AWS API
      *      Documentation</a>
@@ -722,6 +727,8 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * @throws ServiceNotActiveException
      *         The specified service isn't active. You can't update a service that's inactive. If you have previously
      *         deleted a service, you can re-create it with <a>CreateService</a>.
+     * @throws NamespaceNotFoundException
+     *         The specified namespace wasn't found.
      * @sample AmazonECS.CreateTaskSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CreateTaskSet" target="_top">AWS API
      *      Documentation</a>
@@ -1964,7 +1971,7 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * </p>
      * <p>
      * If you use a condition key in your IAM policy to refine the conditions for the policy statement, for example
-     * limit the actions to a specific cluster, you recevie an <code>AccessDeniedException</code> when there is a
+     * limit the actions to a specific cluster, you receive an <code>AccessDeniedException</code> when there is a
      * mismatch between the condition key value and the corresponding parameter value.
      * </p>
      * 
@@ -2468,6 +2475,78 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
     @Override
     public ListServicesResult listServices() {
         return listServices(new ListServicesRequest());
+    }
+
+    /**
+     * <p>
+     * This operation lists all of the services that are associated with a Cloud Map namespace. This list might include
+     * services in different clusters. In contrast, <code>ListServices</code> can only list services in one cluster at a
+     * time. If you need to filter the list of services in a single cluster by various parameters, use
+     * <code>ListServices</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html">Service Connect</a> in
+     * the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * 
+     * @param listServicesByNamespaceRequest
+     * @return Result of the ListServicesByNamespace operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. This client action might be using an action or
+     *         resource on behalf of a user that doesn't have permissions to use the action or resource,. Or, it might
+     *         be specifying an identifier that isn't valid.
+     * @throws InvalidParameterException
+     *         The specified parameter isn't valid. Review the available parameters for the API request.
+     * @throws NamespaceNotFoundException
+     *         The specified namespace wasn't found.
+     * @sample AmazonECS.ListServicesByNamespace
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ListServicesByNamespace" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListServicesByNamespaceResult listServicesByNamespace(ListServicesByNamespaceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListServicesByNamespace(request);
+    }
+
+    @SdkInternalApi
+    final ListServicesByNamespaceResult executeListServicesByNamespace(ListServicesByNamespaceRequest listServicesByNamespaceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listServicesByNamespaceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListServicesByNamespaceRequest> request = null;
+        Response<ListServicesByNamespaceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListServicesByNamespaceRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listServicesByNamespaceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ECS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListServicesByNamespace");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListServicesByNamespaceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListServicesByNamespaceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -4067,6 +4146,12 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/agent-update-ecs-ami.html">Updating the Amazon
      * ECS container agent</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
+     * </note> <note>
+     * <p>
+     * Agent updates with the <code>UpdateContainerAgent</code> API operation do not apply to Windows container
+     * instances. We recommend that you launch new container instances to update the agent version in your Windows
+     * clusters.
+     * </p>
      * </note>
      * <p>
      * The <code>UpdateContainerAgent</code> API requires an Amazon ECS-optimized AMI or Amazon Linux AMI with the
@@ -4450,6 +4535,8 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      *         The specified platform version doesn't satisfy the required capabilities of the task definition.
      * @throws AccessDeniedException
      *         You don't have authorization to perform the requested action.
+     * @throws NamespaceNotFoundException
+     *         The specified namespace wasn't found.
      * @sample AmazonECS.UpdateService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/UpdateService" target="_top">AWS API
      *      Documentation</a>
@@ -4605,20 +4692,20 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * <p>
      * To learn more about Amazon ECS task protection, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection.html">Task scale-in
-     * protection</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * protection</a> in the <i> <i>Amazon Elastic Container Service Developer Guide</i> </i>.
      * </p>
      * <note>
      * <p>
      * This operation is only supported for tasks belonging to an Amazon ECS service. Invoking this operation for a
      * standalone task will result in an <code>TASK_NOT_VALID</code> failure. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html.html">API failure
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html">API failure
      * reasons</a>.
      * </p>
      * </note> <important>
      * <p>
      * If you prefer to set task protection from within the container, we recommend using the <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-endpoint.html">Amazon ECS container
-     * agent endpoint</a>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection-endpoint.html">Task
+     * scale-in protection endpoint</a>.
      * </p>
      * </important>
      * 

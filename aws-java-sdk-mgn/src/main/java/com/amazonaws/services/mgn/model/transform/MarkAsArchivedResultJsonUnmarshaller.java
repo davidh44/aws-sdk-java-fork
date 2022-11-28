@@ -48,6 +48,10 @@ public class MarkAsArchivedResultJsonUnmarshaller implements Unmarshaller<MarkAs
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationID", targetDepth)) {
+                    context.nextToken();
+                    markAsArchivedResult.setApplicationID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     markAsArchivedResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

@@ -71,7 +71,7 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in process is
-     * not affected by this parameter. If this parameter is omitted, the default value of <code>10000</code> is used.
+     * not affected by this parameter. If this parameter is omitted, the default value of <code>1</code> is used.
      * </p>
      */
     private Integer maximumScalingStepSize;
@@ -297,13 +297,13 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in process is
-     * not affected by this parameter. If this parameter is omitted, the default value of <code>10000</code> is used.
+     * not affected by this parameter. If this parameter is omitted, the default value of <code>1</code> is used.
      * </p>
      * 
      * @param maximumScalingStepSize
      *        The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in
      *        process is not affected by this parameter. If this parameter is omitted, the default value of
-     *        <code>10000</code> is used.
+     *        <code>1</code> is used.
      */
 
     public void setMaximumScalingStepSize(Integer maximumScalingStepSize) {
@@ -313,12 +313,12 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in process is
-     * not affected by this parameter. If this parameter is omitted, the default value of <code>10000</code> is used.
+     * not affected by this parameter. If this parameter is omitted, the default value of <code>1</code> is used.
      * </p>
      * 
      * @return The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in
      *         process is not affected by this parameter. If this parameter is omitted, the default value of
-     *         <code>10000</code> is used.
+     *         <code>1</code> is used.
      */
 
     public Integer getMaximumScalingStepSize() {
@@ -328,13 +328,13 @@ public class ManagedScaling implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in process is
-     * not affected by this parameter. If this parameter is omitted, the default value of <code>10000</code> is used.
+     * not affected by this parameter. If this parameter is omitted, the default value of <code>1</code> is used.
      * </p>
      * 
      * @param maximumScalingStepSize
      *        The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time. The scale in
      *        process is not affected by this parameter. If this parameter is omitted, the default value of
-     *        <code>10000</code> is used.
+     *        <code>1</code> is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

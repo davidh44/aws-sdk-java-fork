@@ -56,6 +56,10 @@ public class DiscoverPollEndpointResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     discoverPollEndpointResult.setTelemetryEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("serviceConnectEndpoint", targetDepth)) {
+                    context.nextToken();
+                    discoverPollEndpointResult.setServiceConnectEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

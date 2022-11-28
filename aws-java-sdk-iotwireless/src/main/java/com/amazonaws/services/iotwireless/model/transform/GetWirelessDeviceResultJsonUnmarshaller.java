@@ -88,6 +88,10 @@ public class GetWirelessDeviceResultJsonUnmarshaller implements Unmarshaller<Get
                     context.nextToken();
                     getWirelessDeviceResult.setSidewalk(SidewalkDeviceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Positioning", targetDepth)) {
+                    context.nextToken();
+                    getWirelessDeviceResult.setPositioning(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

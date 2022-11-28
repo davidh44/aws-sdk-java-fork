@@ -68,6 +68,18 @@ public class SourceServerJsonUnmarshaller implements Unmarshaller<SourceServer, 
                     context.nextToken();
                     sourceServer.setRecoveryInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("replicationDirection", targetDepth)) {
+                    context.nextToken();
+                    sourceServer.setReplicationDirection(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("reversedDirectionSourceServerArn", targetDepth)) {
+                    context.nextToken();
+                    sourceServer.setReversedDirectionSourceServerArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sourceCloudProperties", targetDepth)) {
+                    context.nextToken();
+                    sourceServer.setSourceCloudProperties(SourceCloudPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("sourceProperties", targetDepth)) {
                     context.nextToken();
                     sourceServer.setSourceProperties(SourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));

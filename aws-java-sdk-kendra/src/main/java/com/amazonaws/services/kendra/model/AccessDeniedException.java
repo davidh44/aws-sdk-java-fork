@@ -15,7 +15,10 @@ package com.amazonaws.services.kendra.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * You don't have sufficient access to perform this action. Please ensure you have the required permission policies and
+ * user accounts and try again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AccessDeniedException extends com.amazonaws.services.kendra.model.AWSkendraException {

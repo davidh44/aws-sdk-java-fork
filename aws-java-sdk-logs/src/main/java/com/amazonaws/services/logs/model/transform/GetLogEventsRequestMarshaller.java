@@ -29,6 +29,8 @@ public class GetLogEventsRequestMarshaller {
 
     private static final MarshallingInfo<String> LOGGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupName").build();
+    private static final MarshallingInfo<String> LOGGROUPIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupIdentifier").build();
     private static final MarshallingInfo<String> LOGSTREAMNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logStreamName").build();
     private static final MarshallingInfo<Long> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
@@ -41,6 +43,8 @@ public class GetLogEventsRequestMarshaller {
             .marshallLocationName("limit").build();
     private static final MarshallingInfo<Boolean> STARTFROMHEAD_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startFromHead").build();
+    private static final MarshallingInfo<Boolean> UNMASK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("unmask").build();
 
     private static final GetLogEventsRequestMarshaller instance = new GetLogEventsRequestMarshaller();
 
@@ -59,12 +63,14 @@ public class GetLogEventsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getLogEventsRequest.getLogGroupName(), LOGGROUPNAME_BINDING);
+            protocolMarshaller.marshall(getLogEventsRequest.getLogGroupIdentifier(), LOGGROUPIDENTIFIER_BINDING);
             protocolMarshaller.marshall(getLogEventsRequest.getLogStreamName(), LOGSTREAMNAME_BINDING);
             protocolMarshaller.marshall(getLogEventsRequest.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(getLogEventsRequest.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(getLogEventsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getLogEventsRequest.getLimit(), LIMIT_BINDING);
             protocolMarshaller.marshall(getLogEventsRequest.getStartFromHead(), STARTFROMHEAD_BINDING);
+            protocolMarshaller.marshall(getLogEventsRequest.getUnmask(), UNMASK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

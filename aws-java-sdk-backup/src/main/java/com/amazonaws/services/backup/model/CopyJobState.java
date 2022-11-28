@@ -23,7 +23,8 @@ public enum CopyJobState {
     CREATED("CREATED"),
     RUNNING("RUNNING"),
     COMPLETED("COMPLETED"),
-    FAILED("FAILED");
+    FAILED("FAILED"),
+    PARTIAL("PARTIAL");
 
     private String value;
 

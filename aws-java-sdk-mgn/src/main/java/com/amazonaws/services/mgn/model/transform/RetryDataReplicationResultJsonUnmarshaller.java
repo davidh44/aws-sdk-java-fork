@@ -48,6 +48,10 @@ public class RetryDataReplicationResultJsonUnmarshaller implements Unmarshaller<
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationID", targetDepth)) {
+                    context.nextToken();
+                    retryDataReplicationResult.setApplicationID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     retryDataReplicationResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

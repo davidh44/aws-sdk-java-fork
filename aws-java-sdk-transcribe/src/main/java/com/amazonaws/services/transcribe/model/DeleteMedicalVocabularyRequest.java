@@ -27,18 +27,19 @@ public class DeleteMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     * The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case sensitive.
      * </p>
      */
     private String vocabularyName;
 
     /**
      * <p>
-     * The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     * The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case sensitive.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     *        The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case
+     *        sensitive.
      */
 
     public void setVocabularyName(String vocabularyName) {
@@ -47,10 +48,11 @@ public class DeleteMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     * The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case sensitive.
      * </p>
      * 
-     * @return The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     * @return The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case
+     *         sensitive.
      */
 
     public String getVocabularyName() {
@@ -59,11 +61,12 @@ public class DeleteMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     * The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case sensitive.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the custom medical vocabulary you want to delete. Vocabulary names are case sensitive.
+     *        The name of the custom medical vocabulary you want to delete. Custom medical vocabulary names are case
+     *        sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

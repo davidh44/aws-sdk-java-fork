@@ -31,6 +31,8 @@ public class GetLogGroupFieldsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupName").build();
     private static final MarshallingInfo<Long> TIME_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("time").build();
+    private static final MarshallingInfo<String> LOGGROUPIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupIdentifier").build();
 
     private static final GetLogGroupFieldsRequestMarshaller instance = new GetLogGroupFieldsRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class GetLogGroupFieldsRequestMarshaller {
         try {
             protocolMarshaller.marshall(getLogGroupFieldsRequest.getLogGroupName(), LOGGROUPNAME_BINDING);
             protocolMarshaller.marshall(getLogGroupFieldsRequest.getTime(), TIME_BINDING);
+            protocolMarshaller.marshall(getLogGroupFieldsRequest.getLogGroupIdentifier(), LOGGROUPIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

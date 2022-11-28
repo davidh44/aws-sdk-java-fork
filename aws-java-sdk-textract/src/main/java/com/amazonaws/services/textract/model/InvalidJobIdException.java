@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An invalid job identifier was passed to <a>GetDocumentAnalysis</a> or to <a>GetDocumentAnalysis</a>.
+ * An invalid job identifier was passed to an asynchronous analysis operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

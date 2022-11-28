@@ -33,7 +33,7 @@ public class DescribeMetricFiltersRequest extends com.amazonaws.AmazonWebService
     private String logGroupName;
     /**
      * <p>
-     * The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     * The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      * <code>logGroupName</code> parameter in your request.
      * </p>
      */
@@ -125,12 +125,12 @@ public class DescribeMetricFiltersRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     * The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      * <code>logGroupName</code> parameter in your request.
      * </p>
      * 
      * @param filterNamePrefix
-     *        The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     *        The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      *        <code>logGroupName</code> parameter in your request.
      */
 
@@ -140,11 +140,11 @@ public class DescribeMetricFiltersRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     * The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      * <code>logGroupName</code> parameter in your request.
      * </p>
      * 
-     * @return The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     * @return The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      *         <code>logGroupName</code> parameter in your request.
      */
 
@@ -154,12 +154,12 @@ public class DescribeMetricFiltersRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     * The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      * <code>logGroupName</code> parameter in your request.
      * </p>
      * 
      * @param filterNamePrefix
-     *        The prefix to match. CloudWatch Logs uses the value you set here only if you also include the
+     *        The prefix to match. CloudWatch Logs uses the value that you set here only if you also include the
      *        <code>logGroupName</code> parameter in your request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

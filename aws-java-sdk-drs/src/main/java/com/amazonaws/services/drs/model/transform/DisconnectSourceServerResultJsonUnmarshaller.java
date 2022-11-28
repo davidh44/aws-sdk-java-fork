@@ -68,6 +68,18 @@ public class DisconnectSourceServerResultJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     disconnectSourceServerResult.setRecoveryInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("replicationDirection", targetDepth)) {
+                    context.nextToken();
+                    disconnectSourceServerResult.setReplicationDirection(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("reversedDirectionSourceServerArn", targetDepth)) {
+                    context.nextToken();
+                    disconnectSourceServerResult.setReversedDirectionSourceServerArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sourceCloudProperties", targetDepth)) {
+                    context.nextToken();
+                    disconnectSourceServerResult.setSourceCloudProperties(SourceCloudPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("sourceProperties", targetDepth)) {
                     context.nextToken();
                     disconnectSourceServerResult.setSourceProperties(SourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));

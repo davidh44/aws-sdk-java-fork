@@ -400,7 +400,7 @@ public interface AmazonTextract {
      *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
      *         Textract.
      * @throws InvalidJobIdException
-     *         An invalid job identifier was passed to <a>GetDocumentAnalysis</a> or to <a>GetDocumentAnalysis</a>.
+     *         An invalid job identifier was passed to an asynchronous analysis operation.
      * @throws InternalServerErrorException
      *         Amazon Textract experienced a service issue. Try your call again.
      * @throws ThrottlingException
@@ -468,7 +468,7 @@ public interface AmazonTextract {
      *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
      *         Textract.
      * @throws InvalidJobIdException
-     *         An invalid job identifier was passed to <a>GetDocumentAnalysis</a> or to <a>GetDocumentAnalysis</a>.
+     *         An invalid job identifier was passed to an asynchronous analysis operation.
      * @throws InternalServerErrorException
      *         Amazon Textract experienced a service issue. Try your call again.
      * @throws ThrottlingException
@@ -527,7 +527,7 @@ public interface AmazonTextract {
      *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
      *         Textract.
      * @throws InvalidJobIdException
-     *         An invalid job identifier was passed to <a>GetDocumentAnalysis</a> or to <a>GetDocumentAnalysis</a>.
+     *         An invalid job identifier was passed to an asynchronous analysis operation.
      * @throws InternalServerErrorException
      *         Amazon Textract experienced a service issue. Try your call again.
      * @throws ThrottlingException
@@ -545,6 +545,107 @@ public interface AmazonTextract {
      *      API Documentation</a>
      */
     GetExpenseAnalysisResult getExpenseAnalysis(GetExpenseAnalysisRequest getExpenseAnalysisRequest);
+
+    /**
+     * <p>
+     * Gets the results for an Amazon Textract asynchronous operation that analyzes text in a lending document.
+     * </p>
+     * <p>
+     * You start asynchronous text analysis by calling <code>StartLendingAnalysis</code>, which returns a job identifier
+     * (<code>JobId</code>). When the text analysis operation finishes, Amazon Textract publishes a completion status to
+     * the Amazon Simple Notification Service (Amazon SNS) topic that's registered in the initial call to
+     * <code>StartLendingAnalysis</code>.
+     * </p>
+     * <p>
+     * To get the results of the text analysis operation, first check that the status value published to the Amazon SNS
+     * topic is SUCCEEDED. If so, call GetLendingAnalysis, and pass the job identifier (<code>JobId</code>) from the
+     * initial call to <code>StartLendingAnalysis</code>.
+     * </p>
+     * 
+     * @param getLendingAnalysisRequest
+     * @return Result of the GetLendingAnalysis operation returned by the service.
+     * @throws InvalidParameterException
+     *         An input parameter violated a constraint. For example, in synchronous operations, an
+     *         <code>InvalidParameterException</code> exception occurs when neither of the <code>S3Object</code> or
+     *         <code>Bytes</code> values are supplied in the <code>Document</code> request parameter. Validate your
+     *         parameter before calling the API operation again.
+     * @throws AccessDeniedException
+     *         You aren't authorized to perform the action. Use the Amazon Resource Name (ARN) of an authorized user or
+     *         IAM role to perform the operation.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Textract.
+     * @throws InvalidJobIdException
+     *         An invalid job identifier was passed to an asynchronous analysis operation.
+     * @throws InternalServerErrorException
+     *         Amazon Textract experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Textract is temporarily unable to process the request. Try your call again.
+     * @throws InvalidS3ObjectException
+     *         Amazon Textract is unable to access the S3 object that's specified in the request. for more information,
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Configure Access to
+     *         Amazon S3</a> For troubleshooting information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
+     * @throws InvalidKMSKeyException
+     *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
+     *         incorrectly.
+     * @sample AmazonTextract.GetLendingAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetLendingAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetLendingAnalysisResult getLendingAnalysis(GetLendingAnalysisRequest getLendingAnalysisRequest);
+
+    /**
+     * <p>
+     * Gets summarized results for the <code>StartLendingAnalysis</code> operation, which analyzes text in a lending
+     * document. The returned summary consists of information about documents grouped together by a common document
+     * type. Information like detected signatures, page numbers, and split documents is returned with respect to the
+     * type of grouped document.
+     * </p>
+     * <p>
+     * You start asynchronous text analysis by calling <code>StartLendingAnalysis</code>, which returns a job identifier
+     * (<code>JobId</code>). When the text analysis operation finishes, Amazon Textract publishes a completion status to
+     * the Amazon Simple Notification Service (Amazon SNS) topic that's registered in the initial call to
+     * <code>StartLendingAnalysis</code>.
+     * </p>
+     * <p>
+     * To get the results of the text analysis operation, first check that the status value published to the Amazon SNS
+     * topic is SUCCEEDED. If so, call <code>GetLendingAnalysisSummary</code>, and pass the job identifier (
+     * <code>JobId</code>) from the initial call to <code>StartLendingAnalysis</code>.
+     * </p>
+     * 
+     * @param getLendingAnalysisSummaryRequest
+     * @return Result of the GetLendingAnalysisSummary operation returned by the service.
+     * @throws InvalidParameterException
+     *         An input parameter violated a constraint. For example, in synchronous operations, an
+     *         <code>InvalidParameterException</code> exception occurs when neither of the <code>S3Object</code> or
+     *         <code>Bytes</code> values are supplied in the <code>Document</code> request parameter. Validate your
+     *         parameter before calling the API operation again.
+     * @throws AccessDeniedException
+     *         You aren't authorized to perform the action. Use the Amazon Resource Name (ARN) of an authorized user or
+     *         IAM role to perform the operation.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Textract.
+     * @throws InvalidJobIdException
+     *         An invalid job identifier was passed to an asynchronous analysis operation.
+     * @throws InternalServerErrorException
+     *         Amazon Textract experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Textract is temporarily unable to process the request. Try your call again.
+     * @throws InvalidS3ObjectException
+     *         Amazon Textract is unable to access the S3 object that's specified in the request. for more information,
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Configure Access to
+     *         Amazon S3</a> For troubleshooting information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
+     * @throws InvalidKMSKeyException
+     *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
+     *         incorrectly.
+     * @sample AmazonTextract.GetLendingAnalysisSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetLendingAnalysisSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetLendingAnalysisSummaryResult getLendingAnalysisSummary(GetLendingAnalysisSummaryRequest getLendingAnalysisSummaryRequest);
 
     /**
      * <p>
@@ -759,6 +860,94 @@ public interface AmazonTextract {
      *      API Documentation</a>
      */
     StartExpenseAnalysisResult startExpenseAnalysis(StartExpenseAnalysisRequest startExpenseAnalysisRequest);
+
+    /**
+     * <p>
+     * Starts the classification and analysis of an input document. <code>StartLendingAnalysis</code> initiates the
+     * classification and analysis of a packet of lending documents. <code>StartLendingAnalysis</code> operates on a
+     * document file located in an Amazon S3 bucket.
+     * </p>
+     * <p>
+     * <code>StartLendingAnalysis</code> can analyze text in documents that are in one of the following formats: JPEG,
+     * PNG, TIFF, PDF. Use <code>DocumentLocation</code> to specify the bucket name and the file name of the document.
+     * </p>
+     * <p>
+     * <code>StartLendingAnalysis</code> returns a job identifier (<code>JobId</code>) that you use to get the results
+     * of the operation. When the text analysis is finished, Amazon Textract publishes a completion status to the Amazon
+     * Simple Notification Service (Amazon SNS) topic that you specify in <code>NotificationChannel</code>. To get the
+     * results of the text analysis operation, first check that the status value published to the Amazon SNS topic is
+     * SUCCEEDED. If the status is SUCCEEDED you can call either <code>GetLendingAnalysis</code> or
+     * <code>GetLendingAnalysisSummary</code> and provide the <code>JobId</code> to obtain the results of the analysis.
+     * </p>
+     * <p>
+     * If using <code>OutputConfig</code> to specify an Amazon S3 bucket, the output will be contained within the
+     * specified prefix in a directory labeled with the job-id. In the directory there are 3 sub-directories:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * detailedResponse (contains the GetLendingAnalysis response)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * summaryResponse (for the GetLendingAnalysisSummary response)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * splitDocuments (documents split across logical boundaries)
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startLendingAnalysisRequest
+     * @return Result of the StartLendingAnalysis operation returned by the service.
+     * @throws InvalidParameterException
+     *         An input parameter violated a constraint. For example, in synchronous operations, an
+     *         <code>InvalidParameterException</code> exception occurs when neither of the <code>S3Object</code> or
+     *         <code>Bytes</code> values are supplied in the <code>Document</code> request parameter. Validate your
+     *         parameter before calling the API operation again.
+     * @throws InvalidS3ObjectException
+     *         Amazon Textract is unable to access the S3 object that's specified in the request. for more information,
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Configure Access to
+     *         Amazon S3</a> For troubleshooting information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
+     * @throws InvalidKMSKeyException
+     *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
+     *         incorrectly.
+     * @throws UnsupportedDocumentException
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
+     * @throws DocumentTooLargeException
+     *         The document can't be processed because it's too large. The maximum document size for synchronous
+     *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
+     * @throws BadDocumentException
+     *         Amazon Textract isn't able to read the document. For more information on the document limits in Amazon
+     *         Textract, see <a>limits</a>.
+     * @throws AccessDeniedException
+     *         You aren't authorized to perform the action. Use the Amazon Resource Name (ARN) of an authorized user or
+     *         IAM role to perform the operation.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Textract.
+     * @throws InternalServerErrorException
+     *         Amazon Textract experienced a service issue. Try your call again.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @throws ThrottlingException
+     *         Amazon Textract is temporarily unable to process the request. Try your call again.
+     * @throws LimitExceededException
+     *         An Amazon Textract service limit was exceeded. For example, if you start too many asynchronous jobs
+     *         concurrently, calls to start operations (<code>StartDocumentTextDetection</code>, for example) raise a
+     *         LimitExceededException exception (HTTP status code: 400) until the number of concurrently running jobs is
+     *         below the Amazon Textract service limit.
+     * @sample AmazonTextract.StartLendingAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/StartLendingAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartLendingAnalysisResult startLendingAnalysis(StartLendingAnalysisRequest startLendingAnalysisRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

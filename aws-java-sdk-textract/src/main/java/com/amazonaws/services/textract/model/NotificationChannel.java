@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The Amazon Simple Notification Service (Amazon SNS) topic to which Amazon Textract publishes the completion status of
- * an asynchronous document operation, such as <a>StartDocumentTextDetection</a>.
+ * an asynchronous document operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/NotificationChannel" target="_top">AWS API

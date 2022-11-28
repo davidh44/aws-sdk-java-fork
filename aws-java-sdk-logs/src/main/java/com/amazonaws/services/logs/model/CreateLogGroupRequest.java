@@ -33,9 +33,9 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
     private String logGroupName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
+     * The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon Resource
-     * Names - Key Management Service</a>.
+     * Names</a>.
      * </p>
      */
     private String kmsKeyId;
@@ -113,15 +113,15 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
+     * The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon Resource
-     * Names - Key Management Service</a>.
+     * Names</a>.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon
-     *        Resource Names - Key Management Service</a>.
+     *        The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see
+     *        <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon
+     *        Resource Names</a>.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -130,14 +130,15 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
+     * The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon Resource
-     * Names - Key Management Service</a>.
+     * Names</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
+     * @return The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see
+     *         <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon
-     *         Resource Names - Key Management Service</a>.
+     *         Resource Names</a>.
      */
 
     public String getKmsKeyId() {
@@ -146,15 +147,15 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
+     * The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon Resource
-     * Names - Key Management Service</a>.
+     * Names</a>.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the CMK to use when encrypting log data. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon
-     *        Resource Names - Key Management Service</a>.
+     *        The Amazon Resource Name (ARN) of the KMS key to use when encrypting log data. For more information, see
+     *        <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Amazon
+     *        Resource Names</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -39,7 +39,7 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This option is
-     * avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     * available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * </p>
      */
     private String cpuArchitecture;
@@ -56,14 +56,14 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This option is
-     * avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     * available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * </p>
      * 
      * @param cpuArchitecture
      *        The CPU architecture.</p>
      *        <p>
      *        You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This
-     *        option is avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     *        option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * @see CPUArchitecture
      */
 
@@ -77,13 +77,13 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This option is
-     * avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     * available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * </p>
      * 
      * @return The CPU architecture.</p>
      *         <p>
      *         You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This
-     *         option is avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     *         option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * @see CPUArchitecture
      */
 
@@ -97,14 +97,14 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This option is
-     * avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     * available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * </p>
      * 
      * @param cpuArchitecture
      *        The CPU architecture.</p>
      *        <p>
      *        You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This
-     *        option is avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     *        option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CPUArchitecture
      */
@@ -120,14 +120,14 @@ public class RuntimePlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This option is
-     * avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     * available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * </p>
      * 
      * @param cpuArchitecture
      *        The CPU architecture.</p>
      *        <p>
      *        You can run your Linux tasks on an ARM-based platform by setting the value to <code>ARM64</code>. This
-     *        option is avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
+     *        option is available for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CPUArchitecture
      */

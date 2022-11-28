@@ -15,7 +15,10 @@ package com.amazonaws.services.kendra.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The input fails to satisfy the constraints set by the Amazon Kendra service. Please provide the correct input and try
+ * again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.kendra.model.AWSkendraException {

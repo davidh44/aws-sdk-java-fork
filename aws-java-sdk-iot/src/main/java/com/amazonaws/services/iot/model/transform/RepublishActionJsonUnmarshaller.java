@@ -60,6 +60,10 @@ public class RepublishActionJsonUnmarshaller implements Unmarshaller<RepublishAc
                     context.nextToken();
                     republishAction.setQos(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("headers", targetDepth)) {
+                    context.nextToken();
+                    republishAction.setHeaders(MqttHeadersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

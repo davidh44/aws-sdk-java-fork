@@ -52,6 +52,12 @@ public class UpdateFPortsJsonUnmarshaller implements Unmarshaller<UpdateFPorts, 
                     context.nextToken();
                     updateFPorts.setPositioning(PositioningJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Applications", targetDepth)) {
+                    context.nextToken();
+                    updateFPorts.setApplications(new ListUnmarshaller<ApplicationConfig>(ApplicationConfigJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

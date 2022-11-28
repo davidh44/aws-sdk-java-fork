@@ -104,6 +104,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public CreateBlueGreenDeploymentResult createBlueGreenDeployment(CreateBlueGreenDeploymentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateCustomDBEngineVersionResult createCustomDBEngineVersion(CreateCustomDBEngineVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -180,6 +185,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public OptionGroup createOptionGroup(CreateOptionGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteBlueGreenDeploymentResult deleteBlueGreenDeployment(DeleteBlueGreenDeploymentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -276,6 +286,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     @Override
     public DescribeAccountAttributesResult describeAccountAttributes() {
         return describeAccountAttributes(new DescribeAccountAttributesRequest());
+    }
+
+    @Override
+    public DescribeBlueGreenDeploymentsResult describeBlueGreenDeployments(DescribeBlueGreenDeploymentsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -815,6 +830,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public DBInstanceAutomatedBackup stopDBInstanceAutomatedBackupsReplication(StopDBInstanceAutomatedBackupsReplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SwitchoverBlueGreenDeploymentResult switchoverBlueGreenDeployment(SwitchoverBlueGreenDeploymentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

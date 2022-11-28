@@ -22,7 +22,10 @@ public enum TaskStopCode {
 
     TaskFailedToStart("TaskFailedToStart"),
     EssentialContainerExited("EssentialContainerExited"),
-    UserInitiated("UserInitiated");
+    UserInitiated("UserInitiated"),
+    ServiceSchedulerInitiated("ServiceSchedulerInitiated"),
+    SpotInterruption("SpotInterruption"),
+    TerminationNotice("TerminationNotice");
 
     private String value;
 

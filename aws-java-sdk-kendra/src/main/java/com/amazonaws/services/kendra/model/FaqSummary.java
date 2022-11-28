@@ -30,7 +30,7 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      */
     private String id;
@@ -76,11 +76,11 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the FAQ.
+     *        The identifier of the FAQ.
      */
 
     public void setId(String id) {
@@ -89,10 +89,10 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      * 
-     * @return The unique identifier of the FAQ.
+     * @return The identifier of the FAQ.
      */
 
     public String getId() {
@@ -101,11 +101,11 @@ public class FaqSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the FAQ.
+     * The identifier of the FAQ.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the FAQ.
+     *        The identifier of the FAQ.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

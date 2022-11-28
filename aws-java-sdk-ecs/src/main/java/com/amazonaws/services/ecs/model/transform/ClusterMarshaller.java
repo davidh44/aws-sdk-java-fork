@@ -58,6 +58,8 @@ public class ClusterMarshaller {
             .marshallLocationName("attachments").build();
     private static final MarshallingInfo<String> ATTACHMENTSSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attachmentsStatus").build();
+    private static final MarshallingInfo<StructuredPojo> SERVICECONNECTDEFAULTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectDefaults").build();
 
     private static final ClusterMarshaller instance = new ClusterMarshaller();
 
@@ -90,6 +92,7 @@ public class ClusterMarshaller {
             protocolMarshaller.marshall(cluster.getDefaultCapacityProviderStrategy(), DEFAULTCAPACITYPROVIDERSTRATEGY_BINDING);
             protocolMarshaller.marshall(cluster.getAttachments(), ATTACHMENTS_BINDING);
             protocolMarshaller.marshall(cluster.getAttachmentsStatus(), ATTACHMENTSSTATUS_BINDING);
+            protocolMarshaller.marshall(cluster.getServiceConnectDefaults(), SERVICECONNECTDEFAULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

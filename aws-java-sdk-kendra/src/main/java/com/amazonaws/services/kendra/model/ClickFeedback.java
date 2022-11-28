@@ -31,7 +31,7 @@ public class ClickFeedback implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the search result that was clicked.
+     * The identifier of the search result that was clicked.
      * </p>
      */
     private String resultId;
@@ -44,11 +44,11 @@ public class ClickFeedback implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the search result that was clicked.
+     * The identifier of the search result that was clicked.
      * </p>
      * 
      * @param resultId
-     *        The unique identifier of the search result that was clicked.
+     *        The identifier of the search result that was clicked.
      */
 
     public void setResultId(String resultId) {
@@ -57,10 +57,10 @@ public class ClickFeedback implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the search result that was clicked.
+     * The identifier of the search result that was clicked.
      * </p>
      * 
-     * @return The unique identifier of the search result that was clicked.
+     * @return The identifier of the search result that was clicked.
      */
 
     public String getResultId() {
@@ -69,11 +69,11 @@ public class ClickFeedback implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier of the search result that was clicked.
+     * The identifier of the search result that was clicked.
      * </p>
      * 
      * @param resultId
-     *        The unique identifier of the search result that was clicked.
+     *        The identifier of the search result that was clicked.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

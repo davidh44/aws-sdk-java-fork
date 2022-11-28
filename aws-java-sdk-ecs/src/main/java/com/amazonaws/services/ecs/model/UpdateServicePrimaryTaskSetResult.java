@@ -25,18 +25,18 @@ public class UpdateServicePrimaryTaskSetResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * etails about the task set.
+     * The details about the task set.
      * </p>
      */
     private TaskSet taskSet;
 
     /**
      * <p>
-     * etails about the task set.
+     * The details about the task set.
      * </p>
      * 
      * @param taskSet
-     *        etails about the task set.
+     *        The details about the task set.
      */
 
     public void setTaskSet(TaskSet taskSet) {
@@ -45,10 +45,10 @@ public class UpdateServicePrimaryTaskSetResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * etails about the task set.
+     * The details about the task set.
      * </p>
      * 
-     * @return etails about the task set.
+     * @return The details about the task set.
      */
 
     public TaskSet getTaskSet() {
@@ -57,11 +57,11 @@ public class UpdateServicePrimaryTaskSetResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * etails about the task set.
+     * The details about the task set.
      * </p>
      * 
      * @param taskSet
-     *        etails about the task set.
+     *        The details about the task set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

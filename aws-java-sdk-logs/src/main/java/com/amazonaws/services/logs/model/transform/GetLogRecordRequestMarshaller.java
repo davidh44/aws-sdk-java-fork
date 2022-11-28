@@ -29,6 +29,8 @@ public class GetLogRecordRequestMarshaller {
 
     private static final MarshallingInfo<String> LOGRECORDPOINTER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logRecordPointer").build();
+    private static final MarshallingInfo<Boolean> UNMASK_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("unmask").build();
 
     private static final GetLogRecordRequestMarshaller instance = new GetLogRecordRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class GetLogRecordRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getLogRecordRequest.getLogRecordPointer(), LOGRECORDPOINTER_BINDING);
+            protocolMarshaller.marshall(getLogRecordRequest.getUnmask(), UNMASK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

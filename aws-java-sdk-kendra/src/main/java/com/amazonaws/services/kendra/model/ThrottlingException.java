@@ -15,7 +15,9 @@ package com.amazonaws.services.kendra.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The request was denied due to request throttling. Please reduce the number of requests and try again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ThrottlingException extends com.amazonaws.services.kendra.model.AWSkendraException {

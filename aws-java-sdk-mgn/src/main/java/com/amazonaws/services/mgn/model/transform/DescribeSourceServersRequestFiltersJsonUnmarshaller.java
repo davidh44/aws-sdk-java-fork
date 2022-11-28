@@ -48,6 +48,12 @@ public class DescribeSourceServersRequestFiltersJsonUnmarshaller implements Unma
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationIDs", targetDepth)) {
+                    context.nextToken();
+                    describeSourceServersRequestFilters.setApplicationIDs(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("isArchived", targetDepth)) {
                     context.nextToken();
                     describeSourceServersRequestFilters.setIsArchived(context.getUnmarshaller(Boolean.class).unmarshall(context));

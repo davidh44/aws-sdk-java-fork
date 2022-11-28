@@ -50,8 +50,8 @@ public class ListMedicalTranscriptionJobsRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of medical transcription jobs to return in each page of results. If there are fewer results
-     * than the value you specify, only the actual results are returned. If you don't specify a value, a default of 5 is
-     * used.
+     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
+     * 5 is used.
      * </p>
      */
     private Integer maxResults;
@@ -231,14 +231,14 @@ public class ListMedicalTranscriptionJobsRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of medical transcription jobs to return in each page of results. If there are fewer results
-     * than the value you specify, only the actual results are returned. If you don't specify a value, a default of 5 is
-     * used.
+     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
+     * 5 is used.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of medical transcription jobs to return in each page of results. If there are fewer
-     *        results than the value you specify, only the actual results are returned. If you don't specify a value, a
-     *        default of 5 is used.
+     *        results than the value that you specify, only the actual results are returned. If you don't specify a
+     *        value, a default of 5 is used.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -248,13 +248,13 @@ public class ListMedicalTranscriptionJobsRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of medical transcription jobs to return in each page of results. If there are fewer results
-     * than the value you specify, only the actual results are returned. If you don't specify a value, a default of 5 is
-     * used.
+     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
+     * 5 is used.
      * </p>
      * 
      * @return The maximum number of medical transcription jobs to return in each page of results. If there are fewer
-     *         results than the value you specify, only the actual results are returned. If you don't specify a value, a
-     *         default of 5 is used.
+     *         results than the value that you specify, only the actual results are returned. If you don't specify a
+     *         value, a default of 5 is used.
      */
 
     public Integer getMaxResults() {
@@ -264,14 +264,14 @@ public class ListMedicalTranscriptionJobsRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The maximum number of medical transcription jobs to return in each page of results. If there are fewer results
-     * than the value you specify, only the actual results are returned. If you don't specify a value, a default of 5 is
-     * used.
+     * than the value that you specify, only the actual results are returned. If you don't specify a value, a default of
+     * 5 is used.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of medical transcription jobs to return in each page of results. If there are fewer
-     *        results than the value you specify, only the actual results are returned. If you don't specify a value, a
-     *        default of 5 is used.
+     *        results than the value that you specify, only the actual results are returned. If you don't specify a
+     *        value, a default of 5 is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

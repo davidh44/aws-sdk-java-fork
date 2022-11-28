@@ -746,6 +746,79 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Creates a blue/green deployment.
+     * </p>
+     * <p>
+     * A blue/green deployment creates a staging environment that copies the production environment. In a blue/green
+     * deployment, the blue environment is the current production environment. The green environment is the staging
+     * environment. The staging environment stays in sync with the current production environment using logical
+     * replication.
+     * </p>
+     * <p>
+     * You can make changes to the databases in the green environment without affecting production workloads. For
+     * example, you can upgrade the major or minor DB engine version, change database parameters, or make schema changes
+     * in the staging environment. You can thoroughly test changes in the green environment. When ready, you can switch
+     * over the environments to promote the green environment to be the new production environment. The switchover
+     * typically takes under a minute.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createBlueGreenDeploymentRequest
+     * @return A Java Future containing the result of the CreateBlueGreenDeployment operation returned by the service.
+     * @sample AmazonRDSAsync.CreateBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateBlueGreenDeployment" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBlueGreenDeploymentResult> createBlueGreenDeploymentAsync(
+            CreateBlueGreenDeploymentRequest createBlueGreenDeploymentRequest);
+
+    /**
+     * <p>
+     * Creates a blue/green deployment.
+     * </p>
+     * <p>
+     * A blue/green deployment creates a staging environment that copies the production environment. In a blue/green
+     * deployment, the blue environment is the current production environment. The green environment is the staging
+     * environment. The staging environment stays in sync with the current production environment using logical
+     * replication.
+     * </p>
+     * <p>
+     * You can make changes to the databases in the green environment without affecting production workloads. For
+     * example, you can upgrade the major or minor DB engine version, change database parameters, or make schema changes
+     * in the staging environment. You can thoroughly test changes in the green environment. When ready, you can switch
+     * over the environments to promote the green environment to be the new production environment. The switchover
+     * typically takes under a minute.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param createBlueGreenDeploymentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateBlueGreenDeployment operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.CreateBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateBlueGreenDeployment" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBlueGreenDeploymentResult> createBlueGreenDeploymentAsync(
+            CreateBlueGreenDeploymentRequest createBlueGreenDeploymentRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateBlueGreenDeploymentRequest, CreateBlueGreenDeploymentResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a custom DB engine version (CEV). A CEV is a binary volume snapshot of a database engine and specific
      * AMI. The supported engines are the following:
      * </p>
@@ -1702,6 +1775,53 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Deletes a blue/green deployment.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param deleteBlueGreenDeploymentRequest
+     * @return A Java Future containing the result of the DeleteBlueGreenDeployment operation returned by the service.
+     * @sample AmazonRDSAsync.DeleteBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteBlueGreenDeployment" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBlueGreenDeploymentResult> deleteBlueGreenDeploymentAsync(
+            DeleteBlueGreenDeploymentRequest deleteBlueGreenDeploymentRequest);
+
+    /**
+     * <p>
+     * Deletes a blue/green deployment.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param deleteBlueGreenDeploymentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteBlueGreenDeployment operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DeleteBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteBlueGreenDeployment" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBlueGreenDeploymentResult> deleteBlueGreenDeploymentAsync(
+            DeleteBlueGreenDeploymentRequest deleteBlueGreenDeploymentRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteBlueGreenDeploymentRequest, DeleteBlueGreenDeploymentResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a custom engine version. To run this command, make sure you meet the following prerequisites:
      * </p>
      * <ul>
@@ -2580,6 +2700,55 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DescribeAccountAttributesResult> describeAccountAttributesAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeAccountAttributesRequest, DescribeAccountAttributesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about blue/green deployments.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param describeBlueGreenDeploymentsRequest
+     * @return A Java Future containing the result of the DescribeBlueGreenDeployments operation returned by the
+     *         service.
+     * @sample AmazonRDSAsync.DescribeBlueGreenDeployments
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeBlueGreenDeployments"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBlueGreenDeploymentsResult> describeBlueGreenDeploymentsAsync(
+            DescribeBlueGreenDeploymentsRequest describeBlueGreenDeploymentsRequest);
+
+    /**
+     * <p>
+     * Returns information about blue/green deployments.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param describeBlueGreenDeploymentsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeBlueGreenDeployments operation returned by the
+     *         service.
+     * @sample AmazonRDSAsyncHandler.DescribeBlueGreenDeployments
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeBlueGreenDeployments"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBlueGreenDeploymentsResult> describeBlueGreenDeploymentsAsync(
+            DescribeBlueGreenDeploymentsRequest describeBlueGreenDeploymentsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeBlueGreenDeploymentsRequest, DescribeBlueGreenDeploymentsResult> asyncHandler);
 
     /**
      * <p>
@@ -7188,6 +7357,63 @@ public interface AmazonRDSAsync extends AmazonRDS {
     java.util.concurrent.Future<DBInstanceAutomatedBackup> stopDBInstanceAutomatedBackupsReplicationAsync(
             StopDBInstanceAutomatedBackupsReplicationRequest stopDBInstanceAutomatedBackupsReplicationRequest,
             com.amazonaws.handlers.AsyncHandler<StopDBInstanceAutomatedBackupsReplicationRequest, DBInstanceAutomatedBackup> asyncHandler);
+
+    /**
+     * <p>
+     * Switches over a blue/green deployment.
+     * </p>
+     * <p>
+     * Before you switch over, production traffic is routed to the databases in the blue environment. After you switch
+     * over, production traffic is routed to the databases in the green environment.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param switchoverBlueGreenDeploymentRequest
+     * @return A Java Future containing the result of the SwitchoverBlueGreenDeployment operation returned by the
+     *         service.
+     * @sample AmazonRDSAsync.SwitchoverBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/SwitchoverBlueGreenDeployment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SwitchoverBlueGreenDeploymentResult> switchoverBlueGreenDeploymentAsync(
+            SwitchoverBlueGreenDeploymentRequest switchoverBlueGreenDeploymentRequest);
+
+    /**
+     * <p>
+     * Switches over a blue/green deployment.
+     * </p>
+     * <p>
+     * Before you switch over, production traffic is routed to the databases in the blue environment. After you switch
+     * over, production traffic is routed to the databases in the green environment.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+     * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param switchoverBlueGreenDeploymentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SwitchoverBlueGreenDeployment operation returned by the
+     *         service.
+     * @sample AmazonRDSAsyncHandler.SwitchoverBlueGreenDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/SwitchoverBlueGreenDeployment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SwitchoverBlueGreenDeploymentResult> switchoverBlueGreenDeploymentAsync(
+            SwitchoverBlueGreenDeploymentRequest switchoverBlueGreenDeploymentRequest,
+            com.amazonaws.handlers.AsyncHandler<SwitchoverBlueGreenDeploymentRequest, SwitchoverBlueGreenDeploymentResult> asyncHandler);
 
     /**
      * <p>

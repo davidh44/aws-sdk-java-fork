@@ -15,7 +15,10 @@ package com.amazonaws.services.kendra.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * An issue occurred with the internal server used for your Amazon Kendra service. Please wait a few minutes and try
+ * again, or contact <a href="http://aws.amazon.com/aws.amazon.com/contact-us"> Support</a> for help.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InternalServerException extends com.amazonaws.services.kendra.model.AWSkendraException {

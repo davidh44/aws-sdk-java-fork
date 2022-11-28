@@ -41,13 +41,13 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The soft limit for the ulimit type.
+     * The soft limit for the <code>ulimit</code> type.
      * </p>
      */
     private Integer softLimit;
     /**
      * <p>
-     * The hard limit for the ulimit type.
+     * The hard limit for the <code>ulimit</code> type.
      * </p>
      */
     private Integer hardLimit;
@@ -127,11 +127,11 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The soft limit for the ulimit type.
+     * The soft limit for the <code>ulimit</code> type.
      * </p>
      * 
      * @param softLimit
-     *        The soft limit for the ulimit type.
+     *        The soft limit for the <code>ulimit</code> type.
      */
 
     public void setSoftLimit(Integer softLimit) {
@@ -140,10 +140,10 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The soft limit for the ulimit type.
+     * The soft limit for the <code>ulimit</code> type.
      * </p>
      * 
-     * @return The soft limit for the ulimit type.
+     * @return The soft limit for the <code>ulimit</code> type.
      */
 
     public Integer getSoftLimit() {
@@ -152,11 +152,11 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The soft limit for the ulimit type.
+     * The soft limit for the <code>ulimit</code> type.
      * </p>
      * 
      * @param softLimit
-     *        The soft limit for the ulimit type.
+     *        The soft limit for the <code>ulimit</code> type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -167,11 +167,11 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The hard limit for the ulimit type.
+     * The hard limit for the <code>ulimit</code> type.
      * </p>
      * 
      * @param hardLimit
-     *        The hard limit for the ulimit type.
+     *        The hard limit for the <code>ulimit</code> type.
      */
 
     public void setHardLimit(Integer hardLimit) {
@@ -180,10 +180,10 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The hard limit for the ulimit type.
+     * The hard limit for the <code>ulimit</code> type.
      * </p>
      * 
-     * @return The hard limit for the ulimit type.
+     * @return The hard limit for the <code>ulimit</code> type.
      */
 
     public Integer getHardLimit() {
@@ -192,11 +192,11 @@ public class Ulimit implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The hard limit for the ulimit type.
+     * The hard limit for the <code>ulimit</code> type.
      * </p>
      * 
      * @param hardLimit
-     *        The hard limit for the ulimit type.
+     *        The hard limit for the <code>ulimit</code> type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -32,8 +32,9 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * <p>
  * You can use Amazon CloudWatch Logs to monitor, store, and access your log files from EC2 instances, CloudTrail, and
- * other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch console,
- * CloudWatch Logs commands in the Amazon Web Services CLI, CloudWatch Logs API, or CloudWatch Logs SDK.
+ * other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch console.
+ * Alternatively, you can use CloudWatch Logs commands in the Amazon Web Services CLI, CloudWatch Logs API, or
+ * CloudWatch Logs SDK.
  * </p>
  * <p>
  * You can use CloudWatch Logs to:
@@ -41,13 +42,13 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <ul>
  * <li>
  * <p>
- * <b>Monitor logs from EC2 instances in real-time</b>: You can use CloudWatch Logs to monitor applications and systems
- * using log data. For example, CloudWatch Logs can track the number of errors that occur in your application logs and
- * send you a notification whenever the rate of errors exceeds a threshold that you specify. CloudWatch Logs uses your
- * log data for monitoring so no code changes are required. For example, you can monitor application logs for specific
- * literal terms (such as "NullReferenceException") or count the number of occurrences of a literal term at a particular
- * position in log data (such as "404" status codes in an Apache access log). When the term you are searching for is
- * found, CloudWatch Logs reports the data to a CloudWatch metric that you specify.
+ * <b>Monitor logs from EC2 instances in real time</b>: You can use CloudWatch Logs to monitor applications and systems
+ * using log data. For example, CloudWatch Logs can track the number of errors that occur in your application logs.
+ * Then, it can send you a notification whenever the rate of errors exceeds a threshold that you specify. CloudWatch
+ * Logs uses your log data for monitoring so no code changes are required. For example, you can monitor application logs
+ * for specific literal terms (such as "NullReferenceException"). You can also count the number of occurrences of a
+ * literal term at a particular position in log data (such as "404" status codes in an Apache access log). When the term
+ * you are searching for is found, CloudWatch Logs reports the data to a CloudWatch metric that you specify.
  * </p>
  * </li>
  * <li>
@@ -59,9 +60,9 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <li>
  * <p>
  * <b>Archive log data</b>: You can use CloudWatch Logs to store your log data in highly durable storage. You can change
- * the log retention setting so that any log events older than this setting are automatically deleted. The CloudWatch
- * Logs agent makes it easy to quickly send both rotated and non-rotated log data off of a host and into the log
- * service. You can then access the raw log data when you need it.
+ * the log retention setting so that any log events earlier than this setting are automatically deleted. The CloudWatch
+ * Logs agent helps to quickly send both rotated and non-rotated log data off of a host and into the log service. You
+ * can then access the raw log data when you need it.
  * </p>
  * </li>
  * </ul>
@@ -439,6 +440,39 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
 
                 try {
                     result = executeCreateLogStream(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataProtectionPolicyResult> deleteDataProtectionPolicyAsync(DeleteDataProtectionPolicyRequest request) {
+
+        return deleteDataProtectionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataProtectionPolicyResult> deleteDataProtectionPolicyAsync(final DeleteDataProtectionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDataProtectionPolicyRequest, DeleteDataProtectionPolicyResult> asyncHandler) {
+        final DeleteDataProtectionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDataProtectionPolicyResult>() {
+            @Override
+            public DeleteDataProtectionPolicyResult call() throws Exception {
+                DeleteDataProtectionPolicyResult result = null;
+
+                try {
+                    result = executeDeleteDataProtectionPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1128,6 +1162,39 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataProtectionPolicyResult> getDataProtectionPolicyAsync(GetDataProtectionPolicyRequest request) {
+
+        return getDataProtectionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataProtectionPolicyResult> getDataProtectionPolicyAsync(final GetDataProtectionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDataProtectionPolicyRequest, GetDataProtectionPolicyResult> asyncHandler) {
+        final GetDataProtectionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDataProtectionPolicyResult>() {
+            @Override
+            public GetDataProtectionPolicyResult call() throws Exception {
+                GetDataProtectionPolicyResult result = null;
+
+                try {
+                    result = executeGetDataProtectionPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLogEventsResult> getLogEventsAsync(GetLogEventsRequest request) {
 
         return getLogEventsAsync(request, null);
@@ -1312,6 +1379,39 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
 
                 try {
                     result = executeListTagsLogGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutDataProtectionPolicyResult> putDataProtectionPolicyAsync(PutDataProtectionPolicyRequest request) {
+
+        return putDataProtectionPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutDataProtectionPolicyResult> putDataProtectionPolicyAsync(final PutDataProtectionPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutDataProtectionPolicyRequest, PutDataProtectionPolicyResult> asyncHandler) {
+        final PutDataProtectionPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutDataProtectionPolicyResult>() {
+            @Override
+            public PutDataProtectionPolicyResult call() throws Exception {
+                PutDataProtectionPolicyResult result = null;
+
+                try {
+                    result = executePutDataProtectionPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

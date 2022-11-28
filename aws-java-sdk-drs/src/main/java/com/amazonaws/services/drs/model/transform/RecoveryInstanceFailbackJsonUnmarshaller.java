@@ -72,6 +72,10 @@ public class RecoveryInstanceFailbackJsonUnmarshaller implements Unmarshaller<Re
                     context.nextToken();
                     recoveryInstanceFailback.setFailbackJobID(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("failbackLaunchType", targetDepth)) {
+                    context.nextToken();
+                    recoveryInstanceFailback.setFailbackLaunchType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("failbackToOriginalServer", targetDepth)) {
                     context.nextToken();
                     recoveryInstanceFailback.setFailbackToOriginalServer(context.getUnmarshaller(Boolean.class).unmarshall(context));

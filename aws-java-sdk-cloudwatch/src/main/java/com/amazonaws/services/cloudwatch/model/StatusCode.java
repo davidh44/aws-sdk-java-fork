@@ -22,7 +22,8 @@ public enum StatusCode {
 
     Complete("Complete"),
     InternalError("InternalError"),
-    PartialData("PartialData");
+    PartialData("PartialData"),
+    Forbidden("Forbidden");
 
     private String value;
 

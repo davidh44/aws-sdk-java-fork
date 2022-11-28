@@ -516,6 +516,19 @@ public class AbstractAmazonECSAsync extends AbstractAmazonECS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ListServicesByNamespaceResult> listServicesByNamespaceAsync(ListServicesByNamespaceRequest request) {
+
+        return listServicesByNamespaceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicesByNamespaceResult> listServicesByNamespaceAsync(ListServicesByNamespaceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListServicesByNamespaceRequest, ListServicesByNamespaceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
