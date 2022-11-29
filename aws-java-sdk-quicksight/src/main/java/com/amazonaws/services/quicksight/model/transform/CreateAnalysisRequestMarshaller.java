@@ -44,6 +44,8 @@ public class CreateAnalysisRequestMarshaller {
             .marshallLocationName("ThemeArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> DEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Definition").build();
 
     private static final CreateAnalysisRequestMarshaller instance = new CreateAnalysisRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class CreateAnalysisRequestMarshaller {
             protocolMarshaller.marshall(createAnalysisRequest.getSourceEntity(), SOURCEENTITY_BINDING);
             protocolMarshaller.marshall(createAnalysisRequest.getThemeArn(), THEMEARN_BINDING);
             protocolMarshaller.marshall(createAnalysisRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createAnalysisRequest.getDefinition(), DEFINITION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

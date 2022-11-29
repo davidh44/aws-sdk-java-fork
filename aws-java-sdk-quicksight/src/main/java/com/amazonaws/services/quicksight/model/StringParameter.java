@@ -166,7 +166,7 @@ public class StringParameter implements Serializable, Cloneable, StructuredPojo 
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getValues() != null)
-            sb.append("Values: ").append(getValues());
+            sb.append("Values: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

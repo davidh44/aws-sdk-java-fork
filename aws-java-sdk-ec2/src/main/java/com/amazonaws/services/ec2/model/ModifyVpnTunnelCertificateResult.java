@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ModifyVpnTunnelCertificateResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the VPN connection.
+     * </p>
+     */
     private VpnConnection vpnConnection;
 
     /**
+     * <p>
+     * Information about the VPN connection.
+     * </p>
+     * 
      * @param vpnConnection
+     *        Information about the VPN connection.
      */
 
     public void setVpnConnection(VpnConnection vpnConnection) {
@@ -34,7 +44,11 @@ public class ModifyVpnTunnelCertificateResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the VPN connection.
+     * </p>
+     * 
+     * @return Information about the VPN connection.
      */
 
     public VpnConnection getVpnConnection() {
@@ -42,7 +56,12 @@ public class ModifyVpnTunnelCertificateResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Information about the VPN connection.
+     * </p>
+     * 
      * @param vpnConnection
+     *        Information about the VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

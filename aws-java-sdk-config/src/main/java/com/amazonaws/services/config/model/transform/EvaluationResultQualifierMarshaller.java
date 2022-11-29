@@ -33,6 +33,8 @@ public class EvaluationResultQualifierMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceType").build();
     private static final MarshallingInfo<String> RESOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceId").build();
+    private static final MarshallingInfo<String> EVALUATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EvaluationMode").build();
 
     private static final EvaluationResultQualifierMarshaller instance = new EvaluationResultQualifierMarshaller();
 
@@ -53,6 +55,7 @@ public class EvaluationResultQualifierMarshaller {
             protocolMarshaller.marshall(evaluationResultQualifier.getConfigRuleName(), CONFIGRULENAME_BINDING);
             protocolMarshaller.marshall(evaluationResultQualifier.getResourceType(), RESOURCETYPE_BINDING);
             protocolMarshaller.marshall(evaluationResultQualifier.getResourceId(), RESOURCEID_BINDING);
+            protocolMarshaller.marshall(evaluationResultQualifier.getEvaluationMode(), EVALUATIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

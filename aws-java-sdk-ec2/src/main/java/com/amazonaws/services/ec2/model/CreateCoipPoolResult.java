@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateCoipPoolResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the CoIP address pool.
+     * </p>
+     */
     private CoipPool coipPool;
 
     /**
+     * <p>
+     * Information about the CoIP address pool.
+     * </p>
+     * 
      * @param coipPool
+     *        Information about the CoIP address pool.
      */
 
     public void setCoipPool(CoipPool coipPool) {
@@ -34,7 +44,11 @@ public class CreateCoipPoolResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the CoIP address pool.
+     * </p>
+     * 
+     * @return Information about the CoIP address pool.
      */
 
     public CoipPool getCoipPool() {
@@ -42,7 +56,12 @@ public class CreateCoipPoolResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * Information about the CoIP address pool.
+     * </p>
+     * 
      * @param coipPool
+     *        Information about the CoIP address pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

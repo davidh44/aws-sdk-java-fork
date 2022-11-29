@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides detailed information about the data respository if its <code>Lifecycle</code> is set to
+ * Provides detailed information about the data repository if its <code>Lifecycle</code> is set to
  * <code>MISCONFIGURED</code> or <code>FAILED</code>.
  * </p>
  * 

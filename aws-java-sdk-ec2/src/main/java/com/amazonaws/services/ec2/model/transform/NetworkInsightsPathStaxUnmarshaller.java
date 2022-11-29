@@ -70,6 +70,16 @@ public class NetworkInsightsPathStaxUnmarshaller implements Unmarshaller<Network
                     continue;
                 }
 
+                if (context.testExpression("sourceArn", targetDepth)) {
+                    networkInsightsPath.setSourceArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("destinationArn", targetDepth)) {
+                    networkInsightsPath.setDestinationArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("sourceIp", targetDepth)) {
                     networkInsightsPath.setSourceIp(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

@@ -39,6 +39,10 @@ public class AggregationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("findingTypeAggregation").build();
     private static final MarshallingInfo<StructuredPojo> IMAGELAYERAGGREGATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageLayerAggregation").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDAFUNCTIONAGGREGATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaFunctionAggregation").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDALAYERAGGREGATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaLayerAggregation").build();
     private static final MarshallingInfo<StructuredPojo> PACKAGEAGGREGATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("packageAggregation").build();
     private static final MarshallingInfo<StructuredPojo> REPOSITORYAGGREGATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -68,6 +72,8 @@ public class AggregationRequestMarshaller {
             protocolMarshaller.marshall(aggregationRequest.getEc2InstanceAggregation(), EC2INSTANCEAGGREGATION_BINDING);
             protocolMarshaller.marshall(aggregationRequest.getFindingTypeAggregation(), FINDINGTYPEAGGREGATION_BINDING);
             protocolMarshaller.marshall(aggregationRequest.getImageLayerAggregation(), IMAGELAYERAGGREGATION_BINDING);
+            protocolMarshaller.marshall(aggregationRequest.getLambdaFunctionAggregation(), LAMBDAFUNCTIONAGGREGATION_BINDING);
+            protocolMarshaller.marshall(aggregationRequest.getLambdaLayerAggregation(), LAMBDALAYERAGGREGATION_BINDING);
             protocolMarshaller.marshall(aggregationRequest.getPackageAggregation(), PACKAGEAGGREGATION_BINDING);
             protocolMarshaller.marshall(aggregationRequest.getRepositoryAggregation(), REPOSITORYAGGREGATION_BINDING);
             protocolMarshaller.marshall(aggregationRequest.getTitleAggregation(), TITLEAGGREGATION_BINDING);

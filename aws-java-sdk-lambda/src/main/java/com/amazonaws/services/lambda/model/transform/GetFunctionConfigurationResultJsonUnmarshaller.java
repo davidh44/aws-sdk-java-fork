@@ -186,6 +186,10 @@ public class GetFunctionConfigurationResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getFunctionConfigurationResult.setEphemeralStorage(EphemeralStorageJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SnapStart", targetDepth)) {
+                    context.nextToken();
+                    getFunctionConfigurationResult.setSnapStart(SnapStartResponseJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Lambda was unable to decrypt the environment variables because KMS access was denied. Check the Lambda function's KMS
+ * Lambda couldn't decrypt the environment variables because KMS access was denied. Check the Lambda function's KMS
  * permissions.
  * </p>
  */

@@ -4155,6 +4155,112 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Returns the routing configuration for a Multi-Region Access Point, indicating which Regions are active or
+     * passive.
+     * </p>
+     * <p>
+     * To obtain routing control changes and failover requests, use the Amazon S3 failover control infrastructure
+     * endpoints in these five Amazon Web Services Regions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>us-east-1</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>us-west-2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ap-southeast-2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ap-northeast-1</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>eu-west-1</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Your Amazon S3 bucket does not need to be in these five Regions.
+     * </p>
+     * </note>
+     * 
+     * @param getMultiRegionAccessPointRoutesRequest
+     * @return Result of the GetMultiRegionAccessPointRoutes operation returned by the service.
+     * @sample AWSS3Control.GetMultiRegionAccessPointRoutes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointRoutes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMultiRegionAccessPointRoutesResult getMultiRegionAccessPointRoutes(GetMultiRegionAccessPointRoutesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMultiRegionAccessPointRoutes(request);
+    }
+
+    @SdkInternalApi
+    final GetMultiRegionAccessPointRoutesResult executeGetMultiRegionAccessPointRoutes(
+            GetMultiRegionAccessPointRoutesRequest getMultiRegionAccessPointRoutesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMultiRegionAccessPointRoutesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMultiRegionAccessPointRoutesRequest> request = null;
+        Response<GetMultiRegionAccessPointRoutesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMultiRegionAccessPointRoutesRequestMarshaller().marshall(super.beforeMarshalling(getMultiRegionAccessPointRoutesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMultiRegionAccessPointRoutes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getMultiRegionAccessPointRoutesRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getMultiRegionAccessPointRoutesRequest.getAccountId(), "AccountId",
+                        "getMultiRegionAccessPointRoutesRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getMultiRegionAccessPointRoutesRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetMultiRegionAccessPointRoutesResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetMultiRegionAccessPointRoutesResult>(
+                    new GetMultiRegionAccessPointRoutesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3
@@ -6428,6 +6534,127 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<PutStorageLensConfigurationTaggingResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<PutStorageLensConfigurationTaggingResult>(
                     new PutStorageLensConfigurationTaggingResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Submits an updated route configuration for a Multi-Region Access Point. This API operation updates the routing
+     * status for the specified Regions from active to passive, or from passive to active. A value of <code>0</code>
+     * indicates a passive status, which means that traffic won't be routed to the specified Region. A value of
+     * <code>100</code> indicates an active status, which means that traffic will be routed to the specified Region. At
+     * least one Region must be active at all times.
+     * </p>
+     * <p>
+     * When the routing configuration is changed, any in-progress operations (uploads, copies, deletes, and so on) to
+     * formerly active Regions will continue to run to their final completion state (success or failure). The routing
+     * configurations of any Regions that aren’t specified remain unchanged.
+     * </p>
+     * <note>
+     * <p>
+     * Updated routing configurations might not be immediately applied. It can take up to 2 minutes for your changes to
+     * take effect.
+     * </p>
+     * </note>
+     * <p>
+     * To submit routing control changes and failover requests, use the Amazon S3 failover control infrastructure
+     * endpoints in these five Amazon Web Services Regions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>us-east-1</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>us-west-2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ap-southeast-2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ap-northeast-1</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>eu-west-1</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Your Amazon S3 bucket does not need to be in these five Regions.
+     * </p>
+     * </note>
+     * 
+     * @param submitMultiRegionAccessPointRoutesRequest
+     * @return Result of the SubmitMultiRegionAccessPointRoutes operation returned by the service.
+     * @sample AWSS3Control.SubmitMultiRegionAccessPointRoutes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/SubmitMultiRegionAccessPointRoutes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SubmitMultiRegionAccessPointRoutesResult submitMultiRegionAccessPointRoutes(SubmitMultiRegionAccessPointRoutesRequest request) {
+        request = beforeClientExecution(request);
+        return executeSubmitMultiRegionAccessPointRoutes(request);
+    }
+
+    @SdkInternalApi
+    final SubmitMultiRegionAccessPointRoutesResult executeSubmitMultiRegionAccessPointRoutes(
+            SubmitMultiRegionAccessPointRoutesRequest submitMultiRegionAccessPointRoutesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(submitMultiRegionAccessPointRoutesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SubmitMultiRegionAccessPointRoutesRequest> request = null;
+        Response<SubmitMultiRegionAccessPointRoutesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SubmitMultiRegionAccessPointRoutesRequestMarshaller()
+                        .marshall(super.beforeMarshalling(submitMultiRegionAccessPointRoutesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SubmitMultiRegionAccessPointRoutes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(submitMultiRegionAccessPointRoutesRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(submitMultiRegionAccessPointRoutesRequest.getAccountId(), "AccountId",
+                        "submitMultiRegionAccessPointRoutesRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", submitMultiRegionAccessPointRoutesRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<SubmitMultiRegionAccessPointRoutesResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<SubmitMultiRegionAccessPointRoutesResult>(
+                    new SubmitMultiRegionAccessPointRoutesResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 

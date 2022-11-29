@@ -109,6 +109,11 @@ public class NetworkInfoStaxUnmarshaller implements Unmarshaller<NetworkInfo, St
                     networkInfo.setEncryptionInTransitSupported(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("enaSrdSupported", targetDepth)) {
+                    networkInfo.setEnaSrdSupported(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return networkInfo;

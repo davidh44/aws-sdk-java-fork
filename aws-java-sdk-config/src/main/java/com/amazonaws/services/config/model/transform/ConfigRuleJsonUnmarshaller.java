@@ -88,6 +88,12 @@ public class ConfigRuleJsonUnmarshaller implements Unmarshaller<ConfigRule, Json
                     context.nextToken();
                     configRule.setCreatedBy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("EvaluationModes", targetDepth)) {
+                    context.nextToken();
+                    configRule.setEvaluationModes(new ListUnmarshaller<EvaluationModeConfiguration>(EvaluationModeConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

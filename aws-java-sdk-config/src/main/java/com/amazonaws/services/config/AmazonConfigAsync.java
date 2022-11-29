@@ -2557,7 +2557,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
     /**
      * <p>
      * Returns the evaluation results for the specified Amazon Web Services resource. The results indicate which Config
-     * rules were used to evaluate the resource, when each rule was last used, and whether the resource complies with
+     * rules were used to evaluate the resource, when each rule was last invoked, and whether the resource complies with
      * each rule.
      * </p>
      * 
@@ -2574,7 +2574,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
     /**
      * <p>
      * Returns the evaluation results for the specified Amazon Web Services resource. The results indicate which Config
-     * rules were used to evaluate the resource, when each rule was last used, and whether the resource complies with
+     * rules were used to evaluate the resource, when each rule was last invoked, and whether the resource complies with
      * each rule.
      * </p>
      * 
@@ -3145,6 +3145,47 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
+     * Returns a summary of resource evaluation for the specified resource evaluation ID from the proactive rules that
+     * were run. The results indicate which evaluation context was used to evaluate the rules, which resource details
+     * were evaluated, the evaluation mode that was run, and whether the resource details comply with the configuration
+     * of the proactive rules.
+     * </p>
+     * 
+     * @param getResourceEvaluationSummaryRequest
+     * @return A Java Future containing the result of the GetResourceEvaluationSummary operation returned by the
+     *         service.
+     * @sample AmazonConfigAsync.GetResourceEvaluationSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetResourceEvaluationSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourceEvaluationSummaryResult> getResourceEvaluationSummaryAsync(
+            GetResourceEvaluationSummaryRequest getResourceEvaluationSummaryRequest);
+
+    /**
+     * <p>
+     * Returns a summary of resource evaluation for the specified resource evaluation ID from the proactive rules that
+     * were run. The results indicate which evaluation context was used to evaluate the rules, which resource details
+     * were evaluated, the evaluation mode that was run, and whether the resource details comply with the configuration
+     * of the proactive rules.
+     * </p>
+     * 
+     * @param getResourceEvaluationSummaryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourceEvaluationSummary operation returned by the
+     *         service.
+     * @sample AmazonConfigAsyncHandler.GetResourceEvaluationSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetResourceEvaluationSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourceEvaluationSummaryResult> getResourceEvaluationSummaryAsync(
+            GetResourceEvaluationSummaryRequest getResourceEvaluationSummaryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourceEvaluationSummaryRequest, GetResourceEvaluationSummaryResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the details of a specific stored query.
      * </p>
      * 
@@ -3334,6 +3375,37 @@ public interface AmazonConfigAsync extends AmazonConfig {
      */
     java.util.concurrent.Future<ListDiscoveredResourcesResult> listDiscoveredResourcesAsync(ListDiscoveredResourcesRequest listDiscoveredResourcesRequest,
             com.amazonaws.handlers.AsyncHandler<ListDiscoveredResourcesRequest, ListDiscoveredResourcesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of proactive resource evaluations.
+     * </p>
+     * 
+     * @param listResourceEvaluationsRequest
+     * @return A Java Future containing the result of the ListResourceEvaluations operation returned by the service.
+     * @sample AmazonConfigAsync.ListResourceEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListResourceEvaluations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListResourceEvaluationsResult> listResourceEvaluationsAsync(ListResourceEvaluationsRequest listResourceEvaluationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of proactive resource evaluations.
+     * </p>
+     * 
+     * @param listResourceEvaluationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListResourceEvaluations operation returned by the service.
+     * @sample AmazonConfigAsyncHandler.ListResourceEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListResourceEvaluations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListResourceEvaluationsResult> listResourceEvaluationsAsync(ListResourceEvaluationsRequest listResourceEvaluationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListResourceEvaluationsRequest, ListResourceEvaluationsResult> asyncHandler);
 
     /**
      * <p>
@@ -4184,6 +4256,10 @@ public interface AmazonConfigAsync extends AmazonConfig {
      * Config generates a remediation exception when a problem occurs executing a remediation action to a specific
      * resource. Remediation exceptions blocks auto-remediation until the exception is cleared.
      * </p>
+     * </note> <note>
+     * <p>
+     * To place an exception on an Amazon Web Services resource, ensure remediation is set as manual remediation.
+     * </p>
      * </note>
      * 
      * @param putRemediationExceptionsRequest
@@ -4203,6 +4279,10 @@ public interface AmazonConfigAsync extends AmazonConfig {
      * <p>
      * Config generates a remediation exception when a problem occurs executing a remediation action to a specific
      * resource. Remediation exceptions blocks auto-remediation until the exception is cleared.
+     * </p>
+     * </note> <note>
+     * <p>
+     * To place an exception on an Amazon Web Services resource, ensure remediation is set as manual remediation.
      * </p>
      * </note>
      * 
@@ -4698,6 +4778,53 @@ public interface AmazonConfigAsync extends AmazonConfig {
     java.util.concurrent.Future<StartRemediationExecutionResult> startRemediationExecutionAsync(
             StartRemediationExecutionRequest startRemediationExecutionRequest,
             com.amazonaws.handlers.AsyncHandler<StartRemediationExecutionRequest, StartRemediationExecutionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Runs an on-demand evaluation for the specified resource to determine whether the resource details will comply
+     * with configured Config rules. You can also use it for evaluation purposes. Config recommends using an evaluation
+     * context. It runs an execution against the resource details with all of the Config rules in your account that
+     * match with the specified proactive mode and resource type.
+     * </p>
+     * <note>
+     * <p>
+     * Ensure you have the <code>cloudformation:DescribeType</code> role setup to validate the resource type schema.
+     * </p>
+     * </note>
+     * 
+     * @param startResourceEvaluationRequest
+     * @return A Java Future containing the result of the StartResourceEvaluation operation returned by the service.
+     * @sample AmazonConfigAsync.StartResourceEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartResourceEvaluation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartResourceEvaluationResult> startResourceEvaluationAsync(StartResourceEvaluationRequest startResourceEvaluationRequest);
+
+    /**
+     * <p>
+     * Runs an on-demand evaluation for the specified resource to determine whether the resource details will comply
+     * with configured Config rules. You can also use it for evaluation purposes. Config recommends using an evaluation
+     * context. It runs an execution against the resource details with all of the Config rules in your account that
+     * match with the specified proactive mode and resource type.
+     * </p>
+     * <note>
+     * <p>
+     * Ensure you have the <code>cloudformation:DescribeType</code> role setup to validate the resource type schema.
+     * </p>
+     * </note>
+     * 
+     * @param startResourceEvaluationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartResourceEvaluation operation returned by the service.
+     * @sample AmazonConfigAsyncHandler.StartResourceEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartResourceEvaluation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartResourceEvaluationResult> startResourceEvaluationAsync(StartResourceEvaluationRequest startResourceEvaluationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartResourceEvaluationRequest, StartResourceEvaluationResult> asyncHandler);
 
     /**
      * <p>

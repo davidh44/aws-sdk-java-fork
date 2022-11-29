@@ -24,10 +24,20 @@ import com.amazonaws.AmazonWebServiceResult;
 public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata>
         implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the association.
+     * </p>
+     */
     private LocalGatewayRouteTableVirtualInterfaceGroupAssociation localGatewayRouteTableVirtualInterfaceGroupAssociation;
 
     /**
+     * <p>
+     * Information about the association.
+     * </p>
+     * 
      * @param localGatewayRouteTableVirtualInterfaceGroupAssociation
+     *        Information about the association.
      */
 
     public void setLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
@@ -36,7 +46,11 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult 
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the association.
+     * </p>
+     * 
+     * @return Information about the association.
      */
 
     public LocalGatewayRouteTableVirtualInterfaceGroupAssociation getLocalGatewayRouteTableVirtualInterfaceGroupAssociation() {
@@ -44,7 +58,12 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult 
     }
 
     /**
+     * <p>
+     * Information about the association.
+     * </p>
+     * 
      * @param localGatewayRouteTableVirtualInterfaceGroupAssociation
+     *        Information about the association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

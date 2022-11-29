@@ -1399,6 +1399,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAnalysisDefinitionResult> describeAnalysisDefinitionAsync(DescribeAnalysisDefinitionRequest request) {
+
+        return describeAnalysisDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAnalysisDefinitionResult> describeAnalysisDefinitionAsync(final DescribeAnalysisDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAnalysisDefinitionRequest, DescribeAnalysisDefinitionResult> asyncHandler) {
+        final DescribeAnalysisDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAnalysisDefinitionResult>() {
+            @Override
+            public DescribeAnalysisDefinitionResult call() throws Exception {
+                DescribeAnalysisDefinitionResult result = null;
+
+                try {
+                    result = executeDescribeAnalysisDefinition(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAnalysisPermissionsResult> describeAnalysisPermissionsAsync(DescribeAnalysisPermissionsRequest request) {
 
         return describeAnalysisPermissionsAsync(request, null);
@@ -1449,6 +1482,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeDescribeDashboard(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardDefinitionResult> describeDashboardDefinitionAsync(DescribeDashboardDefinitionRequest request) {
+
+        return describeDashboardDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardDefinitionResult> describeDashboardDefinitionAsync(final DescribeDashboardDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDashboardDefinitionRequest, DescribeDashboardDefinitionResult> asyncHandler) {
+        final DescribeDashboardDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDashboardDefinitionResult>() {
+            @Override
+            public DescribeDashboardDefinitionResult call() throws Exception {
+                DescribeDashboardDefinitionResult result = null;
+
+                try {
+                    result = executeDescribeDashboardDefinition(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1980,6 +2046,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeDescribeTemplateAlias(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTemplateDefinitionResult> describeTemplateDefinitionAsync(DescribeTemplateDefinitionRequest request) {
+
+        return describeTemplateDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTemplateDefinitionResult> describeTemplateDefinitionAsync(final DescribeTemplateDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTemplateDefinitionRequest, DescribeTemplateDefinitionResult> asyncHandler) {
+        final DescribeTemplateDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTemplateDefinitionResult>() {
+            @Override
+            public DescribeTemplateDefinitionResult call() throws Exception {
+                DescribeTemplateDefinitionResult result = null;
+
+                try {
+                    result = executeDescribeTemplateDefinition(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

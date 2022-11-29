@@ -52,7 +52,7 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     private String role;
     /**
      * <p>
-     * The function that Lambda calls to begin executing your function.
+     * The function that Lambda calls to begin running your function.
      * </p>
      */
     private String handler;
@@ -120,7 +120,7 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     private EnvironmentResponse environment;
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that's used to encrypt the function's environment variables. This key is returned only if you've
      * configured a customer managed key.
      * </p>
      */
@@ -145,7 +145,7 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     private String revisionId;
     /**
      * <p>
-     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>.
+     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Layer> layers;
@@ -229,11 +229,20 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
     private com.amazonaws.internal.SdkInternalList<String> architectures;
     /**
      * <p>
-     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
-     * 512 and 10240 MB.
+     * The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any whole
+     * number between 512 and 10,240 MB.
      * </p>
      */
     private EphemeralStorage ephemeralStorage;
+    /**
+     * <p>
+     * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
+     * environment when you publish a function version. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * SnapStart</a>.
+     * </p>
+     */
+    private SnapStartResponse snapStart;
 
     /**
      * <p>
@@ -430,11 +439,11 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function that Lambda calls to begin executing your function.
+     * The function that Lambda calls to begin running your function.
      * </p>
      * 
      * @param handler
-     *        The function that Lambda calls to begin executing your function.
+     *        The function that Lambda calls to begin running your function.
      */
 
     public void setHandler(String handler) {
@@ -443,10 +452,10 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function that Lambda calls to begin executing your function.
+     * The function that Lambda calls to begin running your function.
      * </p>
      * 
-     * @return The function that Lambda calls to begin executing your function.
+     * @return The function that Lambda calls to begin running your function.
      */
 
     public String getHandler() {
@@ -455,11 +464,11 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function that Lambda calls to begin executing your function.
+     * The function that Lambda calls to begin running your function.
      * </p>
      * 
      * @param handler
-     *        The function that Lambda calls to begin executing your function.
+     *        The function that Lambda calls to begin running your function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -885,12 +894,12 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that's used to encrypt the function's environment variables. This key is returned only if you've
      * configured a customer managed key.
      * </p>
      * 
      * @param kMSKeyArn
-     *        The KMS key that's used to encrypt the function's environment variables. This key is only returned if
+     *        The KMS key that's used to encrypt the function's environment variables. This key is returned only if
      *        you've configured a customer managed key.
      */
 
@@ -900,11 +909,11 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that's used to encrypt the function's environment variables. This key is returned only if you've
      * configured a customer managed key.
      * </p>
      * 
-     * @return The KMS key that's used to encrypt the function's environment variables. This key is only returned if
+     * @return The KMS key that's used to encrypt the function's environment variables. This key is returned only if
      *         you've configured a customer managed key.
      */
 
@@ -914,12 +923,12 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that's used to encrypt the function's environment variables. This key is returned only if you've
      * configured a customer managed key.
      * </p>
      * 
      * @param kMSKeyArn
-     *        The KMS key that's used to encrypt the function's environment variables. This key is only returned if
+     *        The KMS key that's used to encrypt the function's environment variables. This key is returned only if
      *        you've configured a customer managed key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1051,11 +1060,11 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>.
+     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * </p>
      * 
-     * @return The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     *         layers</a>.
+     * @return The function's <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      */
 
     public java.util.List<Layer> getLayers() {
@@ -1067,12 +1076,12 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>.
+     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * </p>
      * 
      * @param layers
-     *        The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     *        layers</a>.
+     *        The function's <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      */
 
     public void setLayers(java.util.Collection<Layer> layers) {
@@ -1086,7 +1095,7 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>.
+     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1095,8 +1104,8 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param layers
-     *        The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     *        layers</a>.
+     *        The function's <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1112,12 +1121,12 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html"> layers</a>.
+     * The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * </p>
      * 
      * @param layers
-     *        The function's <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">
-     *        layers</a>.
+     *        The function's <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">layers</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1929,13 +1938,13 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
-     * 512 and 10240 MB.
+     * The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any whole
+     * number between 512 and 10,240 MB.
      * </p>
      * 
      * @param ephemeralStorage
-     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
-     *        between 512 and 10240 MB.
+     *        The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any
+     *        whole number between 512 and 10,240 MB.
      */
 
     public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
@@ -1944,12 +1953,12 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
-     * 512 and 10240 MB.
+     * The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any whole
+     * number between 512 and 10,240 MB.
      * </p>
      * 
-     * @return The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
-     *         between 512 and 10240 MB.
+     * @return The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any
+     *         whole number between 512 and 10,240 MB.
      */
 
     public EphemeralStorage getEphemeralStorage() {
@@ -1958,18 +1967,76 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
-     * 512 and 10240 MB.
+     * The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any whole
+     * number between 512 and 10,240 MB.
      * </p>
      * 
      * @param ephemeralStorage
-     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
-     *        between 512 and 10240 MB.
+     *        The size of the function’s <code>/tmp</code> directory in MB. The default value is 512, but it can be any
+     *        whole number between 512 and 10,240 MB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateFunctionCodeResult withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         setEphemeralStorage(ephemeralStorage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
+     * environment when you publish a function version. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * SnapStart</a>.
+     * </p>
+     * 
+     * @param snapStart
+     *        Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized
+     *        execution environment when you publish a function version. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     *        SnapStart</a>.
+     */
+
+    public void setSnapStart(SnapStartResponse snapStart) {
+        this.snapStart = snapStart;
+    }
+
+    /**
+     * <p>
+     * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
+     * environment when you publish a function version. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * SnapStart</a>.
+     * </p>
+     * 
+     * @return Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized
+     *         execution environment when you publish a function version. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     *         SnapStart</a>.
+     */
+
+    public SnapStartResponse getSnapStart() {
+        return this.snapStart;
+    }
+
+    /**
+     * <p>
+     * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
+     * environment when you publish a function version. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * SnapStart</a>.
+     * </p>
+     * 
+     * @param snapStart
+     *        Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized
+     *        execution environment when you publish a function version. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     *        SnapStart</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFunctionCodeResult withSnapStart(SnapStartResponse snapStart) {
+        setSnapStart(snapStart);
         return this;
     }
 
@@ -2050,7 +2117,9 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
         if (getArchitectures() != null)
             sb.append("Architectures: ").append(getArchitectures()).append(",");
         if (getEphemeralStorage() != null)
-            sb.append("EphemeralStorage: ").append(getEphemeralStorage());
+            sb.append("EphemeralStorage: ").append(getEphemeralStorage()).append(",");
+        if (getSnapStart() != null)
+            sb.append("SnapStart: ").append(getSnapStart());
         sb.append("}");
         return sb.toString();
     }
@@ -2197,6 +2266,10 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getEphemeralStorage() != null && other.getEphemeralStorage().equals(this.getEphemeralStorage()) == false)
             return false;
+        if (other.getSnapStart() == null ^ this.getSnapStart() == null)
+            return false;
+        if (other.getSnapStart() != null && other.getSnapStart().equals(this.getSnapStart()) == false)
+            return false;
         return true;
     }
 
@@ -2238,6 +2311,7 @@ public class UpdateFunctionCodeResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getSigningJobArn() == null) ? 0 : getSigningJobArn().hashCode());
         hashCode = prime * hashCode + ((getArchitectures() == null) ? 0 : getArchitectures().hashCode());
         hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
+        hashCode = prime * hashCode + ((getSnapStart() == null) ? 0 : getSnapStart().hashCode());
         return hashCode;
     }
 

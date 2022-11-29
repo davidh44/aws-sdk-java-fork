@@ -60,6 +60,10 @@ public class DashboardPublishOptionsJsonUnmarshaller implements Unmarshaller<Das
                     context.nextToken();
                     dashboardPublishOptions.setSheetControlsOption(SheetControlsOptionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("VisualPublishOptions", targetDepth)) {
+                    context.nextToken();
+                    dashboardPublishOptions.setVisualPublishOptions(DashboardVisualPublishOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

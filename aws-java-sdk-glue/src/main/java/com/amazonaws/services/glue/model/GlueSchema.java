@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a user-defined schema when a schema cannot be determined by AWS Glue.
+ * Specifies a user-defined schema when a schema cannot be determined by Glue.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GlueSchema" target="_top">AWS API

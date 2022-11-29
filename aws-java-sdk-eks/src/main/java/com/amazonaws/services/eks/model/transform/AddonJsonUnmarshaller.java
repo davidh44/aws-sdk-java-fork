@@ -89,6 +89,18 @@ public class AddonJsonUnmarshaller implements Unmarshaller<Addon, JsonUnmarshall
                     addon.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("publisher", targetDepth)) {
+                    context.nextToken();
+                    addon.setPublisher(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("owner", targetDepth)) {
+                    context.nextToken();
+                    addon.setOwner(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("marketplaceInformation", targetDepth)) {
+                    context.nextToken();
+                    addon.setMarketplaceInformation(MarketplaceInformationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

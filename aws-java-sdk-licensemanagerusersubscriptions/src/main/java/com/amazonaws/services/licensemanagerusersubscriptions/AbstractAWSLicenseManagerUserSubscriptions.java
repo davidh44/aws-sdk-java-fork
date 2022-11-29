@@ -78,6 +78,11 @@ public class AbstractAWSLicenseManagerUserSubscriptions implements AWSLicenseMan
     }
 
     @Override
+    public UpdateIdentityProviderSettingsResult updateIdentityProviderSettings(UpdateIdentityProviderSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -24,6 +24,13 @@ public class ThrottlingException extends com.amazonaws.services.inspector2.model
     private static final long serialVersionUID = 1L;
 
     /**
+     * <p>
+     * The number of seconds to wait before retrying the request.
+     * </p>
+     */
+    private Integer retryAfterSeconds;
+
+    /**
      * Constructs a new ThrottlingException with the specified error message.
      *
      * @param message
@@ -31,6 +38,48 @@ public class ThrottlingException extends com.amazonaws.services.inspector2.model
      */
     public ThrottlingException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * The number of seconds to wait before retrying the request.
+     * </p>
+     * 
+     * @param retryAfterSeconds
+     *        The number of seconds to wait before retrying the request.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("Retry-After")
+    public void setRetryAfterSeconds(Integer retryAfterSeconds) {
+        this.retryAfterSeconds = retryAfterSeconds;
+    }
+
+    /**
+     * <p>
+     * The number of seconds to wait before retrying the request.
+     * </p>
+     * 
+     * @return The number of seconds to wait before retrying the request.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("Retry-After")
+    public Integer getRetryAfterSeconds() {
+        return this.retryAfterSeconds;
+    }
+
+    /**
+     * <p>
+     * The number of seconds to wait before retrying the request.
+     * </p>
+     * 
+     * @param retryAfterSeconds
+     *        The number of seconds to wait before retrying the request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThrottlingException withRetryAfterSeconds(Integer retryAfterSeconds) {
+        setRetryAfterSeconds(retryAfterSeconds);
+        return this;
     }
 
 }

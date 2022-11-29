@@ -56,6 +56,12 @@ public class AnalysisErrorJsonUnmarshaller implements Unmarshaller<AnalysisError
                     context.nextToken();
                     analysisError.setMessage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ViolatedEntities", targetDepth)) {
+                    context.nextToken();
+                    analysisError.setViolatedEntities(new ListUnmarshaller<Entity>(EntityJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -72,6 +72,14 @@ public class AggregationRequestJsonUnmarshaller implements Unmarshaller<Aggregat
                     context.nextToken();
                     aggregationRequest.setImageLayerAggregation(ImageLayerAggregationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lambdaFunctionAggregation", targetDepth)) {
+                    context.nextToken();
+                    aggregationRequest.setLambdaFunctionAggregation(LambdaFunctionAggregationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("lambdaLayerAggregation", targetDepth)) {
+                    context.nextToken();
+                    aggregationRequest.setLambdaLayerAggregation(LambdaLayerAggregationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("packageAggregation", targetDepth)) {
                     context.nextToken();
                     aggregationRequest.setPackageAggregation(PackageAggregationJsonUnmarshaller.getInstance().unmarshall(context));

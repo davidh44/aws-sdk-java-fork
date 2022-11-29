@@ -56,6 +56,10 @@ public class AutoEnableJsonUnmarshaller implements Unmarshaller<AutoEnable, Json
                     context.nextToken();
                     autoEnable.setEcr(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("lambda", targetDepth)) {
+                    context.nextToken();
+                    autoEnable.setLambda(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

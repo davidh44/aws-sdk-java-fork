@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.fsx.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +40,10 @@ public class UpdateFileSystemOntapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiskIopsConfiguration").build();
     private static final MarshallingInfo<Integer> THROUGHPUTCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThroughputCapacity").build();
+    private static final MarshallingInfo<List> ADDROUTETABLEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AddRouteTableIds").build();
+    private static final MarshallingInfo<List> REMOVEROUTETABLEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoveRouteTableIds").build();
 
     private static final UpdateFileSystemOntapConfigurationMarshaller instance = new UpdateFileSystemOntapConfigurationMarshaller();
 
@@ -62,6 +67,8 @@ public class UpdateFileSystemOntapConfigurationMarshaller {
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getWeeklyMaintenanceStartTime(), WEEKLYMAINTENANCESTARTTIME_BINDING);
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getDiskIopsConfiguration(), DISKIOPSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getThroughputCapacity(), THROUGHPUTCAPACITY_BINDING);
+            protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getAddRouteTableIds(), ADDROUTETABLEIDS_BINDING);
+            protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getRemoveRouteTableIds(), REMOVEROUTETABLEIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

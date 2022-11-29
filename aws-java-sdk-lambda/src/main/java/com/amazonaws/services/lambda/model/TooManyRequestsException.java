@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request throughput limit was exceeded.
+ * The request throughput limit was exceeded. For more information, see <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html#api-requests">Lambda quotas</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

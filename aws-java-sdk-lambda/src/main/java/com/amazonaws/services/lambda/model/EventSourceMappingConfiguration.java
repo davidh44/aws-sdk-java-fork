@@ -96,9 +96,9 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private String eventSourceArn;
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      */
     private FilterCriteria filterCriteria;
@@ -649,14 +649,14 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      * 
      * @param filterCriteria
-     *        (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
-     *        process an event. For more information, see <a
+     *        An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *        filtering</a>.
      */
@@ -667,13 +667,13 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      * 
-     * @return (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
-     *         process an event. For more information, see <a
+     * @return An object that defines the filter criteria that determine whether Lambda should process an event. For
+     *         more information, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *         filtering</a>.
      */
@@ -684,14 +684,14 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      * 
      * @param filterCriteria
-     *        (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
-     *        process an event. For more information, see <a
+     *        An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *        filtering</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

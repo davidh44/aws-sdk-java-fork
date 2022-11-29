@@ -72,6 +72,18 @@ public class CreateOntapVolumeConfigurationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     createOntapVolumeConfiguration.setTieringPolicy(TieringPolicyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OntapVolumeType", targetDepth)) {
+                    context.nextToken();
+                    createOntapVolumeConfiguration.setOntapVolumeType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SnapshotPolicy", targetDepth)) {
+                    context.nextToken();
+                    createOntapVolumeConfiguration.setSnapshotPolicy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CopyTagsToBackups", targetDepth)) {
+                    context.nextToken();
+                    createOntapVolumeConfiguration.setCopyTagsToBackups(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -252,7 +252,7 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization
+     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -267,7 +267,7 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization
+     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest

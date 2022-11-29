@@ -228,12 +228,22 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DescribeAnalysisDefinitionResult describeAnalysisDefinition(DescribeAnalysisDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAnalysisPermissionsResult describeAnalysisPermissions(DescribeAnalysisPermissionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DescribeDashboardResult describeDashboard(DescribeDashboardRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDashboardDefinitionResult describeDashboardDefinition(DescribeDashboardDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -314,6 +324,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public DescribeTemplateAliasResult describeTemplateAlias(DescribeTemplateAliasRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTemplateDefinitionResult describeTemplateDefinition(DescribeTemplateDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

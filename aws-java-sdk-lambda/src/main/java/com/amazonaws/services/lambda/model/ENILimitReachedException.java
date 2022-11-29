@@ -16,8 +16,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Lambda was not able to create an elastic network interface in the VPC, specified as part of Lambda function
- * configuration, because the limit for network interfaces has been reached.
+ * Lambda couldn't create an elastic network interface in the VPC, specified as part of Lambda function configuration,
+ * because the limit for network interfaces has been reached. For more information, see <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html">Lambda quotas</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -208,6 +208,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public GetMultiRegionAccessPointRoutesResult getMultiRegionAccessPointRoutes(GetMultiRegionAccessPointRoutesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPublicAccessBlockResult getPublicAccessBlock(GetPublicAccessBlockRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -309,6 +314,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public PutStorageLensConfigurationTaggingResult putStorageLensConfigurationTagging(PutStorageLensConfigurationTaggingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SubmitMultiRegionAccessPointRoutesResult submitMultiRegionAccessPointRoutes(SubmitMultiRegionAccessPointRoutesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

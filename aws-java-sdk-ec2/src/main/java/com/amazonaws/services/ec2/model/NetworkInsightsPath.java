@@ -56,6 +56,10 @@ public class NetworkInsightsPath implements Serializable, Cloneable {
      * </p>
      */
     private String destination;
+
+    private String sourceArn;
+
+    private String destinationArn;
     /**
      * <p>
      * The IP address of the Amazon Web Services resource that is the source of the path.
@@ -284,6 +288,58 @@ public class NetworkInsightsPath implements Serializable, Cloneable {
 
     public NetworkInsightsPath withDestination(String destination) {
         setDestination(destination);
+        return this;
+    }
+
+    /**
+     * @param sourceArn
+     */
+
+    public void setSourceArn(String sourceArn) {
+        this.sourceArn = sourceArn;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getSourceArn() {
+        return this.sourceArn;
+    }
+
+    /**
+     * @param sourceArn
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInsightsPath withSourceArn(String sourceArn) {
+        setSourceArn(sourceArn);
+        return this;
+    }
+
+    /**
+     * @param destinationArn
+     */
+
+    public void setDestinationArn(String destinationArn) {
+        this.destinationArn = destinationArn;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getDestinationArn() {
+        return this.destinationArn;
+    }
+
+    /**
+     * @param destinationArn
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInsightsPath withDestinationArn(String destinationArn) {
+        setDestinationArn(destinationArn);
         return this;
     }
 
@@ -561,6 +617,10 @@ public class NetworkInsightsPath implements Serializable, Cloneable {
             sb.append("Source: ").append(getSource()).append(",");
         if (getDestination() != null)
             sb.append("Destination: ").append(getDestination()).append(",");
+        if (getSourceArn() != null)
+            sb.append("SourceArn: ").append(getSourceArn()).append(",");
+        if (getDestinationArn() != null)
+            sb.append("DestinationArn: ").append(getDestinationArn()).append(",");
         if (getSourceIp() != null)
             sb.append("SourceIp: ").append(getSourceIp()).append(",");
         if (getDestinationIp() != null)
@@ -605,6 +665,14 @@ public class NetworkInsightsPath implements Serializable, Cloneable {
             return false;
         if (other.getDestination() != null && other.getDestination().equals(this.getDestination()) == false)
             return false;
+        if (other.getSourceArn() == null ^ this.getSourceArn() == null)
+            return false;
+        if (other.getSourceArn() != null && other.getSourceArn().equals(this.getSourceArn()) == false)
+            return false;
+        if (other.getDestinationArn() == null ^ this.getDestinationArn() == null)
+            return false;
+        if (other.getDestinationArn() != null && other.getDestinationArn().equals(this.getDestinationArn()) == false)
+            return false;
         if (other.getSourceIp() == null ^ this.getSourceIp() == null)
             return false;
         if (other.getSourceIp() != null && other.getSourceIp().equals(this.getSourceIp()) == false)
@@ -638,6 +706,8 @@ public class NetworkInsightsPath implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getCreatedDate() == null) ? 0 : getCreatedDate().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
+        hashCode = prime * hashCode + ((getSourceArn() == null) ? 0 : getSourceArn().hashCode());
+        hashCode = prime * hashCode + ((getDestinationArn() == null) ? 0 : getDestinationArn().hashCode());
         hashCode = prime * hashCode + ((getSourceIp() == null) ? 0 : getSourceIp().hashCode());
         hashCode = prime * hashCode + ((getDestinationIp() == null) ? 0 : getDestinationIp().hashCode());
         hashCode = prime * hashCode + ((getProtocol() == null) ? 0 : getProtocol().hashCode());

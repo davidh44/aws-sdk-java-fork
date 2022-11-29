@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.quicksight.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class AnalysisErrorMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Message").build();
+    private static final MarshallingInfo<List> VIOLATEDENTITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ViolatedEntities").build();
 
     private static final AnalysisErrorMarshaller instance = new AnalysisErrorMarshaller();
 
@@ -50,6 +53,7 @@ public class AnalysisErrorMarshaller {
         try {
             protocolMarshaller.marshall(analysisError.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(analysisError.getMessage(), MESSAGE_BINDING);
+            protocolMarshaller.marshall(analysisError.getViolatedEntities(), VIOLATEDENTITIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

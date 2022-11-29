@@ -64,6 +64,10 @@ public class PackageFilterJsonUnmarshaller implements Unmarshaller<PackageFilter
                     context.nextToken();
                     packageFilter.setRelease(StringFilterJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("sourceLambdaLayerArn", targetDepth)) {
+                    context.nextToken();
+                    packageFilter.setSourceLambdaLayerArn(StringFilterJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("sourceLayerHash", targetDepth)) {
                     context.nextToken();
                     packageFilter.setSourceLayerHash(StringFilterJsonUnmarshaller.getInstance().unmarshall(context));

@@ -60,6 +60,16 @@ public class NetworkInsightsAnalysisStaxUnmarshaller implements Unmarshaller<Net
                     continue;
                 }
 
+                if (context.testExpression("additionalAccountSet", targetDepth)) {
+                    networkInsightsAnalysis.withAdditionalAccounts(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("additionalAccountSet/item", targetDepth)) {
+                    networkInsightsAnalysis.withAdditionalAccounts(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("filterInArnSet", targetDepth)) {
                     networkInsightsAnalysis.withFilterInArns(new ArrayList<String>());
                     continue;
@@ -132,6 +142,16 @@ public class NetworkInsightsAnalysisStaxUnmarshaller implements Unmarshaller<Net
 
                 if (context.testExpression("alternatePathHintSet/item", targetDepth)) {
                     networkInsightsAnalysis.withAlternatePathHints(AlternatePathHintStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("suggestedAccountSet", targetDepth)) {
+                    networkInsightsAnalysis.withSuggestedAccounts(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("suggestedAccountSet/item", targetDepth)) {
+                    networkInsightsAnalysis.withSuggestedAccounts(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
 

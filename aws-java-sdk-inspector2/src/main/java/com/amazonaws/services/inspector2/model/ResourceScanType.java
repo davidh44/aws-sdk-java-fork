@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ResourceScanType {
 
     EC2("EC2"),
-    ECR("ECR");
+    ECR("ECR"),
+    LAMBDA("LAMBDA");
 
     private String value;
 

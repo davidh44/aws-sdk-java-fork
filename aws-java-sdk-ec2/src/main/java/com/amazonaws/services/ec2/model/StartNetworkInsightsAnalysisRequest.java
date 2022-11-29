@@ -32,6 +32,8 @@ public class StartNetworkInsightsAnalysisRequest extends AmazonWebServiceRequest
      * </p>
      */
     private String networkInsightsPathId;
+
+    private com.amazonaws.internal.SdkInternalList<String> additionalAccounts;
     /**
      * <p>
      * The Amazon Resource Names (ARN) of the resources that the path must traverse.
@@ -91,6 +93,61 @@ public class StartNetworkInsightsAnalysisRequest extends AmazonWebServiceRequest
 
     public StartNetworkInsightsAnalysisRequest withNetworkInsightsPathId(String networkInsightsPathId) {
         setNetworkInsightsPathId(networkInsightsPathId);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.List<String> getAdditionalAccounts() {
+        if (additionalAccounts == null) {
+            additionalAccounts = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return additionalAccounts;
+    }
+
+    /**
+     * @param additionalAccounts
+     */
+
+    public void setAdditionalAccounts(java.util.Collection<String> additionalAccounts) {
+        if (additionalAccounts == null) {
+            this.additionalAccounts = null;
+            return;
+        }
+
+        this.additionalAccounts = new com.amazonaws.internal.SdkInternalList<String>(additionalAccounts);
+    }
+
+    /**
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalAccounts(java.util.Collection)} or {@link #withAdditionalAccounts(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalAccounts
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartNetworkInsightsAnalysisRequest withAdditionalAccounts(String... additionalAccounts) {
+        if (this.additionalAccounts == null) {
+            setAdditionalAccounts(new com.amazonaws.internal.SdkInternalList<String>(additionalAccounts.length));
+        }
+        for (String ele : additionalAccounts) {
+            this.additionalAccounts.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * @param additionalAccounts
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartNetworkInsightsAnalysisRequest withAdditionalAccounts(java.util.Collection<String> additionalAccounts) {
+        setAdditionalAccounts(additionalAccounts);
         return this;
     }
 
@@ -323,6 +380,8 @@ public class StartNetworkInsightsAnalysisRequest extends AmazonWebServiceRequest
         sb.append("{");
         if (getNetworkInsightsPathId() != null)
             sb.append("NetworkInsightsPathId: ").append(getNetworkInsightsPathId()).append(",");
+        if (getAdditionalAccounts() != null)
+            sb.append("AdditionalAccounts: ").append(getAdditionalAccounts()).append(",");
         if (getFilterInArns() != null)
             sb.append("FilterInArns: ").append(getFilterInArns()).append(",");
         if (getTagSpecifications() != null)
@@ -347,6 +406,10 @@ public class StartNetworkInsightsAnalysisRequest extends AmazonWebServiceRequest
             return false;
         if (other.getNetworkInsightsPathId() != null && other.getNetworkInsightsPathId().equals(this.getNetworkInsightsPathId()) == false)
             return false;
+        if (other.getAdditionalAccounts() == null ^ this.getAdditionalAccounts() == null)
+            return false;
+        if (other.getAdditionalAccounts() != null && other.getAdditionalAccounts().equals(this.getAdditionalAccounts()) == false)
+            return false;
         if (other.getFilterInArns() == null ^ this.getFilterInArns() == null)
             return false;
         if (other.getFilterInArns() != null && other.getFilterInArns().equals(this.getFilterInArns()) == false)
@@ -368,6 +431,7 @@ public class StartNetworkInsightsAnalysisRequest extends AmazonWebServiceRequest
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getNetworkInsightsPathId() == null) ? 0 : getNetworkInsightsPathId().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalAccounts() == null) ? 0 : getAdditionalAccounts().hashCode());
         hashCode = prime * hashCode + ((getFilterInArns() == null) ? 0 : getFilterInArns().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());

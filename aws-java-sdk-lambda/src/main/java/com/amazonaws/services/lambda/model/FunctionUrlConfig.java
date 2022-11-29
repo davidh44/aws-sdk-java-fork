@@ -64,9 +64,9 @@ public class FunctionUrlConfig implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
-     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
-     * authentication to create a public endpoint. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM authentication to
+     * create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function
      * URLs</a>.
      * </p>
      */
@@ -293,17 +293,17 @@ public class FunctionUrlConfig implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
-     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
-     * authentication to create a public endpoint. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM authentication to
+     * create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function
      * URLs</a>.
      * </p>
      * 
      * @param authType
      *        The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
-     *        restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
-     *        bypass IAM authentication to create a public endpoint. For more information, see <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *        restrict access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM
+     *        authentication to create a public endpoint. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda
      *        function URLs</a>.
      * @see FunctionUrlAuthType
      */
@@ -315,16 +315,16 @@ public class FunctionUrlConfig implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
-     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
-     * authentication to create a public endpoint. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM authentication to
+     * create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function
      * URLs</a>.
      * </p>
      * 
      * @return The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
-     *         restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
-     *         bypass IAM authentication to create a public endpoint. For more information, see <a
-     *         href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *         restrict access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM
+     *         authentication to create a public endpoint. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda
      *         function URLs</a>.
      * @see FunctionUrlAuthType
      */
@@ -336,17 +336,17 @@ public class FunctionUrlConfig implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
-     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
-     * authentication to create a public endpoint. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM authentication to
+     * create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function
      * URLs</a>.
      * </p>
      * 
      * @param authType
      *        The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
-     *        restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
-     *        bypass IAM authentication to create a public endpoint. For more information, see <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *        restrict access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM
+     *        authentication to create a public endpoint. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda
      *        function URLs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FunctionUrlAuthType
@@ -360,17 +360,17 @@ public class FunctionUrlConfig implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
-     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
-     * authentication to create a public endpoint. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM authentication to
+     * create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function
      * URLs</a>.
      * </p>
      * 
      * @param authType
      *        The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
-     *        restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
-     *        bypass IAM authentication to create a public endpoint. For more information, see <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *        restrict access to authenticated IAM users only. Set to <code>NONE</code> if you want to bypass IAM
+     *        authentication to create a public endpoint. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda
      *        function URLs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FunctionUrlAuthType

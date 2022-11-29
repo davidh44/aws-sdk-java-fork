@@ -34,6 +34,12 @@ public class AddonInfoMarshaller {
             .marshallLocationName("type").build();
     private static final MarshallingInfo<List> ADDONVERSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("addonVersions").build();
+    private static final MarshallingInfo<String> PUBLISHER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("publisher").build();
+    private static final MarshallingInfo<String> OWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("owner").build();
+    private static final MarshallingInfo<StructuredPojo> MARKETPLACEINFORMATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("marketplaceInformation").build();
 
     private static final AddonInfoMarshaller instance = new AddonInfoMarshaller();
 
@@ -54,6 +60,9 @@ public class AddonInfoMarshaller {
             protocolMarshaller.marshall(addonInfo.getAddonName(), ADDONNAME_BINDING);
             protocolMarshaller.marshall(addonInfo.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(addonInfo.getAddonVersions(), ADDONVERSIONS_BINDING);
+            protocolMarshaller.marshall(addonInfo.getPublisher(), PUBLISHER_BINDING);
+            protocolMarshaller.marshall(addonInfo.getOwner(), OWNER_BINDING);
+            protocolMarshaller.marshall(addonInfo.getMarketplaceInformation(), MARKETPLACEINFORMATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

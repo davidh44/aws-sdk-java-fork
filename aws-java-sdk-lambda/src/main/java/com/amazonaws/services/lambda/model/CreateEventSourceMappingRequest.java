@@ -50,6 +50,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ</b> - The ARN of the broker.
+     * </p>
+     * </li>
      * </ul>
      */
     private String eventSourceArn;
@@ -140,9 +145,9 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
     private Integer batchSize;
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      */
     private FilterCriteria filterCriteria;
@@ -283,6 +288,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ</b> - The ARN of the broker.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param eventSourceArn
@@ -306,6 +316,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Amazon MQ</b> - The ARN of the broker.
      *        </p>
      *        </li>
      */
@@ -339,6 +354,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ</b> - The ARN of the broker.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The Amazon Resource Name (ARN) of the event source.</p>
@@ -361,6 +381,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *         <li>
      *         <p>
      *         <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>Amazon MQ</b> - The ARN of the broker.
      *         </p>
      *         </li>
      */
@@ -394,6 +419,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ</b> - The ARN of the broker.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param eventSourceArn
@@ -417,6 +447,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <b>Amazon Managed Streaming for Apache Kafka</b> - The ARN of the cluster.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Amazon MQ</b> - The ARN of the broker.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -960,14 +995,14 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      * 
      * @param filterCriteria
-     *        (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
-     *        process an event. For more information, see <a
+     *        An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *        filtering</a>.
      */
@@ -978,13 +1013,13 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      * 
-     * @return (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
-     *         process an event. For more information, see <a
+     * @return An object that defines the filter criteria that determine whether Lambda should process an event. For
+     *         more information, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *         filtering</a>.
      */
@@ -995,14 +1030,14 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
-     * an event. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     * information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda
+     * event filtering</a>.
      * </p>
      * 
      * @param filterCriteria
-     *        (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
-     *        process an event. For more information, see <a
+     *        An object that defines the filter criteria that determine whether Lambda should process an event. For more
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *        filtering</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

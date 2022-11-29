@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The function was able to make a network connection to the configured file system, but the mount operation timed out.
+ * The Lambda function made a network connection to the configured file system, but the mount operation timed out.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

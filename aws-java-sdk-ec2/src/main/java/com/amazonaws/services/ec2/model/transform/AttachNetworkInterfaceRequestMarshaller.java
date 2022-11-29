@@ -56,6 +56,23 @@ public class AttachNetworkInterfaceRequestMarshaller implements Marshaller<Reque
             request.addParameter("NetworkCardIndex", StringUtils.fromInteger(attachNetworkInterfaceRequest.getNetworkCardIndex()));
         }
 
+        EnaSrdSpecification enaSrdSpecification = attachNetworkInterfaceRequest.getEnaSrdSpecification();
+        if (enaSrdSpecification != null) {
+
+            if (enaSrdSpecification.getEnaSrdEnabled() != null) {
+                request.addParameter("EnaSrdSpecification.EnaSrdEnabled", StringUtils.fromBoolean(enaSrdSpecification.getEnaSrdEnabled()));
+            }
+
+            EnaSrdUdpSpecification enaSrdUdpSpecification = enaSrdSpecification.getEnaSrdUdpSpecification();
+            if (enaSrdUdpSpecification != null) {
+
+                if (enaSrdUdpSpecification.getEnaSrdUdpEnabled() != null) {
+                    request.addParameter("EnaSrdSpecification.EnaSrdUdpSpecification.EnaSrdUdpEnabled",
+                            StringUtils.fromBoolean(enaSrdUdpSpecification.getEnaSrdUdpEnabled()));
+                }
+            }
+        }
+
         return request;
     }
 

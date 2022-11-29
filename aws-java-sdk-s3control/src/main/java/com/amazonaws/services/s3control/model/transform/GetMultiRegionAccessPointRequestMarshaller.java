@@ -45,9 +45,9 @@ public class GetMultiRegionAccessPointRequestMarshaller implements Marshaller<Re
             request.addHeader("x-amz-account-id", StringUtils.fromString(getMultiRegionAccessPointRequest.getAccountId()));
         }
 
-        String uriResourcePath = "/v20180820/mrap/instances/{name}";
+        String uriResourcePath = "/v20180820/mrap/instances/{name+}";
 
-        uriResourcePath = com.amazonaws.transform.PathMarshallers.NON_GREEDY.marshall(uriResourcePath, "name", getMultiRegionAccessPointRequest.getName());
+        uriResourcePath = com.amazonaws.transform.PathMarshallers.GREEDY.marshall(uriResourcePath, "name", getMultiRegionAccessPointRequest.getName());
         request.setResourcePath(uriResourcePath);
 
         return request;

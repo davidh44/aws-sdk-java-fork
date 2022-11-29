@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Lambda was throttled by Amazon EC2 during Lambda function initialization using the execution role provided for the
- * Lambda function.
+ * Amazon EC2 throttled Lambda during Lambda function initialization using the execution role provided for the function.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -1687,6 +1687,55 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Provides a detailed description of the definition of an analysis.
+     * </p>
+     * <note>
+     * <p>
+     * If you do not need to know details about the content of an Analysis, for instance if you are trying to check the
+     * status of a recently created or updated Analysis, use the <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAnalysis.html">
+     * <code>DescribeAnalysis</code> </a> instead.
+     * </p>
+     * </note>
+     * 
+     * @param describeAnalysisDefinitionRequest
+     * @return A Java Future containing the result of the DescribeAnalysisDefinition operation returned by the service.
+     * @sample AmazonQuickSightAsync.DescribeAnalysisDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAnalysisDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAnalysisDefinitionResult> describeAnalysisDefinitionAsync(
+            DescribeAnalysisDefinitionRequest describeAnalysisDefinitionRequest);
+
+    /**
+     * <p>
+     * Provides a detailed description of the definition of an analysis.
+     * </p>
+     * <note>
+     * <p>
+     * If you do not need to know details about the content of an Analysis, for instance if you are trying to check the
+     * status of a recently created or updated Analysis, use the <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAnalysis.html">
+     * <code>DescribeAnalysis</code> </a> instead.
+     * </p>
+     * </note>
+     * 
+     * @param describeAnalysisDefinitionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAnalysisDefinition operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeAnalysisDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAnalysisDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAnalysisDefinitionResult> describeAnalysisDefinitionAsync(
+            DescribeAnalysisDefinitionRequest describeAnalysisDefinitionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAnalysisDefinitionRequest, DescribeAnalysisDefinitionResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides the read and write permissions for an analysis.
      * </p>
      * 
@@ -1748,6 +1797,55 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<DescribeDashboardResult> describeDashboardAsync(DescribeDashboardRequest describeDashboardRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDashboardRequest, DescribeDashboardResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a detailed description of the definition of a dashboard.
+     * </p>
+     * <note>
+     * <p>
+     * If you do not need to know details about the content of a dashboard, for instance if you are trying to check the
+     * status of a recently created or updated dashboard, use the <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeDashboard.html">
+     * <code>DescribeDashboard</code> </a> instead.
+     * </p>
+     * </note>
+     * 
+     * @param describeDashboardDefinitionRequest
+     * @return A Java Future containing the result of the DescribeDashboardDefinition operation returned by the service.
+     * @sample AmazonQuickSightAsync.DescribeDashboardDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDashboardDefinitionResult> describeDashboardDefinitionAsync(
+            DescribeDashboardDefinitionRequest describeDashboardDefinitionRequest);
+
+    /**
+     * <p>
+     * Provides a detailed description of the definition of a dashboard.
+     * </p>
+     * <note>
+     * <p>
+     * If you do not need to know details about the content of a dashboard, for instance if you are trying to check the
+     * status of a recently created or updated dashboard, use the <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeDashboard.html">
+     * <code>DescribeDashboard</code> </a> instead.
+     * </p>
+     * </note>
+     * 
+     * @param describeDashboardDefinitionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDashboardDefinition operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeDashboardDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDashboardDefinitionResult> describeDashboardDefinitionAsync(
+            DescribeDashboardDefinitionRequest describeDashboardDefinitionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDashboardDefinitionRequest, DescribeDashboardDefinitionResult> asyncHandler);
 
     /**
      * <p>
@@ -2274,6 +2372,55 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<DescribeTemplateAliasResult> describeTemplateAliasAsync(DescribeTemplateAliasRequest describeTemplateAliasRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeTemplateAliasRequest, DescribeTemplateAliasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a detailed description of the definition of a template.
+     * </p>
+     * <note>
+     * <p>
+     * If you do not need to know details about the content of a template, for instance if you are trying to check the
+     * status of a recently created or updated template, use the <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeTemplate.html">
+     * <code>DescribeTemplate</code> </a> instead.
+     * </p>
+     * </note>
+     * 
+     * @param describeTemplateDefinitionRequest
+     * @return A Java Future containing the result of the DescribeTemplateDefinition operation returned by the service.
+     * @sample AmazonQuickSightAsync.DescribeTemplateDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeTemplateDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTemplateDefinitionResult> describeTemplateDefinitionAsync(
+            DescribeTemplateDefinitionRequest describeTemplateDefinitionRequest);
+
+    /**
+     * <p>
+     * Provides a detailed description of the definition of a template.
+     * </p>
+     * <note>
+     * <p>
+     * If you do not need to know details about the content of a template, for instance if you are trying to check the
+     * status of a recently created or updated template, use the <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeTemplate.html">
+     * <code>DescribeTemplate</code> </a> instead.
+     * </p>
+     * </note>
+     * 
+     * @param describeTemplateDefinitionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTemplateDefinition operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeTemplateDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeTemplateDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTemplateDefinitionResult> describeTemplateDefinitionAsync(
+            DescribeTemplateDefinitionRequest describeTemplateDefinitionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTemplateDefinitionRequest, DescribeTemplateDefinitionResult> asyncHandler);
 
     /**
      * <p>

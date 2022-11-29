@@ -24,10 +24,20 @@ import com.amazonaws.AmazonWebServiceResult;
 public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata>
         implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the local gateway route table virtual interface group association.
+     * </p>
+     */
     private LocalGatewayRouteTableVirtualInterfaceGroupAssociation localGatewayRouteTableVirtualInterfaceGroupAssociation;
 
     /**
+     * <p>
+     * Information about the local gateway route table virtual interface group association.
+     * </p>
+     * 
      * @param localGatewayRouteTableVirtualInterfaceGroupAssociation
+     *        Information about the local gateway route table virtual interface group association.
      */
 
     public void setLocalGatewayRouteTableVirtualInterfaceGroupAssociation(
@@ -36,7 +46,11 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult 
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the local gateway route table virtual interface group association.
+     * </p>
+     * 
+     * @return Information about the local gateway route table virtual interface group association.
      */
 
     public LocalGatewayRouteTableVirtualInterfaceGroupAssociation getLocalGatewayRouteTableVirtualInterfaceGroupAssociation() {
@@ -44,7 +58,12 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult 
     }
 
     /**
+     * <p>
+     * Information about the local gateway route table virtual interface group association.
+     * </p>
+     * 
      * @param localGatewayRouteTableVirtualInterfaceGroupAssociation
+     *        Information about the local gateway route table virtual interface group association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

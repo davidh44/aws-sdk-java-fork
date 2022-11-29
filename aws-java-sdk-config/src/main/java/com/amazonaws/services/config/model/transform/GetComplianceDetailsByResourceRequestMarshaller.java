@@ -36,6 +36,8 @@ public class GetComplianceDetailsByResourceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceTypes").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<String> RESOURCEEVALUATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceEvaluationId").build();
 
     private static final GetComplianceDetailsByResourceRequestMarshaller instance = new GetComplianceDetailsByResourceRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class GetComplianceDetailsByResourceRequestMarshaller {
             protocolMarshaller.marshall(getComplianceDetailsByResourceRequest.getResourceId(), RESOURCEID_BINDING);
             protocolMarshaller.marshall(getComplianceDetailsByResourceRequest.getComplianceTypes(), COMPLIANCETYPES_BINDING);
             protocolMarshaller.marshall(getComplianceDetailsByResourceRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(getComplianceDetailsByResourceRequest.getResourceEvaluationId(), RESOURCEEVALUATIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

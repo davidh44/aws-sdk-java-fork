@@ -71,7 +71,8 @@ public enum ExportableInstanceField {
     EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics("EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics"),
     EffectiveRecommendationPreferencesInferredWorkloadTypes("EffectiveRecommendationPreferencesInferredWorkloadTypes"),
     InferredWorkloadTypes("InferredWorkloadTypes"),
-    RecommendationOptionsMigrationEffort("RecommendationOptionsMigrationEffort");
+    RecommendationOptionsMigrationEffort("RecommendationOptionsMigrationEffort"),
+    EffectiveRecommendationPreferencesExternalMetricsSource("EffectiveRecommendationPreferencesExternalMetricsSource");
 
     private String value;
 

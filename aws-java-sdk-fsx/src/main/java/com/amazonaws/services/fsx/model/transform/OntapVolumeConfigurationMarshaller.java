@@ -47,6 +47,10 @@ public class OntapVolumeConfigurationMarshaller {
             .marshallLocationName("UUID").build();
     private static final MarshallingInfo<String> ONTAPVOLUMETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OntapVolumeType").build();
+    private static final MarshallingInfo<String> SNAPSHOTPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnapshotPolicy").build();
+    private static final MarshallingInfo<Boolean> COPYTAGSTOBACKUPS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CopyTagsToBackups").build();
 
     private static final OntapVolumeConfigurationMarshaller instance = new OntapVolumeConfigurationMarshaller();
 
@@ -74,6 +78,8 @@ public class OntapVolumeConfigurationMarshaller {
             protocolMarshaller.marshall(ontapVolumeConfiguration.getTieringPolicy(), TIERINGPOLICY_BINDING);
             protocolMarshaller.marshall(ontapVolumeConfiguration.getUUID(), UUID_BINDING);
             protocolMarshaller.marshall(ontapVolumeConfiguration.getOntapVolumeType(), ONTAPVOLUMETYPE_BINDING);
+            protocolMarshaller.marshall(ontapVolumeConfiguration.getSnapshotPolicy(), SNAPSHOTPOLICY_BINDING);
+            protocolMarshaller.marshall(ontapVolumeConfiguration.getCopyTagsToBackups(), COPYTAGSTOBACKUPS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

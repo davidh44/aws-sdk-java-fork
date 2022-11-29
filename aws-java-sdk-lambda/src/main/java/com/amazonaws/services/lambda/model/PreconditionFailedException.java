@@ -17,7 +17,8 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The RevisionId provided does not match the latest RevisionId for the Lambda function or alias. Call the
- * <code>GetFunction</code> or the <code>GetAlias</code> API to retrieve the latest RevisionId for your resource.
+ * <code>GetFunction</code> or the <code>GetAlias</code> API operation to retrieve the latest RevisionId for your
+ * resource.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

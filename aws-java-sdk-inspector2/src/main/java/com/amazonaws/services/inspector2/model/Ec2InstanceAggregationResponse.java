@@ -30,7 +30,7 @@ public class Ec2InstanceAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Web Services account the Amazon EC2 instance belongs to.
+     * The Amazon Web Services account for the Amazon EC2 instance.
      * </p>
      */
     private String accountId;
@@ -73,11 +73,11 @@ public class Ec2InstanceAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Web Services account the Amazon EC2 instance belongs to.
+     * The Amazon Web Services account for the Amazon EC2 instance.
      * </p>
      * 
      * @param accountId
-     *        The Amazon Web Services account the Amazon EC2 instance belongs to.
+     *        The Amazon Web Services account for the Amazon EC2 instance.
      */
 
     public void setAccountId(String accountId) {
@@ -86,10 +86,10 @@ public class Ec2InstanceAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Web Services account the Amazon EC2 instance belongs to.
+     * The Amazon Web Services account for the Amazon EC2 instance.
      * </p>
      * 
-     * @return The Amazon Web Services account the Amazon EC2 instance belongs to.
+     * @return The Amazon Web Services account for the Amazon EC2 instance.
      */
 
     public String getAccountId() {
@@ -98,11 +98,11 @@ public class Ec2InstanceAggregationResponse implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Web Services account the Amazon EC2 instance belongs to.
+     * The Amazon Web Services account for the Amazon EC2 instance.
      * </p>
      * 
      * @param accountId
-     *        The Amazon Web Services account the Amazon EC2 instance belongs to.
+     *        The Amazon Web Services account for the Amazon EC2 instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

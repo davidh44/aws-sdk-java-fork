@@ -70,6 +70,10 @@ public class GetBucketStatisticsResultJsonUnmarshaller implements Unmarshaller<G
                     context.nextToken();
                     getBucketStatisticsResult.setBucketCountBySharedAccessType(BucketCountBySharedAccessTypeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("bucketStatisticsBySensitivity", targetDepth)) {
+                    context.nextToken();
+                    getBucketStatisticsResult.setBucketStatisticsBySensitivity(BucketStatisticsBySensitivityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("classifiableObjectCount", targetDepth)) {
                     context.nextToken();
                     getBucketStatisticsResult.setClassifiableObjectCount(context.getUnmarshaller(Long.class).unmarshall(context));

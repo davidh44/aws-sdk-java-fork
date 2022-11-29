@@ -158,4 +158,17 @@ public class AbstractAWSLicenseManagerUserSubscriptionsAsync extends AbstractAWS
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityProviderSettingsResult> updateIdentityProviderSettingsAsync(UpdateIdentityProviderSettingsRequest request) {
+
+        return updateIdentityProviderSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityProviderSettingsResult> updateIdentityProviderSettingsAsync(UpdateIdentityProviderSettingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdentityProviderSettingsRequest, UpdateIdentityProviderSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Specifies where to store data classification results, and the encryption settings to use when storing results in that
- * location. Currently, you can store classification results only in an S3 bucket.
+ * location. The location must be an S3 bucket.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ClassificationExportConfiguration"

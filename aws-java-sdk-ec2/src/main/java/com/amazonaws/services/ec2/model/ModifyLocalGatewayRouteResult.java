@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ModifyLocalGatewayRouteResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     */
     private LocalGatewayRoute route;
 
     /**
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     * 
      * @param route
+     *        Information about the local gateway route table.
      */
 
     public void setRoute(LocalGatewayRoute route) {
@@ -34,7 +44,11 @@ public class ModifyLocalGatewayRouteResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     * 
+     * @return Information about the local gateway route table.
      */
 
     public LocalGatewayRoute getRoute() {
@@ -42,7 +56,12 @@ public class ModifyLocalGatewayRouteResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     * 
      * @param route
+     *        Information about the local gateway route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

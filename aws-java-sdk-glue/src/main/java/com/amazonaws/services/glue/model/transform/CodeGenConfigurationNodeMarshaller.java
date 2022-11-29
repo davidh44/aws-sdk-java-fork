@@ -127,6 +127,8 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OracleSQLCatalogTarget").build();
     private static final MarshallingInfo<StructuredPojo> POSTGRESQLCATALOGTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PostgreSQLCatalogTarget").build();
+    private static final MarshallingInfo<StructuredPojo> DYNAMICTRANSFORM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamicTransform").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -194,6 +196,7 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getMySQLCatalogTarget(), MYSQLCATALOGTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getOracleSQLCatalogTarget(), ORACLESQLCATALOGTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getPostgreSQLCatalogTarget(), POSTGRESQLCATALOGTARGET_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getDynamicTransform(), DYNAMICTRANSFORM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

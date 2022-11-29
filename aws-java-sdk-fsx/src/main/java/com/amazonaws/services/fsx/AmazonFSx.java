@@ -1725,6 +1725,8 @@ public interface AmazonFSx {
      * @throws IncompatibleParameterErrorException
      *         The error returned when a second request is received with the same client request token but different
      *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InvalidNetworkSettingsException
+     *         One or more network settings specified in the request are invalid.
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws FileSystemNotFoundException

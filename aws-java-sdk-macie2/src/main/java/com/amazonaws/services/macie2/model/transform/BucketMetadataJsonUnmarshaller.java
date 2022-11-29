@@ -88,6 +88,10 @@ public class BucketMetadataJsonUnmarshaller implements Unmarshaller<BucketMetada
                     context.nextToken();
                     bucketMetadata.setJobDetails(JobDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lastAutomatedDiscoveryTime", targetDepth)) {
+                    context.nextToken();
+                    bucketMetadata.setLastAutomatedDiscoveryTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("lastUpdated", targetDepth)) {
                     context.nextToken();
                     bucketMetadata.setLastUpdated(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
@@ -111,6 +115,10 @@ public class BucketMetadataJsonUnmarshaller implements Unmarshaller<BucketMetada
                 if (context.testExpression("replicationDetails", targetDepth)) {
                     context.nextToken();
                     bucketMetadata.setReplicationDetails(ReplicationDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("sensitivityScore", targetDepth)) {
+                    context.nextToken();
+                    bucketMetadata.setSensitivityScore(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("serverSideEncryption", targetDepth)) {
                     context.nextToken();

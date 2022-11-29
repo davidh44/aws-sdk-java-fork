@@ -250,6 +250,10 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setPostgreSQLCatalogTarget(PostgreSQLCatalogTargetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DynamicTransform", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setDynamicTransform(DynamicTransformJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

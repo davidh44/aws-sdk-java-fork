@@ -54,19 +54,19 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
     private DashboardVersion version;
     /**
      * <p>
-     * The time that this dataset was created.
+     * The time that this dashboard was created.
      * </p>
      */
     private java.util.Date createdTime;
     /**
      * <p>
-     * The last time that this dataset was published.
+     * The last time that this dashboard was published.
      * </p>
      */
     private java.util.Date lastPublishedTime;
     /**
      * <p>
-     * The last time that this dataset was updated.
+     * The last time that this dashboard was updated.
      * </p>
      */
     private java.util.Date lastUpdatedTime;
@@ -233,11 +233,11 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that this dataset was created.
+     * The time that this dashboard was created.
      * </p>
      * 
      * @param createdTime
-     *        The time that this dataset was created.
+     *        The time that this dashboard was created.
      */
 
     public void setCreatedTime(java.util.Date createdTime) {
@@ -246,10 +246,10 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that this dataset was created.
+     * The time that this dashboard was created.
      * </p>
      * 
-     * @return The time that this dataset was created.
+     * @return The time that this dashboard was created.
      */
 
     public java.util.Date getCreatedTime() {
@@ -258,11 +258,11 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that this dataset was created.
+     * The time that this dashboard was created.
      * </p>
      * 
      * @param createdTime
-     *        The time that this dataset was created.
+     *        The time that this dashboard was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +273,11 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this dataset was published.
+     * The last time that this dashboard was published.
      * </p>
      * 
      * @param lastPublishedTime
-     *        The last time that this dataset was published.
+     *        The last time that this dashboard was published.
      */
 
     public void setLastPublishedTime(java.util.Date lastPublishedTime) {
@@ -286,10 +286,10 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this dataset was published.
+     * The last time that this dashboard was published.
      * </p>
      * 
-     * @return The last time that this dataset was published.
+     * @return The last time that this dashboard was published.
      */
 
     public java.util.Date getLastPublishedTime() {
@@ -298,11 +298,11 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this dataset was published.
+     * The last time that this dashboard was published.
      * </p>
      * 
      * @param lastPublishedTime
-     *        The last time that this dataset was published.
+     *        The last time that this dashboard was published.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -313,11 +313,11 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this dataset was updated.
+     * The last time that this dashboard was updated.
      * </p>
      * 
      * @param lastUpdatedTime
-     *        The last time that this dataset was updated.
+     *        The last time that this dashboard was updated.
      */
 
     public void setLastUpdatedTime(java.util.Date lastUpdatedTime) {
@@ -326,10 +326,10 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this dataset was updated.
+     * The last time that this dashboard was updated.
      * </p>
      * 
-     * @return The last time that this dataset was updated.
+     * @return The last time that this dashboard was updated.
      */
 
     public java.util.Date getLastUpdatedTime() {
@@ -338,11 +338,11 @@ public class Dashboard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The last time that this dataset was updated.
+     * The last time that this dashboard was updated.
      * </p>
      * 
      * @param lastUpdatedTime
-     *        The last time that this dataset was updated.
+     *        The last time that this dashboard was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,7 +25,7 @@ public class ListClassificationJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of objects, one for each job that meets the filter criteria specified in the request.
+     * An array of objects, one for each job that matches the filter criteria specified in the request.
      * </p>
      */
     private java.util.List<JobSummary> items;
@@ -39,10 +39,10 @@ public class ListClassificationJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of objects, one for each job that meets the filter criteria specified in the request.
+     * An array of objects, one for each job that matches the filter criteria specified in the request.
      * </p>
      * 
-     * @return An array of objects, one for each job that meets the filter criteria specified in the request.
+     * @return An array of objects, one for each job that matches the filter criteria specified in the request.
      */
 
     public java.util.List<JobSummary> getItems() {
@@ -51,11 +51,11 @@ public class ListClassificationJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of objects, one for each job that meets the filter criteria specified in the request.
+     * An array of objects, one for each job that matches the filter criteria specified in the request.
      * </p>
      * 
      * @param items
-     *        An array of objects, one for each job that meets the filter criteria specified in the request.
+     *        An array of objects, one for each job that matches the filter criteria specified in the request.
      */
 
     public void setItems(java.util.Collection<JobSummary> items) {
@@ -69,7 +69,7 @@ public class ListClassificationJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of objects, one for each job that meets the filter criteria specified in the request.
+     * An array of objects, one for each job that matches the filter criteria specified in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListClassificationJobsResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param items
-     *        An array of objects, one for each job that meets the filter criteria specified in the request.
+     *        An array of objects, one for each job that matches the filter criteria specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListClassificationJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of objects, one for each job that meets the filter criteria specified in the request.
+     * An array of objects, one for each job that matches the filter criteria specified in the request.
      * </p>
      * 
      * @param items
-     *        An array of objects, one for each job that meets the filter criteria specified in the request.
+     *        An array of objects, one for each job that matches the filter criteria specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

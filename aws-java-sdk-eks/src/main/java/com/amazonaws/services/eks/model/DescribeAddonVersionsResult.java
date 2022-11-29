@@ -25,7 +25,7 @@ public class DescribeAddonVersionsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of available versions with Kubernetes version compatibility.
+     * The list of available versions with Kubernetes version compatibility and other properties.
      * </p>
      */
     private java.util.List<AddonInfo> addons;
@@ -46,10 +46,10 @@ public class DescribeAddonVersionsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of available versions with Kubernetes version compatibility.
+     * The list of available versions with Kubernetes version compatibility and other properties.
      * </p>
      * 
-     * @return The list of available versions with Kubernetes version compatibility.
+     * @return The list of available versions with Kubernetes version compatibility and other properties.
      */
 
     public java.util.List<AddonInfo> getAddons() {
@@ -58,11 +58,11 @@ public class DescribeAddonVersionsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of available versions with Kubernetes version compatibility.
+     * The list of available versions with Kubernetes version compatibility and other properties.
      * </p>
      * 
      * @param addons
-     *        The list of available versions with Kubernetes version compatibility.
+     *        The list of available versions with Kubernetes version compatibility and other properties.
      */
 
     public void setAddons(java.util.Collection<AddonInfo> addons) {
@@ -76,7 +76,7 @@ public class DescribeAddonVersionsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of available versions with Kubernetes version compatibility.
+     * The list of available versions with Kubernetes version compatibility and other properties.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,7 +85,7 @@ public class DescribeAddonVersionsResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param addons
-     *        The list of available versions with Kubernetes version compatibility.
+     *        The list of available versions with Kubernetes version compatibility and other properties.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class DescribeAddonVersionsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of available versions with Kubernetes version compatibility.
+     * The list of available versions with Kubernetes version compatibility and other properties.
      * </p>
      * 
      * @param addons
-     *        The list of available versions with Kubernetes version compatibility.
+     *        The list of available versions with Kubernetes version compatibility and other properties.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

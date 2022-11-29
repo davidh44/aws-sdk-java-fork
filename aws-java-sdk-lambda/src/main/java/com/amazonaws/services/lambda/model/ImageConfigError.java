@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Error response to GetFunctionConfiguration.
+ * Error response to <code>GetFunctionConfiguration</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ImageConfigError" target="_top">AWS API

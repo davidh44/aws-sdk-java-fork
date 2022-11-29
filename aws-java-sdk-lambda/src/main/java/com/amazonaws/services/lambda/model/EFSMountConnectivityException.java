@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The function couldn't make a network connection to the configured file system.
+ * The Lambda function couldn't make a network connection to the configured file system.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

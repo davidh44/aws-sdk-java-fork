@@ -76,6 +76,10 @@ public class MatchingBucketJsonUnmarshaller implements Unmarshaller<MatchingBuck
                     context.nextToken();
                     matchingBucket.setJobDetails(JobDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lastAutomatedDiscoveryTime", targetDepth)) {
+                    context.nextToken();
+                    matchingBucket.setLastAutomatedDiscoveryTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("objectCount", targetDepth)) {
                     context.nextToken();
                     matchingBucket.setObjectCount(context.getUnmarshaller(Long.class).unmarshall(context));
@@ -83,6 +87,10 @@ public class MatchingBucketJsonUnmarshaller implements Unmarshaller<MatchingBuck
                 if (context.testExpression("objectCountByEncryptionType", targetDepth)) {
                     context.nextToken();
                     matchingBucket.setObjectCountByEncryptionType(ObjectCountByEncryptionTypeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("sensitivityScore", targetDepth)) {
+                    context.nextToken();
+                    matchingBucket.setSensitivityScore(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("sizeInBytes", targetDepth)) {
                     context.nextToken();

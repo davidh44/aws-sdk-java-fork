@@ -406,6 +406,40 @@ public class AWSLicenseManagerUserSubscriptionsAsyncClient extends AWSLicenseMan
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityProviderSettingsResult> updateIdentityProviderSettingsAsync(UpdateIdentityProviderSettingsRequest request) {
+
+        return updateIdentityProviderSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityProviderSettingsResult> updateIdentityProviderSettingsAsync(
+            final UpdateIdentityProviderSettingsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIdentityProviderSettingsRequest, UpdateIdentityProviderSettingsResult> asyncHandler) {
+        final UpdateIdentityProviderSettingsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIdentityProviderSettingsResult>() {
+            @Override
+            public UpdateIdentityProviderSettingsResult call() throws Exception {
+                UpdateIdentityProviderSettingsResult result = null;
+
+                try {
+                    result = executeUpdateIdentityProviderSettings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

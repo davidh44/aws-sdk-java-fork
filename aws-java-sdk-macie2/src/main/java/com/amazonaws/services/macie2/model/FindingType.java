@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * <p>
  * The type of finding. For details about each type, see <a
  * href="https://docs.aws.amazon.com/macie/latest/user/findings-types.html">Types of Amazon Macie findings</a> in the
- * <i>Amazon Macie User Guide</i>. Valid values are:
+ * <i>Amazon Macie User Guide</i>. Possible values are:
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -44,7 +44,7 @@ public class OutpostConfigResponse implements Serializable, Cloneable, Structure
     private String controlPlaneInstanceType;
     /**
      * <p>
-     * An object representing the placement configuration for all the control plane instance of your local Amazon EKS
+     * An object representing the placement configuration for all the control plane instances of your local Amazon EKS
      * cluster on an Amazon Web Services Outpost. For more information, see <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html">Capacity
      * considerations</a> in the <i>Amazon EKS User Guide</i>.
@@ -170,15 +170,15 @@ public class OutpostConfigResponse implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object representing the placement configuration for all the control plane instance of your local Amazon EKS
+     * An object representing the placement configuration for all the control plane instances of your local Amazon EKS
      * cluster on an Amazon Web Services Outpost. For more information, see <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html">Capacity
      * considerations</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param controlPlanePlacement
-     *        An object representing the placement configuration for all the control plane instance of your local Amazon
-     *        EKS cluster on an Amazon Web Services Outpost. For more information, see <a
+     *        An object representing the placement configuration for all the control plane instances of your local
+     *        Amazon EKS cluster on an Amazon Web Services Outpost. For more information, see <a
      *        href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html">Capacity
      *        considerations</a> in the <i>Amazon EKS User Guide</i>.
      */
@@ -189,13 +189,13 @@ public class OutpostConfigResponse implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object representing the placement configuration for all the control plane instance of your local Amazon EKS
+     * An object representing the placement configuration for all the control plane instances of your local Amazon EKS
      * cluster on an Amazon Web Services Outpost. For more information, see <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html">Capacity
      * considerations</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
-     * @return An object representing the placement configuration for all the control plane instance of your local
+     * @return An object representing the placement configuration for all the control plane instances of your local
      *         Amazon EKS cluster on an Amazon Web Services Outpost. For more information, see <a
      *         href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html"
      *         >Capacity considerations</a> in the <i>Amazon EKS User Guide</i>.
@@ -207,15 +207,15 @@ public class OutpostConfigResponse implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object representing the placement configuration for all the control plane instance of your local Amazon EKS
+     * An object representing the placement configuration for all the control plane instances of your local Amazon EKS
      * cluster on an Amazon Web Services Outpost. For more information, see <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html">Capacity
      * considerations</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param controlPlanePlacement
-     *        An object representing the placement configuration for all the control plane instance of your local Amazon
-     *        EKS cluster on an Amazon Web Services Outpost. For more information, see <a
+     *        An object representing the placement configuration for all the control plane instances of your local
+     *        Amazon EKS cluster on an Amazon Web Services Outpost. For more information, see <a
      *        href="https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html">Capacity
      *        considerations</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

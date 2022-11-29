@@ -1138,6 +1138,8 @@ public interface AmazonConfig {
      * @throws InvalidNextTokenException
      *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
+     * @throws InvalidParameterValueException
+     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
      * @sample AmazonConfig.DescribeConfigRules
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigRules" target="_top">AWS API
      *      Documentation</a>
@@ -2012,7 +2014,7 @@ public interface AmazonConfig {
     /**
      * <p>
      * Returns the evaluation results for the specified Amazon Web Services resource. The results indicate which Config
-     * rules were used to evaluate the resource, when each rule was last used, and whether the resource complies with
+     * rules were used to evaluate the resource, when each rule was last invoked, and whether the resource complies with
      * each rule.
      * </p>
      * 
@@ -2452,6 +2454,24 @@ public interface AmazonConfig {
 
     /**
      * <p>
+     * Returns a summary of resource evaluation for the specified resource evaluation ID from the proactive rules that
+     * were run. The results indicate which evaluation context was used to evaluate the rules, which resource details
+     * were evaluated, the evaluation mode that was run, and whether the resource details comply with the configuration
+     * of the proactive rules.
+     * </p>
+     * 
+     * @param getResourceEvaluationSummaryRequest
+     * @return Result of the GetResourceEvaluationSummary operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         You have specified a resource that does not exist.
+     * @sample AmazonConfig.GetResourceEvaluationSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetResourceEvaluationSummary"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetResourceEvaluationSummaryResult getResourceEvaluationSummary(GetResourceEvaluationSummaryRequest getResourceEvaluationSummaryRequest);
+
+    /**
+     * <p>
      * Returns the details of a specific stored query.
      * </p>
      * 
@@ -2583,6 +2603,26 @@ public interface AmazonConfig {
      *      API Documentation</a>
      */
     ListDiscoveredResourcesResult listDiscoveredResources(ListDiscoveredResourcesRequest listDiscoveredResourcesRequest);
+
+    /**
+     * <p>
+     * Returns a list of proactive resource evaluations.
+     * </p>
+     * 
+     * @param listResourceEvaluationsRequest
+     * @return Result of the ListResourceEvaluations operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         previous response to get the next page of results.
+     * @throws InvalidParameterValueException
+     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     * @throws InvalidTimeRangeException
+     *         The specified time range is invalid. The earlier time is not chronologically before the later time.
+     * @sample AmazonConfig.ListResourceEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListResourceEvaluations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListResourceEvaluationsResult listResourceEvaluations(ListResourceEvaluationsRequest listResourceEvaluationsRequest);
 
     /**
      * <p>
@@ -3592,6 +3632,10 @@ public interface AmazonConfig {
      * Config generates a remediation exception when a problem occurs executing a remediation action to a specific
      * resource. Remediation exceptions blocks auto-remediation until the exception is cleared.
      * </p>
+     * </note> <note>
+     * <p>
+     * To place an exception on an Amazon Web Services resource, ensure remediation is set as manual remediation.
+     * </p>
      * </note>
      * 
      * @param putRemediationExceptionsRequest
@@ -4051,6 +4095,32 @@ public interface AmazonConfig {
      *      target="_top">AWS API Documentation</a>
      */
     StartRemediationExecutionResult startRemediationExecution(StartRemediationExecutionRequest startRemediationExecutionRequest);
+
+    /**
+     * <p>
+     * Runs an on-demand evaluation for the specified resource to determine whether the resource details will comply
+     * with configured Config rules. You can also use it for evaluation purposes. Config recommends using an evaluation
+     * context. It runs an execution against the resource details with all of the Config rules in your account that
+     * match with the specified proactive mode and resource type.
+     * </p>
+     * <note>
+     * <p>
+     * Ensure you have the <code>cloudformation:DescribeType</code> role setup to validate the resource type schema.
+     * </p>
+     * </note>
+     * 
+     * @param startResourceEvaluationRequest
+     * @return Result of the StartResourceEvaluation operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     * @throws IdempotentParameterMismatchException
+     *         Using the same client token with one or more different parameters. Specify a new client token with the
+     *         parameter changes and try again.
+     * @sample AmazonConfig.StartResourceEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartResourceEvaluation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartResourceEvaluationResult startResourceEvaluation(StartResourceEvaluationRequest startResourceEvaluationRequest);
 
     /**
      * <p>

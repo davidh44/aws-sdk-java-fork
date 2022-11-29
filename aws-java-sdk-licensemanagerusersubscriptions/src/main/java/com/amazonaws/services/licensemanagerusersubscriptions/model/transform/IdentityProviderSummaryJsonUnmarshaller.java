@@ -60,6 +60,10 @@ public class IdentityProviderSummaryJsonUnmarshaller implements Unmarshaller<Ide
                     context.nextToken();
                     identityProviderSummary.setProduct(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Settings", targetDepth)) {
+                    context.nextToken();
+                    identityProviderSummary.setSettings(SettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     identityProviderSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

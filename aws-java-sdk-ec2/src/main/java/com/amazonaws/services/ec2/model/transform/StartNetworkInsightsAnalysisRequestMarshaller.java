@@ -47,6 +47,21 @@ public class StartNetworkInsightsAnalysisRequestMarshaller implements
             request.addParameter("NetworkInsightsPathId", StringUtils.fromString(startNetworkInsightsAnalysisRequest.getNetworkInsightsPathId()));
         }
 
+        com.amazonaws.internal.SdkInternalList<String> startNetworkInsightsAnalysisRequestAdditionalAccountsList = (com.amazonaws.internal.SdkInternalList<String>) startNetworkInsightsAnalysisRequest
+                .getAdditionalAccounts();
+        if (!startNetworkInsightsAnalysisRequestAdditionalAccountsList.isEmpty()
+                || !startNetworkInsightsAnalysisRequestAdditionalAccountsList.isAutoConstruct()) {
+            int additionalAccountsListIndex = 1;
+
+            for (String startNetworkInsightsAnalysisRequestAdditionalAccountsListValue : startNetworkInsightsAnalysisRequestAdditionalAccountsList) {
+                if (startNetworkInsightsAnalysisRequestAdditionalAccountsListValue != null) {
+                    request.addParameter("AdditionalAccount." + additionalAccountsListIndex,
+                            StringUtils.fromString(startNetworkInsightsAnalysisRequestAdditionalAccountsListValue));
+                }
+                additionalAccountsListIndex++;
+            }
+        }
+
         com.amazonaws.internal.SdkInternalList<String> startNetworkInsightsAnalysisRequestFilterInArnsList = (com.amazonaws.internal.SdkInternalList<String>) startNetworkInsightsAnalysisRequest
                 .getFilterInArns();
         if (!startNetworkInsightsAnalysisRequestFilterInArnsList.isEmpty() || !startNetworkInsightsAnalysisRequestFilterInArnsList.isAutoConstruct()) {

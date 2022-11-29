@@ -79,6 +79,23 @@ public class ModifyNetworkInterfaceAttributeRequestMarshaller implements
             request.addParameter("SourceDestCheck.Value", StringUtils.fromBoolean(modifyNetworkInterfaceAttributeRequest.getSourceDestCheck()));
         }
 
+        EnaSrdSpecification enaSrdSpecification = modifyNetworkInterfaceAttributeRequest.getEnaSrdSpecification();
+        if (enaSrdSpecification != null) {
+
+            if (enaSrdSpecification.getEnaSrdEnabled() != null) {
+                request.addParameter("EnaSrdSpecification.EnaSrdEnabled", StringUtils.fromBoolean(enaSrdSpecification.getEnaSrdEnabled()));
+            }
+
+            EnaSrdUdpSpecification enaSrdUdpSpecification = enaSrdSpecification.getEnaSrdUdpSpecification();
+            if (enaSrdUdpSpecification != null) {
+
+                if (enaSrdUdpSpecification.getEnaSrdUdpEnabled() != null) {
+                    request.addParameter("EnaSrdSpecification.EnaSrdUdpSpecification.EnaSrdUdpEnabled",
+                            StringUtils.fromBoolean(enaSrdUdpSpecification.getEnaSrdUdpEnabled()));
+                }
+            }
+        }
+
         return request;
     }
 

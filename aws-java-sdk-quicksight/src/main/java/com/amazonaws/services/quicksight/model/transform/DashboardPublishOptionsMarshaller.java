@@ -33,6 +33,8 @@ public class DashboardPublishOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportToCSVOption").build();
     private static final MarshallingInfo<StructuredPojo> SHEETCONTROLSOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SheetControlsOption").build();
+    private static final MarshallingInfo<StructuredPojo> VISUALPUBLISHOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisualPublishOptions").build();
 
     private static final DashboardPublishOptionsMarshaller instance = new DashboardPublishOptionsMarshaller();
 
@@ -53,6 +55,7 @@ public class DashboardPublishOptionsMarshaller {
             protocolMarshaller.marshall(dashboardPublishOptions.getAdHocFilteringOption(), ADHOCFILTERINGOPTION_BINDING);
             protocolMarshaller.marshall(dashboardPublishOptions.getExportToCSVOption(), EXPORTTOCSVOPTION_BINDING);
             protocolMarshaller.marshall(dashboardPublishOptions.getSheetControlsOption(), SHEETCONTROLSOPTION_BINDING);
+            protocolMarshaller.marshall(dashboardPublishOptions.getVisualPublishOptions(), VISUALPUBLISHOPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

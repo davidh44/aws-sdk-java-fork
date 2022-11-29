@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum RecommendationPreferenceName {
 
     EnhancedInfrastructureMetrics("EnhancedInfrastructureMetrics"),
-    InferredWorkloadTypes("InferredWorkloadTypes");
+    InferredWorkloadTypes("InferredWorkloadTypes"),
+    ExternalMetricsPreference("ExternalMetricsPreference");
 
     private String value;
 

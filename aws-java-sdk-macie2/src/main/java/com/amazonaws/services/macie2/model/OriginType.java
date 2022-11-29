@@ -16,13 +16,14 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Specifies how Amazon Macie found the sensitive data that produced a finding. The only possible value is:
+ * Specifies how Amazon Macie found the sensitive data that produced a finding. Possible values are:
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum OriginType {
 
-    SENSITIVE_DATA_DISCOVERY_JOB("SENSITIVE_DATA_DISCOVERY_JOB");
+    SENSITIVE_DATA_DISCOVERY_JOB("SENSITIVE_DATA_DISCOVERY_JOB"),
+    AUTOMATED_SENSITIVE_DATA_DISCOVERY("AUTOMATED_SENSITIVE_DATA_DISCOVERY");
 
     private String value;
 

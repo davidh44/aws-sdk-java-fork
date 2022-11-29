@@ -48,6 +48,10 @@ public class S3JobDefinitionJsonUnmarshaller implements Unmarshaller<S3JobDefini
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("bucketCriteria", targetDepth)) {
+                    context.nextToken();
+                    s3JobDefinition.setBucketCriteria(S3BucketCriteriaForJobJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("bucketDefinitions", targetDepth)) {
                     context.nextToken();
                     s3JobDefinition.setBucketDefinitions(new ListUnmarshaller<S3BucketDefinitionForJob>(S3BucketDefinitionForJobJsonUnmarshaller.getInstance())
@@ -57,10 +61,6 @@ public class S3JobDefinitionJsonUnmarshaller implements Unmarshaller<S3JobDefini
                 if (context.testExpression("scoping", targetDepth)) {
                     context.nextToken();
                     s3JobDefinition.setScoping(ScopingJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("bucketCriteria", targetDepth)) {
-                    context.nextToken();
-                    s3JobDefinition.setBucketCriteria(S3BucketCriteriaForJobJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

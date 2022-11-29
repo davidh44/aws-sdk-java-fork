@@ -33,6 +33,8 @@ public class ThemeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UIColorPalette").build();
     private static final MarshallingInfo<StructuredPojo> SHEET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Sheet").build();
+    private static final MarshallingInfo<StructuredPojo> TYPOGRAPHY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Typography").build();
 
     private static final ThemeConfigurationMarshaller instance = new ThemeConfigurationMarshaller();
 
@@ -53,6 +55,7 @@ public class ThemeConfigurationMarshaller {
             protocolMarshaller.marshall(themeConfiguration.getDataColorPalette(), DATACOLORPALETTE_BINDING);
             protocolMarshaller.marshall(themeConfiguration.getUIColorPalette(), UICOLORPALETTE_BINDING);
             protocolMarshaller.marshall(themeConfiguration.getSheet(), SHEET_BINDING);
+            protocolMarshaller.marshall(themeConfiguration.getTypography(), TYPOGRAPHY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

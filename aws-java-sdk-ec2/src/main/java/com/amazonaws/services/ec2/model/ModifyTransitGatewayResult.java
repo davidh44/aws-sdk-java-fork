@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ModifyTransitGatewayResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the transit gateway.
+     * </p>
+     */
     private TransitGateway transitGateway;
 
     /**
+     * <p>
+     * Information about the transit gateway.
+     * </p>
+     * 
      * @param transitGateway
+     *        Information about the transit gateway.
      */
 
     public void setTransitGateway(TransitGateway transitGateway) {
@@ -34,7 +44,11 @@ public class ModifyTransitGatewayResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the transit gateway.
+     * </p>
+     * 
+     * @return Information about the transit gateway.
      */
 
     public TransitGateway getTransitGateway() {
@@ -42,7 +56,12 @@ public class ModifyTransitGatewayResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Information about the transit gateway.
+     * </p>
+     * 
      * @param transitGateway
+     *        Information about the transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

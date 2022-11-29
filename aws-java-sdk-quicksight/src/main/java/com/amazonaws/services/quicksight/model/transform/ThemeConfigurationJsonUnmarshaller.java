@@ -60,6 +60,10 @@ public class ThemeConfigurationJsonUnmarshaller implements Unmarshaller<ThemeCon
                     context.nextToken();
                     themeConfiguration.setSheet(SheetStyleJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Typography", targetDepth)) {
+                    context.nextToken();
+                    themeConfiguration.setTypography(TypographyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -52,6 +52,10 @@ public class UsageRecordJsonUnmarshaller implements Unmarshaller<UsageRecord, Js
                     context.nextToken();
                     usageRecord.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("automatedDiscoveryFreeTrialStartDate", targetDepth)) {
+                    context.nextToken();
+                    usageRecord.setAutomatedDiscoveryFreeTrialStartDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("freeTrialStartDate", targetDepth)) {
                     context.nextToken();
                     usageRecord.setFreeTrialStartDate(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));

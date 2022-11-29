@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The code signature failed the integrity check. Lambda always blocks deployment if the integrity check fails, even if
- * code signing policy is set to WARN.
+ * The code signature failed the integrity check. If the integrity check fails, then Lambda blocks deployment, even if
+ * the code signing policy is set to WARN.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

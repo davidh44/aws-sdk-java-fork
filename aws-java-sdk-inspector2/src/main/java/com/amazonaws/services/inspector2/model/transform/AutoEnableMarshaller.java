@@ -31,6 +31,8 @@ public class AutoEnableMarshaller {
             .marshallLocationName("ec2").build();
     private static final MarshallingInfo<Boolean> ECR_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ecr").build();
+    private static final MarshallingInfo<Boolean> LAMBDA_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("lambda").build();
 
     private static final AutoEnableMarshaller instance = new AutoEnableMarshaller();
 
@@ -50,6 +52,7 @@ public class AutoEnableMarshaller {
         try {
             protocolMarshaller.marshall(autoEnable.getEc2(), EC2_BINDING);
             protocolMarshaller.marshall(autoEnable.getEcr(), ECR_BINDING);
+            protocolMarshaller.marshall(autoEnable.getLambda(), LAMBDA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

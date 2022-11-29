@@ -186,7 +186,7 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </li>
      * </ul>
      * 
-     * @return The settings used when restoring the specified volume from snapshot. </p>
+     * @return The settings used when restoring the specified volume from snapshot.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -230,7 +230,7 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </ul>
      * 
      * @param options
-     *        The settings used when restoring the specified volume from snapshot. </p>
+     *        The settings used when restoring the specified volume from snapshot.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -284,7 +284,7 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param options
-     *        The settings used when restoring the specified volume from snapshot. </p>
+     *        The settings used when restoring the specified volume from snapshot.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -335,7 +335,7 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </ul>
      * 
      * @param options
-     *        The settings used when restoring the specified volume from snapshot. </p>
+     *        The settings used when restoring the specified volume from snapshot.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -381,7 +381,7 @@ public class RestoreVolumeFromSnapshotRequest extends com.amazonaws.AmazonWebSer
      * </ul>
      * 
      * @param options
-     *        The settings used when restoring the specified volume from snapshot. </p>
+     *        The settings used when restoring the specified volume from snapshot.</p>
      *        <ul>
      *        <li>
      *        <p>

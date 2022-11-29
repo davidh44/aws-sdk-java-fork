@@ -53,6 +53,11 @@ public class GetEffectiveRecommendationPreferencesResultJsonUnmarshaller impleme
                     context.nextToken();
                     getEffectiveRecommendationPreferencesResult.setEnhancedInfrastructureMetrics(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("externalMetricsPreference", targetDepth)) {
+                    context.nextToken();
+                    getEffectiveRecommendationPreferencesResult.setExternalMetricsPreference(ExternalMetricsPreferenceJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

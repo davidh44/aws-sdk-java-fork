@@ -48,6 +48,10 @@ public class JobSummaryJsonUnmarshaller implements Unmarshaller<JobSummary, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("bucketCriteria", targetDepth)) {
+                    context.nextToken();
+                    jobSummary.setBucketCriteria(S3BucketCriteriaForJobJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("bucketDefinitions", targetDepth)) {
                     context.nextToken();
                     jobSummary.setBucketDefinitions(new ListUnmarshaller<S3BucketDefinitionForJob>(S3BucketDefinitionForJobJsonUnmarshaller.getInstance())
@@ -81,10 +85,6 @@ public class JobSummaryJsonUnmarshaller implements Unmarshaller<JobSummary, Json
                 if (context.testExpression("userPausedDetails", targetDepth)) {
                     context.nextToken();
                     jobSummary.setUserPausedDetails(UserPausedDetailsJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("bucketCriteria", targetDepth)) {
-                    context.nextToken();
-                    jobSummary.setBucketCriteria(S3BucketCriteriaForJobJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

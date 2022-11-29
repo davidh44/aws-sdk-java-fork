@@ -60,6 +60,10 @@ public class EvaluationResultQualifierJsonUnmarshaller implements Unmarshaller<E
                     context.nextToken();
                     evaluationResultQualifier.setResourceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("EvaluationMode", targetDepth)) {
+                    context.nextToken();
+                    evaluationResultQualifier.setEvaluationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

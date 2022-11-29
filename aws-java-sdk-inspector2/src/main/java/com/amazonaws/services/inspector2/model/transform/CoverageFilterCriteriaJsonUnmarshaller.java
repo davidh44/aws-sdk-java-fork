@@ -72,6 +72,25 @@ public class CoverageFilterCriteriaJsonUnmarshaller implements Unmarshaller<Cove
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("lambdaFunctionName", targetDepth)) {
+                    context.nextToken();
+                    coverageFilterCriteria.setLambdaFunctionName(new ListUnmarshaller<CoverageStringFilter>(CoverageStringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionRuntime", targetDepth)) {
+                    context.nextToken();
+                    coverageFilterCriteria.setLambdaFunctionRuntime(new ListUnmarshaller<CoverageStringFilter>(CoverageStringFilterJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionTags", targetDepth)) {
+                    context.nextToken();
+                    coverageFilterCriteria.setLambdaFunctionTags(new ListUnmarshaller<CoverageMapFilter>(CoverageMapFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("resourceId", targetDepth)) {
                     context.nextToken();
                     coverageFilterCriteria.setResourceId(new ListUnmarshaller<CoverageStringFilter>(CoverageStringFilterJsonUnmarshaller.getInstance())

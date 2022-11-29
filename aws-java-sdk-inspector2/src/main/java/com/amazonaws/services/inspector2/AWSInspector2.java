@@ -204,7 +204,7 @@ public interface AWSInspector2 {
 
     /**
      * <p>
-     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization
+     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest

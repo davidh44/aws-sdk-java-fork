@@ -56,6 +56,13 @@ public class RestoreVolumeFromSnapshotResultJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     restoreVolumeFromSnapshotResult.setLifecycle(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AdministrativeActions", targetDepth)) {
+                    context.nextToken();
+                    restoreVolumeFromSnapshotResult.setAdministrativeActions(new ListUnmarshaller<AdministrativeAction>(AdministrativeActionJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

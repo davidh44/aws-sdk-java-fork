@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Security Group ID provided in the Lambda function VPC configuration is invalid.
+ * The security group ID provided in the Lambda function VPC configuration is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

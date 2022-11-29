@@ -32,6 +32,8 @@ public class DescribeConfigRulesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConfigRuleNames").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<StructuredPojo> FILTERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Filters").build();
 
     private static final DescribeConfigRulesRequestMarshaller instance = new DescribeConfigRulesRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class DescribeConfigRulesRequestMarshaller {
         try {
             protocolMarshaller.marshall(describeConfigRulesRequest.getConfigRuleNames(), CONFIGRULENAMES_BINDING);
             protocolMarshaller.marshall(describeConfigRulesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(describeConfigRulesRequest.getFilters(), FILTERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

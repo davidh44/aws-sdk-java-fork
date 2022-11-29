@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The function couldn't mount the configured file system due to a permission or configuration issue.
+ * The Lambda function couldn't mount the configured file system due to a permission or configuration issue.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

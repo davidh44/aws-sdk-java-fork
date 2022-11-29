@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Lambda received an unexpected EC2 client exception while setting up for the Lambda function.
+ * Lambda received an unexpected Amazon EC2 client exception while setting up for the Lambda function.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

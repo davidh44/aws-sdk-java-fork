@@ -95,7 +95,7 @@ public class FilterOperation implements Serializable, Cloneable, StructuredPojo 
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getConditionExpression() != null)
-            sb.append("ConditionExpression: ").append(getConditionExpression());
+            sb.append("ConditionExpression: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

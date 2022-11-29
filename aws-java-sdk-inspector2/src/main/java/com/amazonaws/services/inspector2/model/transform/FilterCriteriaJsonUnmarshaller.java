@@ -120,6 +120,12 @@ public class FilterCriteriaJsonUnmarshaller implements Unmarshaller<FilterCriter
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("exploitAvailable", targetDepth)) {
+                    context.nextToken();
+                    filterCriteria.setExploitAvailable(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("findingArn", targetDepth)) {
                     context.nextToken();
                     filterCriteria.setFindingArn(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
@@ -153,6 +159,36 @@ public class FilterCriteriaJsonUnmarshaller implements Unmarshaller<FilterCriter
                 if (context.testExpression("inspectorScore", targetDepth)) {
                     context.nextToken();
                     filterCriteria.setInspectorScore(new ListUnmarshaller<NumberFilter>(NumberFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionExecutionRoleArn", targetDepth)) {
+                    context.nextToken();
+                    filterCriteria.setLambdaFunctionExecutionRoleArn(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionLastModifiedAt", targetDepth)) {
+                    context.nextToken();
+                    filterCriteria.setLambdaFunctionLastModifiedAt(new ListUnmarshaller<DateFilter>(DateFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionLayers", targetDepth)) {
+                    context.nextToken();
+                    filterCriteria.setLambdaFunctionLayers(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionName", targetDepth)) {
+                    context.nextToken();
+                    filterCriteria.setLambdaFunctionName(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("lambdaFunctionRuntime", targetDepth)) {
+                    context.nextToken();
+                    filterCriteria.setLambdaFunctionRuntime(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

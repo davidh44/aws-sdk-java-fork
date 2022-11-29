@@ -56,6 +56,10 @@ public class ResourceStatusJsonUnmarshaller implements Unmarshaller<ResourceStat
                     context.nextToken();
                     resourceStatus.setEcr(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("lambda", targetDepth)) {
+                    context.nextToken();
+                    resourceStatus.setLambda(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

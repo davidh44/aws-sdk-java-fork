@@ -80,6 +80,10 @@ public class VulnerablePackageJsonUnmarshaller implements Unmarshaller<Vulnerabl
                     context.nextToken();
                     vulnerablePackage.setRemediation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("sourceLambdaLayerArn", targetDepth)) {
+                    context.nextToken();
+                    vulnerablePackage.setSourceLambdaLayerArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sourceLayerHash", targetDepth)) {
                     context.nextToken();
                     vulnerablePackage.setSourceLayerHash(context.getUnmarshaller(String.class).unmarshall(context));

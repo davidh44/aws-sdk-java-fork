@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateLocalGatewayRouteTableResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     */
     private LocalGatewayRouteTable localGatewayRouteTable;
 
     /**
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     * 
      * @param localGatewayRouteTable
+     *        Information about the local gateway route table.
      */
 
     public void setLocalGatewayRouteTable(LocalGatewayRouteTable localGatewayRouteTable) {
@@ -34,7 +44,11 @@ public class CreateLocalGatewayRouteTableResult extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     * 
+     * @return Information about the local gateway route table.
      */
 
     public LocalGatewayRouteTable getLocalGatewayRouteTable() {
@@ -42,7 +56,12 @@ public class CreateLocalGatewayRouteTableResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Information about the local gateway route table.
+     * </p>
+     * 
      * @param localGatewayRouteTable
+     *        Information about the local gateway route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

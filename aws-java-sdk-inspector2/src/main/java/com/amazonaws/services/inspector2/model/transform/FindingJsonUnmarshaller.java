@@ -56,6 +56,14 @@ public class FindingJsonUnmarshaller implements Unmarshaller<Finding, JsonUnmars
                     context.nextToken();
                     finding.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("exploitAvailable", targetDepth)) {
+                    context.nextToken();
+                    finding.setExploitAvailable(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("exploitabilityDetails", targetDepth)) {
+                    context.nextToken();
+                    finding.setExploitabilityDetails(ExploitabilityDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("findingArn", targetDepth)) {
                     context.nextToken();
                     finding.setFindingArn(context.getUnmarshaller(String.class).unmarshall(context));

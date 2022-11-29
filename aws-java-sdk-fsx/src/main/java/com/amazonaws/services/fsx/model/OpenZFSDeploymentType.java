@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum OpenZFSDeploymentType {
 
-    SINGLE_AZ_1("SINGLE_AZ_1");
+    SINGLE_AZ_1("SINGLE_AZ_1"),
+    SINGLE_AZ_2("SINGLE_AZ_2");
 
     private String value;
 

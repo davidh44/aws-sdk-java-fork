@@ -608,7 +608,7 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
-     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization
+     * Describe Amazon Inspector configuration settings for an Amazon Web Services organization.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest

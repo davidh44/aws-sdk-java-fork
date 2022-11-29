@@ -194,7 +194,7 @@ public class CalculatedColumn implements Serializable, Cloneable, StructuredPojo
         if (getColumnId() != null)
             sb.append("ColumnId: ").append(getColumnId()).append(",");
         if (getExpression() != null)
-            sb.append("Expression: ").append(getExpression());
+            sb.append("Expression: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
