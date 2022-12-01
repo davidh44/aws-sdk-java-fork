@@ -24,12 +24,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * use with GameLift. You can request an limit increase for your account by using the <b>Service limits</b> page in the
  * GameLift console.
  * </p>
- * <p>
- * <b>Related actions</b>
- * </p>
- * <p>
- * <a>DescribeEC2InstanceLimits</a>
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/EC2InstanceLimit" target="_top">AWS API
  *      Documentation</a>

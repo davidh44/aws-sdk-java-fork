@@ -222,6 +222,17 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to
      * <code>DELETING</code> and begins the deletion process.
      * </p>
+     * <p>
+     * If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with
+     * ValidationException.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
+     * </p>
      * <note>
      * <p>
      * For <code>EXPRESS</code> state machines, the deletion will happen eventually (usually less than a minute).
@@ -241,6 +252,17 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * <p>
      * Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to
      * <code>DELETING</code> and begins the deletion process.
+     * </p>
+     * <p>
+     * If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with
+     * ValidationException.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>
@@ -307,7 +329,9 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Describes an execution.
+     * Provides all information about a state machine execution, such as the state machine associated with the
+     * execution, the execution input and output, and relevant execution metadata. Use this API action to return the Map
+     * Run ARN if the execution was dispatched by a Map Run.
      * </p>
      * <note>
      * <p>
@@ -316,7 +340,8 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * </p>
      * </note>
      * <p>
-     * This API action is not supported by <code>EXPRESS</code> state machines.
+     * This API action is not supported by <code>EXPRESS</code> state machine executions unless they were dispatched by
+     * a Map Run.
      * </p>
      * 
      * @param describeExecutionRequest
@@ -329,7 +354,9 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Describes an execution.
+     * Provides all information about a state machine execution, such as the state machine associated with the
+     * execution, the execution input and output, and relevant execution metadata. Use this API action to return the Map
+     * Run ARN if the execution was dispatched by a Map Run.
      * </p>
      * <note>
      * <p>
@@ -338,7 +365,8 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * </p>
      * </note>
      * <p>
-     * This API action is not supported by <code>EXPRESS</code> state machines.
+     * This API action is not supported by <code>EXPRESS</code> state machine executions unless they were dispatched by
+     * a Map Run.
      * </p>
      * 
      * @param describeExecutionRequest
@@ -356,7 +384,51 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Describes a state machine.
+     * Provides information about a Map Run's configuration, progress, and results. For more information, see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">Examining Map Run</a>
+     * in the <i>Step Functions Developer Guide</i>.
+     * </p>
+     * 
+     * @param describeMapRunRequest
+     * @return A Java Future containing the result of the DescribeMapRun operation returned by the service.
+     * @sample AWSStepFunctionsAsync.DescribeMapRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DescribeMapRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMapRunResult> describeMapRunAsync(DescribeMapRunRequest describeMapRunRequest);
+
+    /**
+     * <p>
+     * Provides information about a Map Run's configuration, progress, and results. For more information, see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">Examining Map Run</a>
+     * in the <i>Step Functions Developer Guide</i>.
+     * </p>
+     * 
+     * @param describeMapRunRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMapRun operation returned by the service.
+     * @sample AWSStepFunctionsAsyncHandler.DescribeMapRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/DescribeMapRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMapRunResult> describeMapRunAsync(DescribeMapRunRequest describeMapRunRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMapRunRequest, DescribeMapRunResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides information about a state machine's definition, its IAM role Amazon Resource Name (ARN), and
+     * configuration. If the state machine ARN is a qualified state machine ARN, the response returned includes the
+     * <code>Map</code> state's label.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>
@@ -375,7 +447,16 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Describes a state machine.
+     * Provides information about a state machine's definition, its IAM role Amazon Resource Name (ARN), and
+     * configuration. If the state machine ARN is a qualified state machine ARN, the response returned includes the
+     * <code>Map</code> state's label.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>
@@ -399,7 +480,9 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Describes the state machine associated with a specific execution.
+     * Provides information about a state machine's definition, its execution role ARN, and configuration. If an
+     * execution was dispatched by a Map Run, the Map Run is returned in the response. Additionally, the state machine
+     * returned will be the state machine associated with the Map Run.
      * </p>
      * <note>
      * <p>
@@ -423,7 +506,9 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Describes the state machine associated with a specific execution.
+     * Provides information about a state machine's definition, its execution role ARN, and configuration. If an
+     * execution was dispatched by a Map Run, the Map Run is returned in the response. Additionally, the state machine
+     * returned will be the state machine associated with the Map Run.
      * </p>
      * <note>
      * <p>
@@ -629,8 +714,11 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Lists the executions of a state machine that meet the filtering criteria. Results are sorted by time, with the
-     * most recent execution first.
+     * Lists all executions of a state machine or a Map Run. You can list all executions related to a state machine by
+     * specifying a state machine Amazon Resource Name (ARN), or those related to a Map Run by specifying a Map Run ARN.
+     * </p>
+     * <p>
+     * Results are sorted by time, with the most recent execution first.
      * </p>
      * <p>
      * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
@@ -658,8 +746,11 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Lists the executions of a state machine that meet the filtering criteria. Results are sorted by time, with the
-     * most recent execution first.
+     * Lists all executions of a state machine or a Map Run. You can list all executions related to a state machine by
+     * specifying a state machine Amazon Resource Name (ARN), or those related to a Map Run by specifying a Map Run ARN.
+     * </p>
+     * <p>
+     * Results are sorted by time, with the most recent execution first.
      * </p>
      * <p>
      * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
@@ -689,6 +780,39 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      */
     java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(ListExecutionsRequest listExecutionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListExecutionsRequest, ListExecutionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all Map Runs that were started by a given state machine execution. Use this API action to obtain Map Run
+     * ARNs, and then call <code>DescribeMapRun</code> to obtain more information, if needed.
+     * </p>
+     * 
+     * @param listMapRunsRequest
+     * @return A Java Future containing the result of the ListMapRuns operation returned by the service.
+     * @sample AWSStepFunctionsAsync.ListMapRuns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ListMapRuns" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMapRunsResult> listMapRunsAsync(ListMapRunsRequest listMapRunsRequest);
+
+    /**
+     * <p>
+     * Lists all Map Runs that were started by a given state machine execution. Use this API action to obtain Map Run
+     * ARNs, and then call <code>DescribeMapRun</code> to obtain more information, if needed.
+     * </p>
+     * 
+     * @param listMapRunsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMapRuns operation returned by the service.
+     * @sample AWSStepFunctionsAsyncHandler.ListMapRuns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/ListMapRuns" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMapRunsResult> listMapRunsAsync(ListMapRunsRequest listMapRunsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMapRunsRequest, ListMapRunsResult> asyncHandler);
 
     /**
      * <p>
@@ -919,7 +1043,15 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Starts a state machine execution.
+     * Starts a state machine execution. If the given state machine Amazon Resource Name (ARN) is a qualified state
+     * machine ARN, it will fail with ValidationException.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>
@@ -943,7 +1075,15 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
-     * Starts a state machine execution.
+     * Starts a state machine execution. If the given state machine Amazon Resource Name (ARN) is a qualified state
+     * machine ARN, it will fail with ValidationException.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>
@@ -1148,10 +1288,54 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
 
     /**
      * <p>
+     * Updates an in-progress Map Run's configuration to include changes to the settings that control maximum
+     * concurrency and Map Run failure.
+     * </p>
+     * 
+     * @param updateMapRunRequest
+     * @return A Java Future containing the result of the UpdateMapRun operation returned by the service.
+     * @sample AWSStepFunctionsAsync.UpdateMapRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/UpdateMapRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMapRunResult> updateMapRunAsync(UpdateMapRunRequest updateMapRunRequest);
+
+    /**
+     * <p>
+     * Updates an in-progress Map Run's configuration to include changes to the settings that control maximum
+     * concurrency and Map Run failure.
+     * </p>
+     * 
+     * @param updateMapRunRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMapRun operation returned by the service.
+     * @sample AWSStepFunctionsAsyncHandler.UpdateMapRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/UpdateMapRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMapRunResult> updateMapRunAsync(UpdateMapRunRequest updateMapRunRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMapRunRequest, UpdateMapRunResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates an existing state machine by modifying its <code>definition</code>, <code>roleArn</code>, or
      * <code>loggingConfiguration</code>. Running executions will continue to use the previous <code>definition</code>
      * and <code>roleArn</code>. You must include at least one of <code>definition</code> or <code>roleArn</code> or you
      * will receive a <code>MissingRequiredParameter</code> error.
+     * </p>
+     * <p>
+     * If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with
+     * ValidationException.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>
@@ -1175,6 +1359,17 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * <code>loggingConfiguration</code>. Running executions will continue to use the previous <code>definition</code>
      * and <code>roleArn</code>. You must include at least one of <code>definition</code> or <code>roleArn</code> or you
      * will receive a <code>MissingRequiredParameter</code> error.
+     * </p>
+     * <p>
+     * If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with
+     * ValidationException.
+     * </p>
+     * <p>
+     * A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For
+     * example, the qualified state machine ARN
+     * <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a
+     * <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named
+     * <code>stateMachineName</code>.
      * </p>
      * <note>
      * <p>

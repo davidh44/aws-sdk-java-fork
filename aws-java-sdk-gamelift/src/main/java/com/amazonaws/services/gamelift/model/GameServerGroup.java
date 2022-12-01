@@ -30,15 +30,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <code>DeleteGameServerGroup</code>. Game server group activity can be temporarily suspended and resumed by calling
  * <code>SuspendGameServerGroup</code> and <code>ResumeGameServerGroup</code>, respectively.
  * </p>
- * <p>
- * <b>Related actions</b>
- * </p>
- * <p>
- * <a>CreateGameServerGroup</a> | <a>ListGameServerGroups</a> | <a>DescribeGameServerGroup</a> |
- * <a>UpdateGameServerGroup</a> | <a>DeleteGameServerGroup</a> | <a>ResumeGameServerGroup</a> |
- * <a>SuspendGameServerGroup</a> | <a>DescribeGameServerInstances</a> | <a
- * href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/reference-awssdk-fleetiq.html">All APIs by task</a>
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/GameServerGroup" target="_top">AWS API
  *      Documentation</a>

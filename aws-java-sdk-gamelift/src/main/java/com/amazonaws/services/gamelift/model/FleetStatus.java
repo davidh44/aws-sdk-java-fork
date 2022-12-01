@@ -28,7 +28,8 @@ public enum FleetStatus {
     ACTIVE("ACTIVE"),
     DELETING("DELETING"),
     ERROR("ERROR"),
-    TERMINATED("TERMINATED");
+    TERMINATED("TERMINATED"),
+    NOT_FOUND("NOT_FOUND");
 
     private String value;
 

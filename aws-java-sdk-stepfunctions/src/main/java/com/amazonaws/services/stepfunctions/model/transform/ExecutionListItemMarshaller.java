@@ -39,6 +39,10 @@ public class ExecutionListItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> STOPDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stopDate").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> MAPRUNARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("mapRunArn").build();
+    private static final MarshallingInfo<Integer> ITEMCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("itemCount").build();
 
     private static final ExecutionListItemMarshaller instance = new ExecutionListItemMarshaller();
 
@@ -62,6 +66,8 @@ public class ExecutionListItemMarshaller {
             protocolMarshaller.marshall(executionListItem.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(executionListItem.getStartDate(), STARTDATE_BINDING);
             protocolMarshaller.marshall(executionListItem.getStopDate(), STOPDATE_BINDING);
+            protocolMarshaller.marshall(executionListItem.getMapRunArn(), MAPRUNARN_BINDING);
+            protocolMarshaller.marshall(executionListItem.getItemCount(), ITEMCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

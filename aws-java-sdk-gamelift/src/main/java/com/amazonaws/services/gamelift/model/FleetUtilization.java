@@ -25,9 +25,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * <b>Related actions</b>
  * </p>
- * <p>
- * <a>DescribeFleetUtilization</a> | <a>DescribeFleetLocationUtilization</a>
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/FleetUtilization" target="_top">AWS API
  *      Documentation</a>

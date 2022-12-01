@@ -27,8 +27,8 @@ public class ListGameServersRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An identifier for the game server group to retrieve a list of game servers from. Use either the
-     * <a>GameServerGroup</a> name or ARN value.
+     * An identifier for the game server group to retrieve a list of game servers from. Use either the name or ARN
+     * value.
      * </p>
      */
     private String gameServerGroupName;
@@ -57,13 +57,13 @@ public class ListGameServersRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An identifier for the game server group to retrieve a list of game servers from. Use either the
-     * <a>GameServerGroup</a> name or ARN value.
+     * An identifier for the game server group to retrieve a list of game servers from. Use either the name or ARN
+     * value.
      * </p>
      * 
      * @param gameServerGroupName
-     *        An identifier for the game server group to retrieve a list of game servers from. Use either the
-     *        <a>GameServerGroup</a> name or ARN value.
+     *        An identifier for the game server group to retrieve a list of game servers from. Use either the name or
+     *        ARN value.
      */
 
     public void setGameServerGroupName(String gameServerGroupName) {
@@ -72,12 +72,12 @@ public class ListGameServersRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An identifier for the game server group to retrieve a list of game servers from. Use either the
-     * <a>GameServerGroup</a> name or ARN value.
+     * An identifier for the game server group to retrieve a list of game servers from. Use either the name or ARN
+     * value.
      * </p>
      * 
-     * @return An identifier for the game server group to retrieve a list of game servers from. Use either the
-     *         <a>GameServerGroup</a> name or ARN value.
+     * @return An identifier for the game server group to retrieve a list of game servers from. Use either the name or
+     *         ARN value.
      */
 
     public String getGameServerGroupName() {
@@ -86,13 +86,13 @@ public class ListGameServersRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An identifier for the game server group to retrieve a list of game servers from. Use either the
-     * <a>GameServerGroup</a> name or ARN value.
+     * An identifier for the game server group to retrieve a list of game servers from. Use either the name or ARN
+     * value.
      * </p>
      * 
      * @param gameServerGroupName
-     *        An identifier for the game server group to retrieve a list of game servers from. Use either the
-     *        <a>GameServerGroup</a> name or ARN value.
+     *        An identifier for the game server group to retrieve a list of game servers from. Use either the name or
+     *        ARN value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

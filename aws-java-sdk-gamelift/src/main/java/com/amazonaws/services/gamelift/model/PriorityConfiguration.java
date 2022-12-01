@@ -43,9 +43,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Changing the priority order will affect how game sessions are placed.
  * </p>
- * <p>
- * Priority configurations are part of a <a>GameSessionQueue</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/PriorityConfiguration" target="_top">AWS API
  *      Documentation</a>

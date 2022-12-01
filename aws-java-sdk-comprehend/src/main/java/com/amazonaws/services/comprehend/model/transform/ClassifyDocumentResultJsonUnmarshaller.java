@@ -60,6 +60,22 @@ public class ClassifyDocumentResultJsonUnmarshaller implements Unmarshaller<Clas
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DocumentMetadata", targetDepth)) {
+                    context.nextToken();
+                    classifyDocumentResult.setDocumentMetadata(DocumentMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("DocumentType", targetDepth)) {
+                    context.nextToken();
+                    classifyDocumentResult.setDocumentType(new ListUnmarshaller<DocumentTypeListItem>(DocumentTypeListItemJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Errors", targetDepth)) {
+                    context.nextToken();
+                    classifyDocumentResult.setErrors(new ListUnmarshaller<ErrorsListItem>(ErrorsListItemJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

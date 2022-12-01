@@ -31,6 +31,8 @@ public class DocumentLabelMarshaller {
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<Float> SCORE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Score").build();
+    private static final MarshallingInfo<Integer> PAGE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Page").build();
 
     private static final DocumentLabelMarshaller instance = new DocumentLabelMarshaller();
 
@@ -50,6 +52,7 @@ public class DocumentLabelMarshaller {
         try {
             protocolMarshaller.marshall(documentLabel.getName(), NAME_BINDING);
             protocolMarshaller.marshall(documentLabel.getScore(), SCORE_BINDING);
+            protocolMarshaller.marshall(documentLabel.getPage(), PAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

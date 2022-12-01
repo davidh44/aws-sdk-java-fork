@@ -72,6 +72,14 @@ public class ExecutionListItemJsonUnmarshaller implements Unmarshaller<Execution
                     context.nextToken();
                     executionListItem.setStopDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("mapRunArn", targetDepth)) {
+                    context.nextToken();
+                    executionListItem.setMapRunArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("itemCount", targetDepth)) {
+                    context.nextToken();
+                    executionListItem.setItemCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

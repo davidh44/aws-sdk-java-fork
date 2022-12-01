@@ -470,6 +470,39 @@ public class AWSStepFunctionsAsyncClient extends AWSStepFunctionsClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeMapRunResult> describeMapRunAsync(DescribeMapRunRequest request) {
+
+        return describeMapRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMapRunResult> describeMapRunAsync(final DescribeMapRunRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeMapRunRequest, DescribeMapRunResult> asyncHandler) {
+        final DescribeMapRunRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeMapRunResult>() {
+            @Override
+            public DescribeMapRunResult call() throws Exception {
+                DescribeMapRunResult result = null;
+
+                try {
+                    result = executeDescribeMapRun(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeStateMachineResult> describeStateMachineAsync(DescribeStateMachineRequest request) {
 
         return describeStateMachineAsync(request, null);
@@ -654,6 +687,39 @@ public class AWSStepFunctionsAsyncClient extends AWSStepFunctionsClient implemen
 
                 try {
                     result = executeListExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMapRunsResult> listMapRunsAsync(ListMapRunsRequest request) {
+
+        return listMapRunsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMapRunsResult> listMapRunsAsync(final ListMapRunsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMapRunsRequest, ListMapRunsResult> asyncHandler) {
+        final ListMapRunsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMapRunsResult>() {
+            @Override
+            public ListMapRunsResult call() throws Exception {
+                ListMapRunsResult result = null;
+
+                try {
+                    result = executeListMapRuns(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -984,6 +1050,39 @@ public class AWSStepFunctionsAsyncClient extends AWSStepFunctionsClient implemen
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMapRunResult> updateMapRunAsync(UpdateMapRunRequest request) {
+
+        return updateMapRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMapRunResult> updateMapRunAsync(final UpdateMapRunRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMapRunRequest, UpdateMapRunResult> asyncHandler) {
+        final UpdateMapRunRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMapRunResult>() {
+            @Override
+            public UpdateMapRunResult call() throws Exception {
+                UpdateMapRunResult result = null;
+
+                try {
+                    result = executeUpdateMapRun(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

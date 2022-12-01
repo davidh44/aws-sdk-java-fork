@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The provided JSON input data is invalid.
+ * The provided JSON input data is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

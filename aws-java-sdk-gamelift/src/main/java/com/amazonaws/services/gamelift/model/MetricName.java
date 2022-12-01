@@ -30,7 +30,8 @@ public enum MetricName {
     PercentAvailableGameSessions("PercentAvailableGameSessions"),
     PercentIdleInstances("PercentIdleInstances"),
     QueueDepth("QueueDepth"),
-    WaitTime("WaitTime");
+    WaitTime("WaitTime"),
+    ConcurrentActivatableGameSessions("ConcurrentActivatableGameSessions");
 
     private String value;
 

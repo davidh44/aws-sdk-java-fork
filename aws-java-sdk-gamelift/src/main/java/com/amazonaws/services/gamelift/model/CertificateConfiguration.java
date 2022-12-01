@@ -24,9 +24,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">GameLift Server SDK</a>
  * operation <code>GetInstanceCertificate</code>.
  * </p>
- * <p>
- * A fleet's certificate configuration is part of <a>FleetAttributes</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CertificateConfiguration" target="_top">AWS
  *      API Documentation</a>

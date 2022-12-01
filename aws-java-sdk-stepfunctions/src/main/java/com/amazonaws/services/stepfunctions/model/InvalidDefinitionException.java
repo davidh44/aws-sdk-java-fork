@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The provided Amazon States Language definition is invalid.
+ * The provided Amazon States Language definition is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information required to remotely connect to a fleet instance. Access is requested by calling
- * <a>GetInstanceAccess</a>.
+ * Information required to remotely connect to a fleet instance.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/InstanceAccess" target="_top">AWS API

@@ -92,6 +92,18 @@ public class DescribeExecutionResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeExecutionResult.setTraceHeader(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("mapRunArn", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setMapRunArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("error", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setError(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("cause", targetDepth)) {
+                    context.nextToken();
+                    describeExecutionResult.setCause(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

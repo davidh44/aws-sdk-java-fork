@@ -74,7 +74,11 @@ public enum HistoryEventType {
     TaskTimedOut("TaskTimedOut"),
     WaitStateAborted("WaitStateAborted"),
     WaitStateEntered("WaitStateEntered"),
-    WaitStateExited("WaitStateExited");
+    WaitStateExited("WaitStateExited"),
+    MapRunAborted("MapRunAborted"),
+    MapRunFailed("MapRunFailed"),
+    MapRunStarted("MapRunStarted"),
+    MapRunSucceeded("MapRunSucceeded");
 
     private String value;
 

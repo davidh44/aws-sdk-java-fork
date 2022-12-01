@@ -33,6 +33,10 @@ public class DetectEntitiesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageCode").build();
     private static final MarshallingInfo<String> ENDPOINTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointArn").build();
+    private static final MarshallingInfo<java.nio.ByteBuffer> BYTES_BINDING = MarshallingInfo.builder(MarshallingType.BYTE_BUFFER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Bytes").build();
+    private static final MarshallingInfo<StructuredPojo> DOCUMENTREADERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocumentReaderConfig").build();
 
     private static final DetectEntitiesRequestMarshaller instance = new DetectEntitiesRequestMarshaller();
 
@@ -53,6 +57,8 @@ public class DetectEntitiesRequestMarshaller {
             protocolMarshaller.marshall(detectEntitiesRequest.getText(), TEXT_BINDING);
             protocolMarshaller.marshall(detectEntitiesRequest.getLanguageCode(), LANGUAGECODE_BINDING);
             protocolMarshaller.marshall(detectEntitiesRequest.getEndpointArn(), ENDPOINTARN_BINDING);
+            protocolMarshaller.marshall(detectEntitiesRequest.getBytes(), BYTES_BINDING);
+            protocolMarshaller.marshall(detectEntitiesRequest.getDocumentReaderConfig(), DOCUMENTREADERCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -30,8 +30,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>Related actions</b>
  * </p>
  * <p>
- * <a>CreatePlayerSession</a> | <a>CreatePlayerSessions</a> | <a>DescribePlayerSessions</a> |
- * <a>StartGameSessionPlacement</a> | <a>DescribeGameSessionPlacement</a> | <a href=
+ * <a href=
  * "https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"
  * >All APIs by task</a>
  * </p>

@@ -36,7 +36,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>Related actions</b>
  * </p>
  * <p>
- * <a>TagResource</a> | <a>UntagResource</a> | <a>ListTagsForResource</a> | <a href=
+ * <a href=
  * "https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"
  * >All APIs by task</a>
  * </p>

@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * A set of instructions for launching server processes on each instance in a fleet. Server processes run either an
  * executable in a custom game build or a Realtime Servers script. Server process configurations are part of a fleet's
- * <a>RuntimeConfiguration</a>.
+ * runtime configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ServerProcess" target="_top">AWS API

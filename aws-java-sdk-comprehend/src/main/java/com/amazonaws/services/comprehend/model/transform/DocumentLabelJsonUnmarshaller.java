@@ -56,6 +56,10 @@ public class DocumentLabelJsonUnmarshaller implements Unmarshaller<DocumentLabel
                     context.nextToken();
                     documentLabel.setScore(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("Page", targetDepth)) {
+                    context.nextToken();
+                    documentLabel.setPage(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

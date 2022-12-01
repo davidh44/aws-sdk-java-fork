@@ -24,9 +24,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * only with placement request that provide player latency information. Player latency policies can be stacked to
  * gradually relax latency requirements over time.
  * </p>
- * <p>
- * Latency policies are part of a <a>GameSessionQueue</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/PlayerLatencyPolicy" target="_top">AWS API
  *      Documentation</a>

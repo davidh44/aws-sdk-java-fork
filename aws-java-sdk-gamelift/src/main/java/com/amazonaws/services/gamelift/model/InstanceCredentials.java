@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Set of credentials required to remotely access a fleet instance. Access credentials are requested by calling
- * <a>GetInstanceAccess</a> and returned in an <a>InstanceAccess</a> object.
+ * Set of credentials required to remotely access a fleet instance.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/InstanceCredentials" target="_top">AWS API

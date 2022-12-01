@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Player information for use when creating player sessions using a game session placement request with
- * <a>StartGameSessionPlacement</a>.
+ * Player information for use when creating player sessions using a game session placement request.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DesiredPlayerSession" target="_top">AWS API

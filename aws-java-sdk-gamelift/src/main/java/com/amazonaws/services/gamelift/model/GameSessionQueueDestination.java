@@ -22,9 +22,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A fleet or alias designated in a game session queue. Queues fulfill requests for new game sessions by placing a new
  * game session on any of the queue's destinations.
  * </p>
- * <p>
- * Destinations are part of a <a>GameSessionQueue</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/GameSessionQueueDestination"
  *      target="_top">AWS API Documentation</a>

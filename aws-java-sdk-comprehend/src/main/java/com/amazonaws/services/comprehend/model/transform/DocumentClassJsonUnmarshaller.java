@@ -56,6 +56,10 @@ public class DocumentClassJsonUnmarshaller implements Unmarshaller<DocumentClass
                     context.nextToken();
                     documentClass.setScore(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("Page", targetDepth)) {
+                    context.nextToken();
+                    documentClass.setPage(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

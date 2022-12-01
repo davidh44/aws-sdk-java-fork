@@ -68,6 +68,11 @@ public class AbstractAWSStepFunctions implements AWSStepFunctions {
     }
 
     @Override
+    public DescribeMapRunResult describeMapRun(DescribeMapRunRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeStateMachineResult describeStateMachine(DescribeStateMachineRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +99,11 @@ public class AbstractAWSStepFunctions implements AWSStepFunctions {
 
     @Override
     public ListExecutionsResult listExecutions(ListExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMapRunsResult listMapRuns(ListMapRunsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -144,6 +154,11 @@ public class AbstractAWSStepFunctions implements AWSStepFunctions {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMapRunResult updateMapRun(UpdateMapRunRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

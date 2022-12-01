@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A service resource associated with the request could not be found. Clients should not retry such requests.
+ * THe requested resources was not found. The resource was either not created yet or deleted.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

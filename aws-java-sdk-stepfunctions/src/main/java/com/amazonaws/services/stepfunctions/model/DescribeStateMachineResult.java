@@ -109,6 +109,13 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private TracingConfiguration tracingConfiguration;
+    /**
+     * <p>
+     * A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is present
+     * only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     * </p>
+     */
+    private String label;
 
     /**
      * <p>
@@ -736,6 +743,52 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is present
+     * only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     * </p>
+     * 
+     * @param label
+     *        A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is
+     *        present only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     */
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    /**
+     * <p>
+     * A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is present
+     * only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     * </p>
+     * 
+     * @return A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is
+     *         present only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     */
+
+    public String getLabel() {
+        return this.label;
+    }
+
+    /**
+     * <p>
+     * A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is present
+     * only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     * </p>
+     * 
+     * @param label
+     *        A user-defined or an auto-generated string that identifies a <code>Map</code> state. This parameter is
+     *        present only if the <code>stateMachineArn</code> specified in input is a qualified state machine ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeStateMachineResult withLabel(String label) {
+        setLabel(label);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -764,7 +817,9 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
         if (getLoggingConfiguration() != null)
             sb.append("LoggingConfiguration: ").append(getLoggingConfiguration()).append(",");
         if (getTracingConfiguration() != null)
-            sb.append("TracingConfiguration: ").append(getTracingConfiguration());
+            sb.append("TracingConfiguration: ").append(getTracingConfiguration()).append(",");
+        if (getLabel() != null)
+            sb.append("Label: ").append(getLabel());
         sb.append("}");
         return sb.toString();
     }
@@ -815,6 +870,10 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getTracingConfiguration() != null && other.getTracingConfiguration().equals(this.getTracingConfiguration()) == false)
             return false;
+        if (other.getLabel() == null ^ this.getLabel() == null)
+            return false;
+        if (other.getLabel() != null && other.getLabel().equals(this.getLabel()) == false)
+            return false;
         return true;
     }
 
@@ -832,6 +891,7 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getLoggingConfiguration() == null) ? 0 : getLoggingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTracingConfiguration() == null) ? 0 : getTracingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         return hashCode;
     }
 

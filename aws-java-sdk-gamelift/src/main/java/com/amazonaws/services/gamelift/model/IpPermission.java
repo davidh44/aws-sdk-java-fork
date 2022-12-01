@@ -24,12 +24,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * allowed ranges. Fleets with custom game builds must have permissions explicitly set. For Realtime Servers fleets,
  * GameLift automatically opens two port ranges, one for TCP messaging and one for UDP.
  * </p>
- * <p>
- * <b>Related actions</b>
- * </p>
- * <p>
- * <a>DescribeFleetPortSettings</a>
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/IpPermission" target="_top">AWS API
  *      Documentation</a>

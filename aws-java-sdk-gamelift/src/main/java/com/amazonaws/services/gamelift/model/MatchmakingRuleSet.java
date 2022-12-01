@@ -20,8 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Set of rule statements, used with FlexMatch, that determine how to build your player matches. Each rule set describes
- * a type of group to be created and defines the parameters for acceptable player matches. Rule sets are used in
- * <a>MatchmakingConfiguration</a> objects.
+ * a type of group to be created and defines the parameters for acceptable player matches.
  * </p>
  * <p>
  * A rule set may define the following elements for a match. For detailed information and examples showing how to

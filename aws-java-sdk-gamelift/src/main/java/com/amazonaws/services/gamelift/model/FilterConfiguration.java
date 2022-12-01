@@ -23,9 +23,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * turn off placements for specific locations. For queues that have multi-location fleets, you can use a filter
  * configuration allow placement with some, but not all of these locations.
  * </p>
- * <p>
- * Filter configurations are part of a <a>GameSessionQueue</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/FilterConfiguration" target="_top">AWS API
  *      Documentation</a>

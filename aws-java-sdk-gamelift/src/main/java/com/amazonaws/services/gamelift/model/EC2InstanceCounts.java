@@ -22,9 +22,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Resource capacity settings. Fleet capacity is measured in Amazon EC2 instances. Pending and terminating counts are
  * non-zero when the fleet capacity is adjusting to a scaling event or if access to resources is temporarily affected.
  * </p>
- * <p>
- * EC2 instance counts are part of <a>FleetCapacity</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/EC2InstanceCounts" target="_top">AWS API
  *      Documentation</a>

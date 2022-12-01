@@ -27,18 +27,18 @@ public class DescribeResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the policy to describe.
+     * The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      * </p>
      */
     private String resourceArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the policy to describe.
+     * The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the policy to describe.
+     *        The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -47,10 +47,10 @@ public class DescribeResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the policy to describe.
+     * The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the policy to describe.
+     * @return The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      */
 
     public String getResourceArn() {
@@ -59,11 +59,11 @@ public class DescribeResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the policy to describe.
+     * The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the policy to describe.
+     *        The Amazon Resource Name (ARN) of the custom model version that has the resource policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

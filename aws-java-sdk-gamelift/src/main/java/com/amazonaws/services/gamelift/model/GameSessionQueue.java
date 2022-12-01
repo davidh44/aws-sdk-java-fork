@@ -22,17 +22,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Configuration for a game session placement mechanism that processes requests for new game sessions. A queue can be
  * used on its own or as part of a matchmaking solution.
  * </p>
- * <p>
- * <b>Related actions</b>
- * </p>
- * <p>
- * <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html">
- * CreateGameSessionQueue</a> | <a
- * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameSessionQueues.html"
- * >DescribeGameSessionQueues</a> | <a
- * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSessionQueue.html"
- * >UpdateGameSessionQueue</a>
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/GameSessionQueue" target="_top">AWS API
  *      Documentation</a>

@@ -194,6 +194,14 @@ public class HistoryEventJsonUnmarshaller implements Unmarshaller<HistoryEvent, 
                     context.nextToken();
                     historyEvent.setStateExitedEventDetails(StateExitedEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("mapRunStartedEventDetails", targetDepth)) {
+                    context.nextToken();
+                    historyEvent.setMapRunStartedEventDetails(MapRunStartedEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("mapRunFailedEventDetails", targetDepth)) {
+                    context.nextToken();
+                    historyEvent.setMapRunFailedEventDetails(MapRunFailedEventDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
