@@ -72,6 +72,10 @@ public class DataCollectionDetailsJsonUnmarshaller implements Unmarshaller<DataC
                     context.nextToken();
                     dataCollectionDetails.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("statusMessage", targetDepth)) {
+                    context.nextToken();
+                    dataCollectionDetails.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("success", targetDepth)) {
                     context.nextToken();
                     dataCollectionDetails.setSuccess(context.getUnmarshaller(Integer.class).unmarshall(context));

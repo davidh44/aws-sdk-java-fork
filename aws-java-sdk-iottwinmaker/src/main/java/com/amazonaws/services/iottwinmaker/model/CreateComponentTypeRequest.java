@@ -77,6 +77,12 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.Map<String, String> tags;
     /** <p/> */
     private java.util.Map<String, PropertyGroupRequest> propertyGroups;
+    /**
+     * <p>
+     * A friendly name for the component type.
+     * </p>
+     */
+    private String componentTypeName;
 
     /**
      * <p>
@@ -597,6 +603,46 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * A friendly name for the component type.
+     * </p>
+     * 
+     * @param componentTypeName
+     *        A friendly name for the component type.
+     */
+
+    public void setComponentTypeName(String componentTypeName) {
+        this.componentTypeName = componentTypeName;
+    }
+
+    /**
+     * <p>
+     * A friendly name for the component type.
+     * </p>
+     * 
+     * @return A friendly name for the component type.
+     */
+
+    public String getComponentTypeName() {
+        return this.componentTypeName;
+    }
+
+    /**
+     * <p>
+     * A friendly name for the component type.
+     * </p>
+     * 
+     * @param componentTypeName
+     *        A friendly name for the component type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateComponentTypeRequest withComponentTypeName(String componentTypeName) {
+        setComponentTypeName(componentTypeName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -625,7 +671,9 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getPropertyGroups() != null)
-            sb.append("PropertyGroups: ").append(getPropertyGroups());
+            sb.append("PropertyGroups: ").append(getPropertyGroups()).append(",");
+        if (getComponentTypeName() != null)
+            sb.append("ComponentTypeName: ").append(getComponentTypeName());
         sb.append("}");
         return sb.toString();
     }
@@ -676,6 +724,10 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getPropertyGroups() != null && other.getPropertyGroups().equals(this.getPropertyGroups()) == false)
             return false;
+        if (other.getComponentTypeName() == null ^ this.getComponentTypeName() == null)
+            return false;
+        if (other.getComponentTypeName() != null && other.getComponentTypeName().equals(this.getComponentTypeName()) == false)
+            return false;
         return true;
     }
 
@@ -693,6 +745,7 @@ public class CreateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getFunctions() == null) ? 0 : getFunctions().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
+        hashCode = prime * hashCode + ((getComponentTypeName() == null) ? 0 : getComponentTypeName().hashCode());
         return hashCode;
     }
 

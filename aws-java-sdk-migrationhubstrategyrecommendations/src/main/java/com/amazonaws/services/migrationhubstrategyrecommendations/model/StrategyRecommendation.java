@@ -22,7 +22,8 @@ public enum StrategyRecommendation {
 
     Recommended("recommended"),
     ViableOption("viableOption"),
-    NotRecommended("notRecommended");
+    NotRecommended("notRecommended"),
+    Potential("potential");
 
     private String value;
 

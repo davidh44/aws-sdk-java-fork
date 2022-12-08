@@ -93,6 +93,10 @@ public class GetEntityResultJsonUnmarshaller implements Unmarshaller<GetEntityRe
                     context.nextToken();
                     getEntityResult.setUpdateDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("syncSource", targetDepth)) {
+                    context.nextToken();
+                    getEntityResult.setSyncSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

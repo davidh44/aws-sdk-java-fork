@@ -72,6 +72,10 @@ public class ComponentTypeSummaryJsonUnmarshaller implements Unmarshaller<Compon
                     context.nextToken();
                     componentTypeSummary.setStatus(StatusJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("componentTypeName", targetDepth)) {
+                    context.nextToken();
+                    componentTypeSummary.setComponentTypeName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

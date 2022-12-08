@@ -88,6 +88,13 @@ public class EndpointToRegion {
             return new RegionOrRegionName(regionFromInternalConfig);
         }
 
+        RegionMetadata regionMetadata = RegionUtils.getRegionMetadata();
+
+        Region regionByExplicitEndpoint = regionMetadata.tryGetRegionByExplicitEndpoint(host);
+        if (regionByExplicitEndpoint != null) {
+            return new RegionOrRegionName(regionByExplicitEndpoint);
+        }
+
         String regionFromAwsPartitionPattern = AwsHostNameUtils.parseRegionFromAwsPartitionPattern(host);
         if (regionFromAwsPartitionPattern != null) {
             return new RegionOrRegionName(regionFromAwsPartitionPattern);
@@ -96,13 +103,6 @@ public class EndpointToRegion {
         String serviceHintRegion = AwsHostNameUtils.parseRegionUsingServiceHint(host, serviceHint);
         if (serviceHintRegion != null) {
             return new RegionOrRegionName(serviceHintRegion);
-        }
-
-        RegionMetadata regionMetadata = RegionUtils.getRegionMetadata();
-
-        Region regionByExplicitEndpoint = regionMetadata.tryGetRegionByExplicitEndpoint(host);
-        if (regionByExplicitEndpoint != null) {
-            return new RegionOrRegionName(regionByExplicitEndpoint);
         }
 
         Region regionByDnsSuffix = regionMetadata.tryGetRegionByEndpointDnsSuffix(host);

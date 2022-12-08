@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PutPortfolioPreferencesRequestMarshaller {
 
+    private static final MarshallingInfo<String> APPLICATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applicationMode").build();
     private static final MarshallingInfo<StructuredPojo> APPLICATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applicationPreferences").build();
     private static final MarshallingInfo<StructuredPojo> DATABASEPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -50,6 +52,7 @@ public class PutPortfolioPreferencesRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(putPortfolioPreferencesRequest.getApplicationMode(), APPLICATIONMODE_BINDING);
             protocolMarshaller.marshall(putPortfolioPreferencesRequest.getApplicationPreferences(), APPLICATIONPREFERENCES_BINDING);
             protocolMarshaller.marshall(putPortfolioPreferencesRequest.getDatabasePreferences(), DATABASEPREFERENCES_BINDING);
             protocolMarshaller.marshall(putPortfolioPreferencesRequest.getPrioritizeBusinessGoals(), PRIORITIZEBUSINESSGOALS_BINDING);

@@ -90,6 +90,12 @@ public class ServerDetail implements Serializable, Cloneable, StructuredPojo {
     private RecommendationSet recommendationSet;
     /**
      * <p>
+     * The error in server analysis.
+     * </p>
+     */
+    private ServerError serverError;
+    /**
+     * <p>
      * The type of server.
      * </p>
      */
@@ -608,6 +614,46 @@ public class ServerDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The error in server analysis.
+     * </p>
+     * 
+     * @param serverError
+     *        The error in server analysis.
+     */
+
+    public void setServerError(ServerError serverError) {
+        this.serverError = serverError;
+    }
+
+    /**
+     * <p>
+     * The error in server analysis.
+     * </p>
+     * 
+     * @return The error in server analysis.
+     */
+
+    public ServerError getServerError() {
+        return this.serverError;
+    }
+
+    /**
+     * <p>
+     * The error in server analysis.
+     * </p>
+     * 
+     * @param serverError
+     *        The error in server analysis.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServerDetail withServerError(ServerError serverError) {
+        setServerError(serverError);
+        return this;
+    }
+
+    /**
+     * <p>
      * The type of server.
      * </p>
      * 
@@ -759,6 +805,8 @@ public class ServerDetail implements Serializable, Cloneable, StructuredPojo {
             sb.append("Name: ").append(getName()).append(",");
         if (getRecommendationSet() != null)
             sb.append("RecommendationSet: ").append(getRecommendationSet()).append(",");
+        if (getServerError() != null)
+            sb.append("ServerError: ").append(getServerError()).append(",");
         if (getServerType() != null)
             sb.append("ServerType: ").append(getServerType()).append(",");
         if (getStatusMessage() != null)
@@ -822,6 +870,10 @@ public class ServerDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRecommendationSet() != null && other.getRecommendationSet().equals(this.getRecommendationSet()) == false)
             return false;
+        if (other.getServerError() == null ^ this.getServerError() == null)
+            return false;
+        if (other.getServerError() != null && other.getServerError().equals(this.getServerError()) == false)
+            return false;
         if (other.getServerType() == null ^ this.getServerType() == null)
             return false;
         if (other.getServerType() != null && other.getServerType().equals(this.getServerType()) == false)
@@ -852,6 +904,7 @@ public class ServerDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getListAntipatternSeveritySummary() == null) ? 0 : getListAntipatternSeveritySummary().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRecommendationSet() == null) ? 0 : getRecommendationSet().hashCode());
+        hashCode = prime * hashCode + ((getServerError() == null) ? 0 : getServerError().hashCode());
         hashCode = prime * hashCode + ((getServerType() == null) ? 0 : getServerType().hashCode());
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getSystemInfo() == null) ? 0 : getSystemInfo().hashCode());

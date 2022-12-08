@@ -386,6 +386,39 @@ public class AmazonAutoScalingAsyncClient extends AmazonAutoScalingClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<AttachTrafficSourcesResult> attachTrafficSourcesAsync(AttachTrafficSourcesRequest request) {
+
+        return attachTrafficSourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AttachTrafficSourcesResult> attachTrafficSourcesAsync(final AttachTrafficSourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AttachTrafficSourcesRequest, AttachTrafficSourcesResult> asyncHandler) {
+        final AttachTrafficSourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AttachTrafficSourcesResult>() {
+            @Override
+            public AttachTrafficSourcesResult call() throws Exception {
+                AttachTrafficSourcesResult result = null;
+
+                try {
+                    result = executeAttachTrafficSources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchDeleteScheduledActionResult> batchDeleteScheduledActionAsync(BatchDeleteScheduledActionRequest request) {
 
         return batchDeleteScheduledActionAsync(request, null);
@@ -1869,6 +1902,39 @@ public class AmazonAutoScalingAsyncClient extends AmazonAutoScalingClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTrafficSourcesResult> describeTrafficSourcesAsync(DescribeTrafficSourcesRequest request) {
+
+        return describeTrafficSourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTrafficSourcesResult> describeTrafficSourcesAsync(final DescribeTrafficSourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTrafficSourcesRequest, DescribeTrafficSourcesResult> asyncHandler) {
+        final DescribeTrafficSourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTrafficSourcesResult>() {
+            @Override
+            public DescribeTrafficSourcesResult call() throws Exception {
+                DescribeTrafficSourcesResult result = null;
+
+                try {
+                    result = executeDescribeTrafficSources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeWarmPoolResult> describeWarmPoolAsync(DescribeWarmPoolRequest request) {
 
         return describeWarmPoolAsync(request, null);
@@ -2022,6 +2088,39 @@ public class AmazonAutoScalingAsyncClient extends AmazonAutoScalingClient implem
             com.amazonaws.handlers.AsyncHandler<DetachLoadBalancersRequest, DetachLoadBalancersResult> asyncHandler) {
 
         return detachLoadBalancersAsync(new DetachLoadBalancersRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetachTrafficSourcesResult> detachTrafficSourcesAsync(DetachTrafficSourcesRequest request) {
+
+        return detachTrafficSourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetachTrafficSourcesResult> detachTrafficSourcesAsync(final DetachTrafficSourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DetachTrafficSourcesRequest, DetachTrafficSourcesResult> asyncHandler) {
+        final DetachTrafficSourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DetachTrafficSourcesResult>() {
+            @Override
+            public DetachTrafficSourcesResult call() throws Exception {
+                DetachTrafficSourcesResult result = null;
+
+                try {
+                    result = executeDetachTrafficSources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override

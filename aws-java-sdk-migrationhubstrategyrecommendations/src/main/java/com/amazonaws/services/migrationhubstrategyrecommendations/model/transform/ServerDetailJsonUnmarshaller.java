@@ -93,6 +93,10 @@ public class ServerDetailJsonUnmarshaller implements Unmarshaller<ServerDetail, 
                     context.nextToken();
                     serverDetail.setRecommendationSet(RecommendationSetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("serverError", targetDepth)) {
+                    context.nextToken();
+                    serverDetail.setServerError(ServerErrorJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("serverType", targetDepth)) {
                     context.nextToken();
                     serverDetail.setServerType(context.getUnmarshaller(String.class).unmarshall(context));

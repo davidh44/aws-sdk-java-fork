@@ -25,7 +25,9 @@ public enum ApplicationComponentCriteria {
     SERVER_ID("SERVER_ID"),
     APP_TYPE("APP_TYPE"),
     STRATEGY("STRATEGY"),
-    DESTINATION("DESTINATION");
+    DESTINATION("DESTINATION"),
+    ANALYSIS_STATUS("ANALYSIS_STATUS"),
+    ERROR_CATEGORY("ERROR_CATEGORY");
 
     private String value;
 

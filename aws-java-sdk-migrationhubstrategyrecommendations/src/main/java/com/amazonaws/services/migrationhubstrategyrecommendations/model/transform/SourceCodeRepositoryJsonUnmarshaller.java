@@ -52,6 +52,10 @@ public class SourceCodeRepositoryJsonUnmarshaller implements Unmarshaller<Source
                     context.nextToken();
                     sourceCodeRepository.setBranch(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("projectName", targetDepth)) {
+                    context.nextToken();
+                    sourceCodeRepository.setProjectName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("repository", targetDepth)) {
                     context.nextToken();
                     sourceCodeRepository.setRepository(context.getUnmarshaller(String.class).unmarshall(context));

@@ -39,6 +39,8 @@ public class ComponentTypeSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<StructuredPojo> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("status").build();
+    private static final MarshallingInfo<String> COMPONENTTYPENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentTypeName").build();
 
     private static final ComponentTypeSummaryMarshaller instance = new ComponentTypeSummaryMarshaller();
 
@@ -62,6 +64,7 @@ public class ComponentTypeSummaryMarshaller {
             protocolMarshaller.marshall(componentTypeSummary.getUpdateDateTime(), UPDATEDATETIME_BINDING);
             protocolMarshaller.marshall(componentTypeSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(componentTypeSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(componentTypeSummary.getComponentTypeName(), COMPONENTTYPENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

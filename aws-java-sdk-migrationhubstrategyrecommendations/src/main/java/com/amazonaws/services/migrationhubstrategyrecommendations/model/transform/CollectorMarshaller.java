@@ -33,6 +33,8 @@ public class CollectorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collectorId").build();
     private static final MarshallingInfo<String> COLLECTORVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collectorVersion").build();
+    private static final MarshallingInfo<StructuredPojo> CONFIGURATIONSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurationSummary").build();
     private static final MarshallingInfo<String> HOSTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("hostName").build();
     private static final MarshallingInfo<String> IPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -61,6 +63,7 @@ public class CollectorMarshaller {
             protocolMarshaller.marshall(collector.getCollectorHealth(), COLLECTORHEALTH_BINDING);
             protocolMarshaller.marshall(collector.getCollectorId(), COLLECTORID_BINDING);
             protocolMarshaller.marshall(collector.getCollectorVersion(), COLLECTORVERSION_BINDING);
+            protocolMarshaller.marshall(collector.getConfigurationSummary(), CONFIGURATIONSUMMARY_BINDING);
             protocolMarshaller.marshall(collector.getHostName(), HOSTNAME_BINDING);
             protocolMarshaller.marshall(collector.getIpAddress(), IPADDRESS_BINDING);
             protocolMarshaller.marshall(collector.getLastActivityTimeStamp(), LASTACTIVITYTIMESTAMP_BINDING);

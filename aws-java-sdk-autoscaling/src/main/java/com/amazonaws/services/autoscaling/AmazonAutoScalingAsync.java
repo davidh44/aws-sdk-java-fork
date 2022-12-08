@@ -293,6 +293,59 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Attaches one or more traffic sources to the specified Auto Scaling group.
+     * </p>
+     * <p>
+     * To describe the traffic sources for an Auto Scaling group, call the <a>DescribeTrafficSources</a> API. To detach
+     * a traffic source from the Auto Scaling group, call the <a>DetachTrafficSources</a> API.
+     * </p>
+     * <p>
+     * This operation is additive and does not detach existing traffic sources from the Auto Scaling group.
+     * </p>
+     * 
+     * @param attachTrafficSourcesRequest
+     * @return A Java Future containing the result of the AttachTrafficSources operation returned by the service.
+     * @sample AmazonAutoScalingAsync.AttachTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/AttachTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AttachTrafficSourcesResult> attachTrafficSourcesAsync(AttachTrafficSourcesRequest attachTrafficSourcesRequest);
+
+    /**
+     * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Attaches one or more traffic sources to the specified Auto Scaling group.
+     * </p>
+     * <p>
+     * To describe the traffic sources for an Auto Scaling group, call the <a>DescribeTrafficSources</a> API. To detach
+     * a traffic source from the Auto Scaling group, call the <a>DetachTrafficSources</a> API.
+     * </p>
+     * <p>
+     * This operation is additive and does not detach existing traffic sources from the Auto Scaling group.
+     * </p>
+     * 
+     * @param attachTrafficSourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AttachTrafficSources operation returned by the service.
+     * @sample AmazonAutoScalingAsyncHandler.AttachTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/AttachTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AttachTrafficSourcesResult> attachTrafficSourcesAsync(AttachTrafficSourcesRequest attachTrafficSourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<AttachTrafficSourcesRequest, AttachTrafficSourcesResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes one or more scheduled actions for the specified Auto Scaling group.
      * </p>
      * 
@@ -1698,6 +1751,13 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      * Balancing to distribute traffic across the instances in your Auto Scaling group</a> in the <i>Amazon EC2 Auto
      * Scaling User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can use this operation to describe target groups that were attached by using
+     * <a>AttachLoadBalancerTargetGroups</a>, but not for target groups that were attached by using
+     * <a>AttachTrafficSources</a>.
+     * </p>
+     * </note>
      * 
      * @param describeLoadBalancerTargetGroupsRequest
      * @return A Java Future containing the result of the DescribeLoadBalancerTargetGroups operation returned by the
@@ -1736,6 +1796,13 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      * Balancing to distribute traffic across the instances in your Auto Scaling group</a> in the <i>Amazon EC2 Auto
      * Scaling User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can use this operation to describe target groups that were attached by using
+     * <a>AttachLoadBalancerTargetGroups</a>, but not for target groups that were attached by using
+     * <a>AttachTrafficSources</a>.
+     * </p>
+     * </note>
      * 
      * @param describeLoadBalancerTargetGroupsRequest
      * @param asyncHandler
@@ -2299,6 +2366,45 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Gets information about the traffic sources for the specified Auto Scaling group.
+     * </p>
+     * 
+     * @param describeTrafficSourcesRequest
+     * @return A Java Future containing the result of the DescribeTrafficSources operation returned by the service.
+     * @sample AmazonAutoScalingAsync.DescribeTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTrafficSourcesResult> describeTrafficSourcesAsync(DescribeTrafficSourcesRequest describeTrafficSourcesRequest);
+
+    /**
+     * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Gets information about the traffic sources for the specified Auto Scaling group.
+     * </p>
+     * 
+     * @param describeTrafficSourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTrafficSources operation returned by the service.
+     * @sample AmazonAutoScalingAsyncHandler.DescribeTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTrafficSourcesResult> describeTrafficSourcesAsync(DescribeTrafficSourcesRequest describeTrafficSourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTrafficSourcesRequest, DescribeTrafficSourcesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about a warm pool and its instances.
      * </p>
      * <p>
@@ -2412,6 +2518,13 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      * the group. When all instances are deregistered, then you can no longer describe the target group using the
      * <a>DescribeLoadBalancerTargetGroups</a> API call. The instances remain running.
      * </p>
+     * <note>
+     * <p>
+     * You can use this operation to detach target groups that were attached by using
+     * <a>AttachLoadBalancerTargetGroups</a>, but not for target groups that were attached by using
+     * <a>AttachTrafficSources</a>.
+     * </p>
+     * </note>
      * 
      * @param detachLoadBalancerTargetGroupsRequest
      * @return A Java Future containing the result of the DetachLoadBalancerTargetGroups operation returned by the
@@ -2432,6 +2545,13 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      * the group. When all instances are deregistered, then you can no longer describe the target group using the
      * <a>DescribeLoadBalancerTargetGroups</a> API call. The instances remain running.
      * </p>
+     * <note>
+     * <p>
+     * You can use this operation to detach target groups that were attached by using
+     * <a>AttachLoadBalancerTargetGroups</a>, but not for target groups that were attached by using
+     * <a>AttachTrafficSources</a>.
+     * </p>
+     * </note>
      * 
      * @param detachLoadBalancerTargetGroupsRequest
      * @param asyncHandler
@@ -2511,6 +2631,45 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      */
     java.util.concurrent.Future<DetachLoadBalancersResult> detachLoadBalancersAsync(
             com.amazonaws.handlers.AsyncHandler<DetachLoadBalancersRequest, DetachLoadBalancersResult> asyncHandler);
+
+    /**
+     * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Detaches one or more traffic sources from the specified Auto Scaling group.
+     * </p>
+     * 
+     * @param detachTrafficSourcesRequest
+     * @return A Java Future containing the result of the DetachTrafficSources operation returned by the service.
+     * @sample AmazonAutoScalingAsync.DetachTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DetachTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetachTrafficSourcesResult> detachTrafficSourcesAsync(DetachTrafficSourcesRequest detachTrafficSourcesRequest);
+
+    /**
+     * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Detaches one or more traffic sources from the specified Auto Scaling group.
+     * </p>
+     * 
+     * @param detachTrafficSourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DetachTrafficSources operation returned by the service.
+     * @sample AmazonAutoScalingAsyncHandler.DetachTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DetachTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetachTrafficSourcesResult> detachTrafficSourcesAsync(DetachTrafficSourcesRequest detachTrafficSourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<DetachTrafficSourcesRequest, DetachTrafficSourcesResult> asyncHandler);
 
     /**
      * <p>

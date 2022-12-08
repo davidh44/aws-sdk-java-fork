@@ -113,6 +113,18 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private java.util.Map<String, PropertyGroupResponse> propertyGroups;
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     */
+    private String syncSource;
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     */
+    private String componentTypeName;
 
     /**
      * <p>
@@ -860,6 +872,86 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @param syncSource
+     *        The syncSource of the sync job, if this entity was created by a sync job.
+     */
+
+    public void setSyncSource(String syncSource) {
+        this.syncSource = syncSource;
+    }
+
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @return The syncSource of the sync job, if this entity was created by a sync job.
+     */
+
+    public String getSyncSource() {
+        return this.syncSource;
+    }
+
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @param syncSource
+     *        The syncSource of the sync job, if this entity was created by a sync job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetComponentTypeResult withSyncSource(String syncSource) {
+        setSyncSource(syncSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     * 
+     * @param componentTypeName
+     *        The component type name.
+     */
+
+    public void setComponentTypeName(String componentTypeName) {
+        this.componentTypeName = componentTypeName;
+    }
+
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     * 
+     * @return The component type name.
+     */
+
+    public String getComponentTypeName() {
+        return this.componentTypeName;
+    }
+
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     * 
+     * @param componentTypeName
+     *        The component type name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetComponentTypeResult withComponentTypeName(String componentTypeName) {
+        setComponentTypeName(componentTypeName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -898,7 +990,11 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getPropertyGroups() != null)
-            sb.append("PropertyGroups: ").append(getPropertyGroups());
+            sb.append("PropertyGroups: ").append(getPropertyGroups()).append(",");
+        if (getSyncSource() != null)
+            sb.append("SyncSource: ").append(getSyncSource()).append(",");
+        if (getComponentTypeName() != null)
+            sb.append("ComponentTypeName: ").append(getComponentTypeName());
         sb.append("}");
         return sb.toString();
     }
@@ -969,6 +1065,14 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getPropertyGroups() != null && other.getPropertyGroups().equals(this.getPropertyGroups()) == false)
             return false;
+        if (other.getSyncSource() == null ^ this.getSyncSource() == null)
+            return false;
+        if (other.getSyncSource() != null && other.getSyncSource().equals(this.getSyncSource()) == false)
+            return false;
+        if (other.getComponentTypeName() == null ^ this.getComponentTypeName() == null)
+            return false;
+        if (other.getComponentTypeName() != null && other.getComponentTypeName().equals(this.getComponentTypeName()) == false)
+            return false;
         return true;
     }
 
@@ -991,6 +1095,8 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getIsSchemaInitialized() == null) ? 0 : getIsSchemaInitialized().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
+        hashCode = prime * hashCode + ((getSyncSource() == null) ? 0 : getSyncSource().hashCode());
+        hashCode = prime * hashCode + ((getComponentTypeName() == null) ? 0 : getComponentTypeName().hashCode());
         return hashCode;
     }
 

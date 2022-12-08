@@ -216,6 +216,39 @@ public class AWSMigrationHubStrategyRecommendationsAsyncClient extends AWSMigrat
     }
 
     @Override
+    public java.util.concurrent.Future<GetLatestAssessmentIdResult> getLatestAssessmentIdAsync(GetLatestAssessmentIdRequest request) {
+
+        return getLatestAssessmentIdAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLatestAssessmentIdResult> getLatestAssessmentIdAsync(final GetLatestAssessmentIdRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetLatestAssessmentIdRequest, GetLatestAssessmentIdResult> asyncHandler) {
+        final GetLatestAssessmentIdRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetLatestAssessmentIdResult>() {
+            @Override
+            public GetLatestAssessmentIdResult call() throws Exception {
+                GetLatestAssessmentIdResult result = null;
+
+                try {
+                    result = executeGetLatestAssessmentId(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPortfolioPreferencesResult> getPortfolioPreferencesAsync(GetPortfolioPreferencesRequest request) {
 
         return getPortfolioPreferencesAsync(request, null);

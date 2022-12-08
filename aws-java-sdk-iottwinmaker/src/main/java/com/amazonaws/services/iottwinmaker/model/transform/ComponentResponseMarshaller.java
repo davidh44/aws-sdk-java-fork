@@ -43,6 +43,8 @@ public class ComponentResponseMarshaller {
             .marshallLocationName("properties").build();
     private static final MarshallingInfo<Map> PROPERTYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("propertyGroups").build();
+    private static final MarshallingInfo<String> SYNCSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("syncSource").build();
 
     private static final ComponentResponseMarshaller instance = new ComponentResponseMarshaller();
 
@@ -67,6 +69,7 @@ public class ComponentResponseMarshaller {
             protocolMarshaller.marshall(componentResponse.getDefinedIn(), DEFINEDIN_BINDING);
             protocolMarshaller.marshall(componentResponse.getProperties(), PROPERTIES_BINDING);
             protocolMarshaller.marshall(componentResponse.getPropertyGroups(), PROPERTYGROUPS_BINDING);
+            protocolMarshaller.marshall(componentResponse.getSyncSource(), SYNCSOURCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

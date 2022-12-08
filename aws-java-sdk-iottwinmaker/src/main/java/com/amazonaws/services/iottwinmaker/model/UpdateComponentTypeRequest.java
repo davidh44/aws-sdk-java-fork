@@ -27,7 +27,7 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the workspace that contains the component type.
+     * The ID of the workspace.
      * </p>
      */
     private String workspaceId;
@@ -75,14 +75,20 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private java.util.Map<String, PropertyGroupRequest> propertyGroups;
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     */
+    private String componentTypeName;
 
     /**
      * <p>
-     * The ID of the workspace that contains the component type.
+     * The ID of the workspace.
      * </p>
      * 
      * @param workspaceId
-     *        The ID of the workspace that contains the component type.
+     *        The ID of the workspace.
      */
 
     public void setWorkspaceId(String workspaceId) {
@@ -91,10 +97,10 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the workspace that contains the component type.
+     * The ID of the workspace.
      * </p>
      * 
-     * @return The ID of the workspace that contains the component type.
+     * @return The ID of the workspace.
      */
 
     public String getWorkspaceId() {
@@ -103,11 +109,11 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the workspace that contains the component type.
+     * The ID of the workspace.
      * </p>
      * 
      * @param workspaceId
-     *        The ID of the workspace that contains the component type.
+     *        The ID of the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -535,6 +541,46 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The component type name.
+     * </p>
+     * 
+     * @param componentTypeName
+     *        The component type name.
+     */
+
+    public void setComponentTypeName(String componentTypeName) {
+        this.componentTypeName = componentTypeName;
+    }
+
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     * 
+     * @return The component type name.
+     */
+
+    public String getComponentTypeName() {
+        return this.componentTypeName;
+    }
+
+    /**
+     * <p>
+     * The component type name.
+     * </p>
+     * 
+     * @param componentTypeName
+     *        The component type name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentTypeRequest withComponentTypeName(String componentTypeName) {
+        setComponentTypeName(componentTypeName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -561,7 +607,9 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
         if (getFunctions() != null)
             sb.append("Functions: ").append(getFunctions()).append(",");
         if (getPropertyGroups() != null)
-            sb.append("PropertyGroups: ").append(getPropertyGroups());
+            sb.append("PropertyGroups: ").append(getPropertyGroups()).append(",");
+        if (getComponentTypeName() != null)
+            sb.append("ComponentTypeName: ").append(getComponentTypeName());
         sb.append("}");
         return sb.toString();
     }
@@ -608,6 +656,10 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getPropertyGroups() != null && other.getPropertyGroups().equals(this.getPropertyGroups()) == false)
             return false;
+        if (other.getComponentTypeName() == null ^ this.getComponentTypeName() == null)
+            return false;
+        if (other.getComponentTypeName() != null && other.getComponentTypeName().equals(this.getComponentTypeName()) == false)
+            return false;
         return true;
     }
 
@@ -624,6 +676,7 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getExtendsFrom() == null) ? 0 : getExtendsFrom().hashCode());
         hashCode = prime * hashCode + ((getFunctions() == null) ? 0 : getFunctions().hashCode());
         hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
+        hashCode = prime * hashCode + ((getComponentTypeName() == null) ? 0 : getComponentTypeName().hashCode());
         return hashCode;
     }
 

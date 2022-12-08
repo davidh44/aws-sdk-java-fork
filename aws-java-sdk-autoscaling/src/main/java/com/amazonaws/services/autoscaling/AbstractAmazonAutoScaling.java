@@ -59,6 +59,11 @@ public class AbstractAmazonAutoScaling implements AmazonAutoScaling {
     }
 
     @Override
+    public AttachTrafficSourcesResult attachTrafficSources(AttachTrafficSourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchDeleteScheduledActionResult batchDeleteScheduledAction(BatchDeleteScheduledActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -304,6 +309,11 @@ public class AbstractAmazonAutoScaling implements AmazonAutoScaling {
     }
 
     @Override
+    public DescribeTrafficSourcesResult describeTrafficSources(DescribeTrafficSourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeWarmPoolResult describeWarmPool(DescribeWarmPoolRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -326,6 +336,11 @@ public class AbstractAmazonAutoScaling implements AmazonAutoScaling {
     @Override
     public DetachLoadBalancersResult detachLoadBalancers() {
         return detachLoadBalancers(new DetachLoadBalancersRequest());
+    }
+
+    @Override
+    public DetachTrafficSourcesResult detachTrafficSources(DetachTrafficSourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override

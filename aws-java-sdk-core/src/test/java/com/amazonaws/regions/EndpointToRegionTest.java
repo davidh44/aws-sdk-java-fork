@@ -180,6 +180,8 @@ public class EndpointToRegionTest {
         assertEquals("cn-north-1", EndpointToRegion.guessRegionNameForEndpoint("bucket.name.with.periods.s3.cn-north-1.amazonaws.com.cn", "s3"));
         assertEquals("cn-north-1", EndpointToRegion.guessRegionNameForEndpoint("cloudsearch.cn-north-1.amazonaws.com.cn", "cloudsearch"));
         assertEquals("cn-north-1", EndpointToRegion.guessRegionNameForEndpoint("domain.cn-north-1.cloudsearch.amazonaws.com.cn", "cloudsearch"));
+        assertEquals("cn-northwest-1", EndpointToRegion.guessRegionNameForEndpoint("global.health.amazonaws.com.cn", "health"));
+        assertEquals("us-east-1", EndpointToRegion.guessRegionNameForEndpoint("global.health.amazonaws.com", "health"));
         assertEquals("us-east-1", guessRegionNameForEndpoint("s3-external-1.amazonaws.com"));
         assertEquals("us-east-1", guessRegionNameForEndpoint("bucket.name.with.periods.s3-external-1.amazonaws.com"));
         assertEquals("us-gov-west-1", guessRegionNameForEndpoint("s3-fips-us-gov-west-1.amazonaws.com"));

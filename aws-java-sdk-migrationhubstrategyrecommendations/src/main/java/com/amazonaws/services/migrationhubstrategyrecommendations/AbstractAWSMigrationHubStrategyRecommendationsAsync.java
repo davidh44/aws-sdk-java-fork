@@ -83,6 +83,19 @@ public class AbstractAWSMigrationHubStrategyRecommendationsAsync extends Abstrac
     }
 
     @Override
+    public java.util.concurrent.Future<GetLatestAssessmentIdResult> getLatestAssessmentIdAsync(GetLatestAssessmentIdRequest request) {
+
+        return getLatestAssessmentIdAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLatestAssessmentIdResult> getLatestAssessmentIdAsync(GetLatestAssessmentIdRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLatestAssessmentIdRequest, GetLatestAssessmentIdResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPortfolioPreferencesResult> getPortfolioPreferencesAsync(GetPortfolioPreferencesRequest request) {
 
         return getPortfolioPreferencesAsync(request, null);

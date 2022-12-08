@@ -90,6 +90,12 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      */
     private java.util.Date updateDateTime;
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     */
+    private String syncSource;
 
     /**
      * <p>
@@ -578,6 +584,46 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @param syncSource
+     *        The syncSource of the sync job, if this entity was created by a sync job.
+     */
+
+    public void setSyncSource(String syncSource) {
+        this.syncSource = syncSource;
+    }
+
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @return The syncSource of the sync job, if this entity was created by a sync job.
+     */
+
+    public String getSyncSource() {
+        return this.syncSource;
+    }
+
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @param syncSource
+     *        The syncSource of the sync job, if this entity was created by a sync job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetEntityResult withSyncSource(String syncSource) {
+        setSyncSource(syncSource);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -610,7 +656,9 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (getCreationDateTime() != null)
             sb.append("CreationDateTime: ").append(getCreationDateTime()).append(",");
         if (getUpdateDateTime() != null)
-            sb.append("UpdateDateTime: ").append(getUpdateDateTime());
+            sb.append("UpdateDateTime: ").append(getUpdateDateTime()).append(",");
+        if (getSyncSource() != null)
+            sb.append("SyncSource: ").append(getSyncSource());
         sb.append("}");
         return sb.toString();
     }
@@ -669,6 +717,10 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
             return false;
         if (other.getUpdateDateTime() != null && other.getUpdateDateTime().equals(this.getUpdateDateTime()) == false)
             return false;
+        if (other.getSyncSource() == null ^ this.getSyncSource() == null)
+            return false;
+        if (other.getSyncSource() != null && other.getSyncSource().equals(this.getSyncSource()) == false)
+            return false;
         return true;
     }
 
@@ -688,6 +740,7 @@ public class GetEntityResult extends com.amazonaws.AmazonWebServiceResult<com.am
         hashCode = prime * hashCode + ((getHasChildEntities() == null) ? 0 : getHasChildEntities().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateDateTime() == null) ? 0 : getUpdateDateTime().hashCode());
+        hashCode = prime * hashCode + ((getSyncSource() == null) ? 0 : getSyncSource().hashCode());
         return hashCode;
     }
 

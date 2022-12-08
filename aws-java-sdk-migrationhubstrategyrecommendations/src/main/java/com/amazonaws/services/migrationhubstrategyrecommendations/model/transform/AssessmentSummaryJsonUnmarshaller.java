@@ -71,6 +71,13 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("listApplicationComponentStatusSummary", targetDepth)) {
+                    context.nextToken();
+                    assessmentSummary.setListApplicationComponentStatusSummary(new ListUnmarshaller<ApplicationComponentStatusSummary>(
+                            ApplicationComponentStatusSummaryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("listApplicationComponentStrategySummary", targetDepth)) {
                     context.nextToken();
                     assessmentSummary.setListApplicationComponentStrategySummary(new ListUnmarshaller<StrategySummary>(StrategySummaryJsonUnmarshaller
@@ -82,6 +89,12 @@ public class AssessmentSummaryJsonUnmarshaller implements Unmarshaller<Assessmen
                     context.nextToken();
                     assessmentSummary.setListApplicationComponentSummary(new ListUnmarshaller<ApplicationComponentSummary>(
                             ApplicationComponentSummaryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("listServerStatusSummary", targetDepth)) {
+                    context.nextToken();
+                    assessmentSummary.setListServerStatusSummary(new ListUnmarshaller<ServerStatusSummary>(ServerStatusSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

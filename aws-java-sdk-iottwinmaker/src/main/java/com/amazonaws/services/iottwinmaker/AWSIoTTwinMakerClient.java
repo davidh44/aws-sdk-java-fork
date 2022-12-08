@@ -464,6 +464,82 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * This action creates a SyncJob.
+     * </p>
+     * 
+     * @param createSyncJobRequest
+     * @return Result of the CreateSyncJob operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ConflictException
+     *         A conflict occurred.
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.CreateSyncJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/CreateSyncJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateSyncJobResult createSyncJob(CreateSyncJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSyncJob(request);
+    }
+
+    @SdkInternalApi
+    final CreateSyncJobResult executeCreateSyncJob(CreateSyncJobRequest createSyncJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSyncJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSyncJobRequest> request = null;
+        Response<CreateSyncJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSyncJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createSyncJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSyncJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSyncJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateSyncJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a workplace.
      * </p>
      * 
@@ -750,6 +826,82 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteSceneResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteSceneResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete the SyncJob.
+     * </p>
+     * 
+     * @param deleteSyncJobRequest
+     * @return Result of the DeleteSyncJob operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ResourceNotFoundException
+     *         The resource wasn't found.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.DeleteSyncJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/DeleteSyncJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteSyncJobResult deleteSyncJob(DeleteSyncJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteSyncJob(request);
+    }
+
+    @SdkInternalApi
+    final DeleteSyncJobResult executeDeleteSyncJob(DeleteSyncJobRequest deleteSyncJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteSyncJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteSyncJobRequest> request = null;
+        Response<DeleteSyncJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteSyncJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteSyncJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteSyncJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteSyncJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteSyncJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -1374,6 +1526,82 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Gets the SyncJob.
+     * </p>
+     * 
+     * @param getSyncJobRequest
+     * @return Result of the GetSyncJob operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ResourceNotFoundException
+     *         The resource wasn't found.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.GetSyncJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetSyncJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetSyncJobResult getSyncJob(GetSyncJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSyncJob(request);
+    }
+
+    @SdkInternalApi
+    final GetSyncJobResult executeGetSyncJob(GetSyncJobRequest getSyncJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSyncJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSyncJobRequest> request = null;
+        Response<GetSyncJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSyncJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSyncJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSyncJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSyncJobResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSyncJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves information about a workspace.
      * </p>
      * 
@@ -1652,6 +1880,154 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListScenesResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListScenesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List all SyncJobs.
+     * </p>
+     * 
+     * @param listSyncJobsRequest
+     * @return Result of the ListSyncJobs operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.ListSyncJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ListSyncJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListSyncJobsResult listSyncJobs(ListSyncJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSyncJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListSyncJobsResult executeListSyncJobs(ListSyncJobsRequest listSyncJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSyncJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSyncJobsRequest> request = null;
+        Response<ListSyncJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSyncJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listSyncJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSyncJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSyncJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListSyncJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the sync resources.
+     * </p>
+     * 
+     * @param listSyncResourcesRequest
+     * @return Result of the ListSyncResources operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.ListSyncResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ListSyncResources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListSyncResourcesResult listSyncResources(ListSyncResourcesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSyncResources(request);
+    }
+
+    @SdkInternalApi
+    final ListSyncResourcesResult executeListSyncResources(ListSyncResourcesRequest listSyncResourcesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSyncResourcesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSyncResourcesRequest> request = null;
+        Response<ListSyncResourcesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSyncResourcesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listSyncResourcesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSyncResources");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSyncResourcesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListSyncResourcesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();

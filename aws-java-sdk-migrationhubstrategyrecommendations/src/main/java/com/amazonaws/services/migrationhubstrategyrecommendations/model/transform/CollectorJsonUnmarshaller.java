@@ -60,6 +60,10 @@ public class CollectorJsonUnmarshaller implements Unmarshaller<Collector, JsonUn
                     context.nextToken();
                     collector.setCollectorVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("configurationSummary", targetDepth)) {
+                    context.nextToken();
+                    collector.setConfigurationSummary(ConfigurationSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("hostName", targetDepth)) {
                     context.nextToken();
                     collector.setHostName(context.getUnmarshaller(String.class).unmarshall(context));

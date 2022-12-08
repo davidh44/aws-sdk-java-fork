@@ -78,6 +78,10 @@ public class ComponentResponseJsonUnmarshaller implements Unmarshaller<Component
                     componentResponse.setPropertyGroups(new MapUnmarshaller<String, ComponentPropertyGroupResponse>(context.getUnmarshaller(String.class),
                             ComponentPropertyGroupResponseJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
+                if (context.testExpression("syncSource", targetDepth)) {
+                    context.nextToken();
+                    componentResponse.setSyncSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

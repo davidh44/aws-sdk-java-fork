@@ -48,6 +48,12 @@ public class GetAssessmentResultJsonUnmarshaller implements Unmarshaller<GetAsse
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("assessmentTargets", targetDepth)) {
+                    context.nextToken();
+                    getAssessmentResult.setAssessmentTargets(new ListUnmarshaller<AssessmentTarget>(AssessmentTargetJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("dataCollectionDetails", targetDepth)) {
                     context.nextToken();
                     getAssessmentResult.setDataCollectionDetails(DataCollectionDetailsJsonUnmarshaller.getInstance().unmarshall(context));

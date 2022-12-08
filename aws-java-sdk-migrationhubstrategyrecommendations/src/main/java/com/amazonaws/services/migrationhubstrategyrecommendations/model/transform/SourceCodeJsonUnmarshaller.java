@@ -52,6 +52,10 @@ public class SourceCodeJsonUnmarshaller implements Unmarshaller<SourceCode, Json
                     context.nextToken();
                     sourceCode.setLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("projectName", targetDepth)) {
+                    context.nextToken();
+                    sourceCode.setProjectName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sourceVersion", targetDepth)) {
                     context.nextToken();
                     sourceCode.setSourceVersion(context.getUnmarshaller(String.class).unmarshall(context));

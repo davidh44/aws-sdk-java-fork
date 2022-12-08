@@ -29,6 +29,8 @@ public class SourceCodeMarshaller {
 
     private static final MarshallingInfo<String> LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("location").build();
+    private static final MarshallingInfo<String> PROJECTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("projectName").build();
     private static final MarshallingInfo<String> SOURCEVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceVersion").build();
     private static final MarshallingInfo<String> VERSIONCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -51,6 +53,7 @@ public class SourceCodeMarshaller {
 
         try {
             protocolMarshaller.marshall(sourceCode.getLocation(), LOCATION_BINDING);
+            protocolMarshaller.marshall(sourceCode.getProjectName(), PROJECTNAME_BINDING);
             protocolMarshaller.marshall(sourceCode.getSourceVersion(), SOURCEVERSION_BINDING);
             protocolMarshaller.marshall(sourceCode.getVersionControl(), VERSIONCONTROL_BINDING);
         } catch (Exception e) {

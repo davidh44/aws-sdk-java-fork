@@ -49,6 +49,8 @@ public class PropertyDefinitionResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultValue").build();
     private static final MarshallingInfo<Map> CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("configuration").build();
+    private static final MarshallingInfo<String> DISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("displayName").build();
 
     private static final PropertyDefinitionResponseMarshaller instance = new PropertyDefinitionResponseMarshaller();
 
@@ -76,6 +78,7 @@ public class PropertyDefinitionResponseMarshaller {
             protocolMarshaller.marshall(propertyDefinitionResponse.getIsInherited(), ISINHERITED_BINDING);
             protocolMarshaller.marshall(propertyDefinitionResponse.getDefaultValue(), DEFAULTVALUE_BINDING);
             protocolMarshaller.marshall(propertyDefinitionResponse.getConfiguration(), CONFIGURATION_BINDING);
+            protocolMarshaller.marshall(propertyDefinitionResponse.getDisplayName(), DISPLAYNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

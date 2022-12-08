@@ -45,6 +45,8 @@ public class UpdateComponentTypeRequestMarshaller {
             .marshallLocationName("functions").build();
     private static final MarshallingInfo<Map> PROPERTYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("propertyGroups").build();
+    private static final MarshallingInfo<String> COMPONENTTYPENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentTypeName").build();
 
     private static final UpdateComponentTypeRequestMarshaller instance = new UpdateComponentTypeRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class UpdateComponentTypeRequestMarshaller {
             protocolMarshaller.marshall(updateComponentTypeRequest.getExtendsFrom(), EXTENDSFROM_BINDING);
             protocolMarshaller.marshall(updateComponentTypeRequest.getFunctions(), FUNCTIONS_BINDING);
             protocolMarshaller.marshall(updateComponentTypeRequest.getPropertyGroups(), PROPERTYGROUPS_BINDING);
+            protocolMarshaller.marshall(updateComponentTypeRequest.getComponentTypeName(), COMPONENTTYPENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

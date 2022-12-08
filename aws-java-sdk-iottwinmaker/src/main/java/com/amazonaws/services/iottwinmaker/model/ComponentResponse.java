@@ -71,6 +71,12 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private java.util.Map<String, ComponentPropertyGroupResponse> propertyGroups;
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     */
+    private String syncSource;
 
     /**
      * <p>
@@ -415,6 +421,46 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @param syncSource
+     *        The syncSource of the sync job, if this entity was created by a sync job.
+     */
+
+    public void setSyncSource(String syncSource) {
+        this.syncSource = syncSource;
+    }
+
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @return The syncSource of the sync job, if this entity was created by a sync job.
+     */
+
+    public String getSyncSource() {
+        return this.syncSource;
+    }
+
+    /**
+     * <p>
+     * The syncSource of the sync job, if this entity was created by a sync job.
+     * </p>
+     * 
+     * @param syncSource
+     *        The syncSource of the sync job, if this entity was created by a sync job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse withSyncSource(String syncSource) {
+        setSyncSource(syncSource);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -439,7 +485,9 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
         if (getProperties() != null)
             sb.append("Properties: ").append(getProperties()).append(",");
         if (getPropertyGroups() != null)
-            sb.append("PropertyGroups: ").append(getPropertyGroups());
+            sb.append("PropertyGroups: ").append(getPropertyGroups()).append(",");
+        if (getSyncSource() != null)
+            sb.append("SyncSource: ").append(getSyncSource());
         sb.append("}");
         return sb.toString();
     }
@@ -482,6 +530,10 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getPropertyGroups() != null && other.getPropertyGroups().equals(this.getPropertyGroups()) == false)
             return false;
+        if (other.getSyncSource() == null ^ this.getSyncSource() == null)
+            return false;
+        if (other.getSyncSource() != null && other.getSyncSource().equals(this.getSyncSource()) == false)
+            return false;
         return true;
     }
 
@@ -497,6 +549,7 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getDefinedIn() == null) ? 0 : getDefinedIn().hashCode());
         hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
         hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
+        hashCode = prime * hashCode + ((getSyncSource() == null) ? 0 : getSyncSource().hashCode());
         return hashCode;
     }
 

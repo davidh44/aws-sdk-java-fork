@@ -234,6 +234,35 @@ public interface AmazonAutoScaling {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Attaches one or more traffic sources to the specified Auto Scaling group.
+     * </p>
+     * <p>
+     * To describe the traffic sources for an Auto Scaling group, call the <a>DescribeTrafficSources</a> API. To detach
+     * a traffic source from the Auto Scaling group, call the <a>DetachTrafficSources</a> API.
+     * </p>
+     * <p>
+     * This operation is additive and does not detach existing traffic sources from the Auto Scaling group.
+     * </p>
+     * 
+     * @param attachTrafficSourcesRequest
+     * @return Result of the AttachTrafficSources operation returned by the service.
+     * @throws ResourceContentionException
+     *         You already have a pending update to an Amazon EC2 Auto Scaling resource (for example, an Auto Scaling
+     *         group, instance, or load balancer).
+     * @throws ServiceLinkedRoleFailureException
+     *         The service-linked role is not yet ready for use.
+     * @sample AmazonAutoScaling.AttachTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/AttachTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AttachTrafficSourcesResult attachTrafficSources(AttachTrafficSourcesRequest attachTrafficSourcesRequest);
+
+    /**
+     * <p>
      * Deletes one or more scheduled actions for the specified Auto Scaling group.
      * </p>
      * 
@@ -1009,6 +1038,13 @@ public interface AmazonAutoScaling {
      * Balancing to distribute traffic across the instances in your Auto Scaling group</a> in the <i>Amazon EC2 Auto
      * Scaling User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * You can use this operation to describe target groups that were attached by using
+     * <a>AttachLoadBalancerTargetGroups</a>, but not for target groups that were attached by using
+     * <a>AttachTrafficSources</a>.
+     * </p>
+     * </note>
      * 
      * @param describeLoadBalancerTargetGroupsRequest
      * @return Result of the DescribeLoadBalancerTargetGroups operation returned by the service.
@@ -1304,6 +1340,28 @@ public interface AmazonAutoScaling {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Gets information about the traffic sources for the specified Auto Scaling group.
+     * </p>
+     * 
+     * @param describeTrafficSourcesRequest
+     * @return Result of the DescribeTrafficSources operation returned by the service.
+     * @throws ResourceContentionException
+     *         You already have a pending update to an Amazon EC2 Auto Scaling resource (for example, an Auto Scaling
+     *         group, instance, or load balancer).
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value is not valid.
+     * @sample AmazonAutoScaling.DescribeTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTrafficSourcesResult describeTrafficSources(DescribeTrafficSourcesRequest describeTrafficSourcesRequest);
+
+    /**
+     * <p>
      * Gets information about a warm pool and its instances.
      * </p>
      * <p>
@@ -1372,6 +1430,13 @@ public interface AmazonAutoScaling {
      * the group. When all instances are deregistered, then you can no longer describe the target group using the
      * <a>DescribeLoadBalancerTargetGroups</a> API call. The instances remain running.
      * </p>
+     * <note>
+     * <p>
+     * You can use this operation to detach target groups that were attached by using
+     * <a>AttachLoadBalancerTargetGroups</a>, but not for target groups that were attached by using
+     * <a>AttachTrafficSources</a>.
+     * </p>
+     * </note>
      * 
      * @param detachLoadBalancerTargetGroupsRequest
      * @return Result of the DetachLoadBalancerTargetGroups operation returned by the service.
@@ -1415,6 +1480,26 @@ public interface AmazonAutoScaling {
      * @see #detachLoadBalancers(DetachLoadBalancersRequest)
      */
     DetachLoadBalancersResult detachLoadBalancers();
+
+    /**
+     * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for
+     * production workloads. This API is also subject to change.</b>
+     * </p>
+     * <p>
+     * Detaches one or more traffic sources from the specified Auto Scaling group.
+     * </p>
+     * 
+     * @param detachTrafficSourcesRequest
+     * @return Result of the DetachTrafficSources operation returned by the service.
+     * @throws ResourceContentionException
+     *         You already have a pending update to an Amazon EC2 Auto Scaling resource (for example, an Auto Scaling
+     *         group, instance, or load balancer).
+     * @sample AmazonAutoScaling.DetachTrafficSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DetachTrafficSources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DetachTrafficSourcesResult detachTrafficSources(DetachTrafficSourcesRequest detachTrafficSourcesRequest);
 
     /**
      * <p>

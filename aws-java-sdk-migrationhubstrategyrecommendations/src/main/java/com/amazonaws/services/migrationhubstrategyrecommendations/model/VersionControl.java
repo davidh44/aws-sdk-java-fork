@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum VersionControl {
 
     GITHUB("GITHUB"),
-    GITHUB_ENTERPRISE("GITHUB_ENTERPRISE");
+    GITHUB_ENTERPRISE("GITHUB_ENTERPRISE"),
+    AZURE_DEVOPS_GIT("AZURE_DEVOPS_GIT");
 
     private String value;
 

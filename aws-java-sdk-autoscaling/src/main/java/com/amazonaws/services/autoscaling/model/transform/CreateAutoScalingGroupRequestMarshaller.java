@@ -721,6 +721,24 @@ public class CreateAutoScalingGroupRequestMarshaller implements Marshaller<Reque
             request.addParameter("DefaultInstanceWarmup", StringUtils.fromInteger(createAutoScalingGroupRequest.getDefaultInstanceWarmup()));
         }
 
+        if (!createAutoScalingGroupRequest.getTrafficSources().isEmpty()
+                || !((com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier>) createAutoScalingGroupRequest.getTrafficSources()).isAutoConstruct()) {
+            com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier> trafficSourcesList = (com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier>) createAutoScalingGroupRequest
+                    .getTrafficSources();
+            int trafficSourcesListIndex = 1;
+
+            for (TrafficSourceIdentifier trafficSourcesListValue : trafficSourcesList) {
+                if (trafficSourcesListValue != null) {
+
+                    if (trafficSourcesListValue.getIdentifier() != null) {
+                        request.addParameter("TrafficSources.member." + trafficSourcesListIndex + ".Identifier",
+                                StringUtils.fromString(trafficSourcesListValue.getIdentifier()));
+                    }
+                }
+                trafficSourcesListIndex++;
+            }
+        }
+
         return request;
     }
 

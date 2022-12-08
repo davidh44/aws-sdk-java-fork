@@ -32,7 +32,8 @@ public enum TargetDestination {
     AmazonRelationalDatabaseServiceOnPostgreSQL("Amazon Relational Database Service on PostgreSQL"),
     AmazonDocumentDB("Amazon DocumentDB"),
     AmazonDynamoDB("Amazon DynamoDB"),
-    AmazonRelationalDatabaseService("Amazon Relational Database Service");
+    AmazonRelationalDatabaseService("Amazon Relational Database Service"),
+    BabelfishForAuroraPostgreSQL("Babelfish for Aurora PostgreSQL");
 
     private String value;
 

@@ -211,6 +211,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateSyncJobResult> createSyncJobAsync(CreateSyncJobRequest request) {
+
+        return createSyncJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSyncJobResult> createSyncJobAsync(final CreateSyncJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSyncJobRequest, CreateSyncJobResult> asyncHandler) {
+        final CreateSyncJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSyncJobResult>() {
+            @Override
+            public CreateSyncJobResult call() throws Exception {
+                CreateSyncJobResult result = null;
+
+                try {
+                    result = executeCreateSyncJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateWorkspaceResult> createWorkspaceAsync(CreateWorkspaceRequest request) {
 
         return createWorkspaceAsync(request, null);
@@ -327,6 +360,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
 
                 try {
                     result = executeDeleteScene(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSyncJobResult> deleteSyncJobAsync(DeleteSyncJobRequest request) {
+
+        return deleteSyncJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSyncJobResult> deleteSyncJobAsync(final DeleteSyncJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteSyncJobRequest, DeleteSyncJobResult> asyncHandler) {
+        final DeleteSyncJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteSyncJobResult>() {
+            @Override
+            public DeleteSyncJobResult call() throws Exception {
+                DeleteSyncJobResult result = null;
+
+                try {
+                    result = executeDeleteSyncJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -607,6 +673,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetSyncJobResult> getSyncJobAsync(GetSyncJobRequest request) {
+
+        return getSyncJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSyncJobResult> getSyncJobAsync(final GetSyncJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSyncJobRequest, GetSyncJobResult> asyncHandler) {
+        final GetSyncJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSyncJobResult>() {
+            @Override
+            public GetSyncJobResult call() throws Exception {
+                GetSyncJobResult result = null;
+
+                try {
+                    result = executeGetSyncJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetWorkspaceResult> getWorkspaceAsync(GetWorkspaceRequest request) {
 
         return getWorkspaceAsync(request, null);
@@ -723,6 +822,72 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
 
                 try {
                     result = executeListScenes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSyncJobsResult> listSyncJobsAsync(ListSyncJobsRequest request) {
+
+        return listSyncJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSyncJobsResult> listSyncJobsAsync(final ListSyncJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSyncJobsRequest, ListSyncJobsResult> asyncHandler) {
+        final ListSyncJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSyncJobsResult>() {
+            @Override
+            public ListSyncJobsResult call() throws Exception {
+                ListSyncJobsResult result = null;
+
+                try {
+                    result = executeListSyncJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSyncResourcesResult> listSyncResourcesAsync(ListSyncResourcesRequest request) {
+
+        return listSyncResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSyncResourcesResult> listSyncResourcesAsync(final ListSyncResourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSyncResourcesRequest, ListSyncResourcesResult> asyncHandler) {
+        final ListSyncResourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSyncResourcesResult>() {
+            @Override
+            public ListSyncResourcesResult call() throws Exception {
+                ListSyncResourcesResult result = null;
+
+                try {
+                    result = executeListSyncResources(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

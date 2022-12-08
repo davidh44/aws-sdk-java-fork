@@ -74,6 +74,17 @@ public class CustomizedMetricSpecificationStaxUnmarshaller implements Unmarshall
                     customizedMetricSpecification.setUnit(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Metrics", targetDepth)) {
+                    customizedMetricSpecification.withMetrics(new ArrayList<TargetTrackingMetricDataQuery>());
+                    continue;
+                }
+
+                if (context.testExpression("Metrics/member", targetDepth)) {
+                    customizedMetricSpecification.withMetrics(TargetTrackingMetricDataQueryStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return customizedMetricSpecification;

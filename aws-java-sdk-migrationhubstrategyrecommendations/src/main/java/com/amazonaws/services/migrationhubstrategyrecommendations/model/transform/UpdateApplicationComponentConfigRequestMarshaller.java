@@ -28,8 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateApplicationComponentConfigRequestMarshaller {
 
+    private static final MarshallingInfo<String> APPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("appType").build();
     private static final MarshallingInfo<String> APPLICATIONCOMPONENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applicationComponentId").build();
+    private static final MarshallingInfo<Boolean> CONFIGUREONLY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configureOnly").build();
     private static final MarshallingInfo<String> INCLUSIONSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inclusionStatus").build();
     private static final MarshallingInfo<String> SECRETSMANAGERKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -55,7 +59,9 @@ public class UpdateApplicationComponentConfigRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateApplicationComponentConfigRequest.getAppType(), APPTYPE_BINDING);
             protocolMarshaller.marshall(updateApplicationComponentConfigRequest.getApplicationComponentId(), APPLICATIONCOMPONENTID_BINDING);
+            protocolMarshaller.marshall(updateApplicationComponentConfigRequest.getConfigureOnly(), CONFIGUREONLY_BINDING);
             protocolMarshaller.marshall(updateApplicationComponentConfigRequest.getInclusionStatus(), INCLUSIONSTATUS_BINDING);
             protocolMarshaller.marshall(updateApplicationComponentConfigRequest.getSecretsManagerKey(), SECRETSMANAGERKEY_BINDING);
             protocolMarshaller.marshall(updateApplicationComponentConfigRequest.getSourceCodeList(), SOURCECODELIST_BINDING);

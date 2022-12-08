@@ -88,6 +88,12 @@ public class PropertyDefinitionResponse implements Serializable, Cloneable, Stru
      * </p>
      */
     private java.util.Map<String, String> configuration;
+    /**
+     * <p>
+     * A friendly name for the property.
+     * </p>
+     */
+    private String displayName;
 
     /**
      * <p>
@@ -602,6 +608,46 @@ public class PropertyDefinitionResponse implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * A friendly name for the property.
+     * </p>
+     * 
+     * @param displayName
+     *        A friendly name for the property.
+     */
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
+    /**
+     * <p>
+     * A friendly name for the property.
+     * </p>
+     * 
+     * @return A friendly name for the property.
+     */
+
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    /**
+     * <p>
+     * A friendly name for the property.
+     * </p>
+     * 
+     * @param displayName
+     *        A friendly name for the property.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PropertyDefinitionResponse withDisplayName(String displayName) {
+        setDisplayName(displayName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -632,7 +678,9 @@ public class PropertyDefinitionResponse implements Serializable, Cloneable, Stru
         if (getDefaultValue() != null)
             sb.append("DefaultValue: ").append(getDefaultValue()).append(",");
         if (getConfiguration() != null)
-            sb.append("Configuration: ").append(getConfiguration());
+            sb.append("Configuration: ").append(getConfiguration()).append(",");
+        if (getDisplayName() != null)
+            sb.append("DisplayName: ").append(getDisplayName());
         sb.append("}");
         return sb.toString();
     }
@@ -687,6 +735,10 @@ public class PropertyDefinitionResponse implements Serializable, Cloneable, Stru
             return false;
         if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
             return false;
+        if (other.getDisplayName() == null ^ this.getDisplayName() == null)
+            return false;
+        if (other.getDisplayName() != null && other.getDisplayName().equals(this.getDisplayName()) == false)
+            return false;
         return true;
     }
 
@@ -705,6 +757,7 @@ public class PropertyDefinitionResponse implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getIsInherited() == null) ? 0 : getIsInherited().hashCode());
         hashCode = prime * hashCode + ((getDefaultValue() == null) ? 0 : getDefaultValue().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDisplayName() == null) ? 0 : getDisplayName().hashCode());
         return hashCode;
     }
 

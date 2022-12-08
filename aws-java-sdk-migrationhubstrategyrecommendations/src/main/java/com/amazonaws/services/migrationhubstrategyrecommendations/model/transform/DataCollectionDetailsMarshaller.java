@@ -39,6 +39,8 @@ public class DataCollectionDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> STATUSMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("statusMessage").build();
     private static final MarshallingInfo<Integer> SUCCESS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("success").build();
 
@@ -64,6 +66,7 @@ public class DataCollectionDetailsMarshaller {
             protocolMarshaller.marshall(dataCollectionDetails.getServers(), SERVERS_BINDING);
             protocolMarshaller.marshall(dataCollectionDetails.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(dataCollectionDetails.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(dataCollectionDetails.getStatusMessage(), STATUSMESSAGE_BINDING);
             protocolMarshaller.marshall(dataCollectionDetails.getSuccess(), SUCCESS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

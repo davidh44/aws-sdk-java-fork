@@ -48,6 +48,11 @@ public class AbstractAWSMigrationHubStrategyRecommendations implements AWSMigrat
     }
 
     @Override
+    public GetLatestAssessmentIdResult getLatestAssessmentId(GetLatestAssessmentIdRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPortfolioPreferencesResult getPortfolioPreferences(GetPortfolioPreferencesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

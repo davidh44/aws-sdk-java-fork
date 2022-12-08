@@ -48,6 +48,10 @@ public class GetPortfolioPreferencesResultJsonUnmarshaller implements Unmarshall
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("applicationMode", targetDepth)) {
+                    context.nextToken();
+                    getPortfolioPreferencesResult.setApplicationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("applicationPreferences", targetDepth)) {
                     context.nextToken();
                     getPortfolioPreferencesResult.setApplicationPreferences(ApplicationPreferencesJsonUnmarshaller.getInstance().unmarshall(context));

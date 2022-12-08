@@ -38,10 +38,14 @@ public class AssessmentSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastAnalyzedTimestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> LISTANTIPATTERNSEVERITYSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("listAntipatternSeveritySummary").build();
+    private static final MarshallingInfo<List> LISTAPPLICATIONCOMPONENTSTATUSSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("listApplicationComponentStatusSummary").build();
     private static final MarshallingInfo<List> LISTAPPLICATIONCOMPONENTSTRATEGYSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("listApplicationComponentStrategySummary").build();
     private static final MarshallingInfo<List> LISTAPPLICATIONCOMPONENTSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("listApplicationComponentSummary").build();
+    private static final MarshallingInfo<List> LISTSERVERSTATUSSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("listServerStatusSummary").build();
     private static final MarshallingInfo<List> LISTSERVERSTRATEGYSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("listServerStrategySummary").build();
     private static final MarshallingInfo<List> LISTSERVERSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -68,8 +72,10 @@ public class AssessmentSummaryMarshaller {
             protocolMarshaller.marshall(assessmentSummary.getAntipatternReportStatusMessage(), ANTIPATTERNREPORTSTATUSMESSAGE_BINDING);
             protocolMarshaller.marshall(assessmentSummary.getLastAnalyzedTimestamp(), LASTANALYZEDTIMESTAMP_BINDING);
             protocolMarshaller.marshall(assessmentSummary.getListAntipatternSeveritySummary(), LISTANTIPATTERNSEVERITYSUMMARY_BINDING);
+            protocolMarshaller.marshall(assessmentSummary.getListApplicationComponentStatusSummary(), LISTAPPLICATIONCOMPONENTSTATUSSUMMARY_BINDING);
             protocolMarshaller.marshall(assessmentSummary.getListApplicationComponentStrategySummary(), LISTAPPLICATIONCOMPONENTSTRATEGYSUMMARY_BINDING);
             protocolMarshaller.marshall(assessmentSummary.getListApplicationComponentSummary(), LISTAPPLICATIONCOMPONENTSUMMARY_BINDING);
+            protocolMarshaller.marshall(assessmentSummary.getListServerStatusSummary(), LISTSERVERSTATUSSUMMARY_BINDING);
             protocolMarshaller.marshall(assessmentSummary.getListServerStrategySummary(), LISTSERVERSTRATEGYSUMMARY_BINDING);
             protocolMarshaller.marshall(assessmentSummary.getListServerSummary(), LISTSERVERSUMMARY_BINDING);
         } catch (Exception e) {

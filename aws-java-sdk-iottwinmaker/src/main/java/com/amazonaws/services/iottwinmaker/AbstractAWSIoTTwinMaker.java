@@ -48,6 +48,11 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
     }
 
     @Override
+    public CreateSyncJobResult createSyncJob(CreateSyncJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateWorkspaceResult createWorkspace(CreateWorkspaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
 
     @Override
     public DeleteSceneResult deleteScene(DeleteSceneRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteSyncJobResult deleteSyncJob(DeleteSyncJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -108,6 +118,11 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
     }
 
     @Override
+    public GetSyncJobResult getSyncJob(GetSyncJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetWorkspaceResult getWorkspace(GetWorkspaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -124,6 +139,16 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
 
     @Override
     public ListScenesResult listScenes(ListScenesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSyncJobsResult listSyncJobs(ListSyncJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSyncResourcesResult listSyncResources(ListSyncResourcesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

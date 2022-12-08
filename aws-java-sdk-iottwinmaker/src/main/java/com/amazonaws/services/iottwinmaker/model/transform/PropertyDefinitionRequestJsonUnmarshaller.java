@@ -77,6 +77,10 @@ public class PropertyDefinitionRequestJsonUnmarshaller implements Unmarshaller<P
                     propertyDefinitionRequest.setConfiguration(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("displayName", targetDepth)) {
+                    context.nextToken();
+                    propertyDefinitionRequest.setDisplayName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

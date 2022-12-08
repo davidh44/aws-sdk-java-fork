@@ -142,6 +142,31 @@ public interface AWSIoTTwinMaker {
 
     /**
      * <p>
+     * This action creates a SyncJob.
+     * </p>
+     * 
+     * @param createSyncJobRequest
+     * @return Result of the CreateSyncJob operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ConflictException
+     *         A conflict occurred.
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.CreateSyncJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/CreateSyncJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateSyncJobResult createSyncJob(CreateSyncJobRequest createSyncJobRequest);
+
+    /**
+     * <p>
      * Creates a workplace.
      * </p>
      * 
@@ -233,6 +258,31 @@ public interface AWSIoTTwinMaker {
      *      Documentation</a>
      */
     DeleteSceneResult deleteScene(DeleteSceneRequest deleteSceneRequest);
+
+    /**
+     * <p>
+     * Delete the SyncJob.
+     * </p>
+     * 
+     * @param deleteSyncJobRequest
+     * @return Result of the DeleteSyncJob operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ResourceNotFoundException
+     *         The resource wasn't found.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.DeleteSyncJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/DeleteSyncJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteSyncJobResult deleteSyncJob(DeleteSyncJobRequest deleteSyncJobRequest);
 
     /**
      * <p>
@@ -438,6 +488,31 @@ public interface AWSIoTTwinMaker {
 
     /**
      * <p>
+     * Gets the SyncJob.
+     * </p>
+     * 
+     * @param getSyncJobRequest
+     * @return Result of the GetSyncJob operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ResourceNotFoundException
+     *         The resource wasn't found.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.GetSyncJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetSyncJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSyncJobResult getSyncJob(GetSyncJobRequest getSyncJobRequest);
+
+    /**
+     * <p>
      * Retrieves information about a workspace.
      * </p>
      * 
@@ -521,6 +596,52 @@ public interface AWSIoTTwinMaker {
      *      Documentation</a>
      */
     ListScenesResult listScenes(ListScenesRequest listScenesRequest);
+
+    /**
+     * <p>
+     * List all SyncJobs.
+     * </p>
+     * 
+     * @param listSyncJobsRequest
+     * @return Result of the ListSyncJobs operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.ListSyncJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ListSyncJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListSyncJobsResult listSyncJobs(ListSyncJobsRequest listSyncJobsRequest);
+
+    /**
+     * <p>
+     * Lists the sync resources.
+     * </p>
+     * 
+     * @param listSyncResourcesRequest
+     * @return Result of the ListSyncResources operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.ListSyncResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ListSyncResources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListSyncResourcesResult listSyncResources(ListSyncResourcesRequest listSyncResourcesRequest);
 
     /**
      * <p>
