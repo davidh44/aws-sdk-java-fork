@@ -48,6 +48,10 @@ public class StreamConfigurationJsonUnmarshaller implements Unmarshaller<StreamC
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("automaticTerminationMode", targetDepth)) {
+                    context.nextToken();
+                    streamConfiguration.setAutomaticTerminationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("clipboardMode", targetDepth)) {
                     context.nextToken();
                     streamConfiguration.setClipboardMode(context.getUnmarshaller(String.class).unmarshall(context));
@@ -66,6 +70,14 @@ public class StreamConfigurationJsonUnmarshaller implements Unmarshaller<StreamC
                     context.nextToken();
                     streamConfiguration.setMaxStoppedSessionLengthInMinutes(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("sessionBackup", targetDepth)) {
+                    context.nextToken();
+                    streamConfiguration.setSessionBackup(StreamConfigurationSessionBackupJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("sessionPersistenceMode", targetDepth)) {
+                    context.nextToken();
+                    streamConfiguration.setSessionPersistenceMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sessionStorage", targetDepth)) {
                     context.nextToken();
                     streamConfiguration.setSessionStorage(StreamConfigurationSessionStorageJsonUnmarshaller.getInstance().unmarshall(context));
@@ -75,6 +87,10 @@ public class StreamConfigurationJsonUnmarshaller implements Unmarshaller<StreamC
                     streamConfiguration.setStreamingImageIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("volumeConfiguration", targetDepth)) {
+                    context.nextToken();
+                    streamConfiguration.setVolumeConfiguration(VolumeConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

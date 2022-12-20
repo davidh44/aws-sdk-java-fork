@@ -110,6 +110,14 @@ public class DescribeImagesRequestMarshaller implements Marshaller<Request<Descr
             request.addParameter("IncludeDeprecated", StringUtils.fromBoolean(describeImagesRequest.getIncludeDeprecated()));
         }
 
+        if (describeImagesRequest.getMaxResults() != null) {
+            request.addParameter("MaxResults", StringUtils.fromInteger(describeImagesRequest.getMaxResults()));
+        }
+
+        if (describeImagesRequest.getNextToken() != null) {
+            request.addParameter("NextToken", StringUtils.fromString(describeImagesRequest.getNextToken()));
+        }
+
         return request;
     }
 

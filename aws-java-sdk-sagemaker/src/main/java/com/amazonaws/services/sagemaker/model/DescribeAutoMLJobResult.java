@@ -104,7 +104,9 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
     private java.util.List<AutoMLPartialFailureReason> partialFailureReasons;
     /**
      * <p>
-     * Returns the job's best <code>AutoMLCandidate</code>.
+     * The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">InferenceLatency</a> for
+     * an experiment.
      * </p>
      */
     private AutoMLCandidate bestCandidate;
@@ -761,11 +763,15 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the job's best <code>AutoMLCandidate</code>.
+     * The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">InferenceLatency</a> for
+     * an experiment.
      * </p>
      * 
      * @param bestCandidate
-     *        Returns the job's best <code>AutoMLCandidate</code>.
+     *        The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest
+     *        <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">
+     *        InferenceLatency</a> for an experiment.
      */
 
     public void setBestCandidate(AutoMLCandidate bestCandidate) {
@@ -774,10 +780,14 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the job's best <code>AutoMLCandidate</code>.
+     * The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">InferenceLatency</a> for
+     * an experiment.
      * </p>
      * 
-     * @return Returns the job's best <code>AutoMLCandidate</code>.
+     * @return The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest
+     *         <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">
+     *         InferenceLatency</a> for an experiment.
      */
 
     public AutoMLCandidate getBestCandidate() {
@@ -786,11 +796,15 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the job's best <code>AutoMLCandidate</code>.
+     * The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">InferenceLatency</a> for
+     * an experiment.
      * </p>
      * 
      * @param bestCandidate
-     *        Returns the job's best <code>AutoMLCandidate</code>.
+     *        The best model candidate selected by SageMaker Autopilot using both the best objective metric and lowest
+     *        <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-metrics-validation.html">
+     *        InferenceLatency</a> for an experiment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1673,10 +1673,16 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Creates an SageMaker <i>experiment</i>. An experiment is a collection of <i>trials</i> that are observed,
-     * compared and evaluated as a group. A trial is a set of steps, called <i>trial components</i>, that produce a
-     * machine learning model.
+     * Creates a SageMaker <i>experiment</i>. An experiment is a collection of <i>trials</i> that are observed, compared
+     * and evaluated as a group. A trial is a set of steps, called <i>trial components</i>, that produce a machine
+     * learning model.
      * </p>
+     * <note>
+     * <p>
+     * In the Studio UI, trials are referred to as <i>run groups</i> and trial components are referred to as
+     * <i>runs</i>.
+     * </p>
+     * </note>
      * <p>
      * The goal of an experiment is to determine the components that produce the best model. Multiple trials are
      * performed, each one isolating and measuring the impact of a change to one or more inputs, while keeping the

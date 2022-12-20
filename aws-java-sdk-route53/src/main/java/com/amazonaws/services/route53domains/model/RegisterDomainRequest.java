@@ -90,8 +90,8 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
     private Integer durationInYears;
     /**
      * <p>
-     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>).
-     * Autorenewal only takes effect after the account is charged.
+     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>). Auto
+     * renewal only takes effect after the account is charged.
      * </p>
      * <p>
      * Default: <code>true</code>
@@ -539,8 +539,8 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>).
-     * Autorenewal only takes effect after the account is charged.
+     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>). Auto
+     * renewal only takes effect after the account is charged.
      * </p>
      * <p>
      * Default: <code>true</code>
@@ -548,7 +548,7 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param autoRenew
      *        Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>
-     *        ). Autorenewal only takes effect after the account is charged.</p>
+     *        ). Auto renewal only takes effect after the account is charged.</p>
      *        <p>
      *        Default: <code>true</code>
      */
@@ -559,15 +559,15 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>).
-     * Autorenewal only takes effect after the account is charged.
+     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>). Auto
+     * renewal only takes effect after the account is charged.
      * </p>
      * <p>
      * Default: <code>true</code>
      * </p>
      * 
      * @return Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>
-     *         ). Autorenewal only takes effect after the account is charged.</p>
+     *         ). Auto renewal only takes effect after the account is charged.</p>
      *         <p>
      *         Default: <code>true</code>
      */
@@ -578,8 +578,8 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>).
-     * Autorenewal only takes effect after the account is charged.
+     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>). Auto
+     * renewal only takes effect after the account is charged.
      * </p>
      * <p>
      * Default: <code>true</code>
@@ -587,7 +587,7 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param autoRenew
      *        Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>
-     *        ). Autorenewal only takes effect after the account is charged.</p>
+     *        ). Auto renewal only takes effect after the account is charged.</p>
      *        <p>
      *        Default: <code>true</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -600,15 +600,15 @@ public class RegisterDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>).
-     * Autorenewal only takes effect after the account is charged.
+     * Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>). Auto
+     * renewal only takes effect after the account is charged.
      * </p>
      * <p>
      * Default: <code>true</code>
      * </p>
      * 
      * @return Indicates whether the domain will be automatically renewed (<code>true</code>) or not (<code>false</code>
-     *         ). Autorenewal only takes effect after the account is charged.</p>
+     *         ). Auto renewal only takes effect after the account is charged.</p>
      *         <p>
      *         Default: <code>true</code>
      */

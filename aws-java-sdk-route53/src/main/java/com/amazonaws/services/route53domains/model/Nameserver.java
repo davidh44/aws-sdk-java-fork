@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Nameserver includes the following elements.
+ * Name server includes the following elements.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53domains-2014-05-15/Nameserver" target="_top">AWS API

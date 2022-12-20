@@ -81,6 +81,10 @@ public class JobDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksProperties").build();
     private static final MarshallingInfo<List> EKSATTEMPTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("eksAttempts").build();
+    private static final MarshallingInfo<Boolean> ISCANCELLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isCancelled").build();
+    private static final MarshallingInfo<Boolean> ISTERMINATED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isTerminated").build();
 
     private static final JobDetailMarshaller instance = new JobDetailMarshaller();
 
@@ -124,6 +128,8 @@ public class JobDetailMarshaller {
             protocolMarshaller.marshall(jobDetail.getPlatformCapabilities(), PLATFORMCAPABILITIES_BINDING);
             protocolMarshaller.marshall(jobDetail.getEksProperties(), EKSPROPERTIES_BINDING);
             protocolMarshaller.marshall(jobDetail.getEksAttempts(), EKSATTEMPTS_BINDING);
+            protocolMarshaller.marshall(jobDetail.getIsCancelled(), ISCANCELLED_BINDING);
+            protocolMarshaller.marshall(jobDetail.getIsTerminated(), ISTERMINATED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

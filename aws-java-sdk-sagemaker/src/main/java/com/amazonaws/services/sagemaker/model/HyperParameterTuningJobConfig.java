@@ -61,7 +61,7 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
     /**
      * <p>
      * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against .your chosen objective metric.
+     * to find the optimal configuration for the highest model performance against your chosen objective metric.
      * </p>
      */
     private ParameterRanges parameterRanges;
@@ -331,12 +331,12 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
     /**
      * <p>
      * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against .your chosen objective metric.
+     * to find the optimal configuration for the highest model performance against your chosen objective metric.
      * </p>
      * 
      * @param parameterRanges
      *        The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job
-     *        searches over to find the optimal configuration for the highest model performance against .your chosen
+     *        searches over to find the optimal configuration for the highest model performance against your chosen
      *        objective metric.
      */
 
@@ -347,11 +347,11 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
     /**
      * <p>
      * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against .your chosen objective metric.
+     * to find the optimal configuration for the highest model performance against your chosen objective metric.
      * </p>
      * 
      * @return The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job
-     *         searches over to find the optimal configuration for the highest model performance against .your chosen
+     *         searches over to find the optimal configuration for the highest model performance against your chosen
      *         objective metric.
      */
 
@@ -362,12 +362,12 @@ public class HyperParameterTuningJobConfig implements Serializable, Cloneable, S
     /**
      * <p>
      * The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job searches over
-     * to find the optimal configuration for the highest model performance against .your chosen objective metric.
+     * to find the optimal configuration for the highest model performance against your chosen objective metric.
      * </p>
      * 
      * @param parameterRanges
      *        The <a>ParameterRanges</a> object that specifies the ranges of hyperparameters that this tuning job
-     *        searches over to find the optimal configuration for the highest model performance against .your chosen
+     *        searches over to find the optimal configuration for the highest model performance against your chosen
      *        objective metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

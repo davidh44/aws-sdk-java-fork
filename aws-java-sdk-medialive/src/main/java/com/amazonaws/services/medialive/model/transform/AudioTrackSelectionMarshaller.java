@@ -30,6 +30,8 @@ public class AudioTrackSelectionMarshaller {
 
     private static final MarshallingInfo<List> TRACKS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tracks").build();
+    private static final MarshallingInfo<StructuredPojo> DOLBYEDECODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dolbyEDecode").build();
 
     private static final AudioTrackSelectionMarshaller instance = new AudioTrackSelectionMarshaller();
 
@@ -48,6 +50,7 @@ public class AudioTrackSelectionMarshaller {
 
         try {
             protocolMarshaller.marshall(audioTrackSelection.getTracks(), TRACKS_BINDING);
+            protocolMarshaller.marshall(audioTrackSelection.getDolbyEDecode(), DOLBYEDECODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

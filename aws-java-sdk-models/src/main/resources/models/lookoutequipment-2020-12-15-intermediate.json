@@ -415,6 +415,10 @@
         "exceptionName" : "ConflictException",
         "documentation" : "<p> The request could not be completed due to a conflict with the current state of the target resource. </p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p> The input fails to satisfy constraints specified by Amazon Lookout for Equipment or a related AWS service that's being utilized. </p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -525,6 +529,10 @@
         "exceptionName" : "ConflictException",
         "documentation" : "<p> The request could not be completed due to a conflict with the current state of the target resource. </p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p> The input fails to satisfy constraints specified by Amazon Lookout for Equipment or a related AWS service that's being utilized. </p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -578,6 +586,10 @@
         "exceptionName" : "ConflictException",
         "documentation" : "<p> The request could not be completed due to a conflict with the current state of the target resource. </p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p> The input fails to satisfy constraints specified by Amazon Lookout for Equipment or a related AWS service that's being utilized. </p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -630,6 +642,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>The request could not be completed because you do not have access to the resource. </p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p> The input fails to satisfy constraints specified by Amazon Lookout for Equipment or a related AWS service that's being utilized. </p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -43157,6 +43173,75 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "Status",
+        "c2jShape" : "InferenceSchedulerStatus",
+        "deprecated" : false,
+        "documentation" : "<p>Specifies the current status of the inference schedulers to list.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "InferenceSchedulerStatus",
+        "fluentSetterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@param status Specifies the current status of the inference schedulers to list.\n@return Returns a reference to this object so that method calls can be chained together.\n@see InferenceSchedulerStatus*/",
+        "fluentSetterMethodName" : "withStatus",
+        "getterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@return Specifies the current status of the inference schedulers to list.\n@see InferenceSchedulerStatus*/",
+        "getterMethodName" : "getStatus",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "Status",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "Status",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Status",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@param status Specifies the current status of the inference schedulers to list.\n@see InferenceSchedulerStatus*/",
+        "setterMethodName" : "setStatus",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "status",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@param status Specifies the current status of the inference schedulers to list.\n@return Returns a reference to this object so that method calls can be chained together.\n@see InferenceSchedulerStatus*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "status",
+          "variableType" : "String",
+          "documentation" : "<p>Specifies the current status of the inference schedulers to list.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "InferenceSchedulerNameBeginsWith" : {
@@ -43434,6 +43519,76 @@
             "variableName" : "nextToken",
             "variableType" : "String",
             "documentation" : "<p> An opaque pagination token indicating where to continue the listing of inference schedulers. </p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "Status" : {
+          "c2jName" : "Status",
+          "c2jShape" : "InferenceSchedulerStatus",
+          "deprecated" : false,
+          "documentation" : "<p>Specifies the current status of the inference schedulers to list.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "InferenceSchedulerStatus",
+          "fluentSetterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@param status Specifies the current status of the inference schedulers to list.\n@return Returns a reference to this object so that method calls can be chained together.\n@see InferenceSchedulerStatus*/",
+          "fluentSetterMethodName" : "withStatus",
+          "getterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@return Specifies the current status of the inference schedulers to list.\n@see InferenceSchedulerStatus*/",
+          "getterMethodName" : "getStatus",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "Status",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "Status",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Status",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@param status Specifies the current status of the inference schedulers to list.\n@see InferenceSchedulerStatus*/",
+          "setterMethodName" : "setStatus",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "status",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Specifies the current status of the inference schedulers to list.</p>\n@param status Specifies the current status of the inference schedulers to list.\n@return Returns a reference to this object so that method calls can be chained together.\n@see InferenceSchedulerStatus*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "status",
+            "variableType" : "String",
+            "documentation" : "<p>Specifies the current status of the inference schedulers to list.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },

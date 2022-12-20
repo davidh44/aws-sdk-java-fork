@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StartStreamingSessionRequestMarshaller {
 
+    private static final MarshallingInfo<String> BACKUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("backupId").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("X-Amz-Client-Token")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
@@ -53,6 +55,7 @@ public class StartStreamingSessionRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(startStreamingSessionRequest.getBackupId(), BACKUPID_BINDING);
             protocolMarshaller.marshall(startStreamingSessionRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(startStreamingSessionRequest.getSessionId(), SESSIONID_BINDING);
             protocolMarshaller.marshall(startStreamingSessionRequest.getStudioId(), STUDIOID_BINDING);

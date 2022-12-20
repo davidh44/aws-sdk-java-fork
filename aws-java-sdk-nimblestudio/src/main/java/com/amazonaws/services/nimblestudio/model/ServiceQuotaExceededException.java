@@ -20,7 +20,7 @@ import javax.annotation.Generated;
  * other quotas cannot be increased.
  * </p>
  * <p>
- * Please use AWS Service Quotas to request an increase.
+ * Please use Amazon Web Services Service Quotas to request an increase.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

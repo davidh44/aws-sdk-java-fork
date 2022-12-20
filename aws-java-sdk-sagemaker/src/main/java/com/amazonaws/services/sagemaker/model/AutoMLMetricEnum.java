@@ -24,7 +24,15 @@ public enum AutoMLMetricEnum {
     MSE("MSE"),
     F1("F1"),
     F1macro("F1macro"),
-    AUC("AUC");
+    AUC("AUC"),
+    RMSE("RMSE"),
+    MAE("MAE"),
+    R2("R2"),
+    BalancedAccuracy("BalancedAccuracy"),
+    Precision("Precision"),
+    PrecisionMacro("PrecisionMacro"),
+    Recall("Recall"),
+    RecallMacro("RecallMacro");
 
     private String value;
 

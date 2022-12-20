@@ -33,7 +33,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String resourceArn;
     /**
      * <p>
-     * A collection of labels, in the form of key:value pairs, that apply to this resource.
+     * A collection of labels, in the form of key-value pairs, that apply to this resource.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -80,10 +80,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A collection of labels, in the form of key:value pairs, that apply to this resource.
+     * A collection of labels, in the form of key-value pairs, that apply to this resource.
      * </p>
      * 
-     * @return A collection of labels, in the form of key:value pairs, that apply to this resource.
+     * @return A collection of labels, in the form of key-value pairs, that apply to this resource.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -92,11 +92,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A collection of labels, in the form of key:value pairs, that apply to this resource.
+     * A collection of labels, in the form of key-value pairs, that apply to this resource.
      * </p>
      * 
      * @param tags
-     *        A collection of labels, in the form of key:value pairs, that apply to this resource.
+     *        A collection of labels, in the form of key-value pairs, that apply to this resource.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -105,11 +105,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A collection of labels, in the form of key:value pairs, that apply to this resource.
+     * A collection of labels, in the form of key-value pairs, that apply to this resource.
      * </p>
      * 
      * @param tags
-     *        A collection of labels, in the form of key:value pairs, that apply to this resource.
+     *        A collection of labels, in the form of key-value pairs, that apply to this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

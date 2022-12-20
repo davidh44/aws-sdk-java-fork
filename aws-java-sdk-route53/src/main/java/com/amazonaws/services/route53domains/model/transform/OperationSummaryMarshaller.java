@@ -35,6 +35,14 @@ public class OperationSummaryMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<java.util.Date> SUBMITTEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubmittedDate").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> DOMAINNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DomainName").build();
+    private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Message").build();
+    private static final MarshallingInfo<String> STATUSFLAG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatusFlag").build();
+    private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedDate").timestampFormat("unixTimestamp").build();
 
     private static final OperationSummaryMarshaller instance = new OperationSummaryMarshaller();
 
@@ -56,6 +64,10 @@ public class OperationSummaryMarshaller {
             protocolMarshaller.marshall(operationSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(operationSummary.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(operationSummary.getSubmittedDate(), SUBMITTEDDATE_BINDING);
+            protocolMarshaller.marshall(operationSummary.getDomainName(), DOMAINNAME_BINDING);
+            protocolMarshaller.marshall(operationSummary.getMessage(), MESSAGE_BINDING);
+            protocolMarshaller.marshall(operationSummary.getStatusFlag(), STATUSFLAG_BINDING);
+            protocolMarshaller.marshall(operationSummary.getLastUpdatedDate(), LASTUPDATEDDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

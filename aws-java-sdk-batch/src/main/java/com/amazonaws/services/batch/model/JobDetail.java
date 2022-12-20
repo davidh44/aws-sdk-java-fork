@@ -210,6 +210,18 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<EksAttemptDetail> eksAttempts;
+    /**
+     * <p>
+     * Indicates whether the job is canceled.
+     * </p>
+     */
+    private Boolean isCancelled;
+    /**
+     * <p>
+     * Indicates whether the job is terminated.
+     * </p>
+     */
+    private Boolean isTerminated;
 
     /**
      * <p>
@@ -1684,6 +1696,110 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether the job is canceled.
+     * </p>
+     * 
+     * @param isCancelled
+     *        Indicates whether the job is canceled.
+     */
+
+    public void setIsCancelled(Boolean isCancelled) {
+        this.isCancelled = isCancelled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is canceled.
+     * </p>
+     * 
+     * @return Indicates whether the job is canceled.
+     */
+
+    public Boolean getIsCancelled() {
+        return this.isCancelled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is canceled.
+     * </p>
+     * 
+     * @param isCancelled
+     *        Indicates whether the job is canceled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobDetail withIsCancelled(Boolean isCancelled) {
+        setIsCancelled(isCancelled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is canceled.
+     * </p>
+     * 
+     * @return Indicates whether the job is canceled.
+     */
+
+    public Boolean isCancelled() {
+        return this.isCancelled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is terminated.
+     * </p>
+     * 
+     * @param isTerminated
+     *        Indicates whether the job is terminated.
+     */
+
+    public void setIsTerminated(Boolean isTerminated) {
+        this.isTerminated = isTerminated;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is terminated.
+     * </p>
+     * 
+     * @return Indicates whether the job is terminated.
+     */
+
+    public Boolean getIsTerminated() {
+        return this.isTerminated;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is terminated.
+     * </p>
+     * 
+     * @param isTerminated
+     *        Indicates whether the job is terminated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobDetail withIsTerminated(Boolean isTerminated) {
+        setIsTerminated(isTerminated);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the job is terminated.
+     * </p>
+     * 
+     * @return Indicates whether the job is terminated.
+     */
+
+    public Boolean isTerminated() {
+        return this.isTerminated;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1746,7 +1862,11 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
         if (getEksProperties() != null)
             sb.append("EksProperties: ").append(getEksProperties()).append(",");
         if (getEksAttempts() != null)
-            sb.append("EksAttempts: ").append(getEksAttempts());
+            sb.append("EksAttempts: ").append(getEksAttempts()).append(",");
+        if (getIsCancelled() != null)
+            sb.append("IsCancelled: ").append(getIsCancelled()).append(",");
+        if (getIsTerminated() != null)
+            sb.append("IsTerminated: ").append(getIsTerminated());
         sb.append("}");
         return sb.toString();
     }
@@ -1865,6 +1985,14 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEksAttempts() != null && other.getEksAttempts().equals(this.getEksAttempts()) == false)
             return false;
+        if (other.getIsCancelled() == null ^ this.getIsCancelled() == null)
+            return false;
+        if (other.getIsCancelled() != null && other.getIsCancelled().equals(this.getIsCancelled()) == false)
+            return false;
+        if (other.getIsTerminated() == null ^ this.getIsTerminated() == null)
+            return false;
+        if (other.getIsTerminated() != null && other.getIsTerminated().equals(this.getIsTerminated()) == false)
+            return false;
         return true;
     }
 
@@ -1899,6 +2027,8 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPlatformCapabilities() == null) ? 0 : getPlatformCapabilities().hashCode());
         hashCode = prime * hashCode + ((getEksProperties() == null) ? 0 : getEksProperties().hashCode());
         hashCode = prime * hashCode + ((getEksAttempts() == null) ? 0 : getEksAttempts().hashCode());
+        hashCode = prime * hashCode + ((getIsCancelled() == null) ? 0 : getIsCancelled().hashCode());
+        hashCode = prime * hashCode + ((getIsTerminated() == null) ? 0 : getIsTerminated().hashCode());
         return hashCode;
     }
 

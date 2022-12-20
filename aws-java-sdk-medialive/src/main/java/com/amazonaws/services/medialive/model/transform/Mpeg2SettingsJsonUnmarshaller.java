@@ -112,6 +112,10 @@ public class Mpeg2SettingsJsonUnmarshaller implements Unmarshaller<Mpeg2Settings
                     context.nextToken();
                     mpeg2Settings.setTimecodeInsertion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("timecodeBurninSettings", targetDepth)) {
+                    context.nextToken();
+                    mpeg2Settings.setTimecodeBurninSettings(TimecodeBurninSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

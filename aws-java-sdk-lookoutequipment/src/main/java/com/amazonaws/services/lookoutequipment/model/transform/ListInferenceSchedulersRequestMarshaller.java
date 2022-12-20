@@ -35,6 +35,8 @@ public class ListInferenceSchedulersRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InferenceSchedulerNameBeginsWith").build();
     private static final MarshallingInfo<String> MODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ModelName").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Status").build();
 
     private static final ListInferenceSchedulersRequestMarshaller instance = new ListInferenceSchedulersRequestMarshaller();
 
@@ -56,6 +58,7 @@ public class ListInferenceSchedulersRequestMarshaller {
             protocolMarshaller.marshall(listInferenceSchedulersRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listInferenceSchedulersRequest.getInferenceSchedulerNameBeginsWith(), INFERENCESCHEDULERNAMEBEGINSWITH_BINDING);
             protocolMarshaller.marshall(listInferenceSchedulersRequest.getModelName(), MODELNAME_BINDING);
+            protocolMarshaller.marshall(listInferenceSchedulersRequest.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

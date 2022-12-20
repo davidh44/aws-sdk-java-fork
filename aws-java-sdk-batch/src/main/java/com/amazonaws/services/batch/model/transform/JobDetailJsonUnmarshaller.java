@@ -162,6 +162,14 @@ public class JobDetailJsonUnmarshaller implements Unmarshaller<JobDetail, JsonUn
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("isCancelled", targetDepth)) {
+                    context.nextToken();
+                    jobDetail.setIsCancelled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("isTerminated", targetDepth)) {
+                    context.nextToken();
+                    jobDetail.setIsTerminated(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

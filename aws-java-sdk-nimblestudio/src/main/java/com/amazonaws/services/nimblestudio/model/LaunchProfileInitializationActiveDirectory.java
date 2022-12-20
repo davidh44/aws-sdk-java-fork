@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Launch Profile Initialization Active Directory contains information required for the launch profile to connect to
+ * The launch profile initialization Active Directory contains information required for the launch profile to connect to
  * the Active Directory.
  * </p>
  * 

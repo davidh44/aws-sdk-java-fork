@@ -64,6 +64,22 @@ public class OperationSummaryJsonUnmarshaller implements Unmarshaller<OperationS
                     context.nextToken();
                     operationSummary.setSubmittedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("DomainName", targetDepth)) {
+                    context.nextToken();
+                    operationSummary.setDomainName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Message", targetDepth)) {
+                    context.nextToken();
+                    operationSummary.setMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StatusFlag", targetDepth)) {
+                    context.nextToken();
+                    operationSummary.setStatusFlag(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LastUpdatedDate", targetDepth)) {
+                    context.nextToken();
+                    operationSummary.setLastUpdatedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

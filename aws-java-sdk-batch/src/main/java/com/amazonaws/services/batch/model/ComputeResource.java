@@ -193,6 +193,21 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      */
     private java.util.List<String> subnets;
     /**
@@ -274,7 +289,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * type before instances are launched. For example, if your maximum percentage is 20%, then the Spot price must be
      * less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market)
      * price and never more than your maximum percentage. If you leave this field empty, the default value is 100% of
-     * the On-Demand price.
+     * the On-Demand price. For most use cases, we recommend leaving this field empty.
      * </p>
      * <note>
      * <p>
@@ -1636,11 +1651,39 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * 
      * @return The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *         Fargate compute resources can contain up to 16 subnets. For more information, see <a
      *         href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
-     *         <i>Amazon VPC User Guide</i>.
+     *         <i>Amazon VPC User Guide</i>.</p> <note>
+     *         <p>
+     *         Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *         > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *         Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *         "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *         > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *         <i>Amazon ECS Developer Guide</i>.
+     *         </p>
+     *         <p>
+     *         Batch on Fargate doesn't currently support Local Zones.
+     *         </p>
      */
 
     public java.util.List<String> getSubnets() {
@@ -1654,12 +1697,40 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *        Fargate compute resources can contain up to 16 subnets. For more information, see <a
      *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
-     *        <i>Amazon VPC User Guide</i>.
+     *        <i>Amazon VPC User Guide</i>.</p> <note>
+     *        <p>
+     *        Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *        > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *        Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *        > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *        <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Batch on Fargate doesn't currently support Local Zones.
+     *        </p>
      */
 
     public void setSubnets(java.util.Collection<String> subnets) {
@@ -1678,6 +1749,21 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSubnets(java.util.Collection)} or {@link #withSubnets(java.util.Collection)} if you want to override
@@ -1688,7 +1774,20 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *        Fargate compute resources can contain up to 16 subnets. For more information, see <a
      *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
-     *        <i>Amazon VPC User Guide</i>.
+     *        <i>Amazon VPC User Guide</i>.</p> <note>
+     *        <p>
+     *        Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *        > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *        Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *        > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *        <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Batch on Fargate doesn't currently support Local Zones.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1709,12 +1808,40 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the <i>Amazon
      * VPC User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. These subnets must be within the same VPC.
      *        Fargate compute resources can contain up to 16 subnets. For more information, see <a
      *        href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">VPCs and subnets</a> in the
-     *        <i>Amazon VPC User Guide</i>.
+     *        <i>Amazon VPC User Guide</i>.</p> <note>
+     *        <p>
+     *        Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *        > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *        Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *        > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *        <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Batch on Fargate doesn't currently support Local Zones.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2240,7 +2367,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * type before instances are launched. For example, if your maximum percentage is 20%, then the Spot price must be
      * less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market)
      * price and never more than your maximum percentage. If you leave this field empty, the default value is 100% of
-     * the On-Demand price.
+     * the On-Demand price. For most use cases, we recommend leaving this field empty.
      * </p>
      * <note>
      * <p>
@@ -2253,7 +2380,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        instance type before instances are launched. For example, if your maximum percentage is 20%, then the Spot
      *        price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay
      *        the lowest (market) price and never more than your maximum percentage. If you leave this field empty, the
-     *        default value is 100% of the On-Demand price.</p> <note>
+     *        default value is 100% of the On-Demand price. For most use cases, we recommend leaving this field
+     *        empty.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *        </p>
@@ -2269,7 +2397,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * type before instances are launched. For example, if your maximum percentage is 20%, then the Spot price must be
      * less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market)
      * price and never more than your maximum percentage. If you leave this field empty, the default value is 100% of
-     * the On-Demand price.
+     * the On-Demand price. For most use cases, we recommend leaving this field empty.
      * </p>
      * <note>
      * <p>
@@ -2281,7 +2409,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         instance type before instances are launched. For example, if your maximum percentage is 20%, then the
      *         Spot price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always
      *         pay the lowest (market) price and never more than your maximum percentage. If you leave this field empty,
-     *         the default value is 100% of the On-Demand price.</p> <note>
+     *         the default value is 100% of the On-Demand price. For most use cases, we recommend leaving this field
+     *         empty.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *         </p>
@@ -2297,7 +2426,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * type before instances are launched. For example, if your maximum percentage is 20%, then the Spot price must be
      * less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market)
      * price and never more than your maximum percentage. If you leave this field empty, the default value is 100% of
-     * the On-Demand price.
+     * the On-Demand price. For most use cases, we recommend leaving this field empty.
      * </p>
      * <note>
      * <p>
@@ -2310,7 +2439,8 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        instance type before instances are launched. For example, if your maximum percentage is 20%, then the Spot
      *        price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay
      *        the lowest (market) price and never more than your maximum percentage. If you leave this field empty, the
-     *        default value is 100% of the On-Demand price.</p> <note>
+     *        default value is 100% of the On-Demand price. For most use cases, we recommend leaving this field
+     *        empty.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      *        </p>

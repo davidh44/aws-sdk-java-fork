@@ -48,7 +48,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Boolean encrypted;
@@ -123,7 +123,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
-     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String destinationOutpostArn;
@@ -254,7 +254,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param encrypted
@@ -263,7 +263,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *        key using <code>KmsKeyId</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -277,7 +277,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Specifies whether the destination snapshots of the copied image should be encrypted. You can encrypt a
@@ -285,7 +285,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *         default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *         key using <code>KmsKeyId</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a>
-     *         in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Boolean getEncrypted() {
@@ -299,7 +299,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param encrypted
@@ -308,7 +308,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *        key using <code>KmsKeyId</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -324,7 +324,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Specifies whether the destination snapshots of the copied image should be encrypted. You can encrypt a
@@ -332,7 +332,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *         default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *         key using <code>KmsKeyId</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a>
-     *         in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Boolean isEncrypted() {
@@ -728,7 +728,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
-     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param destinationOutpostArn
@@ -739,8 +739,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs
-     *        from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setDestinationOutpostArn(String destinationOutpostArn) {
@@ -757,7 +756,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
-     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the Outpost to which to copy the AMI. Only specify this parameter when
@@ -767,8 +766,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs
-     *         from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
-     *         Guide</i>.
+     *         from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public String getDestinationOutpostArn() {
@@ -785,7 +783,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
-     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param destinationOutpostArn
@@ -796,8 +794,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs
-     *        from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

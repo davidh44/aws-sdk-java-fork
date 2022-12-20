@@ -134,6 +134,11 @@ public class AbstractAmazonNimbleStudio implements AmazonNimbleStudio {
     }
 
     @Override
+    public GetStreamingSessionBackupResult getStreamingSessionBackup(GetStreamingSessionBackupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetStreamingSessionStreamResult getStreamingSessionStream(GetStreamingSessionStreamRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -175,6 +180,11 @@ public class AbstractAmazonNimbleStudio implements AmazonNimbleStudio {
 
     @Override
     public ListStreamingImagesResult listStreamingImages(ListStreamingImagesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListStreamingSessionBackupsResult listStreamingSessionBackups(ListStreamingSessionBackupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -35,20 +35,20 @@ import com.amazonaws.services.resourceexplorer2.model.*;
  * </p>
  * <p>
  * Resource Explorer scans the resources in each of the Amazon Web Services Regions in your Amazon Web Services account
- * in which you turn on Resource Explorer. Resource Explorer <a
- * href="https://docs.aws.amazon.com/arexug/mainline/getting-started-terms-and-concepts.html#term-index">creates and
- * maintains an index</a> in each Region, with the details of that Region's resources.
+ * in which you turn on Resource Explorer. Resource Explorer <a href=
+ * "https://docs.aws.amazon.com/resource-explorer/latest/userguide/getting-started-terms-and-concepts.html#term-index"
+ * >creates and maintains an index</a> in each Region, with the details of that Region's resources.
  * </p>
  * <p>
- * You can <a href="https://docs.aws.amazon.com/arexug/mainline/manage-aggregator-region.html">search across all of the
- * indexed Regions in your account</a> by designating one of your Amazon Web Services Regions to contain the aggregator
- * index for the account. When you <a
- * href="https://docs.aws.amazon.com/arexug/mainline/manage-aggregator-region-turn-on.html">promote a local index in a
- * Region to become the aggregator index for the account</a>, Resource Explorer automatically replicates the index
- * information from all local indexes in the other Regions to the aggregator index. Therefore, the Region with the
- * aggregator index has a copy of all resource information for all Regions in the account where you turned on Resource
- * Explorer. As a result, views in the aggregator index Region include resources from all of the indexed Regions in your
- * account.
+ * You can <a href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">search
+ * across all of the indexed Regions in your account</a> by designating one of your Amazon Web Services Regions to
+ * contain the aggregator index for the account. When you <a
+ * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region-turn-on.html">promote a
+ * local index in a Region to become the aggregator index for the account</a>, Resource Explorer automatically
+ * replicates the index information from all local indexes in the other Regions to the aggregator index. Therefore, the
+ * Region with the aggregator index has a copy of all resource information for all Regions in the account where you
+ * turned on Resource Explorer. As a result, views in the aggregator index Region include resources from all of the
+ * indexed Regions in your account.
  * </p>
  * <p>
  * For more information about Amazon Web Services Resource Explorer, including how to enable and configure the service,
@@ -161,9 +161,9 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * <p>
      * If this is the first Amazon Web Services Region in which you've created an index for Resource Explorer, then this
      * operation also <a
-     * href="https://docs.aws.amazon.com/arexug/mainline/security_iam_service-linked-roles.html">creates a
-     * service-linked role</a> in your Amazon Web Services account that allows Resource Explorer to enumerate your
-     * resources to populate the index.
+     * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/security_iam_service-linked-roles.html"
+     * >creates a service-linked role</a> in your Amazon Web Services account that allows Resource Explorer to enumerate
+     * your resources to populate the index.
      * </p>
      * <ul>
      * <li>
@@ -235,9 +235,9 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * <p>
      * If this is the first Amazon Web Services Region in which you've created an index for Resource Explorer, then this
      * operation also <a
-     * href="https://docs.aws.amazon.com/arexug/mainline/security_iam_service-linked-roles.html">creates a
-     * service-linked role</a> in your Amazon Web Services account that allows Resource Explorer to enumerate your
-     * resources to populate the index.
+     * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/security_iam_service-linked-roles.html"
+     * >creates a service-linked role</a> in your Amazon Web Services account that allows Resource Explorer to enumerate
+     * your resources to populate the index.
      * </p>
      * <ul>
      * <li>
@@ -293,8 +293,8 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * Creates a view that users can query by using the <a>Search</a> operation. Results from queries that you make
      * using this view include only resources that match the view's <code>Filters</code>. For more information about
      * Amazon Web Services Resource Explorer views, see <a
-     * href="https://docs.aws.amazon.com/arexug/mainline/manage-views.html">Managing views</a> in the <i>Amazon Web
-     * Services Resource Explorer User Guide</i>.
+     * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-views.html">Managing views</a> in the
+     * <i>Amazon Web Services Resource Explorer User Guide</i>.
      * </p>
      * <p>
      * Only the principals with an IAM identity-based policy that grants <code>Allow</code> to the <code>Search</code>
@@ -316,8 +316,8 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * Creates a view that users can query by using the <a>Search</a> operation. Results from queries that you make
      * using this view include only resources that match the view's <code>Filters</code>. For more information about
      * Amazon Web Services Resource Explorer views, see <a
-     * href="https://docs.aws.amazon.com/arexug/mainline/manage-views.html">Managing views</a> in the <i>Amazon Web
-     * Services Resource Explorer User Guide</i>.
+     * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-views.html">Managing views</a> in the
+     * <i>Amazon Web Services Resource Explorer User Guide</i>.
      * </p>
      * <p>
      * Only the principals with an IAM identity-based policy that grants <code>Allow</code> to the <code>Search</code>
@@ -347,6 +347,13 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * tasks. You can check to see when the actions are complete by using the <a>GetIndex</a> operation and checking the
      * <code>Status</code> response value.
      * </p>
+     * <note>
+     * <p>
+     * If the index you delete is the aggregator index for the Amazon Web Services account, you must wait 24 hours
+     * before you can promote another local index to be the aggregator index for the account. Users can't perform
+     * account-wide searches using Resource Explorer until another aggregator index is configured.
+     * </p>
+     * </note>
      * 
      * @param deleteIndexRequest
      * @return A Java Future containing the result of the DeleteIndex operation returned by the service.
@@ -364,6 +371,13 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * tasks. You can check to see when the actions are complete by using the <a>GetIndex</a> operation and checking the
      * <code>Status</code> response value.
      * </p>
+     * <note>
+     * <p>
+     * If the index you delete is the aggregator index for the Amazon Web Services account, you must wait 24 hours
+     * before you can promote another local index to be the aggregator index for the account. Users can't perform
+     * account-wide searches using Resource Explorer until another aggregator index is configured.
+     * </p>
+     * </note>
      * 
      * @param deleteIndexRequest
      * @param asyncHandler
@@ -836,8 +850,9 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * <p>
      * Changes the type of the index from one of the following types to the other. For more information about indexes
      * and the role they perform in Amazon Web Services Resource Explorer, see <a
-     * href="https://docs.aws.amazon.com/arexug/mainline/manage-aggregator-region.html">Turning on cross-Region search
-     * by creating an aggregator index</a> in the <i>Amazon Web Services Resource Explorer User Guide</i>.
+     * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
+     * cross-Region search by creating an aggregator index</a> in the <i>Amazon Web Services Resource Explorer User
+     * Guide</i>.
      * </p>
      * <ul>
      * <li>
@@ -906,8 +921,9 @@ public interface AWSResourceExplorer2Async extends AWSResourceExplorer2 {
      * <p>
      * Changes the type of the index from one of the following types to the other. For more information about indexes
      * and the role they perform in Amazon Web Services Resource Explorer, see <a
-     * href="https://docs.aws.amazon.com/arexug/mainline/manage-aggregator-region.html">Turning on cross-Region search
-     * by creating an aggregator index</a> in the <i>Amazon Web Services Resource Explorer User Guide</i>.
+     * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
+     * cross-Region search by creating an aggregator index</a> in the <i>Amazon Web Services Resource Explorer User
+     * Guide</i>.
      * </p>
      * <ul>
      * <li>

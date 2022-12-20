@@ -18,7 +18,7 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Settings for the "scte35 input" action
+ * Scte35Input Schedule Action Settings
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/Scte35InputScheduleActionSettings"
  *      target="_top">AWS API Documentation</a>

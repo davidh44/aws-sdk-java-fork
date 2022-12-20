@@ -212,6 +212,10 @@ public class H264SettingsJsonUnmarshaller implements Unmarshaller<H264Settings, 
                     context.nextToken();
                     h264Settings.setTimecodeInsertion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("timecodeBurninSettings", targetDepth)) {
+                    context.nextToken();
+                    h264Settings.setTimecodeBurninSettings(TimecodeBurninSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

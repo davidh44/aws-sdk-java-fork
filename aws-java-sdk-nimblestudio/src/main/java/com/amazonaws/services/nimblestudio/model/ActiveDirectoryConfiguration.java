@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration for a Microsoft Active Directory (Microsoft AD) studio resource.
+ * The configuration for a Directory Service for Microsoft Active Directory studio resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/nimble-2020-08-01/ActiveDirectoryConfiguration"

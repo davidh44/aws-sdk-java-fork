@@ -48,7 +48,7 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an existing experiment to associate the trial component with.
+     * The name of an existing experiment to associate with the trial component.
      * </p>
      */
     private String experimentName;
@@ -67,18 +67,18 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
     private String trialComponentDisplayName;
     /**
      * <p>
-     * The name of the experiment run to associate the trial component with.
+     * The name of the experiment run to associate with the trial component.
      * </p>
      */
     private String runName;
 
     /**
      * <p>
-     * The name of an existing experiment to associate the trial component with.
+     * The name of an existing experiment to associate with the trial component.
      * </p>
      * 
      * @param experimentName
-     *        The name of an existing experiment to associate the trial component with.
+     *        The name of an existing experiment to associate with the trial component.
      */
 
     public void setExperimentName(String experimentName) {
@@ -87,10 +87,10 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an existing experiment to associate the trial component with.
+     * The name of an existing experiment to associate with the trial component.
      * </p>
      * 
-     * @return The name of an existing experiment to associate the trial component with.
+     * @return The name of an existing experiment to associate with the trial component.
      */
 
     public String getExperimentName() {
@@ -99,11 +99,11 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an existing experiment to associate the trial component with.
+     * The name of an existing experiment to associate with the trial component.
      * </p>
      * 
      * @param experimentName
-     *        The name of an existing experiment to associate the trial component with.
+     *        The name of an existing experiment to associate with the trial component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -203,11 +203,11 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the experiment run to associate the trial component with.
+     * The name of the experiment run to associate with the trial component.
      * </p>
      * 
      * @param runName
-     *        The name of the experiment run to associate the trial component with.
+     *        The name of the experiment run to associate with the trial component.
      */
 
     public void setRunName(String runName) {
@@ -216,10 +216,10 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the experiment run to associate the trial component with.
+     * The name of the experiment run to associate with the trial component.
      * </p>
      * 
-     * @return The name of the experiment run to associate the trial component with.
+     * @return The name of the experiment run to associate with the trial component.
      */
 
     public String getRunName() {
@@ -228,11 +228,11 @@ public class ExperimentConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the experiment run to associate the trial component with.
+     * The name of the experiment run to associate with the trial component.
      * </p>
      * 
      * @param runName
-     *        The name of the experiment run to associate the trial component with.
+     *        The name of the experiment run to associate with the trial component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

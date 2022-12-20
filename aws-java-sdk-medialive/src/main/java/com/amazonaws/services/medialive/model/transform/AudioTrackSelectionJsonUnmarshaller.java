@@ -54,6 +54,10 @@ public class AudioTrackSelectionJsonUnmarshaller implements Unmarshaller<AudioTr
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("dolbyEDecode", targetDepth)) {
+                    context.nextToken();
+                    audioTrackSelection.setDolbyEDecode(AudioDolbyEDecodeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

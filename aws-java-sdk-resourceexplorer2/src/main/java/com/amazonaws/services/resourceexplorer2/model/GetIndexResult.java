@@ -44,22 +44,27 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
-     * If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     * Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     * This response value is present only if this index is <code>Type=AGGREGATOR</code>.
+     * </p>
+     * <p>
+     * A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * </p>
      */
     private java.util.List<String> replicatingFrom;
     /**
      * <p>
-     * Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one exists.
-     * If it does, then the Region you called this operation in replicates its index information to the Region specified
-     * in this response value. Not present if there isn't an aggregator index in the account.
+     * This response value is present only if this index is <code>Type=LOCAL</code>.
+     * </p>
+     * <p>
+     * The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index does
+     * exist then the Region in which you called this operation replicates its index information to the Region specified
+     * in this response value.
      * </p>
      */
     private java.util.List<String> replicatingTo;
     /**
      * <p>
-     * Indicates the current state of the index in this Amazon Web Services Region.
+     * The current state of the index in this Amazon Web Services Region.
      * </p>
      */
     private String state;
@@ -71,8 +76,8 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * Specifies the type of the index in this Region. For information about the aggregator index and how it differs
-     * from a local index, see <a
+     * The type of the index in this Region. For information about the aggregator index and how it differs from a local
+     * index, see <a
      * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
      * cross-Region search by creating an aggregator index</a>.
      * </p>
@@ -207,12 +212,15 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     * Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     * This response value is present only if this index is <code>Type=AGGREGATOR</code>.
+     * </p>
+     * <p>
+     * A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * </p>
      * 
-     * @return If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     *         Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     * @return This response value is present only if this index is <code>Type=AGGREGATOR</code>.</p>
+     *         <p>
+     *         A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      */
 
     public java.util.List<String> getReplicatingFrom() {
@@ -221,13 +229,16 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     * Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     * This response value is present only if this index is <code>Type=AGGREGATOR</code>.
+     * </p>
+     * <p>
+     * A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * </p>
      * 
      * @param replicatingFrom
-     *        If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     *        Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     *        This response value is present only if this index is <code>Type=AGGREGATOR</code>.</p>
+     *        <p>
+     *        A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      */
 
     public void setReplicatingFrom(java.util.Collection<String> replicatingFrom) {
@@ -241,8 +252,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     * Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     * This response value is present only if this index is <code>Type=AGGREGATOR</code>.
+     * </p>
+     * <p>
+     * A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -251,8 +264,9 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      * 
      * @param replicatingFrom
-     *        If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     *        Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     *        This response value is present only if this index is <code>Type=AGGREGATOR</code>.</p>
+     *        <p>
+     *        A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -268,13 +282,16 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     * Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     * This response value is present only if this index is <code>Type=AGGREGATOR</code>.
+     * </p>
+     * <p>
+     * A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * </p>
      * 
      * @param replicatingFrom
-     *        If this index is <code>Type=AGGREGATOR</code>, then this response value contains a list of the Amazon Web
-     *        Services Regions that replicate their content to the index in this Region. Not present for a local index.
+     *        This response value is present only if this index is <code>Type=AGGREGATOR</code>.</p>
+     *        <p>
+     *        A list of the Amazon Web Services Regions that replicate their content to the index in this Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -285,14 +302,19 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one exists.
-     * If it does, then the Region you called this operation in replicates its index information to the Region specified
-     * in this response value. Not present if there isn't an aggregator index in the account.
+     * This response value is present only if this index is <code>Type=LOCAL</code>.
+     * </p>
+     * <p>
+     * The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index does
+     * exist then the Region in which you called this operation replicates its index information to the Region specified
+     * in this response value.
      * </p>
      * 
-     * @return Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one
-     *         exists. If it does, then the Region you called this operation in replicates its index information to the
-     *         Region specified in this response value. Not present if there isn't an aggregator index in the account.
+     * @return This response value is present only if this index is <code>Type=LOCAL</code>.</p>
+     *         <p>
+     *         The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index
+     *         does exist then the Region in which you called this operation replicates its index information to the
+     *         Region specified in this response value.
      */
 
     public java.util.List<String> getReplicatingTo() {
@@ -301,15 +323,20 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one exists.
-     * If it does, then the Region you called this operation in replicates its index information to the Region specified
-     * in this response value. Not present if there isn't an aggregator index in the account.
+     * This response value is present only if this index is <code>Type=LOCAL</code>.
+     * </p>
+     * <p>
+     * The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index does
+     * exist then the Region in which you called this operation replicates its index information to the Region specified
+     * in this response value.
      * </p>
      * 
      * @param replicatingTo
-     *        Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one
-     *        exists. If it does, then the Region you called this operation in replicates its index information to the
-     *        Region specified in this response value. Not present if there isn't an aggregator index in the account.
+     *        This response value is present only if this index is <code>Type=LOCAL</code>.</p>
+     *        <p>
+     *        The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index
+     *        does exist then the Region in which you called this operation replicates its index information to the
+     *        Region specified in this response value.
      */
 
     public void setReplicatingTo(java.util.Collection<String> replicatingTo) {
@@ -323,9 +350,12 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one exists.
-     * If it does, then the Region you called this operation in replicates its index information to the Region specified
-     * in this response value. Not present if there isn't an aggregator index in the account.
+     * This response value is present only if this index is <code>Type=LOCAL</code>.
+     * </p>
+     * <p>
+     * The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index does
+     * exist then the Region in which you called this operation replicates its index information to the Region specified
+     * in this response value.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -334,9 +364,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      * 
      * @param replicatingTo
-     *        Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one
-     *        exists. If it does, then the Region you called this operation in replicates its index information to the
-     *        Region specified in this response value. Not present if there isn't an aggregator index in the account.
+     *        This response value is present only if this index is <code>Type=LOCAL</code>.</p>
+     *        <p>
+     *        The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index
+     *        does exist then the Region in which you called this operation replicates its index information to the
+     *        Region specified in this response value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -352,15 +384,20 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one exists.
-     * If it does, then the Region you called this operation in replicates its index information to the Region specified
-     * in this response value. Not present if there isn't an aggregator index in the account.
+     * This response value is present only if this index is <code>Type=LOCAL</code>.
+     * </p>
+     * <p>
+     * The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index does
+     * exist then the Region in which you called this operation replicates its index information to the Region specified
+     * in this response value.
      * </p>
      * 
      * @param replicatingTo
-     *        Identifies the Amazon Web Services Region that has an index set to <code>Type=AGGREGATOR</code>, if one
-     *        exists. If it does, then the Region you called this operation in replicates its index information to the
-     *        Region specified in this response value. Not present if there isn't an aggregator index in the account.
+     *        This response value is present only if this index is <code>Type=LOCAL</code>.</p>
+     *        <p>
+     *        The Amazon Web Services Region that contains the aggregator index, if one exists. If an aggregator index
+     *        does exist then the Region in which you called this operation replicates its index information to the
+     *        Region specified in this response value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -371,11 +408,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Indicates the current state of the index in this Amazon Web Services Region.
+     * The current state of the index in this Amazon Web Services Region.
      * </p>
      * 
      * @param state
-     *        Indicates the current state of the index in this Amazon Web Services Region.
+     *        The current state of the index in this Amazon Web Services Region.
      * @see IndexState
      */
 
@@ -385,10 +422,10 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Indicates the current state of the index in this Amazon Web Services Region.
+     * The current state of the index in this Amazon Web Services Region.
      * </p>
      * 
-     * @return Indicates the current state of the index in this Amazon Web Services Region.
+     * @return The current state of the index in this Amazon Web Services Region.
      * @see IndexState
      */
 
@@ -398,11 +435,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Indicates the current state of the index in this Amazon Web Services Region.
+     * The current state of the index in this Amazon Web Services Region.
      * </p>
      * 
      * @param state
-     *        Indicates the current state of the index in this Amazon Web Services Region.
+     *        The current state of the index in this Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IndexState
      */
@@ -414,11 +451,11 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Indicates the current state of the index in this Amazon Web Services Region.
+     * The current state of the index in this Amazon Web Services Region.
      * </p>
      * 
      * @param state
-     *        Indicates the current state of the index in this Amazon Web Services Region.
+     *        The current state of the index in this Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IndexState
      */
@@ -498,15 +535,15 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Specifies the type of the index in this Region. For information about the aggregator index and how it differs
-     * from a local index, see <a
+     * The type of the index in this Region. For information about the aggregator index and how it differs from a local
+     * index, see <a
      * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
      * cross-Region search by creating an aggregator index</a>.
      * </p>
      * 
      * @param type
-     *        Specifies the type of the index in this Region. For information about the aggregator index and how it
-     *        differs from a local index, see <a
+     *        The type of the index in this Region. For information about the aggregator index and how it differs from a
+     *        local index, see <a
      *        href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html"
      *        >Turning on cross-Region search by creating an aggregator index</a>.
      * @see IndexType
@@ -518,14 +555,14 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Specifies the type of the index in this Region. For information about the aggregator index and how it differs
-     * from a local index, see <a
+     * The type of the index in this Region. For information about the aggregator index and how it differs from a local
+     * index, see <a
      * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
      * cross-Region search by creating an aggregator index</a>.
      * </p>
      * 
-     * @return Specifies the type of the index in this Region. For information about the aggregator index and how it
-     *         differs from a local index, see <a
+     * @return The type of the index in this Region. For information about the aggregator index and how it differs from
+     *         a local index, see <a
      *         href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html"
      *         >Turning on cross-Region search by creating an aggregator index</a>.
      * @see IndexType
@@ -537,15 +574,15 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Specifies the type of the index in this Region. For information about the aggregator index and how it differs
-     * from a local index, see <a
+     * The type of the index in this Region. For information about the aggregator index and how it differs from a local
+     * index, see <a
      * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
      * cross-Region search by creating an aggregator index</a>.
      * </p>
      * 
      * @param type
-     *        Specifies the type of the index in this Region. For information about the aggregator index and how it
-     *        differs from a local index, see <a
+     *        The type of the index in this Region. For information about the aggregator index and how it differs from a
+     *        local index, see <a
      *        href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html"
      *        >Turning on cross-Region search by creating an aggregator index</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -559,15 +596,15 @@ public class GetIndexResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Specifies the type of the index in this Region. For information about the aggregator index and how it differs
-     * from a local index, see <a
+     * The type of the index in this Region. For information about the aggregator index and how it differs from a local
+     * index, see <a
      * href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html">Turning on
      * cross-Region search by creating an aggregator index</a>.
      * </p>
      * 
      * @param type
-     *        Specifies the type of the index in this Region. For information about the aggregator index and how it
-     *        differs from a local index, see <a
+     *        The type of the index in this Region. For information about the aggregator index and how it differs from a
+     *        local index, see <a
      *        href="https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html"
      *        >Turning on cross-Region search by creating an aggregator index</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

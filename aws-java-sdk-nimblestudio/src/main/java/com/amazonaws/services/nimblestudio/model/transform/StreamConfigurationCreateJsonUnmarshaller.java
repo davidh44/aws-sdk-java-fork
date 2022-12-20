@@ -48,6 +48,10 @@ public class StreamConfigurationCreateJsonUnmarshaller implements Unmarshaller<S
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("automaticTerminationMode", targetDepth)) {
+                    context.nextToken();
+                    streamConfigurationCreate.setAutomaticTerminationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("clipboardMode", targetDepth)) {
                     context.nextToken();
                     streamConfigurationCreate.setClipboardMode(context.getUnmarshaller(String.class).unmarshall(context));
@@ -66,6 +70,14 @@ public class StreamConfigurationCreateJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     streamConfigurationCreate.setMaxStoppedSessionLengthInMinutes(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("sessionBackup", targetDepth)) {
+                    context.nextToken();
+                    streamConfigurationCreate.setSessionBackup(StreamConfigurationSessionBackupJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("sessionPersistenceMode", targetDepth)) {
+                    context.nextToken();
+                    streamConfigurationCreate.setSessionPersistenceMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sessionStorage", targetDepth)) {
                     context.nextToken();
                     streamConfigurationCreate.setSessionStorage(StreamConfigurationSessionStorageJsonUnmarshaller.getInstance().unmarshall(context));
@@ -75,6 +87,10 @@ public class StreamConfigurationCreateJsonUnmarshaller implements Unmarshaller<S
                     streamConfigurationCreate.setStreamingImageIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("volumeConfiguration", targetDepth)) {
+                    context.nextToken();
+                    streamConfigurationCreate.setVolumeConfiguration(VolumeConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

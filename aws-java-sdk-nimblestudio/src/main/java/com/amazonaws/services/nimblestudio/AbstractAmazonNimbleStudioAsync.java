@@ -301,6 +301,19 @@ public class AbstractAmazonNimbleStudioAsync extends AbstractAmazonNimbleStudio 
     }
 
     @Override
+    public java.util.concurrent.Future<GetStreamingSessionBackupResult> getStreamingSessionBackupAsync(GetStreamingSessionBackupRequest request) {
+
+        return getStreamingSessionBackupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStreamingSessionBackupResult> getStreamingSessionBackupAsync(GetStreamingSessionBackupRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetStreamingSessionBackupRequest, GetStreamingSessionBackupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetStreamingSessionStreamResult> getStreamingSessionStreamAsync(GetStreamingSessionStreamRequest request) {
 
         return getStreamingSessionStreamAsync(request, null);
@@ -413,6 +426,19 @@ public class AbstractAmazonNimbleStudioAsync extends AbstractAmazonNimbleStudio 
     @Override
     public java.util.concurrent.Future<ListStreamingImagesResult> listStreamingImagesAsync(ListStreamingImagesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListStreamingImagesRequest, ListStreamingImagesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStreamingSessionBackupsResult> listStreamingSessionBackupsAsync(ListStreamingSessionBackupsRequest request) {
+
+        return listStreamingSessionBackupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStreamingSessionBackupsResult> listStreamingSessionBackupsAsync(ListStreamingSessionBackupsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListStreamingSessionBackupsRequest, ListStreamingSessionBackupsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

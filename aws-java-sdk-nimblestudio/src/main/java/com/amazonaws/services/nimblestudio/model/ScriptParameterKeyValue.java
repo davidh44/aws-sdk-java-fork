@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A parameter for a studio component script, in the form of a key:value pair.
+ * A parameter for a studio component script, in the form of a key-value pair.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/nimble-2020-08-01/ScriptParameterKeyValue" target="_top">AWS API

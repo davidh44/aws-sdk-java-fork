@@ -43,6 +43,21 @@ public class AbstractAmazonRoute53DomainsAsync extends AbstractAmazonRoute53Doma
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateDelegationSignerToDomainResult> associateDelegationSignerToDomainAsync(
+            AssociateDelegationSignerToDomainRequest request) {
+
+        return associateDelegationSignerToDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateDelegationSignerToDomainResult> associateDelegationSignerToDomainAsync(
+            AssociateDelegationSignerToDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateDelegationSignerToDomainRequest, AssociateDelegationSignerToDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelDomainTransferToAnotherAwsAccountResult> cancelDomainTransferToAnotherAwsAccountAsync(
             CancelDomainTransferToAnotherAwsAccountRequest request) {
 
@@ -131,6 +146,21 @@ public class AbstractAmazonRoute53DomainsAsync extends AbstractAmazonRoute53Doma
     @Override
     public java.util.concurrent.Future<DisableDomainTransferLockResult> disableDomainTransferLockAsync(DisableDomainTransferLockRequest request,
             com.amazonaws.handlers.AsyncHandler<DisableDomainTransferLockRequest, DisableDomainTransferLockResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateDelegationSignerFromDomainResult> disassociateDelegationSignerFromDomainAsync(
+            DisassociateDelegationSignerFromDomainRequest request) {
+
+        return disassociateDelegationSignerFromDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateDelegationSignerFromDomainResult> disassociateDelegationSignerFromDomainAsync(
+            DisassociateDelegationSignerFromDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateDelegationSignerFromDomainRequest, DisassociateDelegationSignerFromDomainResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -312,6 +342,19 @@ public class AbstractAmazonRoute53DomainsAsync extends AbstractAmazonRoute53Doma
     }
 
     @Override
+    public java.util.concurrent.Future<PushDomainResult> pushDomainAsync(PushDomainRequest request) {
+
+        return pushDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PushDomainResult> pushDomainAsync(PushDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<PushDomainRequest, PushDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterDomainResult> registerDomainAsync(RegisterDomainRequest request) {
 
         return registerDomainAsync(request, null);
@@ -361,6 +404,19 @@ public class AbstractAmazonRoute53DomainsAsync extends AbstractAmazonRoute53Doma
     @Override
     public java.util.concurrent.Future<ResendContactReachabilityEmailResult> resendContactReachabilityEmailAsync(ResendContactReachabilityEmailRequest request,
             com.amazonaws.handlers.AsyncHandler<ResendContactReachabilityEmailRequest, ResendContactReachabilityEmailResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResendOperationAuthorizationResult> resendOperationAuthorizationAsync(ResendOperationAuthorizationRequest request) {
+
+        return resendOperationAuthorizationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResendOperationAuthorizationResult> resendOperationAuthorizationAsync(ResendOperationAuthorizationRequest request,
+            com.amazonaws.handlers.AsyncHandler<ResendOperationAuthorizationRequest, ResendOperationAuthorizationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

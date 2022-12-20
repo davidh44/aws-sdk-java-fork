@@ -141,7 +141,7 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
     private String lineageGroupArn;
     /**
      * <p>
-     * A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an experiment run.
+     * A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * </p>
      */
     private java.util.List<TrialComponentSource> sources;
@@ -1033,11 +1033,10 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an experiment run.
+     * A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * </p>
      * 
-     * @return A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an
-     *         experiment run.
+     * @return A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      */
 
     public java.util.List<TrialComponentSource> getSources() {
@@ -1046,12 +1045,11 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an experiment run.
+     * A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * </p>
      * 
      * @param sources
-     *        A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an
-     *        experiment run.
+     *        A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      */
 
     public void setSources(java.util.Collection<TrialComponentSource> sources) {
@@ -1065,7 +1063,7 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an experiment run.
+     * A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1074,8 +1072,7 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param sources
-     *        A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an
-     *        experiment run.
+     *        A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1091,12 +1088,11 @@ public class DescribeTrialComponentResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an experiment run.
+     * A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * </p>
      * 
      * @param sources
-     *        A list of the Amazon Resource Name (ARN) and, if applicable, job type for multiple sources of an
-     *        experiment run.
+     *        A list of ARNs and, if applicable, job types for multiple sources of an experiment run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

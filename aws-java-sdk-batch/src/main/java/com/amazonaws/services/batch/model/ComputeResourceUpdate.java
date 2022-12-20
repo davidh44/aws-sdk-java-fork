@@ -89,6 +89,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
      * environments</a> in the <i>Batch User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      */
     private java.util.List<String> subnets;
     /**
@@ -272,7 +287,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance
      * type before instances are launched. For example, if your maximum percentage is 20%, the Spot price must be less
      * than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market) price
-     * and never more than your maximum percentage.
+     * and never more than your maximum percentage. For most use cases, we recommend leaving this field empty.
      * </p>
      * <p>
      * When updating a compute environment, changing the bid percentage requires an infrastructure update of the compute
@@ -679,6 +694,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
      * environments</a> in the <i>Batch User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * 
      * @return The VPC subnets where the compute resources are launched. Fargate compute resources can contain up to 16
      *         subnets. For Fargate compute resources, providing an empty list will be handled as if this parameter
@@ -691,6 +721,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *         compute environment. For more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
      *         compute environments</a> in the <i>Batch User Guide</i>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *         > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *         Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *         "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *         > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *         <i>Amazon ECS Developer Guide</i>.
+     *         </p>
+     *         <p>
+     *         Batch on Fargate doesn't currently support Local Zones.
+     *         </p>
      */
 
     public java.util.List<String> getSubnets() {
@@ -712,6 +757,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
      * environments</a> in the <i>Batch User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. Fargate compute resources can contain up to 16
@@ -725,6 +785,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        compute environment. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
      *        compute environments</a> in the <i>Batch User Guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *        > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *        Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *        > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *        <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Batch on Fargate doesn't currently support Local Zones.
+     *        </p>
      */
 
     public void setSubnets(java.util.Collection<String> subnets) {
@@ -751,6 +826,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
      * environments</a> in the <i>Batch User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSubnets(java.util.Collection)} or {@link #withSubnets(java.util.Collection)} if you want to override
@@ -769,6 +859,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        compute environment. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
      *        compute environments</a> in the <i>Batch User Guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *        > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *        Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *        > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *        <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Batch on Fargate doesn't currently support Local Zones.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -797,6 +902,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
      * environments</a> in the <i>Batch User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones">
+     * Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web Services Local
+     * Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones">
+     * Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the <i>Amazon ECS
+     * Developer Guide</i>.
+     * </p>
+     * <p>
+     * Batch on Fargate doesn't currently support Local Zones.
+     * </p>
+     * </note>
      * 
      * @param subnets
      *        The VPC subnets where the compute resources are launched. Fargate compute resources can contain up to 16
@@ -810,6 +930,21 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        compute environment. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
      *        compute environments</a> in the <i>Batch User Guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Batch on Amazon EC2 and Batch on Amazon EKS support Local Zones. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-local-zones"
+     *        > Local Zones</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>, <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/local-zones.html">Amazon EKS and Amazon Web
+     *        Services Local Zones</a> in the <i>Amazon EKS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-regions-zones.html#clusters-local-zones"
+     *        > Amazon ECS clusters in Local Zones, Wavelength Zones, and Amazon Web Services Outposts</a> in the
+     *        <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        Batch on Fargate doesn't currently support Local Zones.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2165,7 +2300,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance
      * type before instances are launched. For example, if your maximum percentage is 20%, the Spot price must be less
      * than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market) price
-     * and never more than your maximum percentage.
+     * and never more than your maximum percentage. For most use cases, we recommend leaving this field empty.
      * </p>
      * <p>
      * When updating a compute environment, changing the bid percentage requires an infrastructure update of the compute
@@ -2183,7 +2318,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that
      *        instance type before instances are launched. For example, if your maximum percentage is 20%, the Spot
      *        price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay
-     *        the lowest (market) price and never more than your maximum percentage.</p>
+     *        the lowest (market) price and never more than your maximum percentage. For most use cases, we recommend
+     *        leaving this field empty.</p>
      *        <p>
      *        When updating a compute environment, changing the bid percentage requires an infrastructure update of the
      *        compute environment. For more information, see <a
@@ -2205,7 +2341,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance
      * type before instances are launched. For example, if your maximum percentage is 20%, the Spot price must be less
      * than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market) price
-     * and never more than your maximum percentage.
+     * and never more than your maximum percentage. For most use cases, we recommend leaving this field empty.
      * </p>
      * <p>
      * When updating a compute environment, changing the bid percentage requires an infrastructure update of the compute
@@ -2222,7 +2358,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * @return The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that
      *         instance type before instances are launched. For example, if your maximum percentage is 20%, the Spot
      *         price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay
-     *         the lowest (market) price and never more than your maximum percentage.</p>
+     *         the lowest (market) price and never more than your maximum percentage. For most use cases, we recommend
+     *         leaving this field empty.</p>
      *         <p>
      *         When updating a compute environment, changing the bid percentage requires an infrastructure update of the
      *         compute environment. For more information, see <a
@@ -2244,7 +2381,7 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance
      * type before instances are launched. For example, if your maximum percentage is 20%, the Spot price must be less
      * than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay the lowest (market) price
-     * and never more than your maximum percentage.
+     * and never more than your maximum percentage. For most use cases, we recommend leaving this field empty.
      * </p>
      * <p>
      * When updating a compute environment, changing the bid percentage requires an infrastructure update of the compute
@@ -2262,7 +2399,8 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        The maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that
      *        instance type before instances are launched. For example, if your maximum percentage is 20%, the Spot
      *        price must be less than 20% of the current On-Demand price for that Amazon EC2 instance. You always pay
-     *        the lowest (market) price and never more than your maximum percentage.</p>
+     *        the lowest (market) price and never more than your maximum percentage. For most use cases, we recommend
+     *        leaving this field empty.</p>
      *        <p>
      *        When updating a compute environment, changing the bid percentage requires an infrastructure update of the
      *        compute environment. For more information, see <a

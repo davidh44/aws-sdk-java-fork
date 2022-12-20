@@ -29,7 +29,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * admins appear in studio membership.
  * </p>
  * <p>
- * When you add a user to studio membership with the persona ADMIN, upon logging in to the Nimble Studio portal, they
+ * When you add a user to studio membership with the ADMIN persona, upon logging in to the Nimble Studio portal, they
  * are granted permissions specified by the Studio's Admin IAM role.
  * </p>
  * 

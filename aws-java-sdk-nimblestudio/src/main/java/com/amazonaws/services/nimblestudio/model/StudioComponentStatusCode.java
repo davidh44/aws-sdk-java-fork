@@ -19,11 +19,12 @@ import javax.annotation.Generated;
  * The current status of the studio component resource.
  * </p>
  * <p>
- * When the resource is in the 'READY' state, the status code signals what the last mutation made to the resource was.
+ * When the resource is in the <code>READY</code> state, the status code signals what the last mutation made to the
+ * resource was.
  * </p>
  * <p>
- * When the resource is in a CREATE_FAILED/UPDATE_FAILED/DELETE_FAILED state, the status code signals what went wrong
- * and why the mutation failed.
+ * When the resource is in a <code>CREATE_FAILED</code>, <code>UPDATE_FAILED</code>, or <code>DELETE_FAILED</code>
+ * state, the status code signals what went wrong and why the mutation failed.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

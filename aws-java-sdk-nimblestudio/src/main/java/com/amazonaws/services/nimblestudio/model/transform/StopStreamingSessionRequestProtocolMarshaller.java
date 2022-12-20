@@ -34,7 +34,7 @@ public class StopStreamingSessionRequestProtocolMarshaller implements Marshaller
 
     private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
             .requestUri("/2020-08-01/studios/{studioId}/streaming-sessions/{sessionId}/stop").httpMethodName(HttpMethodName.POST)
-            .hasExplicitPayloadMember(false).hasPayloadMembers(false).serviceName("AmazonNimbleStudio").build();
+            .hasExplicitPayloadMember(false).hasPayloadMembers(true).serviceName("AmazonNimbleStudio").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 

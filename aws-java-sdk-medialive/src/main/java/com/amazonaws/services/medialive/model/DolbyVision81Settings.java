@@ -18,7 +18,7 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Dolby Vision Profile 8.1 Settings
+ * Dolby Vision81 Settings
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DolbyVision81Settings" target="_top">AWS
  *      API Documentation</a>

@@ -55,6 +55,10 @@ public class DescribeImagesResultStaxUnmarshaller implements Unmarshaller<Descri
                     continue;
                 }
 
+                if (context.testExpression("nextToken", targetDepth)) {
+                    describeImagesResult.setNextToken(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return describeImagesResult;

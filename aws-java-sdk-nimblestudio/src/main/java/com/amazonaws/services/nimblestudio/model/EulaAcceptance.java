@@ -30,7 +30,7 @@ public class EulaAcceptance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix epoch timestamp in seconds for when the EULA was accepted.
+     * The ISO timestamp in seconds for when the EULA was accepted.
      * </p>
      */
     private java.util.Date acceptedAt;
@@ -61,11 +61,11 @@ public class EulaAcceptance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix epoch timestamp in seconds for when the EULA was accepted.
+     * The ISO timestamp in seconds for when the EULA was accepted.
      * </p>
      * 
      * @param acceptedAt
-     *        The Unix epoch timestamp in seconds for when the EULA was accepted.
+     *        The ISO timestamp in seconds for when the EULA was accepted.
      */
 
     public void setAcceptedAt(java.util.Date acceptedAt) {
@@ -74,10 +74,10 @@ public class EulaAcceptance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix epoch timestamp in seconds for when the EULA was accepted.
+     * The ISO timestamp in seconds for when the EULA was accepted.
      * </p>
      * 
-     * @return The Unix epoch timestamp in seconds for when the EULA was accepted.
+     * @return The ISO timestamp in seconds for when the EULA was accepted.
      */
 
     public java.util.Date getAcceptedAt() {
@@ -86,11 +86,11 @@ public class EulaAcceptance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Unix epoch timestamp in seconds for when the EULA was accepted.
+     * The ISO timestamp in seconds for when the EULA was accepted.
      * </p>
      * 
      * @param acceptedAt
-     *        The Unix epoch timestamp in seconds for when the EULA was accepted.
+     *        The ISO timestamp in seconds for when the EULA was accepted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
