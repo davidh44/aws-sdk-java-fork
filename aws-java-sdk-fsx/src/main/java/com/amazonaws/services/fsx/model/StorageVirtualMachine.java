@@ -100,6 +100,12 @@ public class StorageVirtualMachine implements Serializable, Cloneable, Structure
     private String storageVirtualMachineId;
     /**
      * <p>
+     * Describes the SVM's subtype.
+     * </p>
+     */
+    private String subtype;
+    /**
+     * <p>
      * The SVM's UUID (universally unique identifier).
      * </p>
      */
@@ -682,6 +688,65 @@ public class StorageVirtualMachine implements Serializable, Cloneable, Structure
 
     /**
      * <p>
+     * Describes the SVM's subtype.
+     * </p>
+     * 
+     * @param subtype
+     *        Describes the SVM's subtype.
+     * @see StorageVirtualMachineSubtype
+     */
+
+    public void setSubtype(String subtype) {
+        this.subtype = subtype;
+    }
+
+    /**
+     * <p>
+     * Describes the SVM's subtype.
+     * </p>
+     * 
+     * @return Describes the SVM's subtype.
+     * @see StorageVirtualMachineSubtype
+     */
+
+    public String getSubtype() {
+        return this.subtype;
+    }
+
+    /**
+     * <p>
+     * Describes the SVM's subtype.
+     * </p>
+     * 
+     * @param subtype
+     *        Describes the SVM's subtype.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StorageVirtualMachineSubtype
+     */
+
+    public StorageVirtualMachine withSubtype(String subtype) {
+        setSubtype(subtype);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the SVM's subtype.
+     * </p>
+     * 
+     * @param subtype
+     *        Describes the SVM's subtype.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StorageVirtualMachineSubtype
+     */
+
+    public StorageVirtualMachine withSubtype(StorageVirtualMachineSubtype subtype) {
+        this.subtype = subtype.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The SVM's UUID (universally unique identifier).
      * </p>
      * 
@@ -899,6 +964,8 @@ public class StorageVirtualMachine implements Serializable, Cloneable, Structure
             sb.append("ResourceARN: ").append(getResourceARN()).append(",");
         if (getStorageVirtualMachineId() != null)
             sb.append("StorageVirtualMachineId: ").append(getStorageVirtualMachineId()).append(",");
+        if (getSubtype() != null)
+            sb.append("Subtype: ").append(getSubtype()).append(",");
         if (getUUID() != null)
             sb.append("UUID: ").append(getUUID()).append(",");
         if (getTags() != null)
@@ -953,6 +1020,10 @@ public class StorageVirtualMachine implements Serializable, Cloneable, Structure
             return false;
         if (other.getStorageVirtualMachineId() != null && other.getStorageVirtualMachineId().equals(this.getStorageVirtualMachineId()) == false)
             return false;
+        if (other.getSubtype() == null ^ this.getSubtype() == null)
+            return false;
+        if (other.getSubtype() != null && other.getSubtype().equals(this.getSubtype()) == false)
+            return false;
         if (other.getUUID() == null ^ this.getUUID() == null)
             return false;
         if (other.getUUID() != null && other.getUUID().equals(this.getUUID()) == false)
@@ -985,6 +1056,7 @@ public class StorageVirtualMachine implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getResourceARN() == null) ? 0 : getResourceARN().hashCode());
         hashCode = prime * hashCode + ((getStorageVirtualMachineId() == null) ? 0 : getStorageVirtualMachineId().hashCode());
+        hashCode = prime * hashCode + ((getSubtype() == null) ? 0 : getSubtype().hashCode());
         hashCode = prime * hashCode + ((getUUID() == null) ? 0 : getUUID().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getLifecycleTransitionReason() == null) ? 0 : getLifecycleTransitionReason().hashCode());

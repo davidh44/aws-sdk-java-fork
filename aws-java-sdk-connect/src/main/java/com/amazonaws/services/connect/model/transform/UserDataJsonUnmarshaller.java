@@ -85,6 +85,10 @@ public class UserDataJsonUnmarshaller implements Unmarshaller<UserData, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("NextStatus", targetDepth)) {
+                    context.nextToken();
+                    userData.setNextStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

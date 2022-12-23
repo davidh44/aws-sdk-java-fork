@@ -40,6 +40,8 @@ public class GetCurrentMetricDataRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<List> SORTCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SortCriteria").build();
 
     private static final GetCurrentMetricDataRequestMarshaller instance = new GetCurrentMetricDataRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class GetCurrentMetricDataRequestMarshaller {
             protocolMarshaller.marshall(getCurrentMetricDataRequest.getCurrentMetrics(), CURRENTMETRICS_BINDING);
             protocolMarshaller.marshall(getCurrentMetricDataRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getCurrentMetricDataRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(getCurrentMetricDataRequest.getSortCriteria(), SORTCRITERIA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

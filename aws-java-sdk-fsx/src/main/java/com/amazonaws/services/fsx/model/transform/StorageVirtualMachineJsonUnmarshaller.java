@@ -80,6 +80,10 @@ public class StorageVirtualMachineJsonUnmarshaller implements Unmarshaller<Stora
                     context.nextToken();
                     storageVirtualMachine.setStorageVirtualMachineId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Subtype", targetDepth)) {
+                    context.nextToken();
+                    storageVirtualMachine.setSubtype(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("UUID", targetDepth)) {
                     context.nextToken();
                     storageVirtualMachine.setUUID(context.getUnmarshaller(String.class).unmarshall(context));

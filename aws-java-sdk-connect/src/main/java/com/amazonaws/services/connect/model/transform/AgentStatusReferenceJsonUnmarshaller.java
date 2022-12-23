@@ -56,6 +56,10 @@ public class AgentStatusReferenceJsonUnmarshaller implements Unmarshaller<AgentS
                     context.nextToken();
                     agentStatusReference.setStatusArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StatusName", targetDepth)) {
+                    context.nextToken();
+                    agentStatusReference.setStatusName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

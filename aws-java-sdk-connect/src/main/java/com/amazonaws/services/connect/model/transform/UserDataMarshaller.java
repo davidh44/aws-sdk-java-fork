@@ -45,6 +45,8 @@ public class UserDataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActiveSlotsByChannel").build();
     private static final MarshallingInfo<List> CONTACTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Contacts").build();
+    private static final MarshallingInfo<String> NEXTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NextStatus").build();
 
     private static final UserDataMarshaller instance = new UserDataMarshaller();
 
@@ -70,6 +72,7 @@ public class UserDataMarshaller {
             protocolMarshaller.marshall(userData.getMaxSlotsByChannel(), MAXSLOTSBYCHANNEL_BINDING);
             protocolMarshaller.marshall(userData.getActiveSlotsByChannel(), ACTIVESLOTSBYCHANNEL_BINDING);
             protocolMarshaller.marshall(userData.getContacts(), CONTACTS_BINDING);
+            protocolMarshaller.marshall(userData.getNextStatus(), NEXTSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

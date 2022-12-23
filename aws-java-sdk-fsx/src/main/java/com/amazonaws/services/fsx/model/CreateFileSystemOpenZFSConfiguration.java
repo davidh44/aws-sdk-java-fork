@@ -74,9 +74,10 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </ul>
      * <p>
      * For more information, see: <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     * availability</a> and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File
-     * system performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     * >Deployment type availability</a> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     * performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      */
     private String deploymentType;
@@ -361,9 +362,10 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </ul>
      * <p>
      * For more information, see: <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     * availability</a> and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File
-     * system performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     * >Deployment type availability</a> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     * performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param deploymentType
@@ -386,11 +388,11 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see: <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     *        availability</a> and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File system
-     *        performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     *        For more information, see: <a href=
+     *        "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     *        >Deployment type availability</a> and <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     *        performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * @see OpenZFSDeploymentType
      */
 
@@ -421,9 +423,10 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </ul>
      * <p>
      * For more information, see: <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     * availability</a> and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File
-     * system performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     * >Deployment type availability</a> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     * performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @return Specifies the file system deployment type. Single AZ deployment types are configured for redundancy
@@ -445,11 +448,11 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information, see: <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     *         availability</a> and <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File system
-     *         performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     *         For more information, see: <a href=
+     *         "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     *         >Deployment type availability</a> and <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File
+     *         system performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * @see OpenZFSDeploymentType
      */
 
@@ -480,9 +483,10 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </ul>
      * <p>
      * For more information, see: <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     * availability</a> and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File
-     * system performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     * >Deployment type availability</a> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     * performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param deploymentType
@@ -505,11 +509,11 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see: <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     *        availability</a> and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File system
-     *        performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     *        For more information, see: <a href=
+     *        "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     *        >Deployment type availability</a> and <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     *        performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenZFSDeploymentType
      */
@@ -542,9 +546,10 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </ul>
      * <p>
      * For more information, see: <a
-     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     * availability</a> and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File
-     * system performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     * >Deployment type availability</a> and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     * performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param deploymentType
@@ -567,11 +572,11 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see: <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/available-aws-regions.html">Deployment type
-     *        availability</a> and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/zfs-fs-performance.html"> File system
-     *        performance</a>in the<i>Amazon FSx for OpenZFS User Guide</i>.
+     *        For more information, see: <a href=
+     *        "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
+     *        >Deployment type availability</a> and <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
+     *        performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenZFSDeploymentType
      */

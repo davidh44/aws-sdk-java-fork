@@ -58,6 +58,24 @@ public class UserDataFiltersJsonUnmarshaller implements Unmarshaller<UserDataFil
                     context.nextToken();
                     userDataFilters.setContactFilter(ContactFilterJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RoutingProfiles", targetDepth)) {
+                    context.nextToken();
+                    userDataFilters.setRoutingProfiles(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Agents", targetDepth)) {
+                    context.nextToken();
+                    userDataFilters.setAgents(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("UserHierarchyGroups", targetDepth)) {
+                    context.nextToken();
+                    userDataFilters.setUserHierarchyGroups(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -7886,7 +7886,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
     /**
      * <p>
      * Initiates silent monitoring of a contact. The Contact Control Panel (CCP) of the user specified by <i>userId</i>
-     * will be set to silent monitoring mode on the contact. Supports voice and chat contacts.
+     * will be set to silent monitoring mode on the contact.
      * </p>
      * 
      * @param monitorContactRequest

@@ -32,6 +32,8 @@ public class FiltersMarshaller {
             .marshallLocationName("Queues").build();
     private static final MarshallingInfo<List> CHANNELS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Channels").build();
+    private static final MarshallingInfo<List> ROUTINGPROFILES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingProfiles").build();
 
     private static final FiltersMarshaller instance = new FiltersMarshaller();
 
@@ -51,6 +53,7 @@ public class FiltersMarshaller {
         try {
             protocolMarshaller.marshall(filters.getQueues(), QUEUES_BINDING);
             protocolMarshaller.marshall(filters.getChannels(), CHANNELS_BINDING);
+            protocolMarshaller.marshall(filters.getRoutingProfiles(), ROUTINGPROFILES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

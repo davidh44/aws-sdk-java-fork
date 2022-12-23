@@ -30,7 +30,9 @@ public enum Runtime {
     PYTHON_3_7("PYTHON_3_7"),
     PYTHON_3_8("PYTHON_3_8"),
     PYTHON_3_9("PYTHON_3_9"),
-    UNSUPPORTED("UNSUPPORTED");
+    UNSUPPORTED("UNSUPPORTED"),
+    NODEJS_18_X("NODEJS_18_X"),
+    GO_1_X("GO_1_X");
 
     private String value;
 

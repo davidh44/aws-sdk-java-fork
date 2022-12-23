@@ -44,6 +44,8 @@ public class StorageVirtualMachineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceARN").build();
     private static final MarshallingInfo<String> STORAGEVIRTUALMACHINEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StorageVirtualMachineId").build();
+    private static final MarshallingInfo<String> SUBTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Subtype").build();
     private static final MarshallingInfo<String> UUID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("UUID").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -77,6 +79,7 @@ public class StorageVirtualMachineMarshaller {
             protocolMarshaller.marshall(storageVirtualMachine.getName(), NAME_BINDING);
             protocolMarshaller.marshall(storageVirtualMachine.getResourceARN(), RESOURCEARN_BINDING);
             protocolMarshaller.marshall(storageVirtualMachine.getStorageVirtualMachineId(), STORAGEVIRTUALMACHINEID_BINDING);
+            protocolMarshaller.marshall(storageVirtualMachine.getSubtype(), SUBTYPE_BINDING);
             protocolMarshaller.marshall(storageVirtualMachine.getUUID(), UUID_BINDING);
             protocolMarshaller.marshall(storageVirtualMachine.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(storageVirtualMachine.getLifecycleTransitionReason(), LIFECYCLETRANSITIONREASON_BINDING);

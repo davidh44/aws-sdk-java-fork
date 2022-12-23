@@ -33,9 +33,32 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
     private String instanceId;
     /**
      * <p>
-     * The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only for the
-     * resources associated with the queues or channels included in the filter. You can include both queue IDs and queue
-     * ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     * The filters to apply to returned metrics. You can filter up to the following limits:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Queues: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Routing profiles: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metric data is retrieved only for the resources associated with the queues or routing profiles, and by any
+     * channels included in the filter. (You cannot filter by both queue AND routing profile.) You can include both
+     * resource IDs and resource ARNs in the same request.
+     * </p>
+     * <p>
+     * Currently tagging is only supported on the resources that are passed in the filter.
      * </p>
      */
     private Filters filters;
@@ -53,7 +76,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter. In
+     * addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     * <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      * </p>
      * </li>
      * <li>
@@ -248,6 +273,24 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * The way to sort the resulting response based on metrics. You can enter one sort criteria. By default resources
+     * are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection is sorted based on
+     * the input metrics.
+     * </p>
+     * <p>
+     * Note the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<CurrentMetricSortCriteria> sortCriteria;
 
     /**
      * <p>
@@ -291,15 +334,60 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only for the
-     * resources associated with the queues or channels included in the filter. You can include both queue IDs and queue
-     * ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     * The filters to apply to returned metrics. You can filter up to the following limits:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Queues: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Routing profiles: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metric data is retrieved only for the resources associated with the queues or routing profiles, and by any
+     * channels included in the filter. (You cannot filter by both queue AND routing profile.) You can include both
+     * resource IDs and resource ARNs in the same request.
+     * </p>
+     * <p>
+     * Currently tagging is only supported on the resources that are passed in the filter.
      * </p>
      * 
      * @param filters
-     *        The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only
-     *        for the resources associated with the queues or channels included in the filter. You can include both
-     *        queue IDs and queue ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     *        The filters to apply to returned metrics. You can filter up to the following limits:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Queues: 100
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Routing profiles: 100
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Metric data is retrieved only for the resources associated with the queues or routing profiles, and by any
+     *        channels included in the filter. (You cannot filter by both queue AND routing profile.) You can include
+     *        both resource IDs and resource ARNs in the same request.
+     *        </p>
+     *        <p>
+     *        Currently tagging is only supported on the resources that are passed in the filter.
      */
 
     public void setFilters(Filters filters) {
@@ -308,14 +396,59 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only for the
-     * resources associated with the queues or channels included in the filter. You can include both queue IDs and queue
-     * ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     * The filters to apply to returned metrics. You can filter up to the following limits:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Queues: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Routing profiles: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metric data is retrieved only for the resources associated with the queues or routing profiles, and by any
+     * channels included in the filter. (You cannot filter by both queue AND routing profile.) You can include both
+     * resource IDs and resource ARNs in the same request.
+     * </p>
+     * <p>
+     * Currently tagging is only supported on the resources that are passed in the filter.
      * </p>
      * 
-     * @return The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only
-     *         for the resources associated with the queues or channels included in the filter. You can include both
-     *         queue IDs and queue ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     * @return The filters to apply to returned metrics. You can filter up to the following limits:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Queues: 100
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Routing profiles: 100
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Metric data is retrieved only for the resources associated with the queues or routing profiles, and by
+     *         any channels included in the filter. (You cannot filter by both queue AND routing profile.) You can
+     *         include both resource IDs and resource ARNs in the same request.
+     *         </p>
+     *         <p>
+     *         Currently tagging is only supported on the resources that are passed in the filter.
      */
 
     public Filters getFilters() {
@@ -324,15 +457,60 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only for the
-     * resources associated with the queues or channels included in the filter. You can include both queue IDs and queue
-     * ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     * The filters to apply to returned metrics. You can filter up to the following limits:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Queues: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Routing profiles: 100
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Metric data is retrieved only for the resources associated with the queues or routing profiles, and by any
+     * channels included in the filter. (You cannot filter by both queue AND routing profile.) You can include both
+     * resource IDs and resource ARNs in the same request.
+     * </p>
+     * <p>
+     * Currently tagging is only supported on the resources that are passed in the filter.
      * </p>
      * 
      * @param filters
-     *        The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only
-     *        for the resources associated with the queues or channels included in the filter. You can include both
-     *        queue IDs and queue ARNs in the same request. VOICE, CHAT, and TASK channels are supported.
+     *        The filters to apply to returned metrics. You can filter up to the following limits:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Queues: 100
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Routing profiles: 100
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Channels: 3 (VOICE, CHAT, and TASK channels are supported.)
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Metric data is retrieved only for the resources associated with the queues or routing profiles, and by any
+     *        channels included in the filter. (You cannot filter by both queue AND routing profile.) You can include
+     *        both resource IDs and resource ARNs in the same request.
+     *        </p>
+     *        <p>
+     *        Currently tagging is only supported on the resources that are passed in the filter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -355,7 +533,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter. In
+     * addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     * <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      * </p>
      * </li>
      * <li>
@@ -377,6 +557,8 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *         <li>
      *         <p>
      *         If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     *         In addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     *         <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -405,7 +587,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter. In
+     * addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     * <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      * </p>
      * </li>
      * <li>
@@ -428,6 +612,8 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     *        In addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     *        <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -461,7 +647,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter. In
+     * addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     * <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      * </p>
      * </li>
      * <li>
@@ -489,6 +677,8 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     *        In addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     *        <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -524,7 +714,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter. In
+     * addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     * <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      * </p>
      * </li>
      * <li>
@@ -547,6 +739,8 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     *        In addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     *        <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -577,7 +771,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     * If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter. In
+     * addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     * <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      * </p>
      * </li>
      * <li>
@@ -600,6 +796,8 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        If you group by <code>ROUTING_PROFILE</code>, you must include either a queue or routing profile filter.
+     *        In addition, a routing profile filter is required for metrics <code>CONTACTS_SCHEDULED</code>,
+     *        <code>CONTACTS_IN_QUEUE</code>, and <code> OLDEST_CONTACT_AGE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2086,6 +2284,168 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The way to sort the resulting response based on metrics. You can enter one sort criteria. By default resources
+     * are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection is sorted based on
+     * the input metrics.
+     * </p>
+     * <p>
+     * Note the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The way to sort the resulting response based on metrics. You can enter one sort criteria. By default
+     *         resources are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection
+     *         is sorted based on the input metrics.</p>
+     *         <p>
+     *         Note the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.List<CurrentMetricSortCriteria> getSortCriteria() {
+        return sortCriteria;
+    }
+
+    /**
+     * <p>
+     * The way to sort the resulting response based on metrics. You can enter one sort criteria. By default resources
+     * are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection is sorted based on
+     * the input metrics.
+     * </p>
+     * <p>
+     * Note the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param sortCriteria
+     *        The way to sort the resulting response based on metrics. You can enter one sort criteria. By default
+     *        resources are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection
+     *        is sorted based on the input metrics.</p>
+     *        <p>
+     *        Note the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     *        </p>
+     *        </li>
+     */
+
+    public void setSortCriteria(java.util.Collection<CurrentMetricSortCriteria> sortCriteria) {
+        if (sortCriteria == null) {
+            this.sortCriteria = null;
+            return;
+        }
+
+        this.sortCriteria = new java.util.ArrayList<CurrentMetricSortCriteria>(sortCriteria);
+    }
+
+    /**
+     * <p>
+     * The way to sort the resulting response based on metrics. You can enter one sort criteria. By default resources
+     * are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection is sorted based on
+     * the input metrics.
+     * </p>
+     * <p>
+     * Note the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSortCriteria(java.util.Collection)} or {@link #withSortCriteria(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param sortCriteria
+     *        The way to sort the resulting response based on metrics. You can enter one sort criteria. By default
+     *        resources are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection
+     *        is sorted based on the input metrics.</p>
+     *        <p>
+     *        Note the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCurrentMetricDataRequest withSortCriteria(CurrentMetricSortCriteria... sortCriteria) {
+        if (this.sortCriteria == null) {
+            setSortCriteria(new java.util.ArrayList<CurrentMetricSortCriteria>(sortCriteria.length));
+        }
+        for (CurrentMetricSortCriteria ele : sortCriteria) {
+            this.sortCriteria.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The way to sort the resulting response based on metrics. You can enter one sort criteria. By default resources
+     * are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection is sorted based on
+     * the input metrics.
+     * </p>
+     * <p>
+     * Note the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param sortCriteria
+     *        The way to sort the resulting response based on metrics. You can enter one sort criteria. By default
+     *        resources are sorted based on <code>AGENTS_ONLINE</code>, <code>DESCENDING</code>. The metric collection
+     *        is sorted based on the input metrics.</p>
+     *        <p>
+     *        Note the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Sorting on <code>SLOTS_ACTIVE</code> and <code>SLOTS_AVAILABLE</code> is not supported.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCurrentMetricDataRequest withSortCriteria(java.util.Collection<CurrentMetricSortCriteria> sortCriteria) {
+        setSortCriteria(sortCriteria);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2108,7 +2468,9 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getSortCriteria() != null)
+            sb.append("SortCriteria: ").append(getSortCriteria());
         sb.append("}");
         return sb.toString();
     }
@@ -2147,6 +2509,10 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getSortCriteria() == null ^ this.getSortCriteria() == null)
+            return false;
+        if (other.getSortCriteria() != null && other.getSortCriteria().equals(this.getSortCriteria()) == false)
+            return false;
         return true;
     }
 
@@ -2161,6 +2527,7 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getCurrentMetrics() == null) ? 0 : getCurrentMetrics().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getSortCriteria() == null) ? 0 : getSortCriteria().hashCode());
         return hashCode;
     }
 

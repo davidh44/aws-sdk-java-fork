@@ -32,6 +32,12 @@ public class UserDataFiltersMarshaller {
             .marshallLocationName("Queues").build();
     private static final MarshallingInfo<StructuredPojo> CONTACTFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContactFilter").build();
+    private static final MarshallingInfo<List> ROUTINGPROFILES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingProfiles").build();
+    private static final MarshallingInfo<List> AGENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Agents").build();
+    private static final MarshallingInfo<List> USERHIERARCHYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserHierarchyGroups").build();
 
     private static final UserDataFiltersMarshaller instance = new UserDataFiltersMarshaller();
 
@@ -51,6 +57,9 @@ public class UserDataFiltersMarshaller {
         try {
             protocolMarshaller.marshall(userDataFilters.getQueues(), QUEUES_BINDING);
             protocolMarshaller.marshall(userDataFilters.getContactFilter(), CONTACTFILTER_BINDING);
+            protocolMarshaller.marshall(userDataFilters.getRoutingProfiles(), ROUTINGPROFILES_BINDING);
+            protocolMarshaller.marshall(userDataFilters.getAgents(), AGENTS_BINDING);
+            protocolMarshaller.marshall(userDataFilters.getUserHierarchyGroups(), USERHIERARCHYGROUPS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

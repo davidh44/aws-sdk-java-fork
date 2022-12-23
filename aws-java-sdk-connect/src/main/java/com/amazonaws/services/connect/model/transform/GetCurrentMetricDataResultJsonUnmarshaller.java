@@ -62,6 +62,10 @@ public class GetCurrentMetricDataResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     getCurrentMetricDataResult.setDataSnapshotTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ApproximateTotalCount", targetDepth)) {
+                    context.nextToken();
+                    getCurrentMetricDataResult.setApproximateTotalCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

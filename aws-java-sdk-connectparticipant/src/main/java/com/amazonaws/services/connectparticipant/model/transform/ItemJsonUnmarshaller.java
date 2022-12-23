@@ -86,6 +86,10 @@ public class ItemJsonUnmarshaller implements Unmarshaller<Item, JsonUnmarshaller
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("MessageMetadata", targetDepth)) {
+                    context.nextToken();
+                    item.setMessageMetadata(MessageMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

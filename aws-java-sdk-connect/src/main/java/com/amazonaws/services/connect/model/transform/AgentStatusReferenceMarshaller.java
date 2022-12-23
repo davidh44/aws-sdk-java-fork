@@ -31,6 +31,8 @@ public class AgentStatusReferenceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatusStartTimestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> STATUSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("StatusArn").build();
+    private static final MarshallingInfo<String> STATUSNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatusName").build();
 
     private static final AgentStatusReferenceMarshaller instance = new AgentStatusReferenceMarshaller();
 
@@ -50,6 +52,7 @@ public class AgentStatusReferenceMarshaller {
         try {
             protocolMarshaller.marshall(agentStatusReference.getStatusStartTimestamp(), STATUSSTARTTIMESTAMP_BINDING);
             protocolMarshaller.marshall(agentStatusReference.getStatusArn(), STATUSARN_BINDING);
+            protocolMarshaller.marshall(agentStatusReference.getStatusName(), STATUSNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
