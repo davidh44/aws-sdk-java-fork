@@ -165,6 +165,10 @@ public class PutMetricStreamRequestMarshaller implements Marshaller<Request<PutM
             }
         }
 
+        if (putMetricStreamRequest.getIncludeLinkedAccountsMetrics() != null) {
+            request.addParameter("IncludeLinkedAccountsMetrics", StringUtils.fromBoolean(putMetricStreamRequest.getIncludeLinkedAccountsMetrics()));
+        }
+
         return request;
     }
 

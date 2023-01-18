@@ -46,9 +46,9 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
     private Boolean cloudWatchMetricsEnabled;
     /**
      * <p>
-     * A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and
-     * _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names
-     * reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
+     * A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z, 0-9, -
+     * (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or
+     * metric names that are reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
      * </p>
      */
     private String metricName;
@@ -191,15 +191,16 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and
-     * _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names
-     * reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
+     * A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z, 0-9, -
+     * (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or
+     * metric names that are reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
      * </p>
      * 
      * @param metricName
-     *        A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, -
-     *        (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace
-     *        or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
+     *        A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z, 0-9,
+     *        - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain
+     *        whitespace or metric names that are reserved for WAF, for example <code>All</code> and
+     *        <code>Default_Action</code>.
      */
 
     public void setMetricName(String metricName) {
@@ -208,15 +209,15 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and
-     * _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names
-     * reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
+     * A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z, 0-9, -
+     * (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or
+     * metric names that are reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
      * </p>
      * 
-     * @return A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, -
-     *         (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain
-     *         whitespace or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>
-     *         .
+     * @return A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z,
+     *         0-9, - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain
+     *         whitespace or metric names that are reserved for WAF, for example <code>All</code> and
+     *         <code>Default_Action</code>.
      */
 
     public String getMetricName() {
@@ -225,15 +226,16 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, - (hyphen), and
-     * _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or metric names
-     * reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
+     * A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z, 0-9, -
+     * (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace or
+     * metric names that are reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
      * </p>
      * 
      * @param metricName
-     *        A name of the Amazon CloudWatch metric. The name can contain only the characters: A-Z, a-z, 0-9, -
-     *        (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain whitespace
-     *        or metric names reserved for WAF, for example <code>All</code> and <code>Default_Action</code>.
+     *        A name of the Amazon CloudWatch metric dimension. The name can contain only the characters: A-Z, a-z, 0-9,
+     *        - (hyphen), and _ (underscore). The name can be from one to 128 characters long. It can't contain
+     *        whitespace or metric names that are reserved for WAF, for example <code>All</code> and
+     *        <code>Default_Action</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

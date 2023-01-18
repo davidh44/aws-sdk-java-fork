@@ -33,8 +33,8 @@ public class GetSampledRequestsRequest extends com.amazonaws.AmazonWebServiceReq
     private String webAclArn;
     /**
      * <p>
-     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample of
-     * requests.
+     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want a sample
+     * of requests.
      * </p>
      */
     private String ruleMetricName;
@@ -122,13 +122,13 @@ public class GetSampledRequestsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample of
-     * requests.
+     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want a sample
+     * of requests.
      * </p>
      * 
      * @param ruleMetricName
-     *        The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample of
-     *        requests.
+     *        The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want a
+     *        sample of requests.
      */
 
     public void setRuleMetricName(String ruleMetricName) {
@@ -137,12 +137,12 @@ public class GetSampledRequestsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample of
-     * requests.
+     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want a sample
+     * of requests.
      * </p>
      * 
-     * @return The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample
-     *         of requests.
+     * @return The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want
+     *         a sample of requests.
      */
 
     public String getRuleMetricName() {
@@ -151,13 +151,13 @@ public class GetSampledRequestsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample of
-     * requests.
+     * The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want a sample
+     * of requests.
      * </p>
      * 
      * @param ruleMetricName
-     *        The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> for which you want a sample of
-     *        requests.
+     *        The metric name assigned to the <code>Rule</code> or <code>RuleGroup</code> dimension for which you want a
+     *        sample of requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

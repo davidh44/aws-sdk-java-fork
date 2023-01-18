@@ -115,6 +115,10 @@ public class GetMetricStreamResultStaxUnmarshaller implements Unmarshaller<GetMe
                     continue;
                 }
 
+                if (context.testExpression("IncludeLinkedAccountsMetrics", targetDepth)) {
+                    getMetricStreamResult.setIncludeLinkedAccountsMetrics(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return getMetricStreamResult;

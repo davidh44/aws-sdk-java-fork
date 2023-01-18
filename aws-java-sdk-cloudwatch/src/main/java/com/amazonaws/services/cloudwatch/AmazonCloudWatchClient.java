@@ -2871,6 +2871,12 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * When you use <code>PutMetricStream</code> to create a new metric stream, the stream is created in the
      * <code>running</code> state. If you use it to update an existing stream, the state of the stream is not changed.
      * </p>
+     * <p>
+     * If you are using CloudWatch cross-account observability and you create a metric stream in a monitoring account,
+     * you can choose whether to include metrics from source accounts in the stream. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html"
+     * >CloudWatch cross-account observability</a>.
+     * </p>
      * 
      * @param putMetricStreamRequest
      * @return Result of the PutMetricStream operation returned by the service.

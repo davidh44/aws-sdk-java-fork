@@ -130,6 +130,13 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration> statisticsConfigurations;
+    /**
+     * <p>
+     * If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics from
+     * source accounts in the metric stream.
+     * </p>
+     */
+    private Boolean includeLinkedAccountsMetrics;
 
     /**
      * <p>
@@ -1004,6 +1011,66 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics from
+     * source accounts in the metric stream.
+     * </p>
+     * 
+     * @param includeLinkedAccountsMetrics
+     *        If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics
+     *        from source accounts in the metric stream.
+     */
+
+    public void setIncludeLinkedAccountsMetrics(Boolean includeLinkedAccountsMetrics) {
+        this.includeLinkedAccountsMetrics = includeLinkedAccountsMetrics;
+    }
+
+    /**
+     * <p>
+     * If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics from
+     * source accounts in the metric stream.
+     * </p>
+     * 
+     * @return If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics
+     *         from source accounts in the metric stream.
+     */
+
+    public Boolean getIncludeLinkedAccountsMetrics() {
+        return this.includeLinkedAccountsMetrics;
+    }
+
+    /**
+     * <p>
+     * If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics from
+     * source accounts in the metric stream.
+     * </p>
+     * 
+     * @param includeLinkedAccountsMetrics
+     *        If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics
+     *        from source accounts in the metric stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutMetricStreamRequest withIncludeLinkedAccountsMetrics(Boolean includeLinkedAccountsMetrics) {
+        setIncludeLinkedAccountsMetrics(includeLinkedAccountsMetrics);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics from
+     * source accounts in the metric stream.
+     * </p>
+     * 
+     * @return If you are creating a metric stream in a monitoring account, specify <code>true</code> to include metrics
+     *         from source accounts in the metric stream.
+     */
+
+    public Boolean isIncludeLinkedAccountsMetrics() {
+        return this.includeLinkedAccountsMetrics;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1030,7 +1097,9 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getStatisticsConfigurations() != null)
-            sb.append("StatisticsConfigurations: ").append(getStatisticsConfigurations());
+            sb.append("StatisticsConfigurations: ").append(getStatisticsConfigurations()).append(",");
+        if (getIncludeLinkedAccountsMetrics() != null)
+            sb.append("IncludeLinkedAccountsMetrics: ").append(getIncludeLinkedAccountsMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -1077,6 +1146,10 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getStatisticsConfigurations() != null && other.getStatisticsConfigurations().equals(this.getStatisticsConfigurations()) == false)
             return false;
+        if (other.getIncludeLinkedAccountsMetrics() == null ^ this.getIncludeLinkedAccountsMetrics() == null)
+            return false;
+        if (other.getIncludeLinkedAccountsMetrics() != null && other.getIncludeLinkedAccountsMetrics().equals(this.getIncludeLinkedAccountsMetrics()) == false)
+            return false;
         return true;
     }
 
@@ -1093,6 +1166,7 @@ public class PutMetricStreamRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getOutputFormat() == null) ? 0 : getOutputFormat().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getStatisticsConfigurations() == null) ? 0 : getStatisticsConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getIncludeLinkedAccountsMetrics() == null) ? 0 : getIncludeLinkedAccountsMetrics().hashCode());
         return hashCode;
     }
 
