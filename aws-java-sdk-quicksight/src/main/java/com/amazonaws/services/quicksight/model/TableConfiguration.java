@@ -64,6 +64,12 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private TablePaginatedReportOptions paginatedReportOptions;
+    /**
+     * <p>
+     * A collection of inline visualizations to display within a chart.
+     * </p>
+     */
+    private java.util.List<TableInlineVisualization> tableInlineVisualizations;
 
     /**
      * <p>
@@ -306,6 +312,76 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A collection of inline visualizations to display within a chart.
+     * </p>
+     * 
+     * @return A collection of inline visualizations to display within a chart.
+     */
+
+    public java.util.List<TableInlineVisualization> getTableInlineVisualizations() {
+        return tableInlineVisualizations;
+    }
+
+    /**
+     * <p>
+     * A collection of inline visualizations to display within a chart.
+     * </p>
+     * 
+     * @param tableInlineVisualizations
+     *        A collection of inline visualizations to display within a chart.
+     */
+
+    public void setTableInlineVisualizations(java.util.Collection<TableInlineVisualization> tableInlineVisualizations) {
+        if (tableInlineVisualizations == null) {
+            this.tableInlineVisualizations = null;
+            return;
+        }
+
+        this.tableInlineVisualizations = new java.util.ArrayList<TableInlineVisualization>(tableInlineVisualizations);
+    }
+
+    /**
+     * <p>
+     * A collection of inline visualizations to display within a chart.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTableInlineVisualizations(java.util.Collection)} or
+     * {@link #withTableInlineVisualizations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param tableInlineVisualizations
+     *        A collection of inline visualizations to display within a chart.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableConfiguration withTableInlineVisualizations(TableInlineVisualization... tableInlineVisualizations) {
+        if (this.tableInlineVisualizations == null) {
+            setTableInlineVisualizations(new java.util.ArrayList<TableInlineVisualization>(tableInlineVisualizations.length));
+        }
+        for (TableInlineVisualization ele : tableInlineVisualizations) {
+            this.tableInlineVisualizations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A collection of inline visualizations to display within a chart.
+     * </p>
+     * 
+     * @param tableInlineVisualizations
+     *        A collection of inline visualizations to display within a chart.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableConfiguration withTableInlineVisualizations(java.util.Collection<TableInlineVisualization> tableInlineVisualizations) {
+        setTableInlineVisualizations(tableInlineVisualizations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -328,7 +404,9 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
         if (getFieldOptions() != null)
             sb.append("FieldOptions: ").append(getFieldOptions()).append(",");
         if (getPaginatedReportOptions() != null)
-            sb.append("PaginatedReportOptions: ").append(getPaginatedReportOptions());
+            sb.append("PaginatedReportOptions: ").append(getPaginatedReportOptions()).append(",");
+        if (getTableInlineVisualizations() != null)
+            sb.append("TableInlineVisualizations: ").append(getTableInlineVisualizations());
         sb.append("}");
         return sb.toString();
     }
@@ -367,6 +445,10 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getPaginatedReportOptions() != null && other.getPaginatedReportOptions().equals(this.getPaginatedReportOptions()) == false)
             return false;
+        if (other.getTableInlineVisualizations() == null ^ this.getTableInlineVisualizations() == null)
+            return false;
+        if (other.getTableInlineVisualizations() != null && other.getTableInlineVisualizations().equals(this.getTableInlineVisualizations()) == false)
+            return false;
         return true;
     }
 
@@ -381,6 +463,7 @@ public class TableConfiguration implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getTotalOptions() == null) ? 0 : getTotalOptions().hashCode());
         hashCode = prime * hashCode + ((getFieldOptions() == null) ? 0 : getFieldOptions().hashCode());
         hashCode = prime * hashCode + ((getPaginatedReportOptions() == null) ? 0 : getPaginatedReportOptions().hashCode());
+        hashCode = prime * hashCode + ((getTableInlineVisualizations() == null) ? 0 : getTableInlineVisualizations().hashCode());
         return hashCode;
     }
 

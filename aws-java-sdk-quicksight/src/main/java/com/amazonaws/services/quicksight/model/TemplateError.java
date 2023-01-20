@@ -40,7 +40,11 @@ public class TemplateError implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String message;
-    /** <p/> */
+    /**
+     * <p>
+     * An error path that shows which entities caused the template error.
+     * </p>
+     */
     private java.util.List<Entity> violatedEntities;
 
     /**
@@ -143,9 +147,11 @@ public class TemplateError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An error path that shows which entities caused the template error.
+     * </p>
      * 
-     * @return
+     * @return An error path that shows which entities caused the template error.
      */
 
     public java.util.List<Entity> getViolatedEntities() {
@@ -153,9 +159,12 @@ public class TemplateError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An error path that shows which entities caused the template error.
+     * </p>
      * 
      * @param violatedEntities
+     *        An error path that shows which entities caused the template error.
      */
 
     public void setViolatedEntities(java.util.Collection<Entity> violatedEntities) {
@@ -168,7 +177,9 @@ public class TemplateError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An error path that shows which entities caused the template error.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setViolatedEntities(java.util.Collection)} or {@link #withViolatedEntities(java.util.Collection)} if you
@@ -176,6 +187,7 @@ public class TemplateError implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param violatedEntities
+     *        An error path that shows which entities caused the template error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,9 +202,12 @@ public class TemplateError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * An error path that shows which entities caused the template error.
+     * </p>
      * 
      * @param violatedEntities
+     *        An error path that shows which entities caused the template error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

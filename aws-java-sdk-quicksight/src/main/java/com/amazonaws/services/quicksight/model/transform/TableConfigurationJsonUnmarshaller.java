@@ -72,6 +72,13 @@ public class TableConfigurationJsonUnmarshaller implements Unmarshaller<TableCon
                     context.nextToken();
                     tableConfiguration.setPaginatedReportOptions(TablePaginatedReportOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TableInlineVisualizations", targetDepth)) {
+                    context.nextToken();
+                    tableConfiguration.setTableInlineVisualizations(new ListUnmarshaller<TableInlineVisualization>(TableInlineVisualizationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

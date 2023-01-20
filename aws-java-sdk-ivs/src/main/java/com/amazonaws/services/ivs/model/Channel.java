@@ -74,10 +74,11 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String recordingConfigurationArn;
     /**
      * <p>
-     * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
-     * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
-     * IVS has no service-specific constraints beyond what is documented there.
+     * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     * Resources</a> for more information, including restrictions that apply to tags and
+     * "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is documented
+     * there.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -449,13 +450,15 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
-     * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
-     * IVS has no service-specific constraints beyond what is documented there.
+     * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     * Resources</a> for more information, including restrictions that apply to tags and
+     * "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is documented
+     * there.
      * </p>
      * 
-     * @return Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
+     * @return Tags attached to the resource. Array of 1-50 maps, each of the form
+     *         <code>string:string (key:value)</code>. See <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *         Resources</a> for more information, including restrictions that apply to tags and
      *         "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is
@@ -468,15 +471,16 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
-     * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
-     * IVS has no service-specific constraints beyond what is documented there.
+     * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     * Resources</a> for more information, including restrictions that apply to tags and
+     * "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is documented
+     * there.
      * </p>
      * 
      * @param tags
-     *        Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>
+     *        . See <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *        Resources</a> for more information, including restrictions that apply to tags and
      *        "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is
      *        documented there.
@@ -488,15 +492,16 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
-     * for more information, including restrictions that apply to tags and "Tag naming limits and requirements"; Amazon
-     * IVS has no service-specific constraints beyond what is documented there.
+     * Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See
+     * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     * Resources</a> for more information, including restrictions that apply to tags and
+     * "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is documented
+     * there.
      * </p>
      * 
      * @param tags
-     *        Array of 1-50 maps, each of the form <code>string:string (key:value)</code>. See <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        Tags attached to the resource. Array of 1-50 maps, each of the form <code>string:string (key:value)</code>
+     *        . See <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
      *        Resources</a> for more information, including restrictions that apply to tags and
      *        "Tag naming limits and requirements"; Amazon IVS has no service-specific constraints beyond what is
      *        documented there.

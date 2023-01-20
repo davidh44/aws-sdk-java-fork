@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.quicksight.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +40,8 @@ public class TableConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FieldOptions").build();
     private static final MarshallingInfo<StructuredPojo> PAGINATEDREPORTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PaginatedReportOptions").build();
+    private static final MarshallingInfo<List> TABLEINLINEVISUALIZATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableInlineVisualizations").build();
 
     private static final TableConfigurationMarshaller instance = new TableConfigurationMarshaller();
 
@@ -62,6 +65,7 @@ public class TableConfigurationMarshaller {
             protocolMarshaller.marshall(tableConfiguration.getTotalOptions(), TOTALOPTIONS_BINDING);
             protocolMarshaller.marshall(tableConfiguration.getFieldOptions(), FIELDOPTIONS_BINDING);
             protocolMarshaller.marshall(tableConfiguration.getPaginatedReportOptions(), PAGINATEDREPORTOPTIONS_BINDING);
+            protocolMarshaller.marshall(tableConfiguration.getTableInlineVisualizations(), TABLEINLINEVISUALIZATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

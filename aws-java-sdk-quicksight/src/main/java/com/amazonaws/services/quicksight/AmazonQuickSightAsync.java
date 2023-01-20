@@ -3699,8 +3699,14 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Creates an Amazon QuickSight user, whose identity is associated with the Identity and Access Management (IAM)
-     * identity or role specified in the request.
+     * Creates an Amazon QuickSight user whose identity is associated with the Identity and Access Management (IAM)
+     * identity or role specified in the request. When you register a new user from the Amazon QuickSight API, Amazon
+     * QuickSight generates a registration URL. The user accesses this registration URL to create their account. Amazon
+     * QuickSight doesn't send a registration email to users who are registered from the Amazon QuickSight API. If you
+     * want new users to receive a registration email, then add those users in the Amazon QuickSight console. For more
+     * information on registering a new user in the Amazon QuickSight console, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/managing-users.html#inviting-users"> Inviting users to
+     * access Amazon QuickSight</a>.
      * </p>
      * 
      * @param registerUserRequest
@@ -3713,8 +3719,14 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Creates an Amazon QuickSight user, whose identity is associated with the Identity and Access Management (IAM)
-     * identity or role specified in the request.
+     * Creates an Amazon QuickSight user whose identity is associated with the Identity and Access Management (IAM)
+     * identity or role specified in the request. When you register a new user from the Amazon QuickSight API, Amazon
+     * QuickSight generates a registration URL. The user accesses this registration URL to create their account. Amazon
+     * QuickSight doesn't send a registration email to users who are registered from the Amazon QuickSight API. If you
+     * want new users to receive a registration email, then add those users in the Amazon QuickSight console. For more
+     * information on registering a new user in the Amazon QuickSight console, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/managing-users.html#inviting-users"> Inviting users to
+     * access Amazon QuickSight</a>.
      * </p>
      * 
      * @param registerUserRequest
