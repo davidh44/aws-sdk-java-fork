@@ -15,7 +15,9 @@ package com.amazonaws.services.ssmsap.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * A conflict has occurred.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ConflictException extends com.amazonaws.services.ssmsap.model.AWSSsmSapException {

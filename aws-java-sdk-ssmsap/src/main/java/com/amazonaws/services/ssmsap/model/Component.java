@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The SAP component of your application.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/Component" target="_top">AWS API
  *      Documentation</a>
@@ -26,27 +28,62 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Component implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the component.
+     * </p>
+     */
     private String componentId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the component.
+     * </p>
+     */
     private String componentType;
-    /** <p/> */
+    /**
+     * <p>
+     * The status of the component.
+     * </p>
+     */
     private String status;
-    /** <p/> */
+    /**
+     * <p>
+     * The SAP HANA databases of the component.
+     * </p>
+     */
     private java.util.List<String> databases;
-    /** <p/> */
+    /**
+     * <p>
+     * The hosts of the component.
+     * </p>
+     */
     private java.util.List<Host> hosts;
-    /** <p/> */
+    /**
+     * <p>
+     * The primary host of the component.
+     * </p>
+     */
     private String primaryHost;
-    /** <p/> */
+    /**
+     * <p>
+     * The time at which the component was last updated.
+     * </p>
+     */
     private java.util.Date lastUpdated;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      */
 
     public void setComponentId(String componentId) {
@@ -54,9 +91,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
-     * @return
+     * @return The ID of the component.
      */
 
     public String getComponentId() {
@@ -64,9 +103,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,9 +118,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -86,9 +131,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -96,9 +143,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,9 +158,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
      * @param componentType
+     *        The type of the component.
      * @see ComponentType
      */
 
@@ -119,9 +172,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
-     * @return
+     * @return The type of the component.
      * @see ComponentType
      */
 
@@ -130,9 +185,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
      * @param componentType
+     *        The type of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComponentType
      */
@@ -143,9 +201,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
      * @param componentType
+     *        The type of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComponentType
      */
@@ -156,9 +217,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the component.
+     * </p>
      * 
      * @param status
+     *        The status of the component.
      * @see ComponentStatus
      */
 
@@ -167,9 +231,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the component.
+     * </p>
      * 
-     * @return
+     * @return The status of the component.
      * @see ComponentStatus
      */
 
@@ -178,9 +244,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the component.
+     * </p>
      * 
      * @param status
+     *        The status of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComponentStatus
      */
@@ -191,9 +260,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the component.
+     * </p>
      * 
      * @param status
+     *        The status of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComponentStatus
      */
@@ -204,9 +276,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of the component.
+     * </p>
      * 
-     * @return
+     * @return The SAP HANA databases of the component.
      */
 
     public java.util.List<String> getDatabases() {
@@ -214,9 +288,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of the component.
+     * </p>
      * 
      * @param databases
+     *        The SAP HANA databases of the component.
      */
 
     public void setDatabases(java.util.Collection<String> databases) {
@@ -229,7 +306,9 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of the component.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setDatabases(java.util.Collection)} or {@link #withDatabases(java.util.Collection)} if you want to
@@ -237,6 +316,7 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param databases
+     *        The SAP HANA databases of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,9 +331,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of the component.
+     * </p>
      * 
      * @param databases
+     *        The SAP HANA databases of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,9 +346,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The hosts of the component.
+     * </p>
      * 
-     * @return
+     * @return The hosts of the component.
      */
 
     public java.util.List<Host> getHosts() {
@@ -273,9 +358,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The hosts of the component.
+     * </p>
      * 
      * @param hosts
+     *        The hosts of the component.
      */
 
     public void setHosts(java.util.Collection<Host> hosts) {
@@ -288,7 +376,9 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The hosts of the component.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setHosts(java.util.Collection)} or {@link #withHosts(java.util.Collection)} if you want to override the
@@ -296,6 +386,7 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param hosts
+     *        The hosts of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -310,9 +401,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The hosts of the component.
+     * </p>
      * 
      * @param hosts
+     *        The hosts of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -322,9 +416,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The primary host of the component.
+     * </p>
      * 
      * @param primaryHost
+     *        The primary host of the component.
      */
 
     public void setPrimaryHost(String primaryHost) {
@@ -332,9 +429,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The primary host of the component.
+     * </p>
      * 
-     * @return
+     * @return The primary host of the component.
      */
 
     public String getPrimaryHost() {
@@ -342,9 +441,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The primary host of the component.
+     * </p>
      * 
      * @param primaryHost
+     *        The primary host of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -354,9 +456,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the component was last updated.
+     * </p>
      * 
      * @param lastUpdated
+     *        The time at which the component was last updated.
      */
 
     public void setLastUpdated(java.util.Date lastUpdated) {
@@ -364,9 +469,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the component was last updated.
+     * </p>
      * 
-     * @return
+     * @return The time at which the component was last updated.
      */
 
     public java.util.Date getLastUpdated() {
@@ -374,9 +481,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the component was last updated.
+     * </p>
      * 
      * @param lastUpdated
+     *        The time at which the component was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The operations performed by AWS Systems Manager for SAP.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/Operation" target="_top">AWS API
  *      Documentation</a>
@@ -26,33 +28,80 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Operation implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the operation.
+     * </p>
+     */
     private String id;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the operation.
+     * </p>
+     */
     private String type;
-    /** <p/> */
+    /**
+     * <p>
+     * The status of the operation.
+     * </p>
+     */
     private String status;
-    /** <p/> */
+    /**
+     * <p>
+     * The status message of the operation.
+     * </p>
+     */
     private String statusMessage;
-    /** <p/> */
+    /**
+     * <p>
+     * The properties of the operation.
+     * </p>
+     */
     private java.util.Map<String, String> properties;
-    /** <p/> */
+    /**
+     * <p>
+     * The resource type of the operation.
+     * </p>
+     */
     private String resourceType;
-    /** <p/> */
+    /**
+     * <p>
+     * The resource ID of the operation.
+     * </p>
+     */
     private String resourceId;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the operation.
+     * </p>
+     */
     private String resourceArn;
-    /** <p/> */
+    /**
+     * <p>
+     * The start time of the operation.
+     * </p>
+     */
     private java.util.Date startTime;
-    /** <p/> */
+    /**
+     * <p>
+     * The end time of the operation.
+     * </p>
+     */
     private java.util.Date endTime;
-    /** <p/> */
+    /**
+     * <p>
+     * The time at which the operation was last updated.
+     * </p>
+     */
     private java.util.Date lastUpdatedTime;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
      * @param id
+     *        The ID of the operation.
      */
 
     public void setId(String id) {
@@ -60,9 +109,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
-     * @return
+     * @return The ID of the operation.
      */
 
     public String getId() {
@@ -70,9 +121,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
      * @param id
+     *        The ID of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,9 +136,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the operation.
+     * </p>
      * 
      * @param type
+     *        The type of the operation.
      */
 
     public void setType(String type) {
@@ -92,9 +149,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the operation.
+     * </p>
      * 
-     * @return
+     * @return The type of the operation.
      */
 
     public String getType() {
@@ -102,9 +161,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the operation.
+     * </p>
      * 
      * @param type
+     *        The type of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,9 +176,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the operation.
+     * </p>
      * 
      * @param status
+     *        The status of the operation.
      * @see OperationStatus
      */
 
@@ -125,9 +190,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the operation.
+     * </p>
      * 
-     * @return
+     * @return The status of the operation.
      * @see OperationStatus
      */
 
@@ -136,9 +203,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the operation.
+     * </p>
      * 
      * @param status
+     *        The status of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OperationStatus
      */
@@ -149,9 +219,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the operation.
+     * </p>
      * 
      * @param status
+     *        The status of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OperationStatus
      */
@@ -162,9 +235,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status message of the operation.
+     * </p>
      * 
      * @param statusMessage
+     *        The status message of the operation.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -172,9 +248,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status message of the operation.
+     * </p>
      * 
-     * @return
+     * @return The status message of the operation.
      */
 
     public String getStatusMessage() {
@@ -182,9 +260,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status message of the operation.
+     * </p>
      * 
      * @param statusMessage
+     *        The status message of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,9 +275,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The properties of the operation.
+     * </p>
      * 
-     * @return
+     * @return The properties of the operation.
      */
 
     public java.util.Map<String, String> getProperties() {
@@ -204,9 +287,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The properties of the operation.
+     * </p>
      * 
      * @param properties
+     *        The properties of the operation.
      */
 
     public void setProperties(java.util.Map<String, String> properties) {
@@ -214,9 +300,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The properties of the operation.
+     * </p>
      * 
      * @param properties
+     *        The properties of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,9 +343,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The resource type of the operation.
+     * </p>
      * 
      * @param resourceType
+     *        The resource type of the operation.
      */
 
     public void setResourceType(String resourceType) {
@@ -264,9 +356,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The resource type of the operation.
+     * </p>
      * 
-     * @return
+     * @return The resource type of the operation.
      */
 
     public String getResourceType() {
@@ -274,9 +368,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The resource type of the operation.
+     * </p>
      * 
      * @param resourceType
+     *        The resource type of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -286,9 +383,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The resource ID of the operation.
+     * </p>
      * 
      * @param resourceId
+     *        The resource ID of the operation.
      */
 
     public void setResourceId(String resourceId) {
@@ -296,9 +396,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The resource ID of the operation.
+     * </p>
      * 
-     * @return
+     * @return The resource ID of the operation.
      */
 
     public String getResourceId() {
@@ -306,9 +408,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The resource ID of the operation.
+     * </p>
      * 
      * @param resourceId
+     *        The resource ID of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,9 +423,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the operation.
+     * </p>
      * 
      * @param resourceArn
+     *        The Amazon Resource Name (ARN) of the operation.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -328,9 +436,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the operation.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the operation.
      */
 
     public String getResourceArn() {
@@ -338,9 +448,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the operation.
+     * </p>
      * 
      * @param resourceArn
+     *        The Amazon Resource Name (ARN) of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -350,9 +463,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The start time of the operation.
+     * </p>
      * 
      * @param startTime
+     *        The start time of the operation.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -360,9 +476,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The start time of the operation.
+     * </p>
      * 
-     * @return
+     * @return The start time of the operation.
      */
 
     public java.util.Date getStartTime() {
@@ -370,9 +488,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The start time of the operation.
+     * </p>
      * 
      * @param startTime
+     *        The start time of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -382,9 +503,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The end time of the operation.
+     * </p>
      * 
      * @param endTime
+     *        The end time of the operation.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -392,9 +516,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The end time of the operation.
+     * </p>
      * 
-     * @return
+     * @return The end time of the operation.
      */
 
     public java.util.Date getEndTime() {
@@ -402,9 +528,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The end time of the operation.
+     * </p>
      * 
      * @param endTime
+     *        The end time of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -414,9 +543,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the operation was last updated.
+     * </p>
      * 
      * @param lastUpdatedTime
+     *        The time at which the operation was last updated.
      */
 
     public void setLastUpdatedTime(java.util.Date lastUpdatedTime) {
@@ -424,9 +556,11 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the operation was last updated.
+     * </p>
      * 
-     * @return
+     * @return The time at which the operation was last updated.
      */
 
     public java.util.Date getLastUpdatedTime() {
@@ -434,9 +568,12 @@ public class Operation implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the operation was last updated.
+     * </p>
      * 
      * @param lastUpdatedTime
+     *        The time at which the operation was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

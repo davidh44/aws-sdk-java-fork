@@ -15,7 +15,9 @@ package com.amazonaws.services.ssmsap.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The input fails to satisfy the constraints specified by an AWS service.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.ssmsap.model.AWSSsmSapException {

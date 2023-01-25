@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The SAP HANA databases of an application.
+     * </p>
+     */
     private java.util.List<DatabaseSummary> databases;
-    /** <p/> */
+    /**
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of an application.
+     * </p>
      * 
-     * @return
+     * @return The SAP HANA databases of an application.
      */
 
     public java.util.List<DatabaseSummary> getDatabases() {
@@ -39,9 +50,12 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of an application.
+     * </p>
      * 
      * @param databases
+     *        The SAP HANA databases of an application.
      */
 
     public void setDatabases(java.util.Collection<DatabaseSummary> databases) {
@@ -54,7 +68,9 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of an application.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setDatabases(java.util.Collection)} or {@link #withDatabases(java.util.Collection)} if you want to
@@ -62,6 +78,7 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param databases
+     *        The SAP HANA databases of an application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,9 +93,12 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA databases of an application.
+     * </p>
      * 
      * @param databases
+     *        The SAP HANA databases of an application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,9 +108,14 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
      * @param nextToken
+     *        The token to use to retrieve the next page of results. This value is null when there are no more results
+     *        to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -98,9 +123,13 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
-     * @return
+     * @return The token to use to retrieve the next page of results. This value is null when there are no more results
+     *         to return.
      */
 
     public String getNextToken() {
@@ -108,9 +137,14 @@ public class ListDatabasesResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
      * @param nextToken
+     *        The token to use to retrieve the next page of results. This value is null when there are no more results
+     *        to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

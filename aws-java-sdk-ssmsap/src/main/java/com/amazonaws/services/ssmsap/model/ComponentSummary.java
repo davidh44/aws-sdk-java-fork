@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The summary of the component.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ComponentSummary" target="_top">AWS API
  *      Documentation</a>
@@ -26,19 +28,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ComponentSummary implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the component.
+     * </p>
+     */
     private String componentId;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the component.
+     * </p>
+     */
     private String componentType;
-    /** <p/> */
+    /**
+     * <p>
+     * The tags of the component.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -46,9 +67,11 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -56,9 +79,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,9 +94,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      */
 
     public void setComponentId(String componentId) {
@@ -78,9 +107,11 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
-     * @return
+     * @return The ID of the component.
      */
 
     public String getComponentId() {
@@ -88,9 +119,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,9 +134,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
      * @param componentType
+     *        The type of the component.
      * @see ComponentType
      */
 
@@ -111,9 +148,11 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
-     * @return
+     * @return The type of the component.
      * @see ComponentType
      */
 
@@ -122,9 +161,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
      * @param componentType
+     *        The type of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComponentType
      */
@@ -135,9 +177,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the component.
+     * </p>
      * 
      * @param componentType
+     *        The type of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComponentType
      */
@@ -148,9 +193,11 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of the component.
+     * </p>
      * 
-     * @return
+     * @return The tags of the component.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -158,9 +205,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of the component.
+     * </p>
      * 
      * @param tags
+     *        The tags of the component.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -168,9 +218,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of the component.
+     * </p>
      * 
      * @param tags
+     *        The tags of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

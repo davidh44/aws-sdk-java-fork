@@ -25,17 +25,36 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     */
     private String nextToken;
-    /** <p/> */
+    /**
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
+     * <p>
+     * If you do not specify a value for MaxResults, the request returns 50 items per page by default.
+     * </p>
+     */
     private Integer maxResults;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -43,9 +62,11 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -53,9 +74,12 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -65,9 +89,12 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token for the next page of results.
+     * </p>
      * 
      * @param nextToken
+     *        The token for the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -75,9 +102,11 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token for the next page of results.
+     * </p>
      * 
-     * @return
+     * @return The token for the next page of results.
      */
 
     public String getNextToken() {
@@ -85,9 +114,12 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token for the next page of results.
+     * </p>
      * 
      * @param nextToken
+     *        The token for the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,9 +129,19 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
+     * <p>
+     * If you do not specify a value for MaxResults, the request returns 50 items per page by default.
+     * </p>
      * 
      * @param maxResults
+     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
+     *        another call with the returned nextToken value.</p>
+     *        <p>
+     *        If you do not specify a value for MaxResults, the request returns 50 items per page by default.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -107,9 +149,18 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
+     * <p>
+     * If you do not specify a value for MaxResults, the request returns 50 items per page by default.
+     * </p>
      * 
-     * @return
+     * @return The maximum number of results to return with a single call. To retrieve the remaining results, make
+     *         another call with the returned nextToken value.</p>
+     *         <p>
+     *         If you do not specify a value for MaxResults, the request returns 50 items per page by default.
      */
 
     public Integer getMaxResults() {
@@ -117,9 +168,19 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
+     * <p>
+     * If you do not specify a value for MaxResults, the request returns 50 items per page by default.
+     * </p>
      * 
      * @param maxResults
+     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
+     *        another call with the returned nextToken value.</p>
+     *        <p>
+     *        If you do not specify a value for MaxResults, the request returns 50 items per page by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

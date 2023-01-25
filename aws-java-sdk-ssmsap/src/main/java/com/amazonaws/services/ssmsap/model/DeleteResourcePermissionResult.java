@@ -23,13 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteResourcePermissionResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The policy that removes permissions on the target database.
+     * </p>
+     */
     private String policy;
 
     /**
-     * <p/>
+     * <p>
+     * The policy that removes permissions on the target database.
+     * </p>
      * 
      * @param policy
+     *        The policy that removes permissions on the target database.
      */
 
     public void setPolicy(String policy) {
@@ -37,9 +44,11 @@ public class DeleteResourcePermissionResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * <p/>
+     * <p>
+     * The policy that removes permissions on the target database.
+     * </p>
      * 
-     * @return
+     * @return The policy that removes permissions on the target database.
      */
 
     public String getPolicy() {
@@ -47,9 +56,12 @@ public class DeleteResourcePermissionResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * <p/>
+     * <p>
+     * The policy that removes permissions on the target database.
+     * </p>
      * 
      * @param policy
+     *        The policy that removes permissions on the target database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

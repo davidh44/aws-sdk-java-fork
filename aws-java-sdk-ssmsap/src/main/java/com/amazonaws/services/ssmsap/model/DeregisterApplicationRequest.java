@@ -25,13 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeregisterApplicationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -39,9 +46,11 @@ public class DeregisterApplicationRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -49,9 +58,12 @@ public class DeregisterApplicationRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

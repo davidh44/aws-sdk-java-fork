@@ -25,15 +25,27 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     */
     private String nextToken;
-    /** <p/> */
+    /**
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
+     */
     private Integer maxResults;
 
     /**
-     * <p/>
+     * <p>
+     * The token for the next page of results.
+     * </p>
      * 
      * @param nextToken
+     *        The token for the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -41,9 +53,11 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token for the next page of results.
+     * </p>
      * 
-     * @return
+     * @return The token for the next page of results.
      */
 
     public String getNextToken() {
@@ -51,9 +65,12 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token for the next page of results.
+     * </p>
      * 
      * @param nextToken
+     *        The token for the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +80,14 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
      * 
      * @param maxResults
+     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
+     *        another call with the returned nextToken value.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -73,9 +95,13 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
      * 
-     * @return
+     * @return The maximum number of results to return with a single call. To retrieve the remaining results, make
+     *         another call with the returned nextToken value.
      */
 
     public Integer getMaxResults() {
@@ -83,9 +109,14 @@ public class ListApplicationsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * <p/>
+     * <p>
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
+     * with the returned nextToken value.
+     * </p>
      * 
      * @param maxResults
+     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
+     *        another call with the returned nextToken value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

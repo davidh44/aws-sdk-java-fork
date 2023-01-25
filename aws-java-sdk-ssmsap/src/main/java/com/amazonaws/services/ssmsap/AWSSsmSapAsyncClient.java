@@ -405,6 +405,39 @@ public class AWSSsmSapAsyncClient extends AWSSsmSapClient implements AWSSsmSapAs
     }
 
     @Override
+    public java.util.concurrent.Future<ListOperationsResult> listOperationsAsync(ListOperationsRequest request) {
+
+        return listOperationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOperationsResult> listOperationsAsync(final ListOperationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListOperationsRequest, ListOperationsResult> asyncHandler) {
+        final ListOperationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOperationsResult>() {
+            @Override
+            public ListOperationsResult call() throws Exception {
+                ListOperationsResult result = null;
+
+                try {
+                    result = executeListOperations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);

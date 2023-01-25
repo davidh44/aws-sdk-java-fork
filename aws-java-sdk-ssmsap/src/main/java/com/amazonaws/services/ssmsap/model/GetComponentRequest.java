@@ -25,15 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetComponentRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the component.
+     * </p>
+     */
     private String componentId;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -41,9 +52,11 @@ public class GetComponentRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -51,9 +64,12 @@ public class GetComponentRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +79,12 @@ public class GetComponentRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      */
 
     public void setComponentId(String componentId) {
@@ -73,9 +92,11 @@ public class GetComponentRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
-     * @return
+     * @return The ID of the component.
      */
 
     public String getComponentId() {
@@ -83,9 +104,12 @@ public class GetComponentRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

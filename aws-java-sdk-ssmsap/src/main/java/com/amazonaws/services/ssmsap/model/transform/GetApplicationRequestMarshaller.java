@@ -31,6 +31,8 @@ public class GetApplicationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationId").build();
     private static final MarshallingInfo<String> APPLICATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationArn").build();
+    private static final MarshallingInfo<String> APPREGISTRYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AppRegistryArn").build();
 
     private static final GetApplicationRequestMarshaller instance = new GetApplicationRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class GetApplicationRequestMarshaller {
         try {
             protocolMarshaller.marshall(getApplicationRequest.getApplicationId(), APPLICATIONID_BINDING);
             protocolMarshaller.marshall(getApplicationRequest.getApplicationArn(), APPLICATIONARN_BINDING);
+            protocolMarshaller.marshall(getApplicationRequest.getAppRegistryArn(), APPREGISTRYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

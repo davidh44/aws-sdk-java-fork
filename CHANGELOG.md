@@ -1,3 +1,16 @@
+# __1.12.391__ __2023-01-24__
+## __AWS Glue DataBrew__
+  - ### Features
+    - Enabled FIPS us-gov-west-1 endpoints in SDK.
+
+## __AWS Systems Manager for SAP__
+  - ### Features
+    - This release provides updates to documentation and support for listing operations performed by AWS Systems Manager for SAP.
+
+## __Amazon Route 53__
+  - ### Features
+    - Amazon Route 53 now supports the Asia Pacific (Melbourne) Region (ap-southeast-4) for latency records, geoproximity records, and private DNS for Amazon VPCs in that region.
+
 # __1.12.390__ __2023-01-23__
 ## __AWS Lambda__
   - ### Features

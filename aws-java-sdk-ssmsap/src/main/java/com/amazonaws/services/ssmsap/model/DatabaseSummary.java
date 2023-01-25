@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The summary of the database.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/DatabaseSummary" target="_top">AWS API
  *      Documentation</a>
@@ -26,23 +28,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the component.
+     * </p>
+     */
     private String componentId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the database.
+     * </p>
+     */
     private String databaseId;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the database.
+     * </p>
+     */
     private String databaseType;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
+     */
     private String arn;
-    /** <p/> */
+    /**
+     * <p>
+     * The tags of the database.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -50,9 +79,11 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -60,9 +91,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,9 +106,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      */
 
     public void setComponentId(String componentId) {
@@ -82,9 +119,11 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
-     * @return
+     * @return The ID of the component.
      */
 
     public String getComponentId() {
@@ -92,9 +131,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,9 +146,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the database.
+     * </p>
      * 
      * @param databaseId
+     *        The ID of the database.
      */
 
     public void setDatabaseId(String databaseId) {
@@ -114,9 +159,11 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the database.
+     * </p>
      * 
-     * @return
+     * @return The ID of the database.
      */
 
     public String getDatabaseId() {
@@ -124,9 +171,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the database.
+     * </p>
      * 
      * @param databaseId
+     *        The ID of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,9 +186,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
      * @param databaseType
+     *        The type of the database.
      * @see DatabaseType
      */
 
@@ -147,9 +200,11 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
-     * @return
+     * @return The type of the database.
      * @see DatabaseType
      */
 
@@ -158,9 +213,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
      * @param databaseType
+     *        The type of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DatabaseType
      */
@@ -171,9 +229,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
      * @param databaseType
+     *        The type of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DatabaseType
      */
@@ -184,9 +245,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the database.
      */
 
     public void setArn(String arn) {
@@ -194,9 +258,11 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the database.
      */
 
     public String getArn() {
@@ -204,9 +270,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,9 +285,11 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of the database.
+     * </p>
      * 
-     * @return
+     * @return The tags of the database.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -226,9 +297,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of the database.
+     * </p>
      * 
      * @param tags
+     *        The tags of the database.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -236,9 +310,12 @@ public class DatabaseSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of the database.
+     * </p>
      * 
      * @param tags
+     *        The tags of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

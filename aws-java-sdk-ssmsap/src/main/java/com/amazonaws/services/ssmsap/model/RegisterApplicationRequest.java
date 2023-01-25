@@ -25,25 +25,56 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the application.
+     * </p>
+     */
     private String applicationType;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon EC2 instances on which your SAP application is running.
+     * </p>
+     */
     private java.util.List<String> instances;
-    /** <p/> */
+    /**
+     * <p>
+     * The SAP instance number of the application.
+     * </p>
+     */
     private String sapInstanceNumber;
-    /** <p/> */
+    /**
+     * <p>
+     * The System ID of the application.
+     * </p>
+     */
     private String sid;
-    /** <p/> */
+    /**
+     * <p>
+     * The tags to be attached to the SAP application.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
-    /** <p/> */
+    /**
+     * <p>
+     * The credentials of the SAP application.
+     * </p>
+     */
     private java.util.List<ApplicationCredential> credentials;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -51,9 +82,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -61,9 +94,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -73,9 +109,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param applicationType
+     *        The type of the application.
      * @see ApplicationType
      */
 
@@ -84,9 +123,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
-     * @return
+     * @return The type of the application.
      * @see ApplicationType
      */
 
@@ -95,9 +136,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param applicationType
+     *        The type of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationType
      */
@@ -108,9 +152,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param applicationType
+     *        The type of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationType
      */
@@ -121,9 +168,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon EC2 instances on which your SAP application is running.
+     * </p>
      * 
-     * @return
+     * @return The Amazon EC2 instances on which your SAP application is running.
      */
 
     public java.util.List<String> getInstances() {
@@ -131,9 +180,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon EC2 instances on which your SAP application is running.
+     * </p>
      * 
      * @param instances
+     *        The Amazon EC2 instances on which your SAP application is running.
      */
 
     public void setInstances(java.util.Collection<String> instances) {
@@ -146,7 +198,9 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon EC2 instances on which your SAP application is running.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInstances(java.util.Collection)} or {@link #withInstances(java.util.Collection)} if you want to
@@ -154,6 +208,7 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param instances
+     *        The Amazon EC2 instances on which your SAP application is running.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,9 +223,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon EC2 instances on which your SAP application is running.
+     * </p>
      * 
      * @param instances
+     *        The Amazon EC2 instances on which your SAP application is running.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,9 +238,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP instance number of the application.
+     * </p>
      * 
      * @param sapInstanceNumber
+     *        The SAP instance number of the application.
      */
 
     public void setSapInstanceNumber(String sapInstanceNumber) {
@@ -190,9 +251,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP instance number of the application.
+     * </p>
      * 
-     * @return
+     * @return The SAP instance number of the application.
      */
 
     public String getSapInstanceNumber() {
@@ -200,9 +263,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP instance number of the application.
+     * </p>
      * 
      * @param sapInstanceNumber
+     *        The SAP instance number of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -212,9 +278,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The System ID of the application.
+     * </p>
      * 
      * @param sid
+     *        The System ID of the application.
      */
 
     public void setSid(String sid) {
@@ -222,9 +291,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The System ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The System ID of the application.
      */
 
     public String getSid() {
@@ -232,9 +303,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The System ID of the application.
+     * </p>
      * 
      * @param sid
+     *        The System ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -244,9 +318,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags to be attached to the SAP application.
+     * </p>
      * 
-     * @return
+     * @return The tags to be attached to the SAP application.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -254,9 +330,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags to be attached to the SAP application.
+     * </p>
      * 
      * @param tags
+     *        The tags to be attached to the SAP application.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -264,9 +343,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags to be attached to the SAP application.
+     * </p>
      * 
      * @param tags
+     *        The tags to be attached to the SAP application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -304,9 +386,11 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the SAP application.
+     * </p>
      * 
-     * @return
+     * @return The credentials of the SAP application.
      */
 
     public java.util.List<ApplicationCredential> getCredentials() {
@@ -314,9 +398,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the SAP application.
+     * </p>
      * 
      * @param credentials
+     *        The credentials of the SAP application.
      */
 
     public void setCredentials(java.util.Collection<ApplicationCredential> credentials) {
@@ -329,7 +416,9 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the SAP application.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCredentials(java.util.Collection)} or {@link #withCredentials(java.util.Collection)} if you want to
@@ -337,6 +426,7 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param credentials
+     *        The credentials of the SAP application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -351,9 +441,12 @@ public class RegisterApplicationRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the SAP application.
+     * </p>
      * 
      * @param credentials
+     *        The credentials of the SAP application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

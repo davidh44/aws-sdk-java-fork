@@ -25,15 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
+     */
     private String applicationArn;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application registry.
+     * </p>
+     */
+    private String appRegistryArn;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -41,9 +58,11 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -51,9 +70,12 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -63,9 +85,12 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
      * @param applicationArn
+     *        The Amazon Resource Name (ARN) of the application.
      */
 
     public void setApplicationArn(String applicationArn) {
@@ -73,9 +98,11 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the application.
      */
 
     public String getApplicationArn() {
@@ -83,14 +110,57 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
      * @param applicationArn
+     *        The Amazon Resource Name (ARN) of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GetApplicationRequest withApplicationArn(String applicationArn) {
         setApplicationArn(applicationArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application registry.
+     * </p>
+     * 
+     * @param appRegistryArn
+     *        The Amazon Resource Name (ARN) of the application registry.
+     */
+
+    public void setAppRegistryArn(String appRegistryArn) {
+        this.appRegistryArn = appRegistryArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application registry.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the application registry.
+     */
+
+    public String getAppRegistryArn() {
+        return this.appRegistryArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application registry.
+     * </p>
+     * 
+     * @param appRegistryArn
+     *        The Amazon Resource Name (ARN) of the application registry.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetApplicationRequest withAppRegistryArn(String appRegistryArn) {
+        setAppRegistryArn(appRegistryArn);
         return this;
     }
 
@@ -109,7 +179,9 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getApplicationId() != null)
             sb.append("ApplicationId: ").append(getApplicationId()).append(",");
         if (getApplicationArn() != null)
-            sb.append("ApplicationArn: ").append(getApplicationArn());
+            sb.append("ApplicationArn: ").append(getApplicationArn()).append(",");
+        if (getAppRegistryArn() != null)
+            sb.append("AppRegistryArn: ").append(getAppRegistryArn());
         sb.append("}");
         return sb.toString();
     }
@@ -132,6 +204,10 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getApplicationArn() != null && other.getApplicationArn().equals(this.getApplicationArn()) == false)
             return false;
+        if (other.getAppRegistryArn() == null ^ this.getAppRegistryArn() == null)
+            return false;
+        if (other.getAppRegistryArn() != null && other.getAppRegistryArn().equals(this.getAppRegistryArn()) == false)
+            return false;
         return true;
     }
 
@@ -142,6 +218,7 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
 
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
         hashCode = prime * hashCode + ((getApplicationArn() == null) ? 0 : getApplicationArn().hashCode());
+        hashCode = prime * hashCode + ((getAppRegistryArn() == null) ? 0 : getAppRegistryArn().hashCode());
         return hashCode;
     }
 

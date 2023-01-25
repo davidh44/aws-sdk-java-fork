@@ -25,17 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The credentials to be added or updated.
+     * </p>
+     */
     private java.util.List<ApplicationCredential> credentialsToAddOrUpdate;
-    /** <p/> */
+    /**
+     * <p>
+     * The credentials to be removed.
+     * </p>
+     */
     private java.util.List<ApplicationCredential> credentialsToRemove;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -43,9 +58,11 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -53,9 +70,12 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -65,9 +85,11 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be added or updated.
+     * </p>
      * 
-     * @return
+     * @return The credentials to be added or updated.
      */
 
     public java.util.List<ApplicationCredential> getCredentialsToAddOrUpdate() {
@@ -75,9 +97,12 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be added or updated.
+     * </p>
      * 
      * @param credentialsToAddOrUpdate
+     *        The credentials to be added or updated.
      */
 
     public void setCredentialsToAddOrUpdate(java.util.Collection<ApplicationCredential> credentialsToAddOrUpdate) {
@@ -90,7 +115,9 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be added or updated.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCredentialsToAddOrUpdate(java.util.Collection)} or
@@ -98,6 +125,7 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param credentialsToAddOrUpdate
+     *        The credentials to be added or updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,9 +140,12 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be added or updated.
+     * </p>
      * 
      * @param credentialsToAddOrUpdate
+     *        The credentials to be added or updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,9 +155,11 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be removed.
+     * </p>
      * 
-     * @return
+     * @return The credentials to be removed.
      */
 
     public java.util.List<ApplicationCredential> getCredentialsToRemove() {
@@ -134,9 +167,12 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be removed.
+     * </p>
      * 
      * @param credentialsToRemove
+     *        The credentials to be removed.
      */
 
     public void setCredentialsToRemove(java.util.Collection<ApplicationCredential> credentialsToRemove) {
@@ -149,7 +185,9 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be removed.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCredentialsToRemove(java.util.Collection)} or {@link #withCredentialsToRemove(java.util.Collection)}
@@ -157,6 +195,7 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param credentialsToRemove
+     *        The credentials to be removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,9 +210,12 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials to be removed.
+     * </p>
      * 
      * @param credentialsToRemove
+     *        The credentials to be removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

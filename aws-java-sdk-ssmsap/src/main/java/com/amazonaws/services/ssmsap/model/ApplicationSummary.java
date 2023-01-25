@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The summary of the SAP application registered with AWS Systems Manager for SAP.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ApplicationSummary" target="_top">AWS API
  *      Documentation</a>
@@ -26,19 +28,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ApplicationSummary implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String id;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the application.
+     * </p>
+     */
     private String type;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
+     */
     private String arn;
-    /** <p/> */
+    /**
+     * <p>
+     * The tags on the application.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param id
+     *        The ID of the application.
      */
 
     public void setId(String id) {
@@ -46,9 +67,11 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getId() {
@@ -56,9 +79,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param id
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,9 +94,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param type
+     *        The type of the application.
      * @see ApplicationType
      */
 
@@ -79,9 +108,11 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
-     * @return
+     * @return The type of the application.
      * @see ApplicationType
      */
 
@@ -90,9 +121,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param type
+     *        The type of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationType
      */
@@ -103,9 +137,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param type
+     *        The type of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationType
      */
@@ -116,9 +153,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the application.
      */
 
     public void setArn(String arn) {
@@ -126,9 +166,11 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the application.
      */
 
     public String getArn() {
@@ -136,9 +178,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,9 +193,11 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags on the application.
+     * </p>
      * 
-     * @return
+     * @return The tags on the application.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -158,9 +205,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags on the application.
+     * </p>
      * 
      * @param tags
+     *        The tags on the application.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -168,9 +218,12 @@ public class ApplicationSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags on the application.
+     * </p>
      * 
      * @param tags
+     *        The tags on the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

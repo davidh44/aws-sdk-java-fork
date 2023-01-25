@@ -50,8 +50,11 @@ public interface AWSSsmSap {
      * @param deleteResourcePermissionRequest
      * @return Result of the DeleteResourcePermission operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.DeleteResourcePermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/DeleteResourcePermission"
      *      target="_top">AWS API Documentation</a>
@@ -67,7 +70,9 @@ public interface AWSSsmSap {
      * @param deregisterApplicationRequest
      * @return Result of the DeregisterApplication operation returned by the service.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.DeregisterApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/DeregisterApplication" target="_top">AWS
      *      API Documentation</a>
@@ -83,7 +88,9 @@ public interface AWSSsmSap {
      * @param getApplicationRequest
      * @return Result of the GetApplication operation returned by the service.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.GetApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetApplication" target="_top">AWS API
      *      Documentation</a>
@@ -98,7 +105,9 @@ public interface AWSSsmSap {
      * @param getComponentRequest
      * @return Result of the GetComponent operation returned by the service.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.GetComponent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetComponent" target="_top">AWS API
      *      Documentation</a>
@@ -113,7 +122,9 @@ public interface AWSSsmSap {
      * @param getDatabaseRequest
      * @return Result of the GetDatabase operation returned by the service.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.GetDatabase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetDatabase" target="_top">AWS API
      *      Documentation</a>
@@ -128,7 +139,9 @@ public interface AWSSsmSap {
      * @param getOperationRequest
      * @return Result of the GetOperation operation returned by the service.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.GetOperation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetOperation" target="_top">AWS API
      *      Documentation</a>
@@ -143,8 +156,11 @@ public interface AWSSsmSap {
      * @param getResourcePermissionRequest
      * @return Result of the GetResourcePermission operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.GetResourcePermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetResourcePermission" target="_top">AWS
      *      API Documentation</a>
@@ -159,8 +175,11 @@ public interface AWSSsmSap {
      * @param listApplicationsRequest
      * @return Result of the ListApplications operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.ListApplications
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListApplications" target="_top">AWS API
      *      Documentation</a>
@@ -175,8 +194,11 @@ public interface AWSSsmSap {
      * @param listComponentsRequest
      * @return Result of the ListComponents operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.ListComponents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListComponents" target="_top">AWS API
      *      Documentation</a>
@@ -191,13 +213,33 @@ public interface AWSSsmSap {
      * @param listDatabasesRequest
      * @return Result of the ListDatabases operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.ListDatabases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListDatabases" target="_top">AWS API
      *      Documentation</a>
      */
     ListDatabasesResult listDatabases(ListDatabasesRequest listDatabasesRequest);
+
+    /**
+     * <p>
+     * Lists the operations performed by AWS Systems Manager for SAP.
+     * </p>
+     * 
+     * @param listOperationsRequest
+     * @return Result of the ListOperations operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSSsmSap.ListOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListOperationsResult listOperations(ListOperationsRequest listOperationsRequest);
 
     /**
      * <p>
@@ -207,8 +249,11 @@ public interface AWSSsmSap {
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
+     *         A conflict has occurred.
      * @sample AWSSsmSap.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
@@ -223,8 +268,11 @@ public interface AWSSsmSap {
      * @param putResourcePermissionRequest
      * @return Result of the PutResourcePermission operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.PutResourcePermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/PutResourcePermission" target="_top">AWS
      *      API Documentation</a>
@@ -250,8 +298,11 @@ public interface AWSSsmSap {
      * @param registerApplicationRequest
      * @return Result of the RegisterApplication operation returned by the service.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
+     *         A conflict has occurred.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.RegisterApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/RegisterApplication" target="_top">AWS
      *      API Documentation</a>
@@ -266,8 +317,11 @@ public interface AWSSsmSap {
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
+     *         A conflict has occurred.
      * @sample AWSSsmSap.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -282,8 +336,11 @@ public interface AWSSsmSap {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
+     *         A conflict has occurred.
      * @sample AWSSsmSap.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/UntagResource" target="_top">AWS API
      *      Documentation</a>
@@ -291,13 +348,18 @@ public interface AWSSsmSap {
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
-     * <p/>
+     * <p>
+     * Updates the settings of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param updateApplicationSettingsRequest
      * @return Result of the UpdateApplicationSettings operation returned by the service.
      * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
+     *         An internal error has occurred.
      * @sample AWSSsmSap.UpdateApplicationSettings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/UpdateApplicationSettings"
      *      target="_top">AWS API Documentation</a>

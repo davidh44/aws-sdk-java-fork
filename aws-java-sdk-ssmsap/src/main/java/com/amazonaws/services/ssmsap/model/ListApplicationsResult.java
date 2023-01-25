@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The applications registered with AWS Systems Manager for SAP.
+     * </p>
+     */
     private java.util.List<ApplicationSummary> applications;
-    /** <p/> */
+    /**
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * <p/>
+     * <p>
+     * The applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return The applications registered with AWS Systems Manager for SAP.
      */
 
     public java.util.List<ApplicationSummary> getApplications() {
@@ -39,9 +50,12 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p/>
+     * <p>
+     * The applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param applications
+     *        The applications registered with AWS Systems Manager for SAP.
      */
 
     public void setApplications(java.util.Collection<ApplicationSummary> applications) {
@@ -54,7 +68,9 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p/>
+     * <p>
+     * The applications registered with AWS Systems Manager for SAP.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setApplications(java.util.Collection)} or {@link #withApplications(java.util.Collection)} if you want to
@@ -62,6 +78,7 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param applications
+     *        The applications registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,9 +93,12 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p/>
+     * <p>
+     * The applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param applications
+     *        The applications registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,9 +108,14 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
      * @param nextToken
+     *        The token to use to retrieve the next page of results. This value is null when there are no more results
+     *        to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -98,9 +123,13 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
-     * @return
+     * @return The token to use to retrieve the next page of results. This value is null when there are no more results
+     *         to return.
      */
 
     public String getNextToken() {
@@ -108,9 +137,14 @@ public class ListApplicationsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
      * @param nextToken
+     *        The token to use to retrieve the next page of results. This value is null when there are no more results
+     *        to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

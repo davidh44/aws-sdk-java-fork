@@ -23,13 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetComponentResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The component of an application registered with AWS Systems Manager for SAP.
+     * </p>
+     */
     private Component component;
 
     /**
-     * <p/>
+     * <p>
+     * The component of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param component
+     *        The component of an application registered with AWS Systems Manager for SAP.
      */
 
     public void setComponent(Component component) {
@@ -37,9 +44,11 @@ public class GetComponentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * <p/>
+     * <p>
+     * The component of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return The component of an application registered with AWS Systems Manager for SAP.
      */
 
     public Component getComponent() {
@@ -47,9 +56,12 @@ public class GetComponentResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * <p/>
+     * <p>
+     * The component of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param component
+     *        The component of an application registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

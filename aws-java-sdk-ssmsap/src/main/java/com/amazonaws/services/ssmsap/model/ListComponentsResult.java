@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * List of components registered with AWS System Manager for SAP.
+     * </p>
+     */
     private java.util.List<ComponentSummary> components;
-    /** <p/> */
+    /**
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * <p/>
+     * <p>
+     * List of components registered with AWS System Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return List of components registered with AWS System Manager for SAP.
      */
 
     public java.util.List<ComponentSummary> getComponents() {
@@ -39,9 +50,12 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of components registered with AWS System Manager for SAP.
+     * </p>
      * 
      * @param components
+     *        List of components registered with AWS System Manager for SAP.
      */
 
     public void setComponents(java.util.Collection<ComponentSummary> components) {
@@ -54,7 +68,9 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of components registered with AWS System Manager for SAP.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setComponents(java.util.Collection)} or {@link #withComponents(java.util.Collection)} if you want to
@@ -62,6 +78,7 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param components
+     *        List of components registered with AWS System Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,9 +93,12 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * List of components registered with AWS System Manager for SAP.
+     * </p>
      * 
      * @param components
+     *        List of components registered with AWS System Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,9 +108,14 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
      * @param nextToken
+     *        The token to use to retrieve the next page of results. This value is null when there are no more results
+     *        to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -98,9 +123,13 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
-     * @return
+     * @return The token to use to retrieve the next page of results. This value is null when there are no more results
+     *         to return.
      */
 
     public String getNextToken() {
@@ -108,9 +137,14 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * The token to use to retrieve the next page of results. This value is null when there are no more results to
+     * return.
+     * </p>
      * 
      * @param nextToken
+     *        The token to use to retrieve the next page of results. This value is null when there are no more results
+     *        to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

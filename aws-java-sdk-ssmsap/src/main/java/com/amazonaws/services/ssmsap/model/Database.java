@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The SAP HANA database of the application registered with AWS Systems Manager for SAP.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/Database" target="_top">AWS API
  *      Documentation</a>
@@ -26,33 +28,80 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Database implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the component.
+     * </p>
+     */
     private String componentId;
-    /** <p/> */
+    /**
+     * <p>
+     * The credentials of the database.
+     * </p>
+     */
     private java.util.List<ApplicationCredential> credentials;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the SAP HANA database.
+     * </p>
+     */
     private String databaseId;
-    /** <p/> */
+    /**
+     * <p>
+     * The name of the database.
+     * </p>
+     */
     private String databaseName;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the database.
+     * </p>
+     */
     private String databaseType;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
+     */
     private String arn;
-    /** <p/> */
+    /**
+     * <p>
+     * The status of the database.
+     * </p>
+     */
     private String status;
-    /** <p/> */
+    /**
+     * <p>
+     * The primary host of the database.
+     * </p>
+     */
     private String primaryHost;
-    /** <p/> */
+    /**
+     * <p>
+     * The SQL port of the database.
+     * </p>
+     */
     private Integer sQLPort;
-    /** <p/> */
+    /**
+     * <p>
+     * The time at which the database was last updated.
+     * </p>
+     */
     private java.util.Date lastUpdated;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -60,9 +109,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -70,9 +121,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,9 +136,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      */
 
     public void setComponentId(String componentId) {
@@ -92,9 +149,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
-     * @return
+     * @return The ID of the component.
      */
 
     public String getComponentId() {
@@ -102,9 +161,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,9 +176,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the database.
+     * </p>
      * 
-     * @return
+     * @return The credentials of the database.
      */
 
     public java.util.List<ApplicationCredential> getCredentials() {
@@ -124,9 +188,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the database.
+     * </p>
      * 
      * @param credentials
+     *        The credentials of the database.
      */
 
     public void setCredentials(java.util.Collection<ApplicationCredential> credentials) {
@@ -139,7 +206,9 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the database.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCredentials(java.util.Collection)} or {@link #withCredentials(java.util.Collection)} if you want to
@@ -147,6 +216,7 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param credentials
+     *        The credentials of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,9 +231,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The credentials of the database.
+     * </p>
      * 
      * @param credentials
+     *        The credentials of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,9 +246,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the SAP HANA database.
+     * </p>
      * 
      * @param databaseId
+     *        The ID of the SAP HANA database.
      */
 
     public void setDatabaseId(String databaseId) {
@@ -183,9 +259,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the SAP HANA database.
+     * </p>
      * 
-     * @return
+     * @return The ID of the SAP HANA database.
      */
 
     public String getDatabaseId() {
@@ -193,9 +271,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the SAP HANA database.
+     * </p>
      * 
      * @param databaseId
+     *        The ID of the SAP HANA database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -205,9 +286,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the database.
+     * </p>
      * 
      * @param databaseName
+     *        The name of the database.
      */
 
     public void setDatabaseName(String databaseName) {
@@ -215,9 +299,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the database.
+     * </p>
      * 
-     * @return
+     * @return The name of the database.
      */
 
     public String getDatabaseName() {
@@ -225,9 +311,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the database.
+     * </p>
      * 
      * @param databaseName
+     *        The name of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,9 +326,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
      * @param databaseType
+     *        The type of the database.
      * @see DatabaseType
      */
 
@@ -248,9 +340,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
-     * @return
+     * @return The type of the database.
      * @see DatabaseType
      */
 
@@ -259,9 +353,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
      * @param databaseType
+     *        The type of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DatabaseType
      */
@@ -272,9 +369,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the database.
+     * </p>
      * 
      * @param databaseType
+     *        The type of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DatabaseType
      */
@@ -285,9 +385,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the database.
      */
 
     public void setArn(String arn) {
@@ -295,9 +398,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the database.
      */
 
     public String getArn() {
@@ -305,9 +410,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -317,9 +425,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the database.
+     * </p>
      * 
      * @param status
+     *        The status of the database.
      * @see DatabaseStatus
      */
 
@@ -328,9 +439,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the database.
+     * </p>
      * 
-     * @return
+     * @return The status of the database.
      * @see DatabaseStatus
      */
 
@@ -339,9 +452,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the database.
+     * </p>
      * 
      * @param status
+     *        The status of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DatabaseStatus
      */
@@ -352,9 +468,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the database.
+     * </p>
      * 
      * @param status
+     *        The status of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DatabaseStatus
      */
@@ -365,9 +484,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The primary host of the database.
+     * </p>
      * 
      * @param primaryHost
+     *        The primary host of the database.
      */
 
     public void setPrimaryHost(String primaryHost) {
@@ -375,9 +497,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The primary host of the database.
+     * </p>
      * 
-     * @return
+     * @return The primary host of the database.
      */
 
     public String getPrimaryHost() {
@@ -385,9 +509,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The primary host of the database.
+     * </p>
      * 
      * @param primaryHost
+     *        The primary host of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -397,9 +524,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SQL port of the database.
+     * </p>
      * 
      * @param sQLPort
+     *        The SQL port of the database.
      */
 
     public void setSQLPort(Integer sQLPort) {
@@ -407,9 +537,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SQL port of the database.
+     * </p>
      * 
-     * @return
+     * @return The SQL port of the database.
      */
 
     public Integer getSQLPort() {
@@ -417,9 +549,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SQL port of the database.
+     * </p>
      * 
      * @param sQLPort
+     *        The SQL port of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -429,9 +564,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the database was last updated.
+     * </p>
      * 
      * @param lastUpdated
+     *        The time at which the database was last updated.
      */
 
     public void setLastUpdated(java.util.Date lastUpdated) {
@@ -439,9 +577,11 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the database was last updated.
+     * </p>
      * 
-     * @return
+     * @return The time at which the database was last updated.
      */
 
     public java.util.Date getLastUpdated() {
@@ -449,9 +589,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the database was last updated.
+     * </p>
      * 
      * @param lastUpdated
+     *        The time at which the database was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

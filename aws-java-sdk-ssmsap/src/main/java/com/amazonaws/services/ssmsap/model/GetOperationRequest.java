@@ -25,13 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetOperationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the operation.
+     * </p>
+     */
     private String operationId;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
      * @param operationId
+     *        The ID of the operation.
      */
 
     public void setOperationId(String operationId) {
@@ -39,9 +46,11 @@ public class GetOperationRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
-     * @return
+     * @return The ID of the operation.
      */
 
     public String getOperationId() {
@@ -49,9 +58,12 @@ public class GetOperationRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
      * @param operationId
+     *        The ID of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

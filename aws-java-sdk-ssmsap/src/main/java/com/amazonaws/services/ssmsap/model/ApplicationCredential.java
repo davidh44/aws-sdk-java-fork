@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The credentials of your SAP application.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ApplicationCredential" target="_top">AWS API
  *      Documentation</a>
@@ -26,17 +28,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ApplicationCredential implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The name of the SAP HANA database.
+     * </p>
+     */
     private String databaseName;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the application credentials.
+     * </p>
+     */
     private String credentialType;
-    /** <p/> */
+    /**
+     * <p>
+     * The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
+     * </p>
+     */
     private String secretId;
 
     /**
-     * <p/>
+     * <p>
+     * The name of the SAP HANA database.
+     * </p>
      * 
      * @param databaseName
+     *        The name of the SAP HANA database.
      */
 
     public void setDatabaseName(String databaseName) {
@@ -44,9 +61,11 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the SAP HANA database.
+     * </p>
      * 
-     * @return
+     * @return The name of the SAP HANA database.
      */
 
     public String getDatabaseName() {
@@ -54,9 +73,12 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the SAP HANA database.
+     * </p>
      * 
      * @param databaseName
+     *        The name of the SAP HANA database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,9 +88,12 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application credentials.
+     * </p>
      * 
      * @param credentialType
+     *        The type of the application credentials.
      * @see CredentialType
      */
 
@@ -77,9 +102,11 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application credentials.
+     * </p>
      * 
-     * @return
+     * @return The type of the application credentials.
      * @see CredentialType
      */
 
@@ -88,9 +115,12 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application credentials.
+     * </p>
      * 
      * @param credentialType
+     *        The type of the application credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CredentialType
      */
@@ -101,9 +131,12 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application credentials.
+     * </p>
      * 
      * @param credentialType
+     *        The type of the application credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CredentialType
      */
@@ -114,9 +147,12 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
+     * </p>
      * 
      * @param secretId
+     *        The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
      */
 
     public void setSecretId(String secretId) {
@@ -124,9 +160,11 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
+     * </p>
      * 
-     * @return
+     * @return The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
      */
 
     public String getSecretId() {
@@ -134,9 +172,12 @@ public class ApplicationCredential implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p/>
+     * <p>
+     * The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
+     * </p>
      * 
      * @param secretId
+     *        The secret ID created in AWS Secrets Manager to store the credentials of the SAP application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

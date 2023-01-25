@@ -15,7 +15,9 @@ package com.amazonaws.services.ssmsap.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * An internal error has occurred.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InternalServerException extends com.amazonaws.services.ssmsap.model.AWSSsmSapException {

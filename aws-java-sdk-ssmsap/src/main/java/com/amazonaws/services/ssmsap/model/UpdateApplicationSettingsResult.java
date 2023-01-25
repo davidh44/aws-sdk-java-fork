@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The update message.
+     * </p>
+     */
     private String message;
-    /** <p/> */
+    /**
+     * <p>
+     * The IDs of the operations.
+     * </p>
+     */
     private java.util.List<String> operationIds;
 
     /**
-     * <p/>
+     * <p>
+     * The update message.
+     * </p>
      * 
      * @param message
+     *        The update message.
      */
 
     public void setMessage(String message) {
@@ -39,9 +50,11 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * The update message.
+     * </p>
      * 
-     * @return
+     * @return The update message.
      */
 
     public String getMessage() {
@@ -49,9 +62,12 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * The update message.
+     * </p>
      * 
      * @param message
+     *        The update message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -61,9 +77,11 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IDs of the operations.
+     * </p>
      * 
-     * @return
+     * @return The IDs of the operations.
      */
 
     public java.util.List<String> getOperationIds() {
@@ -71,9 +89,12 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IDs of the operations.
+     * </p>
      * 
      * @param operationIds
+     *        The IDs of the operations.
      */
 
     public void setOperationIds(java.util.Collection<String> operationIds) {
@@ -86,7 +107,9 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IDs of the operations.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setOperationIds(java.util.Collection)} or {@link #withOperationIds(java.util.Collection)} if you want to
@@ -94,6 +117,7 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param operationIds
+     *        The IDs of the operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,9 +132,12 @@ public class UpdateApplicationSettingsResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IDs of the operations.
+     * </p>
      * 
      * @param operationIds
+     *        The IDs of the operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -15,7 +15,9 @@ package com.amazonaws.services.ssmsap.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The resource is not available.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceNotFoundException extends com.amazonaws.services.ssmsap.model.AWSSsmSapException {

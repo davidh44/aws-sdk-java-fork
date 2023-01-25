@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
+     * </p>
+     */
     private Application application;
-    /** <p/> */
+    /**
+     * <p>
+     * The tags of a registered application.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * <p/>
+     * <p>
+     * Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param application
+     *        Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
      */
 
     public void setApplication(Application application) {
@@ -39,9 +50,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
      */
 
     public Application getApplication() {
@@ -49,9 +62,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param application
+     *        Returns all of the metadata of an application registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -61,9 +77,11 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of a registered application.
+     * </p>
      * 
-     * @return
+     * @return The tags of a registered application.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -71,9 +89,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of a registered application.
+     * </p>
      * 
      * @param tags
+     *        The tags of a registered application.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -81,9 +102,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of a registered application.
+     * </p>
      * 
      * @param tags
+     *        The tags of a registered application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

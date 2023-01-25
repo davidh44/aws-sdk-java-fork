@@ -18,26 +18,47 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Describes the properties of the Dedicated Host.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/Host" target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Host implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The name of the Dedicated Host.
+     * </p>
+     */
     private String hostName;
-    /** <p/> */
+    /**
+     * <p>
+     * The role of the Dedicated Host.
+     * </p>
+     */
     private String hostRole;
-    /** <p/> */
+    /**
+     * <p>
+     * The IP address of the Dedicated Host.
+     * </p>
+     */
     private String hostIp;
-    /** <p/> */
+    /**
+     * <p>
+     * The instance ID of the instance on the Dedicated Host.
+     * </p>
+     */
     private String instanceId;
 
     /**
-     * <p/>
+     * <p>
+     * The name of the Dedicated Host.
+     * </p>
      * 
      * @param hostName
+     *        The name of the Dedicated Host.
      */
 
     public void setHostName(String hostName) {
@@ -45,9 +66,11 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the Dedicated Host.
+     * </p>
      * 
-     * @return
+     * @return The name of the Dedicated Host.
      */
 
     public String getHostName() {
@@ -55,9 +78,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The name of the Dedicated Host.
+     * </p>
      * 
      * @param hostName
+     *        The name of the Dedicated Host.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,9 +93,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The role of the Dedicated Host.
+     * </p>
      * 
      * @param hostRole
+     *        The role of the Dedicated Host.
      * @see HostRole
      */
 
@@ -78,9 +107,11 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The role of the Dedicated Host.
+     * </p>
      * 
-     * @return
+     * @return The role of the Dedicated Host.
      * @see HostRole
      */
 
@@ -89,9 +120,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The role of the Dedicated Host.
+     * </p>
      * 
      * @param hostRole
+     *        The role of the Dedicated Host.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostRole
      */
@@ -102,9 +136,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The role of the Dedicated Host.
+     * </p>
      * 
      * @param hostRole
+     *        The role of the Dedicated Host.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostRole
      */
@@ -115,9 +152,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IP address of the Dedicated Host.
+     * </p>
      * 
      * @param hostIp
+     *        The IP address of the Dedicated Host.
      */
 
     public void setHostIp(String hostIp) {
@@ -125,9 +165,11 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IP address of the Dedicated Host.
+     * </p>
      * 
-     * @return
+     * @return The IP address of the Dedicated Host.
      */
 
     public String getHostIp() {
@@ -135,9 +177,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The IP address of the Dedicated Host.
+     * </p>
      * 
      * @param hostIp
+     *        The IP address of the Dedicated Host.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,9 +192,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The instance ID of the instance on the Dedicated Host.
+     * </p>
      * 
      * @param instanceId
+     *        The instance ID of the instance on the Dedicated Host.
      */
 
     public void setInstanceId(String instanceId) {
@@ -157,9 +205,11 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The instance ID of the instance on the Dedicated Host.
+     * </p>
      * 
-     * @return
+     * @return The instance ID of the instance on the Dedicated Host.
      */
 
     public String getInstanceId() {
@@ -167,9 +217,12 @@ public class Host implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The instance ID of the instance on the Dedicated Host.
+     * </p>
      * 
      * @param instanceId
+     *        The instance ID of the instance on the Dedicated Host.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

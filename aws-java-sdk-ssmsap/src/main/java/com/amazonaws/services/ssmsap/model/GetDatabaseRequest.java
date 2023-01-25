@@ -25,19 +25,38 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String applicationId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the component.
+     * </p>
+     */
     private String componentId;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the database.
+     * </p>
+     */
     private String databaseId;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
+     */
     private String databaseArn;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      */
 
     public void setApplicationId(String applicationId) {
@@ -45,9 +64,11 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getApplicationId() {
@@ -55,9 +76,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param applicationId
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -67,9 +91,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      */
 
     public void setComponentId(String componentId) {
@@ -77,9 +104,11 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
-     * @return
+     * @return The ID of the component.
      */
 
     public String getComponentId() {
@@ -87,9 +116,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the component.
+     * </p>
      * 
      * @param componentId
+     *        The ID of the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,9 +131,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the database.
+     * </p>
      * 
      * @param databaseId
+     *        The ID of the database.
      */
 
     public void setDatabaseId(String databaseId) {
@@ -109,9 +144,11 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the database.
+     * </p>
      * 
-     * @return
+     * @return The ID of the database.
      */
 
     public String getDatabaseId() {
@@ -119,9 +156,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the database.
+     * </p>
      * 
      * @param databaseId
+     *        The ID of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,9 +171,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
      * @param databaseArn
+     *        The Amazon Resource Name (ARN) of the database.
      */
 
     public void setDatabaseArn(String databaseArn) {
@@ -141,9 +184,11 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the database.
      */
 
     public String getDatabaseArn() {
@@ -151,9 +196,12 @@ public class GetDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the database.
+     * </p>
      * 
      * @param databaseArn
+     *        The Amazon Resource Name (ARN) of the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

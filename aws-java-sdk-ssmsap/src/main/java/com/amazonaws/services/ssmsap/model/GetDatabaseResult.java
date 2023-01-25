@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetDatabaseResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The SAP HANA database of an application registered with AWS Systems Manager for SAP.
+     * </p>
+     */
     private Database database;
-    /** <p/> */
+    /**
+     * <p>
+     * The tags of a database.
+     * </p>
+     */
     private java.util.Map<String, String> tags;
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA database of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param database
+     *        The SAP HANA database of an application registered with AWS Systems Manager for SAP.
      */
 
     public void setDatabase(Database database) {
@@ -39,9 +50,11 @@ public class GetDatabaseResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA database of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return The SAP HANA database of an application registered with AWS Systems Manager for SAP.
      */
 
     public Database getDatabase() {
@@ -49,9 +62,12 @@ public class GetDatabaseResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p/>
+     * <p>
+     * The SAP HANA database of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param database
+     *        The SAP HANA database of an application registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -61,9 +77,11 @@ public class GetDatabaseResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of a database.
+     * </p>
      * 
-     * @return
+     * @return The tags of a database.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -71,9 +89,12 @@ public class GetDatabaseResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of a database.
+     * </p>
      * 
      * @param tags
+     *        The tags of a database.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -81,9 +102,12 @@ public class GetDatabaseResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
-     * <p/>
+     * <p>
+     * The tags of a database.
+     * </p>
      * 
      * @param tags
+     *        The tags of a database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -349,6 +349,37 @@ public interface AWSSsmSapAsync extends AWSSsmSap {
 
     /**
      * <p>
+     * Lists the operations performed by AWS Systems Manager for SAP.
+     * </p>
+     * 
+     * @param listOperationsRequest
+     * @return A Java Future containing the result of the ListOperations operation returned by the service.
+     * @sample AWSSsmSapAsync.ListOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListOperationsResult> listOperationsAsync(ListOperationsRequest listOperationsRequest);
+
+    /**
+     * <p>
+     * Lists the operations performed by AWS Systems Manager for SAP.
+     * </p>
+     * 
+     * @param listOperationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListOperations operation returned by the service.
+     * @sample AWSSsmSapAsyncHandler.ListOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListOperations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListOperationsResult> listOperationsAsync(ListOperationsRequest listOperationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListOperationsRequest, ListOperationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all tags on an SAP HANA application and/or database registered with AWS Systems Manager for SAP.
      * </p>
      * 
@@ -525,7 +556,9 @@ public interface AWSSsmSapAsync extends AWSSsmSap {
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
-     * <p/>
+     * <p>
+     * Updates the settings of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param updateApplicationSettingsRequest
      * @return A Java Future containing the result of the UpdateApplicationSettings operation returned by the service.
@@ -537,7 +570,9 @@ public interface AWSSsmSapAsync extends AWSSsmSap {
             UpdateApplicationSettingsRequest updateApplicationSettingsRequest);
 
     /**
-     * <p/>
+     * <p>
+     * Updates the settings of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param updateApplicationSettingsRequest
      * @param asyncHandler

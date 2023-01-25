@@ -27,7 +27,11 @@ public class GetResourcePermissionRequest extends com.amazonaws.AmazonWebService
 
     /** <p/> */
     private String actionType;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
+     */
     private String resourceArn;
 
     /**
@@ -79,9 +83,12 @@ public class GetResourcePermissionRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
      * 
      * @param resourceArn
+     *        The Amazon Resource Name (ARN) of the resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -89,9 +96,11 @@ public class GetResourcePermissionRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the resource.
      */
 
     public String getResourceArn() {
@@ -99,9 +108,12 @@ public class GetResourcePermissionRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource.
+     * </p>
      * 
      * @param resourceArn
+     *        The Amazon Resource Name (ARN) of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

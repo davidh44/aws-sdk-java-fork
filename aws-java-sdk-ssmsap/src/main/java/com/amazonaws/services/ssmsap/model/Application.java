@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * An SAP application registered with AWS Systems Manager for SAP.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/Application" target="_top">AWS API
  *      Documentation</a>
@@ -26,27 +28,62 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Application implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the application.
+     * </p>
+     */
     private String id;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of the application.
+     * </p>
+     */
     private String type;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
+     */
     private String arn;
-    /** <p/> */
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Application Registry.
+     * </p>
+     */
     private String appRegistryArn;
-    /** <p/> */
+    /**
+     * <p>
+     * The status of the application.
+     * </p>
+     */
     private String status;
-    /** <p/> */
+    /**
+     * <p>
+     * The components of the application.
+     * </p>
+     */
     private java.util.List<String> components;
-    /** <p/> */
+    /**
+     * <p>
+     * The time at which the application was last updated.
+     * </p>
+     */
     private java.util.Date lastUpdated;
-    /** <p/> */
+    /**
+     * <p>
+     * The status message.
+     * </p>
+     */
     private String statusMessage;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param id
+     *        The ID of the application.
      */
 
     public void setId(String id) {
@@ -54,9 +91,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
-     * @return
+     * @return The ID of the application.
      */
 
     public String getId() {
@@ -64,9 +103,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the application.
+     * </p>
      * 
      * @param id
+     *        The ID of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,9 +118,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param type
+     *        The type of the application.
      * @see ApplicationType
      */
 
@@ -87,9 +132,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
-     * @return
+     * @return The type of the application.
      * @see ApplicationType
      */
 
@@ -98,9 +145,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param type
+     *        The type of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationType
      */
@@ -111,9 +161,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of the application.
+     * </p>
      * 
      * @param type
+     *        The type of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationType
      */
@@ -124,9 +177,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the application.
      */
 
     public void setArn(String arn) {
@@ -134,9 +190,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the application.
      */
 
     public String getArn() {
@@ -144,9 +202,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the application.
+     * </p>
      * 
      * @param arn
+     *        The Amazon Resource Name (ARN) of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,9 +217,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the Application Registry.
+     * </p>
      * 
      * @param appRegistryArn
+     *        The Amazon Resource Name (ARN) of the Application Registry.
      */
 
     public void setAppRegistryArn(String appRegistryArn) {
@@ -166,9 +230,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the Application Registry.
+     * </p>
      * 
-     * @return
+     * @return The Amazon Resource Name (ARN) of the Application Registry.
      */
 
     public String getAppRegistryArn() {
@@ -176,9 +242,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The Amazon Resource Name (ARN) of the Application Registry.
+     * </p>
      * 
      * @param appRegistryArn
+     *        The Amazon Resource Name (ARN) of the Application Registry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,9 +257,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the application.
+     * </p>
      * 
      * @param status
+     *        The status of the application.
      * @see ApplicationStatus
      */
 
@@ -199,9 +271,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the application.
+     * </p>
      * 
-     * @return
+     * @return The status of the application.
      * @see ApplicationStatus
      */
 
@@ -210,9 +284,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the application.
+     * </p>
      * 
      * @param status
+     *        The status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationStatus
      */
@@ -223,9 +300,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the application.
+     * </p>
      * 
      * @param status
+     *        The status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ApplicationStatus
      */
@@ -236,9 +316,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The components of the application.
+     * </p>
      * 
-     * @return
+     * @return The components of the application.
      */
 
     public java.util.List<String> getComponents() {
@@ -246,9 +328,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The components of the application.
+     * </p>
      * 
      * @param components
+     *        The components of the application.
      */
 
     public void setComponents(java.util.Collection<String> components) {
@@ -261,7 +346,9 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The components of the application.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setComponents(java.util.Collection)} or {@link #withComponents(java.util.Collection)} if you want to
@@ -269,6 +356,7 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param components
+     *        The components of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -283,9 +371,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The components of the application.
+     * </p>
      * 
      * @param components
+     *        The components of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -295,9 +386,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the application was last updated.
+     * </p>
      * 
      * @param lastUpdated
+     *        The time at which the application was last updated.
      */
 
     public void setLastUpdated(java.util.Date lastUpdated) {
@@ -305,9 +399,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the application was last updated.
+     * </p>
      * 
-     * @return
+     * @return The time at which the application was last updated.
      */
 
     public java.util.Date getLastUpdated() {
@@ -315,9 +411,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The time at which the application was last updated.
+     * </p>
      * 
      * @param lastUpdated
+     *        The time at which the application was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -327,9 +426,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status message.
+     * </p>
      * 
      * @param statusMessage
+     *        The status message.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -337,9 +439,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status message.
+     * </p>
      * 
-     * @return
+     * @return The status message.
      */
 
     public String getStatusMessage() {
@@ -347,9 +451,12 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status message.
+     * </p>
      * 
      * @param statusMessage
+     *        The status message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

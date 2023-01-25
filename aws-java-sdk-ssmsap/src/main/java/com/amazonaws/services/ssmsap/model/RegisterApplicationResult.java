@@ -23,15 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RegisterApplicationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The application registered with AWS Systems Manager for SAP.
+     * </p>
+     */
     private Application application;
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the operation.
+     * </p>
+     */
     private String operationId;
 
     /**
-     * <p/>
+     * <p>
+     * The application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param application
+     *        The application registered with AWS Systems Manager for SAP.
      */
 
     public void setApplication(Application application) {
@@ -39,9 +50,11 @@ public class RegisterApplicationResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * <p/>
+     * <p>
+     * The application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return The application registered with AWS Systems Manager for SAP.
      */
 
     public Application getApplication() {
@@ -49,9 +62,12 @@ public class RegisterApplicationResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * <p/>
+     * <p>
+     * The application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param application
+     *        The application registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -61,9 +77,12 @@ public class RegisterApplicationResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
      * @param operationId
+     *        The ID of the operation.
      */
 
     public void setOperationId(String operationId) {
@@ -71,9 +90,11 @@ public class RegisterApplicationResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
-     * @return
+     * @return The ID of the operation.
      */
 
     public String getOperationId() {
@@ -81,9 +102,12 @@ public class RegisterApplicationResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the operation.
+     * </p>
      * 
      * @param operationId
+     *        The ID of the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
