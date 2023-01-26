@@ -35,7 +35,7 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * <important>
      * <p>
@@ -126,7 +126,7 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * <important>
      * <p>
@@ -136,7 +136,8 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param endpointId
      *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p> <important>
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p>
+     *        <important>
      *        <p>
      *        When using Java, you must include <code>auth-crt</code> on the class path.
      *        </p>
@@ -149,7 +150,7 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * <important>
      * <p>
@@ -158,7 +159,8 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </important>
      * 
      * @return The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *         abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p> <important>
+     *         https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p>
+     *         <important>
      *         <p>
      *         When using Java, you must include <code>auth-crt</code> on the class path.
      *         </p>
@@ -171,7 +173,7 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * <important>
      * <p>
@@ -181,7 +183,8 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param endpointId
      *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p> <important>
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.</p>
+     *        <important>
      *        <p>
      *        When using Java, you must include <code>auth-crt</code> on the class path.
      *        </p>

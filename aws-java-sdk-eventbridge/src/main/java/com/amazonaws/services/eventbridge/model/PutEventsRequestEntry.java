@@ -51,7 +51,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     private java.util.List<String> resources;
     /**
      * <p>
-     * Free-form string used to decide what fields to expect in the event detail.
+     * Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.
      * </p>
      */
     private String detailType;
@@ -263,11 +263,12 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Free-form string used to decide what fields to expect in the event detail.
+     * Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.
      * </p>
      * 
      * @param detailType
-     *        Free-form string used to decide what fields to expect in the event detail.
+     *        Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event
+     *        detail.
      */
 
     public void setDetailType(String detailType) {
@@ -276,10 +277,11 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Free-form string used to decide what fields to expect in the event detail.
+     * Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.
      * </p>
      * 
-     * @return Free-form string used to decide what fields to expect in the event detail.
+     * @return Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event
+     *         detail.
      */
 
     public String getDetailType() {
@@ -288,11 +290,12 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Free-form string used to decide what fields to expect in the event detail.
+     * Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.
      * </p>
      * 
      * @param detailType
-     *        Free-form string used to decide what fields to expect in the event detail.
+     *        Free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event
+     *        detail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

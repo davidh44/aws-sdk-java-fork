@@ -39,7 +39,7 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     private String description;
     /**
      * <p>
-     * Configure the routing policy, including the health check and secondary Region..
+     * Configure the routing policy, including the health check and secondary Region.
      * </p>
      */
     private RoutingConfig routingConfig;
@@ -144,11 +144,11 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Configure the routing policy, including the health check and secondary Region..
+     * Configure the routing policy, including the health check and secondary Region.
      * </p>
      * 
      * @param routingConfig
-     *        Configure the routing policy, including the health check and secondary Region..
+     *        Configure the routing policy, including the health check and secondary Region.
      */
 
     public void setRoutingConfig(RoutingConfig routingConfig) {
@@ -157,10 +157,10 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Configure the routing policy, including the health check and secondary Region..
+     * Configure the routing policy, including the health check and secondary Region.
      * </p>
      * 
-     * @return Configure the routing policy, including the health check and secondary Region..
+     * @return Configure the routing policy, including the health check and secondary Region.
      */
 
     public RoutingConfig getRoutingConfig() {
@@ -169,11 +169,11 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Configure the routing policy, including the health check and secondary Region..
+     * Configure the routing policy, including the health check and secondary Region.
      * </p>
      * 
      * @param routingConfig
-     *        Configure the routing policy, including the health check and secondary Region..
+     *        Configure the routing policy, including the health check and secondary Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

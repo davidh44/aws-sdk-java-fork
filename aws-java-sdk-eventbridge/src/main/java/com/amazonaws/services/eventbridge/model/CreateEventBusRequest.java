@@ -30,12 +30,13 @@ public class CreateEventBusRequest extends com.amazonaws.AmazonWebServiceRequest
      * The name of the new event bus.
      * </p>
      * <p>
-     * Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom event
-     * bus, as this name is already used for your account's default event bus.
+     * Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code> character
+     * in partner event bus names. In addition, for partner event buses, the name must exactly match the name of the
+     * partner event source that this event bus is matched to.
      * </p>
      * <p>
-     * If this is a partner event bus, the name must exactly match the name of the partner event source that this event
-     * bus is matched to.
+     * You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     * account's default event bus.
      * </p>
      */
     private String name;
@@ -58,23 +59,25 @@ public class CreateEventBusRequest extends com.amazonaws.AmazonWebServiceRequest
      * The name of the new event bus.
      * </p>
      * <p>
-     * Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom event
-     * bus, as this name is already used for your account's default event bus.
+     * Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code> character
+     * in partner event bus names. In addition, for partner event buses, the name must exactly match the name of the
+     * partner event source that this event bus is matched to.
      * </p>
      * <p>
-     * If this is a partner event bus, the name must exactly match the name of the partner event source that this event
-     * bus is matched to.
+     * You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     * account's default event bus.
      * </p>
      * 
      * @param name
      *        The name of the new event bus. </p>
      *        <p>
-     *        Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom
-     *        event bus, as this name is already used for your account's default event bus.
+     *        Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code>
+     *        character in partner event bus names. In addition, for partner event buses, the name must exactly match
+     *        the name of the partner event source that this event bus is matched to.
      *        </p>
      *        <p>
-     *        If this is a partner event bus, the name must exactly match the name of the partner event source that this
-     *        event bus is matched to.
+     *        You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     *        account's default event bus.
      */
 
     public void setName(String name) {
@@ -86,22 +89,24 @@ public class CreateEventBusRequest extends com.amazonaws.AmazonWebServiceRequest
      * The name of the new event bus.
      * </p>
      * <p>
-     * Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom event
-     * bus, as this name is already used for your account's default event bus.
+     * Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code> character
+     * in partner event bus names. In addition, for partner event buses, the name must exactly match the name of the
+     * partner event source that this event bus is matched to.
      * </p>
      * <p>
-     * If this is a partner event bus, the name must exactly match the name of the partner event source that this event
-     * bus is matched to.
+     * You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     * account's default event bus.
      * </p>
      * 
      * @return The name of the new event bus. </p>
      *         <p>
-     *         Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom
-     *         event bus, as this name is already used for your account's default event bus.
+     *         Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code>
+     *         character in partner event bus names. In addition, for partner event buses, the name must exactly match
+     *         the name of the partner event source that this event bus is matched to.
      *         </p>
      *         <p>
-     *         If this is a partner event bus, the name must exactly match the name of the partner event source that
-     *         this event bus is matched to.
+     *         You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     *         account's default event bus.
      */
 
     public String getName() {
@@ -113,23 +118,25 @@ public class CreateEventBusRequest extends com.amazonaws.AmazonWebServiceRequest
      * The name of the new event bus.
      * </p>
      * <p>
-     * Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom event
-     * bus, as this name is already used for your account's default event bus.
+     * Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code> character
+     * in partner event bus names. In addition, for partner event buses, the name must exactly match the name of the
+     * partner event source that this event bus is matched to.
      * </p>
      * <p>
-     * If this is a partner event bus, the name must exactly match the name of the partner event source that this event
-     * bus is matched to.
+     * You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     * account's default event bus.
      * </p>
      * 
      * @param name
      *        The name of the new event bus. </p>
      *        <p>
-     *        Event bus names cannot contain the / character. You can't use the name <code>default</code> for a custom
-     *        event bus, as this name is already used for your account's default event bus.
+     *        Custom event bus names can't contain the <code>/</code> character, but you can use the <code>/</code>
+     *        character in partner event bus names. In addition, for partner event buses, the name must exactly match
+     *        the name of the partner event source that this event bus is matched to.
      *        </p>
      *        <p>
-     *        If this is a partner event bus, the name must exactly match the name of the partner event source that this
-     *        event bus is matched to.
+     *        You can't use the name <code>default</code> for a custom event bus, as this name is already used for your
+     *        account's default event bus.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -40,7 +40,7 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The event pattern. For more information, see <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge event
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge event
      * patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      */
@@ -164,13 +164,13 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The event pattern. For more information, see <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge event
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge event
      * patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
      * @param eventPattern
      *        The event pattern. For more information, see <a
-     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge
      *        event patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      */
 
@@ -181,12 +181,12 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The event pattern. For more information, see <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge event
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge event
      * patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
      * @return The event pattern. For more information, see <a
-     *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge
+     *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge
      *         event patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      */
 
@@ -197,13 +197,13 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * The event pattern. For more information, see <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge event
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge event
      * patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
      * @param eventPattern
      *        The event pattern. For more information, see <a
-     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html.html">EventBridge
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html">Amazon EventBridge
      *        event patterns</a> in the <i>Amazon EventBridge User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

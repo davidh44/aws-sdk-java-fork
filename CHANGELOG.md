@@ -1,3 +1,16 @@
+# __1.12.394__ __2023-01-26__
+## __AWS IoT FleetWise__
+  - ### Features
+    - Add model validation to BatchCreateVehicle and BatchUpdateVehicle operations that invalidate requests with an empty vehicles list.
+
+## __Amazon EventBridge__
+  - ### Features
+    - Minor comments for Redshift Serverless workgroup target support.
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Allow FIPS to be used with path-style URLs.
+
 # __1.12.393__ __2023-01-25__
 ## __AWS CloudFormation__
   - ### Features

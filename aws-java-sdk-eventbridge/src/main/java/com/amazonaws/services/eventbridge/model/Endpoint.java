@@ -19,10 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An global endpoint used to improve your application's availability by making it regional-fault tolerant. For more
+ * A global endpoint used to improve your application's availability by making it regional-fault tolerant. For more
  * information about global endpoints, see <a
  * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
- * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+ * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/Endpoint" target="_top">AWS API
@@ -57,7 +57,9 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private RoutingConfig routingConfig;
     /**
      * <p>
-     * Whether event replication was enabled or disabled for this endpoint.
+     * Whether event replication was enabled or disabled for this endpoint. The default state is <code>ENABLED</code>
+     * which means you must supply a <code>RoleArn</code>. If you don't have a <code>RoleArn</code> or you don't want
+     * event replication enabled, set the state to <code>DISABLED</code>.
      * </p>
      */
     private ReplicationConfig replicationConfig;
@@ -76,7 +78,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      */
     private String endpointId;
@@ -273,11 +275,15 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether event replication was enabled or disabled for this endpoint.
+     * Whether event replication was enabled or disabled for this endpoint. The default state is <code>ENABLED</code>
+     * which means you must supply a <code>RoleArn</code>. If you don't have a <code>RoleArn</code> or you don't want
+     * event replication enabled, set the state to <code>DISABLED</code>.
      * </p>
      * 
      * @param replicationConfig
-     *        Whether event replication was enabled or disabled for this endpoint.
+     *        Whether event replication was enabled or disabled for this endpoint. The default state is
+     *        <code>ENABLED</code> which means you must supply a <code>RoleArn</code>. If you don't have a
+     *        <code>RoleArn</code> or you don't want event replication enabled, set the state to <code>DISABLED</code>.
      */
 
     public void setReplicationConfig(ReplicationConfig replicationConfig) {
@@ -286,10 +292,14 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether event replication was enabled or disabled for this endpoint.
+     * Whether event replication was enabled or disabled for this endpoint. The default state is <code>ENABLED</code>
+     * which means you must supply a <code>RoleArn</code>. If you don't have a <code>RoleArn</code> or you don't want
+     * event replication enabled, set the state to <code>DISABLED</code>.
      * </p>
      * 
-     * @return Whether event replication was enabled or disabled for this endpoint.
+     * @return Whether event replication was enabled or disabled for this endpoint. The default state is
+     *         <code>ENABLED</code> which means you must supply a <code>RoleArn</code>. If you don't have a
+     *         <code>RoleArn</code> or you don't want event replication enabled, set the state to <code>DISABLED</code>.
      */
 
     public ReplicationConfig getReplicationConfig() {
@@ -298,11 +308,15 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether event replication was enabled or disabled for this endpoint.
+     * Whether event replication was enabled or disabled for this endpoint. The default state is <code>ENABLED</code>
+     * which means you must supply a <code>RoleArn</code>. If you don't have a <code>RoleArn</code> or you don't want
+     * event replication enabled, set the state to <code>DISABLED</code>.
      * </p>
      * 
      * @param replicationConfig
-     *        Whether event replication was enabled or disabled for this endpoint.
+     *        Whether event replication was enabled or disabled for this endpoint. The default state is
+     *        <code>ENABLED</code> which means you must supply a <code>RoleArn</code>. If you don't have a
+     *        <code>RoleArn</code> or you don't want event replication enabled, set the state to <code>DISABLED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -424,12 +438,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * 
      * @param endpointId
      *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      */
 
     public void setEndpointId(String endpointId) {
@@ -439,11 +453,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * 
      * @return The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *         abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     *         https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      */
 
     public String getEndpointId() {
@@ -453,12 +467,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * </p>
      * 
      * @param endpointId
      *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
