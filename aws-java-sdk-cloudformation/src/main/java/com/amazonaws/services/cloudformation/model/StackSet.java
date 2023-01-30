@@ -163,6 +163,8 @@ public class StackSet implements Serializable, Cloneable {
      */
     private ManagedExecution managedExecution;
 
+    private com.amazonaws.internal.SdkInternalList<String> regions;
+
     /**
      * <p>
      * The name that's associated with the stack set.
@@ -1348,6 +1350,61 @@ public class StackSet implements Serializable, Cloneable {
     }
 
     /**
+     * @return
+     */
+
+    public java.util.List<String> getRegions() {
+        if (regions == null) {
+            regions = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return regions;
+    }
+
+    /**
+     * @param regions
+     */
+
+    public void setRegions(java.util.Collection<String> regions) {
+        if (regions == null) {
+            this.regions = null;
+            return;
+        }
+
+        this.regions = new com.amazonaws.internal.SdkInternalList<String>(regions);
+    }
+
+    /**
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRegions(java.util.Collection)} or {@link #withRegions(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param regions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StackSet withRegions(String... regions) {
+        if (this.regions == null) {
+            setRegions(new com.amazonaws.internal.SdkInternalList<String>(regions.length));
+        }
+        for (String ele : regions) {
+            this.regions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * @param regions
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StackSet withRegions(java.util.Collection<String> regions) {
+        setRegions(regions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1390,7 +1447,9 @@ public class StackSet implements Serializable, Cloneable {
         if (getOrganizationalUnitIds() != null)
             sb.append("OrganizationalUnitIds: ").append(getOrganizationalUnitIds()).append(",");
         if (getManagedExecution() != null)
-            sb.append("ManagedExecution: ").append(getManagedExecution());
+            sb.append("ManagedExecution: ").append(getManagedExecution()).append(",");
+        if (getRegions() != null)
+            sb.append("Regions: ").append(getRegions());
         sb.append("}");
         return sb.toString();
     }
@@ -1470,6 +1529,10 @@ public class StackSet implements Serializable, Cloneable {
             return false;
         if (other.getManagedExecution() != null && other.getManagedExecution().equals(this.getManagedExecution()) == false)
             return false;
+        if (other.getRegions() == null ^ this.getRegions() == null)
+            return false;
+        if (other.getRegions() != null && other.getRegions().equals(this.getRegions()) == false)
+            return false;
         return true;
     }
 
@@ -1494,6 +1557,7 @@ public class StackSet implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPermissionModel() == null) ? 0 : getPermissionModel().hashCode());
         hashCode = prime * hashCode + ((getOrganizationalUnitIds() == null) ? 0 : getOrganizationalUnitIds().hashCode());
         hashCode = prime * hashCode + ((getManagedExecution() == null) ? 0 : getManagedExecution().hashCode());
+        hashCode = prime * hashCode + ((getRegions() == null) ? 0 : getRegions().hashCode());
         return hashCode;
     }
 

@@ -48,6 +48,10 @@ public class DeleteLocalGatewayRouteRequestMarshaller implements Marshaller<Requ
             request.addParameter("LocalGatewayRouteTableId", StringUtils.fromString(deleteLocalGatewayRouteRequest.getLocalGatewayRouteTableId()));
         }
 
+        if (deleteLocalGatewayRouteRequest.getDestinationPrefixListId() != null) {
+            request.addParameter("DestinationPrefixListId", StringUtils.fromString(deleteLocalGatewayRouteRequest.getDestinationPrefixListId()));
+        }
+
         return request;
     }
 

@@ -39,6 +39,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
+     * <code>prefix-list-id</code> - The ID of the prefix list.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>route-search.exact-match</code> - The exact match of the specified filter.
      * </p>
      * </li>
@@ -133,6 +138,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
+     * <code>prefix-list-id</code> - The ID of the prefix list.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>route-search.exact-match</code> - The exact match of the specified filter.
      * </p>
      * </li>
@@ -167,6 +177,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * 
      * @return One or more filters.</p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>prefix-list-id</code> - The ID of the prefix list.
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>route-search.exact-match</code> - The exact match of the specified filter.
@@ -216,6 +231,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
+     * <code>prefix-list-id</code> - The ID of the prefix list.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>route-search.exact-match</code> - The exact match of the specified filter.
      * </p>
      * </li>
@@ -251,6 +271,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * @param filters
      *        One or more filters.</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>prefix-list-id</code> - The ID of the prefix list.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>route-search.exact-match</code> - The exact match of the specified filter.
@@ -301,6 +326,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
+     * <code>prefix-list-id</code> - The ID of the prefix list.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>route-search.exact-match</code> - The exact match of the specified filter.
      * </p>
      * </li>
@@ -341,6 +371,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * @param filters
      *        One or more filters.</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>prefix-list-id</code> - The ID of the prefix list.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>route-search.exact-match</code> - The exact match of the specified filter.
@@ -393,6 +428,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
+     * <code>prefix-list-id</code> - The ID of the prefix list.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>route-search.exact-match</code> - The exact match of the specified filter.
      * </p>
      * </li>
@@ -428,6 +468,11 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * @param filters
      *        One or more filters.</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>prefix-list-id</code> - The ID of the prefix list.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>route-search.exact-match</code> - The exact match of the specified filter.

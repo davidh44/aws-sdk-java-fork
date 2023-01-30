@@ -92,6 +92,11 @@ public class LocalGatewayRouteStaxUnmarshaller implements Unmarshaller<LocalGate
                     localGatewayRoute.setNetworkInterfaceId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("destinationPrefixListId", targetDepth)) {
+                    localGatewayRoute.setDestinationPrefixListId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return localGatewayRoute;

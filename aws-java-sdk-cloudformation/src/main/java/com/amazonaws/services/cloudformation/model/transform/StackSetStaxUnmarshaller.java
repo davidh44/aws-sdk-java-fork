@@ -144,6 +144,17 @@ public class StackSetStaxUnmarshaller implements Unmarshaller<StackSet, StaxUnma
                     stackSet.setManagedExecution(ManagedExecutionStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Regions", targetDepth)) {
+                    stackSet.withRegions(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("Regions/member", targetDepth)) {
+                    stackSet.withRegions(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return stackSet;
