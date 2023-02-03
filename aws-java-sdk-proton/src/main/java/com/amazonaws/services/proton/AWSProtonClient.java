@@ -2878,6 +2878,89 @@ public class AWSProtonClient extends AmazonWebServiceClient implements AWSProton
 
     /**
      * <p>
+     * Get counts of Proton resources.
+     * </p>
+     * <p>
+     * For infrastructure-provisioning resources (environments, services, service instances, pipelines), the action
+     * returns staleness counts. A resource is stale when it's behind the recommended version of the Proton template
+     * that it uses and it needs an update to become current.
+     * </p>
+     * <p>
+     * The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or
+     * behind a template minor version), the total number of resources, and the number of resources that are in a failed
+     * state, grouped by resource type. Components, environments, and service templates are exceptions—see the
+     * <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
+     * </p>
+     * <p>
+     * For context, the action also returns the total number of each type of Proton template in the Amazon Web Services
+     * account.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/monitoring-dashboard.html">Proton dashboard</a> in the
+     * <i>Proton User Guide</i>.
+     * </p>
+     * 
+     * @param getResourcesSummaryRequest
+     * @return Result of the GetResourcesSummary operation returned by the service.
+     * @throws ValidationException
+     *         The input is invalid or an out-of-range value was supplied for the input parameter.
+     * @throws AccessDeniedException
+     *         There <i>isn't</i> sufficient access for performing this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request failed to register with the service.
+     * @sample AWSProton.GetResourcesSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetResourcesSummary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetResourcesSummaryResult getResourcesSummary(GetResourcesSummaryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetResourcesSummary(request);
+    }
+
+    @SdkInternalApi
+    final GetResourcesSummaryResult executeGetResourcesSummary(GetResourcesSummaryRequest getResourcesSummaryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getResourcesSummaryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetResourcesSummaryRequest> request = null;
+        Response<GetResourcesSummaryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetResourcesSummaryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getResourcesSummaryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Proton");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResourcesSummary");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetResourcesSummaryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetResourcesSummaryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get detailed data for a service.
      * </p>
      * 

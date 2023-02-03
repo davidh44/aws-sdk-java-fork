@@ -8701,6 +8701,11 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * <code>RestoreTableFromClusterSnapshot</code>. This way, you can replace the original table with the table created
      * from the snapshot.
      * </p>
+     * <p>
+     * You can't use this operation to restore tables with <a
+     * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
+     * sort keys</a>.
+     * </p>
      * 
      * @param restoreTableFromClusterSnapshotRequest
      * @return Result of the RestoreTableFromClusterSnapshot operation returned by the service.

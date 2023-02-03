@@ -5057,6 +5057,11 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      * <code>RestoreTableFromClusterSnapshot</code>. This way, you can replace the original table with the table created
      * from the snapshot.
      * </p>
+     * <p>
+     * You can't use this operation to restore tables with <a
+     * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
+     * sort keys</a>.
+     * </p>
      * 
      * @param restoreTableFromClusterSnapshotRequest
      * @return A Java Future containing the result of the RestoreTableFromClusterSnapshot operation returned by the
@@ -5081,6 +5086,11 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      * then you can pass the original name of the table as the <code>NewTableName</code> parameter value in the call to
      * <code>RestoreTableFromClusterSnapshot</code>. This way, you can replace the original table with the table created
      * from the snapshot.
+     * </p>
+     * <p>
+     * You can't use this operation to restore tables with <a
+     * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
+     * sort keys</a>.
      * </p>
      * 
      * @param restoreTableFromClusterSnapshotRequest

@@ -64,7 +64,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private String clusterIdentifier;
     /**
      * <p>
-     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You can
+     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You must
      * specify this parameter or <code>snapshotArn</code>, but not both.
      * </p>
      * <p>
@@ -74,7 +74,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private String snapshotIdentifier;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You can
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You must
      * specify this parameter or <code>snapshotIdentifier</code>, but not both.
      * </p>
      */
@@ -609,7 +609,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You can
+     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You must
      * specify this parameter or <code>snapshotArn</code>, but not both.
      * </p>
      * <p>
@@ -618,7 +618,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * 
      * @param snapshotIdentifier
      *        The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You
-     *        can specify this parameter or <code>snapshotArn</code>, but not both.</p>
+     *        must specify this parameter or <code>snapshotArn</code>, but not both.</p>
      *        <p>
      *        Example: <code>my-snapshot-id</code>
      */
@@ -629,7 +629,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You can
+     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You must
      * specify this parameter or <code>snapshotArn</code>, but not both.
      * </p>
      * <p>
@@ -637,7 +637,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @return The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You
-     *         can specify this parameter or <code>snapshotArn</code>, but not both.</p>
+     *         must specify this parameter or <code>snapshotArn</code>, but not both.</p>
      *         <p>
      *         Example: <code>my-snapshot-id</code>
      */
@@ -648,7 +648,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You can
+     * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You must
      * specify this parameter or <code>snapshotArn</code>, but not both.
      * </p>
      * <p>
@@ -657,7 +657,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * 
      * @param snapshotIdentifier
      *        The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You
-     *        can specify this parameter or <code>snapshotArn</code>, but not both.</p>
+     *        must specify this parameter or <code>snapshotArn</code>, but not both.</p>
      *        <p>
      *        Example: <code>my-snapshot-id</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -670,13 +670,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You can
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You must
      * specify this parameter or <code>snapshotIdentifier</code>, but not both.
      * </p>
      * 
      * @param snapshotArn
      *        The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You
-     *        can specify this parameter or <code>snapshotIdentifier</code>, but not both.
+     *        must specify this parameter or <code>snapshotIdentifier</code>, but not both.
      */
 
     public void setSnapshotArn(String snapshotArn) {
@@ -685,12 +685,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You can
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You must
      * specify this parameter or <code>snapshotIdentifier</code>, but not both.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You
-     *         can specify this parameter or <code>snapshotIdentifier</code>, but not both.
+     *         must specify this parameter or <code>snapshotIdentifier</code>, but not both.
      */
 
     public String getSnapshotArn() {
@@ -699,13 +699,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You can
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You must
      * specify this parameter or <code>snapshotIdentifier</code>, but not both.
      * </p>
      * 
      * @param snapshotArn
      *        The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You
-     *        can specify this parameter or <code>snapshotIdentifier</code>, but not both.
+     *        must specify this parameter or <code>snapshotIdentifier</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

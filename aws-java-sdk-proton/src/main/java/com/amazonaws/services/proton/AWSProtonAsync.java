@@ -1808,6 +1808,77 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
+     * Get counts of Proton resources.
+     * </p>
+     * <p>
+     * For infrastructure-provisioning resources (environments, services, service instances, pipelines), the action
+     * returns staleness counts. A resource is stale when it's behind the recommended version of the Proton template
+     * that it uses and it needs an update to become current.
+     * </p>
+     * <p>
+     * The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or
+     * behind a template minor version), the total number of resources, and the number of resources that are in a failed
+     * state, grouped by resource type. Components, environments, and service templates are exceptions—see the
+     * <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
+     * </p>
+     * <p>
+     * For context, the action also returns the total number of each type of Proton template in the Amazon Web Services
+     * account.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/monitoring-dashboard.html">Proton dashboard</a> in the
+     * <i>Proton User Guide</i>.
+     * </p>
+     * 
+     * @param getResourcesSummaryRequest
+     * @return A Java Future containing the result of the GetResourcesSummary operation returned by the service.
+     * @sample AWSProtonAsync.GetResourcesSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetResourcesSummary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcesSummaryResult> getResourcesSummaryAsync(GetResourcesSummaryRequest getResourcesSummaryRequest);
+
+    /**
+     * <p>
+     * Get counts of Proton resources.
+     * </p>
+     * <p>
+     * For infrastructure-provisioning resources (environments, services, service instances, pipelines), the action
+     * returns staleness counts. A resource is stale when it's behind the recommended version of the Proton template
+     * that it uses and it needs an update to become current.
+     * </p>
+     * <p>
+     * The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or
+     * behind a template minor version), the total number of resources, and the number of resources that are in a failed
+     * state, grouped by resource type. Components, environments, and service templates are exceptions—see the
+     * <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.
+     * </p>
+     * <p>
+     * For context, the action also returns the total number of each type of Proton template in the Amazon Web Services
+     * account.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/monitoring-dashboard.html">Proton dashboard</a> in the
+     * <i>Proton User Guide</i>.
+     * </p>
+     * 
+     * @param getResourcesSummaryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourcesSummary operation returned by the service.
+     * @sample AWSProtonAsyncHandler.GetResourcesSummary
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetResourcesSummary" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcesSummaryResult> getResourcesSummaryAsync(GetResourcesSummaryRequest getResourcesSummaryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourcesSummaryRequest, GetResourcesSummaryResult> asyncHandler);
+
+    /**
+     * <p>
      * Get detailed data for a service.
      * </p>
      * 

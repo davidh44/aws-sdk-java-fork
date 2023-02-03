@@ -194,6 +194,11 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public GetResourcesSummaryResult getResourcesSummary(GetResourcesSummaryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetServiceResult getService(GetServiceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

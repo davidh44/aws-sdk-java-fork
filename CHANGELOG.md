@@ -1,3 +1,12 @@
+# __1.12.400__ __2023-02-03__
+## __AWS Proton__
+  - ### Features
+    - Add new GetResourcesSummary API
+
+## __Amazon Redshift__
+  - ### Features
+    - Corrects descriptions of the parameters for the API operations RestoreFromClusterSnapshot, RestoreTableFromClusterSnapshot, and CreateCluster.
+
 # __1.12.399__ __2023-02-02__
 ## __AWS Single Sign-On Admin__
   - ### Features

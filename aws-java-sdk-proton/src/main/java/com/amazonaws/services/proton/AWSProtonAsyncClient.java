@@ -1393,6 +1393,39 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
     }
 
     @Override
+    public java.util.concurrent.Future<GetResourcesSummaryResult> getResourcesSummaryAsync(GetResourcesSummaryRequest request) {
+
+        return getResourcesSummaryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcesSummaryResult> getResourcesSummaryAsync(final GetResourcesSummaryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetResourcesSummaryRequest, GetResourcesSummaryResult> asyncHandler) {
+        final GetResourcesSummaryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetResourcesSummaryResult>() {
+            @Override
+            public GetResourcesSummaryResult call() throws Exception {
+                GetResourcesSummaryResult result = null;
+
+                try {
+                    result = executeGetResourcesSummary(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetServiceResult> getServiceAsync(GetServiceRequest request) {
 
         return getServiceAsync(request, null);

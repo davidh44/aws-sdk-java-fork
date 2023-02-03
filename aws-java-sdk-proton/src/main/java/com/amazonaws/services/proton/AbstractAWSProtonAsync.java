@@ -472,6 +472,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<GetResourcesSummaryResult> getResourcesSummaryAsync(GetResourcesSummaryRequest request) {
+
+        return getResourcesSummaryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcesSummaryResult> getResourcesSummaryAsync(GetResourcesSummaryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetResourcesSummaryRequest, GetResourcesSummaryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetServiceResult> getServiceAsync(GetServiceRequest request) {
 
         return getServiceAsync(request, null);

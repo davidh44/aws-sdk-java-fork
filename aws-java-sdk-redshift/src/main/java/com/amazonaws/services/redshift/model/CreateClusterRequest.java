@@ -150,12 +150,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     * Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter.
+     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The first character must be a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not contain a colon (:) or a slash (/).
      * </p>
      * </li>
      * <li>
@@ -1226,12 +1236,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     * Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter.
+     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The first character must be a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not contain a colon (:) or a slash (/).
      * </p>
      * </li>
      * <li>
@@ -1251,12 +1271,23 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     *        Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        First character must be a letter.
+     *        Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     *        hyphen.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The first character must be a letter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must not contain a colon (:) or a slash (/).
      *        </p>
      *        </li>
      *        <li>
@@ -1282,12 +1313,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     * Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter.
+     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The first character must be a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not contain a colon (:) or a slash (/).
      * </p>
      * </li>
      * <li>
@@ -1306,12 +1347,23 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <ul>
      *         <li>
      *         <p>
-     *         Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     *         Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         First character must be a letter.
+     *         Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     *         hyphen.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The first character must be a letter.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Must not contain a colon (:) or a slash (/).
      *         </p>
      *         </li>
      *         <li>
@@ -1337,12 +1389,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     * Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * First character must be a letter.
+     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The first character must be a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must not contain a colon (:) or a slash (/).
      * </p>
      * </li>
      * <li>
@@ -1362,12 +1424,23 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        Must be 1 - 128 alphanumeric characters. The user name can't be <code>PUBLIC</code>.
+     *        Must be 1 - 128 alphanumeric characters or hyphens. The user name can't be <code>PUBLIC</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        First character must be a letter.
+     *        Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     *        hyphen.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The first character must be a letter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must not contain a colon (:) or a slash (/).
      *        </p>
      *        </li>
      *        <li>
