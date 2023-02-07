@@ -36,15 +36,34 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
     private String name;
     /**
      * <p>
-     * Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     * <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     * Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     * <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or uploaded
+     * date.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy uploaded files
+     * to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that uploaded the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy uploaded
+     * files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     * </p>
+     * <note>
+     * <p>
+     * The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the file is
+     * uploaded.
+     * </p>
+     * </note></li>
+     * </ul>
      */
     private InputFileLocation destinationFileLocation;
     /**
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      */
     private String overwriteExisting;
@@ -56,13 +75,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow step uses
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
      * the output file from the previous workflow step as input. This is the default value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      * </p>
      * </li>
      * </ul>
@@ -111,13 +130,53 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     * <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     * Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     * <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or uploaded
+     * date.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy uploaded files
+     * to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that uploaded the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy uploaded
+     * files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     * </p>
+     * <note>
+     * <p>
+     * The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the file is
+     * uploaded.
+     * </p>
+     * </note></li>
+     * </ul>
      * 
      * @param destinationFileLocation
-     *        Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     *        <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     *        Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     *        <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or
+     *        uploaded date.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy
+     *        uploaded files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
+     *        uploaded the file.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy
+     *        uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the
+     *        file is uploaded.
+     *        </p>
+     *        </note></li>
      */
 
     public void setDestinationFileLocation(InputFileLocation destinationFileLocation) {
@@ -126,12 +185,52 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     * <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     * Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     * <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or uploaded
+     * date.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy uploaded files
+     * to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that uploaded the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy uploaded
+     * files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     * </p>
+     * <note>
+     * <p>
+     * The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the file is
+     * uploaded.
+     * </p>
+     * </note></li>
+     * </ul>
      * 
-     * @return Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     *         <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     * @return Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     *         <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or
+     *         uploaded date.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy
+     *         uploaded files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
+     *         uploaded the file.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy
+     *         uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the
+     *         file is uploaded.
+     *         </p>
+     *         </note></li>
      */
 
     public InputFileLocation getDestinationFileLocation() {
@@ -140,13 +239,53 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     * <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     * Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     * <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or uploaded
+     * date.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy uploaded files
+     * to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that uploaded the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy uploaded
+     * files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     * </p>
+     * <note>
+     * <p>
+     * The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the file is
+     * uploaded.
+     * </p>
+     * </note></li>
+     * </ul>
      * 
      * @param destinationFileLocation
-     *        Specifies the location for the file being copied. Only applicable for Copy type workflow steps. Use
-     *        <code>${Transfer:username}</code> in this field to parametrize the destination prefix by username.
+     *        Specifies the location for the file being copied. Use <code>${Transfer:username}</code> or
+     *        <code>${Transfer:UploadDate}</code> in this field to parametrize the destination prefix by username or
+     *        uploaded date.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:username}</code> to copy
+     *        uploaded files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
+     *        uploaded the file.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Set the value of <code>DestinationFileLocation</code> to <code>${Transfer:UploadDate}</code> to copy
+     *        uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The system resolves <code>UploadDate</code> to a date format of <i>YYYY-MM-DD</i>, based on the date the
+     *        file is uploaded.
+     *        </p>
+     *        </note></li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,12 +296,11 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * 
      * @param overwriteExisting
-     *        A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
      *        <code>FALSE</code>.
      * @see OverwriteExisting
      */
@@ -173,11 +311,10 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * 
-     * @return A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     * @return A flag that indicates whether to overwrite an existing file of the same name. The default is
      *         <code>FALSE</code>.
      * @see OverwriteExisting
      */
@@ -188,12 +325,11 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * 
      * @param overwriteExisting
-     *        A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
      *        <code>FALSE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteExisting
@@ -206,12 +342,11 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * 
      * @param overwriteExisting
-     *        A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
      *        <code>FALSE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteExisting
@@ -230,13 +365,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow step uses
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
      * the output file from the previous workflow step as input. This is the default value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      * </p>
      * </li>
      * </ul>
@@ -247,13 +382,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow
+     *        To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow
      *        step uses the output file from the previous workflow step as input. This is the default value.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     *        To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      *        </p>
      *        </li>
      */
@@ -270,13 +405,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow step uses
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
      * the output file from the previous workflow step as input. This is the default value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      * </p>
      * </li>
      * </ul>
@@ -286,13 +421,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      *         <ul>
      *         <li>
      *         <p>
-     *         Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow
+     *         To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow
      *         step uses the output file from the previous workflow step as input. This is the default value.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     *         To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      *         </p>
      *         </li>
      */
@@ -309,13 +444,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow step uses
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
      * the output file from the previous workflow step as input. This is the default value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      * </p>
      * </li>
      * </ul>
@@ -326,13 +461,13 @@ public class CopyStepDetails implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        Enter <code>${previous.file}</code> to use the previous file as the input. In this case, this workflow
+     *        To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow
      *        step uses the output file from the previous workflow step as input. This is the default value.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Enter <code>${original.file}</code> to use the originally-uploaded file location as input for this step.
+     *        To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

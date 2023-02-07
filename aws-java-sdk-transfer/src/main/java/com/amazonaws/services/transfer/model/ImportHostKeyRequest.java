@@ -33,7 +33,7 @@ public class ImportHostKeyRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String serverId;
     /**
      * <p>
-     * The public key portion of an SSH key pair.
+     * The private key portion of an SSH key pair.
      * </p>
      * <p>
      * Transfer Family accepts RSA, ECDSA, and ED25519 keys.
@@ -95,14 +95,14 @@ public class ImportHostKeyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The public key portion of an SSH key pair.
+     * The private key portion of an SSH key pair.
      * </p>
      * <p>
      * Transfer Family accepts RSA, ECDSA, and ED25519 keys.
      * </p>
      * 
      * @param hostKeyBody
-     *        The public key portion of an SSH key pair.</p>
+     *        The private key portion of an SSH key pair.</p>
      *        <p>
      *        Transfer Family accepts RSA, ECDSA, and ED25519 keys.
      */
@@ -113,13 +113,13 @@ public class ImportHostKeyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The public key portion of an SSH key pair.
+     * The private key portion of an SSH key pair.
      * </p>
      * <p>
      * Transfer Family accepts RSA, ECDSA, and ED25519 keys.
      * </p>
      * 
-     * @return The public key portion of an SSH key pair.</p>
+     * @return The private key portion of an SSH key pair.</p>
      *         <p>
      *         Transfer Family accepts RSA, ECDSA, and ED25519 keys.
      */
@@ -130,14 +130,14 @@ public class ImportHostKeyRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The public key portion of an SSH key pair.
+     * The private key portion of an SSH key pair.
      * </p>
      * <p>
      * Transfer Family accepts RSA, ECDSA, and ED25519 keys.
      * </p>
      * 
      * @param hostKeyBody
-     *        The public key portion of an SSH key pair.</p>
+     *        The private key portion of an SSH key pair.</p>
      *        <p>
      *        Transfer Family accepts RSA, ECDSA, and ED25519 keys.
      * @return Returns a reference to this object so that method calls can be chained together.

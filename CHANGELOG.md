@@ -1,3 +1,8 @@
+# __1.12.402__ __2023-02-07__
+## __AWS Transfer Family__
+  - ### Features
+    - Updated the documentation for the ImportCertificate API call, and added examples.
+
 # __1.12.401__ __2023-02-06__
 ## __AWS Compute Optimizer__
   - ### Features

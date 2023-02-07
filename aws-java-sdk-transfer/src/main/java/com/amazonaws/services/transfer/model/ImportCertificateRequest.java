@@ -32,9 +32,20 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      */
     private String usage;
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the certificate to import.
+     * For the CLI, provide a file path for a certificate in URI format. For example,
+     * <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a certificate file. For example,
+     * <code>--certificate "`cat encryption-cert.pem`"</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String certificate;
     /**
@@ -44,9 +55,21 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      */
     private String certificateChain;
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the private key for the certificate that's being imported.
+     * For the CLI, provide a file path for a private key in URI format.For example,
+     * <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of the
+     * private key file.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a private key file. For example,
+     * <code>--private-key "`cat encryption-key.pem`"</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String privateKey;
     /**
@@ -134,12 +157,33 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the certificate to import.
+     * For the CLI, provide a file path for a certificate in URI format. For example,
+     * <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a certificate file. For example,
+     * <code>--certificate "`cat encryption-cert.pem`"</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param certificate
-     *        The file that contains the certificate to import.
+     *        <li>
+     *        <p>
+     *        For the CLI, provide a file path for a certificate in URI format. For example,
+     *        <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For the SDK, specify the raw content of a certificate file. For example,
+     *        <code>--certificate "`cat encryption-cert.pem`"</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setCertificate(String certificate) {
@@ -147,11 +191,32 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the certificate to import.
+     * For the CLI, provide a file path for a certificate in URI format. For example,
+     * <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a certificate file. For example,
+     * <code>--certificate "`cat encryption-cert.pem`"</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The file that contains the certificate to import.
+     * @return <li>
+     *         <p>
+     *         For the CLI, provide a file path for a certificate in URI format. For example,
+     *         <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
+     *         </p>
+     *         </li> <li>
+     *         <p>
+     *         For the SDK, specify the raw content of a certificate file. For example,
+     *         <code>--certificate "`cat encryption-cert.pem`"</code>.
+     *         </p>
+     *         </li>
      */
 
     public String getCertificate() {
@@ -159,12 +224,33 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the certificate to import.
+     * For the CLI, provide a file path for a certificate in URI format. For example,
+     * <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a certificate file. For example,
+     * <code>--certificate "`cat encryption-cert.pem`"</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param certificate
-     *        The file that contains the certificate to import.
+     *        <li>
+     *        <p>
+     *        For the CLI, provide a file path for a certificate in URI format. For example,
+     *        <code>--certificate file://encryption-cert.pem</code>. Alternatively, you can provide the raw content.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For the SDK, specify the raw content of a certificate file. For example,
+     *        <code>--certificate "`cat encryption-cert.pem`"</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,12 +300,35 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the private key for the certificate that's being imported.
+     * For the CLI, provide a file path for a private key in URI format.For example,
+     * <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of the
+     * private key file.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a private key file. For example,
+     * <code>--private-key "`cat encryption-key.pem`"</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param privateKey
-     *        The file that contains the private key for the certificate that's being imported.
+     *        <li>
+     *        <p>
+     *        For the CLI, provide a file path for a private key in URI format.For example,
+     *        <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of
+     *        the private key file.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For the SDK, specify the raw content of a private key file. For example,
+     *        <code>--private-key "`cat encryption-key.pem`"</code>
+     *        </p>
+     *        </li>
      */
 
     public void setPrivateKey(String privateKey) {
@@ -227,11 +336,34 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the private key for the certificate that's being imported.
+     * For the CLI, provide a file path for a private key in URI format.For example,
+     * <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of the
+     * private key file.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a private key file. For example,
+     * <code>--private-key "`cat encryption-key.pem`"</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The file that contains the private key for the certificate that's being imported.
+     * @return <li>
+     *         <p>
+     *         For the CLI, provide a file path for a private key in URI format.For example,
+     *         <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of
+     *         the private key file.
+     *         </p>
+     *         </li> <li>
+     *         <p>
+     *         For the SDK, specify the raw content of a private key file. For example,
+     *         <code>--private-key "`cat encryption-key.pem`"</code>
+     *         </p>
+     *         </li>
      */
 
     public String getPrivateKey() {
@@ -239,12 +371,35 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <ul>
+     * <li>
      * <p>
-     * The file that contains the private key for the certificate that's being imported.
+     * For the CLI, provide a file path for a private key in URI format.For example,
+     * <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of the
+     * private key file.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the SDK, specify the raw content of a private key file. For example,
+     * <code>--private-key "`cat encryption-key.pem`"</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param privateKey
-     *        The file that contains the private key for the certificate that's being imported.
+     *        <li>
+     *        <p>
+     *        For the CLI, provide a file path for a private key in URI format.For example,
+     *        <code>--private-key file://encryption-key.pem</code>. Alternatively, you can provide the raw content of
+     *        the private key file.
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        For the SDK, specify the raw content of a private key file. For example,
+     *        <code>--private-key "`cat encryption-key.pem`"</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

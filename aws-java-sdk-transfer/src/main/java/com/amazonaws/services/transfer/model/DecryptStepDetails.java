@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Each step type has its own <code>StepDetails</code> structure.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DecryptStepDetails" target="_top">AWS API
  *      Documentation</a>
@@ -25,18 +28,54 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DecryptStepDetails implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The name of the step, used as an identifier.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The type of encryption used. Currently, this value must be <code>PGP</code>.
+     * </p>
+     */
     private String type;
-
+    /**
+     * <p>
+     * Specifies which file to use as input to the workflow step: either the output from the previous step, or the
+     * originally uploaded file for the workflow.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
+     * the output file from the previous workflow step as input. This is the default value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
     private String sourceFileLocation;
-
+    /**
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     */
     private String overwriteExisting;
 
     private InputFileLocation destinationFileLocation;
 
     /**
+     * <p>
+     * The name of the step, used as an identifier.
+     * </p>
+     * 
      * @param name
+     *        The name of the step, used as an identifier.
      */
 
     public void setName(String name) {
@@ -44,7 +83,11 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the step, used as an identifier.
+     * </p>
+     * 
+     * @return The name of the step, used as an identifier.
      */
 
     public String getName() {
@@ -52,7 +95,12 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The name of the step, used as an identifier.
+     * </p>
+     * 
      * @param name
+     *        The name of the step, used as an identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +110,12 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The type of encryption used. Currently, this value must be <code>PGP</code>.
+     * </p>
+     * 
      * @param type
+     *        The type of encryption used. Currently, this value must be <code>PGP</code>.
      * @see EncryptionType
      */
 
@@ -71,7 +124,11 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The type of encryption used. Currently, this value must be <code>PGP</code>.
+     * </p>
+     * 
+     * @return The type of encryption used. Currently, this value must be <code>PGP</code>.
      * @see EncryptionType
      */
 
@@ -80,7 +137,12 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The type of encryption used. Currently, this value must be <code>PGP</code>.
+     * </p>
+     * 
      * @param type
+     *        The type of encryption used. Currently, this value must be <code>PGP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionType
      */
@@ -91,7 +153,12 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The type of encryption used. Currently, this value must be <code>PGP</code>.
+     * </p>
+     * 
      * @param type
+     *        The type of encryption used. Currently, this value must be <code>PGP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionType
      */
@@ -102,7 +169,39 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies which file to use as input to the workflow step: either the output from the previous step, or the
+     * originally uploaded file for the workflow.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
+     * the output file from the previous workflow step as input. This is the default value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param sourceFileLocation
+     *        Specifies which file to use as input to the workflow step: either the output from the previous step, or
+     *        the originally uploaded file for the workflow.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow
+     *        step uses the output file from the previous workflow step as input. This is the default value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setSourceFileLocation(String sourceFileLocation) {
@@ -110,7 +209,38 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies which file to use as input to the workflow step: either the output from the previous step, or the
+     * originally uploaded file for the workflow.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
+     * the output file from the previous workflow step as input. This is the default value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Specifies which file to use as input to the workflow step: either the output from the previous step, or
+     *         the originally uploaded file for the workflow.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow
+     *         step uses the output file from the previous workflow step as input. This is the default value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     *         </p>
+     *         </li>
      */
 
     public String getSourceFileLocation() {
@@ -118,7 +248,39 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies which file to use as input to the workflow step: either the output from the previous step, or the
+     * originally uploaded file for the workflow.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow step uses
+     * the output file from the previous workflow step as input. This is the default value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param sourceFileLocation
+     *        Specifies which file to use as input to the workflow step: either the output from the previous step, or
+     *        the originally uploaded file for the workflow.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        To use the previous file as the input, enter <code>${previous.file}</code>. In this case, this workflow
+     *        step uses the output file from the previous workflow step as input. This is the default value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        To use the originally uploaded file location as input for this step, enter <code>${original.file}</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,7 +290,13 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * 
      * @param overwriteExisting
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *        <code>FALSE</code>.
      * @see OverwriteExisting
      */
 
@@ -137,7 +305,12 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * 
+     * @return A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *         <code>FALSE</code>.
      * @see OverwriteExisting
      */
 
@@ -146,7 +319,13 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * 
      * @param overwriteExisting
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *        <code>FALSE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteExisting
      */
@@ -157,7 +336,13 @@ public class DecryptStepDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * 
      * @param overwriteExisting
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *        <code>FALSE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteExisting
      */

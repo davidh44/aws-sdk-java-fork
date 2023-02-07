@@ -196,7 +196,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     * >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     * >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      * </p>
      */
     private String hostKey;
@@ -274,8 +274,8 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
-     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be either
+     * <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -286,7 +286,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity types:
+     * <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     * <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -317,7 +319,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * workflow.
      * </p>
      * <p>
-     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
+     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -1222,7 +1224,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     * >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     * >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      * </p>
      * 
      * @param hostKey
@@ -1265,7 +1267,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     *        >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     *        >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      */
 
     public void setHostKey(String hostKey) {
@@ -1313,7 +1315,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     * >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     * >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      * </p>
      * 
      * @return The RSA, ECDSA, or ED25519 private key to use for your SFTP-enabled server. You can add multiple host
@@ -1355,7 +1357,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     *         >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     *         >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      */
 
     public String getHostKey() {
@@ -1403,7 +1405,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     * >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     * >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      * </p>
      * 
      * @param hostKey
@@ -1446,7 +1448,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/transfer/latest/userguide/edit-server-config.html#configuring-servers-change-host-key"
-     *        >Update host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
+     *        >Manage host keys for your SFTP-enabled server</a> in the <i>Transfer Family User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1716,8 +1718,8 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
-     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be either
+     * <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -1728,7 +1730,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity types:
+     * <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     * <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -1776,7 +1780,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
      *         <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     *         <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     *         either <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -1788,7 +1792,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     *         <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     *         <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity
+     *         types: <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     *         <code>API_GATEWAY</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -1843,8 +1849,8 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
-     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be either
+     * <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -1855,7 +1861,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity types:
+     * <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     * <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -1904,7 +1912,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
      *        <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     *        <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     *        either <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1916,7 +1924,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity
+     *        types: <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     *        <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1976,8 +1986,8 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
-     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be either
+     * <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -1988,7 +1998,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity types:
+     * <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     * <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -2042,7 +2054,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
      *        <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     *        <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     *        either <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2054,7 +2066,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity
+     *        types: <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     *        <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2116,8 +2130,8 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
-     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be either
+     * <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -2128,7 +2142,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity types:
+     * <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     * <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -2177,7 +2193,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
      *        <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     *        <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     *        either <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2189,7 +2205,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity
+     *        types: <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     *        <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2246,8 +2264,8 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
-     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     * <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be either
+     * <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -2258,7 +2276,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     * <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity types:
+     * <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     * <code>API_GATEWAY</code>.
      * </p>
      * </li>
      * <li>
@@ -2307,7 +2327,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        If <code>Protocol</code> includes either <code>FTP</code> or <code>FTPS</code>, then the
      *        <code>EndpointType</code> must be <code>VPC</code> and the <code>IdentityProviderType</code> must be
-     *        <code>AWS_DIRECTORY_SERVICE</code> or <code>API_GATEWAY</code>.
+     *        either <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2319,7 +2339,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If <code>Protocol</code> is set only to <code>SFTP</code>, the <code>EndpointType</code> can be set to
-     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set to <code>SERVICE_MANAGED</code>.
+     *        <code>PUBLIC</code> and the <code>IdentityProviderType</code> can be set any of the supported identity
+     *        types: <code>SERVICE_MANAGED</code>, <code>AWS_DIRECTORY_SERVICE</code>, <code>AWS_LAMBDA</code>, or
+     *        <code>API_GATEWAY</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2432,7 +2454,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * workflow.
      * </p>
      * <p>
-     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
+     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2448,7 +2470,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *        workflow.</p>
      *        <p>
-     *        In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
      *        upload occurs when a file is open when the session disconnects.
      *        </p>
@@ -2470,7 +2492,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * workflow.
      * </p>
      * <p>
-     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
+     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2485,7 +2507,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *         workflow.</p>
      *         <p>
-     *         In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     *         In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *         also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
      *         upload occurs when a file is open when the session disconnects.
      *         </p>
@@ -2507,7 +2529,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * workflow.
      * </p>
      * <p>
-     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
+     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2523,7 +2545,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *        workflow.</p>
      *        <p>
-     *        In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
+     *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
      *        upload occurs when a file is open when the session disconnects.
      *        </p>

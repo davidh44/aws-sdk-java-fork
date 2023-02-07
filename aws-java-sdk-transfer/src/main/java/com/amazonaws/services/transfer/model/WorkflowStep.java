@@ -35,22 +35,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <i>COPY</i>: Copy the file to another location.
+     * <b> <code>COPY</code> </b> - Copy the file to another location.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     * <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>DELETE</i>: Delete the file.
+     * <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>TAG</i>: Add a tag to the file.
+     * <b> <code>DELETE</code> </b> - Delete the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>TAG</code> </b> - Add a tag to the file.
      * </p>
      * </li>
      * </ul>
@@ -71,13 +76,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 location for the destination of the file copy.
+     * An Amazon S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * </li>
      * </ul>
@@ -85,10 +89,10 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
     private CopyStepDetails copyStepDetails;
     /**
      * <p>
-     * Details for a step that invokes a lambda function.
+     * Details for a step that invokes an Lambda function.
      * </p>
      * <p>
-     * Consists of the lambda function name, target, and timeout (in seconds).
+     * Consists of the Lambda function's name, target, and timeout (in seconds).
      * </p>
      */
     private CustomStepDetails customStepDetails;
@@ -103,11 +107,45 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * Details for a step that creates one or more tags.
      * </p>
      * <p>
-     * You specify one or more tags: each tag contains a key/value pair.
+     * You specify one or more tags. Each tag contains a key-value pair.
      * </p>
      */
     private TagStepDetails tagStepDetails;
-
+    /**
+     * <p>
+     * Details for a step that decrypts an encrypted file.
+     * </p>
+     * <p>
+     * Consists of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A descriptive name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An S3 or Amazon EFS location for the destination of the file decryption.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The type of encryption that's used. Currently, only PGP encryption is supported.
+     * </p>
+     * </li>
+     * </ul>
+     */
     private DecryptStepDetails decryptStepDetails;
 
     /**
@@ -117,22 +155,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <i>COPY</i>: Copy the file to another location.
+     * <b> <code>COPY</code> </b> - Copy the file to another location.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     * <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>DELETE</i>: Delete the file.
+     * <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>TAG</i>: Add a tag to the file.
+     * <b> <code>DELETE</code> </b> - Delete the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>TAG</code> </b> - Add a tag to the file.
      * </p>
      * </li>
      * </ul>
@@ -142,22 +185,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>COPY</i>: Copy the file to another location.
+     *        <b> <code>COPY</code> </b> - Copy the file to another location.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     *        <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>DELETE</i>: Delete the file.
+     *        <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>TAG</i>: Add a tag to the file.
+     *        <b> <code>DELETE</code> </b> - Delete the file.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>TAG</code> </b> - Add a tag to the file.
      *        </p>
      *        </li>
      * @see WorkflowStepType
@@ -174,22 +222,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <i>COPY</i>: Copy the file to another location.
+     * <b> <code>COPY</code> </b> - Copy the file to another location.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     * <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>DELETE</i>: Delete the file.
+     * <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>TAG</i>: Add a tag to the file.
+     * <b> <code>DELETE</code> </b> - Delete the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>TAG</code> </b> - Add a tag to the file.
      * </p>
      * </li>
      * </ul>
@@ -198,22 +251,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <i>COPY</i>: Copy the file to another location.
+     *         <b> <code>COPY</code> </b> - Copy the file to another location.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     *         <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <i>DELETE</i>: Delete the file.
+     *         <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <i>TAG</i>: Add a tag to the file.
+     *         <b> <code>DELETE</code> </b> - Delete the file.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b> <code>TAG</code> </b> - Add a tag to the file.
      *         </p>
      *         </li>
      * @see WorkflowStepType
@@ -230,22 +288,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <i>COPY</i>: Copy the file to another location.
+     * <b> <code>COPY</code> </b> - Copy the file to another location.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     * <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>DELETE</i>: Delete the file.
+     * <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>TAG</i>: Add a tag to the file.
+     * <b> <code>DELETE</code> </b> - Delete the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>TAG</code> </b> - Add a tag to the file.
      * </p>
      * </li>
      * </ul>
@@ -255,22 +318,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>COPY</i>: Copy the file to another location.
+     *        <b> <code>COPY</code> </b> - Copy the file to another location.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     *        <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>DELETE</i>: Delete the file.
+     *        <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>TAG</i>: Add a tag to the file.
+     *        <b> <code>DELETE</code> </b> - Delete the file.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>TAG</code> </b> - Add a tag to the file.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -289,22 +357,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <i>COPY</i>: Copy the file to another location.
+     * <b> <code>COPY</code> </b> - Copy the file to another location.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     * <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>DELETE</i>: Delete the file.
+     * <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>TAG</i>: Add a tag to the file.
+     * <b> <code>DELETE</code> </b> - Delete the file.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>TAG</code> </b> - Add a tag to the file.
      * </p>
      * </li>
      * </ul>
@@ -314,22 +387,27 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>COPY</i>: Copy the file to another location.
+     *        <b> <code>COPY</code> </b> - Copy the file to another location.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>CUSTOM</i>: Perform a custom step with an Lambda function target.
+     *        <b> <code>CUSTOM</code> </b> - Perform a custom step with an Lambda function target.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>DELETE</i>: Delete the file.
+     *        <b> <code>DECRYPT</code> </b> - Decrypt a file that was encrypted before it was uploaded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>TAG</i>: Add a tag to the file.
+     *        <b> <code>DELETE</code> </b> - Delete the file.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>TAG</code> </b> - Add a tag to the file.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -356,13 +434,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 location for the destination of the file copy.
+     * An Amazon S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * </li>
      * </ul>
@@ -380,12 +457,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        An S3 location for the destination of the file copy.
+     *        An Amazon S3 location for the destination of the file copy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
      *        <code>FALSE</code>.
      *        </p>
      *        </li>
@@ -410,13 +487,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 location for the destination of the file copy.
+     * An Amazon S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * </li>
      * </ul>
@@ -433,12 +509,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         An S3 location for the destination of the file copy.
+     *         An Amazon S3 location for the destination of the file copy.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     *         A flag that indicates whether to overwrite an existing file of the same name. The default is
      *         <code>FALSE</code>.
      *         </p>
      *         </li>
@@ -463,13 +539,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * An S3 location for the destination of the file copy.
+     * An Amazon S3 location for the destination of the file copy.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A flag that indicates whether or not to overwrite an existing file of the same name. The default is
-     * <code>FALSE</code>.
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
      * </p>
      * </li>
      * </ul>
@@ -487,12 +562,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        An S3 location for the destination of the file copy.
+     *        An Amazon S3 location for the destination of the file copy.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A flag that indicates whether or not to overwrite an existing file of the same name. The default is
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
      *        <code>FALSE</code>.
      *        </p>
      *        </li>
@@ -506,16 +581,16 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details for a step that invokes a lambda function.
+     * Details for a step that invokes an Lambda function.
      * </p>
      * <p>
-     * Consists of the lambda function name, target, and timeout (in seconds).
+     * Consists of the Lambda function's name, target, and timeout (in seconds).
      * </p>
      * 
      * @param customStepDetails
-     *        Details for a step that invokes a lambda function.</p>
+     *        Details for a step that invokes an Lambda function.</p>
      *        <p>
-     *        Consists of the lambda function name, target, and timeout (in seconds).
+     *        Consists of the Lambda function's name, target, and timeout (in seconds).
      */
 
     public void setCustomStepDetails(CustomStepDetails customStepDetails) {
@@ -524,15 +599,15 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details for a step that invokes a lambda function.
+     * Details for a step that invokes an Lambda function.
      * </p>
      * <p>
-     * Consists of the lambda function name, target, and timeout (in seconds).
+     * Consists of the Lambda function's name, target, and timeout (in seconds).
      * </p>
      * 
-     * @return Details for a step that invokes a lambda function.</p>
+     * @return Details for a step that invokes an Lambda function.</p>
      *         <p>
-     *         Consists of the lambda function name, target, and timeout (in seconds).
+     *         Consists of the Lambda function's name, target, and timeout (in seconds).
      */
 
     public CustomStepDetails getCustomStepDetails() {
@@ -541,16 +616,16 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Details for a step that invokes a lambda function.
+     * Details for a step that invokes an Lambda function.
      * </p>
      * <p>
-     * Consists of the lambda function name, target, and timeout (in seconds).
+     * Consists of the Lambda function's name, target, and timeout (in seconds).
      * </p>
      * 
      * @param customStepDetails
-     *        Details for a step that invokes a lambda function.</p>
+     *        Details for a step that invokes an Lambda function.</p>
      *        <p>
-     *        Consists of the lambda function name, target, and timeout (in seconds).
+     *        Consists of the Lambda function's name, target, and timeout (in seconds).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -604,13 +679,13 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * Details for a step that creates one or more tags.
      * </p>
      * <p>
-     * You specify one or more tags: each tag contains a key/value pair.
+     * You specify one or more tags. Each tag contains a key-value pair.
      * </p>
      * 
      * @param tagStepDetails
      *        Details for a step that creates one or more tags.</p>
      *        <p>
-     *        You specify one or more tags: each tag contains a key/value pair.
+     *        You specify one or more tags. Each tag contains a key-value pair.
      */
 
     public void setTagStepDetails(TagStepDetails tagStepDetails) {
@@ -622,12 +697,12 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * Details for a step that creates one or more tags.
      * </p>
      * <p>
-     * You specify one or more tags: each tag contains a key/value pair.
+     * You specify one or more tags. Each tag contains a key-value pair.
      * </p>
      * 
      * @return Details for a step that creates one or more tags.</p>
      *         <p>
-     *         You specify one or more tags: each tag contains a key/value pair.
+     *         You specify one or more tags. Each tag contains a key-value pair.
      */
 
     public TagStepDetails getTagStepDetails() {
@@ -639,13 +714,13 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      * Details for a step that creates one or more tags.
      * </p>
      * <p>
-     * You specify one or more tags: each tag contains a key/value pair.
+     * You specify one or more tags. Each tag contains a key-value pair.
      * </p>
      * 
      * @param tagStepDetails
      *        Details for a step that creates one or more tags.</p>
      *        <p>
-     *        You specify one or more tags: each tag contains a key/value pair.
+     *        You specify one or more tags. Each tag contains a key-value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -655,7 +730,72 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Details for a step that decrypts an encrypted file.
+     * </p>
+     * <p>
+     * Consists of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A descriptive name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An S3 or Amazon EFS location for the destination of the file decryption.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The type of encryption that's used. Currently, only PGP encryption is supported.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param decryptStepDetails
+     *        Details for a step that decrypts an encrypted file.</p>
+     *        <p>
+     *        Consists of the following values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A descriptive name
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An S3 or Amazon EFS location for the destination of the file decryption.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *        <code>FALSE</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The type of encryption that's used. Currently, only PGP encryption is supported.
+     *        </p>
+     *        </li>
      */
 
     public void setDecryptStepDetails(DecryptStepDetails decryptStepDetails) {
@@ -663,7 +803,71 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Details for a step that decrypts an encrypted file.
+     * </p>
+     * <p>
+     * Consists of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A descriptive name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An S3 or Amazon EFS location for the destination of the file decryption.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The type of encryption that's used. Currently, only PGP encryption is supported.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Details for a step that decrypts an encrypted file.</p>
+     *         <p>
+     *         Consists of the following values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         A descriptive name
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An S3 or Amazon EFS location for the destination of the file decryption.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *         <code>FALSE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The type of encryption that's used. Currently, only PGP encryption is supported.
+     *         </p>
+     *         </li>
      */
 
     public DecryptStepDetails getDecryptStepDetails() {
@@ -671,7 +875,72 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Details for a step that decrypts an encrypted file.
+     * </p>
+     * <p>
+     * Consists of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A descriptive name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An S3 or Amazon EFS location for the destination of the file decryption.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A flag that indicates whether to overwrite an existing file of the same name. The default is <code>FALSE</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The type of encryption that's used. Currently, only PGP encryption is supported.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param decryptStepDetails
+     *        Details for a step that decrypts an encrypted file.</p>
+     *        <p>
+     *        Consists of the following values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A descriptive name
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to decrypt.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An S3 or Amazon EFS location for the destination of the file decryption.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        A flag that indicates whether to overwrite an existing file of the same name. The default is
+     *        <code>FALSE</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The type of encryption that's used. Currently, only PGP encryption is supported.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

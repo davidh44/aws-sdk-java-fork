@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the customer input S3 file location. If it is used inside
+ * Specifies the customer input Amazon S3 file location. If it is used inside
  * <code>copyStepDetails.DestinationFileLocation</code>, it should be the S3 copy destination.
  * </p>
  * <p>
