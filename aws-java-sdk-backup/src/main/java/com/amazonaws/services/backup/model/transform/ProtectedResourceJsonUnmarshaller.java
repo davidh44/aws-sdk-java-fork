@@ -60,6 +60,10 @@ public class ProtectedResourceJsonUnmarshaller implements Unmarshaller<Protected
                     context.nextToken();
                     protectedResource.setLastBackupTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ResourceName", targetDepth)) {
+                    context.nextToken();
+                    protectedResource.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

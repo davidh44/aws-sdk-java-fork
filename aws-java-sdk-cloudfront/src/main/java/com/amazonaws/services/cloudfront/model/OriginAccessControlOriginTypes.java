@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum OriginAccessControlOriginTypes {
 
-    S3("s3");
+    S3("s3"),
+    Mediastore("mediastore");
 
     private String value;
 

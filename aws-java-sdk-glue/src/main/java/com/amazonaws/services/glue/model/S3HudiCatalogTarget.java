@@ -64,7 +64,11 @@ public class S3HudiCatalogTarget implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Map<String, String> additionalOptions;
-
+    /**
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     */
     private CatalogSchemaChangePolicy schemaChangePolicy;
 
     /**
@@ -396,7 +400,12 @@ public class S3HudiCatalogTarget implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     * 
      * @param schemaChangePolicy
+     *        A policy that specifies update behavior for the crawler.
      */
 
     public void setSchemaChangePolicy(CatalogSchemaChangePolicy schemaChangePolicy) {
@@ -404,7 +413,11 @@ public class S3HudiCatalogTarget implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     * 
+     * @return A policy that specifies update behavior for the crawler.
      */
 
     public CatalogSchemaChangePolicy getSchemaChangePolicy() {
@@ -412,7 +425,12 @@ public class S3HudiCatalogTarget implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     * 
      * @param schemaChangePolicy
+     *        A policy that specifies update behavior for the crawler.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

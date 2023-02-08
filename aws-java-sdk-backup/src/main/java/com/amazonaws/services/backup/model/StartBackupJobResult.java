@@ -31,6 +31,9 @@ public class StartBackupJobResult extends com.amazonaws.AmazonWebServiceResult<c
     private String backupJobId;
     /**
      * <p>
+     * <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i>
+     * </p>
+     * <p>
      * An ARN that uniquely identifies a recovery point; for example,
      * <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      * </p>
@@ -93,11 +96,16 @@ public class StartBackupJobResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i>
+     * </p>
+     * <p>
      * An ARN that uniquely identifies a recovery point; for example,
      * <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      * </p>
      * 
      * @param recoveryPointArn
+     *        <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i> </p>
+     *        <p>
      *        An ARN that uniquely identifies a recovery point; for example,
      *        <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      */
@@ -108,11 +116,16 @@ public class StartBackupJobResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i>
+     * </p>
+     * <p>
      * An ARN that uniquely identifies a recovery point; for example,
      * <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      * </p>
      * 
-     * @return An ARN that uniquely identifies a recovery point; for example,
+     * @return <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i> </p>
+     *         <p>
+     *         An ARN that uniquely identifies a recovery point; for example,
      *         <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      */
 
@@ -122,11 +135,16 @@ public class StartBackupJobResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i>
+     * </p>
+     * <p>
      * An ARN that uniquely identifies a recovery point; for example,
      * <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      * </p>
      * 
      * @param recoveryPointArn
+     *        <i>Note: This field is only returned for Amazon EFS and Advanced DynamoDB resources.</i> </p>
+     *        <p>
      *        An ARN that uniquely identifies a recovery point; for example,
      *        <code>arn:aws:backup:us-east-1:123456789012:recovery-point:1EB3B5E7-9EB0-435A-A80B-108B488B0D45</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

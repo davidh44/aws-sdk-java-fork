@@ -1,3 +1,20 @@
+# __1.12.403__ __2023-02-08__
+## __AWS Backup__
+  - ### Features
+    - This release added one attribute (resource name) in the output model of our 9 existing APIs in AWS backup so that customers will see the resource name at the output. No input required from Customers.
+
+## __AWS Glue__
+  - ### Features
+    - DirectJDBCSource + Glue 4.0 streaming options
+
+## __AWS Lake Formation__
+  - ### Features
+    - This release removes the LFTagpolicyResource expression limits.
+
+## __Amazon CloudFront__
+  - ### Features
+    - CloudFront Origin Access Control extends support to AWS Elemental MediaStore origins.
+
 # __1.12.402__ __2023-02-07__
 ## __AWS Transfer Family__
   - ### Features

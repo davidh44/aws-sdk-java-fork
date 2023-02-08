@@ -129,6 +129,10 @@ public class CopyJobJsonUnmarshaller implements Unmarshaller<CopyJob, JsonUnmars
                     copyJob.setChildJobsInState(new MapUnmarshaller<String, Long>(context.getUnmarshaller(String.class), context.getUnmarshaller(Long.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("ResourceName", targetDepth)) {
+                    context.nextToken();
+                    copyJob.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

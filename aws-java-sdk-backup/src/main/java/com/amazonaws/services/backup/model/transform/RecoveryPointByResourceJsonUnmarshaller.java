@@ -84,6 +84,10 @@ public class RecoveryPointByResourceJsonUnmarshaller implements Unmarshaller<Rec
                     context.nextToken();
                     recoveryPointByResource.setParentRecoveryPointArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ResourceName", targetDepth)) {
+                    context.nextToken();
+                    recoveryPointByResource.setResourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

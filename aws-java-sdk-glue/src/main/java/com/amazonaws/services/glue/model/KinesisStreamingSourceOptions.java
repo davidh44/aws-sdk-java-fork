@@ -148,6 +148,23 @@ public class KinesisStreamingSourceOptions implements Serializable, Cloneable, S
      * </p>
      */
     private String roleSessionName;
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the stream. The default value is 'false'. This
+     * option is supported in Glue version 4.0 or later.
+     * </p>
+     */
+    private String addRecordTimestamp;
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     */
+    private String emitConsumerLagMetrics;
 
     /**
      * <p>
@@ -1000,6 +1017,116 @@ public class KinesisStreamingSourceOptions implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the stream. The default value is 'false'. This
+     * option is supported in Glue version 4.0 or later.
+     * </p>
+     * 
+     * @param addRecordTimestamp
+     *        When this option is set to 'true', the data output will contain an additional column named
+     *        "__src_timestamp" that indicates the time when the corresponding record received by the stream. The
+     *        default value is 'false'. This option is supported in Glue version 4.0 or later.
+     */
+
+    public void setAddRecordTimestamp(String addRecordTimestamp) {
+        this.addRecordTimestamp = addRecordTimestamp;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the stream. The default value is 'false'. This
+     * option is supported in Glue version 4.0 or later.
+     * </p>
+     * 
+     * @return When this option is set to 'true', the data output will contain an additional column named
+     *         "__src_timestamp" that indicates the time when the corresponding record received by the stream. The
+     *         default value is 'false'. This option is supported in Glue version 4.0 or later.
+     */
+
+    public String getAddRecordTimestamp() {
+        return this.addRecordTimestamp;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the stream. The default value is 'false'. This
+     * option is supported in Glue version 4.0 or later.
+     * </p>
+     * 
+     * @param addRecordTimestamp
+     *        When this option is set to 'true', the data output will contain an additional column named
+     *        "__src_timestamp" that indicates the time when the corresponding record received by the stream. The
+     *        default value is 'false'. This option is supported in Glue version 4.0 or later.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KinesisStreamingSourceOptions withAddRecordTimestamp(String addRecordTimestamp) {
+        setAddRecordTimestamp(addRecordTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     * 
+     * @param emitConsumerLagMetrics
+     *        When this option is set to 'true', for each batch, it will emit the metrics for the duration between the
+     *        oldest record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     *        "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     *        version 4.0 or later.
+     */
+
+    public void setEmitConsumerLagMetrics(String emitConsumerLagMetrics) {
+        this.emitConsumerLagMetrics = emitConsumerLagMetrics;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     * 
+     * @return When this option is set to 'true', for each batch, it will emit the metrics for the duration between the
+     *         oldest record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     *         "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in
+     *         Glue version 4.0 or later.
+     */
+
+    public String getEmitConsumerLagMetrics() {
+        return this.emitConsumerLagMetrics;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     * 
+     * @param emitConsumerLagMetrics
+     *        When this option is set to 'true', for each batch, it will emit the metrics for the duration between the
+     *        oldest record received by the stream and the time it arrives in Glue to CloudWatch. The metric's name is
+     *        "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     *        version 4.0 or later.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KinesisStreamingSourceOptions withEmitConsumerLagMetrics(String emitConsumerLagMetrics) {
+        setEmitConsumerLagMetrics(emitConsumerLagMetrics);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1046,7 +1173,11 @@ public class KinesisStreamingSourceOptions implements Serializable, Cloneable, S
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getRoleSessionName() != null)
-            sb.append("RoleSessionName: ").append(getRoleSessionName());
+            sb.append("RoleSessionName: ").append(getRoleSessionName()).append(",");
+        if (getAddRecordTimestamp() != null)
+            sb.append("AddRecordTimestamp: ").append(getAddRecordTimestamp()).append(",");
+        if (getEmitConsumerLagMetrics() != null)
+            sb.append("EmitConsumerLagMetrics: ").append(getEmitConsumerLagMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -1133,6 +1264,14 @@ public class KinesisStreamingSourceOptions implements Serializable, Cloneable, S
             return false;
         if (other.getRoleSessionName() != null && other.getRoleSessionName().equals(this.getRoleSessionName()) == false)
             return false;
+        if (other.getAddRecordTimestamp() == null ^ this.getAddRecordTimestamp() == null)
+            return false;
+        if (other.getAddRecordTimestamp() != null && other.getAddRecordTimestamp().equals(this.getAddRecordTimestamp()) == false)
+            return false;
+        if (other.getEmitConsumerLagMetrics() == null ^ this.getEmitConsumerLagMetrics() == null)
+            return false;
+        if (other.getEmitConsumerLagMetrics() != null && other.getEmitConsumerLagMetrics().equals(this.getEmitConsumerLagMetrics()) == false)
+            return false;
         return true;
     }
 
@@ -1159,6 +1298,8 @@ public class KinesisStreamingSourceOptions implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getStreamArn() == null) ? 0 : getStreamArn().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getRoleSessionName() == null) ? 0 : getRoleSessionName().hashCode());
+        hashCode = prime * hashCode + ((getAddRecordTimestamp() == null) ? 0 : getAddRecordTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getEmitConsumerLagMetrics() == null) ? 0 : getEmitConsumerLagMetrics().hashCode());
         return hashCode;
     }
 

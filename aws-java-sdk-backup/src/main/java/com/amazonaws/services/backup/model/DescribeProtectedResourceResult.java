@@ -44,6 +44,12 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private java.util.Date lastBackupTime;
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     */
+    private String resourceName;
 
     /**
      * <p>
@@ -184,6 +190,46 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @param resourceName
+     *        This is the non-unique name of the resource that belongs to the specified backup.
+     */
+
+    public void setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+    }
+
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @return This is the non-unique name of the resource that belongs to the specified backup.
+     */
+
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @param resourceName
+     *        This is the non-unique name of the resource that belongs to the specified backup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeProtectedResourceResult withResourceName(String resourceName) {
+        setResourceName(resourceName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -200,7 +246,9 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
         if (getResourceType() != null)
             sb.append("ResourceType: ").append(getResourceType()).append(",");
         if (getLastBackupTime() != null)
-            sb.append("LastBackupTime: ").append(getLastBackupTime());
+            sb.append("LastBackupTime: ").append(getLastBackupTime()).append(",");
+        if (getResourceName() != null)
+            sb.append("ResourceName: ").append(getResourceName());
         sb.append("}");
         return sb.toString();
     }
@@ -227,6 +275,10 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getLastBackupTime() != null && other.getLastBackupTime().equals(this.getLastBackupTime()) == false)
             return false;
+        if (other.getResourceName() == null ^ this.getResourceName() == null)
+            return false;
+        if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
+            return false;
         return true;
     }
 
@@ -238,6 +290,7 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getLastBackupTime() == null) ? 0 : getLastBackupTime().hashCode());
+        hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
         return hashCode;
     }
 

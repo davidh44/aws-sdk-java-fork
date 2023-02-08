@@ -83,9 +83,17 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private S3ParquetSource s3ParquetSource;
-
+    /**
+     * <p>
+     * Specifies a relational catalog data store in the Glue Data Catalog.
+     * </p>
+     */
     private RelationalCatalogSource relationalCatalogSource;
-
+    /**
+     * <p>
+     * Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
+     * </p>
+     */
     private DynamoDBCatalogSource dynamoDBCatalogSource;
     /**
      * <p>
@@ -739,7 +747,12 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a relational catalog data store in the Glue Data Catalog.
+     * </p>
+     * 
      * @param relationalCatalogSource
+     *        Specifies a relational catalog data store in the Glue Data Catalog.
      */
 
     public void setRelationalCatalogSource(RelationalCatalogSource relationalCatalogSource) {
@@ -747,7 +760,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies a relational catalog data store in the Glue Data Catalog.
+     * </p>
+     * 
+     * @return Specifies a relational catalog data store in the Glue Data Catalog.
      */
 
     public RelationalCatalogSource getRelationalCatalogSource() {
@@ -755,7 +772,12 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a relational catalog data store in the Glue Data Catalog.
+     * </p>
+     * 
      * @param relationalCatalogSource
+     *        Specifies a relational catalog data store in the Glue Data Catalog.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -765,7 +787,12 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
+     * </p>
+     * 
      * @param dynamoDBCatalogSource
+     *        Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
      */
 
     public void setDynamoDBCatalogSource(DynamoDBCatalogSource dynamoDBCatalogSource) {
@@ -773,7 +800,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
+     * </p>
+     * 
+     * @return Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
      */
 
     public DynamoDBCatalogSource getDynamoDBCatalogSource() {
@@ -781,7 +812,12 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
+     * </p>
+     * 
      * @param dynamoDBCatalogSource
+     *        Specifies a DynamoDBC Catalog data store in the Glue Data Catalog.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

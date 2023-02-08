@@ -63,6 +63,10 @@ public class KinesisStreamingSourceOptionsMarshaller {
             .marshallLocationName("RoleArn").build();
     private static final MarshallingInfo<String> ROLESESSIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoleSessionName").build();
+    private static final MarshallingInfo<String> ADDRECORDTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AddRecordTimestamp").build();
+    private static final MarshallingInfo<String> EMITCONSUMERLAGMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmitConsumerLagMetrics").build();
 
     private static final KinesisStreamingSourceOptionsMarshaller instance = new KinesisStreamingSourceOptionsMarshaller();
 
@@ -98,6 +102,8 @@ public class KinesisStreamingSourceOptionsMarshaller {
             protocolMarshaller.marshall(kinesisStreamingSourceOptions.getStreamArn(), STREAMARN_BINDING);
             protocolMarshaller.marshall(kinesisStreamingSourceOptions.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(kinesisStreamingSourceOptions.getRoleSessionName(), ROLESESSIONNAME_BINDING);
+            protocolMarshaller.marshall(kinesisStreamingSourceOptions.getAddRecordTimestamp(), ADDRECORDTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(kinesisStreamingSourceOptions.getEmitConsumerLagMetrics(), EMITCONSUMERLAGMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

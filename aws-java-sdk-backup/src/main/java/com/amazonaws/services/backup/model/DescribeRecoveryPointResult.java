@@ -212,6 +212,12 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private Boolean isParent;
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     */
+    private String resourceName;
 
     /**
      * <p>
@@ -1565,6 +1571,46 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @param resourceName
+     *        This is the non-unique name of the resource that belongs to the specified backup.
+     */
+
+    public void setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+    }
+
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @return This is the non-unique name of the resource that belongs to the specified backup.
+     */
+
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @param resourceName
+     *        This is the non-unique name of the resource that belongs to the specified backup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeRecoveryPointResult withResourceName(String resourceName) {
+        setResourceName(resourceName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1619,7 +1665,9 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
         if (getCompositeMemberIdentifier() != null)
             sb.append("CompositeMemberIdentifier: ").append(getCompositeMemberIdentifier()).append(",");
         if (getIsParent() != null)
-            sb.append("IsParent: ").append(getIsParent());
+            sb.append("IsParent: ").append(getIsParent()).append(",");
+        if (getResourceName() != null)
+            sb.append("ResourceName: ").append(getResourceName());
         sb.append("}");
         return sb.toString();
     }
@@ -1722,6 +1770,10 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getIsParent() != null && other.getIsParent().equals(this.getIsParent()) == false)
             return false;
+        if (other.getResourceName() == null ^ this.getResourceName() == null)
+            return false;
+        if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
+            return false;
         return true;
     }
 
@@ -1752,6 +1804,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getParentRecoveryPointArn() == null) ? 0 : getParentRecoveryPointArn().hashCode());
         hashCode = prime * hashCode + ((getCompositeMemberIdentifier() == null) ? 0 : getCompositeMemberIdentifier().hashCode());
         hashCode = prime * hashCode + ((getIsParent() == null) ? 0 : getIsParent().hashCode());
+        hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
         return hashCode;
     }
 

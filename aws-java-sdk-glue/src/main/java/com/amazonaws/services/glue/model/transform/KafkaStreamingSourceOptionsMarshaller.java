@@ -57,6 +57,12 @@ public class KafkaStreamingSourceOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxOffsetsPerTrigger").build();
     private static final MarshallingInfo<Integer> MINPARTITIONS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MinPartitions").build();
+    private static final MarshallingInfo<Boolean> INCLUDEHEADERS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeHeaders").build();
+    private static final MarshallingInfo<String> ADDRECORDTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AddRecordTimestamp").build();
+    private static final MarshallingInfo<String> EMITCONSUMERLAGMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmitConsumerLagMetrics").build();
 
     private static final KafkaStreamingSourceOptionsMarshaller instance = new KafkaStreamingSourceOptionsMarshaller();
 
@@ -89,6 +95,9 @@ public class KafkaStreamingSourceOptionsMarshaller {
             protocolMarshaller.marshall(kafkaStreamingSourceOptions.getRetryIntervalMs(), RETRYINTERVALMS_BINDING);
             protocolMarshaller.marshall(kafkaStreamingSourceOptions.getMaxOffsetsPerTrigger(), MAXOFFSETSPERTRIGGER_BINDING);
             protocolMarshaller.marshall(kafkaStreamingSourceOptions.getMinPartitions(), MINPARTITIONS_BINDING);
+            protocolMarshaller.marshall(kafkaStreamingSourceOptions.getIncludeHeaders(), INCLUDEHEADERS_BINDING);
+            protocolMarshaller.marshall(kafkaStreamingSourceOptions.getAddRecordTimestamp(), ADDRECORDTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(kafkaStreamingSourceOptions.getEmitConsumerLagMetrics(), EMITCONSUMERLAGMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

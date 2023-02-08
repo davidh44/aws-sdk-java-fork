@@ -84,7 +84,7 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
     private String signingBehavior;
     /**
      * <p>
-     * The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     * The type of origin that this origin access control is for.
      * </p>
      */
     private String originAccessControlOriginType;
@@ -546,11 +546,11 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     * The type of origin that this origin access control is for.
      * </p>
      * 
      * @param originAccessControlOriginType
-     *        The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     *        The type of origin that this origin access control is for.
      * @see OriginAccessControlOriginTypes
      */
 
@@ -560,10 +560,10 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     * The type of origin that this origin access control is for.
      * </p>
      * 
-     * @return The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     * @return The type of origin that this origin access control is for.
      * @see OriginAccessControlOriginTypes
      */
 
@@ -573,11 +573,11 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     * The type of origin that this origin access control is for.
      * </p>
      * 
      * @param originAccessControlOriginType
-     *        The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     *        The type of origin that this origin access control is for.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OriginAccessControlOriginTypes
      */
@@ -589,11 +589,11 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     * The type of origin that this origin access control is for.
      * </p>
      * 
      * @param originAccessControlOriginType
-     *        The type of origin that this origin access control is for. The only valid value is <code>s3</code>.
+     *        The type of origin that this origin access control is for.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OriginAccessControlOriginTypes
      */

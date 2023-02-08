@@ -65,9 +65,17 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String format;
-
+    /**
+     * <p>
+     * Specifies additional connection options for the connector.
+     * </p>
+     */
     private java.util.Map<String, String> additionalOptions;
-
+    /**
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     */
     private DirectSchemaChangePolicy schemaChangePolicy;
 
     /**
@@ -417,7 +425,11 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies additional connection options for the connector.
+     * </p>
+     * 
+     * @return Specifies additional connection options for the connector.
      */
 
     public java.util.Map<String, String> getAdditionalOptions() {
@@ -425,7 +437,12 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies additional connection options for the connector.
+     * </p>
+     * 
      * @param additionalOptions
+     *        Specifies additional connection options for the connector.
      */
 
     public void setAdditionalOptions(java.util.Map<String, String> additionalOptions) {
@@ -433,7 +450,12 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies additional connection options for the connector.
+     * </p>
+     * 
      * @param additionalOptions
+     *        Specifies additional connection options for the connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -471,7 +493,12 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     * 
      * @param schemaChangePolicy
+     *        A policy that specifies update behavior for the crawler.
      */
 
     public void setSchemaChangePolicy(DirectSchemaChangePolicy schemaChangePolicy) {
@@ -479,7 +506,11 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     * 
+     * @return A policy that specifies update behavior for the crawler.
      */
 
     public DirectSchemaChangePolicy getSchemaChangePolicy() {
@@ -487,7 +518,12 @@ public class S3HudiDirectTarget implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A policy that specifies update behavior for the crawler.
+     * </p>
+     * 
      * @param schemaChangePolicy
+     *        A policy that specifies update behavior for the crawler.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

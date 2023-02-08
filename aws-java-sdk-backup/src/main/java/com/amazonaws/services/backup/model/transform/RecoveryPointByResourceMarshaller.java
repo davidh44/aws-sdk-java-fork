@@ -45,6 +45,8 @@ public class RecoveryPointByResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsParent").build();
     private static final MarshallingInfo<String> PARENTRECOVERYPOINTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParentRecoveryPointArn").build();
+    private static final MarshallingInfo<String> RESOURCENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceName").build();
 
     private static final RecoveryPointByResourceMarshaller instance = new RecoveryPointByResourceMarshaller();
 
@@ -71,6 +73,7 @@ public class RecoveryPointByResourceMarshaller {
             protocolMarshaller.marshall(recoveryPointByResource.getBackupVaultName(), BACKUPVAULTNAME_BINDING);
             protocolMarshaller.marshall(recoveryPointByResource.getIsParent(), ISPARENT_BINDING);
             protocolMarshaller.marshall(recoveryPointByResource.getParentRecoveryPointArn(), PARENTRECOVERYPOINTARN_BINDING);
+            protocolMarshaller.marshall(recoveryPointByResource.getResourceName(), RESOURCENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

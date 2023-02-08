@@ -120,6 +120,14 @@ public class KinesisStreamingSourceOptionsJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     kinesisStreamingSourceOptions.setRoleSessionName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AddRecordTimestamp", targetDepth)) {
+                    context.nextToken();
+                    kinesisStreamingSourceOptions.setAddRecordTimestamp(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("EmitConsumerLagMetrics", targetDepth)) {
+                    context.nextToken();
+                    kinesisStreamingSourceOptions.setEmitConsumerLagMetrics(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

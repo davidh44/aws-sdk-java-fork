@@ -130,6 +130,32 @@ public class KafkaStreamingSourceOptions implements Serializable, Cloneable, Str
      * </p>
      */
     private Integer minPartitions;
+    /**
+     * <p>
+     * Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     * additional column named "glue_streaming_kafka_headers" with type
+     * <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is available in
+     * Glue version 3.0 or later only.
+     * </p>
+     */
+    private Boolean includeHeaders;
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the topic. The default value is 'false'. This option
+     * is supported in Glue version 4.0 or later.
+     * </p>
+     */
+    private String addRecordTimestamp;
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     */
+    private String emitConsumerLagMetrics;
 
     /**
      * <p>
@@ -807,6 +833,192 @@ public class KafkaStreamingSourceOptions implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     * additional column named "glue_streaming_kafka_headers" with type
+     * <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is available in
+     * Glue version 3.0 or later only.
+     * </p>
+     * 
+     * @param includeHeaders
+     *        Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     *        additional column named "glue_streaming_kafka_headers" with type
+     *        <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is
+     *        available in Glue version 3.0 or later only.
+     */
+
+    public void setIncludeHeaders(Boolean includeHeaders) {
+        this.includeHeaders = includeHeaders;
+    }
+
+    /**
+     * <p>
+     * Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     * additional column named "glue_streaming_kafka_headers" with type
+     * <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is available in
+     * Glue version 3.0 or later only.
+     * </p>
+     * 
+     * @return Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     *         additional column named "glue_streaming_kafka_headers" with type
+     *         <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is
+     *         available in Glue version 3.0 or later only.
+     */
+
+    public Boolean getIncludeHeaders() {
+        return this.includeHeaders;
+    }
+
+    /**
+     * <p>
+     * Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     * additional column named "glue_streaming_kafka_headers" with type
+     * <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is available in
+     * Glue version 3.0 or later only.
+     * </p>
+     * 
+     * @param includeHeaders
+     *        Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     *        additional column named "glue_streaming_kafka_headers" with type
+     *        <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is
+     *        available in Glue version 3.0 or later only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KafkaStreamingSourceOptions withIncludeHeaders(Boolean includeHeaders) {
+        setIncludeHeaders(includeHeaders);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     * additional column named "glue_streaming_kafka_headers" with type
+     * <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is available in
+     * Glue version 3.0 or later only.
+     * </p>
+     * 
+     * @return Whether to include the Kafka headers. When the option is set to "true", the data output will contain an
+     *         additional column named "glue_streaming_kafka_headers" with type
+     *         <code>Array[Struct(key: String, value: String)]</code>. The default value is "false". This option is
+     *         available in Glue version 3.0 or later only.
+     */
+
+    public Boolean isIncludeHeaders() {
+        return this.includeHeaders;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the topic. The default value is 'false'. This option
+     * is supported in Glue version 4.0 or later.
+     * </p>
+     * 
+     * @param addRecordTimestamp
+     *        When this option is set to 'true', the data output will contain an additional column named
+     *        "__src_timestamp" that indicates the time when the corresponding record received by the topic. The default
+     *        value is 'false'. This option is supported in Glue version 4.0 or later.
+     */
+
+    public void setAddRecordTimestamp(String addRecordTimestamp) {
+        this.addRecordTimestamp = addRecordTimestamp;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the topic. The default value is 'false'. This option
+     * is supported in Glue version 4.0 or later.
+     * </p>
+     * 
+     * @return When this option is set to 'true', the data output will contain an additional column named
+     *         "__src_timestamp" that indicates the time when the corresponding record received by the topic. The
+     *         default value is 'false'. This option is supported in Glue version 4.0 or later.
+     */
+
+    public String getAddRecordTimestamp() {
+        return this.addRecordTimestamp;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', the data output will contain an additional column named "__src_timestamp" that
+     * indicates the time when the corresponding record received by the topic. The default value is 'false'. This option
+     * is supported in Glue version 4.0 or later.
+     * </p>
+     * 
+     * @param addRecordTimestamp
+     *        When this option is set to 'true', the data output will contain an additional column named
+     *        "__src_timestamp" that indicates the time when the corresponding record received by the topic. The default
+     *        value is 'false'. This option is supported in Glue version 4.0 or later.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KafkaStreamingSourceOptions withAddRecordTimestamp(String addRecordTimestamp) {
+        setAddRecordTimestamp(addRecordTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     * 
+     * @param emitConsumerLagMetrics
+     *        When this option is set to 'true', for each batch, it will emit the metrics for the duration between the
+     *        oldest record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     *        "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     *        version 4.0 or later.
+     */
+
+    public void setEmitConsumerLagMetrics(String emitConsumerLagMetrics) {
+        this.emitConsumerLagMetrics = emitConsumerLagMetrics;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     * 
+     * @return When this option is set to 'true', for each batch, it will emit the metrics for the duration between the
+     *         oldest record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     *         "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in
+     *         Glue version 4.0 or later.
+     */
+
+    public String getEmitConsumerLagMetrics() {
+        return this.emitConsumerLagMetrics;
+    }
+
+    /**
+     * <p>
+     * When this option is set to 'true', for each batch, it will emit the metrics for the duration between the oldest
+     * record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     * "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     * version 4.0 or later.
+     * </p>
+     * 
+     * @param emitConsumerLagMetrics
+     *        When this option is set to 'true', for each batch, it will emit the metrics for the duration between the
+     *        oldest record received by the topic and the time it arrives in Glue to CloudWatch. The metric's name is
+     *        "glue.driver.streaming.maxConsumerLagInMs". The default value is 'false'. This option is supported in Glue
+     *        version 4.0 or later.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KafkaStreamingSourceOptions withEmitConsumerLagMetrics(String emitConsumerLagMetrics) {
+        setEmitConsumerLagMetrics(emitConsumerLagMetrics);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -847,7 +1059,13 @@ public class KafkaStreamingSourceOptions implements Serializable, Cloneable, Str
         if (getMaxOffsetsPerTrigger() != null)
             sb.append("MaxOffsetsPerTrigger: ").append(getMaxOffsetsPerTrigger()).append(",");
         if (getMinPartitions() != null)
-            sb.append("MinPartitions: ").append(getMinPartitions());
+            sb.append("MinPartitions: ").append(getMinPartitions()).append(",");
+        if (getIncludeHeaders() != null)
+            sb.append("IncludeHeaders: ").append(getIncludeHeaders()).append(",");
+        if (getAddRecordTimestamp() != null)
+            sb.append("AddRecordTimestamp: ").append(getAddRecordTimestamp()).append(",");
+        if (getEmitConsumerLagMetrics() != null)
+            sb.append("EmitConsumerLagMetrics: ").append(getEmitConsumerLagMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -922,6 +1140,18 @@ public class KafkaStreamingSourceOptions implements Serializable, Cloneable, Str
             return false;
         if (other.getMinPartitions() != null && other.getMinPartitions().equals(this.getMinPartitions()) == false)
             return false;
+        if (other.getIncludeHeaders() == null ^ this.getIncludeHeaders() == null)
+            return false;
+        if (other.getIncludeHeaders() != null && other.getIncludeHeaders().equals(this.getIncludeHeaders()) == false)
+            return false;
+        if (other.getAddRecordTimestamp() == null ^ this.getAddRecordTimestamp() == null)
+            return false;
+        if (other.getAddRecordTimestamp() != null && other.getAddRecordTimestamp().equals(this.getAddRecordTimestamp()) == false)
+            return false;
+        if (other.getEmitConsumerLagMetrics() == null ^ this.getEmitConsumerLagMetrics() == null)
+            return false;
+        if (other.getEmitConsumerLagMetrics() != null && other.getEmitConsumerLagMetrics().equals(this.getEmitConsumerLagMetrics()) == false)
+            return false;
         return true;
     }
 
@@ -945,6 +1175,9 @@ public class KafkaStreamingSourceOptions implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getRetryIntervalMs() == null) ? 0 : getRetryIntervalMs().hashCode());
         hashCode = prime * hashCode + ((getMaxOffsetsPerTrigger() == null) ? 0 : getMaxOffsetsPerTrigger().hashCode());
         hashCode = prime * hashCode + ((getMinPartitions() == null) ? 0 : getMinPartitions().hashCode());
+        hashCode = prime * hashCode + ((getIncludeHeaders() == null) ? 0 : getIncludeHeaders().hashCode());
+        hashCode = prime * hashCode + ((getAddRecordTimestamp() == null) ? 0 : getAddRecordTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getEmitConsumerLagMetrics() == null) ? 0 : getEmitConsumerLagMetrics().hashCode());
         return hashCode;
     }
 

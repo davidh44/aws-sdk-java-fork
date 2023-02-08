@@ -46,7 +46,11 @@ public class S3HudiSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> additionalHudiOptions;
-
+    /**
+     * <p>
+     * Specifies additional options for the connector.
+     * </p>
+     */
     private S3DirectSourceAdditionalOptions additionalOptions;
     /**
      * <p>
@@ -234,7 +238,12 @@ public class S3HudiSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies additional options for the connector.
+     * </p>
+     * 
      * @param additionalOptions
+     *        Specifies additional options for the connector.
      */
 
     public void setAdditionalOptions(S3DirectSourceAdditionalOptions additionalOptions) {
@@ -242,7 +251,11 @@ public class S3HudiSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies additional options for the connector.
+     * </p>
+     * 
+     * @return Specifies additional options for the connector.
      */
 
     public S3DirectSourceAdditionalOptions getAdditionalOptions() {
@@ -250,7 +263,12 @@ public class S3HudiSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies additional options for the connector.
+     * </p>
+     * 
      * @param additionalOptions
+     *        Specifies additional options for the connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

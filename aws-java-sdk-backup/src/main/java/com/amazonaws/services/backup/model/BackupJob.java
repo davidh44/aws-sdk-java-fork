@@ -188,6 +188,12 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean isParent;
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     */
+    private String resourceName;
 
     /**
      * <p>
@@ -1297,6 +1303,46 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @param resourceName
+     *        This is the non-unique name of the resource that belongs to the specified backup.
+     */
+
+    public void setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+    }
+
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @return This is the non-unique name of the resource that belongs to the specified backup.
+     */
+
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
+     * <p>
+     * This is the non-unique name of the resource that belongs to the specified backup.
+     * </p>
+     * 
+     * @param resourceName
+     *        This is the non-unique name of the resource that belongs to the specified backup.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BackupJob withResourceName(String resourceName) {
+        setResourceName(resourceName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1351,7 +1397,9 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
         if (getParentJobId() != null)
             sb.append("ParentJobId: ").append(getParentJobId()).append(",");
         if (getIsParent() != null)
-            sb.append("IsParent: ").append(getIsParent());
+            sb.append("IsParent: ").append(getIsParent()).append(",");
+        if (getResourceName() != null)
+            sb.append("ResourceName: ").append(getResourceName());
         sb.append("}");
         return sb.toString();
     }
@@ -1454,6 +1502,10 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getIsParent() != null && other.getIsParent().equals(this.getIsParent()) == false)
             return false;
+        if (other.getResourceName() == null ^ this.getResourceName() == null)
+            return false;
+        if (other.getResourceName() != null && other.getResourceName().equals(this.getResourceName()) == false)
+            return false;
         return true;
     }
 
@@ -1484,6 +1536,7 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBackupType() == null) ? 0 : getBackupType().hashCode());
         hashCode = prime * hashCode + ((getParentJobId() == null) ? 0 : getParentJobId().hashCode());
         hashCode = prime * hashCode + ((getIsParent() == null) ? 0 : getIsParent().hashCode());
+        hashCode = prime * hashCode + ((getResourceName() == null) ? 0 : getResourceName().hashCode());
         return hashCode;
     }
 
