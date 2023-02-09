@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a Standby WorkSpace.
+ * Describes a standby WorkSpace.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/StandbyWorkspace" target="_top">AWS API
@@ -30,36 +30,36 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      */
     private String primaryWorkspaceId;
     /**
      * <p>
-     * The volume encryption key of the Standby WorkSpace.
+     * The volume encryption key of the standby WorkSpace.
      * </p>
      */
     private String volumeEncryptionKey;
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      */
     private String directoryId;
     /**
      * <p>
-     * The tags associated with the Standby WorkSpace.
+     * The tags associated with the standby WorkSpace.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      * 
      * @param primaryWorkspaceId
-     *        The identifier of the Standby WorkSpace.
+     *        The identifier of the standby WorkSpace.
      */
 
     public void setPrimaryWorkspaceId(String primaryWorkspaceId) {
@@ -68,10 +68,10 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      * 
-     * @return The identifier of the Standby WorkSpace.
+     * @return The identifier of the standby WorkSpace.
      */
 
     public String getPrimaryWorkspaceId() {
@@ -80,11 +80,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      * 
      * @param primaryWorkspaceId
-     *        The identifier of the Standby WorkSpace.
+     *        The identifier of the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +95,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The volume encryption key of the Standby WorkSpace.
+     * The volume encryption key of the standby WorkSpace.
      * </p>
      * 
      * @param volumeEncryptionKey
-     *        The volume encryption key of the Standby WorkSpace.
+     *        The volume encryption key of the standby WorkSpace.
      */
 
     public void setVolumeEncryptionKey(String volumeEncryptionKey) {
@@ -108,10 +108,10 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The volume encryption key of the Standby WorkSpace.
+     * The volume encryption key of the standby WorkSpace.
      * </p>
      * 
-     * @return The volume encryption key of the Standby WorkSpace.
+     * @return The volume encryption key of the standby WorkSpace.
      */
 
     public String getVolumeEncryptionKey() {
@@ -120,11 +120,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The volume encryption key of the Standby WorkSpace.
+     * The volume encryption key of the standby WorkSpace.
      * </p>
      * 
      * @param volumeEncryptionKey
-     *        The volume encryption key of the Standby WorkSpace.
+     *        The volume encryption key of the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the directory for the Standby WorkSpace.
+     *        The identifier of the directory for the standby WorkSpace.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -148,10 +148,10 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      * 
-     * @return The identifier of the directory for the Standby WorkSpace.
+     * @return The identifier of the directory for the standby WorkSpace.
      */
 
     public String getDirectoryId() {
@@ -160,11 +160,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the directory for the Standby WorkSpace.
+     *        The identifier of the directory for the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,10 +175,10 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags associated with the Standby WorkSpace.
+     * The tags associated with the standby WorkSpace.
      * </p>
      * 
-     * @return The tags associated with the Standby WorkSpace.
+     * @return The tags associated with the standby WorkSpace.
      */
 
     public java.util.List<Tag> getTags() {
@@ -190,11 +190,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags associated with the Standby WorkSpace.
+     * The tags associated with the standby WorkSpace.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the Standby WorkSpace.
+     *        The tags associated with the standby WorkSpace.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -208,7 +208,7 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags associated with the Standby WorkSpace.
+     * The tags associated with the standby WorkSpace.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -217,7 +217,7 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param tags
-     *        The tags associated with the Standby WorkSpace.
+     *        The tags associated with the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,11 +233,11 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The tags associated with the Standby WorkSpace.
+     * The tags associated with the standby WorkSpace.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the Standby WorkSpace.
+     *        The tags associated with the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

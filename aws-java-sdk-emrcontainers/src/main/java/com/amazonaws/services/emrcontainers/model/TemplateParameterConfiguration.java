@@ -30,7 +30,7 @@ public class TemplateParameterConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     * The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * </p>
      */
     private String type;
@@ -43,11 +43,11 @@ public class TemplateParameterConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     * The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * </p>
      * 
      * @param type
-     *        The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     *        The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * @see TemplateParameterDataType
      */
 
@@ -57,10 +57,10 @@ public class TemplateParameterConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     * The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * </p>
      * 
-     * @return The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     * @return The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * @see TemplateParameterDataType
      */
 
@@ -70,11 +70,11 @@ public class TemplateParameterConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     * The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * </p>
      * 
      * @param type
-     *        The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     *        The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TemplateParameterDataType
      */
@@ -86,11 +86,11 @@ public class TemplateParameterConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     * The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * </p>
      * 
      * @param type
-     *        The type of the job template parameter. Allowed values are: ‘String’, ‘Number’.
+     *        The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TemplateParameterDataType
      */

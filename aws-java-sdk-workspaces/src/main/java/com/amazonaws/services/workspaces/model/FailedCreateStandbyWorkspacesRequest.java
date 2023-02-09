@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the Standby WorkSpace that could not be created.
+ * Describes the standby WorkSpace that could not be created.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/FailedCreateStandbyWorkspacesRequest"
@@ -30,30 +30,30 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      */
     private StandbyWorkspace standbyWorkspaceRequest;
     /**
      * <p>
-     * The error code that is returned if the Standby WorkSpace could not be created.
+     * The error code that is returned if the standby WorkSpace could not be created.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * The text of the error message that is returned if the Standby WorkSpace could not be created.
+     * The text of the error message that is returned if the standby WorkSpace could not be created.
      * </p>
      */
     private String errorMessage;
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * 
      * @param standbyWorkspaceRequest
-     *        Information about the Standby WorkSpace that could not be created.
+     *        Information about the standby WorkSpace that could not be created.
      */
 
     public void setStandbyWorkspaceRequest(StandbyWorkspace standbyWorkspaceRequest) {
@@ -62,10 +62,10 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * 
-     * @return Information about the Standby WorkSpace that could not be created.
+     * @return Information about the standby WorkSpace that could not be created.
      */
 
     public StandbyWorkspace getStandbyWorkspaceRequest() {
@@ -74,11 +74,11 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * 
      * @param standbyWorkspaceRequest
-     *        Information about the Standby WorkSpace that could not be created.
+     *        Information about the standby WorkSpace that could not be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * The error code that is returned if the Standby WorkSpace could not be created.
+     * The error code that is returned if the standby WorkSpace could not be created.
      * </p>
      * 
      * @param errorCode
-     *        The error code that is returned if the Standby WorkSpace could not be created.
+     *        The error code that is returned if the standby WorkSpace could not be created.
      */
 
     public void setErrorCode(String errorCode) {
@@ -102,10 +102,10 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * The error code that is returned if the Standby WorkSpace could not be created.
+     * The error code that is returned if the standby WorkSpace could not be created.
      * </p>
      * 
-     * @return The error code that is returned if the Standby WorkSpace could not be created.
+     * @return The error code that is returned if the standby WorkSpace could not be created.
      */
 
     public String getErrorCode() {
@@ -114,11 +114,11 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * The error code that is returned if the Standby WorkSpace could not be created.
+     * The error code that is returned if the standby WorkSpace could not be created.
      * </p>
      * 
      * @param errorCode
-     *        The error code that is returned if the Standby WorkSpace could not be created.
+     *        The error code that is returned if the standby WorkSpace could not be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * The text of the error message that is returned if the Standby WorkSpace could not be created.
+     * The text of the error message that is returned if the standby WorkSpace could not be created.
      * </p>
      * 
      * @param errorMessage
-     *        The text of the error message that is returned if the Standby WorkSpace could not be created.
+     *        The text of the error message that is returned if the standby WorkSpace could not be created.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -142,10 +142,10 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * The text of the error message that is returned if the Standby WorkSpace could not be created.
+     * The text of the error message that is returned if the standby WorkSpace could not be created.
      * </p>
      * 
-     * @return The text of the error message that is returned if the Standby WorkSpace could not be created.
+     * @return The text of the error message that is returned if the standby WorkSpace could not be created.
      */
 
     public String getErrorMessage() {
@@ -154,11 +154,11 @@ public class FailedCreateStandbyWorkspacesRequest implements Serializable, Clone
 
     /**
      * <p>
-     * The text of the error message that is returned if the Standby WorkSpace could not be created.
+     * The text of the error message that is returned if the standby WorkSpace could not be created.
      * </p>
      * 
      * @param errorMessage
-     *        The text of the error message that is returned if the Standby WorkSpace could not be created.
+     *        The text of the error message that is returned if the standby WorkSpace could not be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

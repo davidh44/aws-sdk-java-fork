@@ -69,7 +69,12 @@ public class RegisteredDomainDelegationInfo implements Serializable, Cloneable, 
      * </p>
      */
     private NameServersUpdateState nameServersUpdateState;
-
+    /**
+     * <p>
+     * Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically delegated
+     * to an Amazon Lightsail DNS zone.
+     * </p>
+     */
     private R53HostedZoneDeletionState r53HostedZoneDeletionState;
 
     /**
@@ -119,7 +124,14 @@ public class RegisteredDomainDelegationInfo implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically delegated
+     * to an Amazon Lightsail DNS zone.
+     * </p>
+     * 
      * @param r53HostedZoneDeletionState
+     *        Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically
+     *        delegated to an Amazon Lightsail DNS zone.
      */
 
     public void setR53HostedZoneDeletionState(R53HostedZoneDeletionState r53HostedZoneDeletionState) {
@@ -127,7 +139,13 @@ public class RegisteredDomainDelegationInfo implements Serializable, Cloneable, 
     }
 
     /**
-     * @return
+     * <p>
+     * Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically delegated
+     * to an Amazon Lightsail DNS zone.
+     * </p>
+     * 
+     * @return Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically
+     *         delegated to an Amazon Lightsail DNS zone.
      */
 
     public R53HostedZoneDeletionState getR53HostedZoneDeletionState() {
@@ -135,7 +153,14 @@ public class RegisteredDomainDelegationInfo implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically delegated
+     * to an Amazon Lightsail DNS zone.
+     * </p>
+     * 
      * @param r53HostedZoneDeletionState
+     *        Describes the deletion state of an Amazon Route 53 hosted zone for a domain that is being automatically
+     *        delegated to an Amazon Lightsail DNS zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

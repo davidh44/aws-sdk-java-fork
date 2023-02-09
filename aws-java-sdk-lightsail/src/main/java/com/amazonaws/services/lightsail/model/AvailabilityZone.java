@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an Availability Zone.
+ * Describes an Availability Zone. This is returned only as part of a <code>GetRegions</code> request.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/AvailabilityZone" target="_top">AWS API

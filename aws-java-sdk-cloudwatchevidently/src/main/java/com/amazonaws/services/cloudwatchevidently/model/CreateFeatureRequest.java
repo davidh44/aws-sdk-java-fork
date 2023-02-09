@@ -84,10 +84,13 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      * characters.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can associate as many as 50 tags with a feature.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon
+     * Web Services resources</a>.
+     * </p>
      */
     private java.util.Map<String, String> tags;
     /**
@@ -461,10 +464,13 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      * characters.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can associate as many as 50 tags with a feature.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon
+     * Web Services resources</a>.
+     * </p>
      * 
      * @return Assigns one or more tags (key-value pairs) to the feature.</p>
      *         <p>
@@ -475,8 +481,13 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      *         characters.
      *         </p>
-     * 
-     * <pre><code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
+     *         <p>
+     *         You can associate as many as 50 tags with a feature.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *         resources</a>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -495,10 +506,13 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      * characters.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can associate as many as 50 tags with a feature.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon
+     * Web Services resources</a>.
+     * </p>
      * 
      * @param tags
      *        Assigns one or more tags (key-value pairs) to the feature.</p>
@@ -510,8 +524,12 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      *        characters.
      *        </p>
-     * 
-     * <pre><code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
+     *        <p>
+     *        You can associate as many as 50 tags with a feature.
+     *        </p>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -530,10 +548,13 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      * characters.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * You can associate as many as 50 tags with a feature.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon
+     * Web Services resources</a>.
+     * </p>
      * 
      * @param tags
      *        Assigns one or more tags (key-value pairs) to the feature.</p>
@@ -545,9 +566,12 @@ public class CreateFeatureRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
      *        characters.
      *        </p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;You can associate as many as 50 tags with a feature.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html&quot;&gt;Tagging Amazon Web Services resources&lt;/a&gt;.&lt;/p&gt; </code>
+     *        <p>
+     *        You can associate as many as 50 tags with a feature.
+     *        </p>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

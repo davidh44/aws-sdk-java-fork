@@ -64,6 +64,10 @@ public class RecognizeUtteranceResultJsonUnmarshaller implements Unmarshaller<Re
                 context.setCurrentHeader("x-amz-lex-input-transcript");
                 recognizeUtteranceResult.setInputTranscript(context.getUnmarshaller(String.class).unmarshall(context));
             }
+            if (context.getHeader("x-amz-lex-recognized-bot-member") != null) {
+                context.setCurrentHeader("x-amz-lex-recognized-bot-member");
+                recognizeUtteranceResult.setRecognizedBotMember(context.getUnmarshaller(String.class).unmarshall(context));
+            }
         }
 
         recognizeUtteranceResult.setAudioStream(context.getHttpResponse().getContent());

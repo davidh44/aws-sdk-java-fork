@@ -51,7 +51,7 @@ import com.amazonaws.services.workdocs.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * The WorkDocs API is designed for the following use cases:
+ * The Amazon WorkDocs API is designed for the following use cases:
  * </p>
  * <ul>
  * <li>
@@ -64,7 +64,7 @@ import com.amazonaws.services.workdocs.model.transform.*;
  * <li>
  * <p>
  * Security: Support security applications are supported for users who have additional security needs, such as antivirus
- * or data loss prevention. The API actions, along with AWS CloudTrail, allow these applications to detect when changes
+ * or data loss prevention. The API actions, along with CloudTrail, allow these applications to detect when changes
  * occur in Amazon WorkDocs. Then, the application can take the necessary actions and replace the target file. If the
  * target file violates the policy, the application can also choose to email the user.
  * </p>
@@ -72,19 +72,19 @@ import com.amazonaws.services.workdocs.model.transform.*;
  * <li>
  * <p>
  * eDiscovery/Analytics: General administrative applications are supported, such as eDiscovery and analytics. These
- * applications can choose to mimic or record the actions in an Amazon WorkDocs site, along with AWS CloudTrail, to
+ * applications can choose to mimic or record the actions in an Amazon WorkDocs site, along with CloudTrail, to
  * replicate data for eDiscovery, backup, or analytical applications.
  * </p>
  * </li>
  * </ul>
  * <p>
  * All Amazon WorkDocs API actions are Amazon authenticated and certificate-signed. They not only require the use of the
- * AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission
- * policies. By creating a role and allowing an IAM user to access the Amazon WorkDocs site, the IAM user gains full
- * administrative visibility into the entire Amazon WorkDocs site (or as set in the IAM policy). This includes, but is
- * not limited to, the ability to modify file permissions and upload any file to any user. This allows developers to
- * perform the three use cases above, as well as give users the ability to grant access on a selective basis using the
- * IAM model.
+ * Amazon Web Services SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access,
+ * trust, and permission policies. By creating a role and allowing an IAM user to access the Amazon WorkDocs site, the
+ * IAM user gains full administrative visibility into the entire Amazon WorkDocs site (or as set in the IAM policy).
+ * This includes, but is not limited to, the ability to modify file permissions and upload any file to any user. This
+ * allows developers to perform the three use cases above, as well as give users the ability to grant access on a
+ * selective basis using the IAM model.
  * </p>
  * <note>
  * <p>
@@ -282,7 +282,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -352,7 +352,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -417,7 +417,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -488,7 +488,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -563,7 +563,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws CustomMetadataLimitExceededException
      *         The limit has been reached on the number of custom properties for the specified resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -639,7 +639,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -705,7 +705,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -845,7 +845,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -911,7 +911,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -979,7 +979,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1050,7 +1050,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws ProhibitedStateException
      *         The specified document version is not in the INITIALIZED state.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1124,7 +1124,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1178,8 +1178,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Deletes a version of an Amazon WorkDocs document. Use the <code>DeletePriorVersions</code> parameter to delete
-     * prior versions.
+     * Deletes a specific version of a document.
      * </p>
      * 
      * @param deleteDocumentVersionRequest
@@ -1195,7 +1194,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws InvalidOperationException
      *         The operation is invalid.
@@ -1272,7 +1271,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1342,7 +1341,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1408,7 +1407,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1531,6 +1530,12 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * Deletes the specified user from a Simple AD or Microsoft AD directory.
      * </p>
+     * <important>
+     * <p>
+     * Deleting a user immediately and permanently deletes all content in that user's folder structure. Site retention
+     * policies do NOT apply to this type of deletion.
+     * </p>
+     * </important>
      * 
      * @param deleteUserRequest
      * @return Result of the DeleteUser operation returned by the service.
@@ -1541,7 +1546,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1607,7 +1612,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1675,7 +1680,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1746,7 +1751,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1823,7 +1828,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -1890,7 +1895,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2020,7 +2025,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2096,7 +2101,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2167,7 +2172,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2245,7 +2250,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2313,7 +2318,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2386,7 +2391,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2452,7 +2457,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2524,7 +2529,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2597,7 +2602,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2664,7 +2669,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidArgumentException
      *         The pagination marker or limit fields are not valid.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2748,7 +2753,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2821,7 +2826,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2887,7 +2892,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -2959,7 +2964,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws InvalidOperationException
      *         The operation is invalid.
@@ -3040,7 +3045,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -3116,7 +3121,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -3194,7 +3199,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws UnauthorizedResourceAccessException
      *         The caller does not have access to perform the action on the resource.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.
@@ -3265,7 +3270,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
      * @throws ProhibitedStateException
      *         The specified document version is not in the INITIALIZED state.
      * @throws FailedDependencyException
-     *         The AWS Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
+     *         The Directory Service cannot reach an on-premises instance. Or a dependency under the control of the
      *         organization is failing, such as a connected Active Directory.
      * @throws ServiceUnavailableException
      *         One or more of the dependencies is unavailable.

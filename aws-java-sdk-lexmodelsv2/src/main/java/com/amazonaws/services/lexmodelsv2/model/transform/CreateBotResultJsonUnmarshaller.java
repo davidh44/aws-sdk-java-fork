@@ -91,6 +91,16 @@ public class CreateBotResultJsonUnmarshaller implements Unmarshaller<CreateBotRe
                     createBotResult.setTestBotAliasTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("botType", targetDepth)) {
+                    context.nextToken();
+                    createBotResult.setBotType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("botMembers", targetDepth)) {
+                    context.nextToken();
+                    createBotResult.setBotMembers(new ListUnmarshaller<BotMember>(BotMemberJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

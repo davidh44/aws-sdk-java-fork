@@ -32,9 +32,9 @@ public class DeleteExportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the export will no longer be returned by the
-     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a> operation and calls to
-     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html"> DescribeExport</a> operation
-     * with the export identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a> operation
+     * and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">
+     * DescribeExport</a> operation with the export identifier will fail.
      * </p>
      */
     private String exportStatus;
@@ -82,16 +82,18 @@ public class DeleteExportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the export will no longer be returned by the
-     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a> operation and calls to
-     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html"> DescribeExport</a> operation
-     * with the export identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a> operation
+     * and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">
+     * DescribeExport</a> operation with the export identifier will fail.
      * </p>
      * 
      * @param exportStatus
      *        The current status of the deletion. When the deletion is complete, the export will no longer be returned
-     *        by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a>
-     *        operation and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">
-     *        DescribeExport</a> operation with the export identifier will fail.
+     *        by the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a>
+     *        operation and calls to the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html"> DescribeExport</a>
+     *        operation with the export identifier will fail.
      * @see ExportStatus
      */
 
@@ -102,15 +104,17 @@ public class DeleteExportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the export will no longer be returned by the
-     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a> operation and calls to
-     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html"> DescribeExport</a> operation
-     * with the export identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a> operation
+     * and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">
+     * DescribeExport</a> operation with the export identifier will fail.
      * </p>
      * 
      * @return The current status of the deletion. When the deletion is complete, the export will no longer be returned
-     *         by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a>
-     *         operation and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">
-     *         DescribeExport</a> operation with the export identifier will fail.
+     *         by the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a>
+     *         operation and calls to the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html"> DescribeExport</a>
+     *         operation with the export identifier will fail.
      * @see ExportStatus
      */
 
@@ -121,16 +125,18 @@ public class DeleteExportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the export will no longer be returned by the
-     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a> operation and calls to
-     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html"> DescribeExport</a> operation
-     * with the export identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a> operation
+     * and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">
+     * DescribeExport</a> operation with the export identifier will fail.
      * </p>
      * 
      * @param exportStatus
      *        The current status of the deletion. When the deletion is complete, the export will no longer be returned
-     *        by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a>
-     *        operation and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">
-     *        DescribeExport</a> operation with the export identifier will fail.
+     *        by the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a>
+     *        operation and calls to the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html"> DescribeExport</a>
+     *        operation with the export identifier will fail.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportStatus
      */
@@ -143,16 +149,18 @@ public class DeleteExportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the export will no longer be returned by the
-     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a> operation and calls to
-     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html"> DescribeExport</a> operation
-     * with the export identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a> operation
+     * and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">
+     * DescribeExport</a> operation with the export identifier will fail.
      * </p>
      * 
      * @param exportStatus
      *        The current status of the deletion. When the deletion is complete, the export will no longer be returned
-     *        by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListExports.html">ListExports</a>
-     *        operation and calls to the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">
-     *        DescribeExport</a> operation with the export identifier will fail.
+     *        by the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListExports.html">ListExports</a>
+     *        operation and calls to the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html"> DescribeExport</a>
+     *        operation with the export identifier will fail.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExportStatus
      */

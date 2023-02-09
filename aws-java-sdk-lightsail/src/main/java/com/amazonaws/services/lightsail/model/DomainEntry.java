@@ -57,9 +57,11 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
     private String target;
     /**
      * <p>
-     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer. You
-     * can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic
-     * to your load balancer.
+     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer,
+     * Lightsail container service, Lightsail content delivery network (CDN) distribution, or another Amazon Web
+     * Services resource. You can include an alias (A type) record in your request, which points to the DNS name of a
+     * load balancer, container service, CDN distribution, or other Amazon Web Services resource and routes traffic to
+     * that resource.
      * </p>
      */
     private Boolean isAlias;
@@ -305,15 +307,19 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer. You
-     * can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic
-     * to your load balancer.
+     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer,
+     * Lightsail container service, Lightsail content delivery network (CDN) distribution, or another Amazon Web
+     * Services resource. You can include an alias (A type) record in your request, which points to the DNS name of a
+     * load balancer, container service, CDN distribution, or other Amazon Web Services resource and routes traffic to
+     * that resource.
      * </p>
      * 
      * @param isAlias
      *        When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load
-     *        balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS
-     *        name and routes traffic to your load balancer.
+     *        balancer, Lightsail container service, Lightsail content delivery network (CDN) distribution, or another
+     *        Amazon Web Services resource. You can include an alias (A type) record in your request, which points to
+     *        the DNS name of a load balancer, container service, CDN distribution, or other Amazon Web Services
+     *        resource and routes traffic to that resource.
      */
 
     public void setIsAlias(Boolean isAlias) {
@@ -322,14 +328,18 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer. You
-     * can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic
-     * to your load balancer.
+     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer,
+     * Lightsail container service, Lightsail content delivery network (CDN) distribution, or another Amazon Web
+     * Services resource. You can include an alias (A type) record in your request, which points to the DNS name of a
+     * load balancer, container service, CDN distribution, or other Amazon Web Services resource and routes traffic to
+     * that resource.
      * </p>
      * 
      * @return When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load
-     *         balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS
-     *         name and routes traffic to your load balancer.
+     *         balancer, Lightsail container service, Lightsail content delivery network (CDN) distribution, or another
+     *         Amazon Web Services resource. You can include an alias (A type) record in your request, which points to
+     *         the DNS name of a load balancer, container service, CDN distribution, or other Amazon Web Services
+     *         resource and routes traffic to that resource.
      */
 
     public Boolean getIsAlias() {
@@ -338,15 +348,19 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer. You
-     * can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic
-     * to your load balancer.
+     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer,
+     * Lightsail container service, Lightsail content delivery network (CDN) distribution, or another Amazon Web
+     * Services resource. You can include an alias (A type) record in your request, which points to the DNS name of a
+     * load balancer, container service, CDN distribution, or other Amazon Web Services resource and routes traffic to
+     * that resource.
      * </p>
      * 
      * @param isAlias
      *        When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load
-     *        balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS
-     *        name and routes traffic to your load balancer.
+     *        balancer, Lightsail container service, Lightsail content delivery network (CDN) distribution, or another
+     *        Amazon Web Services resource. You can include an alias (A type) record in your request, which points to
+     *        the DNS name of a load balancer, container service, CDN distribution, or other Amazon Web Services
+     *        resource and routes traffic to that resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,14 +371,18 @@ public class DomainEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer. You
-     * can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic
-     * to your load balancer.
+     * When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load balancer,
+     * Lightsail container service, Lightsail content delivery network (CDN) distribution, or another Amazon Web
+     * Services resource. You can include an alias (A type) record in your request, which points to the DNS name of a
+     * load balancer, container service, CDN distribution, or other Amazon Web Services resource and routes traffic to
+     * that resource.
      * </p>
      * 
      * @return When <code>true</code>, specifies whether the domain entry is an alias used by the Lightsail load
-     *         balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS
-     *         name and routes traffic to your load balancer.
+     *         balancer, Lightsail container service, Lightsail content delivery network (CDN) distribution, or another
+     *         Amazon Web Services resource. You can include an alias (A type) record in your request, which points to
+     *         the DNS name of a load balancer, container service, CDN distribution, or other Amazon Web Services
+     *         resource and routes traffic to that resource.
      */
 
     public Boolean isAlias() {

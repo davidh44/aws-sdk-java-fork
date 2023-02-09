@@ -90,6 +90,22 @@ public class DescribeBotVersionResultJsonUnmarshaller implements Unmarshaller<De
                     context.nextToken();
                     describeBotVersionResult.setCreationDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("parentBotNetworks", targetDepth)) {
+                    context.nextToken();
+                    describeBotVersionResult.setParentBotNetworks(new ListUnmarshaller<ParentBotNetwork>(ParentBotNetworkJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("botType", targetDepth)) {
+                    context.nextToken();
+                    describeBotVersionResult.setBotType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("botMembers", targetDepth)) {
+                    context.nextToken();
+                    describeBotVersionResult.setBotMembers(new ListUnmarshaller<BotMember>(BotMemberJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

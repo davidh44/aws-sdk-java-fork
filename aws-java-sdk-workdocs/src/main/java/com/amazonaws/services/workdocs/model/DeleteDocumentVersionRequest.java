@@ -27,37 +27,39 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      */
     private String authenticationToken;
     /**
      * <p>
-     * The ID of a document.
+     * The ID of the document associated with the version being deleted.
      * </p>
      */
     private String documentId;
     /**
      * <p>
-     * The version ID of a document.
+     * The ID of the version being deleted.
      * </p>
      */
     private String versionId;
     /**
      * <p>
-     * When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * Deletes all versions of a document prior to the current version.
      * </p>
      */
     private Boolean deletePriorVersions;
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      * 
      * @param authenticationToken
-     *        Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the
-     *        API.
+     *        Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator
+     *        credentials to access the API.
      */
 
     public void setAuthenticationToken(String authenticationToken) {
@@ -66,11 +68,12 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      * 
-     * @return Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the
-     *         API.
+     * @return Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator
+     *         credentials to access the API.
      */
 
     public String getAuthenticationToken() {
@@ -79,12 +82,13 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      * 
      * @param authenticationToken
-     *        Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the
-     *        API.
+     *        Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator
+     *        credentials to access the API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +99,11 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ID of a document.
+     * The ID of the document associated with the version being deleted.
      * </p>
      * 
      * @param documentId
-     *        The ID of a document.
+     *        The ID of the document associated with the version being deleted.
      */
 
     public void setDocumentId(String documentId) {
@@ -108,10 +112,10 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ID of a document.
+     * The ID of the document associated with the version being deleted.
      * </p>
      * 
-     * @return The ID of a document.
+     * @return The ID of the document associated with the version being deleted.
      */
 
     public String getDocumentId() {
@@ -120,11 +124,11 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ID of a document.
+     * The ID of the document associated with the version being deleted.
      * </p>
      * 
      * @param documentId
-     *        The ID of a document.
+     *        The ID of the document associated with the version being deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +139,11 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The version ID of a document.
+     * The ID of the version being deleted.
      * </p>
      * 
      * @param versionId
-     *        The version ID of a document.
+     *        The ID of the version being deleted.
      */
 
     public void setVersionId(String versionId) {
@@ -148,10 +152,10 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The version ID of a document.
+     * The ID of the version being deleted.
      * </p>
      * 
-     * @return The version ID of a document.
+     * @return The ID of the version being deleted.
      */
 
     public String getVersionId() {
@@ -160,11 +164,11 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The version ID of a document.
+     * The ID of the version being deleted.
      * </p>
      * 
      * @param versionId
-     *        The version ID of a document.
+     *        The ID of the version being deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +179,11 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * Deletes all versions of a document prior to the current version.
      * </p>
      * 
      * @param deletePriorVersions
-     *        When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     *        Deletes all versions of a document prior to the current version.
      */
 
     public void setDeletePriorVersions(Boolean deletePriorVersions) {
@@ -188,10 +192,10 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * Deletes all versions of a document prior to the current version.
      * </p>
      * 
-     * @return When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * @return Deletes all versions of a document prior to the current version.
      */
 
     public Boolean getDeletePriorVersions() {
@@ -200,11 +204,11 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * Deletes all versions of a document prior to the current version.
      * </p>
      * 
      * @param deletePriorVersions
-     *        When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     *        Deletes all versions of a document prior to the current version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,10 +219,10 @@ public class DeleteDocumentVersionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * Deletes all versions of a document prior to the current version.
      * </p>
      * 
-     * @return When set to <code>TRUE</code>, deletes the specified version and <i>all prior versions</i> of a document.
+     * @return Deletes all versions of a document prior to the current version.
      */
 
     public Boolean isDeletePriorVersions() {

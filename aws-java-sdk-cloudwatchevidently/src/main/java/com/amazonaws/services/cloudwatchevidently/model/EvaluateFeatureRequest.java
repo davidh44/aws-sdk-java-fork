@@ -40,10 +40,9 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Use
      * segments to focus your audience</a>.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * If you include this parameter, the value must be a JSON object. A JSON array is not supported.
+     * </p>
      */
     private String evaluationContext;
     /**
@@ -113,10 +112,9 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Use
      * segments to focus your audience</a>.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * If you include this parameter, the value must be a JSON object. A JSON array is not supported.
+     * </p>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -132,8 +130,8 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      *        segments. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html"
      *        >Use segments to focus your audience</a>.</p>
-     * 
-     * <pre><code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
+     *        <p>
+     *        If you include this parameter, the value must be a JSON object. A JSON array is not supported.
      */
 
     public void setEvaluationContext(String evaluationContext) {
@@ -148,10 +146,9 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Use
      * segments to focus your audience</a>.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * If you include this parameter, the value must be a JSON object. A JSON array is not supported.
+     * </p>
      * <p>
      * This field's value will be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -162,8 +159,8 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      *         audience segments. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Use
      *         segments to focus your audience</a>.</p>
-     * 
-     * <pre><code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
+     *         <p>
+     *         If you include this parameter, the value must be a JSON object. A JSON array is not supported.
      */
 
     public String getEvaluationContext() {
@@ -178,10 +175,9 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Use
      * segments to focus your audience</a>.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * If you include this parameter, the value must be a JSON object. A JSON array is not supported.
+     * </p>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -197,9 +193,8 @@ public class EvaluateFeatureRequest extends com.amazonaws.AmazonWebServiceReques
      *        segments. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html"
      *        >Use segments to focus your audience</a>.</p>
-     * 
-     *        <pre>
-     * <code> &lt;p&gt;If you include this parameter, the value must be a JSON object. A JSON array is not supported.&lt;/p&gt; </code>
+     *        <p>
+     *        If you include this parameter, the value must be a JSON object. A JSON array is not supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

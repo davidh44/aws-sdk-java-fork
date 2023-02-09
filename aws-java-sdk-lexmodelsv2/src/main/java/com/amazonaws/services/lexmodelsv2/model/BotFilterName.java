@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum BotFilterName {
 
-    BotName("BotName");
+    BotName("BotName"),
+    BotType("BotType");
 
     private String value;
 

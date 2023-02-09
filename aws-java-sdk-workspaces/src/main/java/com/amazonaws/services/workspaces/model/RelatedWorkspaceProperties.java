@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the related WorkSpace. The related WorkSpace could be a Standby WorkSpace or Primary WorkSpace related to
+ * Describes the related WorkSpace. The related WorkSpace could be a standby WorkSpace or primary WorkSpace related to
  * the specified WorkSpace.
  * </p>
  * 

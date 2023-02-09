@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum BotFilterOperator {
 
     CO("CO"),
-    EQ("EQ");
+    EQ("EQ"),
+    NE("NE");
 
     private String value;
 

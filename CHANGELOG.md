@@ -1,3 +1,40 @@
+# __1.12.404__ __2023-02-09__
+## __AWS Migration Hub Refactor Spaces__
+  - ### Features
+    - This release adds support for creating environments with a network fabric type of NONE
+
+## __Amazon Chime SDK Meetings__
+  - ### Features
+    - Documentation updates for Chime Meetings SDK
+
+## __Amazon CloudWatch Evidently__
+  - ### Features
+    - Updated entity overrides parameter to accept up to 2500 overrides or a total of 40KB.
+
+## __Amazon EMR Containers__
+  - ### Features
+    - EMR on EKS allows configuring retry policies for job runs through the StartJobRun API. Using retry policies, a job cause a driver pod to be restarted automatically if it fails or is deleted. The job's status can be seen in the DescribeJobRun and ListJobRun APIs and monitored using CloudWatch events.
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - AWS Lex now supports Network of Bots.
+
+## __Amazon Lex Runtime V2__
+  - ### Features
+    - AWS Lex now supports Network of Bots.
+
+## __Amazon Lightsail__
+  - ### Features
+    - Documentation updates for Lightsail
+
+## __Amazon WorkDocs__
+  - ### Features
+    - Doc only update for the WorkDocs APIs.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Removed Windows Server 2016 BYOL and made changes based on IAM campaign.
+
 # __1.12.403__ __2023-02-08__
 ## __AWS Backup__
   - ### Features

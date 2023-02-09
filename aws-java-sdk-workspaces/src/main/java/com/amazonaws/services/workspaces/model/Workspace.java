@@ -132,7 +132,7 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<ModificationState> modificationStates;
     /**
      * <p>
-     * The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     * The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RelatedWorkspaceProperties> relatedWorkspaces;
@@ -935,10 +935,10 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     * The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * </p>
      * 
-     * @return The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     * @return The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      */
 
     public java.util.List<RelatedWorkspaceProperties> getRelatedWorkspaces() {
@@ -950,11 +950,11 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     * The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * </p>
      * 
      * @param relatedWorkspaces
-     *        The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     *        The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      */
 
     public void setRelatedWorkspaces(java.util.Collection<RelatedWorkspaceProperties> relatedWorkspaces) {
@@ -968,7 +968,7 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     * The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -977,7 +977,7 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param relatedWorkspaces
-     *        The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     *        The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -993,11 +993,11 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     * The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * </p>
      * 
      * @param relatedWorkspaces
-     *        The Standby WorkSpace or Primary WorkSpace related to the specified WorkSpace.
+     *        The standby WorkSpace or primary WorkSpace related to the specified WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

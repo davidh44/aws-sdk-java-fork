@@ -113,6 +113,14 @@ public class JobRunJsonUnmarshaller implements Unmarshaller<JobRun, JsonUnmarsha
                     jobRun.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("retryPolicyConfiguration", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setRetryPolicyConfiguration(RetryPolicyConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("retryPolicyExecution", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setRetryPolicyExecution(RetryPolicyExecutionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

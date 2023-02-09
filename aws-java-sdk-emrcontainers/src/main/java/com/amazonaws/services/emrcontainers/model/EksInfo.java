@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The information about the EKS cluster.
+ * The information about the Amazon EKS cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/EksInfo" target="_top">AWS API
@@ -30,18 +30,18 @@ public class EksInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The namespaces of the EKS cluster.
+     * The namespaces of the Amazon EKS cluster.
      * </p>
      */
     private String namespace;
 
     /**
      * <p>
-     * The namespaces of the EKS cluster.
+     * The namespaces of the Amazon EKS cluster.
      * </p>
      * 
      * @param namespace
-     *        The namespaces of the EKS cluster.
+     *        The namespaces of the Amazon EKS cluster.
      */
 
     public void setNamespace(String namespace) {
@@ -50,10 +50,10 @@ public class EksInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The namespaces of the EKS cluster.
+     * The namespaces of the Amazon EKS cluster.
      * </p>
      * 
-     * @return The namespaces of the EKS cluster.
+     * @return The namespaces of the Amazon EKS cluster.
      */
 
     public String getNamespace() {
@@ -62,11 +62,11 @@ public class EksInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The namespaces of the EKS cluster.
+     * The namespaces of the Amazon EKS cluster.
      * </p>
      * 
      * @param namespace
-     *        The namespaces of the EKS cluster.
+     *        The namespaces of the Amazon EKS cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

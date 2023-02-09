@@ -25,23 +25,23 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<FailedCreateStandbyWorkspacesRequest> failedStandbyRequests;
     /**
      * <p>
-     * Information about the Standby WorkSpace that was created.
+     * Information about the standby WorkSpace that was created.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<PendingCreateStandbyWorkspacesRequest> pendingStandbyRequests;
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * 
-     * @return Information about the Standby WorkSpace that could not be created.
+     * @return Information about the standby WorkSpace that could not be created.
      */
 
     public java.util.List<FailedCreateStandbyWorkspacesRequest> getFailedStandbyRequests() {
@@ -53,11 +53,11 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * 
      * @param failedStandbyRequests
-     *        Information about the Standby WorkSpace that could not be created.
+     *        Information about the standby WorkSpace that could not be created.
      */
 
     public void setFailedStandbyRequests(java.util.Collection<FailedCreateStandbyWorkspacesRequest> failedStandbyRequests) {
@@ -71,7 +71,7 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +80,7 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param failedStandbyRequests
-     *        Information about the Standby WorkSpace that could not be created.
+     *        Information about the standby WorkSpace that could not be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +96,11 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that could not be created.
+     * Information about the standby WorkSpace that could not be created.
      * </p>
      * 
      * @param failedStandbyRequests
-     *        Information about the Standby WorkSpace that could not be created.
+     *        Information about the standby WorkSpace that could not be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,10 +111,10 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that was created.
+     * Information about the standby WorkSpace that was created.
      * </p>
      * 
-     * @return Information about the Standby WorkSpace that was created.
+     * @return Information about the standby WorkSpace that was created.
      */
 
     public java.util.List<PendingCreateStandbyWorkspacesRequest> getPendingStandbyRequests() {
@@ -126,11 +126,11 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that was created.
+     * Information about the standby WorkSpace that was created.
      * </p>
      * 
      * @param pendingStandbyRequests
-     *        Information about the Standby WorkSpace that was created.
+     *        Information about the standby WorkSpace that was created.
      */
 
     public void setPendingStandbyRequests(java.util.Collection<PendingCreateStandbyWorkspacesRequest> pendingStandbyRequests) {
@@ -144,7 +144,7 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that was created.
+     * Information about the standby WorkSpace that was created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -153,7 +153,7 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param pendingStandbyRequests
-     *        Information about the Standby WorkSpace that was created.
+     *        Information about the standby WorkSpace that was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,11 +169,11 @@ public class CreateStandbyWorkspacesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Information about the Standby WorkSpace that was created.
+     * Information about the standby WorkSpace that was created.
      * </p>
      * 
      * @param pendingStandbyRequests
-     *        Information about the Standby WorkSpace that was created.
+     *        Information about the standby WorkSpace that was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

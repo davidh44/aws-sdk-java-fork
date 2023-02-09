@@ -57,6 +57,13 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      */
     private String externalMeetingId;
     /**
@@ -277,9 +284,22 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      * 
      * @param externalMeetingId
-     *        The external meeting ID.
+     *        The external meeting ID.</p>
+     *        <p>
+     *        Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *        </p>
+     *        <p>
+     *        Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     *        Case insensitive.
      */
 
     public void setExternalMeetingId(String externalMeetingId) {
@@ -290,8 +310,21 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      * 
-     * @return The external meeting ID.
+     * @return The external meeting ID.</p>
+     *         <p>
+     *         Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *         </p>
+     *         <p>
+     *         Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     *         Case insensitive.
      */
 
     public String getExternalMeetingId() {
@@ -302,9 +335,22 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      * 
      * @param externalMeetingId
-     *        The external meeting ID.
+     *        The external meeting ID.</p>
+     *        <p>
+     *        Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *        </p>
+     *        <p>
+     *        Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     *        Case insensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

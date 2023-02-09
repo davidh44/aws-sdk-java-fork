@@ -26,42 +26,45 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botId;
     /**
      * <p>
-     * The bot version of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botVersion;
     /**
      * <p>
-     * The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      */
     private String localeId;
     /**
      * <p>
-     * The errors of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     * contained within each error object.
      * </p>
      */
     private java.util.List<FailedCustomVocabularyItem> errors;
     /**
      * <p>
-     * The resources of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that were successfully updated during the operation.
      * </p>
      */
     private java.util.List<CustomVocabularyItem> resources;
 
     /**
      * <p>
-     * The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     *        The identifier of the bot associated with this custom vocabulary.
      */
 
     public void setBotId(String botId) {
@@ -70,10 +73,10 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     * @return The identifier of the bot associated with this custom vocabulary.
      */
 
     public String getBotId() {
@@ -82,11 +85,11 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to the batch update response for the custom vocabulary item.
+     *        The identifier of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +100,11 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The bot version of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botVersion
-     *        The bot version of the bot to the batch update response for the custom vocabulary item.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public void setBotVersion(String botVersion) {
@@ -110,10 +113,10 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The bot version of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The bot version of the bot to the batch update response for the custom vocabulary item.
+     * @return The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public String getBotVersion() {
@@ -122,11 +125,11 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The bot version of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botVersion
-     *        The bot version of the bot to the batch update response for the custom vocabulary item.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,11 +140,15 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      */
 
     public void setLocaleId(String localeId) {
@@ -150,10 +157,14 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
-     * @return The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     * @return The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *         of the supported locales. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      */
 
     public String getLocaleId() {
@@ -162,11 +173,15 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to the batch update response for the custom vocabulary item.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,10 +192,12 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The errors of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     * contained within each error object.
      * </p>
      * 
-     * @return The errors of the action to batch update response for the custom vocabulary item.
+     * @return A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     *         contained within each error object.
      */
 
     public java.util.List<FailedCustomVocabularyItem> getErrors() {
@@ -189,11 +206,13 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The errors of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     * contained within each error object.
      * </p>
      * 
      * @param errors
-     *        The errors of the action to batch update response for the custom vocabulary item.
+     *        A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     *        contained within each error object.
      */
 
     public void setErrors(java.util.Collection<FailedCustomVocabularyItem> errors) {
@@ -207,7 +226,8 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The errors of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     * contained within each error object.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -216,7 +236,8 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param errors
-     *        The errors of the action to batch update response for the custom vocabulary item.
+     *        A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     *        contained within each error object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,11 +253,13 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The errors of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     * contained within each error object.
      * </p>
      * 
      * @param errors
-     *        The errors of the action to batch update response for the custom vocabulary item.
+     *        A list of custom vocabulary items that failed to update during the operation. The reason for the error is
+     *        contained within each error object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -247,10 +270,10 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The resources of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that were successfully updated during the operation.
      * </p>
      * 
-     * @return The resources of the action to batch update response for the custom vocabulary item.
+     * @return A list of custom vocabulary items that were successfully updated during the operation.
      */
 
     public java.util.List<CustomVocabularyItem> getResources() {
@@ -259,11 +282,11 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The resources of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that were successfully updated during the operation.
      * </p>
      * 
      * @param resources
-     *        The resources of the action to batch update response for the custom vocabulary item.
+     *        A list of custom vocabulary items that were successfully updated during the operation.
      */
 
     public void setResources(java.util.Collection<CustomVocabularyItem> resources) {
@@ -277,7 +300,7 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The resources of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that were successfully updated during the operation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -286,7 +309,7 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param resources
-     *        The resources of the action to batch update response for the custom vocabulary item.
+     *        A list of custom vocabulary items that were successfully updated during the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -302,11 +325,11 @@ public class BatchUpdateCustomVocabularyItemResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The resources of the action to batch update response for the custom vocabulary item.
+     * A list of custom vocabulary items that were successfully updated during the operation.
      * </p>
      * 
      * @param resources
-     *        The resources of the action to batch update response for the custom vocabulary item.
+     *        A list of custom vocabulary items that were successfully updated during the operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -13,7 +13,7 @@
 package com.amazonaws.services.lexmodelsv2.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +43,10 @@ public class CreateBotRequestMarshaller {
             .marshallLocationName("botTags").build();
     private static final MarshallingInfo<Map> TESTBOTALIASTAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("testBotAliasTags").build();
+    private static final MarshallingInfo<String> BOTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("botType").build();
+    private static final MarshallingInfo<List> BOTMEMBERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("botMembers").build();
 
     private static final CreateBotRequestMarshaller instance = new CreateBotRequestMarshaller();
 
@@ -67,6 +71,8 @@ public class CreateBotRequestMarshaller {
             protocolMarshaller.marshall(createBotRequest.getIdleSessionTTLInSeconds(), IDLESESSIONTTLINSECONDS_BINDING);
             protocolMarshaller.marshall(createBotRequest.getBotTags(), BOTTAGS_BINDING);
             protocolMarshaller.marshall(createBotRequest.getTestBotAliasTags(), TESTBOTALIASTAGS_BINDING);
+            protocolMarshaller.marshall(createBotRequest.getBotType(), BOTTYPE_BINDING);
+            protocolMarshaller.marshall(createBotRequest.getBotMembers(), BOTMEMBERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

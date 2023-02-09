@@ -52,6 +52,8 @@ public class StartJobRunRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobTemplateId").build();
     private static final MarshallingInfo<Map> JOBTEMPLATEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobTemplateParameters").build();
+    private static final MarshallingInfo<StructuredPojo> RETRYPOLICYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retryPolicyConfiguration").build();
 
     private static final StartJobRunRequestMarshaller instance = new StartJobRunRequestMarshaller();
 
@@ -79,6 +81,7 @@ public class StartJobRunRequestMarshaller {
             protocolMarshaller.marshall(startJobRunRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(startJobRunRequest.getJobTemplateId(), JOBTEMPLATEID_BINDING);
             protocolMarshaller.marshall(startJobRunRequest.getJobTemplateParameters(), JOBTEMPLATEPARAMETERS_BINDING);
+            protocolMarshaller.marshall(startJobRunRequest.getRetryPolicyConfiguration(), RETRYPOLICYCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -100,6 +100,12 @@ public class DescribeBotAliasResultJsonUnmarshaller implements Unmarshaller<Desc
                     context.nextToken();
                     describeBotAliasResult.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("parentBotNetworks", targetDepth)) {
+                    context.nextToken();
+                    describeBotAliasResult.setParentBotNetworks(new ListUnmarshaller<ParentBotNetwork>(ParentBotNetworkJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

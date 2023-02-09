@@ -25,19 +25,21 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary response.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botId;
     /**
      * <p>
-     * The bot version of the bot to the list custom vocabulary response.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botVersion;
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary response.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      */
     private String localeId;
@@ -56,11 +58,11 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary response.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to the list custom vocabulary response.
+     *        The identifier of the bot associated with this custom vocabulary.
      */
 
     public void setBotId(String botId) {
@@ -69,10 +71,10 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary response.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The unique identifier of the bot to the list custom vocabulary response.
+     * @return The identifier of the bot associated with this custom vocabulary.
      */
 
     public String getBotId() {
@@ -81,11 +83,11 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary response.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to the list custom vocabulary response.
+     *        The identifier of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +98,11 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The bot version of the bot to the list custom vocabulary response.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botVersion
-     *        The bot version of the bot to the list custom vocabulary response.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public void setBotVersion(String botVersion) {
@@ -109,10 +111,10 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The bot version of the bot to the list custom vocabulary response.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The bot version of the bot to the list custom vocabulary response.
+     * @return The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public String getBotVersion() {
@@ -121,11 +123,11 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The bot version of the bot to the list custom vocabulary response.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botVersion
-     *        The bot version of the bot to the list custom vocabulary response.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,11 +138,15 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary response.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to the list custom vocabulary response.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      */
 
     public void setLocaleId(String localeId) {
@@ -149,10 +155,14 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary response.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
-     * @return The locale identifier of the bot to the list custom vocabulary response.
+     * @return The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *         of the supported locales. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      */
 
     public String getLocaleId() {
@@ -161,11 +171,15 @@ public class ListCustomVocabularyItemsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary response.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to the list custom vocabulary response.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

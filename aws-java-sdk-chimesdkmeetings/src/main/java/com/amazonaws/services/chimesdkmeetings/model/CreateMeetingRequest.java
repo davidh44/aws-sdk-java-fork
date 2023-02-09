@@ -57,6 +57,13 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      */
     private String externalMeetingId;
     /**
@@ -127,7 +134,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <b>Minimum permissions</b>
      * </p>
      * <p>
-     * In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have the
+     * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the
      * tagging permission defined by the service that created the resource. For example, to tag a
      * <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both of the
      * following permissions:
@@ -329,9 +336,22 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      * 
      * @param externalMeetingId
-     *        The external meeting ID.
+     *        The external meeting ID.</p>
+     *        <p>
+     *        Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *        </p>
+     *        <p>
+     *        Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     *        Case insensitive.
      */
 
     public void setExternalMeetingId(String externalMeetingId) {
@@ -342,8 +362,21 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      * 
-     * @return The external meeting ID.
+     * @return The external meeting ID.</p>
+     *         <p>
+     *         Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *         </p>
+     *         <p>
+     *         Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     *         Case insensitive.
      */
 
     public String getExternalMeetingId() {
@@ -354,9 +387,22 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The external meeting ID.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix. Case
+     * insensitive.
+     * </p>
      * 
      * @param externalMeetingId
-     *        The external meeting ID.
+     *        The external meeting ID.</p>
+     *        <p>
+     *        Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *        </p>
+     *        <p>
+     *        Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     *        Case insensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -603,7 +649,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <b>Minimum permissions</b>
      * </p>
      * <p>
-     * In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have the
+     * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the
      * tagging permission defined by the service that created the resource. For example, to tag a
      * <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both of the
      * following permissions:
@@ -664,7 +710,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <b>Minimum permissions</b>
      *         </p>
      *         <p>
-     *         In addition to the <code>tag:TagResources </code>permission required by this operation, you must also
+     *         In addition to the <code>tag:TagResources</code> permission required by this operation, you must also
      *         have the tagging permission defined by the service that created the resource. For example, to tag a
      *         <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both
      *         of the following permissions:
@@ -731,7 +777,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <b>Minimum permissions</b>
      * </p>
      * <p>
-     * In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have the
+     * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the
      * tagging permission defined by the service that created the resource. For example, to tag a
      * <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both of the
      * following permissions:
@@ -793,7 +839,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <b>Minimum permissions</b>
      *        </p>
      *        <p>
-     *        In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have
+     *        In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have
      *        the tagging permission defined by the service that created the resource. For example, to tag a
      *        <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both
      *        of the following permissions:
@@ -865,7 +911,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <b>Minimum permissions</b>
      * </p>
      * <p>
-     * In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have the
+     * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the
      * tagging permission defined by the service that created the resource. For example, to tag a
      * <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both of the
      * following permissions:
@@ -932,7 +978,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <b>Minimum permissions</b>
      *        </p>
      *        <p>
-     *        In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have
+     *        In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have
      *        the tagging permission defined by the service that created the resource. For example, to tag a
      *        <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both
      *        of the following permissions:
@@ -1006,7 +1052,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <b>Minimum permissions</b>
      * </p>
      * <p>
-     * In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have the
+     * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the
      * tagging permission defined by the service that created the resource. For example, to tag a
      * <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both of the
      * following permissions:
@@ -1068,7 +1114,7 @@ public class CreateMeetingRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <b>Minimum permissions</b>
      *        </p>
      *        <p>
-     *        In addition to the <code>tag:TagResources </code>permission required by this operation, you must also have
+     *        In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have
      *        the tagging permission defined by the service that created the resource. For example, to tag a
      *        <code>ChimeSDKMeetings</code> instance using the <code>TagResources</code> operation, you must have both
      *        of the following permissions:

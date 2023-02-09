@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum NetworkFabricType {
 
-    TRANSIT_GATEWAY("TRANSIT_GATEWAY");
+    TRANSIT_GATEWAY("TRANSIT_GATEWAY"),
+    NONE("NONE");
 
     private String value;
 

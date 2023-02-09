@@ -27,36 +27,39 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botId;
     /**
      * <p>
-     * The version of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botVersion;
     /**
      * <p>
-     * The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      */
     private String localeId;
     /**
      * <p>
-     * The custom vocabulary list to batch delete request for the custom vocabulary item.
+     * A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom vocabulary
+     * entry identifier.
      * </p>
      */
     private java.util.List<CustomVocabularyEntryId> customVocabularyItemList;
 
     /**
      * <p>
-     * The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     *        The identifier of the bot associated with this custom vocabulary.
      */
 
     public void setBotId(String botId) {
@@ -65,10 +68,10 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     * @return The identifier of the bot associated with this custom vocabulary.
      */
 
     public String getBotId() {
@@ -77,11 +80,11 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to batch delete request for the custom vocabulary item.
+     *        The identifier of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +95,11 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The version of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botVersion
-     *        The version of the bot to batch delete request for the custom vocabulary item.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public void setBotVersion(String botVersion) {
@@ -105,10 +108,10 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The version of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The version of the bot to batch delete request for the custom vocabulary item.
+     * @return The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public String getBotVersion() {
@@ -117,11 +120,11 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The version of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botVersion
-     *        The version of the bot to batch delete request for the custom vocabulary item.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,11 +135,15 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      */
 
     public void setLocaleId(String localeId) {
@@ -145,10 +152,14 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
-     * @return The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     * @return The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *         of the supported locales. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      */
 
     public String getLocaleId() {
@@ -157,11 +168,15 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to batch delete request for the custom vocabulary item.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"> Supported Languages </a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,10 +187,12 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The custom vocabulary list to batch delete request for the custom vocabulary item.
+     * A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom vocabulary
+     * entry identifier.
      * </p>
      * 
-     * @return The custom vocabulary list to batch delete request for the custom vocabulary item.
+     * @return A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom
+     *         vocabulary entry identifier.
      */
 
     public java.util.List<CustomVocabularyEntryId> getCustomVocabularyItemList() {
@@ -184,11 +201,13 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The custom vocabulary list to batch delete request for the custom vocabulary item.
+     * A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom vocabulary
+     * entry identifier.
      * </p>
      * 
      * @param customVocabularyItemList
-     *        The custom vocabulary list to batch delete request for the custom vocabulary item.
+     *        A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom
+     *        vocabulary entry identifier.
      */
 
     public void setCustomVocabularyItemList(java.util.Collection<CustomVocabularyEntryId> customVocabularyItemList) {
@@ -202,7 +221,8 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The custom vocabulary list to batch delete request for the custom vocabulary item.
+     * A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom vocabulary
+     * entry identifier.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -211,7 +231,8 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param customVocabularyItemList
-     *        The custom vocabulary list to batch delete request for the custom vocabulary item.
+     *        A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom
+     *        vocabulary entry identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +248,13 @@ public class BatchDeleteCustomVocabularyItemRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The custom vocabulary list to batch delete request for the custom vocabulary item.
+     * A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom vocabulary
+     * entry identifier.
      * </p>
      * 
      * @param customVocabularyItemList
-     *        The custom vocabulary list to batch delete request for the custom vocabulary item.
+     *        A list of custom vocabulary items requested to be deleted. Each entry must contain the unique custom
+     *        vocabulary entry identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

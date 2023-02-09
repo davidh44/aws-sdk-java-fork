@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the Standby WorkSpace.
+ * Information about the standby WorkSpace.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/PendingCreateStandbyWorkspacesRequest"
@@ -30,7 +30,7 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * Describes the Standby WorkSpace that was created.
+     * Describes the standby WorkSpace that was created.
      * </p>
      * <p>
      * Because this operation is asynchronous, the identifier returned is not immediately available for use with other
@@ -42,26 +42,26 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
     private String userName;
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      */
     private String directoryId;
     /**
      * <p>
-     * The operational state of the Standby WorkSpace.
+     * The operational state of the standby WorkSpace.
      * </p>
      */
     private String state;
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      */
     private String workspaceId;
 
     /**
      * <p>
-     * Describes the Standby WorkSpace that was created.
+     * Describes the standby WorkSpace that was created.
      * </p>
      * <p>
      * Because this operation is asynchronous, the identifier returned is not immediately available for use with other
@@ -71,7 +71,7 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
      * </p>
      * 
      * @param userName
-     *        Describes the Standby WorkSpace that was created.</p>
+     *        Describes the standby WorkSpace that was created.</p>
      *        <p>
      *        Because this operation is asynchronous, the identifier returned is not immediately available for use with
      *        other operations. For example, if you call <a
@@ -85,7 +85,7 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * Describes the Standby WorkSpace that was created.
+     * Describes the standby WorkSpace that was created.
      * </p>
      * <p>
      * Because this operation is asynchronous, the identifier returned is not immediately available for use with other
@@ -94,7 +94,7 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
      * before the WorkSpace is created, the information returned can be incomplete.
      * </p>
      * 
-     * @return Describes the Standby WorkSpace that was created.</p>
+     * @return Describes the standby WorkSpace that was created.</p>
      *         <p>
      *         Because this operation is asynchronous, the identifier returned is not immediately available for use with
      *         other operations. For example, if you call <a
@@ -108,7 +108,7 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * Describes the Standby WorkSpace that was created.
+     * Describes the standby WorkSpace that was created.
      * </p>
      * <p>
      * Because this operation is asynchronous, the identifier returned is not immediately available for use with other
@@ -118,7 +118,7 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
      * </p>
      * 
      * @param userName
-     *        Describes the Standby WorkSpace that was created.</p>
+     *        Describes the standby WorkSpace that was created.</p>
      *        <p>
      *        Because this operation is asynchronous, the identifier returned is not immediately available for use with
      *        other operations. For example, if you call <a
@@ -134,11 +134,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the directory for the Standby WorkSpace.
+     *        The identifier of the directory for the standby WorkSpace.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -147,10 +147,10 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      * 
-     * @return The identifier of the directory for the Standby WorkSpace.
+     * @return The identifier of the directory for the standby WorkSpace.
      */
 
     public String getDirectoryId() {
@@ -159,11 +159,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The identifier of the directory for the Standby WorkSpace.
+     * The identifier of the directory for the standby WorkSpace.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the directory for the Standby WorkSpace.
+     *        The identifier of the directory for the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,11 +174,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The operational state of the Standby WorkSpace.
+     * The operational state of the standby WorkSpace.
      * </p>
      * 
      * @param state
-     *        The operational state of the Standby WorkSpace.
+     *        The operational state of the standby WorkSpace.
      * @see WorkspaceState
      */
 
@@ -188,10 +188,10 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The operational state of the Standby WorkSpace.
+     * The operational state of the standby WorkSpace.
      * </p>
      * 
-     * @return The operational state of the Standby WorkSpace.
+     * @return The operational state of the standby WorkSpace.
      * @see WorkspaceState
      */
 
@@ -201,11 +201,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The operational state of the Standby WorkSpace.
+     * The operational state of the standby WorkSpace.
      * </p>
      * 
      * @param state
-     *        The operational state of the Standby WorkSpace.
+     *        The operational state of the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WorkspaceState
      */
@@ -217,11 +217,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The operational state of the Standby WorkSpace.
+     * The operational state of the standby WorkSpace.
      * </p>
      * 
      * @param state
-     *        The operational state of the Standby WorkSpace.
+     *        The operational state of the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WorkspaceState
      */
@@ -233,11 +233,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      * 
      * @param workspaceId
-     *        The identifier of the Standby WorkSpace.
+     *        The identifier of the standby WorkSpace.
      */
 
     public void setWorkspaceId(String workspaceId) {
@@ -246,10 +246,10 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      * 
-     * @return The identifier of the Standby WorkSpace.
+     * @return The identifier of the standby WorkSpace.
      */
 
     public String getWorkspaceId() {
@@ -258,11 +258,11 @@ public class PendingCreateStandbyWorkspacesRequest implements Serializable, Clon
 
     /**
      * <p>
-     * The identifier of the Standby WorkSpace.
+     * The identifier of the standby WorkSpace.
      * </p>
      * 
      * @param workspaceId
-     *        The identifier of the Standby WorkSpace.
+     *        The identifier of the standby WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

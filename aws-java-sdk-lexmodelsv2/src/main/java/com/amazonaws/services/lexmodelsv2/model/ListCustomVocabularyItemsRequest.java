@@ -27,7 +27,7 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary request.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      */
     private String botId;
@@ -39,13 +39,15 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
     private String botVersion;
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary request.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see Supported languages
+     * (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      * </p>
      */
     private String localeId;
     /**
      * <p>
-     * The maximum results to the list custom vocabulary request.
+     * The maximum number of items returned by the list operation.
      * </p>
      */
     private Integer maxResults;
@@ -58,11 +60,11 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary request.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to the list custom vocabulary request.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public void setBotId(String botId) {
@@ -71,10 +73,10 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary request.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
-     * @return The unique identifier of the bot to the list custom vocabulary request.
+     * @return The identifier of the version of the bot associated with this custom vocabulary.
      */
 
     public String getBotId() {
@@ -83,11 +85,11 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique identifier of the bot to the list custom vocabulary request.
+     * The identifier of the version of the bot associated with this custom vocabulary.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to the list custom vocabulary request.
+     *        The identifier of the version of the bot associated with this custom vocabulary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +140,15 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary request.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see Supported languages
+     * (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to the list custom vocabulary request.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see Supported languages
+     *        (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      */
 
     public void setLocaleId(String localeId) {
@@ -151,10 +157,14 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary request.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see Supported languages
+     * (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      * </p>
      * 
-     * @return The locale identifier of the bot to the list custom vocabulary request.
+     * @return The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *         of the supported locales. For more information, see Supported languages
+     *         (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      */
 
     public String getLocaleId() {
@@ -163,11 +173,15 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The locale identifier of the bot to the list custom vocabulary request.
+     * The identifier of the language and locale where this custom vocabulary is used. The string must match one of the
+     * supported locales. For more information, see Supported languages
+     * (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      * </p>
      * 
      * @param localeId
-     *        The locale identifier of the bot to the list custom vocabulary request.
+     *        The identifier of the language and locale where this custom vocabulary is used. The string must match one
+     *        of the supported locales. For more information, see Supported languages
+     *        (https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,11 +192,11 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The maximum results to the list custom vocabulary request.
+     * The maximum number of items returned by the list operation.
      * </p>
      * 
      * @param maxResults
-     *        The maximum results to the list custom vocabulary request.
+     *        The maximum number of items returned by the list operation.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -191,10 +205,10 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The maximum results to the list custom vocabulary request.
+     * The maximum number of items returned by the list operation.
      * </p>
      * 
-     * @return The maximum results to the list custom vocabulary request.
+     * @return The maximum number of items returned by the list operation.
      */
 
     public Integer getMaxResults() {
@@ -203,11 +217,11 @@ public class ListCustomVocabularyItemsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The maximum results to the list custom vocabulary request.
+     * The maximum number of items returned by the list operation.
      * </p>
      * 
      * @param maxResults
-     *        The maximum results to the list custom vocabulary request.
+     *        The maximum number of items returned by the list operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

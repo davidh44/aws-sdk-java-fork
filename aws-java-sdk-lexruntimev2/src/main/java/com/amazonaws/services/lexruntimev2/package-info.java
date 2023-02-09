@@ -12,7 +12,9 @@
  */
 
 /**
- * <p/>
+ * <p>
+ * This section contains documentation for the Amazon Lex V2 Runtime V2 API operations.
+ * </p>
  */
 package com.amazonaws.services.lexruntimev2;
 

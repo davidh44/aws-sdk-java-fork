@@ -33,7 +33,7 @@ public class ListVirtualClustersRequest extends com.amazonaws.AmazonWebServiceRe
     private String containerProviderId;
     /**
      * <p>
-     * The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * </p>
      */
     private String containerProviderType;
@@ -110,11 +110,11 @@ public class ListVirtualClustersRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * </p>
      * 
      * @param containerProviderType
-     *        The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     *        The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * @see ContainerProviderType
      */
 
@@ -124,10 +124,10 @@ public class ListVirtualClustersRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * </p>
      * 
-     * @return The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * @return The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * @see ContainerProviderType
      */
 
@@ -137,11 +137,11 @@ public class ListVirtualClustersRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * </p>
      * 
      * @param containerProviderType
-     *        The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     *        The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContainerProviderType
      */
@@ -153,11 +153,11 @@ public class ListVirtualClustersRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * </p>
      * 
      * @param containerProviderType
-     *        The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     *        The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContainerProviderType
      */

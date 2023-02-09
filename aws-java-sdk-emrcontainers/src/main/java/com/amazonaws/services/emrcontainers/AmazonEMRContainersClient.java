@@ -55,7 +55,8 @@ import com.amazonaws.services.emrcontainers.model.transform.*;
  * on Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
  * workloads while Amazon EMR on EKS builds, configures, and manages containers for open-source applications. For more
  * information about Amazon EMR on EKS concepts and tasks, see <a
- * href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/emr-eks.html">What is Amazon EMR on EKS</a>.
+ * href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/emr-eks.html">What is shared
+ * id="EMR-EKS"/&gt;</a>.
  * </p>
  * <p>
  * <i>Amazon EMR containers</i> is the API name for Amazon EMR on EKS. The <code>emr-containers</code> prefix is used in
@@ -81,7 +82,7 @@ import com.amazonaws.services.emrcontainers.model.transform.*;
  * It is the prefix used in Amazon EMR on EKS service endpoints. For example,
  * <code>emr-containers.us-east-2.amazonaws.com</code>. For more information, see <a
  * href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints"
- * >Amazon EMR on EKS Service Endpoints</a>.
+ * >Amazon EMR on EKSService Endpoints</a>.
  * </p>
  * </li>
  * </ul>
@@ -291,8 +292,8 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Creates a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that
-     * EMR Studio can communicate with your virtual cluster.
+     * Creates a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS
+     * so that Amazon EMR Studio can communicate with your virtual cluster.
      * </p>
      * 
      * @param createManagedEndpointRequest
@@ -479,8 +480,8 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Deletes a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that
-     * EMR Studio can communicate with your virtual cluster.
+     * Deletes a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS
+     * so that Amazon EMR Studio can communicate with your virtual cluster.
      * </p>
      * 
      * @param deleteManagedEndpointRequest
@@ -727,8 +728,8 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects EMR Studio
-     * to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+     * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR
+     * Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
      * </p>
      * 
      * @param describeManagedEndpointRequest
@@ -977,8 +978,8 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects EMR Studio to
-     * Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+     * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects Amazon EMR
+     * Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
      * </p>
      * 
      * @param listManagedEndpointsRequest
@@ -1222,13 +1223,13 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an
-     * optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as
-     * purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a
-     * specific resource based on the tags you've assigned to it. For example, you can define a set of tags for your
-     * Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We recommend that you devise a
-     * consistent set of tag keys for each resource type. You can then search and filter the resources based on the tags
-     * that you add.
+     * Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists
+     * of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services
+     * resources by attributes such as purpose, owner, or environment. When you have many resources of the same type,
+     * you can quickly identify a specific resource based on the tags you've assigned to it. For example, you can define
+     * a set of tags for your Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We
+     * recommend that you devise a consistent set of tag keys for each resource type. You can then search and filter the
+     * resources based on the tags that you add.
      * </p>
      * 
      * @param tagResourceRequest

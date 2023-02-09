@@ -48,7 +48,7 @@ public class CustomVocabularyItem implements Serializable, Cloneable, Structured
     private Integer weight;
     /**
      * <p>
-     * The display as value for the custom vocabulary item from the custom vocabulary list.
+     * The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      * </p>
      */
     private String displayAs;
@@ -175,11 +175,11 @@ public class CustomVocabularyItem implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The display as value for the custom vocabulary item from the custom vocabulary list.
+     * The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      * </p>
      * 
      * @param displayAs
-     *        The display as value for the custom vocabulary item from the custom vocabulary list.
+     *        The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      */
 
     public void setDisplayAs(String displayAs) {
@@ -188,10 +188,10 @@ public class CustomVocabularyItem implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The display as value for the custom vocabulary item from the custom vocabulary list.
+     * The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      * </p>
      * 
-     * @return The display as value for the custom vocabulary item from the custom vocabulary list.
+     * @return The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      */
 
     public String getDisplayAs() {
@@ -200,11 +200,11 @@ public class CustomVocabularyItem implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The display as value for the custom vocabulary item from the custom vocabulary list.
+     * The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      * </p>
      * 
      * @param displayAs
-     *        The display as value for the custom vocabulary item from the custom vocabulary list.
+     *        The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

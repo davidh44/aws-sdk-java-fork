@@ -27,7 +27,8 @@ public class GetDocumentVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      */
     private String authenticationToken;
@@ -58,12 +59,13 @@ public class GetDocumentVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      * 
      * @param authenticationToken
-     *        Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the
-     *        API.
+     *        Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator
+     *        credentials to access the API.
      */
 
     public void setAuthenticationToken(String authenticationToken) {
@@ -72,11 +74,12 @@ public class GetDocumentVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      * 
-     * @return Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the
-     *         API.
+     * @return Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator
+     *         credentials to access the API.
      */
 
     public String getAuthenticationToken() {
@@ -85,12 +88,13 @@ public class GetDocumentVersionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
+     * Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator credentials to
+     * access the API.
      * </p>
      * 
      * @param authenticationToken
-     *        Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the
-     *        API.
+     *        Amazon WorkDocs authentication token. Not required when using Amazon Web Services administrator
+     *        credentials to access the API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

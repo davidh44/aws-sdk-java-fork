@@ -85,6 +85,12 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.Map<String, String> jobTemplateParameters;
+    /**
+     * <p>
+     * The retry policy configuration for the job run.
+     * </p>
+     */
+    private RetryPolicyConfiguration retryPolicyConfiguration;
 
     /**
      * <p>
@@ -543,6 +549,46 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The retry policy configuration for the job run.
+     * </p>
+     * 
+     * @param retryPolicyConfiguration
+     *        The retry policy configuration for the job run.
+     */
+
+    public void setRetryPolicyConfiguration(RetryPolicyConfiguration retryPolicyConfiguration) {
+        this.retryPolicyConfiguration = retryPolicyConfiguration;
+    }
+
+    /**
+     * <p>
+     * The retry policy configuration for the job run.
+     * </p>
+     * 
+     * @return The retry policy configuration for the job run.
+     */
+
+    public RetryPolicyConfiguration getRetryPolicyConfiguration() {
+        return this.retryPolicyConfiguration;
+    }
+
+    /**
+     * <p>
+     * The retry policy configuration for the job run.
+     * </p>
+     * 
+     * @param retryPolicyConfiguration
+     *        The retry policy configuration for the job run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartJobRunRequest withRetryPolicyConfiguration(RetryPolicyConfiguration retryPolicyConfiguration) {
+        setRetryPolicyConfiguration(retryPolicyConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -573,7 +619,9 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getJobTemplateId() != null)
             sb.append("JobTemplateId: ").append(getJobTemplateId()).append(",");
         if (getJobTemplateParameters() != null)
-            sb.append("JobTemplateParameters: ").append(getJobTemplateParameters());
+            sb.append("JobTemplateParameters: ").append(getJobTemplateParameters()).append(",");
+        if (getRetryPolicyConfiguration() != null)
+            sb.append("RetryPolicyConfiguration: ").append(getRetryPolicyConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -628,6 +676,10 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getJobTemplateParameters() != null && other.getJobTemplateParameters().equals(this.getJobTemplateParameters()) == false)
             return false;
+        if (other.getRetryPolicyConfiguration() == null ^ this.getRetryPolicyConfiguration() == null)
+            return false;
+        if (other.getRetryPolicyConfiguration() != null && other.getRetryPolicyConfiguration().equals(this.getRetryPolicyConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -646,6 +698,7 @@ public class StartJobRunRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getJobTemplateId() == null) ? 0 : getJobTemplateId().hashCode());
         hashCode = prime * hashCode + ((getJobTemplateParameters() == null) ? 0 : getJobTemplateParameters().hashCode());
+        hashCode = prime * hashCode + ((getRetryPolicyConfiguration() == null) ? 0 : getRetryPolicyConfiguration().hashCode());
         return hashCode;
     }
 

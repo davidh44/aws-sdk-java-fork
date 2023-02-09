@@ -25,7 +25,9 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <p/>
+ * <p>
+ * This section contains documentation for the Amazon Lex V2 Runtime V2 API operations.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

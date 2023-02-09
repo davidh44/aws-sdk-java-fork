@@ -50,7 +50,9 @@ import com.amazonaws.services.lexruntimev2.model.transform.*;
  * Client for accessing Lex Runtime V2. All service calls made using this client are blocking, and will not return until
  * the service call completes.
  * <p>
- * <p/>
+ * <p>
+ * This section contains documentation for the Amazon Lex V2 Runtime V2 API operations.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

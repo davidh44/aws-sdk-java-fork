@@ -339,7 +339,7 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
-     * Creates a Standby WorkSpace in a secondary region.
+     * Creates a standby WorkSpace in a secondary Region.
      * </p>
      * 
      * @param createStandbyWorkspacesRequest
@@ -393,7 +393,7 @@ public interface AmazonWorkspaces {
      * <ul>
      * <li>
      * <p>
-     * Only Windows 10, Windows Sever 2016, and Windows Server 2019 WorkSpace images can be programmatically updated at
+     * Only Windows 10, Windows Server 2016, and Windows Server 2019 WorkSpace images can be programmatically updated at
      * this time.
      * </p>
      * </li>
@@ -1152,9 +1152,9 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
-     * Imports the specified Windows 10 Bring Your Own License (BYOL) or Windows Server 2016 BYOL image into Amazon
-     * WorkSpaces. The image must be an already licensed Amazon EC2 image that is in your Amazon Web Services account,
-     * and you must own the image. For more information about creating BYOL images, see <a
+     * Imports the specified Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an
+     * already licensed Amazon EC2 image that is in your Amazon Web Services account, and you must own the image. For
+     * more information about creating BYOL images, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html"> Bring Your Own Windows
      * Desktop Licenses</a>.
      * </p>

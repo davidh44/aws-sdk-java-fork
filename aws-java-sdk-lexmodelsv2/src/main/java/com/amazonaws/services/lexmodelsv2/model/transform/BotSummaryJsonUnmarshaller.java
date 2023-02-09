@@ -72,6 +72,10 @@ public class BotSummaryJsonUnmarshaller implements Unmarshaller<BotSummary, Json
                     context.nextToken();
                     botSummary.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("botType", targetDepth)) {
+                    context.nextToken();
+                    botSummary.setBotType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

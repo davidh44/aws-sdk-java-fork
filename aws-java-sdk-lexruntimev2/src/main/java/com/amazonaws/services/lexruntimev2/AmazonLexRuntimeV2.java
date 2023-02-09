@@ -26,7 +26,9 @@ import com.amazonaws.services.lexruntimev2.model.*;
  * {@link com.amazonaws.services.lexruntimev2.AbstractAmazonLexRuntimeV2} instead.
  * </p>
  * <p>
- * <p/>
+ * <p>
+ * This section contains documentation for the Amazon Lex V2 Runtime V2 API operations.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonLexRuntimeV2 {

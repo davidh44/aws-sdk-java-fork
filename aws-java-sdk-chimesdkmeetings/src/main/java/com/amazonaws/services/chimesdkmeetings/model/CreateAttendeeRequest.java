@@ -36,6 +36,12 @@ public class CreateAttendeeRequest extends com.amazonaws.AmazonWebServiceRequest
      * The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a
      * builder application.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     * </p>
      */
     private String externalUserId;
     /**
@@ -127,10 +133,21 @@ public class CreateAttendeeRequest extends com.amazonaws.AmazonWebServiceRequest
      * The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a
      * builder application.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     * </p>
      * 
      * @param externalUserId
      *        The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by
-     *        a builder application.
+     *        a builder application.</p>
+     *        <p>
+     *        Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *        </p>
+     *        <p>
+     *        Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
      */
 
     public void setExternalUserId(String externalUserId) {
@@ -142,9 +159,20 @@ public class CreateAttendeeRequest extends com.amazonaws.AmazonWebServiceRequest
      * The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a
      * builder application.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     * </p>
      * 
      * @return The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by
-     *         a builder application.
+     *         a builder application.</p>
+     *         <p>
+     *         Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *         </p>
+     *         <p>
+     *         Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
      */
 
     public String getExternalUserId() {
@@ -156,10 +184,21 @@ public class CreateAttendeeRequest extends com.amazonaws.AmazonWebServiceRequest
      * The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by a
      * builder application.
      * </p>
+     * <p>
+     * Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     * </p>
+     * <p>
+     * Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
+     * </p>
      * 
      * @param externalUserId
      *        The Amazon Chime SDK external user ID. An idempotency token. Links the attendee to an identity managed by
-     *        a builder application.
+     *        a builder application.</p>
+     *        <p>
+     *        Pattern: <code>[-_&amp;@+=,(){}\[\]\/«».:|'"#a-zA-Z0-9À-ÿ\s]*</code>
+     *        </p>
+     *        <p>
+     *        Values that begin with <code>aws:</code> are reserved. You can't configure a value that uses this prefix.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

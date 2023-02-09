@@ -73,6 +73,10 @@ public class RecognizeTextResultJsonUnmarshaller implements Unmarshaller<Recogni
                     context.nextToken();
                     recognizeTextResult.setSessionId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("recognizedBotMember", targetDepth)) {
+                    context.nextToken();
+                    recognizeTextResult.setRecognizedBotMember(RecognizedBotMemberJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

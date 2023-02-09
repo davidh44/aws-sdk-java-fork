@@ -119,6 +119,12 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private java.io.InputStream audioStream;
+    /**
+     * <p>
+     * The bot member that recognized the utterance.
+     * </p>
+     */
+    private String recognizedBotMember;
 
     /**
      * <p>
@@ -722,6 +728,46 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The bot member that recognized the utterance.
+     * </p>
+     * 
+     * @param recognizedBotMember
+     *        The bot member that recognized the utterance.
+     */
+
+    public void setRecognizedBotMember(String recognizedBotMember) {
+        this.recognizedBotMember = recognizedBotMember;
+    }
+
+    /**
+     * <p>
+     * The bot member that recognized the utterance.
+     * </p>
+     * 
+     * @return The bot member that recognized the utterance.
+     */
+
+    public String getRecognizedBotMember() {
+        return this.recognizedBotMember;
+    }
+
+    /**
+     * <p>
+     * The bot member that recognized the utterance.
+     * </p>
+     * 
+     * @param recognizedBotMember
+     *        The bot member that recognized the utterance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecognizeUtteranceResult withRecognizedBotMember(String recognizedBotMember) {
+        setRecognizedBotMember(recognizedBotMember);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -750,7 +796,9 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
         if (getInputTranscript() != null)
             sb.append("InputTranscript: ").append(getInputTranscript()).append(",");
         if (getAudioStream() != null)
-            sb.append("AudioStream: ").append(getAudioStream());
+            sb.append("AudioStream: ").append(getAudioStream()).append(",");
+        if (getRecognizedBotMember() != null)
+            sb.append("RecognizedBotMember: ").append(getRecognizedBotMember());
         sb.append("}");
         return sb.toString();
     }
@@ -801,6 +849,10 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getAudioStream() != null && other.getAudioStream().equals(this.getAudioStream()) == false)
             return false;
+        if (other.getRecognizedBotMember() == null ^ this.getRecognizedBotMember() == null)
+            return false;
+        if (other.getRecognizedBotMember() != null && other.getRecognizedBotMember().equals(this.getRecognizedBotMember()) == false)
+            return false;
         return true;
     }
 
@@ -818,6 +870,7 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
         hashCode = prime * hashCode + ((getInputTranscript() == null) ? 0 : getInputTranscript().hashCode());
         hashCode = prime * hashCode + ((getAudioStream() == null) ? 0 : getAudioStream().hashCode());
+        hashCode = prime * hashCode + ((getRecognizedBotMember() == null) ? 0 : getRecognizedBotMember().hashCode());
         return hashCode;
     }
 

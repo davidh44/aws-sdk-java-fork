@@ -33,7 +33,7 @@ public class CreateStandbyWorkspacesRequest extends com.amazonaws.AmazonWebServi
     private String primaryRegion;
     /**
      * <p>
-     * Information about the Standby WorkSpace to be created.
+     * Information about the standby WorkSpace to be created.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<StandbyWorkspace> standbyWorkspaces;
@@ -80,10 +80,10 @@ public class CreateStandbyWorkspacesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the Standby WorkSpace to be created.
+     * Information about the standby WorkSpace to be created.
      * </p>
      * 
-     * @return Information about the Standby WorkSpace to be created.
+     * @return Information about the standby WorkSpace to be created.
      */
 
     public java.util.List<StandbyWorkspace> getStandbyWorkspaces() {
@@ -95,11 +95,11 @@ public class CreateStandbyWorkspacesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the Standby WorkSpace to be created.
+     * Information about the standby WorkSpace to be created.
      * </p>
      * 
      * @param standbyWorkspaces
-     *        Information about the Standby WorkSpace to be created.
+     *        Information about the standby WorkSpace to be created.
      */
 
     public void setStandbyWorkspaces(java.util.Collection<StandbyWorkspace> standbyWorkspaces) {
@@ -113,7 +113,7 @@ public class CreateStandbyWorkspacesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the Standby WorkSpace to be created.
+     * Information about the standby WorkSpace to be created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class CreateStandbyWorkspacesRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param standbyWorkspaces
-     *        Information about the Standby WorkSpace to be created.
+     *        Information about the standby WorkSpace to be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class CreateStandbyWorkspacesRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the Standby WorkSpace to be created.
+     * Information about the standby WorkSpace to be created.
      * </p>
      * 
      * @param standbyWorkspaces
-     *        Information about the Standby WorkSpace to be created.
+     *        Information about the standby WorkSpace to be created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

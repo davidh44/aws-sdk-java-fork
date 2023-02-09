@@ -30,7 +30,7 @@ public class ContainerProvider implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the container provider. EKS is the only supported type as of now.
+     * The type of the container provider. Amazon EKS is the only supported type as of now.
      * </p>
      */
     private String type;
@@ -49,11 +49,11 @@ public class ContainerProvider implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the container provider. EKS is the only supported type as of now.
+     * The type of the container provider. Amazon EKS is the only supported type as of now.
      * </p>
      * 
      * @param type
-     *        The type of the container provider. EKS is the only supported type as of now.
+     *        The type of the container provider. Amazon EKS is the only supported type as of now.
      * @see ContainerProviderType
      */
 
@@ -63,10 +63,10 @@ public class ContainerProvider implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the container provider. EKS is the only supported type as of now.
+     * The type of the container provider. Amazon EKS is the only supported type as of now.
      * </p>
      * 
-     * @return The type of the container provider. EKS is the only supported type as of now.
+     * @return The type of the container provider. Amazon EKS is the only supported type as of now.
      * @see ContainerProviderType
      */
 
@@ -76,11 +76,11 @@ public class ContainerProvider implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the container provider. EKS is the only supported type as of now.
+     * The type of the container provider. Amazon EKS is the only supported type as of now.
      * </p>
      * 
      * @param type
-     *        The type of the container provider. EKS is the only supported type as of now.
+     *        The type of the container provider. Amazon EKS is the only supported type as of now.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContainerProviderType
      */
@@ -92,11 +92,11 @@ public class ContainerProvider implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of the container provider. EKS is the only supported type as of now.
+     * The type of the container provider. Amazon EKS is the only supported type as of now.
      * </p>
      * 
      * @param type
-     *        The type of the container provider. EKS is the only supported type as of now.
+     *        The type of the container provider. Amazon EKS is the only supported type as of now.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContainerProviderType
      */
