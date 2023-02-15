@@ -34,7 +34,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A string value that you want WAF to search for. WAF searches only in the part of web requests that you designate
-     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.
+     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.
      * </p>
      * <p>
      * Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
@@ -60,7 +60,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <b>If you're using the WAF API</b>
      * </p>
      * <p>
-     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 50
+     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 200
      * bytes.
      * </p>
      * <p>
@@ -152,7 +152,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A string value that you want WAF to search for. WAF searches only in the part of web requests that you designate
-     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.
+     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.
      * </p>
      * <p>
      * Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
@@ -178,7 +178,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <b>If you're using the WAF API</b>
      * </p>
      * <p>
-     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 50
+     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 200
      * bytes.
      * </p>
      * <p>
@@ -206,7 +206,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * 
      * @param searchString
      *        A string value that you want WAF to search for. WAF searches only in the part of web requests that you
-     *        designate for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.</p>
+     *        designate for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.</p>
      *        <p>
      *        Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
      *        </p>
@@ -233,7 +233,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it
-     *        is 50 bytes.
+     *        is 200 bytes.
      *        </p>
      *        <p>
      *        For example, suppose the value of <code>Type</code> is <code>HEADER</code> and the value of
@@ -255,7 +255,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A string value that you want WAF to search for. WAF searches only in the part of web requests that you designate
-     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.
+     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.
      * </p>
      * <p>
      * Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
@@ -281,7 +281,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <b>If you're using the WAF API</b>
      * </p>
      * <p>
-     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 50
+     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 200
      * bytes.
      * </p>
      * <p>
@@ -305,7 +305,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @return A string value that you want WAF to search for. WAF searches only in the part of web requests that you
-     *         designate for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.</p>
+     *         designate for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.</p>
      *         <p>
      *         Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
      *         </p>
@@ -332,7 +332,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode
-     *         it is 50 bytes.
+     *         it is 200 bytes.
      *         </p>
      *         <p>
      *         For example, suppose the value of <code>Type</code> is <code>HEADER</code> and the value of
@@ -354,7 +354,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A string value that you want WAF to search for. WAF searches only in the part of web requests that you designate
-     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.
+     * for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.
      * </p>
      * <p>
      * Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
@@ -380,7 +380,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <b>If you're using the WAF API</b>
      * </p>
      * <p>
-     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 50
+     * Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it is 200
      * bytes.
      * </p>
      * <p>
@@ -408,7 +408,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * 
      * @param searchString
      *        A string value that you want WAF to search for. WAF searches only in the part of web requests that you
-     *        designate for inspection in <a>FieldToMatch</a>. The maximum length of the value is 50 bytes.</p>
+     *        designate for inspection in <a>FieldToMatch</a>. The maximum length of the value is 200 bytes.</p>
      *        <p>
      *        Valid values depend on the component that you specify for inspection in <code>FieldToMatch</code>:
      *        </p>
@@ -435,7 +435,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        Specify a base64-encoded version of the value. The maximum length of the value before you base64-encode it
-     *        is 50 bytes.
+     *        is 200 bytes.
      *        </p>
      *        <p>
      *        For example, suppose the value of <code>Type</code> is <code>HEADER</code> and the value of

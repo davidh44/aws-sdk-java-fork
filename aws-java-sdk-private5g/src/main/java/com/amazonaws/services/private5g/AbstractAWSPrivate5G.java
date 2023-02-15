@@ -133,6 +133,11 @@ public class AbstractAWSPrivate5G implements AWSPrivate5G {
     }
 
     @Override
+    public StartNetworkResourceUpdateResult startNetworkResourceUpdate(StartNetworkResourceUpdateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

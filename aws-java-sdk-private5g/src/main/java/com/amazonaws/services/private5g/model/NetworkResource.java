@@ -90,6 +90,12 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
     private Position position;
     /**
      * <p>
+     * Information about a request to return the network resource.
+     * </p>
+     */
+    private ReturnInformation returnInformation;
+    /**
+     * <p>
      * The serial number of the network resource.
      * </p>
      */
@@ -570,6 +576,46 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * Information about a request to return the network resource.
+     * </p>
+     * 
+     * @param returnInformation
+     *        Information about a request to return the network resource.
+     */
+
+    public void setReturnInformation(ReturnInformation returnInformation) {
+        this.returnInformation = returnInformation;
+    }
+
+    /**
+     * <p>
+     * Information about a request to return the network resource.
+     * </p>
+     * 
+     * @return Information about a request to return the network resource.
+     */
+
+    public ReturnInformation getReturnInformation() {
+        return this.returnInformation;
+    }
+
+    /**
+     * <p>
+     * Information about a request to return the network resource.
+     * </p>
+     * 
+     * @param returnInformation
+     *        Information about a request to return the network resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkResource withReturnInformation(ReturnInformation returnInformation) {
+        setReturnInformation(returnInformation);
+        return this;
+    }
+
+    /**
+     * <p>
      * The serial number of the network resource.
      * </p>
      * 
@@ -838,6 +884,8 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
             sb.append("OrderArn: ").append(getOrderArn()).append(",");
         if (getPosition() != null)
             sb.append("Position: ").append(getPosition()).append(",");
+        if (getReturnInformation() != null)
+            sb.append("ReturnInformation: ").append(getReturnInformation()).append(",");
         if (getSerialNumber() != null)
             sb.append("SerialNumber: ").append(getSerialNumber()).append(",");
         if (getStatus() != null)
@@ -902,6 +950,10 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getPosition() != null && other.getPosition().equals(this.getPosition()) == false)
             return false;
+        if (other.getReturnInformation() == null ^ this.getReturnInformation() == null)
+            return false;
+        if (other.getReturnInformation() != null && other.getReturnInformation().equals(this.getReturnInformation()) == false)
+            return false;
         if (other.getSerialNumber() == null ^ this.getSerialNumber() == null)
             return false;
         if (other.getSerialNumber() != null && other.getSerialNumber().equals(this.getSerialNumber()) == false)
@@ -940,6 +992,7 @@ public class NetworkResource implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getNetworkSiteArn() == null) ? 0 : getNetworkSiteArn().hashCode());
         hashCode = prime * hashCode + ((getOrderArn() == null) ? 0 : getOrderArn().hashCode());
         hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
+        hashCode = prime * hashCode + ((getReturnInformation() == null) ? 0 : getReturnInformation().hashCode());
         hashCode = prime * hashCode + ((getSerialNumber() == null) ? 0 : getSerialNumber().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());

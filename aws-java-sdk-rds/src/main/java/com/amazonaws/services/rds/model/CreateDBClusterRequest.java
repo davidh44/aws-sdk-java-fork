@@ -432,7 +432,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * replica.
      * </p>
      * <p>
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      * </p>
      */
     private String replicationSourceIdentifier;
@@ -3664,14 +3664,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * replica.
      * </p>
      * <p>
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      * </p>
      * 
      * @param replicationSourceIdentifier
      *        The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a
      *        read replica.</p>
      *        <p>
-     *        Valid for: Aurora DB clusters only
+     *        Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      */
 
     public void setReplicationSourceIdentifier(String replicationSourceIdentifier) {
@@ -3684,13 +3684,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * replica.
      * </p>
      * <p>
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a
      *         read replica.</p>
      *         <p>
-     *         Valid for: Aurora DB clusters only
+     *         Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      */
 
     public String getReplicationSourceIdentifier() {
@@ -3703,14 +3703,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * replica.
      * </p>
      * <p>
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      * </p>
      * 
      * @param replicationSourceIdentifier
      *        The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a
      *        read replica.</p>
      *        <p>
-     *        Valid for: Aurora DB clusters only
+     *        Valid for: Aurora DB clusters and RDS for PostgreSQL Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

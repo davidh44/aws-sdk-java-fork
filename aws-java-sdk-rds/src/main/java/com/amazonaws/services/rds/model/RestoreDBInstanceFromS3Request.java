@@ -68,8 +68,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      */
@@ -944,8 +944,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      * 
@@ -953,8 +953,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
-     *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
-     *        can also allocate additional memory for future growth.
+     *        Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You
+     *        can also allocate additional storage for future growth.
      *        </p>
      */
 
@@ -969,16 +969,16 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      * 
      * @return The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *         rules specified in <code>CreateDBInstance</code>.</p> <note>
      *         <p>
-     *         Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
-     *         can also allocate additional memory for future growth.
+     *         Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed.
+     *         You can also allocate additional storage for future growth.
      *         </p>
      */
 
@@ -993,8 +993,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      * 
@@ -1002,8 +1002,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
-     *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
-     *        can also allocate additional memory for future growth.
+     *        Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You
+     *        can also allocate additional storage for future growth.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -610,8 +610,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -658,8 +658,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      */
@@ -4661,8 +4661,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -4706,7 +4706,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     *        deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     *        DB cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -4755,8 +4755,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -4799,7 +4799,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         <p>
      *         For more information on Multi-AZ DB clusters, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
-     *         Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     *         Multi-AZ DB cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         Constraints:
@@ -4848,8 +4848,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -4893,7 +4893,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     *        deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     *        DB cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -4945,8 +4945,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      * 
@@ -4954,8 +4954,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *        rules specified in CreateDBInstance.</p> <note>
      *        <p>
-     *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
-     *        can also allocate additional memory for future growth.
+     *        Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You
+     *        can also allocate additional storage for future growth.
      *        </p>
      */
 
@@ -4970,16 +4970,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      * 
      * @return The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *         rules specified in CreateDBInstance.</p> <note>
      *         <p>
-     *         Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
-     *         can also allocate additional memory for future growth.
+     *         Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed.
+     *         You can also allocate additional storage for future growth.
      *         </p>
      */
 
@@ -4994,8 +4994,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
-     * also allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional storage for future growth.
      * </p>
      * </note>
      * 
@@ -5003,8 +5003,8 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *        rules specified in CreateDBInstance.</p> <note>
      *        <p>
-     *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
-     *        can also allocate additional memory for future growth.
+     *        Be sure to allocate enough storage for your new DB instance so that the restore operation can succeed. You
+     *        can also allocate additional storage for future growth.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

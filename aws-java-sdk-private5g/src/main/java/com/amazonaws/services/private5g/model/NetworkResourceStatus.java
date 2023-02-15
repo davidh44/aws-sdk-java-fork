@@ -27,7 +27,8 @@ public enum NetworkResourceStatus {
     AVAILABLE("AVAILABLE"),
     DELETING("DELETING"),
     PENDING_RETURN("PENDING_RETURN"),
-    DELETED("DELETED");
+    DELETED("DELETED"),
+    CREATING_SHIPPING_LABEL("CREATING_SHIPPING_LABEL");
 
     private String value;
 

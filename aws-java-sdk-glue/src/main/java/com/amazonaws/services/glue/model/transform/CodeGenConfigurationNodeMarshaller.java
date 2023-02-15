@@ -141,6 +141,8 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3HudiCatalogTarget").build();
     private static final MarshallingInfo<StructuredPojo> S3HUDIDIRECTTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3HudiDirectTarget").build();
+    private static final MarshallingInfo<StructuredPojo> DIRECTJDBCSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DirectJDBCSource").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -215,6 +217,7 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getS3HudiSource(), S3HUDISOURCE_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getS3HudiCatalogTarget(), S3HUDICATALOGTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getS3HudiDirectTarget(), S3HUDIDIRECTTARGET_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getDirectJDBCSource(), DIRECTJDBCSOURCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

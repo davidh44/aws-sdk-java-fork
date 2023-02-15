@@ -27,32 +27,32 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the
-     * snapshot is to be exported to.
+     * A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the data is
+     * to be exported.
      * </p>
      */
     private String exportTaskIdentifier;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     * The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      * </p>
      */
     private String sourceArn;
     /**
      * <p>
-     * The name of the Amazon S3 bucket to export the snapshot to.
+     * The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      * </p>
      */
     private String s3BucketName;
     /**
      * <p>
-     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
      */
     private String iamRoleArn;
     /**
      * <p>
-     * The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The Amazon Web
+     * The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web
      * Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller of this
      * operation must be authorized to run the following operations. These can be set in the Amazon Web Services KMS key
      * policy:
@@ -108,14 +108,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
     private String kmsKeyId;
     /**
      * <p>
-     * The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     * The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      * </p>
      */
     private String s3Prefix;
     /**
      * <p>
-     * The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is exported.
-     * Valid values are the following:
+     * The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is
+     * exported. Valid values are the following:
      * </p>
      * <ul>
      * <li>
@@ -125,14 +125,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only for RDS
-     * for MySQL, RDS for MariaDB, and Aurora MySQL.
+     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is valid
+     * only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid
-     * only for RDS for PostgreSQL and Aurora PostgreSQL.
+     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster. This
+     * format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      * </p>
      * </li>
      * <li>
@@ -147,13 +147,13 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the
-     * snapshot is to be exported to.
+     * A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the data is
+     * to be exported.
      * </p>
      * 
      * @param exportTaskIdentifier
-     *        A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket
-     *        where the snapshot is to be exported to.
+     *        A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the
+     *        data is to be exported.
      */
 
     public void setExportTaskIdentifier(String exportTaskIdentifier) {
@@ -162,12 +162,12 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the
-     * snapshot is to be exported to.
+     * A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the data is
+     * to be exported.
      * </p>
      * 
-     * @return A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket
-     *         where the snapshot is to be exported to.
+     * @return A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the
+     *         data is to be exported.
      */
 
     public String getExportTaskIdentifier() {
@@ -176,13 +176,13 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket where the
-     * snapshot is to be exported to.
+     * A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the data is
+     * to be exported.
      * </p>
      * 
      * @param exportTaskIdentifier
-     *        A unique identifier for the snapshot export task. This ID isn't an identifier for the Amazon S3 bucket
-     *        where the snapshot is to be exported to.
+     *        A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the
+     *        data is to be exported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,11 +193,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     * The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      * </p>
      * 
      * @param sourceArn
-     *        The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     *        The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      */
 
     public void setSourceArn(String sourceArn) {
@@ -206,10 +206,10 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     * The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     * @return The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      */
 
     public String getSourceArn() {
@@ -218,11 +218,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     * The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      * </p>
      * 
      * @param sourceArn
-     *        The Amazon Resource Name (ARN) of the snapshot to export to Amazon S3.
+     *        The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,11 +233,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the Amazon S3 bucket to export the snapshot to.
+     * The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      * </p>
      * 
      * @param s3BucketName
-     *        The name of the Amazon S3 bucket to export the snapshot to.
+     *        The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      */
 
     public void setS3BucketName(String s3BucketName) {
@@ -246,10 +246,10 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the Amazon S3 bucket to export the snapshot to.
+     * The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      * </p>
      * 
-     * @return The name of the Amazon S3 bucket to export the snapshot to.
+     * @return The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      */
 
     public String getS3BucketName() {
@@ -258,11 +258,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the Amazon S3 bucket to export the snapshot to.
+     * The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      * </p>
      * 
      * @param s3BucketName
-     *        The name of the Amazon S3 bucket to export the snapshot to.
+     *        The name of the Amazon S3 bucket to export the snapshot or cluster data to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +273,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
      * 
      * @param iamRoleArn
-     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      */
 
     public void setIamRoleArn(String iamRoleArn) {
@@ -286,10 +286,10 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
      * 
-     * @return The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     * @return The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      */
 
     public String getIamRoleArn() {
@@ -298,11 +298,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
      * 
      * @param iamRoleArn
-     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot.
+     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -313,7 +313,7 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The Amazon Web
+     * The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web
      * Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller of this
      * operation must be authorized to run the following operations. These can be set in the Amazon Web Services KMS key
      * policy:
@@ -367,10 +367,10 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @param kmsKeyId
-     *        The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The Amazon
-     *        Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The
-     *        caller of this operation must be authorized to run the following operations. These can be set in the
-     *        Amazon Web Services KMS key policy:</p>
+     *        The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web
+     *        Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller
+     *        of this operation must be authorized to run the following operations. These can be set in the Amazon Web
+     *        Services KMS key policy:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -425,7 +425,7 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The Amazon Web
+     * The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web
      * Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller of this
      * operation must be authorized to run the following operations. These can be set in the Amazon Web Services KMS key
      * policy:
@@ -478,9 +478,9 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * 
-     * @return The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The
-     *         Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
-     *         The caller of this operation must be authorized to run the following operations. These can be set in the
+     * @return The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon
+     *         Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The
+     *         caller of this operation must be authorized to run the following operations. These can be set in the
      *         Amazon Web Services KMS key policy:</p>
      *         <ul>
      *         <li>
@@ -536,7 +536,7 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The Amazon Web
+     * The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web
      * Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller of this
      * operation must be authorized to run the following operations. These can be set in the Amazon Web Services KMS key
      * policy:
@@ -590,10 +590,10 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @param kmsKeyId
-     *        The ID of the Amazon Web Services KMS key to use to encrypt the snapshot exported to Amazon S3. The Amazon
-     *        Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The
-     *        caller of this operation must be authorized to run the following operations. These can be set in the
-     *        Amazon Web Services KMS key policy:</p>
+     *        The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web
+     *        Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller
+     *        of this operation must be authorized to run the following operations. These can be set in the Amazon Web
+     *        Services KMS key policy:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -650,11 +650,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     * The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      * </p>
      * 
      * @param s3Prefix
-     *        The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     *        The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      */
 
     public void setS3Prefix(String s3Prefix) {
@@ -663,10 +663,10 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     * The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      * </p>
      * 
-     * @return The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     * @return The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      */
 
     public String getS3Prefix() {
@@ -675,11 +675,11 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     * The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      * </p>
      * 
      * @param s3Prefix
-     *        The Amazon S3 bucket prefix to use as the file name and path of the exported snapshot.
+     *        The Amazon S3 bucket prefix to use as the file name and path of the exported data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -690,8 +690,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is exported.
-     * Valid values are the following:
+     * The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is
+     * exported. Valid values are the following:
      * </p>
      * <ul>
      * <li>
@@ -701,14 +701,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only for RDS
-     * for MySQL, RDS for MariaDB, and Aurora MySQL.
+     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is valid
+     * only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid
-     * only for RDS for PostgreSQL and Aurora PostgreSQL.
+     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster. This
+     * format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      * </p>
      * </li>
      * <li>
@@ -719,8 +719,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * 
-     * @return The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is
-     *         exported. Valid values are the following:</p>
+     * @return The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data
+     *         is exported. Valid values are the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -729,14 +729,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only
-     *         for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
+     *         <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is
+     *         valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format
-     *         is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
+     *         <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster.
+     *         This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      *         </p>
      *         </li>
      *         <li>
@@ -756,8 +756,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is exported.
-     * Valid values are the following:
+     * The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is
+     * exported. Valid values are the following:
      * </p>
      * <ul>
      * <li>
@@ -767,14 +767,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only for RDS
-     * for MySQL, RDS for MariaDB, and Aurora MySQL.
+     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is valid
+     * only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid
-     * only for RDS for PostgreSQL and Aurora PostgreSQL.
+     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster. This
+     * format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      * </p>
      * </li>
      * <li>
@@ -786,8 +786,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @param exportOnly
-     *        The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is
-     *        exported. Valid values are the following:</p>
+     *        The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data
+     *        is exported. Valid values are the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -796,14 +796,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only
-     *        for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
+     *        <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is
+     *        valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is
-     *        valid only for RDS for PostgreSQL and Aurora PostgreSQL.
+     *        <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster.
+     *        This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      *        </p>
      *        </li>
      *        <li>
@@ -825,8 +825,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is exported.
-     * Valid values are the following:
+     * The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is
+     * exported. Valid values are the following:
      * </p>
      * <ul>
      * <li>
@@ -836,14 +836,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only for RDS
-     * for MySQL, RDS for MariaDB, and Aurora MySQL.
+     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is valid
+     * only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid
-     * only for RDS for PostgreSQL and Aurora PostgreSQL.
+     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster. This
+     * format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      * </p>
      * </li>
      * <li>
@@ -860,8 +860,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param exportOnly
-     *        The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is
-     *        exported. Valid values are the following:</p>
+     *        The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data
+     *        is exported. Valid values are the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -870,14 +870,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only
-     *        for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
+     *        <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is
+     *        valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is
-     *        valid only for RDS for PostgreSQL and Aurora PostgreSQL.
+     *        <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster.
+     *        This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      *        </p>
      *        </li>
      *        <li>
@@ -901,8 +901,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is exported.
-     * Valid values are the following:
+     * The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is
+     * exported. Valid values are the following:
      * </p>
      * <ul>
      * <li>
@@ -912,14 +912,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only for RDS
-     * for MySQL, RDS for MariaDB, and Aurora MySQL.
+     * <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is valid
+     * only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is valid
-     * only for RDS for PostgreSQL and Aurora PostgreSQL.
+     * <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster. This
+     * format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      * </p>
      * </li>
      * <li>
@@ -931,8 +931,8 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @param exportOnly
-     *        The data to be exported from the snapshot. If this parameter is not provided, all the snapshot data is
-     *        exported. Valid values are the following:</p>
+     *        The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data
+     *        is exported. Valid values are the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -941,14 +941,14 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>database.table</code> <i>table-name</i> - Export a table of the snapshot. This format is valid only
-     *        for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
+     *        <code>database.table</code> <i>table-name</i> - Export a table of the snapshot or cluster. This format is
+     *        valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot. This format is
-     *        valid only for RDS for PostgreSQL and Aurora PostgreSQL.
+     *        <code>database.schema</code> <i>schema-name</i> - Export a database schema of the snapshot or cluster.
+     *        This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.
      *        </p>
      *        </li>
      *        <li>

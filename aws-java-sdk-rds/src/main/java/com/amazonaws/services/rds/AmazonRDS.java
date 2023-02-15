@@ -358,8 +358,8 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Cancels an export task in progress that is exporting a snapshot to Amazon S3. Any data that has already been
-     * written to the S3 bucket isn't removed.
+     * Cancels an export task in progress that is exporting a snapshot or cluster to Amazon S3. Any data that has
+     * already been written to the S3 bucket isn't removed.
      * </p>
      * 
      * @param cancelExportTaskRequest
@@ -445,8 +445,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyDBClusterSnapshotRequest
@@ -628,17 +628,16 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * You can use the <code>ReplicationSourceIdentifier</code> parameter to create an Amazon Aurora DB cluster as a
-     * read replica of another DB cluster or Amazon RDS MySQL or PostgreSQL DB instance.
-     * </p>
-     * <p>
-     * For more information on Amazon Aurora, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
+     * read replica of another DB cluster or Amazon RDS MySQL or PostgreSQL DB instance. For more information about
+     * Amazon Aurora, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html">What is Amazon
      * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
-     * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * You can also use the <code>ReplicationSourceIdentifier</code> parameter to create a Multi-AZ DB cluster read
+     * replica with an RDS for PostgreSQL DB instance as the source. For more information about Multi-AZ DB clusters,
+     * see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">Multi-AZ
+     * DB cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterRequest
@@ -759,8 +758,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterParameterGroupRequest
@@ -786,8 +785,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterSnapshotRequest
@@ -1288,7 +1287,7 @@ public interface AmazonRDS {
      * </note>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.delete"> Deleting a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.delete">Deleting a
      * CEV</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
@@ -1317,8 +1316,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterRequest
@@ -1375,8 +1374,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterParameterGroupRequest
@@ -1408,8 +1407,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterSnapshotRequest
@@ -1855,8 +1854,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterParameterGroupsRequest
@@ -1887,8 +1886,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterParametersRequest
@@ -1939,8 +1938,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterSnapshotsRequest
@@ -1971,8 +1970,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB instances.
@@ -2437,7 +2436,7 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Returns information about a snapshot export to Amazon S3. This API operation supports pagination.
+     * Returns information about a snapshot or cluster export to Amazon S3. This API operation supports pagination.
      * </p>
      * 
      * @param describeExportTasksRequest
@@ -2687,8 +2686,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param failoverDBClusterRequest
@@ -2793,7 +2792,7 @@ public interface AmazonRDS {
      * database activity stream</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
-     * This operation is supported for RDS for Oracle only.
+     * This operation is supported for RDS for Oracle and Microsoft SQL Server.
      * </p>
      * 
      * @param modifyActivityStreamRequest
@@ -2951,8 +2950,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param modifyDBClusterRequest
@@ -3046,8 +3045,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param modifyDBClusterParameterGroupRequest
@@ -3509,8 +3508,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param rebootDBClusterRequest
@@ -3634,8 +3633,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param removeRoleFromDBClusterRequest
@@ -3740,8 +3739,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param resetDBClusterParameterGroupRequest
@@ -3871,8 +3870,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param restoreDBClusterFromSnapshotRequest
@@ -3949,8 +3948,8 @@ public interface AmazonRDS {
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ DB
+     * cluster deployments</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
      * @param restoreDBClusterToPointInTimeRequest
@@ -4407,10 +4406,26 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Starts an export of a snapshot to Amazon S3. The provided IAM role must have access to the S3 bucket.
+     * Starts an export of DB snapshot or DB cluster data to Amazon S3. The provided IAM role must have access to the S3
+     * bucket.
      * </p>
      * <p>
-     * This command doesn't apply to RDS Custom.
+     * You can't export snapshot data from RDS Custom DB instances.
+     * </p>
+     * <p>
+     * You can't export cluster data from Multi-AZ DB clusters.
+     * </p>
+     * <p>
+     * For more information on exporting DB snapshot data, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ExportSnapshot.html">Exporting DB snapshot data
+     * to Amazon S3</a> in the <i>Amazon RDS User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-export-snapshot.html">Exporting DB cluster
+     * snapshot data to Amazon S3</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <p>
+     * For more information on exporting DB cluster data, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/export-cluster-data.html">Exporting DB cluster data
+     * to Amazon S3</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param startExportTaskRequest

@@ -386,6 +386,8 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      */
     private S3HudiDirectTarget s3HudiDirectTarget;
 
+    private DirectJDBCSource directJDBCSource;
+
     /**
      * <p>
      * Specifies a connector to an Amazon Athena data source.
@@ -2757,6 +2759,32 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * @param directJDBCSource
+     */
+
+    public void setDirectJDBCSource(DirectJDBCSource directJDBCSource) {
+        this.directJDBCSource = directJDBCSource;
+    }
+
+    /**
+     * @return
+     */
+
+    public DirectJDBCSource getDirectJDBCSource() {
+        return this.directJDBCSource;
+    }
+
+    /**
+     * @param directJDBCSource
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withDirectJDBCSource(DirectJDBCSource directJDBCSource) {
+        setDirectJDBCSource(directJDBCSource);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2881,7 +2909,9 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getS3HudiCatalogTarget() != null)
             sb.append("S3HudiCatalogTarget: ").append(getS3HudiCatalogTarget()).append(",");
         if (getS3HudiDirectTarget() != null)
-            sb.append("S3HudiDirectTarget: ").append(getS3HudiDirectTarget());
+            sb.append("S3HudiDirectTarget: ").append(getS3HudiDirectTarget()).append(",");
+        if (getDirectJDBCSource() != null)
+            sb.append("DirectJDBCSource: ").append(getDirectJDBCSource());
         sb.append("}");
         return sb.toString();
     }
@@ -3126,6 +3156,10 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getS3HudiDirectTarget() != null && other.getS3HudiDirectTarget().equals(this.getS3HudiDirectTarget()) == false)
             return false;
+        if (other.getDirectJDBCSource() == null ^ this.getDirectJDBCSource() == null)
+            return false;
+        if (other.getDirectJDBCSource() != null && other.getDirectJDBCSource().equals(this.getDirectJDBCSource()) == false)
+            return false;
         return true;
     }
 
@@ -3191,6 +3225,7 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getS3HudiSource() == null) ? 0 : getS3HudiSource().hashCode());
         hashCode = prime * hashCode + ((getS3HudiCatalogTarget() == null) ? 0 : getS3HudiCatalogTarget().hashCode());
         hashCode = prime * hashCode + ((getS3HudiDirectTarget() == null) ? 0 : getS3HudiDirectTarget().hashCode());
+        hashCode = prime * hashCode + ((getDirectJDBCSource() == null) ? 0 : getDirectJDBCSource().hashCode());
         return hashCode;
     }
 

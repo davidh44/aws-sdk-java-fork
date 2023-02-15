@@ -769,6 +769,39 @@ public class AWSPrivate5GAsyncClient extends AWSPrivate5GClient implements AWSPr
     }
 
     @Override
+    public java.util.concurrent.Future<StartNetworkResourceUpdateResult> startNetworkResourceUpdateAsync(StartNetworkResourceUpdateRequest request) {
+
+        return startNetworkResourceUpdateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartNetworkResourceUpdateResult> startNetworkResourceUpdateAsync(final StartNetworkResourceUpdateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartNetworkResourceUpdateRequest, StartNetworkResourceUpdateResult> asyncHandler) {
+        final StartNetworkResourceUpdateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartNetworkResourceUpdateResult>() {
+            @Override
+            public StartNetworkResourceUpdateResult call() throws Exception {
+                StartNetworkResourceUpdateResult result = null;
+
+                try {
+                    result = executeStartNetworkResourceUpdate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);

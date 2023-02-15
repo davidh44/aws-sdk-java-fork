@@ -2270,6 +2270,9 @@ public interface AWSCloudTrail {
      *         The specified import was not found.
      * @throws InvalidParameterException
      *         The request includes a parameter that is not valid.
+     * @throws InsufficientEncryptionPolicyException
+     *         This exception is thrown when the policy on the S3 bucket or KMS key does not have sufficient permissions
+     *         for the operation.
      * @throws OperationNotPermittedException
      *         This exception is thrown when the requested operation is not permitted.
      * @throws UnsupportedOperationException

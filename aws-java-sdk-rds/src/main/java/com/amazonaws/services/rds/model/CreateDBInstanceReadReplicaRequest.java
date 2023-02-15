@@ -759,8 +759,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
-     * allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your read replica so that the create operation can succeed. You can also
+     * allocate additional storage for future growth.
      * </p>
      * </note>
      */
@@ -5768,8 +5768,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
-     * allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your read replica so that the create operation can succeed. You can also
+     * allocate additional storage for future growth.
      * </p>
      * </note>
      * 
@@ -5777,8 +5777,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation
      *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
-     *        Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can
-     *        also allocate additional memory for future growth.
+     *        Be sure to allocate enough storage for your read replica so that the create operation can succeed. You can
+     *        also allocate additional storage for future growth.
      *        </p>
      */
 
@@ -5793,16 +5793,16 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
-     * allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your read replica so that the create operation can succeed. You can also
+     * allocate additional storage for future growth.
      * </p>
      * </note>
      * 
      * @return The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation
      *         rules specified in <code>CreateDBInstance</code>.</p> <note>
      *         <p>
-     *         Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can
-     *         also allocate additional memory for future growth.
+     *         Be sure to allocate enough storage for your read replica so that the create operation can succeed. You
+     *         can also allocate additional storage for future growth.
      *         </p>
      */
 
@@ -5817,8 +5817,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
-     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
-     * allocate additional memory for future growth.
+     * Be sure to allocate enough storage for your read replica so that the create operation can succeed. You can also
+     * allocate additional storage for future growth.
      * </p>
      * </note>
      * 
@@ -5826,8 +5826,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation
      *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
-     *        Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can
-     *        also allocate additional memory for future growth.
+     *        Be sure to allocate enough storage for your read replica so that the create operation can succeed. You can
+     *        also allocate additional storage for future growth.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

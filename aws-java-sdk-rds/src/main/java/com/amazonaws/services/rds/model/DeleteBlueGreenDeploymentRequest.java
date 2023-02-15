@@ -43,7 +43,10 @@ public class DeleteBlueGreenDeploymentRequest extends com.amazonaws.AmazonWebSer
     private String blueGreenDeploymentIdentifier;
     /**
      * <p>
-     * A value that indicates whether to delete the resources in the green environment.
+     * A value that indicates whether to delete the resources in the green environment. You can't specify this option if
+     * the blue/green deployment <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a> is
+     * <code>SWITCHOVER_COMPLETED</code>.
      * </p>
      */
     private Boolean deleteTarget;
@@ -150,11 +153,17 @@ public class DeleteBlueGreenDeploymentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A value that indicates whether to delete the resources in the green environment.
+     * A value that indicates whether to delete the resources in the green environment. You can't specify this option if
+     * the blue/green deployment <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a> is
+     * <code>SWITCHOVER_COMPLETED</code>.
      * </p>
      * 
      * @param deleteTarget
-     *        A value that indicates whether to delete the resources in the green environment.
+     *        A value that indicates whether to delete the resources in the green environment. You can't specify this
+     *        option if the blue/green deployment <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a>
+     *        is <code>SWITCHOVER_COMPLETED</code>.
      */
 
     public void setDeleteTarget(Boolean deleteTarget) {
@@ -163,10 +172,16 @@ public class DeleteBlueGreenDeploymentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A value that indicates whether to delete the resources in the green environment.
+     * A value that indicates whether to delete the resources in the green environment. You can't specify this option if
+     * the blue/green deployment <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a> is
+     * <code>SWITCHOVER_COMPLETED</code>.
      * </p>
      * 
-     * @return A value that indicates whether to delete the resources in the green environment.
+     * @return A value that indicates whether to delete the resources in the green environment. You can't specify this
+     *         option if the blue/green deployment <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a>
+     *         is <code>SWITCHOVER_COMPLETED</code>.
      */
 
     public Boolean getDeleteTarget() {
@@ -175,11 +190,17 @@ public class DeleteBlueGreenDeploymentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A value that indicates whether to delete the resources in the green environment.
+     * A value that indicates whether to delete the resources in the green environment. You can't specify this option if
+     * the blue/green deployment <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a> is
+     * <code>SWITCHOVER_COMPLETED</code>.
      * </p>
      * 
      * @param deleteTarget
-     *        A value that indicates whether to delete the resources in the green environment.
+     *        A value that indicates whether to delete the resources in the green environment. You can't specify this
+     *        option if the blue/green deployment <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a>
+     *        is <code>SWITCHOVER_COMPLETED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,10 +211,16 @@ public class DeleteBlueGreenDeploymentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A value that indicates whether to delete the resources in the green environment.
+     * A value that indicates whether to delete the resources in the green environment. You can't specify this option if
+     * the blue/green deployment <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a> is
+     * <code>SWITCHOVER_COMPLETED</code>.
      * </p>
      * 
-     * @return A value that indicates whether to delete the resources in the green environment.
+     * @return A value that indicates whether to delete the resources in the green environment. You can't specify this
+     *         option if the blue/green deployment <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BlueGreenDeployment.html">status</a>
+     *         is <code>SWITCHOVER_COMPLETED</code>.
      */
 
     public Boolean isDeleteTarget() {

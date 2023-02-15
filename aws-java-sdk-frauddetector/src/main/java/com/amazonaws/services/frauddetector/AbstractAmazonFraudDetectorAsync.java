@@ -119,6 +119,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     }
 
     @Override
+    public java.util.concurrent.Future<CreateListResult> createListAsync(CreateListRequest request) {
+
+        return createListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateListResult> createListAsync(CreateListRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateListRequest, CreateListResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateModelResult> createModelAsync(CreateModelRequest request) {
 
         return createModelAsync(request, null);
@@ -296,6 +309,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<DeleteLabelResult> deleteLabelAsync(DeleteLabelRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteLabelRequest, DeleteLabelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteListResult> deleteListAsync(DeleteListRequest request) {
+
+        return deleteListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteListResult> deleteListAsync(DeleteListRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteListRequest, DeleteListResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -558,6 +584,32 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<GetLabelsResult> getLabelsAsync(GetLabelsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetLabelsRequest, GetLabelsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetListElementsResult> getListElementsAsync(GetListElementsRequest request) {
+
+        return getListElementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetListElementsResult> getListElementsAsync(GetListElementsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetListElementsRequest, GetListElementsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetListsMetadataResult> getListsMetadataAsync(GetListsMetadataRequest request) {
+
+        return getListsMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetListsMetadataResult> getListsMetadataAsync(GetListsMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetListsMetadataRequest, GetListsMetadataResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -831,6 +883,19 @@ public class AbstractAmazonFraudDetectorAsync extends AbstractAmazonFraudDetecto
     @Override
     public java.util.concurrent.Future<UpdateEventLabelResult> updateEventLabelAsync(UpdateEventLabelRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateEventLabelRequest, UpdateEventLabelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateListResult> updateListAsync(UpdateListRequest request) {
+
+        return updateListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateListResult> updateListAsync(UpdateListRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateListRequest, UpdateListResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

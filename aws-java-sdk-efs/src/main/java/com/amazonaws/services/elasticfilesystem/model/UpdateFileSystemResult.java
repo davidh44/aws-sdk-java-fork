@@ -28,8 +28,7 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
-     * parent account to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system.
      * </p>
      */
     private String ownerId;
@@ -151,13 +150,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
-     * parent account to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system.
      * </p>
      * 
      * @param ownerId
-     *        The Amazon Web Services account that created the file system. If the file system was created by an IAM
-     *        user, the parent account to which the user belongs is the owner.
+     *        The Amazon Web Services account that created the file system.
      */
 
     public void setOwnerId(String ownerId) {
@@ -166,12 +163,10 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
-     * parent account to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system.
      * </p>
      * 
-     * @return The Amazon Web Services account that created the file system. If the file system was created by an IAM
-     *         user, the parent account to which the user belongs is the owner.
+     * @return The Amazon Web Services account that created the file system.
      */
 
     public String getOwnerId() {
@@ -180,13 +175,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Web Services account that created the file system. If the file system was created by an IAM user, the
-     * parent account to which the user belongs is the owner.
+     * The Amazon Web Services account that created the file system.
      * </p>
      * 
      * @param ownerId
-     *        The Amazon Web Services account that created the file system. If the file system was created by an IAM
-     *        user, the parent account to which the user belongs is the owner.
+     *        The Amazon Web Services account that created the file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -43,7 +43,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <ul>
  * <li>
  * <p>
- * An IP match statement with an IP set that specified the address 192.0.2.44.
+ * An IP match statement with an IP set that specifies the address 192.0.2.44.
  * </p>
  * </li>
  * <li>

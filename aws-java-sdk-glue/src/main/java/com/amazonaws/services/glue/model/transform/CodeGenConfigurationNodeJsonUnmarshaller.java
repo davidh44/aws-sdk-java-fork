@@ -278,6 +278,10 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setS3HudiDirectTarget(S3HudiDirectTargetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DirectJDBCSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setDirectJDBCSource(DirectJDBCSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

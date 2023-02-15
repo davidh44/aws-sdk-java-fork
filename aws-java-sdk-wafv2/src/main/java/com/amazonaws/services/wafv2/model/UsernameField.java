@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about your login page username field, used in a <code>ManagedRuleGroupConfig</code>.
+ * Details about your login page username field for request inspection, used in the
+ * <code>AWSManagedRulesATPRuleSet</code> <code>RequestInspection</code> configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UsernameField" target="_top">AWS API

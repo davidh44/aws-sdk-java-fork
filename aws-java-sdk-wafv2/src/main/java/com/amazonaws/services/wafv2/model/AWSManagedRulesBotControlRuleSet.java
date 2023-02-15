@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details for your use of the Bot Control managed rule group, used in <code>ManagedRuleGroupConfig</code>.
+ * Details for your use of the Bot Control managed rule group, <code>AWSManagedRulesBotControlRuleSet</code>. This
+ * configuration is used in <code>ManagedRuleGroupConfig</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/AWSManagedRulesBotControlRuleSet"

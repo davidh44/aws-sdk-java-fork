@@ -32,7 +32,7 @@ public class DescribeExportTasksResult extends com.amazonaws.AmazonWebServiceRes
     private String marker;
     /**
      * <p>
-     * Information about an export of a snapshot to Amazon S3.
+     * Information about an export of a snapshot or cluster to Amazon S3.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ExportTask> exportTasks;
@@ -88,10 +88,10 @@ public class DescribeExportTasksResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about an export of a snapshot to Amazon S3.
+     * Information about an export of a snapshot or cluster to Amazon S3.
      * </p>
      * 
-     * @return Information about an export of a snapshot to Amazon S3.
+     * @return Information about an export of a snapshot or cluster to Amazon S3.
      */
 
     public java.util.List<ExportTask> getExportTasks() {
@@ -103,11 +103,11 @@ public class DescribeExportTasksResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about an export of a snapshot to Amazon S3.
+     * Information about an export of a snapshot or cluster to Amazon S3.
      * </p>
      * 
      * @param exportTasks
-     *        Information about an export of a snapshot to Amazon S3.
+     *        Information about an export of a snapshot or cluster to Amazon S3.
      */
 
     public void setExportTasks(java.util.Collection<ExportTask> exportTasks) {
@@ -121,7 +121,7 @@ public class DescribeExportTasksResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about an export of a snapshot to Amazon S3.
+     * Information about an export of a snapshot or cluster to Amazon S3.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -130,7 +130,7 @@ public class DescribeExportTasksResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param exportTasks
-     *        Information about an export of a snapshot to Amazon S3.
+     *        Information about an export of a snapshot or cluster to Amazon S3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,11 +146,11 @@ public class DescribeExportTasksResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about an export of a snapshot to Amazon S3.
+     * Information about an export of a snapshot or cluster to Amazon S3.
      * </p>
      * 
      * @param exportTasks
-     *        Information about an export of a snapshot to Amazon S3.
+     *        Information about an export of a snapshot or cluster to Amazon S3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

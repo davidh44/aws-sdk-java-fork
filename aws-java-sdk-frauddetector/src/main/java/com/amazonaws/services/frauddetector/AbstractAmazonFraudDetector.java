@@ -63,6 +63,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
     }
 
     @Override
+    public CreateListResult createList(CreateListRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateModelResult createModel(CreateModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +134,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public DeleteLabelResult deleteLabel(DeleteLabelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteListResult deleteList(DeleteListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -229,6 +239,16 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public GetLabelsResult getLabels(GetLabelsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetListElementsResult getListElements(GetListElementsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetListsMetadataResult getListsMetadata(GetListsMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -334,6 +354,11 @@ public class AbstractAmazonFraudDetector implements AmazonFraudDetector {
 
     @Override
     public UpdateEventLabelResult updateEventLabel(UpdateEventLabelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateListResult updateList(UpdateListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

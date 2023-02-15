@@ -539,8 +539,8 @@ public interface AmazonElasticFileSystem {
      * </li>
      * <li>
      * <p>
-     * <b>Throughput mode</b> - The destination file system uses the Bursting Throughput mode by default. After the file
-     * system is created, you can modify the throughput mode.
+     * <b>Throughput mode</b> - The destination file system's throughput mode matches that of the source file system.
+     * After the file system is created, you can modify the throughput mode.
      * </p>
      * </li>
      * </ul>

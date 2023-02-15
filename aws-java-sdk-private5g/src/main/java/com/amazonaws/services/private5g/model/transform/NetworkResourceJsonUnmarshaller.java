@@ -90,6 +90,10 @@ public class NetworkResourceJsonUnmarshaller implements Unmarshaller<NetworkReso
                     context.nextToken();
                     networkResource.setPosition(PositionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("returnInformation", targetDepth)) {
+                    context.nextToken();
+                    networkResource.setReturnInformation(ReturnInformationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("serialNumber", targetDepth)) {
                     context.nextToken();
                     networkResource.setSerialNumber(context.getUnmarshaller(String.class).unmarshall(context));

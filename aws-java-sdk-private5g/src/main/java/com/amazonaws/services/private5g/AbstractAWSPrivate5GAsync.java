@@ -300,6 +300,19 @@ public class AbstractAWSPrivate5GAsync extends AbstractAWSPrivate5G implements A
     }
 
     @Override
+    public java.util.concurrent.Future<StartNetworkResourceUpdateResult> startNetworkResourceUpdateAsync(StartNetworkResourceUpdateRequest request) {
+
+        return startNetworkResourceUpdateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartNetworkResourceUpdateResult> startNetworkResourceUpdateAsync(StartNetworkResourceUpdateRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartNetworkResourceUpdateRequest, StartNetworkResourceUpdateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);

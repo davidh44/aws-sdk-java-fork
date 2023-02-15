@@ -69,6 +69,10 @@ public class ManagedRuleGroupConfigJsonUnmarshaller implements Unmarshaller<Mana
                     managedRuleGroupConfig.setAWSManagedRulesBotControlRuleSet(AWSManagedRulesBotControlRuleSetJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("AWSManagedRulesATPRuleSet", targetDepth)) {
+                    context.nextToken();
+                    managedRuleGroupConfig.setAWSManagedRulesATPRuleSet(AWSManagedRulesATPRuleSetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

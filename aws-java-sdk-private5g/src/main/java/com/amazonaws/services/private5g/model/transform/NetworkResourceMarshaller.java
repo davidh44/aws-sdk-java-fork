@@ -48,6 +48,8 @@ public class NetworkResourceMarshaller {
             .marshallLocationName("orderArn").build();
     private static final MarshallingInfo<StructuredPojo> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("position").build();
+    private static final MarshallingInfo<StructuredPojo> RETURNINFORMATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("returnInformation").build();
     private static final MarshallingInfo<String> SERIALNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serialNumber").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -85,6 +87,7 @@ public class NetworkResourceMarshaller {
             protocolMarshaller.marshall(networkResource.getNetworkSiteArn(), NETWORKSITEARN_BINDING);
             protocolMarshaller.marshall(networkResource.getOrderArn(), ORDERARN_BINDING);
             protocolMarshaller.marshall(networkResource.getPosition(), POSITION_BINDING);
+            protocolMarshaller.marshall(networkResource.getReturnInformation(), RETURNINFORMATION_BINDING);
             protocolMarshaller.marshall(networkResource.getSerialNumber(), SERIALNUMBER_BINDING);
             protocolMarshaller.marshall(networkResource.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(networkResource.getStatusReason(), STATUSREASON_BINDING);
