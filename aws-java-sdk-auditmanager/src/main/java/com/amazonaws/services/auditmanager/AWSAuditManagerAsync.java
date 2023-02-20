@@ -2512,7 +2512,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Updates Audit Manager settings for the current user account.
+     * Updates Audit Manager settings for the current account.
      * </p>
      * 
      * @param updateSettingsRequest
@@ -2525,7 +2525,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Updates Audit Manager settings for the current user account.
+     * Updates Audit Manager settings for the current account.
      * </p>
      * 
      * @param updateSettingsRequest

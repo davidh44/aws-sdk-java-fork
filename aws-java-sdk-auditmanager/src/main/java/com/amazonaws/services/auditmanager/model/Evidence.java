@@ -80,7 +80,7 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> attributes;
     /**
      * <p>
-     * The unique identifier for the IAM user or role that's associated with the evidence.
+     * The unique identifier for the user or role that's associated with the evidence.
      * </p>
      */
     private String iamId;
@@ -529,11 +529,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the IAM user or role that's associated with the evidence.
+     * The unique identifier for the user or role that's associated with the evidence.
      * </p>
      * 
      * @param iamId
-     *        The unique identifier for the IAM user or role that's associated with the evidence.
+     *        The unique identifier for the user or role that's associated with the evidence.
      */
 
     public void setIamId(String iamId) {
@@ -542,10 +542,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the IAM user or role that's associated with the evidence.
+     * The unique identifier for the user or role that's associated with the evidence.
      * </p>
      * 
-     * @return The unique identifier for the IAM user or role that's associated with the evidence.
+     * @return The unique identifier for the user or role that's associated with the evidence.
      */
 
     public String getIamId() {
@@ -554,11 +554,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the IAM user or role that's associated with the evidence.
+     * The unique identifier for the user or role that's associated with the evidence.
      * </p>
      * 
      * @param iamId
-     *        The unique identifier for the IAM user or role that's associated with the evidence.
+     *        The unique identifier for the user or role that's associated with the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -96,13 +96,13 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
-     * The IAM user or role that created the framework.
+     * The user or role that created the framework.
      * </p>
      */
     private String createdBy;
     /**
      * <p>
-     * The IAM user or role that most recently updated the framework.
+     * The user or role that most recently updated the framework.
      * </p>
      */
     private String lastUpdatedBy;
@@ -604,11 +604,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the framework.
+     * The user or role that created the framework.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that created the framework.
+     *        The user or role that created the framework.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -617,10 +617,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the framework.
+     * The user or role that created the framework.
      * </p>
      * 
-     * @return The IAM user or role that created the framework.
+     * @return The user or role that created the framework.
      */
 
     public String getCreatedBy() {
@@ -629,11 +629,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the framework.
+     * The user or role that created the framework.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that created the framework.
+     *        The user or role that created the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -644,11 +644,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that most recently updated the framework.
+     * The user or role that most recently updated the framework.
      * </p>
      * 
      * @param lastUpdatedBy
-     *        The IAM user or role that most recently updated the framework.
+     *        The user or role that most recently updated the framework.
      */
 
     public void setLastUpdatedBy(String lastUpdatedBy) {
@@ -657,10 +657,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that most recently updated the framework.
+     * The user or role that most recently updated the framework.
      * </p>
      * 
-     * @return The IAM user or role that most recently updated the framework.
+     * @return The user or role that most recently updated the framework.
      */
 
     public String getLastUpdatedBy() {
@@ -669,11 +669,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that most recently updated the framework.
+     * The user or role that most recently updated the framework.
      * </p>
      * 
      * @param lastUpdatedBy
-     *        The IAM user or role that most recently updated the framework.
+     *        The user or role that most recently updated the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

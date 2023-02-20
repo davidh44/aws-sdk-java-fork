@@ -55,7 +55,7 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createdAt;
     /**
      * <p>
-     * The IAM user or role that performed the action.
+     * The user or role that performed the action.
      * </p>
      */
     private String createdBy;
@@ -260,11 +260,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that performed the action.
+     * The user or role that performed the action.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that performed the action.
+     *        The user or role that performed the action.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -273,10 +273,10 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that performed the action.
+     * The user or role that performed the action.
      * </p>
      * 
-     * @return The IAM user or role that performed the action.
+     * @return The user or role that performed the action.
      */
 
     public String getCreatedBy() {
@@ -285,11 +285,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that performed the action.
+     * The user or role that performed the action.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that performed the action.
+     *        The user or role that performed the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

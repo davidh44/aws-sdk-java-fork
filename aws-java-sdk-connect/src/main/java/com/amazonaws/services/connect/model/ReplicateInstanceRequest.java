@@ -27,8 +27,9 @@ public class ReplicateInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance. You can
-     * provide the <code>InstanceId</code>, or the entire ARN.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or the entire ARN.
      * </p>
      */
     private String instanceId;
@@ -56,13 +57,16 @@ public class ReplicateInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance. You can
-     * provide the <code>InstanceId</code>, or the entire ARN.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or the entire ARN.
      * </p>
      * 
      * @param instanceId
-     *        The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance. You
-     *        can provide the <code>InstanceId</code>, or the entire ARN.
+     *        The identifier of the Amazon Connect instance. You can <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance
+     *        ID</a> in the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or
+     *        the entire ARN.
      */
 
     public void setInstanceId(String instanceId) {
@@ -71,12 +75,15 @@ public class ReplicateInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance. You can
-     * provide the <code>InstanceId</code>, or the entire ARN.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or the entire ARN.
      * </p>
      * 
-     * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
-     *         You can provide the <code>InstanceId</code>, or the entire ARN.
+     * @return The identifier of the Amazon Connect instance. You can <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance
+     *         ID</a> in the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or
+     *         the entire ARN.
      */
 
     public String getInstanceId() {
@@ -85,13 +92,16 @@ public class ReplicateInstanceRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance. You can
-     * provide the <code>InstanceId</code>, or the entire ARN.
+     * The identifier of the Amazon Connect instance. You can <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in
+     * the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or the entire ARN.
      * </p>
      * 
      * @param instanceId
-     *        The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance. You
-     *        can provide the <code>InstanceId</code>, or the entire ARN.
+     *        The identifier of the Amazon Connect instance. You can <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance
+     *        ID</a> in the Amazon Resource Name (ARN) of the instance. You can provide the <code>InstanceId</code>, or
+     *        the entire ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

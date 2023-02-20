@@ -42,6 +42,11 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Be sure to provide the full ARN of the encryption key, not just the ID.
      * </p>
+     * <p>
+     * Amazon Connect supports only KMS keys with the default key spec of <a href=
+     * "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default">
+     * <code>SYMMETRIC_DEFAULT</code> </a>.
+     * </p>
      * </note>
      */
     private String keyId;
@@ -113,12 +118,22 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Be sure to provide the full ARN of the encryption key, not just the ID.
      * </p>
+     * <p>
+     * Amazon Connect supports only KMS keys with the default key spec of <a href=
+     * "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default">
+     * <code>SYMMETRIC_DEFAULT</code> </a>.
+     * </p>
      * </note>
      * 
      * @param keyId
      *        The full ARN of the encryption key. </p> <note>
      *        <p>
      *        Be sure to provide the full ARN of the encryption key, not just the ID.
+     *        </p>
+     *        <p>
+     *        Amazon Connect supports only KMS keys with the default key spec of <a href=
+     *        "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default"
+     *        > <code>SYMMETRIC_DEFAULT</code> </a>.
      *        </p>
      */
 
@@ -134,11 +149,21 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Be sure to provide the full ARN of the encryption key, not just the ID.
      * </p>
+     * <p>
+     * Amazon Connect supports only KMS keys with the default key spec of <a href=
+     * "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default">
+     * <code>SYMMETRIC_DEFAULT</code> </a>.
+     * </p>
      * </note>
      * 
      * @return The full ARN of the encryption key. </p> <note>
      *         <p>
      *         Be sure to provide the full ARN of the encryption key, not just the ID.
+     *         </p>
+     *         <p>
+     *         Amazon Connect supports only KMS keys with the default key spec of <a href=
+     *         "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default"
+     *         > <code>SYMMETRIC_DEFAULT</code> </a>.
      *         </p>
      */
 
@@ -154,12 +179,22 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Be sure to provide the full ARN of the encryption key, not just the ID.
      * </p>
+     * <p>
+     * Amazon Connect supports only KMS keys with the default key spec of <a href=
+     * "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default">
+     * <code>SYMMETRIC_DEFAULT</code> </a>.
+     * </p>
      * </note>
      * 
      * @param keyId
      *        The full ARN of the encryption key. </p> <note>
      *        <p>
      *        Be sure to provide the full ARN of the encryption key, not just the ID.
+     *        </p>
+     *        <p>
+     *        Amazon Connect supports only KMS keys with the default key spec of <a href=
+     *        "https://docs.aws.amazon.com/kms/latest/developerguide/asymmetric-key-specs.html#key-spec-symmetric-default"
+     *        > <code>SYMMETRIC_DEFAULT</code> </a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

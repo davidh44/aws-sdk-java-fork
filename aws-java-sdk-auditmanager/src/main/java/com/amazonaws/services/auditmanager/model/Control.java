@@ -102,13 +102,13 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
-     * The IAM user or role that created the control.
+     * The user or role that created the control.
      * </p>
      */
     private String createdBy;
     /**
      * <p>
-     * The IAM user or role that most recently updated the control.
+     * The user or role that most recently updated the control.
      * </p>
      */
     private String lastUpdatedBy;
@@ -650,11 +650,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the control.
+     * The user or role that created the control.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that created the control.
+     *        The user or role that created the control.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -663,10 +663,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the control.
+     * The user or role that created the control.
      * </p>
      * 
-     * @return The IAM user or role that created the control.
+     * @return The user or role that created the control.
      */
 
     public String getCreatedBy() {
@@ -675,11 +675,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the control.
+     * The user or role that created the control.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that created the control.
+     *        The user or role that created the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -690,11 +690,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that most recently updated the control.
+     * The user or role that most recently updated the control.
      * </p>
      * 
      * @param lastUpdatedBy
-     *        The IAM user or role that most recently updated the control.
+     *        The user or role that most recently updated the control.
      */
 
     public void setLastUpdatedBy(String lastUpdatedBy) {
@@ -703,10 +703,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that most recently updated the control.
+     * The user or role that most recently updated the control.
      * </p>
      * 
-     * @return The IAM user or role that most recently updated the control.
+     * @return The user or role that most recently updated the control.
      */
 
     public String getLastUpdatedBy() {
@@ -715,11 +715,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that most recently updated the control.
+     * The user or role that most recently updated the control.
      * </p>
      * 
      * @param lastUpdatedBy
-     *        The IAM user or role that most recently updated the control.
+     *        The user or role that most recently updated the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

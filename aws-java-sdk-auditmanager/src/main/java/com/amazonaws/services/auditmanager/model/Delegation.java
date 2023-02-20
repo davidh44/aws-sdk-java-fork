@@ -101,7 +101,7 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
     private String comment;
     /**
      * <p>
-     * The IAM user or role that created the delegation.
+     * The user or role that created the delegation.
      * </p>
      */
     private String createdBy;
@@ -630,11 +630,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the delegation.
+     * The user or role that created the delegation.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that created the delegation.
+     *        The user or role that created the delegation.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -643,10 +643,10 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the delegation.
+     * The user or role that created the delegation.
      * </p>
      * 
-     * @return The IAM user or role that created the delegation.
+     * @return The user or role that created the delegation.
      */
 
     public String getCreatedBy() {
@@ -655,11 +655,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM user or role that created the delegation.
+     * The user or role that created the delegation.
      * </p>
      * 
      * @param createdBy
-     *        The IAM user or role that created the delegation.
+     *        The user or role that created the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
