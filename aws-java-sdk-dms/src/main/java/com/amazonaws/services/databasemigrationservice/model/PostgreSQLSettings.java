@@ -126,7 +126,19 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     private Integer port;
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      */
     private String serverName;
@@ -874,11 +886,34 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      * 
      * @param serverName
-     *        Fully qualified domain name of the endpoint.
+     *        The host name of the endpoint database. </p>
+     *        <p>
+     *        For an Amazon RDS PostgreSQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     *        >DescribeDBInstances</a>, in the
+     *        <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *        field.
+     *        </p>
+     *        <p>
+     *        For an Aurora PostgreSQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     *        >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      */
 
     public void setServerName(String serverName) {
@@ -887,10 +922,33 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      * 
-     * @return Fully qualified domain name of the endpoint.
+     * @return The host name of the endpoint database. </p>
+     *         <p>
+     *         For an Amazon RDS PostgreSQL instance, this is the output of <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     *         >DescribeDBInstances</a>, in the
+     *         <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *         field.
+     *         </p>
+     *         <p>
+     *         For an Aurora PostgreSQL instance, this is the output of <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     *         >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      */
 
     public String getServerName() {
@@ -899,11 +957,34 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora PostgreSQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      * 
      * @param serverName
-     *        Fully qualified domain name of the endpoint.
+     *        The host name of the endpoint database. </p>
+     *        <p>
+     *        For an Amazon RDS PostgreSQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     *        >DescribeDBInstances</a>, in the
+     *        <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *        field.
+     *        </p>
+     *        <p>
+     *        For an Aurora PostgreSQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     *        >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

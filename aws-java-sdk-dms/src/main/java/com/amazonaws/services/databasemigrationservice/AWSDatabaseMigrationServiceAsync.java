@@ -42,7 +42,7 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Adds metadata tags to an DMS resource, including replication instance, endpoint, security group, and migration
+     * Adds metadata tags to an DMS resource, including replication instance, endpoint, subnet group, and migration
      * task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or
      * used in a Condition statement in an IAM policy for DMS. For more information, see <a
      * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
@@ -60,7 +60,7 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Adds metadata tags to an DMS resource, including replication instance, endpoint, security group, and migration
+     * Adds metadata tags to an DMS resource, including replication instance, endpoint, subnet group, and migration
      * task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or
      * used in a Condition statement in an IAM policy for DMS. For more information, see <a
      * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
@@ -115,6 +115,55 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
     java.util.concurrent.Future<ApplyPendingMaintenanceActionResult> applyPendingMaintenanceActionAsync(
             ApplyPendingMaintenanceActionRequest applyPendingMaintenanceActionRequest,
             com.amazonaws.handlers.AsyncHandler<ApplyPendingMaintenanceActionRequest, ApplyPendingMaintenanceActionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts the analysis of up to 20 source databases to recommend target engines for each source database. This is a
+     * batch version of <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartRecommendations.html">StartRecommendations
+     * </a>.
+     * </p>
+     * <p>
+     * The result of analysis of each source database is reported individually in the response. Because the batch
+     * request can result in a combination of successful and unsuccessful actions, you should check for batch errors
+     * even when the call returns an HTTP status code of <code>200</code>.
+     * </p>
+     * 
+     * @param batchStartRecommendationsRequest
+     * @return A Java Future containing the result of the BatchStartRecommendations operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.BatchStartRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/BatchStartRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchStartRecommendationsResult> batchStartRecommendationsAsync(
+            BatchStartRecommendationsRequest batchStartRecommendationsRequest);
+
+    /**
+     * <p>
+     * Starts the analysis of up to 20 source databases to recommend target engines for each source database. This is a
+     * batch version of <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartRecommendations.html">StartRecommendations
+     * </a>.
+     * </p>
+     * <p>
+     * The result of analysis of each source database is reported individually in the response. Because the batch
+     * request can result in a combination of successful and unsuccessful actions, you should check for batch errors
+     * even when the call returns an HTTP status code of <code>200</code>.
+     * </p>
+     * 
+     * @param batchStartRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchStartRecommendations operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.BatchStartRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/BatchStartRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchStartRecommendationsResult> batchStartRecommendationsAsync(
+            BatchStartRecommendationsRequest batchStartRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchStartRecommendationsRequest, BatchStartRecommendationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1422,6 +1471,72 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
+     * Returns a paginated list of limitations for recommendations of target Amazon Web Services engines.
+     * </p>
+     * 
+     * @param describeRecommendationLimitationsRequest
+     * @return A Java Future containing the result of the DescribeRecommendationLimitations operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeRecommendationLimitations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRecommendationLimitations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRecommendationLimitationsResult> describeRecommendationLimitationsAsync(
+            DescribeRecommendationLimitationsRequest describeRecommendationLimitationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of limitations for recommendations of target Amazon Web Services engines.
+     * </p>
+     * 
+     * @param describeRecommendationLimitationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRecommendationLimitations operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeRecommendationLimitations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRecommendationLimitations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRecommendationLimitationsResult> describeRecommendationLimitationsAsync(
+            DescribeRecommendationLimitationsRequest describeRecommendationLimitationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRecommendationLimitationsRequest, DescribeRecommendationLimitationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of target engine recommendations for your source databases.
+     * </p>
+     * 
+     * @param describeRecommendationsRequest
+     * @return A Java Future containing the result of the DescribeRecommendations operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRecommendationsResult> describeRecommendationsAsync(DescribeRecommendationsRequest describeRecommendationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of target engine recommendations for your source databases.
+     * </p>
+     * 
+     * @param describeRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRecommendations operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRecommendationsResult> describeRecommendationsAsync(DescribeRecommendationsRequest describeRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRecommendationsRequest, DescribeRecommendationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the status of the RefreshSchemas operation.
      * </p>
      * 
@@ -1843,8 +1958,8 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, security group,
-     * and migration task. For more information, see <a
+     * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, subnet group, and
+     * migration task. For more information, see <a
      * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
      * description.
      * </p>
@@ -1859,8 +1974,8 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, security group,
-     * and migration task. For more information, see <a
+     * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, subnet group, and
+     * migration task. For more information, see <a
      * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
      * description.
      * </p>
@@ -2225,10 +2340,9 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Removes metadata tags from an DMS resource, including replication instance, endpoint, security group, and
-     * migration task. For more information, see <a
-     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
-     * description.
+     * Removes metadata tags from an DMS resource, including replication instance, endpoint, subnet group, and migration
+     * task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+     * <code>Tag</code> </a> data type description.
      * </p>
      * 
      * @param removeTagsFromResourceRequest
@@ -2242,10 +2356,9 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Removes metadata tags from an DMS resource, including replication instance, endpoint, security group, and
-     * migration task. For more information, see <a
-     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
-     * description.
+     * Removes metadata tags from an DMS resource, including replication instance, endpoint, subnet group, and migration
+     * task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+     * <code>Tag</code> </a> data type description.
      * </p>
      * 
      * @param removeTagsFromResourceRequest
@@ -2294,6 +2407,47 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
     java.util.concurrent.Future<RunFleetAdvisorLsaAnalysisResult> runFleetAdvisorLsaAnalysisAsync(
             RunFleetAdvisorLsaAnalysisRequest runFleetAdvisorLsaAnalysisRequest,
             com.amazonaws.handlers.AsyncHandler<RunFleetAdvisorLsaAnalysisRequest, RunFleetAdvisorLsaAnalysisResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts the analysis of your source database to provide recommendations of target engines.
+     * </p>
+     * <p>
+     * You can create recommendations for multiple source databases using <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_BatchStartRecommendations.html"
+     * >BatchStartRecommendations</a>.
+     * </p>
+     * 
+     * @param startRecommendationsRequest
+     * @return A Java Future containing the result of the StartRecommendations operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartRecommendations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartRecommendationsResult> startRecommendationsAsync(StartRecommendationsRequest startRecommendationsRequest);
+
+    /**
+     * <p>
+     * Starts the analysis of your source database to provide recommendations of target engines.
+     * </p>
+     * <p>
+     * You can create recommendations for multiple source databases using <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_BatchStartRecommendations.html"
+     * >BatchStartRecommendations</a>.
+     * </p>
+     * 
+     * @param startRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartRecommendations operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartRecommendations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartRecommendationsResult> startRecommendationsAsync(StartRecommendationsRequest startRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<StartRecommendationsRequest, StartRecommendationsResult> asyncHandler);
 
     /**
      * <p>

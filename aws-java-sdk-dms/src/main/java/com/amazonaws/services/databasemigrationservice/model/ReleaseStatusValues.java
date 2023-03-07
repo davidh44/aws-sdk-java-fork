@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ReleaseStatusValues {
 
-    Beta("beta");
+    Beta("beta"),
+    Prod("prod");
 
     private String value;
 

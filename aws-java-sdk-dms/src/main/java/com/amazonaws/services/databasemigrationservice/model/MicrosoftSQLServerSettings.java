@@ -98,7 +98,12 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
     private String safeguardPolicy;
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of <a
+     * href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">DescribeDBInstances</a>,
+     * in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
      * </p>
      */
     private String serverName;
@@ -679,11 +684,20 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of <a
+     * href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">DescribeDBInstances</a>,
+     * in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
      * </p>
      * 
      * @param serverName
-     *        Fully qualified domain name of the endpoint.
+     *        Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of
+     *        <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">
+     *        DescribeDBInstances</a>, in the
+     *        <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *        field.
      */
 
     public void setServerName(String serverName) {
@@ -692,10 +706,19 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of <a
+     * href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">DescribeDBInstances</a>,
+     * in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
      * </p>
      * 
-     * @return Fully qualified domain name of the endpoint.
+     * @return Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of
+     *         <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">
+     *         DescribeDBInstances</a>, in the
+     *         <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *         field.
      */
 
     public String getServerName() {
@@ -704,11 +727,20 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of <a
+     * href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">DescribeDBInstances</a>,
+     * in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
      * </p>
      * 
      * @param serverName
-     *        Fully qualified domain name of the endpoint.
+     *        Fully qualified domain name of the endpoint. For an Amazon RDS SQL Server instance, this is the output of
+     *        <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">
+     *        DescribeDBInstances</a>, in the
+     *        <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *        field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

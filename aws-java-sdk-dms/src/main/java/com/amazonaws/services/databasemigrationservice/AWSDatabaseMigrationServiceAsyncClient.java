@@ -337,6 +337,39 @@ public class AWSDatabaseMigrationServiceAsyncClient extends AWSDatabaseMigration
     }
 
     @Override
+    public java.util.concurrent.Future<BatchStartRecommendationsResult> batchStartRecommendationsAsync(BatchStartRecommendationsRequest request) {
+
+        return batchStartRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchStartRecommendationsResult> batchStartRecommendationsAsync(final BatchStartRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchStartRecommendationsRequest, BatchStartRecommendationsResult> asyncHandler) {
+        final BatchStartRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchStartRecommendationsResult>() {
+            @Override
+            public BatchStartRecommendationsResult call() throws Exception {
+                BatchStartRecommendationsResult result = null;
+
+                try {
+                    result = executeBatchStartRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelReplicationTaskAssessmentRunResult> cancelReplicationTaskAssessmentRunAsync(
             CancelReplicationTaskAssessmentRunRequest request) {
 
@@ -1475,6 +1508,74 @@ public class AWSDatabaseMigrationServiceAsyncClient extends AWSDatabaseMigration
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeRecommendationLimitationsResult> describeRecommendationLimitationsAsync(
+            DescribeRecommendationLimitationsRequest request) {
+
+        return describeRecommendationLimitationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommendationLimitationsResult> describeRecommendationLimitationsAsync(
+            final DescribeRecommendationLimitationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRecommendationLimitationsRequest, DescribeRecommendationLimitationsResult> asyncHandler) {
+        final DescribeRecommendationLimitationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRecommendationLimitationsResult>() {
+            @Override
+            public DescribeRecommendationLimitationsResult call() throws Exception {
+                DescribeRecommendationLimitationsResult result = null;
+
+                try {
+                    result = executeDescribeRecommendationLimitations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommendationsResult> describeRecommendationsAsync(DescribeRecommendationsRequest request) {
+
+        return describeRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommendationsResult> describeRecommendationsAsync(final DescribeRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRecommendationsRequest, DescribeRecommendationsResult> asyncHandler) {
+        final DescribeRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRecommendationsResult>() {
+            @Override
+            public DescribeRecommendationsResult call() throws Exception {
+                DescribeRecommendationsResult result = null;
+
+                try {
+                    result = executeDescribeRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeRefreshSchemasStatusResult> describeRefreshSchemasStatusAsync(DescribeRefreshSchemasStatusRequest request) {
 
         return describeRefreshSchemasStatusAsync(request, null);
@@ -2228,6 +2329,39 @@ public class AWSDatabaseMigrationServiceAsyncClient extends AWSDatabaseMigration
 
                 try {
                     result = executeRunFleetAdvisorLsaAnalysis(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRecommendationsResult> startRecommendationsAsync(StartRecommendationsRequest request) {
+
+        return startRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRecommendationsResult> startRecommendationsAsync(final StartRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartRecommendationsRequest, StartRecommendationsResult> asyncHandler) {
+        final StartRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartRecommendationsResult>() {
+            @Override
+            public StartRecommendationsResult call() throws Exception {
+                StartRecommendationsResult result = null;
+
+                try {
+                    result = executeStartRecommendations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

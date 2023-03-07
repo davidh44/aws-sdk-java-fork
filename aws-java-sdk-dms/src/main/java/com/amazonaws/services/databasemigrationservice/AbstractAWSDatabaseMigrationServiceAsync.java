@@ -54,6 +54,19 @@ public class AbstractAWSDatabaseMigrationServiceAsync extends AbstractAWSDatabas
     }
 
     @Override
+    public java.util.concurrent.Future<BatchStartRecommendationsResult> batchStartRecommendationsAsync(BatchStartRecommendationsRequest request) {
+
+        return batchStartRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchStartRecommendationsResult> batchStartRecommendationsAsync(BatchStartRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchStartRecommendationsRequest, BatchStartRecommendationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelReplicationTaskAssessmentRunResult> cancelReplicationTaskAssessmentRunAsync(
             CancelReplicationTaskAssessmentRunRequest request) {
 
@@ -510,6 +523,34 @@ public class AbstractAWSDatabaseMigrationServiceAsync extends AbstractAWSDatabas
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeRecommendationLimitationsResult> describeRecommendationLimitationsAsync(
+            DescribeRecommendationLimitationsRequest request) {
+
+        return describeRecommendationLimitationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommendationLimitationsResult> describeRecommendationLimitationsAsync(
+            DescribeRecommendationLimitationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeRecommendationLimitationsRequest, DescribeRecommendationLimitationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommendationsResult> describeRecommendationsAsync(DescribeRecommendationsRequest request) {
+
+        return describeRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommendationsResult> describeRecommendationsAsync(DescribeRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeRecommendationsRequest, DescribeRecommendationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeRefreshSchemasStatusResult> describeRefreshSchemasStatusAsync(DescribeRefreshSchemasStatusRequest request) {
 
         return describeRefreshSchemasStatusAsync(request, null);
@@ -814,6 +855,19 @@ public class AbstractAWSDatabaseMigrationServiceAsync extends AbstractAWSDatabas
     @Override
     public java.util.concurrent.Future<RunFleetAdvisorLsaAnalysisResult> runFleetAdvisorLsaAnalysisAsync(RunFleetAdvisorLsaAnalysisRequest request,
             com.amazonaws.handlers.AsyncHandler<RunFleetAdvisorLsaAnalysisRequest, RunFleetAdvisorLsaAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRecommendationsResult> startRecommendationsAsync(StartRecommendationsRequest request) {
+
+        return startRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRecommendationsResult> startRecommendationsAsync(StartRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartRecommendationsRequest, StartRecommendationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

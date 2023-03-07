@@ -1,3 +1,12 @@
+# __1.12.422__ __2023-03-07__
+## __AWS Database Migration Service__
+  - ### Features
+    - This release adds DMS Fleet Advisor Target Recommendation APIs and exposes functionality for DMS Fleet Advisor. It adds functionality to start Target Recommendation calculation.
+
+## __Amazon Location Service__
+  - ### Features
+    - Documentation update for the release of 3 additional map styles for use with Open Data Maps: Open Data Standard Dark, Open Data Visualization Light & Open Data Visualization Dark.
+
 # __1.12.421__ __2023-03-06__
 ## __AWS Account__
   - ### Features

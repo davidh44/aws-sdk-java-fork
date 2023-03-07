@@ -49,6 +49,11 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
     }
 
     @Override
+    public BatchStartRecommendationsResult batchStartRecommendations(BatchStartRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelReplicationTaskAssessmentRunResult cancelReplicationTaskAssessmentRun(CancelReplicationTaskAssessmentRunRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -219,6 +224,16 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
     }
 
     @Override
+    public DescribeRecommendationLimitationsResult describeRecommendationLimitations(DescribeRecommendationLimitationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeRecommendationsResult describeRecommendations(DescribeRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeRefreshSchemasStatusResult describeRefreshSchemasStatus(DescribeRefreshSchemasStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -331,6 +346,11 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
 
     @Override
     public RunFleetAdvisorLsaAnalysisResult runFleetAdvisorLsaAnalysis(RunFleetAdvisorLsaAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartRecommendationsResult startRecommendations(StartRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

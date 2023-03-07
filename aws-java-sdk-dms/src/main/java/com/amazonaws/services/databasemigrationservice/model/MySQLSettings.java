@@ -40,9 +40,9 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
     private String afterConnectScript;
     /**
      * <p>
-     * Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always
-     * On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction
-     * backups, set this attribute to <code>false</code>.
+     * Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For example,
+     * in a situation where running an alter DDL on the table could result in different information about the table
+     * cached in the replication instance.
      * </p>
      */
     private Boolean cleanSourceMetadataOnMismatch;
@@ -115,7 +115,19 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
     private Integer port;
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      */
     private String serverName;
@@ -228,15 +240,15 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always
-     * On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction
-     * backups, set this attribute to <code>false</code>.
+     * Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For example,
+     * in a situation where running an alter DDL on the table could result in different information about the table
+     * cached in the replication instance.
      * </p>
      * 
      * @param cleanSourceMetadataOnMismatch
-     *        Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an
-     *        Always On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for
-     *        transaction backups, set this attribute to <code>false</code>.
+     *        Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For
+     *        example, in a situation where running an alter DDL on the table could result in different information
+     *        about the table cached in the replication instance.
      */
 
     public void setCleanSourceMetadataOnMismatch(Boolean cleanSourceMetadataOnMismatch) {
@@ -245,14 +257,14 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always
-     * On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction
-     * backups, set this attribute to <code>false</code>.
+     * Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For example,
+     * in a situation where running an alter DDL on the table could result in different information about the table
+     * cached in the replication instance.
      * </p>
      * 
-     * @return Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of
-     *         an Always On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster
-     *         for transaction backups, set this attribute to <code>false</code>.
+     * @return Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For
+     *         example, in a situation where running an alter DDL on the table could result in different information
+     *         about the table cached in the replication instance.
      */
 
     public Boolean getCleanSourceMetadataOnMismatch() {
@@ -261,15 +273,15 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always
-     * On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction
-     * backups, set this attribute to <code>false</code>.
+     * Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For example,
+     * in a situation where running an alter DDL on the table could result in different information about the table
+     * cached in the replication instance.
      * </p>
      * 
      * @param cleanSourceMetadataOnMismatch
-     *        Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an
-     *        Always On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for
-     *        transaction backups, set this attribute to <code>false</code>.
+     *        Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For
+     *        example, in a situation where running an alter DDL on the table could result in different information
+     *        about the table cached in the replication instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -280,14 +292,14 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of an Always
-     * On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster for transaction
-     * backups, set this attribute to <code>false</code>.
+     * Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For example,
+     * in a situation where running an alter DDL on the table could result in different information about the table
+     * cached in the replication instance.
      * </p>
      * 
-     * @return Adjusts the behavior of DMS when migrating from an SQL Server source database that is hosted as part of
-     *         an Always On availability group cluster. If you need DMS to poll all the nodes in the Always On cluster
-     *         for transaction backups, set this attribute to <code>false</code>.
+     * @return Cleans and recreates table metadata information on the replication instance when a mismatch occurs. For
+     *         example, in a situation where running an alter DDL on the table could result in different information
+     *         about the table cached in the replication instance.
      */
 
     public Boolean isCleanSourceMetadataOnMismatch() {
@@ -745,11 +757,34 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      * 
      * @param serverName
-     *        Fully qualified domain name of the endpoint.
+     *        The host name of the endpoint database. </p>
+     *        <p>
+     *        For an Amazon RDS MySQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     *        >DescribeDBInstances</a>, in the
+     *        <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *        field.
+     *        </p>
+     *        <p>
+     *        For an Aurora MySQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     *        >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      */
 
     public void setServerName(String serverName) {
@@ -758,10 +793,33 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      * 
-     * @return Fully qualified domain name of the endpoint.
+     * @return The host name of the endpoint database. </p>
+     *         <p>
+     *         For an Amazon RDS MySQL instance, this is the output of <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     *         >DescribeDBInstances</a>, in the
+     *         <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *         field.
+     *         </p>
+     *         <p>
+     *         For an Aurora MySQL instance, this is the output of <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     *         >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      */
 
     public String getServerName() {
@@ -770,11 +828,34 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Fully qualified domain name of the endpoint.
+     * The host name of the endpoint database.
+     * </p>
+     * <p>
+     * For an Amazon RDS MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     * >DescribeDBInstances</a>, in the
+     * <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     * field.
+     * </p>
+     * <p>
+     * For an Aurora MySQL instance, this is the output of <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     * >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * </p>
      * 
      * @param serverName
-     *        Fully qualified domain name of the endpoint.
+     *        The host name of the endpoint database. </p>
+     *        <p>
+     *        For an Amazon RDS MySQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html"
+     *        >DescribeDBInstances</a>, in the
+     *        <code> <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html">Endpoint</a>.Address</code>
+     *        field.
+     *        </p>
+     *        <p>
+     *        For an Aurora MySQL instance, this is the output of <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html"
+     *        >DescribeDBClusters</a>, in the <code>Endpoint</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -375,7 +375,7 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Adds metadata tags to an DMS resource, including replication instance, endpoint, security group, and migration
+     * Adds metadata tags to an DMS resource, including replication instance, endpoint, subnet group, and migration
      * task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or
      * used in a Condition statement in an IAM policy for DMS. For more information, see <a
      * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
@@ -484,6 +484,77 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
             HttpResponseHandler<AmazonWebServiceResponse<ApplyPendingMaintenanceActionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ApplyPendingMaintenanceActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts the analysis of up to 20 source databases to recommend target engines for each source database. This is a
+     * batch version of <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartRecommendations.html">StartRecommendations
+     * </a>.
+     * </p>
+     * <p>
+     * The result of analysis of each source database is reported individually in the response. Because the batch
+     * request can result in a combination of successful and unsuccessful actions, you should check for batch errors
+     * even when the call returns an HTTP status code of <code>200</code>.
+     * </p>
+     * 
+     * @param batchStartRecommendationsRequest
+     * @return Result of the BatchStartRecommendations operation returned by the service.
+     * @throws InvalidResourceStateException
+     *         The resource is in a state that prevents it from being used for database migration.
+     * @throws AccessDeniedException
+     *         DMS was denied access to the endpoint. Check that the role is correctly configured.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @sample AWSDatabaseMigrationService.BatchStartRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/BatchStartRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public BatchStartRecommendationsResult batchStartRecommendations(BatchStartRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchStartRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final BatchStartRecommendationsResult executeBatchStartRecommendations(BatchStartRecommendationsRequest batchStartRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchStartRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchStartRecommendationsRequest> request = null;
+        Response<BatchStartRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchStartRecommendationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchStartRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Database Migration Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchStartRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchStartRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchStartRecommendationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2683,6 +2754,129 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
 
     /**
      * <p>
+     * Returns a paginated list of limitations for recommendations of target Amazon Web Services engines.
+     * </p>
+     * 
+     * @param describeRecommendationLimitationsRequest
+     * @return Result of the DescribeRecommendationLimitations operation returned by the service.
+     * @throws InvalidResourceStateException
+     *         The resource is in a state that prevents it from being used for database migration.
+     * @throws AccessDeniedException
+     *         DMS was denied access to the endpoint. Check that the role is correctly configured.
+     * @sample AWSDatabaseMigrationService.DescribeRecommendationLimitations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRecommendationLimitations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeRecommendationLimitationsResult describeRecommendationLimitations(DescribeRecommendationLimitationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeRecommendationLimitations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeRecommendationLimitationsResult executeDescribeRecommendationLimitations(
+            DescribeRecommendationLimitationsRequest describeRecommendationLimitationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeRecommendationLimitationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeRecommendationLimitationsRequest> request = null;
+        Response<DescribeRecommendationLimitationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeRecommendationLimitationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeRecommendationLimitationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Database Migration Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeRecommendationLimitations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeRecommendationLimitationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeRecommendationLimitationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a paginated list of target engine recommendations for your source databases.
+     * </p>
+     * 
+     * @param describeRecommendationsRequest
+     * @return Result of the DescribeRecommendations operation returned by the service.
+     * @throws InvalidResourceStateException
+     *         The resource is in a state that prevents it from being used for database migration.
+     * @throws AccessDeniedException
+     *         DMS was denied access to the endpoint. Check that the role is correctly configured.
+     * @sample AWSDatabaseMigrationService.DescribeRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeRecommendations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeRecommendationsResult describeRecommendations(DescribeRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeRecommendationsResult executeDescribeRecommendations(DescribeRecommendationsRequest describeRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeRecommendationsRequest> request = null;
+        Response<DescribeRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeRecommendationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Database Migration Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeRecommendationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the status of the RefreshSchemas operation.
      * </p>
      * 
@@ -3372,8 +3566,8 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, security group,
-     * and migration task. For more information, see <a
+     * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, subnet group, and
+     * migration task. For more information, see <a
      * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
      * description.
      * </p>
@@ -4054,10 +4248,9 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Removes metadata tags from an DMS resource, including replication instance, endpoint, security group, and
-     * migration task. For more information, see <a
-     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
-     * description.
+     * Removes metadata tags from an DMS resource, including replication instance, endpoint, subnet group, and migration
+     * task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+     * <code>Tag</code> </a> data type description.
      * </p>
      * 
      * @param removeTagsFromResourceRequest
@@ -4165,6 +4358,72 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
             HttpResponseHandler<AmazonWebServiceResponse<RunFleetAdvisorLsaAnalysisResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new RunFleetAdvisorLsaAnalysisResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts the analysis of your source database to provide recommendations of target engines.
+     * </p>
+     * <p>
+     * You can create recommendations for multiple source databases using <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_BatchStartRecommendations.html"
+     * >BatchStartRecommendations</a>.
+     * </p>
+     * 
+     * @param startRecommendationsRequest
+     * @return Result of the StartRecommendations operation returned by the service.
+     * @throws InvalidResourceStateException
+     *         The resource is in a state that prevents it from being used for database migration.
+     * @throws AccessDeniedException
+     *         DMS was denied access to the endpoint. Check that the role is correctly configured.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @sample AWSDatabaseMigrationService.StartRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartRecommendations" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartRecommendationsResult startRecommendations(StartRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final StartRecommendationsResult executeStartRecommendations(StartRecommendationsRequest startRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartRecommendationsRequest> request = null;
+        Response<StartRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartRecommendationsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Database Migration Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartRecommendationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

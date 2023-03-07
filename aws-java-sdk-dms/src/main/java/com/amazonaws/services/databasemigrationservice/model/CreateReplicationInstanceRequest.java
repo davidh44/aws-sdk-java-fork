@@ -138,6 +138,15 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * Default: <code>true</code>
      * </p>
+     * <p>
+     * When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you create
+     * a replication instance. For example, if you set <code>EngineVersion</code> to a lower version number than the
+     * current default version, DMS uses the default version.
+     * </p>
+     * <p>
+     * If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS uses the
+     * engine version specified by the <code>EngineVersion</code> parameter.
+     * </p>
      */
     private Boolean autoMinorVersionUpgrade;
     /**
@@ -905,12 +914,30 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * Default: <code>true</code>
      * </p>
+     * <p>
+     * When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you create
+     * a replication instance. For example, if you set <code>EngineVersion</code> to a lower version number than the
+     * current default version, DMS uses the default version.
+     * </p>
+     * <p>
+     * If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS uses the
+     * engine version specified by the <code>EngineVersion</code> parameter.
+     * </p>
      * 
      * @param autoMinorVersionUpgrade
      *        A value that indicates whether minor engine upgrades are applied automatically to the replication instance
      *        during the maintenance window. This parameter defaults to <code>true</code>.</p>
      *        <p>
      *        Default: <code>true</code>
+     *        </p>
+     *        <p>
+     *        When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you
+     *        create a replication instance. For example, if you set <code>EngineVersion</code> to a lower version
+     *        number than the current default version, DMS uses the default version.
+     *        </p>
+     *        <p>
+     *        If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS
+     *        uses the engine version specified by the <code>EngineVersion</code> parameter.
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -925,11 +952,29 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * Default: <code>true</code>
      * </p>
+     * <p>
+     * When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you create
+     * a replication instance. For example, if you set <code>EngineVersion</code> to a lower version number than the
+     * current default version, DMS uses the default version.
+     * </p>
+     * <p>
+     * If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS uses the
+     * engine version specified by the <code>EngineVersion</code> parameter.
+     * </p>
      * 
      * @return A value that indicates whether minor engine upgrades are applied automatically to the replication
      *         instance during the maintenance window. This parameter defaults to <code>true</code>.</p>
      *         <p>
      *         Default: <code>true</code>
+     *         </p>
+     *         <p>
+     *         When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when
+     *         you create a replication instance. For example, if you set <code>EngineVersion</code> to a lower version
+     *         number than the current default version, DMS uses the default version.
+     *         </p>
+     *         <p>
+     *         If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS
+     *         uses the engine version specified by the <code>EngineVersion</code> parameter.
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -944,12 +989,30 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * Default: <code>true</code>
      * </p>
+     * <p>
+     * When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you create
+     * a replication instance. For example, if you set <code>EngineVersion</code> to a lower version number than the
+     * current default version, DMS uses the default version.
+     * </p>
+     * <p>
+     * If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS uses the
+     * engine version specified by the <code>EngineVersion</code> parameter.
+     * </p>
      * 
      * @param autoMinorVersionUpgrade
      *        A value that indicates whether minor engine upgrades are applied automatically to the replication instance
      *        during the maintenance window. This parameter defaults to <code>true</code>.</p>
      *        <p>
      *        Default: <code>true</code>
+     *        </p>
+     *        <p>
+     *        When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you
+     *        create a replication instance. For example, if you set <code>EngineVersion</code> to a lower version
+     *        number than the current default version, DMS uses the default version.
+     *        </p>
+     *        <p>
+     *        If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS
+     *        uses the engine version specified by the <code>EngineVersion</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -966,11 +1029,29 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * Default: <code>true</code>
      * </p>
+     * <p>
+     * When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when you create
+     * a replication instance. For example, if you set <code>EngineVersion</code> to a lower version number than the
+     * current default version, DMS uses the default version.
+     * </p>
+     * <p>
+     * If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS uses the
+     * engine version specified by the <code>EngineVersion</code> parameter.
+     * </p>
      * 
      * @return A value that indicates whether minor engine upgrades are applied automatically to the replication
      *         instance during the maintenance window. This parameter defaults to <code>true</code>.</p>
      *         <p>
      *         Default: <code>true</code>
+     *         </p>
+     *         <p>
+     *         When <code>AutoMinorVersionUpgrade</code> is enabled, DMS uses the current default engine version when
+     *         you create a replication instance. For example, if you set <code>EngineVersion</code> to a lower version
+     *         number than the current default version, DMS uses the default version.
+     *         </p>
+     *         <p>
+     *         If <code>AutoMinorVersionUpgrade</code> <i>isn’t</i> enabled when you create a replication instance, DMS
+     *         uses the engine version specified by the <code>EngineVersion</code> parameter.
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
