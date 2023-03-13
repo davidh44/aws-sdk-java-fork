@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.appintegrations.model.transform;
 
+import java.util.Map;
 import java.math.*;
 
 import javax.annotation.Generated;
@@ -84,6 +85,18 @@ public class CreateDataIntegrationResultJsonUnmarshaller implements Unmarshaller
                 if (context.testExpression("ClientToken", targetDepth)) {
                     context.nextToken();
                     createDataIntegrationResult.setClientToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("FileConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createDataIntegrationResult.setFileConfiguration(FileConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ObjectConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createDataIntegrationResult.setObjectConfiguration(new MapUnmarshaller<String, java.util.Map<String, java.util.List<String>>>(context
+                            .getUnmarshaller(String.class), new MapUnmarshaller<String, java.util.List<String>>(context.getUnmarshaller(String.class),
+                            new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    )).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

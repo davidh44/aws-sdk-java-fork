@@ -478,6 +478,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteBucketReplicationResult> deleteBucketReplicationAsync(DeleteBucketReplicationRequest request) {
+
+        return deleteBucketReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBucketReplicationResult> deleteBucketReplicationAsync(final DeleteBucketReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteBucketReplicationRequest, DeleteBucketReplicationResult> asyncHandler) {
+        final DeleteBucketReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteBucketReplicationResult>() {
+            @Override
+            public DeleteBucketReplicationResult call() throws Exception {
+                DeleteBucketReplicationResult result = null;
+
+                try {
+                    result = executeDeleteBucketReplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteBucketTaggingResult> deleteBucketTaggingAsync(DeleteBucketTaggingRequest request) {
 
         return deleteBucketTaggingAsync(request, null);
@@ -1070,6 +1103,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executeGetBucketPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBucketReplicationResult> getBucketReplicationAsync(GetBucketReplicationRequest request) {
+
+        return getBucketReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBucketReplicationResult> getBucketReplicationAsync(final GetBucketReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBucketReplicationRequest, GetBucketReplicationResult> asyncHandler) {
+        final GetBucketReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBucketReplicationResult>() {
+            @Override
+            public GetBucketReplicationResult call() throws Exception {
+                GetBucketReplicationResult result = null;
+
+                try {
+                    result = executeGetBucketReplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1780,6 +1846,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executePutBucketPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBucketReplicationResult> putBucketReplicationAsync(PutBucketReplicationRequest request) {
+
+        return putBucketReplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBucketReplicationResult> putBucketReplicationAsync(final PutBucketReplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutBucketReplicationRequest, PutBucketReplicationResult> asyncHandler) {
+        final PutBucketReplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutBucketReplicationResult>() {
+            @Override
+            public PutBucketReplicationResult call() throws Exception {
+                PutBucketReplicationResult result = null;
+
+                try {
+                    result = executePutBucketReplication(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

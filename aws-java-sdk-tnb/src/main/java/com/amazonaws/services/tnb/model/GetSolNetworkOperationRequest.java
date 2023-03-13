@@ -27,18 +27,18 @@ public class GetSolNetworkOperationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the operation occurrence.
+     * The identifier of the network operation.
      * </p>
      */
     private String nsLcmOpOccId;
 
     /**
      * <p>
-     * The identifier of the operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The identifier of the operation occurrence.
+     *        The identifier of the network operation.
      */
 
     public void setNsLcmOpOccId(String nsLcmOpOccId) {
@@ -47,10 +47,10 @@ public class GetSolNetworkOperationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
-     * @return The identifier of the operation occurrence.
+     * @return The identifier of the network operation.
      */
 
     public String getNsLcmOpOccId() {
@@ -59,11 +59,11 @@ public class GetSolNetworkOperationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The identifier of the operation occurrence.
+     *        The identifier of the network operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

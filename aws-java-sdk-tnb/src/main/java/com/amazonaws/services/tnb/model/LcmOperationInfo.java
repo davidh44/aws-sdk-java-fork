@@ -33,18 +33,18 @@ public class LcmOperationInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the latest network lifecycle management operation occurrence.
+     * The identifier of the network operation.
      * </p>
      */
     private String nsLcmOpOccId;
 
     /**
      * <p>
-     * The identifier of the latest network lifecycle management operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The identifier of the latest network lifecycle management operation occurrence.
+     *        The identifier of the network operation.
      */
 
     public void setNsLcmOpOccId(String nsLcmOpOccId) {
@@ -53,10 +53,10 @@ public class LcmOperationInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the latest network lifecycle management operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
-     * @return The identifier of the latest network lifecycle management operation occurrence.
+     * @return The identifier of the network operation.
      */
 
     public String getNsLcmOpOccId() {
@@ -65,11 +65,11 @@ public class LcmOperationInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the latest network lifecycle management operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The identifier of the latest network lifecycle management operation occurrence.
+     *        The identifier of the network operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

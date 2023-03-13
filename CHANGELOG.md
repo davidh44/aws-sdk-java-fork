@@ -1,3 +1,24 @@
+# __1.12.426__ __2023-03-13__
+## __AWS Lake Formation__
+  - ### Features
+    - This release updates the documentation regarding Get/Update DataCellsFilter
+
+## __AWS S3 Control__
+  - ### Features
+    - Added support for cross-account Multi-Region Access Points. Added support for S3 Replication for S3 on Outposts.
+
+## __AWS Telco Network Builder__
+  - ### Features
+    - This release adds tagging support to the following Network Instance APIs : Instantiate, Update, Terminate.
+
+## __Amazon AppIntegrations Service__
+  - ### Features
+    - Adds FileConfiguration to Amazon AppIntegrations CreateDataIntegration supporting scheduled downloading of third party files into Amazon Connect from sources such as Microsoft SharePoint.
+
+## __Amazon Connect Wisdom Service__
+  - ### Features
+    - This release extends Wisdom CreateKnowledgeBase API to support SharePoint connector type by removing the @required trait for objectField
+
 # __1.12.425__ __2023-03-10__
 ## __AWS Secrets Manager__
   - ### Features

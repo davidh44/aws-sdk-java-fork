@@ -73,7 +73,11 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private ColumnWildcard columnWildcard;
-
+    /**
+     * <p>
+     * The ID of the data cells filter version.
+     * </p>
+     */
     private String versionId;
 
     /**
@@ -402,7 +406,12 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The ID of the data cells filter version.
+     * </p>
+     * 
      * @param versionId
+     *        The ID of the data cells filter version.
      */
 
     public void setVersionId(String versionId) {
@@ -410,7 +419,11 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the data cells filter version.
+     * </p>
+     * 
+     * @return The ID of the data cells filter version.
      */
 
     public String getVersionId() {
@@ -418,7 +431,12 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The ID of the data cells filter version.
+     * </p>
+     * 
      * @param versionId
+     *        The ID of the data cells filter version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

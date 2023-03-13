@@ -85,7 +85,7 @@ public interface AWSTnb {
      * Creating a function package is the first step for creating a network in AWS TNB. This request creates an empty
      * container with an ID. The next step is to upload the actual CSAR zip file into that empty container. To upload
      * function package content, see <a
-     * href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_PutSolFunctionPackageContent.html"
+     * href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_PutSolFunctionPackageContent.html"
      * >PutSolFunctionPackageContent</a>.
      * </p>
      * 
@@ -120,7 +120,7 @@ public interface AWSTnb {
      * </p>
      * <p>
      * Once you create a network instance, you can instantiate it. To instantiate a network, see <a
-     * href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_InstantiateSolNetworkInstance.html"
+     * href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_InstantiateSolNetworkInstance.html"
      * >InstantiateSolNetworkInstance</a>.
      * </p>
      * 
@@ -163,7 +163,7 @@ public interface AWSTnb {
      * <p>
      * This request creates an empty network package container with an ID. Once you create a network package, you can
      * upload the network package content using <a
-     * href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_PutSolNetworkPackageContent.html"
+     * href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_PutSolNetworkPackageContent.html"
      * >PutSolNetworkPackageContent</a>.
      * </p>
      * 
@@ -197,7 +197,7 @@ public interface AWSTnb {
      * <p>
      * To delete a function package, the package must be in a disabled state. To disable a function package, see <a
      * href=
-     * "https://docs.aws.amazon.com/TNB/latest/APIReference/API_UpdateSolFunctionPackage.html">UpdateSolFunctionPackage
+     * "https://docs.aws.amazon.com/tnb/latest/APIReference/API_UpdateSolFunctionPackage.html">UpdateSolFunctionPackage
      * </a>.
      * </p>
      * 
@@ -229,7 +229,7 @@ public interface AWSTnb {
      * </p>
      * <p>
      * To delete a network instance, the instance must be in a stopped or terminated state. To terminate a network
-     * instance, see <a href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_TerminateSolNetworkInstance.html">
+     * instance, see <a href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_TerminateSolNetworkInstance.html">
      * TerminateSolNetworkInstance</a>.
      * </p>
      * 
@@ -261,7 +261,7 @@ public interface AWSTnb {
      * </p>
      * <p>
      * To delete a network package, the package must be in a disable state. To disable a network package, see <a
-     * href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_UpdateSolNetworkPackage.html"
+     * href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_UpdateSolNetworkPackage.html"
      * >UpdateSolNetworkPackage</a>.
      * </p>
      * 
@@ -546,7 +546,7 @@ public interface AWSTnb {
      * </p>
      * <p>
      * Before you can instantiate a network instance, you have to create a network instance. For more information, see
-     * <a href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_CreateSolNetworkInstance.html">
+     * <a href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_CreateSolNetworkInstance.html">
      * CreateSolNetworkInstance</a>.
      * </p>
      * 
@@ -951,7 +951,7 @@ public interface AWSTnb {
     /**
      * <p>
      * Validates function package content. This can be used as a dry run before uploading function package content with
-     * <a href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_PutSolFunctionPackageContent.html">
+     * <a href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_PutSolFunctionPackageContent.html">
      * PutSolFunctionPackageContent</a>.
      * </p>
      * <p>
@@ -981,7 +981,7 @@ public interface AWSTnb {
     /**
      * <p>
      * Validates network package content. This can be used as a dry run before uploading network package content with <a
-     * href="https://docs.aws.amazon.com/TNB/latest/APIReference/API_PutSolNetworkPackageContent.html">
+     * href="https://docs.aws.amazon.com/tnb/latest/APIReference/API_PutSolNetworkPackageContent.html">
      * PutSolNetworkPackageContent</a>.
      * </p>
      * <p>

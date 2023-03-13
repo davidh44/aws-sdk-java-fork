@@ -28,8 +28,8 @@ import com.amazonaws.services.connectwisdom.model.*;
  * <p>
  * Amazon Connect Wisdom delivers agents the information they need to solve customer issues as they're actively speaking
  * with customers. Agents can search across connected repositories from within their agent desktop to find answers
- * quickly. Use the Amazon Connect Wisdom APIs to create an assistant and a knowledge base, for example, or manage
- * content by uploading custom files.
+ * quickly. Use Amazon Connect Wisdom to create an assistant and a knowledge base, for example, or manage content by
+ * uploading custom files.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -147,10 +147,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      * DataIntegrations with external knowledge bases such as Salesforce and ServiceNow. If you do, you'll get an
      * <code>InvalidRequestException</code> error.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;For example, you're programmatically managing your external knowledge base, and you want to add or remove one of the fields that is being ingested from Salesforce. Do the following:&lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt;Call &lt;a href=&quot;https://docs.aws.amazon.com/wisdom/latest/APIReference/API_DeleteKnowledgeBase.html&quot;&gt;DeleteKnowledgeBase&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Call &lt;a href=&quot;https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteDataIntegration.html&quot;&gt;DeleteDataIntegration&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Call &lt;a href=&quot;https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html&quot;&gt;CreateDataIntegration&lt;/a&gt; to recreate the DataIntegration or a create different one.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Call CreateKnowledgeBase.&lt;/p&gt; &lt;/li&gt; &lt;/ol&gt; &lt;/note&gt; </code>
-     * </pre>
+     * <p>
+     * For example, you're programmatically managing your external knowledge base, and you want to add or remove one of
+     * the fields that is being ingested from Salesforce. Do the following:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Call <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_DeleteKnowledgeBase.html">DeleteKnowledgeBase
+     * </a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Call <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteDataIntegration.html">
+     * DeleteDataIntegration</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Call <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">
+     * CreateDataIntegration</a> to recreate the DataIntegration or a create different one.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Call CreateKnowledgeBase.
+     * </p>
+     * </li>
+     * </ol>
+     * </note>
      * 
      * @param createKnowledgeBaseRequest
      * @return A Java Future containing the result of the CreateKnowledgeBase operation returned by the service.
@@ -171,10 +198,37 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      * DataIntegrations with external knowledge bases such as Salesforce and ServiceNow. If you do, you'll get an
      * <code>InvalidRequestException</code> error.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;For example, you're programmatically managing your external knowledge base, and you want to add or remove one of the fields that is being ingested from Salesforce. Do the following:&lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt;Call &lt;a href=&quot;https://docs.aws.amazon.com/wisdom/latest/APIReference/API_DeleteKnowledgeBase.html&quot;&gt;DeleteKnowledgeBase&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Call &lt;a href=&quot;https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteDataIntegration.html&quot;&gt;DeleteDataIntegration&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Call &lt;a href=&quot;https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html&quot;&gt;CreateDataIntegration&lt;/a&gt; to recreate the DataIntegration or a create different one.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Call CreateKnowledgeBase.&lt;/p&gt; &lt;/li&gt; &lt;/ol&gt; &lt;/note&gt; </code>
-     * </pre>
+     * <p>
+     * For example, you're programmatically managing your external knowledge base, and you want to add or remove one of
+     * the fields that is being ingested from Salesforce. Do the following:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Call <a
+     * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_DeleteKnowledgeBase.html">DeleteKnowledgeBase
+     * </a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Call <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteDataIntegration.html">
+     * DeleteDataIntegration</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Call <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">
+     * CreateDataIntegration</a> to recreate the DataIntegration or a create different one.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Call CreateKnowledgeBase.
+     * </p>
+     * </li>
+     * </ol>
+     * </note>
      * 
      * @param createKnowledgeBaseRequest
      * @param asyncHandler

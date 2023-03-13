@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Metadata related to a network operation occurence.
+ * Metadata related to a network operation occurrence.
  * </p>
  * <p>
  * A network operation is any operation that is done to your network, such as network instance instantiation or

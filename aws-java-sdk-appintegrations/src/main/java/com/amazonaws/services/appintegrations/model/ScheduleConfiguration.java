@@ -30,7 +30,8 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The start date for objects to import in the first flow run.
+     * The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or in
+     * ISO-8601 format.
      * </p>
      */
     private String firstExecutionFrom;
@@ -49,11 +50,13 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The start date for objects to import in the first flow run.
+     * The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or in
+     * ISO-8601 format.
      * </p>
      * 
      * @param firstExecutionFrom
-     *        The start date for objects to import in the first flow run.
+     *        The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or
+     *        in ISO-8601 format.
      */
 
     public void setFirstExecutionFrom(String firstExecutionFrom) {
@@ -62,10 +65,12 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The start date for objects to import in the first flow run.
+     * The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or in
+     * ISO-8601 format.
      * </p>
      * 
-     * @return The start date for objects to import in the first flow run.
+     * @return The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or
+     *         in ISO-8601 format.
      */
 
     public String getFirstExecutionFrom() {
@@ -74,11 +79,13 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The start date for objects to import in the first flow run.
+     * The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or in
+     * ISO-8601 format.
      * </p>
      * 
      * @param firstExecutionFrom
-     *        The start date for objects to import in the first flow run.
+     *        The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or
+     *        in ISO-8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

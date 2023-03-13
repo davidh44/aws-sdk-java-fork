@@ -18,8 +18,8 @@ import javax.annotation.Generated;
 /**
  * <p>
  * Contains the configuration parameters for a PUT Copy object operation. S3 Batch Operations passes every object to the
- * underlying PUT Copy object API. For more information about the parameters for this operation, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectCOPY.html">PUT Object - Copy</a>.
+ * underlying <code>CopyObject</code> API operation. For more information about the parameters for this operation, see
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectCOPY.html">CopyObject</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/S3CopyObjectOperation" target="_top">AWS
@@ -30,8 +30,8 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a bucket named
-     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
+     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
      */
@@ -71,8 +71,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     private String sSEAwsKmsKeyId;
     /**
      * <p>
-     * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
+     * Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects into a
+     * folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code> property to
+     * <code>Folder1</code>.
      * </p>
      */
     private String targetKeyPrefix;
@@ -108,7 +109,7 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     private Boolean bucketKeyEnabled;
     /**
      * <p>
-     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
@@ -117,15 +118,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a bucket named
-     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
+     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
      * 
      * @param targetResource
-     *        Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a
-     *        bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
-     *        <code>arn:aws:s3:::destinationBucket</code>.
+     *        Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to
+     *        copy objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code>
+     *        property to <code>arn:aws:s3:::destinationBucket</code>.
      */
 
     public void setTargetResource(String targetResource) {
@@ -134,14 +135,14 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a bucket named
-     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
+     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
      * 
-     * @return Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a
-     *         bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
-     *         <code>arn:aws:s3:::destinationBucket</code>.
+     * @return Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to
+     *         copy objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code>
+     *         property to <code>arn:aws:s3:::destinationBucket</code>.
      */
 
     public String getTargetResource() {
@@ -150,15 +151,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a bucket named
-     * <code>destinationBucket</code>, set the <code>TargetResource</code> property to
+     * Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to copy
+     * objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
      * <code>arn:aws:s3:::destinationBucket</code>.
      * </p>
      * 
      * @param targetResource
-     *        Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a
-     *        bucket named <code>destinationBucket</code>, set the <code>TargetResource</code> property to
-     *        <code>arn:aws:s3:::destinationBucket</code>.
+     *        Specifies the destination bucket Amazon Resource Name (ARN) for the batch copy operation. For example, to
+     *        copy objects to a bucket named <code>destinationBucket</code>, set the <code>TargetResource</code>
+     *        property to <code>arn:aws:s3:::destinationBucket</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -670,14 +671,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
+     * Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects into a
+     * folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code> property to
+     * <code>Folder1</code>.
      * </p>
      * 
      * @param targetKeyPrefix
-     *        Specifies the folder prefix into which you would like the objects to be copied. For example, to copy
-     *        objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to
-     *        <code>Folder1</code>.
+     *        Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects into
+     *        a folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code>
+     *        property to <code>Folder1</code>.
      */
 
     public void setTargetKeyPrefix(String targetKeyPrefix) {
@@ -686,13 +688,14 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
+     * Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects into a
+     * folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code> property to
+     * <code>Folder1</code>.
      * </p>
      * 
-     * @return Specifies the folder prefix into which you would like the objects to be copied. For example, to copy
-     *         objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to
-     *         <code>Folder1</code>.
+     * @return Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects
+     *         into a folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code>
+     *         property to <code>Folder1</code>.
      */
 
     public String getTargetKeyPrefix() {
@@ -701,14 +704,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into
-     * a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to <code>Folder1</code>.
+     * Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects into a
+     * folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code> property to
+     * <code>Folder1</code>.
      * </p>
      * 
      * @param targetKeyPrefix
-     *        Specifies the folder prefix into which you would like the objects to be copied. For example, to copy
-     *        objects into a folder named <code>Folder1</code> in the destination bucket, set the TargetKeyPrefix to
-     *        <code>Folder1</code>.
+     *        Specifies the folder prefix that you want the objects to be copied into. For example, to copy objects into
+     *        a folder named <code>Folder1</code> in the destination bucket, set the <code>TargetKeyPrefix</code>
+     *        property to <code>Folder1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -976,15 +980,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param checksumAlgorithm
-     *        Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
-     *        integrity</a> in the <i>Amazon S3 User Guide</i>.
+     *        Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *        object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @see S3ChecksumAlgorithm
      */
 
@@ -994,14 +998,14 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
-     * @return Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
-     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
-     *         integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * @return Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *         object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @see S3ChecksumAlgorithm
      */
 
@@ -1011,15 +1015,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param checksumAlgorithm
-     *        Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
-     *        integrity</a> in the <i>Amazon S3 User Guide</i>.
+     *        Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *        object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ChecksumAlgorithm
      */
@@ -1031,15 +1035,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param checksumAlgorithm
-     *        Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
-     *        integrity</a> in the <i>Amazon S3 User Guide</i>.
+     *        Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *        object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ChecksumAlgorithm
      */

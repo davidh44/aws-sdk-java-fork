@@ -111,6 +111,11 @@ public class CreateMultiRegionAccessPointRequestMarshaller implements
                                 if (createMultiRegionAccessPointInputRegionsListValue.getBucket() != null) {
                                     xmlWriter.startElement("Bucket").value(createMultiRegionAccessPointInputRegionsListValue.getBucket()).endElement();
                                 }
+
+                                if (createMultiRegionAccessPointInputRegionsListValue.getBucketAccountId() != null) {
+                                    xmlWriter.startElement("BucketAccountId").value(createMultiRegionAccessPointInputRegionsListValue.getBucketAccountId())
+                                            .endElement();
+                                }
                                 xmlWriter.endElement();
                             }
                             xmlWriter.endElement();

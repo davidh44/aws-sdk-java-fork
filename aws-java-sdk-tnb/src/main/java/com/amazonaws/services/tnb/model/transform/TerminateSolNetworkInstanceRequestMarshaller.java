@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.tnb.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +31,8 @@ public class TerminateSolNetworkInstanceRequestMarshaller {
 
     private static final MarshallingInfo<String> NSINSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("nsInstanceId").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final TerminateSolNetworkInstanceRequestMarshaller instance = new TerminateSolNetworkInstanceRequestMarshaller();
 
@@ -47,6 +51,7 @@ public class TerminateSolNetworkInstanceRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(terminateSolNetworkInstanceRequest.getNsInstanceId(), NSINSTANCEID_BINDING);
+            protocolMarshaller.marshall(terminateSolNetworkInstanceRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

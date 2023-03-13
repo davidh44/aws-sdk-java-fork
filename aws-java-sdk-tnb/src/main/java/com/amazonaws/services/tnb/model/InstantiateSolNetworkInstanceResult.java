@@ -26,18 +26,26 @@ public class InstantiateSolNetworkInstanceResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the network instance.
+     * The identifier of the network operation.
      * </p>
      */
     private String nsLcmOpOccId;
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The identifier of the network instance.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The identifier of the network instance.
+     *        The identifier of the network operation.
      */
 
     public void setNsLcmOpOccId(String nsLcmOpOccId) {
@@ -46,10 +54,10 @@ public class InstantiateSolNetworkInstanceResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the network instance.
+     * The identifier of the network operation.
      * </p>
      * 
-     * @return The identifier of the network instance.
+     * @return The identifier of the network operation.
      */
 
     public String getNsLcmOpOccId() {
@@ -58,16 +66,96 @@ public class InstantiateSolNetworkInstanceResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the network instance.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The identifier of the network instance.
+     *        The identifier of the network operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public InstantiateSolNetworkInstanceResult withNsLcmOpOccId(String nsLcmOpOccId) {
         setNsLcmOpOccId(nsLcmOpOccId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @return A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *         optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *         Use tags to search and filter your resources or track your Amazon Web Services costs.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @param tags
+     *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @param tags
+     *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstantiateSolNetworkInstanceResult withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see InstantiateSolNetworkInstanceResult#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstantiateSolNetworkInstanceResult addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstantiateSolNetworkInstanceResult clearTagsEntries() {
+        this.tags = null;
         return this;
     }
 
@@ -84,7 +172,9 @@ public class InstantiateSolNetworkInstanceResult extends com.amazonaws.AmazonWeb
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getNsLcmOpOccId() != null)
-            sb.append("NsLcmOpOccId: ").append(getNsLcmOpOccId());
+            sb.append("NsLcmOpOccId: ").append(getNsLcmOpOccId()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -103,6 +193,10 @@ public class InstantiateSolNetworkInstanceResult extends com.amazonaws.AmazonWeb
             return false;
         if (other.getNsLcmOpOccId() != null && other.getNsLcmOpOccId().equals(this.getNsLcmOpOccId()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -112,6 +206,7 @@ public class InstantiateSolNetworkInstanceResult extends com.amazonaws.AmazonWeb
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getNsLcmOpOccId() == null) ? 0 : getNsLcmOpOccId().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

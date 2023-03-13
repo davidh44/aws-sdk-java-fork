@@ -47,6 +47,11 @@ public class RegionStaxUnmarshaller implements Unmarshaller<Region, StaxUnmarsha
                     region.setBucket(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("BucketAccountId", targetDepth)) {
+                    region.setBucketAccountId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return region;

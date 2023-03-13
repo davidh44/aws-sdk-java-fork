@@ -48,7 +48,7 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The permissions revoked to the principal on the resource. For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      */
@@ -196,12 +196,12 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The permissions revoked to the principal on the resource. For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
      * @return The permissions revoked to the principal on the resource. For information about permissions, see <a
-     *         href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
+     *         href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
      *         Control to Metadata and Data</a>.
      * @see Permission
      */
@@ -213,13 +213,13 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The permissions revoked to the principal on the resource. For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
      * @param permissions
      *        The permissions revoked to the principal on the resource. For information about permissions, see <a
-     *        href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
      *        Control to Metadata and Data</a>.
      * @see Permission
      */
@@ -236,7 +236,7 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The permissions revoked to the principal on the resource. For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * <p>
@@ -247,7 +247,7 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param permissions
      *        The permissions revoked to the principal on the resource. For information about permissions, see <a
-     *        href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
      *        Control to Metadata and Data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Permission
@@ -266,13 +266,13 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The permissions revoked to the principal on the resource. For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
      * @param permissions
      *        The permissions revoked to the principal on the resource. For information about permissions, see <a
-     *        href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
      *        Control to Metadata and Data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Permission
@@ -286,13 +286,13 @@ public class RevokePermissionsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The permissions revoked to the principal on the resource. For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
      * @param permissions
      *        The permissions revoked to the principal on the resource. For information about permissions, see <a
-     *        href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access
      *        Control to Metadata and Data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Permission

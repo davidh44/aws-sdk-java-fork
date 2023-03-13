@@ -31,6 +31,14 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private String nsInstanceId;
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -73,6 +81,86 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @return A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *         optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *         Use tags to search and filter your resources or track your Amazon Web Services costs.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @param tags
+     *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @param tags
+     *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TerminateSolNetworkInstanceRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see TerminateSolNetworkInstanceRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TerminateSolNetworkInstanceRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TerminateSolNetworkInstanceRequest clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -85,7 +173,9 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getNsInstanceId() != null)
-            sb.append("NsInstanceId: ").append(getNsInstanceId());
+            sb.append("NsInstanceId: ").append(getNsInstanceId()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -104,6 +194,10 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getNsInstanceId() != null && other.getNsInstanceId().equals(this.getNsInstanceId()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -113,6 +207,7 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getNsInstanceId() == null) ? 0 : getNsInstanceId().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

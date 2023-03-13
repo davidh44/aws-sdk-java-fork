@@ -27,18 +27,18 @@ public class CancelSolNetworkOperationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of a network operation occurrence.
+     * The identifier of the network operation.
      * </p>
      */
     private String nsLcmOpOccId;
 
     /**
      * <p>
-     * The ID of a network operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The ID of a network operation occurrence.
+     *        The identifier of the network operation.
      */
 
     public void setNsLcmOpOccId(String nsLcmOpOccId) {
@@ -47,10 +47,10 @@ public class CancelSolNetworkOperationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of a network operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
-     * @return The ID of a network operation occurrence.
+     * @return The identifier of the network operation.
      */
 
     public String getNsLcmOpOccId() {
@@ -59,11 +59,11 @@ public class CancelSolNetworkOperationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of a network operation occurrence.
+     * The identifier of the network operation.
      * </p>
      * 
      * @param nsLcmOpOccId
-     *        The ID of a network operation occurrence.
+     *        The identifier of the network operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

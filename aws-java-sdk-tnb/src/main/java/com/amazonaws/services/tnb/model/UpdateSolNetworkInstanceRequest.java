@@ -33,6 +33,14 @@ public class UpdateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebServ
     private String nsInstanceId;
     /**
      * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
+    /**
+     * <p>
      * The type of update.
      * </p>
      */
@@ -75,6 +83,86 @@ public class UpdateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebServ
 
     public UpdateSolNetworkInstanceRequest withNsInstanceId(String nsInstanceId) {
         setNsInstanceId(nsInstanceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @return A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *         optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *         Use tags to search and filter your resources or track your Amazon Web Services costs.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @param tags
+     *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
+     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
+     * search and filter your resources or track your Amazon Web Services costs.
+     * </p>
+     * 
+     * @param tags
+     *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
+     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
+     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateSolNetworkInstanceRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see UpdateSolNetworkInstanceRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateSolNetworkInstanceRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateSolNetworkInstanceRequest clearTagsEntries() {
+        this.tags = null;
         return this;
     }
 
@@ -151,6 +239,8 @@ public class UpdateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebServ
         sb.append("{");
         if (getNsInstanceId() != null)
             sb.append("NsInstanceId: ").append(getNsInstanceId()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getUpdateType() != null)
             sb.append("UpdateType: ").append(getUpdateType());
         sb.append("}");
@@ -171,6 +261,10 @@ public class UpdateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getNsInstanceId() != null && other.getNsInstanceId().equals(this.getNsInstanceId()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         if (other.getUpdateType() == null ^ this.getUpdateType() == null)
             return false;
         if (other.getUpdateType() != null && other.getUpdateType().equals(this.getUpdateType()) == false)
@@ -184,6 +278,7 @@ public class UpdateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebServ
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getNsInstanceId() == null) ? 0 : getNsInstanceId().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getUpdateType() == null) ? 0 : getUpdateType().hashCode());
         return hashCode;
     }

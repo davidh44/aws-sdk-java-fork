@@ -31,7 +31,7 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
     private String arn;
     /**
      * <p>
-     * Error related to this specific network operation occurence.
+     * Error related to this specific network operation occurrence.
      * </p>
      */
     private ProblemDetails error;
@@ -121,11 +121,11 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Error related to this specific network operation occurence.
+     * Error related to this specific network operation occurrence.
      * </p>
      * 
      * @param error
-     *        Error related to this specific network operation occurence.
+     *        Error related to this specific network operation occurrence.
      */
 
     public void setError(ProblemDetails error) {
@@ -134,10 +134,10 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Error related to this specific network operation occurence.
+     * Error related to this specific network operation occurrence.
      * </p>
      * 
-     * @return Error related to this specific network operation occurence.
+     * @return Error related to this specific network operation occurrence.
      */
 
     public ProblemDetails getError() {
@@ -146,11 +146,11 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Error related to this specific network operation occurence.
+     * Error related to this specific network operation occurrence.
      * </p>
      * 
      * @param error
-     *        Error related to this specific network operation occurence.
+     *        Error related to this specific network operation occurrence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

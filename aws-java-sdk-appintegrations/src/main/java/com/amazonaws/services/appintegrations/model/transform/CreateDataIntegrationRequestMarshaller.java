@@ -46,6 +46,10 @@ public class CreateDataIntegrationRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> FILECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FileConfiguration").build();
+    private static final MarshallingInfo<Map> OBJECTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ObjectConfiguration").build();
 
     private static final CreateDataIntegrationRequestMarshaller instance = new CreateDataIntegrationRequestMarshaller();
 
@@ -70,6 +74,8 @@ public class CreateDataIntegrationRequestMarshaller {
             protocolMarshaller.marshall(createDataIntegrationRequest.getScheduleConfig(), SCHEDULECONFIG_BINDING);
             protocolMarshaller.marshall(createDataIntegrationRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createDataIntegrationRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(createDataIntegrationRequest.getFileConfiguration(), FILECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createDataIntegrationRequest.getObjectConfiguration(), OBJECTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -88,6 +88,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public DeleteBucketReplicationResult deleteBucketReplication(DeleteBucketReplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteBucketTaggingResult deleteBucketTagging(DeleteBucketTaggingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -174,6 +179,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public GetBucketPolicyResult getBucketPolicy(GetBucketPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetBucketReplicationResult getBucketReplication(GetBucketReplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -279,6 +289,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public PutBucketPolicyResult putBucketPolicy(PutBucketPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutBucketReplicationResult putBucketReplication(PutBucketReplicationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

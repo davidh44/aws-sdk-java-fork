@@ -35,7 +35,7 @@ public class TerminateSolNetworkInstanceRequestProtocolMarshaller implements
 
     private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
             .requestUri("/sol/nslcm/v1/ns_instances/{nsInstanceId}/terminate").httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false)
-            .hasPayloadMembers(false).serviceName("AWSTnb").build();
+            .hasPayloadMembers(true).serviceName("AWSTnb").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 
