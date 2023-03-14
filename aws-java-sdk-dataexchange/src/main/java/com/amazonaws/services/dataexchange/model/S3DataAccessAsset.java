@@ -60,6 +60,14 @@ public class S3DataAccessAsset implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String s3AccessPointArn;
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these shared S3
+     * objects.
+     * </p>
+     */
+    private java.util.List<KmsKeyToGrant> kmsKeysToGrant;
 
     /**
      * <p>
@@ -334,6 +342,92 @@ public class S3DataAccessAsset implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these shared S3
+     * objects.
+     * </p>
+     * 
+     * @return List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *         being shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these
+     *         shared S3 objects.
+     */
+
+    public java.util.List<KmsKeyToGrant> getKmsKeysToGrant() {
+        return kmsKeysToGrant;
+    }
+
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these shared S3
+     * objects.
+     * </p>
+     * 
+     * @param kmsKeysToGrant
+     *        List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *        being shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these
+     *        shared S3 objects.
+     */
+
+    public void setKmsKeysToGrant(java.util.Collection<KmsKeyToGrant> kmsKeysToGrant) {
+        if (kmsKeysToGrant == null) {
+            this.kmsKeysToGrant = null;
+            return;
+        }
+
+        this.kmsKeysToGrant = new java.util.ArrayList<KmsKeyToGrant>(kmsKeysToGrant);
+    }
+
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these shared S3
+     * objects.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setKmsKeysToGrant(java.util.Collection)} or {@link #withKmsKeysToGrant(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param kmsKeysToGrant
+     *        List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *        being shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these
+     *        shared S3 objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3DataAccessAsset withKmsKeysToGrant(KmsKeyToGrant... kmsKeysToGrant) {
+        if (this.kmsKeysToGrant == null) {
+            setKmsKeysToGrant(new java.util.ArrayList<KmsKeyToGrant>(kmsKeysToGrant.length));
+        }
+        for (KmsKeyToGrant ele : kmsKeysToGrant) {
+            this.kmsKeysToGrant.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these shared S3
+     * objects.
+     * </p>
+     * 
+     * @param kmsKeysToGrant
+     *        List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *        being shared in this S3 Data Access asset. Providers must include all AWS KMS keys used to encrypt these
+     *        shared S3 objects.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3DataAccessAsset withKmsKeysToGrant(java.util.Collection<KmsKeyToGrant> kmsKeysToGrant) {
+        setKmsKeysToGrant(kmsKeysToGrant);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -354,7 +448,9 @@ public class S3DataAccessAsset implements Serializable, Cloneable, StructuredPoj
         if (getS3AccessPointAlias() != null)
             sb.append("S3AccessPointAlias: ").append(getS3AccessPointAlias()).append(",");
         if (getS3AccessPointArn() != null)
-            sb.append("S3AccessPointArn: ").append(getS3AccessPointArn());
+            sb.append("S3AccessPointArn: ").append(getS3AccessPointArn()).append(",");
+        if (getKmsKeysToGrant() != null)
+            sb.append("KmsKeysToGrant: ").append(getKmsKeysToGrant());
         sb.append("}");
         return sb.toString();
     }
@@ -389,6 +485,10 @@ public class S3DataAccessAsset implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getS3AccessPointArn() != null && other.getS3AccessPointArn().equals(this.getS3AccessPointArn()) == false)
             return false;
+        if (other.getKmsKeysToGrant() == null ^ this.getKmsKeysToGrant() == null)
+            return false;
+        if (other.getKmsKeysToGrant() != null && other.getKmsKeysToGrant().equals(this.getKmsKeysToGrant()) == false)
+            return false;
         return true;
     }
 
@@ -402,6 +502,7 @@ public class S3DataAccessAsset implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getKeys() == null) ? 0 : getKeys().hashCode());
         hashCode = prime * hashCode + ((getS3AccessPointAlias() == null) ? 0 : getS3AccessPointAlias().hashCode());
         hashCode = prime * hashCode + ((getS3AccessPointArn() == null) ? 0 : getS3AccessPointArn().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeysToGrant() == null) ? 0 : getKmsKeysToGrant().hashCode());
         return hashCode;
     }
 

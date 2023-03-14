@@ -41,27 +41,39 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For each column to be added to the specified table:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>name</code> - The name of the column.
+     * <code>name</code> - The name of the column.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     * <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data types</a> in
      * the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<ColumnDefinition> addColumns;
     /**
      * <p>
      * Modifies the read/write throughput capacity mode for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code> and
+     * <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
      * <code>writeCapacityUnits</code> as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -76,14 +88,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     * <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
+     * <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
      * managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource Name
      * (ARN) format as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>AWS_OWNED_KMS_KEY</code>.
      * </p>
@@ -98,14 +116,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * If it's not specified, the default is <code>DISABLED</code>.
+     * If it's not specified, the default is <code>status=DISABLED</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -118,12 +142,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies Time to Live custom settings for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>status:enabled</code>
+     * <code>status:enabled</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>status:disabled</code>
+     * <code>status:disabled</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for the
      * table.
@@ -145,6 +175,23 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private Integer defaultTimeToLive;
+    /**
+     * <p>
+     * Enables client-side timestamps for the table. By default, the setting is disabled. You can enable client-side
+     * timestamps with the following option:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>status: "enabled"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     * </p>
+     */
+    private ClientSideTimestamps clientSideTimestamps;
 
     /**
      * <p>
@@ -230,23 +277,35 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For each column to be added to the specified table:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>name</code> - The name of the column.
+     * <code>name</code> - The name of the column.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     * <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data types</a> in
      * the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @return For each column to be added to the specified table:</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>name</code> - The name of the column.
+     *         <code>name</code> - The name of the column.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     *         <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      *         href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data
      *         types</a> in the <i>Amazon Keyspaces Developer Guide</i>.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<ColumnDefinition> getAddColumns() {
@@ -257,24 +316,36 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For each column to be added to the specified table:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>name</code> - The name of the column.
+     * <code>name</code> - The name of the column.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     * <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data types</a> in
      * the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param addColumns
      *        For each column to be added to the specified table:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>name</code> - The name of the column.
+     *        <code>name</code> - The name of the column.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     *        <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      *        href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data
      *        types</a> in the <i>Amazon Keyspaces Developer Guide</i>.
+     *        </p>
+     *        </li>
      */
 
     public void setAddColumns(java.util.Collection<ColumnDefinition> addColumns) {
@@ -290,14 +361,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For each column to be added to the specified table:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>name</code> - The name of the column.
+     * <code>name</code> - The name of the column.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     * <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data types</a> in
      * the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAddColumns(java.util.Collection)} or {@link #withAddColumns(java.util.Collection)} if you want to
@@ -306,13 +383,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param addColumns
      *        For each column to be added to the specified table:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>name</code> - The name of the column.
+     *        <code>name</code> - The name of the column.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     *        <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      *        href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data
      *        types</a> in the <i>Amazon Keyspaces Developer Guide</i>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -330,24 +413,36 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For each column to be added to the specified table:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>name</code> - The name of the column.
+     * <code>name</code> - The name of the column.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     * <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data types</a> in
      * the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param addColumns
      *        For each column to be added to the specified table:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>name</code> - The name of the column.
+     *        <code>name</code> - The name of the column.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
+     *        <code>type</code> - An Amazon Keyspaces data type. For more information, see <a
      *        href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cql.elements.html#cql.data-types">Data
      *        types</a> in the <i>Amazon Keyspaces Developer Guide</i>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -360,13 +455,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the read/write throughput capacity mode for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code> and
+     * <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
      * <code>writeCapacityUnits</code> as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -378,13 +479,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param capacitySpecification
      *        Modifies the read/write throughput capacity mode for the table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        <code>throughputMode:PAY_PER_REQUEST</code> and
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *        <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
      *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *        </p>
@@ -402,13 +509,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the read/write throughput capacity mode for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code> and
+     * <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
      * <code>writeCapacityUnits</code> as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -419,13 +532,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Modifies the read/write throughput capacity mode for the table. The options are:</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>throughputMode:PAY_PER_REQUEST</code> and
+     *         <code>throughputMode:PAY_PER_REQUEST</code> and
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *         <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
      *         <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *         </p>
@@ -443,13 +562,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the read/write throughput capacity mode for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code> and
+     * <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
      * <code>writeCapacityUnits</code> as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -461,13 +586,19 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param capacitySpecification
      *        Modifies the read/write throughput capacity mode for the table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        <code>throughputMode:PAY_PER_REQUEST</code> and
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *        <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
      *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *        </p>
@@ -487,14 +618,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     * <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
+     * <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
      * managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource Name
      * (ARN) format as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>AWS_OWNED_KMS_KEY</code>.
      * </p>
@@ -506,14 +643,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param encryptionSpecification
      *        Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     *        <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned,
-     *        and managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon
-     *        Resource Name (ARN) format as input.
+     *        <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
+     *        managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource
+     *        Name (ARN) format as input.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        The default is <code>AWS_OWNED_KMS_KEY</code>.
      *        </p>
@@ -531,14 +674,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     * <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
+     * <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
      * managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource Name
      * (ARN) format as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>AWS_OWNED_KMS_KEY</code>.
      * </p>
@@ -549,14 +698,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     *         <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned,
+     *         <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned,
      *         and managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon
      *         Resource Name (ARN) format as input.
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         The default is <code>AWS_OWNED_KMS_KEY</code>.
      *         </p>
@@ -574,14 +729,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     * <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
+     * <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
      * managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource Name
      * (ARN) format as input.
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>AWS_OWNED_KMS_KEY</code>.
      * </p>
@@ -593,14 +754,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param encryptionSpecification
      *        Modifies the encryption settings of the table. You can choose one of the following KMS key (KMS key):</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
+     *        <code>type:AWS_OWNED_KMS_KEY</code> - This key is owned by Amazon Keyspaces.
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned,
-     *        and managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon
-     *        Resource Name (ARN) format as input.
+     *        <code>type:CUSTOMER_MANAGED_KMS_KEY</code> - This key is stored in your account and is created, owned, and
+     *        managed by you. This option requires the <code>kms_key_identifier</code> of the KMS key in Amazon Resource
+     *        Name (ARN) format as input.
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        The default is <code>AWS_OWNED_KMS_KEY</code>.
      *        </p>
@@ -620,14 +787,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * If it's not specified, the default is <code>DISABLED</code>.
+     * If it's not specified, the default is <code>status=DISABLED</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -637,14 +810,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param pointInTimeRecovery
      *        Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>ENABLED</code>
+     *        <code>status=ENABLED</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>DISABLED</code>
+     *        <code>status=DISABLED</code>
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
-     *        If it's not specified, the default is <code>DISABLED</code>.
+     *        If it's not specified, the default is <code>status=DISABLED</code>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -660,14 +839,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * If it's not specified, the default is <code>DISABLED</code>.
+     * If it's not specified, the default is <code>status=DISABLED</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -676,14 +861,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>ENABLED</code>
+     *         <code>status=ENABLED</code>
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>DISABLED</code>
+     *         <code>status=DISABLED</code>
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
-     *         If it's not specified, the default is <code>DISABLED</code>.
+     *         If it's not specified, the default is <code>status=DISABLED</code>.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -699,14 +890,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
-     * If it's not specified, the default is <code>DISABLED</code>.
+     * If it's not specified, the default is <code>status=DISABLED</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -716,14 +913,20 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param pointInTimeRecovery
      *        Modifies the <code>pointInTimeRecovery</code> settings of the table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>ENABLED</code>
+     *        <code>status=ENABLED</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>DISABLED</code>
+     *        <code>status=DISABLED</code>
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
-     *        If it's not specified, the default is <code>DISABLED</code>.
+     *        If it's not specified, the default is <code>status=DISABLED</code>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -741,12 +944,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies Time to Live custom settings for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>status:enabled</code>
+     * <code>status:enabled</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>status:disabled</code>
+     * <code>status:disabled</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for the
      * table.
@@ -758,12 +967,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param ttl
      *        Modifies Time to Live custom settings for the table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>status:enabled</code>
+     *        <code>status:enabled</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>status:disabled</code>
+     *        <code>status:disabled</code>
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for
      *        the table.
@@ -782,12 +997,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies Time to Live custom settings for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>status:enabled</code>
+     * <code>status:enabled</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>status:disabled</code>
+     * <code>status:disabled</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for the
      * table.
@@ -798,12 +1019,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Modifies Time to Live custom settings for the table. The options are:</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>status:enabled</code>
+     *         <code>status:enabled</code>
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>status:disabled</code>
+     *         <code>status:disabled</code>
      *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for
      *         the table.
@@ -822,12 +1049,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Modifies Time to Live custom settings for the table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>status:enabled</code>
+     * <code>status:enabled</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>status:disabled</code>
+     * <code>status:disabled</code>
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for the
      * table.
@@ -839,12 +1072,18 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param ttl
      *        Modifies Time to Live custom settings for the table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>status:enabled</code>
+     *        <code>status:enabled</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>status:disabled</code>
+     *        <code>status:disabled</code>
      *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        The default is <code>status:disabled</code>. After <code>ttl</code> is enabled, you can't disable it for
      *        the table.
@@ -929,6 +1168,109 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Enables client-side timestamps for the table. By default, the setting is disabled. You can enable client-side
+     * timestamps with the following option:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>status: "enabled"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     * </p>
+     * 
+     * @param clientSideTimestamps
+     *        Enables client-side timestamps for the table. By default, the setting is disabled. You can enable
+     *        client-side timestamps with the following option:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>status: "enabled"</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     */
+
+    public void setClientSideTimestamps(ClientSideTimestamps clientSideTimestamps) {
+        this.clientSideTimestamps = clientSideTimestamps;
+    }
+
+    /**
+     * <p>
+     * Enables client-side timestamps for the table. By default, the setting is disabled. You can enable client-side
+     * timestamps with the following option:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>status: "enabled"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     * </p>
+     * 
+     * @return Enables client-side timestamps for the table. By default, the setting is disabled. You can enable
+     *         client-side timestamps with the following option:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>status: "enabled"</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     */
+
+    public ClientSideTimestamps getClientSideTimestamps() {
+        return this.clientSideTimestamps;
+    }
+
+    /**
+     * <p>
+     * Enables client-side timestamps for the table. By default, the setting is disabled. You can enable client-side
+     * timestamps with the following option:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>status: "enabled"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     * </p>
+     * 
+     * @param clientSideTimestamps
+     *        Enables client-side timestamps for the table. By default, the setting is disabled. You can enable
+     *        client-side timestamps with the following option:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>status: "enabled"</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Once client-side timestamps are enabled for a table, this setting cannot be disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTableRequest withClientSideTimestamps(ClientSideTimestamps clientSideTimestamps) {
+        setClientSideTimestamps(clientSideTimestamps);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -955,7 +1297,9 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTtl() != null)
             sb.append("Ttl: ").append(getTtl()).append(",");
         if (getDefaultTimeToLive() != null)
-            sb.append("DefaultTimeToLive: ").append(getDefaultTimeToLive());
+            sb.append("DefaultTimeToLive: ").append(getDefaultTimeToLive()).append(",");
+        if (getClientSideTimestamps() != null)
+            sb.append("ClientSideTimestamps: ").append(getClientSideTimestamps());
         sb.append("}");
         return sb.toString();
     }
@@ -1002,6 +1346,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getDefaultTimeToLive() != null && other.getDefaultTimeToLive().equals(this.getDefaultTimeToLive()) == false)
             return false;
+        if (other.getClientSideTimestamps() == null ^ this.getClientSideTimestamps() == null)
+            return false;
+        if (other.getClientSideTimestamps() != null && other.getClientSideTimestamps().equals(this.getClientSideTimestamps()) == false)
+            return false;
         return true;
     }
 
@@ -1018,6 +1366,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getPointInTimeRecovery() == null) ? 0 : getPointInTimeRecovery().hashCode());
         hashCode = prime * hashCode + ((getTtl() == null) ? 0 : getTtl().hashCode());
         hashCode = prime * hashCode + ((getDefaultTimeToLive() == null) ? 0 : getDefaultTimeToLive().hashCode());
+        hashCode = prime * hashCode + ((getClientSideTimestamps() == null) ? 0 : getClientSideTimestamps().hashCode());
         return hashCode;
     }
 

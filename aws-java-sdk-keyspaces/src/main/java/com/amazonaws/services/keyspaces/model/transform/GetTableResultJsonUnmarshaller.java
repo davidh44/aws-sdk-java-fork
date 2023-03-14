@@ -96,6 +96,10 @@ public class GetTableResultJsonUnmarshaller implements Unmarshaller<GetTableResu
                     context.nextToken();
                     getTableResult.setComment(CommentJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("clientSideTimestamps", targetDepth)) {
+                    context.nextToken();
+                    getTableResult.setClientSideTimestamps(ClientSideTimestampsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

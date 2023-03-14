@@ -75,7 +75,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
-     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> thumbprintList;
@@ -358,7 +358,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
-     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * </p>
      * 
      * @return A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server
@@ -379,7 +379,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *         <p>
      *         For more information about obtaining the OIDC provider thumbprint, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
-     *         >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     *         >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      */
 
     public java.util.List<String> getThumbprintList() {
@@ -408,7 +408,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
-     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * </p>
      * 
      * @param thumbprintList
@@ -429,7 +429,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For more information about obtaining the OIDC provider thumbprint, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
-     *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      */
 
     public void setThumbprintList(java.util.Collection<String> thumbprintList) {
@@ -460,7 +460,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
-     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -486,7 +486,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For more information about obtaining the OIDC provider thumbprint, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
-     *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -519,7 +519,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
-     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     * the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * </p>
      * 
      * @param thumbprintList
@@ -540,7 +540,7 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For more information about obtaining the OIDC provider thumbprint, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
-     *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
+     *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM user Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -48,6 +48,8 @@ public class CreateTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultTimeToLive").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> CLIENTSIDETIMESTAMPS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientSideTimestamps").build();
 
     private static final CreateTableRequestMarshaller instance = new CreateTableRequestMarshaller();
 
@@ -75,6 +77,7 @@ public class CreateTableRequestMarshaller {
             protocolMarshaller.marshall(createTableRequest.getTtl(), TTL_BINDING);
             protocolMarshaller.marshall(createTableRequest.getDefaultTimeToLive(), DEFAULTTIMETOLIVE_BINDING);
             protocolMarshaller.marshall(createTableRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createTableRequest.getClientSideTimestamps(), CLIENTSIDETIMESTAMPS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

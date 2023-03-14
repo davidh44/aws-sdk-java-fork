@@ -126,6 +126,11 @@ import com.amazonaws.services.applicationautoscaling.model.transform.*;
  * </li>
  * </ul>
  * <p>
+ * To learn more about Application Auto Scaling, see the <a
+ * href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html"
+ * >Application Auto Scaling User Guide</a>.
+ * </p>
+ * <p>
  * <b>API Summary</b>
  * </p>
  * <p>
@@ -155,12 +160,6 @@ import com.amazonaws.services.applicationautoscaling.model.transform.*;
  * </p>
  * </li>
  * </ul>
- * <p>
- * To learn more about Application Auto Scaling, including information about granting IAM users required permissions for
- * Application Auto Scaling actions, see the <a
- * href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html"
- * >Application Auto Scaling User Guide</a>.
- * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

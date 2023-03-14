@@ -47,6 +47,11 @@ public class DnsOptionsStaxUnmarshaller implements Unmarshaller<DnsOptions, Stax
                     dnsOptions.setDnsRecordIpType(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("privateDnsOnlyForInboundResolverEndpoint", targetDepth)) {
+                    dnsOptions.setPrivateDnsOnlyForInboundResolverEndpoint(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dnsOptions;

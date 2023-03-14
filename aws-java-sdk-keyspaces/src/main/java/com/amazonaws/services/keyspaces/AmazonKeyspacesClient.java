@@ -59,7 +59,8 @@ import com.amazonaws.services.keyspaces.model.transform.*;
  * <p>
  * In addition to supporting Cassandra Query Language (CQL) requests via open-source Cassandra drivers, Amazon Keyspaces
  * supports data definition language (DDL) operations to manage keyspaces and tables using the Amazon Web Services SDK
- * and CLI. This API reference describes the supported DDL operations in detail.
+ * and CLI, as well as infrastructure as code (IaC) services and tools such as CloudFormation and Terraform. This API
+ * reference describes the supported DDL operations in detail.
  * </p>
  * <p>
  * For the list of all supported CQL APIs, see <a
@@ -847,18 +848,28 @@ public class AmazonKeyspacesClient extends AmazonWebServiceClient implements Ama
      * <p>
      * You can also overwrite these settings during restore:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • Read/write capacity mode
+     * Read/write capacity mode
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • Provisioned throughput capacity settings
+     * Provisioned throughput capacity settings
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • Point-in-time (PITR) settings
+     * Point-in-time (PITR) settings
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • Tags
+     * Tags
      * </p>
+     * </li>
+     * </ul>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/keyspaces/latest/devguide/PointInTimeRecovery_HowItWorks.html#howitworks_backup_settings"
@@ -867,15 +878,23 @@ public class AmazonKeyspacesClient extends AmazonWebServiceClient implements Ama
      * <p>
      * Note that the following settings are not restored, and you must configure them manually for the new table:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • Automatic scaling policies (for tables that use provisioned capacity mode)
+     * Automatic scaling policies (for tables that use provisioned capacity mode)
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • Identity and Access Management (IAM) policies
+     * Identity and Access Management (IAM) policies
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • Amazon CloudWatch metrics and alarms
+     * Amazon CloudWatch metrics and alarms
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param restoreTableRequest
      * @return Result of the RestoreTable operation returned by the service.

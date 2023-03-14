@@ -72,6 +72,12 @@ public class S3DataAccessAssetJsonUnmarshaller implements Unmarshaller<S3DataAcc
                     context.nextToken();
                     s3DataAccessAsset.setS3AccessPointArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("KmsKeysToGrant", targetDepth)) {
+                    context.nextToken();
+                    s3DataAccessAsset.setKmsKeysToGrant(new ListUnmarshaller<KmsKeyToGrant>(KmsKeyToGrantJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -70,6 +70,13 @@ public class CustomizedMetricSpecificationJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     customizedMetricSpecification.setUnit(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Metrics", targetDepth)) {
+                    context.nextToken();
+                    customizedMetricSpecification.setMetrics(new ListUnmarshaller<TargetTrackingMetricDataQuery>(TargetTrackingMetricDataQueryJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

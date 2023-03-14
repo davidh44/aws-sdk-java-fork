@@ -63,12 +63,18 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code>
+     * <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code>
+     * <code>throughputMode:PROVISIONED</code>
      * </p>
+     * </li>
+     * </ul>
      */
     private CapacitySpecificationSummary capacitySpecification;
     /**
@@ -91,7 +97,7 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private TimeToLive ttl;
     /**
      * <p>
-     * The default Time to Live settings of the specified table.
+     * The default Time to Live settings in seconds of the specified table.
      * </p>
      */
     private Integer defaultTimeToLive;
@@ -101,6 +107,12 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      */
     private Comment comment;
+    /**
+     * <p>
+     * The client-side timestamps setting of the table.
+     * </p>
+     */
+    private ClientSideTimestamps clientSideTimestamps;
 
     /**
      * <p>
@@ -365,20 +377,32 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code>
+     * <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code>
+     * <code>throughputMode:PROVISIONED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param capacitySpecification
      *        The read/write throughput capacity mode for a table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PAY_PER_REQUEST</code>
+     *        <code>throughputMode:PAY_PER_REQUEST</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PROVISIONED</code>
+     *        <code>throughputMode:PROVISIONED</code>
+     *        </p>
+     *        </li>
      */
 
     public void setCapacitySpecification(CapacitySpecificationSummary capacitySpecification) {
@@ -389,19 +413,31 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code>
+     * <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code>
+     * <code>throughputMode:PROVISIONED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @return The read/write throughput capacity mode for a table. The options are:</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>throughputMode:PAY_PER_REQUEST</code>
+     *         <code>throughputMode:PAY_PER_REQUEST</code>
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>throughputMode:PROVISIONED</code>
+     *         <code>throughputMode:PROVISIONED</code>
+     *         </p>
+     *         </li>
      */
 
     public CapacitySpecificationSummary getCapacitySpecification() {
@@ -412,20 +448,32 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>throughputMode:PAY_PER_REQUEST</code>
+     * <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>throughputMode:PROVISIONED</code>
+     * <code>throughputMode:PROVISIONED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param capacitySpecification
      *        The read/write throughput capacity mode for a table. The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PAY_PER_REQUEST</code>
+     *        <code>throughputMode:PAY_PER_REQUEST</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>throughputMode:PROVISIONED</code>
+     *        <code>throughputMode:PROVISIONED</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -556,11 +604,11 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The default Time to Live settings of the specified table.
+     * The default Time to Live settings in seconds of the specified table.
      * </p>
      * 
      * @param defaultTimeToLive
-     *        The default Time to Live settings of the specified table.
+     *        The default Time to Live settings in seconds of the specified table.
      */
 
     public void setDefaultTimeToLive(Integer defaultTimeToLive) {
@@ -569,10 +617,10 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The default Time to Live settings of the specified table.
+     * The default Time to Live settings in seconds of the specified table.
      * </p>
      * 
-     * @return The default Time to Live settings of the specified table.
+     * @return The default Time to Live settings in seconds of the specified table.
      */
 
     public Integer getDefaultTimeToLive() {
@@ -581,11 +629,11 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The default Time to Live settings of the specified table.
+     * The default Time to Live settings in seconds of the specified table.
      * </p>
      * 
      * @param defaultTimeToLive
-     *        The default Time to Live settings of the specified table.
+     *        The default Time to Live settings in seconds of the specified table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -635,6 +683,46 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     }
 
     /**
+     * <p>
+     * The client-side timestamps setting of the table.
+     * </p>
+     * 
+     * @param clientSideTimestamps
+     *        The client-side timestamps setting of the table.
+     */
+
+    public void setClientSideTimestamps(ClientSideTimestamps clientSideTimestamps) {
+        this.clientSideTimestamps = clientSideTimestamps;
+    }
+
+    /**
+     * <p>
+     * The client-side timestamps setting of the table.
+     * </p>
+     * 
+     * @return The client-side timestamps setting of the table.
+     */
+
+    public ClientSideTimestamps getClientSideTimestamps() {
+        return this.clientSideTimestamps;
+    }
+
+    /**
+     * <p>
+     * The client-side timestamps setting of the table.
+     * </p>
+     * 
+     * @param clientSideTimestamps
+     *        The client-side timestamps setting of the table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTableResult withClientSideTimestamps(ClientSideTimestamps clientSideTimestamps) {
+        setClientSideTimestamps(clientSideTimestamps);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -669,7 +757,9 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         if (getDefaultTimeToLive() != null)
             sb.append("DefaultTimeToLive: ").append(getDefaultTimeToLive()).append(",");
         if (getComment() != null)
-            sb.append("Comment: ").append(getComment());
+            sb.append("Comment: ").append(getComment()).append(",");
+        if (getClientSideTimestamps() != null)
+            sb.append("ClientSideTimestamps: ").append(getClientSideTimestamps());
         sb.append("}");
         return sb.toString();
     }
@@ -732,6 +822,10 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
             return false;
         if (other.getComment() != null && other.getComment().equals(this.getComment()) == false)
             return false;
+        if (other.getClientSideTimestamps() == null ^ this.getClientSideTimestamps() == null)
+            return false;
+        if (other.getClientSideTimestamps() != null && other.getClientSideTimestamps().equals(this.getClientSideTimestamps()) == false)
+            return false;
         return true;
     }
 
@@ -752,6 +846,7 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         hashCode = prime * hashCode + ((getTtl() == null) ? 0 : getTtl().hashCode());
         hashCode = prime * hashCode + ((getDefaultTimeToLive() == null) ? 0 : getDefaultTimeToLive().hashCode());
         hashCode = prime * hashCode + ((getComment() == null) ? 0 : getComment().hashCode());
+        hashCode = prime * hashCode + ((getClientSideTimestamps() == null) ? 0 : getClientSideTimestamps().hashCode());
         return hashCode;
     }
 

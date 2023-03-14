@@ -109,7 +109,7 @@ public class Role implements Serializable, Cloneable {
      * shorter if your Region began supporting these features within the last year. The role might have been used more
      * than 400 days ago. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     * >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     * >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      * </p>
      */
     private RoleLastUsed roleLastUsed;
@@ -651,7 +651,7 @@ public class Role implements Serializable, Cloneable {
      * shorter if your Region began supporting these features within the last year. The role might have been used more
      * than 400 days ago. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     * >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     * >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      * </p>
      * 
      * @param roleLastUsed
@@ -660,7 +660,7 @@ public class Role implements Serializable, Cloneable {
      *        period can be shorter if your Region began supporting these features within the last year. The role might
      *        have been used more than 400 days ago. For more information, see <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     *        >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     *        >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      */
 
     public void setRoleLastUsed(RoleLastUsed roleLastUsed) {
@@ -674,7 +674,7 @@ public class Role implements Serializable, Cloneable {
      * shorter if your Region began supporting these features within the last year. The role might have been used more
      * than 400 days ago. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     * >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     * >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      * </p>
      * 
      * @return Contains information about the last time that an IAM role was used. This includes the date and time and
@@ -682,7 +682,7 @@ public class Role implements Serializable, Cloneable {
      *         period can be shorter if your Region began supporting these features within the last year. The role might
      *         have been used more than 400 days ago. For more information, see <a href=
      *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     *         >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     *         >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      */
 
     public RoleLastUsed getRoleLastUsed() {
@@ -696,7 +696,7 @@ public class Role implements Serializable, Cloneable {
      * shorter if your Region began supporting these features within the last year. The role might have been used more
      * than 400 days ago. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     * >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     * >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      * </p>
      * 
      * @param roleLastUsed
@@ -705,7 +705,7 @@ public class Role implements Serializable, Cloneable {
      *        period can be shorter if your Region began supporting these features within the last year. The role might
      *        have been used more than 400 days ago. For more information, see <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#access-advisor_tracking-period"
-     *        >Regions where data is tracked</a> in the <i>IAM User Guide</i>.
+     *        >Regions where data is tracked</a> in the <i>IAM user Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

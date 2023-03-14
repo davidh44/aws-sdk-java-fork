@@ -50,6 +50,11 @@ public class CreateRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case.
      * For example, you cannot create resources named both "MyResource" and "myresource".
      * </p>
+     * <p>
+     * This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of
+     * characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of
+     * the following characters: _+=,.@-
+     * </p>
      */
     private String roleName;
     /**
@@ -261,12 +266,22 @@ public class CreateRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case.
      * For example, you cannot create resources named both "MyResource" and "myresource".
      * </p>
+     * <p>
+     * This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of
+     * characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of
+     * the following characters: _+=,.@-
+     * </p>
      * 
      * @param roleName
      *        The name of the role to create.</p>
      *        <p>
      *        IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by
      *        case. For example, you cannot create resources named both "MyResource" and "myresource".
+     *        </p>
+     *        <p>
+     *        This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string
+     *        of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also
+     *        include any of the following characters: _+=,.@-
      */
 
     public void setRoleName(String roleName) {
@@ -281,11 +296,21 @@ public class CreateRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case.
      * For example, you cannot create resources named both "MyResource" and "myresource".
      * </p>
+     * <p>
+     * This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of
+     * characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of
+     * the following characters: _+=,.@-
+     * </p>
      * 
      * @return The name of the role to create.</p>
      *         <p>
      *         IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by
      *         case. For example, you cannot create resources named both "MyResource" and "myresource".
+     *         </p>
+     *         <p>
+     *         This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string
+     *         of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also
+     *         include any of the following characters: _+=,.@-
      */
 
     public String getRoleName() {
@@ -300,12 +325,22 @@ public class CreateRoleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case.
      * For example, you cannot create resources named both "MyResource" and "myresource".
      * </p>
+     * <p>
+     * This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of
+     * characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of
+     * the following characters: _+=,.@-
+     * </p>
      * 
      * @param roleName
      *        The name of the role to create.</p>
      *        <p>
      *        IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by
      *        case. For example, you cannot create resources named both "MyResource" and "myresource".
+     *        </p>
+     *        <p>
+     *        This parameter allows (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string
+     *        of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also
+     *        include any of the following characters: _+=,.@-
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -38,12 +38,18 @@ public class PointInTimeRecovery implements Serializable, Cloneable, StructuredP
      * <p>
      * The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      */
     private String status;
 
@@ -51,20 +57,32 @@ public class PointInTimeRecovery implements Serializable, Cloneable, StructuredP
      * <p>
      * The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
      *        The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>ENABLED</code>
+     *        <code>status=ENABLED</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>DISABLED</code>
+     *        <code>status=DISABLED</code>
+     *        </p>
+     *        </li>
      * @see PointInTimeRecoveryStatus
      */
 
@@ -76,19 +94,31 @@ public class PointInTimeRecovery implements Serializable, Cloneable, StructuredP
      * <p>
      * The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @return The options are:</p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         • <code>ENABLED</code>
+     *         <code>status=ENABLED</code>
      *         </p>
+     *         </li>
+     *         <li>
      *         <p>
-     *         • <code>DISABLED</code>
+     *         <code>status=DISABLED</code>
+     *         </p>
+     *         </li>
      * @see PointInTimeRecoveryStatus
      */
 
@@ -100,20 +130,32 @@ public class PointInTimeRecovery implements Serializable, Cloneable, StructuredP
      * <p>
      * The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
      *        The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>ENABLED</code>
+     *        <code>status=ENABLED</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>DISABLED</code>
+     *        <code>status=DISABLED</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PointInTimeRecoveryStatus
      */
@@ -127,20 +169,32 @@ public class PointInTimeRecovery implements Serializable, Cloneable, StructuredP
      * <p>
      * The options are:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * • <code>ENABLED</code>
+     * <code>status=ENABLED</code>
      * </p>
+     * </li>
+     * <li>
      * <p>
-     * • <code>DISABLED</code>
+     * <code>status=DISABLED</code>
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
      *        The options are:</p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        • <code>ENABLED</code>
+     *        <code>status=ENABLED</code>
      *        </p>
+     *        </li>
+     *        <li>
      *        <p>
-     *        • <code>DISABLED</code>
+     *        <code>status=DISABLED</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PointInTimeRecoveryStatus
      */

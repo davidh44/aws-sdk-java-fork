@@ -46,6 +46,13 @@ public class S3DataAccessAssetSourceEntry implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.List<String> keys;
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset.
+     * </p>
+     */
+    private java.util.List<KmsKeyToGrant> kmsKeysToGrant;
 
     /**
      * <p>
@@ -228,6 +235,84 @@ public class S3DataAccessAssetSourceEntry implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset.
+     * </p>
+     * 
+     * @return List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *         being shared in this S3 Data Access asset.
+     */
+
+    public java.util.List<KmsKeyToGrant> getKmsKeysToGrant() {
+        return kmsKeysToGrant;
+    }
+
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset.
+     * </p>
+     * 
+     * @param kmsKeysToGrant
+     *        List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *        being shared in this S3 Data Access asset.
+     */
+
+    public void setKmsKeysToGrant(java.util.Collection<KmsKeyToGrant> kmsKeysToGrant) {
+        if (kmsKeysToGrant == null) {
+            this.kmsKeysToGrant = null;
+            return;
+        }
+
+        this.kmsKeysToGrant = new java.util.ArrayList<KmsKeyToGrant>(kmsKeysToGrant);
+    }
+
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setKmsKeysToGrant(java.util.Collection)} or {@link #withKmsKeysToGrant(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param kmsKeysToGrant
+     *        List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *        being shared in this S3 Data Access asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3DataAccessAssetSourceEntry withKmsKeysToGrant(KmsKeyToGrant... kmsKeysToGrant) {
+        if (this.kmsKeysToGrant == null) {
+            setKmsKeysToGrant(new java.util.ArrayList<KmsKeyToGrant>(kmsKeysToGrant.length));
+        }
+        for (KmsKeyToGrant ele : kmsKeysToGrant) {
+            this.kmsKeysToGrant.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects being
+     * shared in this S3 Data Access asset.
+     * </p>
+     * 
+     * @param kmsKeysToGrant
+     *        List of AWS KMS CMKs (Key Management System Customer Managed Keys) and ARNs used to encrypt S3 objects
+     *        being shared in this S3 Data Access asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3DataAccessAssetSourceEntry withKmsKeysToGrant(java.util.Collection<KmsKeyToGrant> kmsKeysToGrant) {
+        setKmsKeysToGrant(kmsKeysToGrant);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -244,7 +329,9 @@ public class S3DataAccessAssetSourceEntry implements Serializable, Cloneable, St
         if (getKeyPrefixes() != null)
             sb.append("KeyPrefixes: ").append(getKeyPrefixes()).append(",");
         if (getKeys() != null)
-            sb.append("Keys: ").append(getKeys());
+            sb.append("Keys: ").append(getKeys()).append(",");
+        if (getKmsKeysToGrant() != null)
+            sb.append("KmsKeysToGrant: ").append(getKmsKeysToGrant());
         sb.append("}");
         return sb.toString();
     }
@@ -271,6 +358,10 @@ public class S3DataAccessAssetSourceEntry implements Serializable, Cloneable, St
             return false;
         if (other.getKeys() != null && other.getKeys().equals(this.getKeys()) == false)
             return false;
+        if (other.getKmsKeysToGrant() == null ^ this.getKmsKeysToGrant() == null)
+            return false;
+        if (other.getKmsKeysToGrant() != null && other.getKmsKeysToGrant().equals(this.getKmsKeysToGrant()) == false)
+            return false;
         return true;
     }
 
@@ -282,6 +373,7 @@ public class S3DataAccessAssetSourceEntry implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getBucket() == null) ? 0 : getBucket().hashCode());
         hashCode = prime * hashCode + ((getKeyPrefixes() == null) ? 0 : getKeyPrefixes().hashCode());
         hashCode = prime * hashCode + ((getKeys() == null) ? 0 : getKeys().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeysToGrant() == null) ? 0 : getKmsKeysToGrant().hashCode());
         return hashCode;
     }
 

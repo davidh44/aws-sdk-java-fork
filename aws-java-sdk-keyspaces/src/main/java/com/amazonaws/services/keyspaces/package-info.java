@@ -21,7 +21,8 @@
  * <p>
  * In addition to supporting Cassandra Query Language (CQL) requests via open-source Cassandra drivers, Amazon Keyspaces
  * supports data definition language (DDL) operations to manage keyspaces and tables using the Amazon Web Services SDK
- * and CLI. This API reference describes the supported DDL operations in detail.
+ * and CLI, as well as infrastructure as code (IaC) services and tools such as CloudFormation and Terraform. This API
+ * reference describes the supported DDL operations in detail.
  * </p>
  * <p>
  * For the list of all supported CQL APIs, see <a

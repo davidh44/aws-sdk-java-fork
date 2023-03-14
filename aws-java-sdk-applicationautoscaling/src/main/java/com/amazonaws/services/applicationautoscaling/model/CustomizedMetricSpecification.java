@@ -48,13 +48,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * </ul>
  * <p>
- * For an example of how creating new metrics can be useful, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-using-sqs-queue.html">Scaling based on Amazon SQS</a>
- * in the <i>Amazon EC2 Auto Scaling User Guide</i>. This topic mentions Auto Scaling groups, but the same scenario for
- * Amazon SQS can apply to the target tracking scaling policies that you create for a Spot Fleet by using the
- * Application Auto Scaling API.
- * </p>
- * <p>
  * For more information about the CloudWatch terminology below, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">Amazon CloudWatch
  * concepts</a> in the <i>Amazon CloudWatch User Guide</i>.
@@ -106,6 +99,13 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
      * </p>
      */
     private String unit;
+    /**
+     * <p>
+     * The metrics to include in the target tracking scaling policy, as a metric data query. This can include both raw
+     * metric and metric math expressions.
+     * </p>
+     */
+    private java.util.List<TargetTrackingMetricDataQuery> metrics;
 
     /**
      * <p>
@@ -432,6 +432,84 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The metrics to include in the target tracking scaling policy, as a metric data query. This can include both raw
+     * metric and metric math expressions.
+     * </p>
+     * 
+     * @return The metrics to include in the target tracking scaling policy, as a metric data query. This can include
+     *         both raw metric and metric math expressions.
+     */
+
+    public java.util.List<TargetTrackingMetricDataQuery> getMetrics() {
+        return metrics;
+    }
+
+    /**
+     * <p>
+     * The metrics to include in the target tracking scaling policy, as a metric data query. This can include both raw
+     * metric and metric math expressions.
+     * </p>
+     * 
+     * @param metrics
+     *        The metrics to include in the target tracking scaling policy, as a metric data query. This can include
+     *        both raw metric and metric math expressions.
+     */
+
+    public void setMetrics(java.util.Collection<TargetTrackingMetricDataQuery> metrics) {
+        if (metrics == null) {
+            this.metrics = null;
+            return;
+        }
+
+        this.metrics = new java.util.ArrayList<TargetTrackingMetricDataQuery>(metrics);
+    }
+
+    /**
+     * <p>
+     * The metrics to include in the target tracking scaling policy, as a metric data query. This can include both raw
+     * metric and metric math expressions.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setMetrics(java.util.Collection)} or {@link #withMetrics(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param metrics
+     *        The metrics to include in the target tracking scaling policy, as a metric data query. This can include
+     *        both raw metric and metric math expressions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomizedMetricSpecification withMetrics(TargetTrackingMetricDataQuery... metrics) {
+        if (this.metrics == null) {
+            setMetrics(new java.util.ArrayList<TargetTrackingMetricDataQuery>(metrics.length));
+        }
+        for (TargetTrackingMetricDataQuery ele : metrics) {
+            this.metrics.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The metrics to include in the target tracking scaling policy, as a metric data query. This can include both raw
+     * metric and metric math expressions.
+     * </p>
+     * 
+     * @param metrics
+     *        The metrics to include in the target tracking scaling policy, as a metric data query. This can include
+     *        both raw metric and metric math expressions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomizedMetricSpecification withMetrics(java.util.Collection<TargetTrackingMetricDataQuery> metrics) {
+        setMetrics(metrics);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -452,7 +530,9 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
         if (getStatistic() != null)
             sb.append("Statistic: ").append(getStatistic()).append(",");
         if (getUnit() != null)
-            sb.append("Unit: ").append(getUnit());
+            sb.append("Unit: ").append(getUnit()).append(",");
+        if (getMetrics() != null)
+            sb.append("Metrics: ").append(getMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -487,6 +567,10 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
             return false;
         if (other.getUnit() != null && other.getUnit().equals(this.getUnit()) == false)
             return false;
+        if (other.getMetrics() == null ^ this.getMetrics() == null)
+            return false;
+        if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
+            return false;
         return true;
     }
 
@@ -500,6 +584,7 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getDimensions() == null) ? 0 : getDimensions().hashCode());
         hashCode = prime * hashCode + ((getStatistic() == null) ? 0 : getStatistic().hashCode());
         hashCode = prime * hashCode + ((getUnit() == null) ? 0 : getUnit().hashCode());
+        hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
         return hashCode;
     }
 

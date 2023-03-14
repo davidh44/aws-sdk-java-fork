@@ -144,6 +144,11 @@ public class ModifyVpcEndpointRequestMarshaller implements Marshaller<Request<Mo
             if (dnsOptions.getDnsRecordIpType() != null) {
                 request.addParameter("DnsOptions.DnsRecordIpType", StringUtils.fromString(dnsOptions.getDnsRecordIpType()));
             }
+
+            if (dnsOptions.getPrivateDnsOnlyForInboundResolverEndpoint() != null) {
+                request.addParameter("DnsOptions.PrivateDnsOnlyForInboundResolverEndpoint",
+                        StringUtils.fromBoolean(dnsOptions.getPrivateDnsOnlyForInboundResolverEndpoint()));
+            }
         }
 
         if (modifyVpcEndpointRequest.getPrivateDnsEnabled() != null) {

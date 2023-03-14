@@ -68,6 +68,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      * is stopped.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently being
+     * updated. This could be new CIDR blocks added or current CIDR blocks removed.
+     * </p>
+     * </li>
      * </ul>
      */
     private String associationState;
@@ -222,6 +228,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      * is stopped.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently being
+     * updated. This could be new CIDR blocks added or current CIDR blocks removed.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param associationState
@@ -248,6 +260,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      *        <code>disassociated</code>: The virtual private gateway or transit gateway is disassociated from the
      *        Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual private gateway or
      *        transit gateway is stopped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently
+     *        being updated. This could be new CIDR blocks added or current CIDR blocks removed.
      *        </p>
      *        </li>
      * @see DirectConnectGatewayAssociationState
@@ -285,6 +303,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      * is stopped.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently being
+     * updated. This could be new CIDR blocks added or current CIDR blocks removed.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The state of the association. The following are the possible values:</p>
@@ -311,6 +335,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      *         <code>disassociated</code>: The virtual private gateway or transit gateway is disassociated from the
      *         Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual private gateway or
      *         transit gateway is stopped.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently
+     *         being updated. This could be new CIDR blocks added or current CIDR blocks removed.
      *         </p>
      *         </li>
      * @see DirectConnectGatewayAssociationState
@@ -348,6 +378,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      * is stopped.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently being
+     * updated. This could be new CIDR blocks added or current CIDR blocks removed.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param associationState
@@ -374,6 +410,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      *        <code>disassociated</code>: The virtual private gateway or transit gateway is disassociated from the
      *        Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual private gateway or
      *        transit gateway is stopped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently
+     *        being updated. This could be new CIDR blocks added or current CIDR blocks removed.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -413,6 +455,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      * is stopped.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently being
+     * updated. This could be new CIDR blocks added or current CIDR blocks removed.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param associationState
@@ -439,6 +487,12 @@ public class DirectConnectGatewayAssociation implements Serializable, Cloneable,
      *        <code>disassociated</code>: The virtual private gateway or transit gateway is disassociated from the
      *        Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual private gateway or
      *        transit gateway is stopped.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently
+     *        being updated. This could be new CIDR blocks added or current CIDR blocks removed.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

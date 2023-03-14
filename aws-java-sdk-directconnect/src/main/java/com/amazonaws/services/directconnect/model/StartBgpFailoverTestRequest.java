@@ -42,7 +42,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * The time in minutes that the virtual interface failover test will last.
      * </p>
      * <p>
-     * Maximum value: 180 minutes (3 hours).
+     * Maximum value: 4,320 minutes (72 hours).
      * </p>
      * <p>
      * Default: 180 minutes (3 hours).
@@ -168,7 +168,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * The time in minutes that the virtual interface failover test will last.
      * </p>
      * <p>
-     * Maximum value: 180 minutes (3 hours).
+     * Maximum value: 4,320 minutes (72 hours).
      * </p>
      * <p>
      * Default: 180 minutes (3 hours).
@@ -177,7 +177,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * @param testDurationInMinutes
      *        The time in minutes that the virtual interface failover test will last.</p>
      *        <p>
-     *        Maximum value: 180 minutes (3 hours).
+     *        Maximum value: 4,320 minutes (72 hours).
      *        </p>
      *        <p>
      *        Default: 180 minutes (3 hours).
@@ -192,7 +192,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * The time in minutes that the virtual interface failover test will last.
      * </p>
      * <p>
-     * Maximum value: 180 minutes (3 hours).
+     * Maximum value: 4,320 minutes (72 hours).
      * </p>
      * <p>
      * Default: 180 minutes (3 hours).
@@ -200,7 +200,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @return The time in minutes that the virtual interface failover test will last.</p>
      *         <p>
-     *         Maximum value: 180 minutes (3 hours).
+     *         Maximum value: 4,320 minutes (72 hours).
      *         </p>
      *         <p>
      *         Default: 180 minutes (3 hours).
@@ -215,7 +215,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * The time in minutes that the virtual interface failover test will last.
      * </p>
      * <p>
-     * Maximum value: 180 minutes (3 hours).
+     * Maximum value: 4,320 minutes (72 hours).
      * </p>
      * <p>
      * Default: 180 minutes (3 hours).
@@ -224,7 +224,7 @@ public class StartBgpFailoverTestRequest extends com.amazonaws.AmazonWebServiceR
      * @param testDurationInMinutes
      *        The time in minutes that the virtual interface failover test will last.</p>
      *        <p>
-     *        Maximum value: 180 minutes (3 hours).
+     *        Maximum value: 4,320 minutes (72 hours).
      *        </p>
      *        <p>
      *        Default: 180 minutes (3 hours).

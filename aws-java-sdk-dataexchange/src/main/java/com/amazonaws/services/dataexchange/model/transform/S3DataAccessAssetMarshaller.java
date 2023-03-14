@@ -38,6 +38,8 @@ public class S3DataAccessAssetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3AccessPointAlias").build();
     private static final MarshallingInfo<String> S3ACCESSPOINTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3AccessPointArn").build();
+    private static final MarshallingInfo<List> KMSKEYSTOGRANT_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KmsKeysToGrant").build();
 
     private static final S3DataAccessAssetMarshaller instance = new S3DataAccessAssetMarshaller();
 
@@ -60,6 +62,7 @@ public class S3DataAccessAssetMarshaller {
             protocolMarshaller.marshall(s3DataAccessAsset.getKeys(), KEYS_BINDING);
             protocolMarshaller.marshall(s3DataAccessAsset.getS3AccessPointAlias(), S3ACCESSPOINTALIAS_BINDING);
             protocolMarshaller.marshall(s3DataAccessAsset.getS3AccessPointArn(), S3ACCESSPOINTARN_BINDING);
+            protocolMarshaller.marshall(s3DataAccessAsset.getKmsKeysToGrant(), KMSKEYSTOGRANT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -64,6 +64,12 @@ public class S3DataAccessAssetSourceEntryJsonUnmarshaller implements Unmarshalle
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("KmsKeysToGrant", targetDepth)) {
+                    context.nextToken();
+                    s3DataAccessAssetSourceEntry.setKmsKeysToGrant(new ListUnmarshaller<KmsKeyToGrant>(KmsKeyToGrantJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

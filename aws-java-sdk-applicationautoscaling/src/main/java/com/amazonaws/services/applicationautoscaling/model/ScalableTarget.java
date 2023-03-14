@@ -286,7 +286,11 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date creationTime;
-
+    /**
+     * <p>
+     * Specifies whether the scaling activities for a scalable target are in a suspended state.
+     * </p>
+     */
     private SuspendedState suspendedState;
 
     /**
@@ -2403,7 +2407,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether the scaling activities for a scalable target are in a suspended state.
+     * </p>
+     * 
      * @param suspendedState
+     *        Specifies whether the scaling activities for a scalable target are in a suspended state.
      */
 
     public void setSuspendedState(SuspendedState suspendedState) {
@@ -2411,7 +2420,11 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the scaling activities for a scalable target are in a suspended state.
+     * </p>
+     * 
+     * @return Specifies whether the scaling activities for a scalable target are in a suspended state.
      */
 
     public SuspendedState getSuspendedState() {
@@ -2419,7 +2432,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether the scaling activities for a scalable target are in a suspended state.
+     * </p>
+     * 
      * @param suspendedState
+     *        Specifies whether the scaling activities for a scalable target are in a suspended state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
