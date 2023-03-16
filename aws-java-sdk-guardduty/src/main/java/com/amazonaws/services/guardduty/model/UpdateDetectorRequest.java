@@ -53,7 +53,14 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      * </p>
      */
+    @Deprecated
     private DataSourceConfigurations dataSources;
+    /**
+     * <p>
+     * Provides the features that will be updated for the detector.
+     * </p>
+     */
+    private java.util.List<DetectorFeatureConfiguration> features;
 
     /**
      * <p>
@@ -223,7 +230,7 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Services Regions where GuardDuty is presently supported. For more information, see <a
      *        href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      */
-
+    @Deprecated
     public void setDataSources(DataSourceConfigurations dataSources) {
         this.dataSources = dataSources;
     }
@@ -244,7 +251,7 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
      *         Web Services Regions where GuardDuty is presently supported. For more information, see <a
      *         href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      */
-
+    @Deprecated
     public DataSourceConfigurations getDataSources() {
         return this.dataSources;
     }
@@ -267,9 +274,79 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
      *        href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions and endpoints</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateDetectorRequest withDataSources(DataSourceConfigurations dataSources) {
         setDataSources(dataSources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides the features that will be updated for the detector.
+     * </p>
+     * 
+     * @return Provides the features that will be updated for the detector.
+     */
+
+    public java.util.List<DetectorFeatureConfiguration> getFeatures() {
+        return features;
+    }
+
+    /**
+     * <p>
+     * Provides the features that will be updated for the detector.
+     * </p>
+     * 
+     * @param features
+     *        Provides the features that will be updated for the detector.
+     */
+
+    public void setFeatures(java.util.Collection<DetectorFeatureConfiguration> features) {
+        if (features == null) {
+            this.features = null;
+            return;
+        }
+
+        this.features = new java.util.ArrayList<DetectorFeatureConfiguration>(features);
+    }
+
+    /**
+     * <p>
+     * Provides the features that will be updated for the detector.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFeatures(java.util.Collection)} or {@link #withFeatures(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param features
+     *        Provides the features that will be updated for the detector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDetectorRequest withFeatures(DetectorFeatureConfiguration... features) {
+        if (this.features == null) {
+            setFeatures(new java.util.ArrayList<DetectorFeatureConfiguration>(features.length));
+        }
+        for (DetectorFeatureConfiguration ele : features) {
+            this.features.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides the features that will be updated for the detector.
+     * </p>
+     * 
+     * @param features
+     *        Provides the features that will be updated for the detector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDetectorRequest withFeatures(java.util.Collection<DetectorFeatureConfiguration> features) {
+        setFeatures(features);
         return this;
     }
 
@@ -292,7 +369,9 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getFindingPublishingFrequency() != null)
             sb.append("FindingPublishingFrequency: ").append(getFindingPublishingFrequency()).append(",");
         if (getDataSources() != null)
-            sb.append("DataSources: ").append(getDataSources());
+            sb.append("DataSources: ").append(getDataSources()).append(",");
+        if (getFeatures() != null)
+            sb.append("Features: ").append(getFeatures());
         sb.append("}");
         return sb.toString();
     }
@@ -323,6 +402,10 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getDataSources() != null && other.getDataSources().equals(this.getDataSources()) == false)
             return false;
+        if (other.getFeatures() == null ^ this.getFeatures() == null)
+            return false;
+        if (other.getFeatures() != null && other.getFeatures().equals(this.getFeatures()) == false)
+            return false;
         return true;
     }
 
@@ -335,6 +418,7 @@ public class UpdateDetectorRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getEnable() == null) ? 0 : getEnable().hashCode());
         hashCode = prime * hashCode + ((getFindingPublishingFrequency() == null) ? 0 : getFindingPublishingFrequency().hashCode());
         hashCode = prime * hashCode + ((getDataSources() == null) ? 0 : getDataSources().hashCode());
+        hashCode = prime * hashCode + ((getFeatures() == null) ? 0 : getFeatures().hashCode());
         return hashCode;
     }
 

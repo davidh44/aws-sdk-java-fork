@@ -52,6 +52,12 @@ public class UsageStatistics implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private java.util.List<UsageResourceResult> topResources;
+    /**
+     * <p>
+     * The usage statistic sum organized by feature.
+     * </p>
+     */
+    private java.util.List<UsageFeatureResult> sumByFeature;
 
     /**
      * <p>
@@ -338,6 +344,76 @@ public class UsageStatistics implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The usage statistic sum organized by feature.
+     * </p>
+     * 
+     * @return The usage statistic sum organized by feature.
+     */
+
+    public java.util.List<UsageFeatureResult> getSumByFeature() {
+        return sumByFeature;
+    }
+
+    /**
+     * <p>
+     * The usage statistic sum organized by feature.
+     * </p>
+     * 
+     * @param sumByFeature
+     *        The usage statistic sum organized by feature.
+     */
+
+    public void setSumByFeature(java.util.Collection<UsageFeatureResult> sumByFeature) {
+        if (sumByFeature == null) {
+            this.sumByFeature = null;
+            return;
+        }
+
+        this.sumByFeature = new java.util.ArrayList<UsageFeatureResult>(sumByFeature);
+    }
+
+    /**
+     * <p>
+     * The usage statistic sum organized by feature.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSumByFeature(java.util.Collection)} or {@link #withSumByFeature(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param sumByFeature
+     *        The usage statistic sum organized by feature.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UsageStatistics withSumByFeature(UsageFeatureResult... sumByFeature) {
+        if (this.sumByFeature == null) {
+            setSumByFeature(new java.util.ArrayList<UsageFeatureResult>(sumByFeature.length));
+        }
+        for (UsageFeatureResult ele : sumByFeature) {
+            this.sumByFeature.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The usage statistic sum organized by feature.
+     * </p>
+     * 
+     * @param sumByFeature
+     *        The usage statistic sum organized by feature.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UsageStatistics withSumByFeature(java.util.Collection<UsageFeatureResult> sumByFeature) {
+        setSumByFeature(sumByFeature);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -356,7 +432,9 @@ public class UsageStatistics implements Serializable, Cloneable, StructuredPojo 
         if (getSumByResource() != null)
             sb.append("SumByResource: ").append(getSumByResource()).append(",");
         if (getTopResources() != null)
-            sb.append("TopResources: ").append(getTopResources());
+            sb.append("TopResources: ").append(getTopResources()).append(",");
+        if (getSumByFeature() != null)
+            sb.append("SumByFeature: ").append(getSumByFeature());
         sb.append("}");
         return sb.toString();
     }
@@ -387,6 +465,10 @@ public class UsageStatistics implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getTopResources() != null && other.getTopResources().equals(this.getTopResources()) == false)
             return false;
+        if (other.getSumByFeature() == null ^ this.getSumByFeature() == null)
+            return false;
+        if (other.getSumByFeature() != null && other.getSumByFeature().equals(this.getSumByFeature()) == false)
+            return false;
         return true;
     }
 
@@ -399,6 +481,7 @@ public class UsageStatistics implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getSumByDataSource() == null) ? 0 : getSumByDataSource().hashCode());
         hashCode = prime * hashCode + ((getSumByResource() == null) ? 0 : getSumByResource().hashCode());
         hashCode = prime * hashCode + ((getTopResources() == null) ? 0 : getTopResources().hashCode());
+        hashCode = prime * hashCode + ((getSumByFeature() == null) ? 0 : getSumByFeature().hashCode());
         return hashCode;
     }
 

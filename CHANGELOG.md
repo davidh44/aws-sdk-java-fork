@@ -1,3 +1,16 @@
+# __1.12.429__ __2023-03-16__
+## __AWS Resource Explorer__
+  - ### Features
+    - Documentation updates for APIs.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Updated 9 APIs for feature enablement to reflect expansion of GuardDuty to features. Added new APIs and updated existing APIs to support RDS Protection GA.
+
+## __Amazon SageMaker Runtime__
+  - ### Features
+    - Documentation updates for SageMaker Runtime
+
 # __1.12.428__ __2023-03-15__
 ## __AWS S3 Control__
   - ### Features

@@ -392,8 +392,8 @@ public class AWSResourceExplorer2Client extends AmazonWebServiceClient implement
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         You tried to create a new view or index when one already exists, and you either didn't specify or
-     *         specified a different idempotency token as the original request.
+     *         The request failed because either you specified parameters that didn’t match the original request, or you
+     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
      * @throws ThrottlingException
      *         The request failed because you exceeded a rate limit for this operation. For more information, see <a
      *         href="https://docs.aws.amazon.com/arexug/mainline/quotas.html">Quotas for Resource Explorer</a>.
@@ -470,8 +470,8 @@ public class AWSResourceExplorer2Client extends AmazonWebServiceClient implement
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         You tried to create a new view or index when one already exists, and you either didn't specify or
-     *         specified a different idempotency token as the original request.
+     *         The request failed because either you specified parameters that didn’t match the original request, or you
+     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
      * @throws ServiceQuotaExceededException
      *         The request failed because it exceeds a service quota.
      * @throws UnauthorizedException
@@ -1341,8 +1341,8 @@ public class AWSResourceExplorer2Client extends AmazonWebServiceClient implement
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         You tried to create a new view or index when one already exists, and you either didn't specify or
-     *         specified a different idempotency token as the original request.
+     *         The request failed because either you specified parameters that didn’t match the original request, or you
+     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
      * @throws UnauthorizedException
      *         The principal making the request isn't permitted to perform the operation.
      * @throws ThrottlingException
@@ -1542,8 +1542,8 @@ public class AWSResourceExplorer2Client extends AmazonWebServiceClient implement
      *         You provided an invalid value for one of the operation's parameters. Check the syntax for the operation,
      *         and try again.
      * @throws ConflictException
-     *         You tried to create a new view or index when one already exists, and you either didn't specify or
-     *         specified a different idempotency token as the original request.
+     *         The request failed because either you specified parameters that didn’t match the original request, or you
+     *         attempted to create a view with a name that already exists in this Amazon Web Services Region.
      * @throws ServiceQuotaExceededException
      *         The request failed because it exceeds a service quota.
      * @throws ThrottlingException

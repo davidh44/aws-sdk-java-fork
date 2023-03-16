@@ -42,7 +42,20 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * Describes which data sources are enabled automatically for member accounts.
      * </p>
      */
+    @Deprecated
     private OrganizationDataSourceConfigurationsResult dataSources;
+    /**
+     * <p>
+     * A list of features that are configured for this organization.
+     * </p>
+     */
+    private java.util.List<OrganizationFeatureConfigurationResult> features;
+    /**
+     * <p>
+     * The pagination parameter to be used on the next list operation to retrieve more items.
+     * </p>
+     */
+    private String nextToken;
 
     /**
      * <p>
@@ -164,7 +177,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * @param dataSources
      *        Describes which data sources are enabled automatically for member accounts.
      */
-
+    @Deprecated
     public void setDataSources(OrganizationDataSourceConfigurationsResult dataSources) {
         this.dataSources = dataSources;
     }
@@ -176,7 +189,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * 
      * @return Describes which data sources are enabled automatically for member accounts.
      */
-
+    @Deprecated
     public OrganizationDataSourceConfigurationsResult getDataSources() {
         return this.dataSources;
     }
@@ -190,9 +203,119 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      *        Describes which data sources are enabled automatically for member accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public DescribeOrganizationConfigurationResult withDataSources(OrganizationDataSourceConfigurationsResult dataSources) {
         setDataSources(dataSources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of features that are configured for this organization.
+     * </p>
+     * 
+     * @return A list of features that are configured for this organization.
+     */
+
+    public java.util.List<OrganizationFeatureConfigurationResult> getFeatures() {
+        return features;
+    }
+
+    /**
+     * <p>
+     * A list of features that are configured for this organization.
+     * </p>
+     * 
+     * @param features
+     *        A list of features that are configured for this organization.
+     */
+
+    public void setFeatures(java.util.Collection<OrganizationFeatureConfigurationResult> features) {
+        if (features == null) {
+            this.features = null;
+            return;
+        }
+
+        this.features = new java.util.ArrayList<OrganizationFeatureConfigurationResult>(features);
+    }
+
+    /**
+     * <p>
+     * A list of features that are configured for this organization.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFeatures(java.util.Collection)} or {@link #withFeatures(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param features
+     *        A list of features that are configured for this organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeOrganizationConfigurationResult withFeatures(OrganizationFeatureConfigurationResult... features) {
+        if (this.features == null) {
+            setFeatures(new java.util.ArrayList<OrganizationFeatureConfigurationResult>(features.length));
+        }
+        for (OrganizationFeatureConfigurationResult ele : features) {
+            this.features.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of features that are configured for this organization.
+     * </p>
+     * 
+     * @param features
+     *        A list of features that are configured for this organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeOrganizationConfigurationResult withFeatures(java.util.Collection<OrganizationFeatureConfigurationResult> features) {
+        setFeatures(features);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The pagination parameter to be used on the next list operation to retrieve more items.
+     * </p>
+     * 
+     * @param nextToken
+     *        The pagination parameter to be used on the next list operation to retrieve more items.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The pagination parameter to be used on the next list operation to retrieve more items.
+     * </p>
+     * 
+     * @return The pagination parameter to be used on the next list operation to retrieve more items.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The pagination parameter to be used on the next list operation to retrieve more items.
+     * </p>
+     * 
+     * @param nextToken
+     *        The pagination parameter to be used on the next list operation to retrieve more items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeOrganizationConfigurationResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -213,7 +336,11 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
         if (getMemberAccountLimitReached() != null)
             sb.append("MemberAccountLimitReached: ").append(getMemberAccountLimitReached()).append(",");
         if (getDataSources() != null)
-            sb.append("DataSources: ").append(getDataSources());
+            sb.append("DataSources: ").append(getDataSources()).append(",");
+        if (getFeatures() != null)
+            sb.append("Features: ").append(getFeatures()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -240,6 +367,14 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
             return false;
         if (other.getDataSources() != null && other.getDataSources().equals(this.getDataSources()) == false)
             return false;
+        if (other.getFeatures() == null ^ this.getFeatures() == null)
+            return false;
+        if (other.getFeatures() != null && other.getFeatures().equals(this.getFeatures()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
         return true;
     }
 
@@ -251,6 +386,8 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
         hashCode = prime * hashCode + ((getMemberAccountLimitReached() == null) ? 0 : getMemberAccountLimitReached().hashCode());
         hashCode = prime * hashCode + ((getDataSources() == null) ? 0 : getDataSources().hashCode());
+        hashCode = prime * hashCode + ((getFeatures() == null) ? 0 : getFeatures().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

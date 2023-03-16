@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.guardduty.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +36,8 @@ public class UpdateDetectorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("findingPublishingFrequency").build();
     private static final MarshallingInfo<StructuredPojo> DATASOURCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSources").build();
+    private static final MarshallingInfo<List> FEATURES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("features").build();
 
     private static final UpdateDetectorRequestMarshaller instance = new UpdateDetectorRequestMarshaller();
 
@@ -56,6 +59,7 @@ public class UpdateDetectorRequestMarshaller {
             protocolMarshaller.marshall(updateDetectorRequest.getEnable(), ENABLE_BINDING);
             protocolMarshaller.marshall(updateDetectorRequest.getFindingPublishingFrequency(), FINDINGPUBLISHINGFREQUENCY_BINDING);
             protocolMarshaller.marshall(updateDetectorRequest.getDataSources(), DATASOURCES_BINDING);
+            protocolMarshaller.marshall(updateDetectorRequest.getFeatures(), FEATURES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

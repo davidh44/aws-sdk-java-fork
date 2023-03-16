@@ -61,6 +61,17 @@ public class DescribeOrganizationConfigurationResultJsonUnmarshaller implements 
                     describeOrganizationConfigurationResult.setDataSources(OrganizationDataSourceConfigurationsResultJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("features", targetDepth)) {
+                    context.nextToken();
+                    describeOrganizationConfigurationResult.setFeatures(new ListUnmarshaller<OrganizationFeatureConfigurationResult>(
+                            OrganizationFeatureConfigurationResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    describeOrganizationConfigurationResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

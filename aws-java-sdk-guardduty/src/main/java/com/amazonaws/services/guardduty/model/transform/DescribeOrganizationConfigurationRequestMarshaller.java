@@ -29,6 +29,10 @@ public class DescribeOrganizationConfigurationRequestMarshaller {
 
     private static final MarshallingInfo<String> DETECTORID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("detectorId").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
 
     private static final DescribeOrganizationConfigurationRequestMarshaller instance = new DescribeOrganizationConfigurationRequestMarshaller();
 
@@ -47,6 +51,8 @@ public class DescribeOrganizationConfigurationRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeOrganizationConfigurationRequest.getDetectorId(), DETECTORID_BINDING);
+            protocolMarshaller.marshall(describeOrganizationConfigurationRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(describeOrganizationConfigurationRequest.getNextToken(), NEXTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

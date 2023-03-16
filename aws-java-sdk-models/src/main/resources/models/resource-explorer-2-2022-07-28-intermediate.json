@@ -214,7 +214,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ConflictException",
-        "documentation" : "<p>You tried to create a new view or index when one already exists, and you either didn't specify or specified a different idempotency token as the original request.</p>",
+        "documentation" : "<p>The request failed because either you specified parameters that didn’t match the original request, or you attempted to create a view with a name that already exists in this Amazon Web Services Region.</p>",
         "httpStatusCode" : 409
       }, {
         "exceptionName" : "ThrottlingException",
@@ -267,7 +267,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ConflictException",
-        "documentation" : "<p>You tried to create a new view or index when one already exists, and you either didn't specify or specified a different idempotency token as the original request.</p>",
+        "documentation" : "<p>The request failed because either you specified parameters that didn’t match the original request, or you attempted to create a view with a name that already exists in this Amazon Web Services Region.</p>",
         "httpStatusCode" : 409
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
@@ -911,7 +911,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ConflictException",
-        "documentation" : "<p>You tried to create a new view or index when one already exists, and you either didn't specify or specified a different idempotency token as the original request.</p>",
+        "documentation" : "<p>The request failed because either you specified parameters that didn’t match the original request, or you attempted to create a view with a name that already exists in this Amazon Web Services Region.</p>",
         "httpStatusCode" : 409
       }, {
         "exceptionName" : "UnauthorizedException",
@@ -1029,7 +1029,7 @@
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ConflictException",
-        "documentation" : "<p>You tried to create a new view or index when one already exists, and you either didn't specify or specified a different idempotency token as the original request.</p>",
+        "documentation" : "<p>The request failed because either you specified parameters that didn’t match the original request, or you attempted to create a view with a name that already exists in this Amazon Web Services Region.</p>",
         "httpStatusCode" : 409
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
@@ -2883,7 +2883,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>You tried to create a new view or index when one already exists, and you either didn't specify or specified a different idempotency token as the original request.</p>",
+      "documentation" : "<p>The request failed because either you specified parameters that didn’t match the original request, or you attempted to create a view with a name that already exists in this Amazon Web Services Region.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ConflictException",

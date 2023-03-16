@@ -80,13 +80,15 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
     private String inputLocation;
     /**
      * <p>
-     * Maximum age in seconds a request can be in the queue before it is marked as expired.
+     * Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or
+     * 21,600 seconds.
      * </p>
      */
     private Integer requestTTLSeconds;
     /**
      * <p>
-     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired. The default is 15
+     * minutes, or 900 seconds.
      * </p>
      */
     private Integer invocationTimeoutSeconds;
@@ -436,11 +438,13 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum age in seconds a request can be in the queue before it is marked as expired.
+     * Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or
+     * 21,600 seconds.
      * </p>
      * 
      * @param requestTTLSeconds
-     *        Maximum age in seconds a request can be in the queue before it is marked as expired.
+     *        Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6
+     *        hours, or 21,600 seconds.
      */
 
     public void setRequestTTLSeconds(Integer requestTTLSeconds) {
@@ -449,10 +453,12 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum age in seconds a request can be in the queue before it is marked as expired.
+     * Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or
+     * 21,600 seconds.
      * </p>
      * 
-     * @return Maximum age in seconds a request can be in the queue before it is marked as expired.
+     * @return Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6
+     *         hours, or 21,600 seconds.
      */
 
     public Integer getRequestTTLSeconds() {
@@ -461,11 +467,13 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum age in seconds a request can be in the queue before it is marked as expired.
+     * Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or
+     * 21,600 seconds.
      * </p>
      * 
      * @param requestTTLSeconds
-     *        Maximum age in seconds a request can be in the queue before it is marked as expired.
+     *        Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6
+     *        hours, or 21,600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -476,11 +484,13 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired. The default is 15
+     * minutes, or 900 seconds.
      * </p>
      * 
      * @param invocationTimeoutSeconds
-     *        Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     *        Maximum amount of time in seconds a request can be processed before it is marked as expired. The default
+     *        is 15 minutes, or 900 seconds.
      */
 
     public void setInvocationTimeoutSeconds(Integer invocationTimeoutSeconds) {
@@ -489,10 +499,12 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired. The default is 15
+     * minutes, or 900 seconds.
      * </p>
      * 
-     * @return Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * @return Maximum amount of time in seconds a request can be processed before it is marked as expired. The default
+     *         is 15 minutes, or 900 seconds.
      */
 
     public Integer getInvocationTimeoutSeconds() {
@@ -501,11 +513,13 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired. The default is 15
+     * minutes, or 900 seconds.
      * </p>
      * 
      * @param invocationTimeoutSeconds
-     *        Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     *        Maximum amount of time in seconds a request can be processed before it is marked as expired. The default
+     *        is 15 minutes, or 900 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

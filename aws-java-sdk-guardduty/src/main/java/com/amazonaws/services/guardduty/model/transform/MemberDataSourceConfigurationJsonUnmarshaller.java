@@ -56,6 +56,13 @@ public class MemberDataSourceConfigurationJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     memberDataSourceConfiguration.setDataSources(DataSourceConfigurationsResultJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("features", targetDepth)) {
+                    context.nextToken();
+                    memberDataSourceConfiguration.setFeatures(new ListUnmarshaller<MemberFeaturesConfigurationResult>(
+                            MemberFeaturesConfigurationResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

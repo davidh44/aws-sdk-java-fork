@@ -72,6 +72,12 @@ public class UsageStatisticsJsonUnmarshaller implements Unmarshaller<UsageStatis
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("sumByFeature", targetDepth)) {
+                    context.nextToken();
+                    usageStatistics.setSumByFeature(new ListUnmarshaller<UsageFeatureResult>(UsageFeatureResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

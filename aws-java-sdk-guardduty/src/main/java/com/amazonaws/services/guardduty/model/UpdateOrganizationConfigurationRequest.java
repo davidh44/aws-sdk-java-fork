@@ -42,7 +42,14 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * Describes which data sources will be updated.
      * </p>
      */
+    @Deprecated
     private OrganizationDataSourceConfigurations dataSources;
+    /**
+     * <p>
+     * A list of features that will be configured for the organization.
+     * </p>
+     */
+    private java.util.List<OrganizationFeatureConfiguration> features;
 
     /**
      * <p>
@@ -144,7 +151,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * @param dataSources
      *        Describes which data sources will be updated.
      */
-
+    @Deprecated
     public void setDataSources(OrganizationDataSourceConfigurations dataSources) {
         this.dataSources = dataSources;
     }
@@ -156,7 +163,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * 
      * @return Describes which data sources will be updated.
      */
-
+    @Deprecated
     public OrganizationDataSourceConfigurations getDataSources() {
         return this.dataSources;
     }
@@ -170,9 +177,79 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        Describes which data sources will be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateOrganizationConfigurationRequest withDataSources(OrganizationDataSourceConfigurations dataSources) {
         setDataSources(dataSources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of features that will be configured for the organization.
+     * </p>
+     * 
+     * @return A list of features that will be configured for the organization.
+     */
+
+    public java.util.List<OrganizationFeatureConfiguration> getFeatures() {
+        return features;
+    }
+
+    /**
+     * <p>
+     * A list of features that will be configured for the organization.
+     * </p>
+     * 
+     * @param features
+     *        A list of features that will be configured for the organization.
+     */
+
+    public void setFeatures(java.util.Collection<OrganizationFeatureConfiguration> features) {
+        if (features == null) {
+            this.features = null;
+            return;
+        }
+
+        this.features = new java.util.ArrayList<OrganizationFeatureConfiguration>(features);
+    }
+
+    /**
+     * <p>
+     * A list of features that will be configured for the organization.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFeatures(java.util.Collection)} or {@link #withFeatures(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param features
+     *        A list of features that will be configured for the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateOrganizationConfigurationRequest withFeatures(OrganizationFeatureConfiguration... features) {
+        if (this.features == null) {
+            setFeatures(new java.util.ArrayList<OrganizationFeatureConfiguration>(features.length));
+        }
+        for (OrganizationFeatureConfiguration ele : features) {
+            this.features.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of features that will be configured for the organization.
+     * </p>
+     * 
+     * @param features
+     *        A list of features that will be configured for the organization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateOrganizationConfigurationRequest withFeatures(java.util.Collection<OrganizationFeatureConfiguration> features) {
+        setFeatures(features);
         return this;
     }
 
@@ -193,7 +270,9 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
         if (getAutoEnable() != null)
             sb.append("AutoEnable: ").append(getAutoEnable()).append(",");
         if (getDataSources() != null)
-            sb.append("DataSources: ").append(getDataSources());
+            sb.append("DataSources: ").append(getDataSources()).append(",");
+        if (getFeatures() != null)
+            sb.append("Features: ").append(getFeatures());
         sb.append("}");
         return sb.toString();
     }
@@ -220,6 +299,10 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
             return false;
         if (other.getDataSources() != null && other.getDataSources().equals(this.getDataSources()) == false)
             return false;
+        if (other.getFeatures() == null ^ this.getFeatures() == null)
+            return false;
+        if (other.getFeatures() != null && other.getFeatures().equals(this.getFeatures()) == false)
+            return false;
         return true;
     }
 
@@ -231,6 +314,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getDetectorId() == null) ? 0 : getDetectorId().hashCode());
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
         hashCode = prime * hashCode + ((getDataSources() == null) ? 0 : getDataSources().hashCode());
+        hashCode = prime * hashCode + ((getFeatures() == null) ? 0 : getFeatures().hashCode());
         return hashCode;
     }
 

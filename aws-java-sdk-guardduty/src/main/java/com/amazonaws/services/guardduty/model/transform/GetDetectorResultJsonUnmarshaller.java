@@ -77,6 +77,13 @@ public class GetDetectorResultJsonUnmarshaller implements Unmarshaller<GetDetect
                     getDetectorResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("features", targetDepth)) {
+                    context.nextToken();
+                    getDetectorResult.setFeatures(new ListUnmarshaller<DetectorFeatureConfigurationResult>(DetectorFeatureConfigurationResultJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

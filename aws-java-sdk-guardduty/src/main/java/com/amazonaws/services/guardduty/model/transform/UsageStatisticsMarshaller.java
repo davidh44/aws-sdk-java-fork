@@ -36,6 +36,8 @@ public class UsageStatisticsMarshaller {
             .marshallLocationName("sumByResource").build();
     private static final MarshallingInfo<List> TOPRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("topResources").build();
+    private static final MarshallingInfo<List> SUMBYFEATURE_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sumByFeature").build();
 
     private static final UsageStatisticsMarshaller instance = new UsageStatisticsMarshaller();
 
@@ -57,6 +59,7 @@ public class UsageStatisticsMarshaller {
             protocolMarshaller.marshall(usageStatistics.getSumByDataSource(), SUMBYDATASOURCE_BINDING);
             protocolMarshaller.marshall(usageStatistics.getSumByResource(), SUMBYRESOURCE_BINDING);
             protocolMarshaller.marshall(usageStatistics.getTopResources(), TOPRESOURCES_BINDING);
+            protocolMarshaller.marshall(usageStatistics.getSumByFeature(), SUMBYFEATURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -86,6 +86,14 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setContainerDetails(ContainerJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("rdsDbInstanceDetails", targetDepth)) {
+                    context.nextToken();
+                    resource.setRdsDbInstanceDetails(RdsDbInstanceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("rdsDbUserDetails", targetDepth)) {
+                    context.nextToken();
+                    resource.setRdsDbUserDetails(RdsDbUserDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

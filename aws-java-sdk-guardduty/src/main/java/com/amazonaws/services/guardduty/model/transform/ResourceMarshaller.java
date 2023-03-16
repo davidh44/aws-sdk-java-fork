@@ -46,6 +46,10 @@ public class ResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsClusterDetails").build();
     private static final MarshallingInfo<StructuredPojo> CONTAINERDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("containerDetails").build();
+    private static final MarshallingInfo<StructuredPojo> RDSDBINSTANCEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsDbInstanceDetails").build();
+    private static final MarshallingInfo<StructuredPojo> RDSDBUSERDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsDbUserDetails").build();
 
     private static final ResourceMarshaller instance = new ResourceMarshaller();
 
@@ -72,6 +76,8 @@ public class ResourceMarshaller {
             protocolMarshaller.marshall(resource.getEbsVolumeDetails(), EBSVOLUMEDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getEcsClusterDetails(), ECSCLUSTERDETAILS_BINDING);
             protocolMarshaller.marshall(resource.getContainerDetails(), CONTAINERDETAILS_BINDING);
+            protocolMarshaller.marshall(resource.getRdsDbInstanceDetails(), RDSDBINSTANCEDETAILS_BINDING);
+            protocolMarshaller.marshall(resource.getRdsDbUserDetails(), RDSDBUSERDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

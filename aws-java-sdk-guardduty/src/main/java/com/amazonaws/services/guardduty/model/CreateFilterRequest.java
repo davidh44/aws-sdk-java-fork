@@ -41,9 +41,8 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The description of the filter. Valid characters include alphanumeric characters, and special characters such as
-     * <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>, <code>( )</code>,
-     * <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>, <code>\r</code>,
-     * <code>_</code>, and whitespace.
+     * hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and <code>( )</code>),
+     * forward slash, horizontal tab, vertical tab, newline, form feed, return, and whitespace.
      * </p>
      */
     private String description;
@@ -452,16 +451,15 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The description of the filter. Valid characters include alphanumeric characters, and special characters such as
-     * <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>, <code>( )</code>,
-     * <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>, <code>\r</code>,
-     * <code>_</code>, and whitespace.
+     * hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and <code>( )</code>),
+     * forward slash, horizontal tab, vertical tab, newline, form feed, return, and whitespace.
      * </p>
      * 
      * @param description
      *        The description of the filter. Valid characters include alphanumeric characters, and special characters
-     *        such as <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>,
-     *        <code>( )</code>, <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>,
-     *        <code>\r</code>, <code>_</code>, and whitespace.
+     *        such as hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and
+     *        <code>( )</code>), forward slash, horizontal tab, vertical tab, newline, form feed, return, and
+     *        whitespace.
      */
 
     public void setDescription(String description) {
@@ -471,15 +469,14 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The description of the filter. Valid characters include alphanumeric characters, and special characters such as
-     * <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>, <code>( )</code>,
-     * <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>, <code>\r</code>,
-     * <code>_</code>, and whitespace.
+     * hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and <code>( )</code>),
+     * forward slash, horizontal tab, vertical tab, newline, form feed, return, and whitespace.
      * </p>
      * 
      * @return The description of the filter. Valid characters include alphanumeric characters, and special characters
-     *         such as <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>,
-     *         <code>( )</code>, <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>,
-     *         <code>\r</code>, <code>_</code>, and whitespace.
+     *         such as hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and
+     *         <code>( )</code>), forward slash, horizontal tab, vertical tab, newline, form feed, return, and
+     *         whitespace.
      */
 
     public String getDescription() {
@@ -489,16 +486,15 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The description of the filter. Valid characters include alphanumeric characters, and special characters such as
-     * <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>, <code>( )</code>,
-     * <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>, <code>\r</code>,
-     * <code>_</code>, and whitespace.
+     * hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and <code>( )</code>),
+     * forward slash, horizontal tab, vertical tab, newline, form feed, return, and whitespace.
      * </p>
      * 
      * @param description
      *        The description of the filter. Valid characters include alphanumeric characters, and special characters
-     *        such as <code>-</code>, <code>.</code>, <code>:</code>, <code>{ }</code>, <code>[ ]</code>,
-     *        <code>( )</code>, <code>/</code>, <code>\t</code>, <code>\n</code>, <code>\x0B</code>, <code>\f</code>,
-     *        <code>\r</code>, <code>_</code>, and whitespace.
+     *        such as hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and
+     *        <code>( )</code>), forward slash, horizontal tab, vertical tab, newline, form feed, return, and
+     *        whitespace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

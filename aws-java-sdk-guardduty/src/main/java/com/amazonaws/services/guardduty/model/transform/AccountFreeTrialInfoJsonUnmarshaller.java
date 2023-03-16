@@ -56,6 +56,13 @@ public class AccountFreeTrialInfoJsonUnmarshaller implements Unmarshaller<Accoun
                     context.nextToken();
                     accountFreeTrialInfo.setDataSources(DataSourcesFreeTrialJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("features", targetDepth)) {
+                    context.nextToken();
+                    accountFreeTrialInfo.setFeatures(new ListUnmarshaller<FreeTrialFeatureConfigurationResult>(
+                            FreeTrialFeatureConfigurationResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
