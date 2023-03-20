@@ -313,7 +313,7 @@ public class UpdateFolderRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getFolderId() != null)
             sb.append("FolderId: ").append(getFolderId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getParentFolderId() != null)
             sb.append("ParentFolderId: ").append(getParentFolderId()).append(",");
         if (getResourceState() != null)

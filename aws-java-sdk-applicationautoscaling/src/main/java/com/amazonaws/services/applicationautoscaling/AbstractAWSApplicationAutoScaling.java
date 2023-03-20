@@ -73,6 +73,11 @@ public class AbstractAWSApplicationAutoScaling implements AWSApplicationAutoScal
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutScalingPolicyResult putScalingPolicy(PutScalingPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -84,6 +89,16 @@ public class AbstractAWSApplicationAutoScaling implements AWSApplicationAutoScal
 
     @Override
     public RegisterScalableTargetResult registerScalableTarget(RegisterScalableTargetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

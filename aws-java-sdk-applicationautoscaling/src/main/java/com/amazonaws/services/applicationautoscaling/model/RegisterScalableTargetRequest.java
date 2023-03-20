@@ -330,10 +330,10 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * required when registering a new scalable target.
      * </p>
      * <p>
-     * Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each service
-     * has its own default quotas for the maximum capacity of the resource. If you want to specify a higher limit, you
-     * can request an increase. For more information, consult the documentation for that service. For information about
-     * the default quotas for each service, see <a
+     * Although you can specify a large maximum capacity, note that service quotas might impose lower limits. Each
+     * service has its own default quotas for the maximum capacity of the resource. If you want to specify a higher
+     * limit, you can request an increase. For more information, consult the documentation for that service. For
+     * information about the default quotas for each service, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
      * quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
@@ -389,6 +389,22 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private SuspendedState suspendedState;
+    /**
+     * <p>
+     * Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     * created. To tag an existing scalable target, use the <a>TagResource</a> operation.
+     * </p>
+     * <p>
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You cannot have
+     * more than one tag on a scalable target with the same tag key.
+     * </p>
+     * <p>
+     * Use tags to control access to a scalable target. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     * support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -2734,10 +2750,10 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * required when registering a new scalable target.
      * </p>
      * <p>
-     * Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each service
-     * has its own default quotas for the maximum capacity of the resource. If you want to specify a higher limit, you
-     * can request an increase. For more information, consult the documentation for that service. For information about
-     * the default quotas for each service, see <a
+     * Although you can specify a large maximum capacity, note that service quotas might impose lower limits. Each
+     * service has its own default quotas for the maximum capacity of the resource. If you want to specify a higher
+     * limit, you can request an increase. For more information, consult the documentation for that service. For
+     * information about the default quotas for each service, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
      * quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
@@ -2747,8 +2763,8 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      *        Scaling can scale out (expand) as needed to the maximum capacity limit in response to changing demand.
      *        This property is required when registering a new scalable target.</p>
      *        <p>
-     *        Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each
-     *        service has its own default quotas for the maximum capacity of the resource. If you want to specify a
+     *        Although you can specify a large maximum capacity, note that service quotas might impose lower limits.
+     *        Each service has its own default quotas for the maximum capacity of the resource. If you want to specify a
      *        higher limit, you can request an increase. For more information, consult the documentation for that
      *        service. For information about the default quotas for each service, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
@@ -2766,10 +2782,10 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * required when registering a new scalable target.
      * </p>
      * <p>
-     * Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each service
-     * has its own default quotas for the maximum capacity of the resource. If you want to specify a higher limit, you
-     * can request an increase. For more information, consult the documentation for that service. For information about
-     * the default quotas for each service, see <a
+     * Although you can specify a large maximum capacity, note that service quotas might impose lower limits. Each
+     * service has its own default quotas for the maximum capacity of the resource. If you want to specify a higher
+     * limit, you can request an increase. For more information, consult the documentation for that service. For
+     * information about the default quotas for each service, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
      * quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
@@ -2778,9 +2794,9 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      *         Scaling can scale out (expand) as needed to the maximum capacity limit in response to changing demand.
      *         This property is required when registering a new scalable target.</p>
      *         <p>
-     *         Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each
-     *         service has its own default quotas for the maximum capacity of the resource. If you want to specify a
-     *         higher limit, you can request an increase. For more information, consult the documentation for that
+     *         Although you can specify a large maximum capacity, note that service quotas might impose lower limits.
+     *         Each service has its own default quotas for the maximum capacity of the resource. If you want to specify
+     *         a higher limit, you can request an increase. For more information, consult the documentation for that
      *         service. For information about the default quotas for each service, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
      *         quotas</a> in the <i>Amazon Web Services General Reference</i>.
@@ -2797,10 +2813,10 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * required when registering a new scalable target.
      * </p>
      * <p>
-     * Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each service
-     * has its own default quotas for the maximum capacity of the resource. If you want to specify a higher limit, you
-     * can request an increase. For more information, consult the documentation for that service. For information about
-     * the default quotas for each service, see <a
+     * Although you can specify a large maximum capacity, note that service quotas might impose lower limits. Each
+     * service has its own default quotas for the maximum capacity of the resource. If you want to specify a higher
+     * limit, you can request an increase. For more information, consult the documentation for that service. For
+     * information about the default quotas for each service, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
      * quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
@@ -2810,8 +2826,8 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      *        Scaling can scale out (expand) as needed to the maximum capacity limit in response to changing demand.
      *        This property is required when registering a new scalable target.</p>
      *        <p>
-     *        Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each
-     *        service has its own default quotas for the maximum capacity of the resource. If you want to specify a
+     *        Although you can specify a large maximum capacity, note that service quotas might impose lower limits.
+     *        Each service has its own default quotas for the maximum capacity of the resource. If you want to specify a
      *        higher limit, you can request an increase. For more information, consult the documentation for that
      *        service. For information about the default quotas for each service, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">Service endpoints and
@@ -3127,6 +3143,131 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     * created. To tag an existing scalable target, use the <a>TagResource</a> operation.
+     * </p>
+     * <p>
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You cannot have
+     * more than one tag on a scalable target with the same tag key.
+     * </p>
+     * <p>
+     * Use tags to control access to a scalable target. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     * support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @return Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     *         created. To tag an existing scalable target, use the <a>TagResource</a> operation.</p>
+     *         <p>
+     *         Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You
+     *         cannot have more than one tag on a scalable target with the same tag key.
+     *         </p>
+     *         <p>
+     *         Use tags to control access to a scalable target. For more information, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html"
+     *         >Tagging support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     * created. To tag an existing scalable target, use the <a>TagResource</a> operation.
+     * </p>
+     * <p>
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You cannot have
+     * more than one tag on a scalable target with the same tag key.
+     * </p>
+     * <p>
+     * Use tags to control access to a scalable target. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     * support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @param tags
+     *        Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     *        created. To tag an existing scalable target, use the <a>TagResource</a> operation.</p>
+     *        <p>
+     *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You
+     *        cannot have more than one tag on a scalable target with the same tag key.
+     *        </p>
+     *        <p>
+     *        Use tags to control access to a scalable target. For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     *        support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     * created. To tag an existing scalable target, use the <a>TagResource</a> operation.
+     * </p>
+     * <p>
+     * Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You cannot have
+     * more than one tag on a scalable target with the same tag key.
+     * </p>
+     * <p>
+     * Use tags to control access to a scalable target. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     * support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @param tags
+     *        Assigns one or more tags to the scalable target. Use this parameter to tag the scalable target when it is
+     *        created. To tag an existing scalable target, use the <a>TagResource</a> operation.</p>
+     *        <p>
+     *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required. You
+     *        cannot have more than one tag on a scalable target with the same tag key.
+     *        </p>
+     *        <p>
+     *        Use tags to control access to a scalable target. For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     *        support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterScalableTargetRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see RegisterScalableTargetRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterScalableTargetRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterScalableTargetRequest clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3151,7 +3292,9 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
         if (getRoleARN() != null)
             sb.append("RoleARN: ").append(getRoleARN()).append(",");
         if (getSuspendedState() != null)
-            sb.append("SuspendedState: ").append(getSuspendedState());
+            sb.append("SuspendedState: ").append(getSuspendedState()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -3194,6 +3337,10 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getSuspendedState() != null && other.getSuspendedState().equals(this.getSuspendedState()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -3209,6 +3356,7 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getMaxCapacity() == null) ? 0 : getMaxCapacity().hashCode());
         hashCode = prime * hashCode + ((getRoleARN() == null) ? 0 : getRoleARN().hashCode());
         hashCode = prime * hashCode + ((getSuspendedState() == null) ? 0 : getSuspendedState().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

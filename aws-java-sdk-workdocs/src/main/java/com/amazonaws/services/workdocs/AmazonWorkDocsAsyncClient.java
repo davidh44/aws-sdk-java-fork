@@ -1430,6 +1430,39 @@ public class AmazonWorkDocsAsyncClient extends AmazonWorkDocsClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<SearchResourcesResult> searchResourcesAsync(SearchResourcesRequest request) {
+
+        return searchResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchResourcesResult> searchResourcesAsync(final SearchResourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchResourcesRequest, SearchResourcesResult> asyncHandler) {
+        final SearchResourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchResourcesResult>() {
+            @Override
+            public SearchResourcesResult call() throws Exception {
+                SearchResourcesResult result = null;
+
+                try {
+                    result = executeSearchResources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateDocumentResult> updateDocumentAsync(UpdateDocumentRequest request) {
 
         return updateDocumentAsync(request, null);

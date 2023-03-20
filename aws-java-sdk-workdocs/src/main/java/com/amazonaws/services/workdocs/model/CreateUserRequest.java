@@ -462,13 +462,13 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getOrganizationId() != null)
             sb.append("OrganizationId: ").append(getOrganizationId()).append(",");
         if (getUsername() != null)
-            sb.append("Username: ").append(getUsername()).append(",");
+            sb.append("Username: ").append("***Sensitive Data Redacted***").append(",");
         if (getEmailAddress() != null)
             sb.append("EmailAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getGivenName() != null)
-            sb.append("GivenName: ").append(getGivenName()).append(",");
+            sb.append("GivenName: ").append("***Sensitive Data Redacted***").append(",");
         if (getSurname() != null)
-            sb.append("Surname: ").append(getSurname()).append(",");
+            sb.append("Surname: ").append("***Sensitive Data Redacted***").append(",");
         if (getPassword() != null)
             sb.append("Password: ").append("***Sensitive Data Redacted***").append(",");
         if (getTimeZoneId() != null)

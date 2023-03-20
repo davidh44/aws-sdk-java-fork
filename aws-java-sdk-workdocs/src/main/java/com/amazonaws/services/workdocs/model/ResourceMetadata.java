@@ -399,9 +399,9 @@ public class ResourceMetadata implements Serializable, Cloneable, StructuredPojo
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getOriginalName() != null)
-            sb.append("OriginalName: ").append(getOriginalName()).append(",");
+            sb.append("OriginalName: ").append("***Sensitive Data Redacted***").append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getVersionId() != null)

@@ -833,13 +833,13 @@ public class User implements Serializable, Cloneable, StructuredPojo {
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getUsername() != null)
-            sb.append("Username: ").append(getUsername()).append(",");
+            sb.append("Username: ").append("***Sensitive Data Redacted***").append(",");
         if (getEmailAddress() != null)
             sb.append("EmailAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getGivenName() != null)
-            sb.append("GivenName: ").append(getGivenName()).append(",");
+            sb.append("GivenName: ").append("***Sensitive Data Redacted***").append(",");
         if (getSurname() != null)
-            sb.append("Surname: ").append(getSurname()).append(",");
+            sb.append("Surname: ").append("***Sensitive Data Redacted***").append(",");
         if (getOrganizationId() != null)
             sb.append("OrganizationId: ").append(getOrganizationId()).append(",");
         if (getRootFolderId() != null)

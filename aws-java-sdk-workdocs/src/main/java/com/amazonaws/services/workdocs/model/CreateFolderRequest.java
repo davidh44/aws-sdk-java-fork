@@ -186,7 +186,7 @@ public class CreateFolderRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getAuthenticationToken() != null)
             sb.append("AuthenticationToken: ").append("***Sensitive Data Redacted***").append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getParentFolderId() != null)
             sb.append("ParentFolderId: ").append(getParentFolderId());
         sb.append("}");

@@ -63,7 +63,7 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
     /**
      * <p>
      * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that's
      * returned by a call to <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
@@ -110,7 +110,7 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
     /**
      * <p>
      * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that's
      * returned by a call to <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
@@ -118,7 +118,7 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
      * @param metricName
      *        The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object
-     *        that is returned by a call to <a
+     *        that's returned by a call to <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
      *        >ListMetrics</a>.
      */
@@ -130,14 +130,14 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
     /**
      * <p>
      * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that's
      * returned by a call to <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      * 
      * @return The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object
-     *         that is returned by a call to <a
+     *         that's returned by a call to <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
      *         >ListMetrics</a>.
      */
@@ -149,7 +149,7 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
     /**
      * <p>
      * The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that is
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object that's
      * returned by a call to <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
@@ -157,7 +157,7 @@ public class CustomizedMetricSpecification implements Serializable, Cloneable, S
      * @param metricName
      *        The name of the metric. To get the exact metric name, namespace, and dimensions, inspect the <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Metric.html">Metric</a> object
-     *        that is returned by a call to <a
+     *        that's returned by a call to <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
      *        >ListMetrics</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

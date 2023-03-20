@@ -90,6 +90,9 @@ public class AmazonS3OutpostsClient extends AmazonWebServiceClient implements Am
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.s3outposts.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OutpostOfflineException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.s3outposts.model.transform.OutpostOfflineExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.s3outposts.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -183,6 +186,8 @@ public class AmazonS3OutpostsClient extends AmazonWebServiceClient implements Am
      *         There was a conflict with this action, and it could not be completed.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
+     * @throws OutpostOfflineException
+     *         The service link connection to your Outposts home Region is down. Check your connection and try again.
      * @sample AmazonS3Outposts.CreateEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint" target="_top">AWS API
      *      Documentation</a>
@@ -269,6 +274,8 @@ public class AmazonS3OutpostsClient extends AmazonWebServiceClient implements Am
      *         There was an exception validating this data.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
+     * @throws OutpostOfflineException
+     *         The service link connection to your Outposts home Region is down. Check your connection and try again.
      * @sample AmazonS3Outposts.DeleteEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint" target="_top">AWS API
      *      Documentation</a>

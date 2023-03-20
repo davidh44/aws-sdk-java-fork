@@ -136,7 +136,7 @@ public class ResourcePathComponent implements Serializable, Cloneable, Structure
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

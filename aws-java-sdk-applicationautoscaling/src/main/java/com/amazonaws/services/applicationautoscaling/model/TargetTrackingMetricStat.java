@@ -51,7 +51,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      * >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
      * <p>
-     * The most commonly used metrics for scaling is <code>Average</code>
+     * The most commonly used metric for scaling is <code>Average</code>.
      * </p>
      */
     private String stat;
@@ -139,7 +139,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      * >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
      * <p>
-     * The most commonly used metrics for scaling is <code>Average</code>
+     * The most commonly used metric for scaling is <code>Average</code>.
      * </p>
      * 
      * @param stat
@@ -148,7 +148,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic"
      *        >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
      *        <p>
-     *        The most commonly used metrics for scaling is <code>Average</code>
+     *        The most commonly used metric for scaling is <code>Average</code>.
      */
 
     public void setStat(String stat) {
@@ -163,7 +163,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      * >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
      * <p>
-     * The most commonly used metrics for scaling is <code>Average</code>
+     * The most commonly used metric for scaling is <code>Average</code>.
      * </p>
      * 
      * @return The statistic to return. It can include any CloudWatch statistic or extended statistic. For a list of
@@ -171,7 +171,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic"
      *         >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
      *         <p>
-     *         The most commonly used metrics for scaling is <code>Average</code>
+     *         The most commonly used metric for scaling is <code>Average</code>.
      */
 
     public String getStat() {
@@ -186,7 +186,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      * >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
      * <p>
-     * The most commonly used metrics for scaling is <code>Average</code>
+     * The most commonly used metric for scaling is <code>Average</code>.
      * </p>
      * 
      * @param stat
@@ -195,7 +195,7 @@ public class TargetTrackingMetricStat implements Serializable, Cloneable, Struct
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Statistic"
      *        >Statistics</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
      *        <p>
-     *        The most commonly used metrics for scaling is <code>Average</code>
+     *        The most commonly used metric for scaling is <code>Average</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -80,6 +80,10 @@ public class ScalableTargetJsonUnmarshaller implements Unmarshaller<ScalableTarg
                     context.nextToken();
                     scalableTarget.setSuspendedState(SuspendedStateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ScalableTargetARN", targetDepth)) {
+                    context.nextToken();
+                    scalableTarget.setScalableTargetARN(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

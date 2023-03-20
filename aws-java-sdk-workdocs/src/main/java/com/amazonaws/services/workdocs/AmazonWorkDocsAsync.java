@@ -1457,6 +1457,37 @@ public interface AmazonWorkDocsAsync extends AmazonWorkDocs {
 
     /**
      * <p>
+     * Searches metadata and the content of folders, documents, document versions, and comments.
+     * </p>
+     * 
+     * @param searchResourcesRequest
+     * @return A Java Future containing the result of the SearchResources operation returned by the service.
+     * @sample AmazonWorkDocsAsync.SearchResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/SearchResources" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchResourcesResult> searchResourcesAsync(SearchResourcesRequest searchResourcesRequest);
+
+    /**
+     * <p>
+     * Searches metadata and the content of folders, documents, document versions, and comments.
+     * </p>
+     * 
+     * @param searchResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchResources operation returned by the service.
+     * @sample AmazonWorkDocsAsyncHandler.SearchResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/SearchResources" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchResourcesResult> searchResourcesAsync(SearchResourcesRequest searchResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchResourcesRequest, SearchResourcesResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the specified attributes of a document. The user must have access to both the document and its parent
      * folder, if applicable.
      * </p>

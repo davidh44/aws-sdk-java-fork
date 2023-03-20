@@ -313,7 +313,7 @@ public class UpdateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getDocumentId() != null)
             sb.append("DocumentId: ").append(getDocumentId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getParentFolderId() != null)
             sb.append("ParentFolderId: ").append(getParentFolderId()).append(",");
         if (getResourceState() != null)

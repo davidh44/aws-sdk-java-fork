@@ -265,6 +265,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     continue;
                 }
 
+                if (context.testExpression("PendingModifiedValues", targetDepth)) {
+                    dBCluster.setPendingModifiedValues(ClusterPendingModifiedValuesStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("DeletionProtection", targetDepth)) {
                     dBCluster.setDeletionProtection(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
@@ -282,6 +287,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
 
                 if (context.testExpression("ServerlessV2ScalingConfiguration", targetDepth)) {
                     dBCluster.setServerlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationInfoStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("GlobalClusterIdentifier", targetDepth)) {
+                    dBCluster.setGlobalClusterIdentifier(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
             } else if (xmlEvent.isEndElement()) {

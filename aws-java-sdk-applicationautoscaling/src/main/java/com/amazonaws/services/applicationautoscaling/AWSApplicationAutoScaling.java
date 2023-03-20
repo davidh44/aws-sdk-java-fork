@@ -432,6 +432,26 @@ public interface AWSApplicationAutoScaling {
 
     /**
      * <p>
+     * Returns all the tags on the specified Application Auto Scaling scalable target.
+     * </p>
+     * <p>
+     * For general information about tags, including the format and syntax, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @sample AWSApplicationAutoScaling.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Creates or updates a scaling policy for an Application Auto Scaling scalable target.
      * </p>
      * <p>
@@ -464,7 +484,7 @@ public interface AWSApplicationAutoScaling {
      * </p>
      * <note>
      * <p>
-     * If a scalable target is deregistered, the scalable target is no longer available to execute scaling policies. Any
+     * If a scalable target is deregistered, the scalable target is no longer available to use scaling policies. Any
      * scaling policies that were specified for the scalable target are deleted.
      * </p>
      * </note>
@@ -509,7 +529,7 @@ public interface AWSApplicationAutoScaling {
      * until you have registered the resource as a scalable target.
      * </p>
      * <p>
-     * When start and end times are specified with a recurring schedule using a cron expression or rates, they form the
+     * When you specify start and end times with a recurring schedule using a cron expression or rates, they form the
      * boundaries for when the recurring action starts and stops.
      * </p>
      * <p>
@@ -554,7 +574,7 @@ public interface AWSApplicationAutoScaling {
 
     /**
      * <p>
-     * Registers or updates a scalable target, the resource that you want to scale.
+     * Registers or updates a scalable target, which is the resource that you want to scale.
      * </p>
      * <p>
      * Scalable targets are uniquely identified by the combination of resource ID, scalable dimension, and namespace,
@@ -566,9 +586,9 @@ public interface AWSApplicationAutoScaling {
      * capacity. Otherwise, it changes the resource's current capacity to a value that is inside of this range.
      * </p>
      * <p>
-     * If you choose to add a scaling policy, current capacity is adjustable within the specified range when scaling
-     * starts. Application Auto Scaling scaling policies will not scale capacity to values that are outside of the
-     * minimum and maximum range.
+     * If you add a scaling policy, current capacity is adjustable within the specified range when scaling starts.
+     * Application Auto Scaling scaling policies will not scale capacity to values that are outside of the minimum and
+     * maximum range.
      * </p>
      * <p>
      * After you register a scalable target, you do not need to register it again to use other Application Auto Scaling
@@ -587,10 +607,18 @@ public interface AWSApplicationAutoScaling {
      * </p>
      * <note>
      * <p>
-     * If you call the <code>RegisterScalableTarget</code> API to update an existing scalable target, Application Auto
-     * Scaling retrieves the current capacity of the resource. If it is below the minimum capacity or above the maximum
-     * capacity, Application Auto Scaling adjusts the capacity of the scalable target to place it within these bounds,
-     * even if you don't include the <code>MinCapacity</code> or <code>MaxCapacity</code> request parameters.
+     * If you call the <code>RegisterScalableTarget</code> API operation to create a scalable target, there might be a
+     * brief delay until the operation achieves <a href="https://en.wikipedia.org/wiki/Eventual_consistency">eventual
+     * consistency</a>. You might become aware of this brief delay if you get unexpected errors when performing
+     * sequential operations. The typical strategy is to retry the request, and some Amazon Web Services SDKs include
+     * automatic backoff and retry logic.
+     * </p>
+     * <p>
+     * If you call the <code>RegisterScalableTarget</code> API operation to update an existing scalable target,
+     * Application Auto Scaling retrieves the current capacity of the resource. If it's below the minimum capacity or
+     * above the maximum capacity, Application Auto Scaling adjusts the capacity of the scalable target to place it
+     * within these bounds, even if you don't include the <code>MinCapacity</code> or <code>MaxCapacity</code> request
+     * parameters.
      * </p>
      * </note>
      * 
@@ -612,6 +640,65 @@ public interface AWSApplicationAutoScaling {
      *      target="_top">AWS API Documentation</a>
      */
     RegisterScalableTargetResult registerScalableTarget(RegisterScalableTargetRequest registerScalableTargetRequest);
+
+    /**
+     * <p>
+     * Adds or edits tags on an Application Auto Scaling scalable target.
+     * </p>
+     * <p>
+     * Each tag consists of a tag key and a tag value, which are both case-sensitive strings. To add a tag, specify a
+     * new tag key and a tag value. To edit a tag, specify an existing tag key and a new tag value.
+     * </p>
+     * <p>
+     * You can use this operation to tag an Application Auto Scaling scalable target, but you cannot tag a scaling
+     * policy or scheduled action.
+     * </p>
+     * <p>
+     * You can also add tags to an Application Auto Scaling scalable target while creating it (
+     * <code>RegisterScalableTarget</code>).
+     * </p>
+     * <p>
+     * For general information about tags, including the format and syntax, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * <p>
+     * Use tags to control access to a scalable target. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     * support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws TooManyTagsException
+     *         The request contains too many tags. Try the request again with fewer tags.
+     * @throws ValidationException
+     *         An exception was thrown for a validation issue. Review the available parameters for the API request.
+     * @sample AWSApplicationAutoScaling.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Deletes tags from an Application Auto Scaling scalable target. To delete a tag, specify the tag key and the
+     * Application Auto Scaling scalable target.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws ValidationException
+     *         An exception was thrown for a validation issue. Review the available parameters for the API request.
+     * @sample AWSApplicationAutoScaling.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

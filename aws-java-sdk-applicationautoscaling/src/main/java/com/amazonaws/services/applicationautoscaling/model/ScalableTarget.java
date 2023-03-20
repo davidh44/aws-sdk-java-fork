@@ -292,6 +292,12 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SuspendedState suspendedState;
+    /**
+     * <p>
+     * The ARN of the scalable target.
+     * </p>
+     */
+    private String scalableTargetARN;
 
     /**
      * <p>
@@ -2447,6 +2453,46 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the scalable target.
+     * </p>
+     * 
+     * @param scalableTargetARN
+     *        The ARN of the scalable target.
+     */
+
+    public void setScalableTargetARN(String scalableTargetARN) {
+        this.scalableTargetARN = scalableTargetARN;
+    }
+
+    /**
+     * <p>
+     * The ARN of the scalable target.
+     * </p>
+     * 
+     * @return The ARN of the scalable target.
+     */
+
+    public String getScalableTargetARN() {
+        return this.scalableTargetARN;
+    }
+
+    /**
+     * <p>
+     * The ARN of the scalable target.
+     * </p>
+     * 
+     * @param scalableTargetARN
+     *        The ARN of the scalable target.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScalableTarget withScalableTargetARN(String scalableTargetARN) {
+        setScalableTargetARN(scalableTargetARN);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2473,7 +2519,9 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getSuspendedState() != null)
-            sb.append("SuspendedState: ").append(getSuspendedState());
+            sb.append("SuspendedState: ").append(getSuspendedState()).append(",");
+        if (getScalableTargetARN() != null)
+            sb.append("ScalableTargetARN: ").append(getScalableTargetARN());
         sb.append("}");
         return sb.toString();
     }
@@ -2520,6 +2568,10 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSuspendedState() != null && other.getSuspendedState().equals(this.getSuspendedState()) == false)
             return false;
+        if (other.getScalableTargetARN() == null ^ this.getScalableTargetARN() == null)
+            return false;
+        if (other.getScalableTargetARN() != null && other.getScalableTargetARN().equals(this.getScalableTargetARN()) == false)
+            return false;
         return true;
     }
 
@@ -2536,6 +2588,7 @@ public class ScalableTarget implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRoleARN() == null) ? 0 : getRoleARN().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getSuspendedState() == null) ? 0 : getSuspendedState().hashCode());
+        hashCode = prime * hashCode + ((getScalableTargetARN() == null) ? 0 : getScalableTargetARN().hashCode());
         return hashCode;
     }
 

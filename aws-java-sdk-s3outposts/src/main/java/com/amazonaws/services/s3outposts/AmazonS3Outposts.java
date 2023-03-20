@@ -81,6 +81,8 @@ public interface AmazonS3Outposts {
      *         There was a conflict with this action, and it could not be completed.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
+     * @throws OutpostOfflineException
+     *         The service link connection to your Outposts home Region is down. Check your connection and try again.
      * @sample AmazonS3Outposts.CreateEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint" target="_top">AWS API
      *      Documentation</a>
@@ -125,6 +127,8 @@ public interface AmazonS3Outposts {
      *         There was an exception validating this data.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
+     * @throws OutpostOfflineException
+     *         The service link connection to your Outposts home Region is down. Check your connection and try again.
      * @sample AmazonS3Outposts.DeleteEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint" target="_top">AWS API
      *      Documentation</a>

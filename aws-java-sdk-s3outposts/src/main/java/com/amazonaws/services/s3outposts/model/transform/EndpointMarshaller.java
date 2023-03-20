@@ -50,6 +50,8 @@ public class EndpointMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AccessType").build();
     private static final MarshallingInfo<String> CUSTOMEROWNEDIPV4POOL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerOwnedIpv4Pool").build();
+    private static final MarshallingInfo<StructuredPojo> FAILEDREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FailedReason").build();
 
     private static final EndpointMarshaller instance = new EndpointMarshaller();
 
@@ -78,6 +80,7 @@ public class EndpointMarshaller {
             protocolMarshaller.marshall(endpoint.getSecurityGroupId(), SECURITYGROUPID_BINDING);
             protocolMarshaller.marshall(endpoint.getAccessType(), ACCESSTYPE_BINDING);
             protocolMarshaller.marshall(endpoint.getCustomerOwnedIpv4Pool(), CUSTOMEROWNEDIPV4POOL_BINDING);
+            protocolMarshaller.marshall(endpoint.getFailedReason(), FAILEDREASON_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

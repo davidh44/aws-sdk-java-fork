@@ -1,3 +1,20 @@
+# __1.12.431__ __2023-03-20__
+## __Amazon Neptune__
+  - ### Features
+    - This release makes following few changes. db-cluster-identifier is now a required parameter of create-db-instance. describe-db-cluster will now return PendingModifiedValues and GlobalClusterIdentifier fields in the response.
+
+## __Amazon S3 on Outposts__
+  - ### Features
+    - S3 On Outposts added support for endpoint status, and a failed endpoint reason, if any
+
+## __Amazon WorkDocs__
+  - ### Features
+    - This release adds a new API, SearchResources, which enable users to search through metadata and content of folders, documents, document versions and comments in a WorkDocs site.
+
+## __Application Auto Scaling__
+  - ### Features
+    - With this release customers can now tag their Application Auto Scaling registered targets with key-value pairs and manage IAM permissions for all the tagged resources centrally.
+
 # __1.12.430__ __2023-03-17__
 ## __AWS Config__
   - ### Features

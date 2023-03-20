@@ -39,12 +39,18 @@ public enum AutoscalingActions implements Action {
     DescribeScalingPolicies("application-autoscaling:DescribeScalingPolicies"),
     /** Action for the DescribeScheduledActions operation. */
     DescribeScheduledActions("application-autoscaling:DescribeScheduledActions"),
+    /** Action for the ListTagsForResource operation. */
+    ListTagsForResource("application-autoscaling:ListTagsForResource"),
     /** Action for the PutScalingPolicy operation. */
     PutScalingPolicy("application-autoscaling:PutScalingPolicy"),
     /** Action for the PutScheduledAction operation. */
     PutScheduledAction("application-autoscaling:PutScheduledAction"),
     /** Action for the RegisterScalableTarget operation. */
     RegisterScalableTarget("application-autoscaling:RegisterScalableTarget"),
+    /** Action for the TagResource operation. */
+    TagResource("application-autoscaling:TagResource"),
+    /** Action for the UntagResource operation. */
+    UntagResource("application-autoscaling:UntagResource"),
 
     ;
 

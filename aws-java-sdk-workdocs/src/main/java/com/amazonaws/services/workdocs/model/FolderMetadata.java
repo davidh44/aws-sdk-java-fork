@@ -613,7 +613,7 @@ public class FolderMetadata implements Serializable, Cloneable, StructuredPojo {
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatorId() != null)
             sb.append("CreatorId: ").append(getCreatorId()).append(",");
         if (getParentFolderId() != null)

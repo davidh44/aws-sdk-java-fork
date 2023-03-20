@@ -418,7 +418,7 @@ public class InitiateDocumentVersionUploadRequest extends com.amazonaws.AmazonWe
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getContentCreatedTimestamp() != null)
             sb.append("ContentCreatedTimestamp: ").append(getContentCreatedTimestamp()).append(",");
         if (getContentModifiedTimestamp() != null)

@@ -269,6 +269,13 @@ public class DBCluster implements Serializable, Cloneable {
     private java.util.List<String> enabledCloudwatchLogsExports;
     /**
      * <p>
+     * This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains changes
+     * that will be applied during the next maintenance window.
+     * </p>
+     */
+    private ClusterPendingModifiedValues pendingModifiedValues;
+    /**
+     * <p>
      * Indicates whether or not the DB cluster has deletion protection enabled. The database can't be deleted when
      * deletion protection is enabled.
      * </p>
@@ -288,6 +295,13 @@ public class DBCluster implements Serializable, Cloneable {
     private java.util.Date automaticRestartTime;
 
     private ServerlessV2ScalingConfigurationInfo serverlessV2ScalingConfiguration;
+    /**
+     * <p>
+     * Contains a user-supplied global database cluster identifier. This identifier is the unique key that identifies a
+     * global database.
+     * </p>
+     */
+    private String globalClusterIdentifier;
 
     /**
      * <p>
@@ -2137,6 +2151,52 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
+     * This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains changes
+     * that will be applied during the next maintenance window.
+     * </p>
+     * 
+     * @param pendingModifiedValues
+     *        This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains
+     *        changes that will be applied during the next maintenance window.
+     */
+
+    public void setPendingModifiedValues(ClusterPendingModifiedValues pendingModifiedValues) {
+        this.pendingModifiedValues = pendingModifiedValues;
+    }
+
+    /**
+     * <p>
+     * This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains changes
+     * that will be applied during the next maintenance window.
+     * </p>
+     * 
+     * @return This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains
+     *         changes that will be applied during the next maintenance window.
+     */
+
+    public ClusterPendingModifiedValues getPendingModifiedValues() {
+        return this.pendingModifiedValues;
+    }
+
+    /**
+     * <p>
+     * This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains changes
+     * that will be applied during the next maintenance window.
+     * </p>
+     * 
+     * @param pendingModifiedValues
+     *        This data type is used as a response element in the <code>ModifyDBCluster</code> operation and contains
+     *        changes that will be applied during the next maintenance window.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withPendingModifiedValues(ClusterPendingModifiedValues pendingModifiedValues) {
+        setPendingModifiedValues(pendingModifiedValues);
+        return this;
+    }
+
+    /**
+     * <p>
      * Indicates whether or not the DB cluster has deletion protection enabled. The database can't be deleted when
      * deletion protection is enabled.
      * </p>
@@ -2314,6 +2374,52 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Contains a user-supplied global database cluster identifier. This identifier is the unique key that identifies a
+     * global database.
+     * </p>
+     * 
+     * @param globalClusterIdentifier
+     *        Contains a user-supplied global database cluster identifier. This identifier is the unique key that
+     *        identifies a global database.
+     */
+
+    public void setGlobalClusterIdentifier(String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+    }
+
+    /**
+     * <p>
+     * Contains a user-supplied global database cluster identifier. This identifier is the unique key that identifies a
+     * global database.
+     * </p>
+     * 
+     * @return Contains a user-supplied global database cluster identifier. This identifier is the unique key that
+     *         identifies a global database.
+     */
+
+    public String getGlobalClusterIdentifier() {
+        return this.globalClusterIdentifier;
+    }
+
+    /**
+     * <p>
+     * Contains a user-supplied global database cluster identifier. This identifier is the unique key that identifies a
+     * global database.
+     * </p>
+     * 
+     * @param globalClusterIdentifier
+     *        Contains a user-supplied global database cluster identifier. This identifier is the unique key that
+     *        identifies a global database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withGlobalClusterIdentifier(String globalClusterIdentifier) {
+        setGlobalClusterIdentifier(globalClusterIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2399,6 +2505,8 @@ public class DBCluster implements Serializable, Cloneable {
             sb.append("CopyTagsToSnapshot: ").append(getCopyTagsToSnapshot()).append(",");
         if (getEnabledCloudwatchLogsExports() != null)
             sb.append("EnabledCloudwatchLogsExports: ").append(getEnabledCloudwatchLogsExports()).append(",");
+        if (getPendingModifiedValues() != null)
+            sb.append("PendingModifiedValues: ").append(getPendingModifiedValues()).append(",");
         if (getDeletionProtection() != null)
             sb.append("DeletionProtection: ").append(getDeletionProtection()).append(",");
         if (getCrossAccountClone() != null)
@@ -2406,7 +2514,9 @@ public class DBCluster implements Serializable, Cloneable {
         if (getAutomaticRestartTime() != null)
             sb.append("AutomaticRestartTime: ").append(getAutomaticRestartTime()).append(",");
         if (getServerlessV2ScalingConfiguration() != null)
-            sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration());
+            sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration()).append(",");
+        if (getGlobalClusterIdentifier() != null)
+            sb.append("GlobalClusterIdentifier: ").append(getGlobalClusterIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -2571,6 +2681,10 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getEnabledCloudwatchLogsExports() != null && other.getEnabledCloudwatchLogsExports().equals(this.getEnabledCloudwatchLogsExports()) == false)
             return false;
+        if (other.getPendingModifiedValues() == null ^ this.getPendingModifiedValues() == null)
+            return false;
+        if (other.getPendingModifiedValues() != null && other.getPendingModifiedValues().equals(this.getPendingModifiedValues()) == false)
+            return false;
         if (other.getDeletionProtection() == null ^ this.getDeletionProtection() == null)
             return false;
         if (other.getDeletionProtection() != null && other.getDeletionProtection().equals(this.getDeletionProtection()) == false)
@@ -2587,6 +2701,10 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getServerlessV2ScalingConfiguration() != null
                 && other.getServerlessV2ScalingConfiguration().equals(this.getServerlessV2ScalingConfiguration()) == false)
+            return false;
+        if (other.getGlobalClusterIdentifier() == null ^ this.getGlobalClusterIdentifier() == null)
+            return false;
+        if (other.getGlobalClusterIdentifier() != null && other.getGlobalClusterIdentifier().equals(this.getGlobalClusterIdentifier()) == false)
             return false;
         return true;
     }
@@ -2633,10 +2751,12 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getClusterCreateTime() == null) ? 0 : getClusterCreateTime().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToSnapshot() == null) ? 0 : getCopyTagsToSnapshot().hashCode());
         hashCode = prime * hashCode + ((getEnabledCloudwatchLogsExports() == null) ? 0 : getEnabledCloudwatchLogsExports().hashCode());
+        hashCode = prime * hashCode + ((getPendingModifiedValues() == null) ? 0 : getPendingModifiedValues().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getCrossAccountClone() == null) ? 0 : getCrossAccountClone().hashCode());
         hashCode = prime * hashCode + ((getAutomaticRestartTime() == null) ? 0 : getAutomaticRestartTime().hashCode());
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getGlobalClusterIdentifier() == null) ? 0 : getGlobalClusterIdentifier().hashCode());
         return hashCode;
     }
 

@@ -184,6 +184,12 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.applicationautoscaling.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.applicationautoscaling.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("FailedResourceAccessException").withExceptionUnmarshaller(
                                     com.amazonaws.services.applicationautoscaling.model.transform.FailedResourceAccessExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -943,6 +949,68 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
 
     /**
      * <p>
+     * Returns all the tags on the specified Application Auto Scaling scalable target.
+     * </p>
+     * <p>
+     * For general information about tags, including the format and syntax, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @sample AWSApplicationAutoScaling.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTagsForResource(request);
+    }
+
+    @SdkInternalApi
+    final ListTagsForResourceResult executeListTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTagsForResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTagsForResourceRequest> request = null;
+        Response<ListTagsForResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTagsForResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Application Auto Scaling");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates or updates a scaling policy for an Application Auto Scaling scalable target.
      * </p>
      * <p>
@@ -975,7 +1043,7 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
      * </p>
      * <note>
      * <p>
-     * If a scalable target is deregistered, the scalable target is no longer available to execute scaling policies. Any
+     * If a scalable target is deregistered, the scalable target is no longer available to use scaling policies. Any
      * scaling policies that were specified for the scalable target are deleted.
      * </p>
      * </note>
@@ -1062,7 +1130,7 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
      * until you have registered the resource as a scalable target.
      * </p>
      * <p>
-     * When start and end times are specified with a recurring schedule using a cron expression or rates, they form the
+     * When you specify start and end times with a recurring schedule using a cron expression or rates, they form the
      * boundaries for when the recurring action starts and stops.
      * </p>
      * <p>
@@ -1149,7 +1217,7 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
 
     /**
      * <p>
-     * Registers or updates a scalable target, the resource that you want to scale.
+     * Registers or updates a scalable target, which is the resource that you want to scale.
      * </p>
      * <p>
      * Scalable targets are uniquely identified by the combination of resource ID, scalable dimension, and namespace,
@@ -1161,9 +1229,9 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
      * capacity. Otherwise, it changes the resource's current capacity to a value that is inside of this range.
      * </p>
      * <p>
-     * If you choose to add a scaling policy, current capacity is adjustable within the specified range when scaling
-     * starts. Application Auto Scaling scaling policies will not scale capacity to values that are outside of the
-     * minimum and maximum range.
+     * If you add a scaling policy, current capacity is adjustable within the specified range when scaling starts.
+     * Application Auto Scaling scaling policies will not scale capacity to values that are outside of the minimum and
+     * maximum range.
      * </p>
      * <p>
      * After you register a scalable target, you do not need to register it again to use other Application Auto Scaling
@@ -1182,10 +1250,18 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
      * </p>
      * <note>
      * <p>
-     * If you call the <code>RegisterScalableTarget</code> API to update an existing scalable target, Application Auto
-     * Scaling retrieves the current capacity of the resource. If it is below the minimum capacity or above the maximum
-     * capacity, Application Auto Scaling adjusts the capacity of the scalable target to place it within these bounds,
-     * even if you don't include the <code>MinCapacity</code> or <code>MaxCapacity</code> request parameters.
+     * If you call the <code>RegisterScalableTarget</code> API operation to create a scalable target, there might be a
+     * brief delay until the operation achieves <a href="https://en.wikipedia.org/wiki/Eventual_consistency">eventual
+     * consistency</a>. You might become aware of this brief delay if you get unexpected errors when performing
+     * sequential operations. The typical strategy is to retry the request, and some Amazon Web Services SDKs include
+     * automatic backoff and retry logic.
+     * </p>
+     * <p>
+     * If you call the <code>RegisterScalableTarget</code> API operation to update an existing scalable target,
+     * Application Auto Scaling retrieves the current capacity of the resource. If it's below the minimum capacity or
+     * above the maximum capacity, Application Auto Scaling adjusts the capacity of the scalable target to place it
+     * within these bounds, even if you don't include the <code>MinCapacity</code> or <code>MaxCapacity</code> request
+     * parameters.
      * </p>
      * </note>
      * 
@@ -1241,6 +1317,149 @@ public class AWSApplicationAutoScalingClient extends AmazonWebServiceClient impl
             HttpResponseHandler<AmazonWebServiceResponse<RegisterScalableTargetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new RegisterScalableTargetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Adds or edits tags on an Application Auto Scaling scalable target.
+     * </p>
+     * <p>
+     * Each tag consists of a tag key and a tag value, which are both case-sensitive strings. To add a tag, specify a
+     * new tag key and a tag value. To edit a tag, specify an existing tag key and a new tag value.
+     * </p>
+     * <p>
+     * You can use this operation to tag an Application Auto Scaling scalable target, but you cannot tag a scaling
+     * policy or scheduled action.
+     * </p>
+     * <p>
+     * You can also add tags to an Application Auto Scaling scalable target while creating it (
+     * <code>RegisterScalableTarget</code>).
+     * </p>
+     * <p>
+     * For general information about tags, including the format and syntax, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>
+     * in the <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * <p>
+     * Use tags to control access to a scalable target. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/application/userguide/resource-tagging-support.html">Tagging
+     * support for Application Auto Scaling</a> in the <i>Application Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws TooManyTagsException
+     *         The request contains too many tags. Try the request again with fewer tags.
+     * @throws ValidationException
+     *         An exception was thrown for a validation issue. Review the available parameters for the API request.
+     * @sample AWSApplicationAutoScaling.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/TagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeTagResource(request);
+    }
+
+    @SdkInternalApi
+    final TagResourceResult executeTagResource(TagResourceRequest tagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(tagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TagResourceRequest> request = null;
+        Response<TagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(tagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Application Auto Scaling");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes tags from an Application Auto Scaling scalable target. To delete a tag, specify the tag key and the
+     * Application Auto Scaling scalable target.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws ValidationException
+     *         An exception was thrown for a validation issue. Review the available parameters for the API request.
+     * @sample AWSApplicationAutoScaling.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/application-autoscaling-2016-02-06/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUntagResource(request);
+    }
+
+    @SdkInternalApi
+    final UntagResourceResult executeUntagResource(UntagResourceRequest untagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(untagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UntagResourceRequest> request = null;
+        Response<UntagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UntagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(untagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Application Auto Scaling");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

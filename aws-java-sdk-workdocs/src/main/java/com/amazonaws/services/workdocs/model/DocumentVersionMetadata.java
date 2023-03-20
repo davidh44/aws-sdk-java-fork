@@ -731,7 +731,7 @@ public class DocumentVersionMetadata implements Serializable, Cloneable, Structu
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
+            sb.append("Name: ").append("***Sensitive Data Redacted***").append(",");
         if (getContentType() != null)
             sb.append("ContentType: ").append(getContentType()).append(",");
         if (getSize() != null)

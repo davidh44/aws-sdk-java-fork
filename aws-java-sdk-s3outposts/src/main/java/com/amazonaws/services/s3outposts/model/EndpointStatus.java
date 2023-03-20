@@ -22,7 +22,9 @@ public enum EndpointStatus {
 
     Pending("Pending"),
     Available("Available"),
-    Deleting("Deleting");
+    Deleting("Deleting"),
+    Create_Failed("Create_Failed"),
+    Delete_Failed("Delete_Failed");
 
     private String value;
 

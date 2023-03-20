@@ -563,9 +563,9 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getUserId() != null)
             sb.append("UserId: ").append(getUserId()).append(",");
         if (getGivenName() != null)
-            sb.append("GivenName: ").append(getGivenName()).append(",");
+            sb.append("GivenName: ").append("***Sensitive Data Redacted***").append(",");
         if (getSurname() != null)
-            sb.append("Surname: ").append(getSurname()).append(",");
+            sb.append("Surname: ").append("***Sensitive Data Redacted***").append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getStorageRule() != null)

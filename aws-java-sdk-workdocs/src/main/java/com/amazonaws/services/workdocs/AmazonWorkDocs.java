@@ -1119,6 +1119,8 @@ public interface AmazonWorkDocs {
      *         The resource is already checked out.
      * @throws InvalidPasswordException
      *         The password is invalid.
+     * @throws InvalidArgumentException
+     *         The pagination marker or limit fields are not valid.
      * @sample AmazonWorkDocs.InitiateDocumentVersionUpload
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/InitiateDocumentVersionUpload"
      *      target="_top">AWS API Documentation</a>
@@ -1198,6 +1200,27 @@ public interface AmazonWorkDocs {
      *      target="_top">AWS API Documentation</a>
      */
     RestoreDocumentVersionsResult restoreDocumentVersions(RestoreDocumentVersionsRequest restoreDocumentVersionsRequest);
+
+    /**
+     * <p>
+     * Searches metadata and the content of folders, documents, document versions, and comments.
+     * </p>
+     * 
+     * @param searchResourcesRequest
+     * @return Result of the SearchResources operation returned by the service.
+     * @throws InvalidArgumentException
+     *         The pagination marker or limit fields are not valid.
+     * @throws UnauthorizedResourceAccessException
+     *         The caller does not have access to perform the action on the resource.
+     * @throws UnauthorizedOperationException
+     *         The operation is not permitted.
+     * @throws ServiceUnavailableException
+     *         One or more of the dependencies is unavailable.
+     * @sample AmazonWorkDocs.SearchResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workdocs-2016-05-01/SearchResources" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchResourcesResult searchResources(SearchResourcesRequest searchResourcesRequest);
 
     /**
      * <p>
