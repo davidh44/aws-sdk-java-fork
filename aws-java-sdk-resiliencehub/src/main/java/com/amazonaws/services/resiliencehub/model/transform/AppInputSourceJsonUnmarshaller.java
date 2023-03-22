@@ -48,6 +48,10 @@ public class AppInputSourceJsonUnmarshaller implements Unmarshaller<AppInputSour
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("eksSourceClusterNamespace", targetDepth)) {
+                    context.nextToken();
+                    appInputSource.setEksSourceClusterNamespace(EksSourceClusterNamespaceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("importType", targetDepth)) {
                     context.nextToken();
                     appInputSource.setImportType(context.getUnmarshaller(String.class).unmarshall(context));

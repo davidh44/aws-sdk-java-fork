@@ -24,7 +24,8 @@ public enum ResourceMappingType {
     Resource("Resource"),
     AppRegistryApp("AppRegistryApp"),
     ResourceGroup("ResourceGroup"),
-    Terraform("Terraform");
+    Terraform("Terraform"),
+    EKS("EKS");
 
     private String value;
 

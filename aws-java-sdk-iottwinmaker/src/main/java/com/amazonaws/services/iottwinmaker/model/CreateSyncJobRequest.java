@@ -27,7 +27,7 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      */
     private String workspaceId;
@@ -37,14 +37,14 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSoource is <code>SITEWISE </code>.
      * </p>
      * </note>
      */
     private String syncSource;
     /**
      * <p>
-     * The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create, update or
+     * The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create, update, or
      * delete the corresponding resources.
      * </p>
      */
@@ -58,11 +58,11 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
      * @param workspaceId
-     *        The workspace Id.
+     *        The workspace ID.
      */
 
     public void setWorkspaceId(String workspaceId) {
@@ -71,10 +71,10 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
-     * @return The workspace Id.
+     * @return The workspace ID.
      */
 
     public String getWorkspaceId() {
@@ -83,11 +83,11 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
      * @param workspaceId
-     *        The workspace Id.
+     *        The workspace ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,14 +102,14 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSoource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
      *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSoource is <code>SITEWISE </code>.
      *        </p>
      */
 
@@ -123,13 +123,13 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSoource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @return The sync source.</p> <note>
      *         <p>
-     *         Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *         Currently the only supported syncSoource is <code>SITEWISE </code>.
      *         </p>
      */
 
@@ -143,14 +143,14 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSoource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
      *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSoource is <code>SITEWISE </code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -162,13 +162,13 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create, update or
+     * The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create, update, or
      * delete the corresponding resources.
      * </p>
      * 
      * @param syncRole
-     *        The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create,
-     *        update or delete the corresponding resources.
+     *        The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create,
+     *        update, or delete the corresponding resources.
      */
 
     public void setSyncRole(String syncRole) {
@@ -177,12 +177,12 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create, update or
+     * The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create, update, or
      * delete the corresponding resources.
      * </p>
      * 
-     * @return The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create,
-     *         update or delete the corresponding resources.
+     * @return The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create,
+     *         update, or delete the corresponding resources.
      */
 
     public String getSyncRole() {
@@ -191,13 +191,13 @@ public class CreateSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create, update or
+     * The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create, update, or
      * delete the corresponding resources.
      * </p>
      * 
      * @param syncRole
-     *        The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create,
-     *        update or delete the corresponding resources.
+     *        The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create,
+     *        update, or delete the corresponding resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

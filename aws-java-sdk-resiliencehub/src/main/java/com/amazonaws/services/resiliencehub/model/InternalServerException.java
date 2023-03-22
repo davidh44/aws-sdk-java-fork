@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception occurs when there is an internal failure in the AWS Resilience Hub service.
+ * This exception occurs when there is an internal failure in the Resilience Hub service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

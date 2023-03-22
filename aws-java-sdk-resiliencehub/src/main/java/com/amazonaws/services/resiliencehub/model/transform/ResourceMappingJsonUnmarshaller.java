@@ -52,6 +52,10 @@ public class ResourceMappingJsonUnmarshaller implements Unmarshaller<ResourceMap
                     context.nextToken();
                     resourceMapping.setAppRegistryAppName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("eksSourceName", targetDepth)) {
+                    context.nextToken();
+                    resourceMapping.setEksSourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("logicalStackName", targetDepth)) {
                     context.nextToken();
                     resourceMapping.setLogicalStackName(context.getUnmarshaller(String.class).unmarshall(context));

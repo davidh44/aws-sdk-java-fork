@@ -27,18 +27,18 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     * The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      * </p>
      */
     private String resourceArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     * The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     *        The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -47,10 +47,10 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     * The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     * @return The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      */
 
     public String getResourceArn() {
@@ -59,11 +59,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     * The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+     *        The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

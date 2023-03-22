@@ -61,11 +61,11 @@ public class UpdateAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
     private String awsRegion;
     /**
      * <p>
-     * Indicates if a resource is excluded from an AWS Resilience Hub application.
+     * Indicates if a resource is excluded from an Resilience Hub application.
      * </p>
      * <note>
      * <p>
-     * You can exclude only imported resources from an AWS Resilience Hub application.
+     * You can exclude only imported resources from an Resilience Hub application.
      * </p>
      * </note>
      */
@@ -384,18 +384,18 @@ public class UpdateAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Indicates if a resource is excluded from an AWS Resilience Hub application.
+     * Indicates if a resource is excluded from an Resilience Hub application.
      * </p>
      * <note>
      * <p>
-     * You can exclude only imported resources from an AWS Resilience Hub application.
+     * You can exclude only imported resources from an Resilience Hub application.
      * </p>
      * </note>
      * 
      * @param excluded
-     *        Indicates if a resource is excluded from an AWS Resilience Hub application.</p> <note>
+     *        Indicates if a resource is excluded from an Resilience Hub application.</p> <note>
      *        <p>
-     *        You can exclude only imported resources from an AWS Resilience Hub application.
+     *        You can exclude only imported resources from an Resilience Hub application.
      *        </p>
      */
 
@@ -405,17 +405,17 @@ public class UpdateAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Indicates if a resource is excluded from an AWS Resilience Hub application.
+     * Indicates if a resource is excluded from an Resilience Hub application.
      * </p>
      * <note>
      * <p>
-     * You can exclude only imported resources from an AWS Resilience Hub application.
+     * You can exclude only imported resources from an Resilience Hub application.
      * </p>
      * </note>
      * 
-     * @return Indicates if a resource is excluded from an AWS Resilience Hub application.</p> <note>
+     * @return Indicates if a resource is excluded from an Resilience Hub application.</p> <note>
      *         <p>
-     *         You can exclude only imported resources from an AWS Resilience Hub application.
+     *         You can exclude only imported resources from an Resilience Hub application.
      *         </p>
      */
 
@@ -425,18 +425,18 @@ public class UpdateAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Indicates if a resource is excluded from an AWS Resilience Hub application.
+     * Indicates if a resource is excluded from an Resilience Hub application.
      * </p>
      * <note>
      * <p>
-     * You can exclude only imported resources from an AWS Resilience Hub application.
+     * You can exclude only imported resources from an Resilience Hub application.
      * </p>
      * </note>
      * 
      * @param excluded
-     *        Indicates if a resource is excluded from an AWS Resilience Hub application.</p> <note>
+     *        Indicates if a resource is excluded from an Resilience Hub application.</p> <note>
      *        <p>
-     *        You can exclude only imported resources from an AWS Resilience Hub application.
+     *        You can exclude only imported resources from an Resilience Hub application.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -448,17 +448,17 @@ public class UpdateAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Indicates if a resource is excluded from an AWS Resilience Hub application.
+     * Indicates if a resource is excluded from an Resilience Hub application.
      * </p>
      * <note>
      * <p>
-     * You can exclude only imported resources from an AWS Resilience Hub application.
+     * You can exclude only imported resources from an Resilience Hub application.
      * </p>
      * </note>
      * 
-     * @return Indicates if a resource is excluded from an AWS Resilience Hub application.</p> <note>
+     * @return Indicates if a resource is excluded from an Resilience Hub application.</p> <note>
      *         <p>
-     *         You can exclude only imported resources from an AWS Resilience Hub application.
+     *         You can exclude only imported resources from an Resilience Hub application.
      *         </p>
      */
 

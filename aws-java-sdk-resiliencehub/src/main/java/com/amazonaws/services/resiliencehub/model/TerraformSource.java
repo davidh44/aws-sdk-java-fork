@@ -30,18 +30,18 @@ public class TerraformSource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Terraform s3 state file you need to import.
+     * The URL of the Terraform s3 state file you need to import.
      * </p>
      */
     private String s3StateFileUrl;
 
     /**
      * <p>
-     * The Terraform s3 state file you need to import.
+     * The URL of the Terraform s3 state file you need to import.
      * </p>
      * 
      * @param s3StateFileUrl
-     *        The Terraform s3 state file you need to import.
+     *        The URL of the Terraform s3 state file you need to import.
      */
 
     public void setS3StateFileUrl(String s3StateFileUrl) {
@@ -50,10 +50,10 @@ public class TerraformSource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Terraform s3 state file you need to import.
+     * The URL of the Terraform s3 state file you need to import.
      * </p>
      * 
-     * @return The Terraform s3 state file you need to import.
+     * @return The URL of the Terraform s3 state file you need to import.
      */
 
     public String getS3StateFileUrl() {
@@ -62,11 +62,11 @@ public class TerraformSource implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Terraform s3 state file you need to import.
+     * The URL of the Terraform s3 state file you need to import.
      * </p>
      * 
      * @param s3StateFileUrl
-     *        The Terraform s3 state file you need to import.
+     *        The URL of the Terraform s3 state file you need to import.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -60,7 +60,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      * <dt>Native</dt>
      * <dd>
      * <p>
-     * The resource identifier is an AWS Resilience Hub-native identifier.
+     * The resource identifier is an Resilience Hub-native identifier.
      * </p>
      * </dd>
      * </dl>
@@ -201,7 +201,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      * <dt>Native</dt>
      * <dd>
      * <p>
-     * The resource identifier is an AWS Resilience Hub-native identifier.
+     * The resource identifier is an Resilience Hub-native identifier.
      * </p>
      * </dd>
      * </dl>
@@ -218,7 +218,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      *        <dt>Native</dt>
      *        <dd>
      *        <p>
-     *        The resource identifier is an AWS Resilience Hub-native identifier.
+     *        The resource identifier is an Resilience Hub-native identifier.
      *        </p>
      *        </dd>
      * @see PhysicalIdentifierType
@@ -242,7 +242,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      * <dt>Native</dt>
      * <dd>
      * <p>
-     * The resource identifier is an AWS Resilience Hub-native identifier.
+     * The resource identifier is an Resilience Hub-native identifier.
      * </p>
      * </dd>
      * </dl>
@@ -258,7 +258,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      *         <dt>Native</dt>
      *         <dd>
      *         <p>
-     *         The resource identifier is an AWS Resilience Hub-native identifier.
+     *         The resource identifier is an Resilience Hub-native identifier.
      *         </p>
      *         </dd>
      * @see PhysicalIdentifierType
@@ -282,7 +282,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      * <dt>Native</dt>
      * <dd>
      * <p>
-     * The resource identifier is an AWS Resilience Hub-native identifier.
+     * The resource identifier is an Resilience Hub-native identifier.
      * </p>
      * </dd>
      * </dl>
@@ -299,7 +299,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      *        <dt>Native</dt>
      *        <dd>
      *        <p>
-     *        The resource identifier is an AWS Resilience Hub-native identifier.
+     *        The resource identifier is an Resilience Hub-native identifier.
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -325,7 +325,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      * <dt>Native</dt>
      * <dd>
      * <p>
-     * The resource identifier is an AWS Resilience Hub-native identifier.
+     * The resource identifier is an Resilience Hub-native identifier.
      * </p>
      * </dd>
      * </dl>
@@ -342,7 +342,7 @@ public class PhysicalResourceId implements Serializable, Cloneable, StructuredPo
      *        <dt>Native</dt>
      *        <dd>
      *        <p>
-     *        The resource identifier is an AWS Resilience Hub-native identifier.
+     *        The resource identifier is an Resilience Hub-native identifier.
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.

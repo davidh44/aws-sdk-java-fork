@@ -42,7 +42,7 @@ public class ListAppInputSourcesRequest extends com.amazonaws.AmazonWebServiceRe
     private String appVersion;
     /**
      * <p>
-     * Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     * Maximum number of input sources to be displayed per Resilience Hub application.
      * </p>
      */
     private Integer maxResults;
@@ -156,11 +156,11 @@ public class ListAppInputSourcesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     * Maximum number of input sources to be displayed per Resilience Hub application.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     *        Maximum number of input sources to be displayed per Resilience Hub application.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -169,10 +169,10 @@ public class ListAppInputSourcesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     * Maximum number of input sources to be displayed per Resilience Hub application.
      * </p>
      * 
-     * @return Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     * @return Maximum number of input sources to be displayed per Resilience Hub application.
      */
 
     public Integer getMaxResults() {
@@ -181,11 +181,11 @@ public class ListAppInputSourcesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     * Maximum number of input sources to be displayed per Resilience Hub application.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of input sources to be displayed per AWS Resilience Hub application.
+     *        Maximum number of input sources to be displayed per Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

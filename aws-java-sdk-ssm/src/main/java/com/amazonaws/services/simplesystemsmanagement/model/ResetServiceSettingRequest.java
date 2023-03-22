@@ -35,6 +35,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
+     * <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>/ssm/automation/customer-script-log-destination</code>
      * </p>
      * </li>
@@ -79,6 +84,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
+     * <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>/ssm/automation/customer-script-log-destination</code>
      * </p>
      * </li>
@@ -118,6 +128,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      *        The Amazon Resource Name (ARN) of the service setting to reset. The setting ID can be one of the
      *        following.</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>/ssm/automation/customer-script-log-destination</code>
@@ -166,6 +181,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
+     * <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>/ssm/automation/customer-script-log-destination</code>
      * </p>
      * </li>
@@ -204,6 +224,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      * @return The Amazon Resource Name (ARN) of the service setting to reset. The setting ID can be one of the
      *         following.</p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>/ssm/automation/customer-script-log-destination</code>
@@ -252,6 +277,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
+     * <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>/ssm/automation/customer-script-log-destination</code>
      * </p>
      * </li>
@@ -291,6 +321,11 @@ public class ResetServiceSettingRequest extends com.amazonaws.AmazonWebServiceRe
      *        The Amazon Resource Name (ARN) of the service setting to reset. The setting ID can be one of the
      *        following.</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>/ssm/managed-instance/default-ec2-instance-management-role</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>/ssm/automation/customer-script-log-destination</code>

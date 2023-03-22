@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AppInputSourceMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> EKSSOURCECLUSTERNAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksSourceClusterNamespace").build();
     private static final MarshallingInfo<String> IMPORTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("importType").build();
     private static final MarshallingInfo<Integer> RESOURCECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -54,6 +56,7 @@ public class AppInputSourceMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(appInputSource.getEksSourceClusterNamespace(), EKSSOURCECLUSTERNAMESPACE_BINDING);
             protocolMarshaller.marshall(appInputSource.getImportType(), IMPORTTYPE_BINDING);
             protocolMarshaller.marshall(appInputSource.getResourceCount(), RESOURCECOUNT_BINDING);
             protocolMarshaller.marshall(appInputSource.getSourceArn(), SOURCEARN_BINDING);

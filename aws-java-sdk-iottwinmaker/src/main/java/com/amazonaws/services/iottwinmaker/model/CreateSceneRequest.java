@@ -61,6 +61,12 @@ public class CreateSceneRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The request metadata.
+     * </p>
+     */
+    private java.util.Map<String, String> sceneMetadata;
 
     /**
      * <p>
@@ -361,6 +367,74 @@ public class CreateSceneRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The request metadata.
+     * </p>
+     * 
+     * @return The request metadata.
+     */
+
+    public java.util.Map<String, String> getSceneMetadata() {
+        return sceneMetadata;
+    }
+
+    /**
+     * <p>
+     * The request metadata.
+     * </p>
+     * 
+     * @param sceneMetadata
+     *        The request metadata.
+     */
+
+    public void setSceneMetadata(java.util.Map<String, String> sceneMetadata) {
+        this.sceneMetadata = sceneMetadata;
+    }
+
+    /**
+     * <p>
+     * The request metadata.
+     * </p>
+     * 
+     * @param sceneMetadata
+     *        The request metadata.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSceneRequest withSceneMetadata(java.util.Map<String, String> sceneMetadata) {
+        setSceneMetadata(sceneMetadata);
+        return this;
+    }
+
+    /**
+     * Add a single SceneMetadata entry
+     *
+     * @see CreateSceneRequest#withSceneMetadata
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSceneRequest addSceneMetadataEntry(String key, String value) {
+        if (null == this.sceneMetadata) {
+            this.sceneMetadata = new java.util.HashMap<String, String>();
+        }
+        if (this.sceneMetadata.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.sceneMetadata.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into SceneMetadata.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSceneRequest clearSceneMetadataEntries() {
+        this.sceneMetadata = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -383,7 +457,9 @@ public class CreateSceneRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getCapabilities() != null)
             sb.append("Capabilities: ").append(getCapabilities()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getSceneMetadata() != null)
+            sb.append("SceneMetadata: ").append(getSceneMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -422,6 +498,10 @@ public class CreateSceneRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getSceneMetadata() == null ^ this.getSceneMetadata() == null)
+            return false;
+        if (other.getSceneMetadata() != null && other.getSceneMetadata().equals(this.getSceneMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -436,6 +516,7 @@ public class CreateSceneRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getSceneMetadata() == null) ? 0 : getSceneMetadata().hashCode());
         return hashCode;
     }
 

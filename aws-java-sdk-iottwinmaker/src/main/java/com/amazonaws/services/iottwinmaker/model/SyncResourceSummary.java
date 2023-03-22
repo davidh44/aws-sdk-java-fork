@@ -36,13 +36,13 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
     private String resourceType;
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      */
     private String externalId;
     /**
      * <p>
-     * The resource Id.
+     * The resource ID.
      * </p>
      */
     private String resourceId;
@@ -120,11 +120,11 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      * 
      * @param externalId
-     *        The external Id.
+     *        The external ID.
      */
 
     public void setExternalId(String externalId) {
@@ -133,10 +133,10 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      * 
-     * @return The external Id.
+     * @return The external ID.
      */
 
     public String getExternalId() {
@@ -145,11 +145,11 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      * 
      * @param externalId
-     *        The external Id.
+     *        The external ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -160,11 +160,11 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource Id.
+     * The resource ID.
      * </p>
      * 
      * @param resourceId
-     *        The resource Id.
+     *        The resource ID.
      */
 
     public void setResourceId(String resourceId) {
@@ -173,10 +173,10 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource Id.
+     * The resource ID.
      * </p>
      * 
-     * @return The resource Id.
+     * @return The resource ID.
      */
 
     public String getResourceId() {
@@ -185,11 +185,11 @@ public class SyncResourceSummary implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource Id.
+     * The resource ID.
      * </p>
      * 
      * @param resourceId
-     *        The resource Id.
+     *        The resource ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

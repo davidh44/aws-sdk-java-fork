@@ -43,8 +43,15 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
     private String clientToken;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
-     * application. For more information about ARNs, see <a
+     * The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the Resilience Hub
+     * application.
+     * </p>
+     */
+    private EksSourceClusterNamespace eksSourceClusterNamespace;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub application.
+     * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
@@ -52,7 +59,7 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
     private String sourceArn;
     /**
      * <p>
-     * The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     * The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      * </p>
      */
     private TerraformSource terraformSource;
@@ -166,14 +173,60 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
-     * application. For more information about ARNs, see <a
+     * The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the Resilience Hub
+     * application.
+     * </p>
+     * 
+     * @param eksSourceClusterNamespace
+     *        The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the
+     *        Resilience Hub application.
+     */
+
+    public void setEksSourceClusterNamespace(EksSourceClusterNamespace eksSourceClusterNamespace) {
+        this.eksSourceClusterNamespace = eksSourceClusterNamespace;
+    }
+
+    /**
+     * <p>
+     * The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the Resilience Hub
+     * application.
+     * </p>
+     * 
+     * @return The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the
+     *         Resilience Hub application.
+     */
+
+    public EksSourceClusterNamespace getEksSourceClusterNamespace() {
+        return this.eksSourceClusterNamespace;
+    }
+
+    /**
+     * <p>
+     * The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the Resilience Hub
+     * application.
+     * </p>
+     * 
+     * @param eksSourceClusterNamespace
+     *        The namespace on your Amazon Elastic Kubernetes Service cluster that you want to delete from the
+     *        Resilience Hub application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteAppInputSourceRequest withEksSourceClusterNamespace(EksSourceClusterNamespace eksSourceClusterNamespace) {
+        setEksSourceClusterNamespace(eksSourceClusterNamespace);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub application.
+     * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param sourceArn
-     *        The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
+     *        The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub
      *        application. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -185,13 +238,13 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
-     * application. For more information about ARNs, see <a
+     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub application.
+     * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
+     * @return The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub
      *         application. For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -203,14 +256,14 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
-     * application. For more information about ARNs, see <a
+     * The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub application.
+     * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param sourceArn
-     *        The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub
+     *        The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub
      *        application. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -224,11 +277,11 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     * The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      * </p>
      * 
      * @param terraformSource
-     *        The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     *        The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      */
 
     public void setTerraformSource(TerraformSource terraformSource) {
@@ -237,10 +290,10 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     * The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      * </p>
      * 
-     * @return The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     * @return The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      */
 
     public TerraformSource getTerraformSource() {
@@ -249,11 +302,11 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     * The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      * </p>
      * 
      * @param terraformSource
-     *        The imported Terraform s3 state ﬁle you want to remove from the AWS Resilience Hub application.
+     *        The imported Terraform s3 state ﬁle you want to remove from the Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,6 +331,8 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
             sb.append("AppArn: ").append(getAppArn()).append(",");
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getEksSourceClusterNamespace() != null)
+            sb.append("EksSourceClusterNamespace: ").append(getEksSourceClusterNamespace()).append(",");
         if (getSourceArn() != null)
             sb.append("SourceArn: ").append(getSourceArn()).append(",");
         if (getTerraformSource() != null)
@@ -304,6 +359,10 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getEksSourceClusterNamespace() == null ^ this.getEksSourceClusterNamespace() == null)
+            return false;
+        if (other.getEksSourceClusterNamespace() != null && other.getEksSourceClusterNamespace().equals(this.getEksSourceClusterNamespace()) == false)
+            return false;
         if (other.getSourceArn() == null ^ this.getSourceArn() == null)
             return false;
         if (other.getSourceArn() != null && other.getSourceArn().equals(this.getSourceArn()) == false)
@@ -322,6 +381,7 @@ public class DeleteAppInputSourceRequest extends com.amazonaws.AmazonWebServiceR
 
         hashCode = prime * hashCode + ((getAppArn() == null) ? 0 : getAppArn().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getEksSourceClusterNamespace() == null) ? 0 : getEksSourceClusterNamespace().hashCode());
         hashCode = prime * hashCode + ((getSourceArn() == null) ? 0 : getSourceArn().hashCode());
         hashCode = prime * hashCode + ((getTerraformSource() == null) ? 0 : getTerraformSource().hashCode());
         return hashCode;

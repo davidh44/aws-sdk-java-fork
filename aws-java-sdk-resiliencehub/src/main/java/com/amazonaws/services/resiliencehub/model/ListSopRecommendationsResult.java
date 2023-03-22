@@ -31,7 +31,7 @@ public class ListSopRecommendationsResult extends com.amazonaws.AmazonWebService
     private String nextToken;
     /**
      * <p>
-     * The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     * The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * </p>
      */
     private java.util.List<SopRecommendation> sopRecommendations;
@@ -78,10 +78,10 @@ public class ListSopRecommendationsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     * The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * </p>
      * 
-     * @return The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     * @return The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      */
 
     public java.util.List<SopRecommendation> getSopRecommendations() {
@@ -90,11 +90,11 @@ public class ListSopRecommendationsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     * The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * </p>
      * 
      * @param sopRecommendations
-     *        The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     *        The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      */
 
     public void setSopRecommendations(java.util.Collection<SopRecommendation> sopRecommendations) {
@@ -108,7 +108,7 @@ public class ListSopRecommendationsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     * The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class ListSopRecommendationsResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param sopRecommendations
-     *        The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     *        The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class ListSopRecommendationsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     * The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * </p>
      * 
      * @param sopRecommendations
-     *        The standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+     *        The standard operating procedure (SOP) recommendations for the Resilience Hub applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

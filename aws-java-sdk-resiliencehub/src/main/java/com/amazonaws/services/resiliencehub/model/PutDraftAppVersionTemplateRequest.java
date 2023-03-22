@@ -48,7 +48,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the application.
+     * The list of logical resources that needs to be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -144,6 +144,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * </li>
      * <li>
@@ -320,6 +339,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <b> <code>version</code> </b>
+     * </p>
+     * <p>
+     * The AWS Resilience Hub application version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      */
     private String appTemplateBody;
@@ -399,7 +445,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the application.
+     * The list of logical resources that needs to be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -495,6 +541,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * </li>
      * <li>
@@ -671,6 +736,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <b> <code>version</code> </b>
+     * </p>
+     * <p>
+     * The AWS Resilience Hub application version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * 
      * @param appTemplateBody
@@ -686,7 +778,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <b> <code>resources</code> </b>
      *        </p>
      *        <p>
-     *        The list of logical resources that needs to be included in the application.
+     *        The list of logical resources that needs to be included in the Resilience Hub application.
      *        </p>
      *        <p>
      *        Type: Array
@@ -782,6 +874,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        Type: String
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>additionalInfo</code>
+     *        </p>
+     *        <p>
+     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and
+     *        one associated account.
+     *        </p>
+     *        <p>
+     *        Key: <code>"failover-regions"</code>
+     *        </p>
+     *        <p>
+     *        Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     *        </p>
+     *        </note></li>
      *        </ul>
      *        </li>
      *        <li>
@@ -958,6 +1069,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        </li>
      *        </ul>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>version</code> </b>
+     *        </p>
+     *        <p>
+     *        The AWS Resilience Hub application version.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>additionalInfo</code>
+     *        </p>
+     *        <p>
+     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and
+     *        one associated account.
+     *        </p>
+     *        <p>
+     *        Key: <code>"failover-regions"</code>
+     *        </p>
+     *        <p>
+     *        Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     *        </p>
+     *        </note></li>
      */
 
     public void setAppTemplateBody(String appTemplateBody) {
@@ -978,7 +1116,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the application.
+     * The list of logical resources that needs to be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -1074,6 +1212,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * </li>
      * <li>
@@ -1250,6 +1407,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <b> <code>version</code> </b>
+     * </p>
+     * <p>
+     * The AWS Resilience Hub application version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * 
      * @return A JSON string that provides information about your application structure. To learn more about the
@@ -1264,7 +1448,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <b> <code>resources</code> </b>
      *         </p>
      *         <p>
-     *         The list of logical resources that needs to be included in the application.
+     *         The list of logical resources that needs to be included in the Resilience Hub application.
      *         </p>
      *         <p>
      *         Type: Array
@@ -1360,6 +1544,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         Type: String
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>additionalInfo</code>
+     *         </p>
+     *         <p>
+     *         Additional configuration parameters for an AWS Resilience Hub application.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region
+     *         and one associated account.
+     *         </p>
+     *         <p>
+     *         Key: <code>"failover-regions"</code>
+     *         </p>
+     *         <p>
+     *         Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     *         </p>
+     *         </note></li>
      *         </ul>
      *         </li>
      *         <li>
@@ -1536,6 +1739,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         </li>
      *         </ul>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <b> <code>version</code> </b>
+     *         </p>
+     *         <p>
+     *         The AWS Resilience Hub application version.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>additionalInfo</code>
+     *         </p>
+     *         <p>
+     *         Additional configuration parameters for an AWS Resilience Hub application.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region
+     *         and one associated account.
+     *         </p>
+     *         <p>
+     *         Key: <code>"failover-regions"</code>
+     *         </p>
+     *         <p>
+     *         Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     *         </p>
+     *         </note></li>
      */
 
     public String getAppTemplateBody() {
@@ -1556,7 +1786,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the application.
+     * The list of logical resources that needs to be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -1652,6 +1882,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * </li>
      * <li>
@@ -1828,6 +2077,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <b> <code>version</code> </b>
+     * </p>
+     * <p>
+     * The AWS Resilience Hub application version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>additionalInfo</code>
+     * </p>
+     * <p>
+     * Additional configuration parameters for an AWS Resilience Hub application.
+     * </p>
+     * <note>
+     * <p>
+     * Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one
+     * associated account.
+     * </p>
+     * <p>
+     * Key: <code>"failover-regions"</code>
+     * </p>
+     * <p>
+     * Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     * </p>
+     * </note></li>
      * </ul>
      * 
      * @param appTemplateBody
@@ -1843,7 +2119,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <b> <code>resources</code> </b>
      *        </p>
      *        <p>
-     *        The list of logical resources that needs to be included in the application.
+     *        The list of logical resources that needs to be included in the Resilience Hub application.
      *        </p>
      *        <p>
      *        Type: Array
@@ -1939,6 +2215,25 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        Type: String
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>additionalInfo</code>
+     *        </p>
+     *        <p>
+     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and
+     *        one associated account.
+     *        </p>
+     *        <p>
+     *        Key: <code>"failover-regions"</code>
+     *        </p>
+     *        <p>
+     *        Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     *        </p>
+     *        </note></li>
      *        </ul>
      *        </li>
      *        <li>
@@ -2115,6 +2410,33 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        </li>
      *        </ul>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>version</code> </b>
+     *        </p>
+     *        <p>
+     *        The AWS Resilience Hub application version.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>additionalInfo</code>
+     *        </p>
+     *        <p>
+     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and
+     *        one associated account.
+     *        </p>
+     *        <p>
+     *        Key: <code>"failover-regions"</code>
+     *        </p>
+     *        <p>
+     *        Value: <code>"[{"region":"&lt;REGION&gt;", "accounts":[{"id":"&lt;ACCOUNT_ID&gt;"}]}]"</code>
+     *        </p>
+     *        </note></li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

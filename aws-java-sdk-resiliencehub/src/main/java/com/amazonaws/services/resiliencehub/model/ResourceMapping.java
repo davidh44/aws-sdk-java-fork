@@ -36,6 +36,17 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
     private String appRegistryAppName;
     /**
      * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     */
+    private String eksSourceName;
+    /**
+     * <p>
      * The name of the CloudFormation stack this resource is mapped to.
      * </p>
      */
@@ -69,7 +80,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to a resource group. The name of the resource group is contained in the
+     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -143,6 +154,73 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @param eksSourceName
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.</p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     */
+
+    public void setEksSourceName(String eksSourceName) {
+        this.eksSourceName = eksSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @return The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.</p>
+     *         <note>
+     *         <p>
+     *         This parameter accepts values in "eks-cluster/namespace" format.
+     *         </p>
+     */
+
+    public String getEksSourceName() {
+        return this.eksSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @param eksSourceName
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.</p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceMapping withEksSourceName(String eksSourceName) {
+        setEksSourceName(eksSourceName);
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the CloudFormation stack this resource is mapped to.
      * </p>
      * 
@@ -210,7 +288,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to a resource group. The name of the resource group is contained in the
+     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -243,7 +321,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *        <dt>ResourceGroup</dt>
      *        <dd>
      *        <p>
-     *        The resource is mapped to a resource group. The name of the resource group is contained in the
+     *        The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      *        <code>resourceGroupName</code> property.
      *        </p>
      *        </dd>
@@ -283,7 +361,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to a resource group. The name of the resource group is contained in the
+     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -315,7 +393,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *         <dt>ResourceGroup</dt>
      *         <dd>
      *         <p>
-     *         The resource is mapped to a resource group. The name of the resource group is contained in the
+     *         The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      *         <code>resourceGroupName</code> property.
      *         </p>
      *         </dd>
@@ -355,7 +433,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to a resource group. The name of the resource group is contained in the
+     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -388,7 +466,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *        <dt>ResourceGroup</dt>
      *        <dd>
      *        <p>
-     *        The resource is mapped to a resource group. The name of the resource group is contained in the
+     *        The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      *        <code>resourceGroupName</code> property.
      *        </p>
      *        </dd>
@@ -430,7 +508,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to a resource group. The name of the resource group is contained in the
+     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -463,7 +541,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *        <dt>ResourceGroup</dt>
      *        <dd>
      *        <p>
-     *        The resource is mapped to a resource group. The name of the resource group is contained in the
+     *        The resource is mapped to an Resource Groups. The name of the resource group is contained in the
      *        <code>resourceGroupName</code> property.
      *        </p>
      *        </dd>
@@ -650,6 +728,8 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
         sb.append("{");
         if (getAppRegistryAppName() != null)
             sb.append("AppRegistryAppName: ").append(getAppRegistryAppName()).append(",");
+        if (getEksSourceName() != null)
+            sb.append("EksSourceName: ").append(getEksSourceName()).append(",");
         if (getLogicalStackName() != null)
             sb.append("LogicalStackName: ").append(getLogicalStackName()).append(",");
         if (getMappingType() != null)
@@ -679,6 +759,10 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
         if (other.getAppRegistryAppName() == null ^ this.getAppRegistryAppName() == null)
             return false;
         if (other.getAppRegistryAppName() != null && other.getAppRegistryAppName().equals(this.getAppRegistryAppName()) == false)
+            return false;
+        if (other.getEksSourceName() == null ^ this.getEksSourceName() == null)
+            return false;
+        if (other.getEksSourceName() != null && other.getEksSourceName().equals(this.getEksSourceName()) == false)
             return false;
         if (other.getLogicalStackName() == null ^ this.getLogicalStackName() == null)
             return false;
@@ -713,6 +797,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAppRegistryAppName() == null) ? 0 : getAppRegistryAppName().hashCode());
+        hashCode = prime * hashCode + ((getEksSourceName() == null) ? 0 : getEksSourceName().hashCode());
         hashCode = prime * hashCode + ((getLogicalStackName() == null) ? 0 : getLogicalStackName().hashCode());
         hashCode = prime * hashCode + ((getMappingType() == null) ? 0 : getMappingType().hashCode());
         hashCode = prime * hashCode + ((getPhysicalResourceId() == null) ? 0 : getPhysicalResourceId().hashCode());

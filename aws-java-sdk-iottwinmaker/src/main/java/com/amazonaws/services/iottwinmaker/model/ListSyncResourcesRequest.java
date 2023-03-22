@@ -33,11 +33,11 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String workspaceId;
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      */
@@ -46,6 +46,26 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <p>
+     * The following filter combinations are supported:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Filter with state
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ResourceId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ExternalId
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<SyncResourceFilter> filters;
     /**
@@ -106,18 +126,18 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
-     *        The sync soucre.</p> <note>
+     *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      */
 
@@ -127,17 +147,17 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
-     * @return The sync soucre.</p> <note>
+     * @return The sync source.</p> <note>
      *         <p>
-     *         Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *         Currently the only supported syncSource is <code>SITEWISE </code>.
      *         </p>
      */
 
@@ -147,18 +167,18 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
-     *        The sync soucre.</p> <note>
+     *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -172,8 +192,47 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <p>
+     * The following filter combinations are supported:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Filter with state
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ResourceId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ExternalId
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return A list of objects that filter the request.
+     * @return A list of objects that filter the request.</p>
+     *         <p>
+     *         The following filter combinations are supported:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Filter with state
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Filter with ResourceType and ResourceId
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Filter with ResourceType and ExternalId
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<SyncResourceFilter> getFilters() {
@@ -184,9 +243,48 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <p>
+     * The following filter combinations are supported:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Filter with state
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ResourceId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ExternalId
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        A list of objects that filter the request.
+     *        A list of objects that filter the request.</p>
+     *        <p>
+     *        The following filter combinations are supported:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Filter with state
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Filter with ResourceType and ResourceId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Filter with ResourceType and ExternalId
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<SyncResourceFilter> filters) {
@@ -203,13 +301,52 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
      * A list of objects that filter the request.
      * </p>
      * <p>
+     * The following filter combinations are supported:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Filter with state
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ResourceId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ExternalId
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param filters
-     *        A list of objects that filter the request.
+     *        A list of objects that filter the request.</p>
+     *        <p>
+     *        The following filter combinations are supported:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Filter with state
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Filter with ResourceType and ResourceId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Filter with ResourceType and ExternalId
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,9 +364,48 @@ public class ListSyncResourcesRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A list of objects that filter the request.
      * </p>
+     * <p>
+     * The following filter combinations are supported:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Filter with state
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ResourceId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter with ResourceType and ExternalId
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        A list of objects that filter the request.
+     *        A list of objects that filter the request.</p>
+     *        <p>
+     *        The following filter combinations are supported:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Filter with state
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Filter with ResourceType and ResourceId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Filter with ResourceType and ExternalId
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

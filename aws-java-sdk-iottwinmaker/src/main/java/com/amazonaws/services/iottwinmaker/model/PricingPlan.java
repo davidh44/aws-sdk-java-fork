@@ -60,7 +60,7 @@ public class PricingPlan implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date updateDateTime;
     /**
      * <p>
-     * The update reason, for changing a pricing plan.
+     * The update reason for changing a pricing plan.
      * </p>
      */
     private String updateReason;
@@ -286,11 +286,11 @@ public class PricingPlan implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The update reason, for changing a pricing plan.
+     * The update reason for changing a pricing plan.
      * </p>
      * 
      * @param updateReason
-     *        The update reason, for changing a pricing plan.
+     *        The update reason for changing a pricing plan.
      * @see UpdateReason
      */
 
@@ -300,10 +300,10 @@ public class PricingPlan implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The update reason, for changing a pricing plan.
+     * The update reason for changing a pricing plan.
      * </p>
      * 
-     * @return The update reason, for changing a pricing plan.
+     * @return The update reason for changing a pricing plan.
      * @see UpdateReason
      */
 
@@ -313,11 +313,11 @@ public class PricingPlan implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The update reason, for changing a pricing plan.
+     * The update reason for changing a pricing plan.
      * </p>
      * 
      * @param updateReason
-     *        The update reason, for changing a pricing plan.
+     *        The update reason for changing a pricing plan.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UpdateReason
      */
@@ -329,11 +329,11 @@ public class PricingPlan implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The update reason, for changing a pricing plan.
+     * The update reason for changing a pricing plan.
      * </p>
      * 
      * @param updateReason
-     *        The update reason, for changing a pricing plan.
+     *        The update reason for changing a pricing plan.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UpdateReason
      */

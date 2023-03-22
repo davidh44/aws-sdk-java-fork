@@ -34,6 +34,8 @@ public class DeleteAppInputSourceRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> EKSSOURCECLUSTERNAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksSourceClusterNamespace").build();
     private static final MarshallingInfo<String> SOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sourceArn").build();
     private static final MarshallingInfo<StructuredPojo> TERRAFORMSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -57,6 +59,7 @@ public class DeleteAppInputSourceRequestMarshaller {
         try {
             protocolMarshaller.marshall(deleteAppInputSourceRequest.getAppArn(), APPARN_BINDING);
             protocolMarshaller.marshall(deleteAppInputSourceRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(deleteAppInputSourceRequest.getEksSourceClusterNamespace(), EKSSOURCECLUSTERNAMESPACE_BINDING);
             protocolMarshaller.marshall(deleteAppInputSourceRequest.getSourceArn(), SOURCEARN_BINDING);
             protocolMarshaller.marshall(deleteAppInputSourceRequest.getTerraformSource(), TERRAFORMSOURCE_BINDING);
         } catch (Exception e) {

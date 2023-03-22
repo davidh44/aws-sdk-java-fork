@@ -36,19 +36,19 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
     private String state;
     /**
      * <p>
-     * The sync resource filter resoucre type
+     * The sync resource filter resource type
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The sync resource filter resource Id.
+     * The sync resource filter resource ID.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      */
     private String externalId;
@@ -114,11 +114,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resoucre type
+     * The sync resource filter resource type
      * </p>
      * 
      * @param resourceType
-     *        The sync resource filter resoucre type
+     *        The sync resource filter resource type
      * @see SyncResourceType
      */
 
@@ -128,10 +128,10 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resoucre type
+     * The sync resource filter resource type
      * </p>
      * 
-     * @return The sync resource filter resoucre type
+     * @return The sync resource filter resource type
      * @see SyncResourceType
      */
 
@@ -141,11 +141,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resoucre type
+     * The sync resource filter resource type
      * </p>
      * 
      * @param resourceType
-     *        The sync resource filter resoucre type
+     *        The sync resource filter resource type
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SyncResourceType
      */
@@ -157,11 +157,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resoucre type
+     * The sync resource filter resource type
      * </p>
      * 
      * @param resourceType
-     *        The sync resource filter resoucre type
+     *        The sync resource filter resource type
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SyncResourceType
      */
@@ -173,11 +173,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resource Id.
+     * The sync resource filter resource ID.
      * </p>
      * 
      * @param resourceId
-     *        The sync resource filter resource Id.
+     *        The sync resource filter resource ID.
      */
 
     public void setResourceId(String resourceId) {
@@ -186,10 +186,10 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resource Id.
+     * The sync resource filter resource ID.
      * </p>
      * 
-     * @return The sync resource filter resource Id.
+     * @return The sync resource filter resource ID.
      */
 
     public String getResourceId() {
@@ -198,11 +198,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The sync resource filter resource Id.
+     * The sync resource filter resource ID.
      * </p>
      * 
      * @param resourceId
-     *        The sync resource filter resource Id.
+     *        The sync resource filter resource ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,11 +213,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      * 
      * @param externalId
-     *        The external Id.
+     *        The external ID.
      */
 
     public void setExternalId(String externalId) {
@@ -226,10 +226,10 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      * 
-     * @return The external Id.
+     * @return The external ID.
      */
 
     public String getExternalId() {
@@ -238,11 +238,11 @@ public class SyncResourceFilter implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The external Id.
+     * The external ID.
      * </p>
      * 
      * @param externalId
-     *        The external Id.
+     *        The external ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

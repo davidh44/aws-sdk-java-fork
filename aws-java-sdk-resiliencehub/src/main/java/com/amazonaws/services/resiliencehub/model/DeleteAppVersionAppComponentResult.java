@@ -32,7 +32,11 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
      * </p>
      */
     private String appArn;
-
+    /**
+     * <p>
+     * The list of Application Components that belong to this resource.
+     * </p>
+     */
     private AppComponent appComponent;
     /**
      * <p>
@@ -103,7 +107,12 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The list of Application Components that belong to this resource.
+     * </p>
+     * 
      * @param appComponent
+     *        The list of Application Components that belong to this resource.
      */
 
     public void setAppComponent(AppComponent appComponent) {
@@ -111,7 +120,11 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * The list of Application Components that belong to this resource.
+     * </p>
+     * 
+     * @return The list of Application Components that belong to this resource.
      */
 
     public AppComponent getAppComponent() {
@@ -119,7 +132,12 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The list of Application Components that belong to this resource.
+     * </p>
+     * 
      * @param appComponent
+     *        The list of Application Components that belong to this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

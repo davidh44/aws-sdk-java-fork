@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines a resource that is not supported by AWS Resilience Hub.
+ * Defines a resource that is not supported by Resilience Hub.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/UnsupportedResource" target="_top">AWS
@@ -46,6 +46,12 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String resourceType;
+    /**
+     * <p>
+     * The status of unsupported resource.
+     * </p>
+     */
+    private String unsupportedResourceStatus;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The status of unsupported resource.
+     * </p>
+     * 
+     * @param unsupportedResourceStatus
+     *        The status of unsupported resource.
+     */
+
+    public void setUnsupportedResourceStatus(String unsupportedResourceStatus) {
+        this.unsupportedResourceStatus = unsupportedResourceStatus;
+    }
+
+    /**
+     * <p>
+     * The status of unsupported resource.
+     * </p>
+     * 
+     * @return The status of unsupported resource.
+     */
+
+    public String getUnsupportedResourceStatus() {
+        return this.unsupportedResourceStatus;
+    }
+
+    /**
+     * <p>
+     * The status of unsupported resource.
+     * </p>
+     * 
+     * @param unsupportedResourceStatus
+     *        The status of unsupported resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UnsupportedResource withUnsupportedResourceStatus(String unsupportedResourceStatus) {
+        setUnsupportedResourceStatus(unsupportedResourceStatus);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
         if (getPhysicalResourceId() != null)
             sb.append("PhysicalResourceId: ").append(getPhysicalResourceId()).append(",");
         if (getResourceType() != null)
-            sb.append("ResourceType: ").append(getResourceType());
+            sb.append("ResourceType: ").append(getResourceType()).append(",");
+        if (getUnsupportedResourceStatus() != null)
+            sb.append("UnsupportedResourceStatus: ").append(getUnsupportedResourceStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getResourceType() != null && other.getResourceType().equals(this.getResourceType()) == false)
             return false;
+        if (other.getUnsupportedResourceStatus() == null ^ this.getUnsupportedResourceStatus() == null)
+            return false;
+        if (other.getUnsupportedResourceStatus() != null && other.getUnsupportedResourceStatus().equals(this.getUnsupportedResourceStatus()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getLogicalResourceId() == null) ? 0 : getLogicalResourceId().hashCode());
         hashCode = prime * hashCode + ((getPhysicalResourceId() == null) ? 0 : getPhysicalResourceId().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
+        hashCode = prime * hashCode + ((getUnsupportedResourceStatus() == null) ? 0 : getUnsupportedResourceStatus().hashCode());
         return hashCode;
     }
 

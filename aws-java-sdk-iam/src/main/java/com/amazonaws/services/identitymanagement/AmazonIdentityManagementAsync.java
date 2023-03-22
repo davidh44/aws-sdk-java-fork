@@ -1930,6 +1930,9 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
      * <p>
      * Deletes the permissions boundary for the specified IAM role.
      * </p>
+     * <p>
+     * You cannot set the boundary for a service-linked role.
+     * </p>
      * <important>
      * <p>
      * Deleting the permissions boundary for a role might increase its permissions. For example, it might allow anyone
@@ -1950,6 +1953,9 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
     /**
      * <p>
      * Deletes the permissions boundary for the specified IAM role.
+     * </p>
+     * <p>
+     * You cannot set the boundary for a service-linked role.
      * </p>
      * <important>
      * <p>

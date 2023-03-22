@@ -56,6 +56,12 @@ public class ImportResourcesToDraftAppVersionResultJsonUnmarshaller implements U
                     context.nextToken();
                     importResourcesToDraftAppVersionResult.setAppVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("eksSources", targetDepth)) {
+                    context.nextToken();
+                    importResourcesToDraftAppVersionResult.setEksSources(new ListUnmarshaller<EksSource>(EksSourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("sourceArns", targetDepth)) {
                     context.nextToken();
                     importResourcesToDraftAppVersionResult.setSourceArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

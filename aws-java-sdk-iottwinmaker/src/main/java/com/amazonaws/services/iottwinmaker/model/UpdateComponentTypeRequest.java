@@ -71,7 +71,7 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.Map<String, FunctionRequest> functions;
     /**
      * <p>
-     * The property groups
+     * The property groups.
      * </p>
      */
     private java.util.Map<String, PropertyGroupRequest> propertyGroups;
@@ -474,10 +474,10 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The property groups
+     * The property groups.
      * </p>
      * 
-     * @return The property groups
+     * @return The property groups.
      */
 
     public java.util.Map<String, PropertyGroupRequest> getPropertyGroups() {
@@ -486,11 +486,11 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The property groups
+     * The property groups.
      * </p>
      * 
      * @param propertyGroups
-     *        The property groups
+     *        The property groups.
      */
 
     public void setPropertyGroups(java.util.Map<String, PropertyGroupRequest> propertyGroups) {
@@ -499,11 +499,11 @@ public class UpdateComponentTypeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The property groups
+     * The property groups.
      * </p>
      * 
      * @param propertyGroups
-     *        The property groups
+     *        The property groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

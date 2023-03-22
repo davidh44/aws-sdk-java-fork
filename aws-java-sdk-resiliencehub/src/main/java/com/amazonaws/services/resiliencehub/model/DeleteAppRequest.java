@@ -43,7 +43,7 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String clientToken;
     /**
      * <p>
-     * A boolean option to force the deletion of an AWS Resilience Hub application.
+     * A boolean option to force the deletion of an Resilience Hub application.
      * </p>
      */
     private Boolean forceDelete;
@@ -157,11 +157,11 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of an AWS Resilience Hub application.
+     * A boolean option to force the deletion of an Resilience Hub application.
      * </p>
      * 
      * @param forceDelete
-     *        A boolean option to force the deletion of an AWS Resilience Hub application.
+     *        A boolean option to force the deletion of an Resilience Hub application.
      */
 
     public void setForceDelete(Boolean forceDelete) {
@@ -170,10 +170,10 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of an AWS Resilience Hub application.
+     * A boolean option to force the deletion of an Resilience Hub application.
      * </p>
      * 
-     * @return A boolean option to force the deletion of an AWS Resilience Hub application.
+     * @return A boolean option to force the deletion of an Resilience Hub application.
      */
 
     public Boolean getForceDelete() {
@@ -182,11 +182,11 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of an AWS Resilience Hub application.
+     * A boolean option to force the deletion of an Resilience Hub application.
      * </p>
      * 
      * @param forceDelete
-     *        A boolean option to force the deletion of an AWS Resilience Hub application.
+     *        A boolean option to force the deletion of an Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -197,10 +197,10 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of an AWS Resilience Hub application.
+     * A boolean option to force the deletion of an Resilience Hub application.
      * </p>
      * 
-     * @return A boolean option to force the deletion of an AWS Resilience Hub application.
+     * @return A boolean option to force the deletion of an Resilience Hub application.
      */
 
     public Boolean isForceDelete() {

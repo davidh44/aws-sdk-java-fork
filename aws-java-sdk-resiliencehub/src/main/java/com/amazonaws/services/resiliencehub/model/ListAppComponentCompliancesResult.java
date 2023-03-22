@@ -25,7 +25,7 @@ public class ListAppComponentCompliancesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The compliances for an AWS Resilience Hub Application Component, returned as an object. This object contains the
+     * The compliances for an Resilience Hub Application Component, returned as an object. This object contains the
      * names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * </p>
      */
@@ -39,13 +39,12 @@ public class ListAppComponentCompliancesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The compliances for an AWS Resilience Hub Application Component, returned as an object. This object contains the
+     * The compliances for an Resilience Hub Application Component, returned as an object. This object contains the
      * names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * </p>
      * 
-     * @return The compliances for an AWS Resilience Hub Application Component, returned as an object. This object
-     *         contains the names of the Application Components, compliances, costs, resiliency scores, outage scores,
-     *         and more.
+     * @return The compliances for an Resilience Hub Application Component, returned as an object. This object contains
+     *         the names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      */
 
     public java.util.List<AppComponentCompliance> getComponentCompliances() {
@@ -54,14 +53,13 @@ public class ListAppComponentCompliancesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The compliances for an AWS Resilience Hub Application Component, returned as an object. This object contains the
+     * The compliances for an Resilience Hub Application Component, returned as an object. This object contains the
      * names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * </p>
      * 
      * @param componentCompliances
-     *        The compliances for an AWS Resilience Hub Application Component, returned as an object. This object
-     *        contains the names of the Application Components, compliances, costs, resiliency scores, outage scores,
-     *        and more.
+     *        The compliances for an Resilience Hub Application Component, returned as an object. This object contains
+     *        the names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      */
 
     public void setComponentCompliances(java.util.Collection<AppComponentCompliance> componentCompliances) {
@@ -75,7 +73,7 @@ public class ListAppComponentCompliancesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The compliances for an AWS Resilience Hub Application Component, returned as an object. This object contains the
+     * The compliances for an Resilience Hub Application Component, returned as an object. This object contains the
      * names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * </p>
      * <p>
@@ -85,9 +83,8 @@ public class ListAppComponentCompliancesResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param componentCompliances
-     *        The compliances for an AWS Resilience Hub Application Component, returned as an object. This object
-     *        contains the names of the Application Components, compliances, costs, resiliency scores, outage scores,
-     *        and more.
+     *        The compliances for an Resilience Hub Application Component, returned as an object. This object contains
+     *        the names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,14 +100,13 @@ public class ListAppComponentCompliancesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The compliances for an AWS Resilience Hub Application Component, returned as an object. This object contains the
+     * The compliances for an Resilience Hub Application Component, returned as an object. This object contains the
      * names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * </p>
      * 
      * @param componentCompliances
-     *        The compliances for an AWS Resilience Hub Application Component, returned as an object. This object
-     *        contains the names of the Application Components, compliances, costs, resiliency scores, outage scores,
-     *        and more.
+     *        The compliances for an Resilience Hub Application Component, returned as an object. This object contains
+     *        the names of the Application Components, compliances, costs, resiliency scores, outage scores, and more.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

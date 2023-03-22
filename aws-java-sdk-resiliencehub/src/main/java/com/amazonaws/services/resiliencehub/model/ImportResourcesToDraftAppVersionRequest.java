@@ -36,13 +36,19 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
     private String appArn;
     /**
      * <p>
-     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * </p>
+     */
+    private java.util.List<EksSource> eksSources;
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into Resilience Hub application.
      * </p>
      */
     private String importStrategy;
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources that you want to import.
+     * The Amazon Resource Names (ARNs) for the resources.
      * </p>
      */
     private java.util.List<String> sourceArns;
@@ -116,11 +122,81 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * </p>
+     * 
+     * @return The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     */
+
+    public java.util.List<EksSource> getEksSources() {
+        return eksSources;
+    }
+
+    /**
+     * <p>
+     * The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * </p>
+     * 
+     * @param eksSources
+     *        The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     */
+
+    public void setEksSources(java.util.Collection<EksSource> eksSources) {
+        if (eksSources == null) {
+            this.eksSources = null;
+            return;
+        }
+
+        this.eksSources = new java.util.ArrayList<EksSource>(eksSources);
+    }
+
+    /**
+     * <p>
+     * The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setEksSources(java.util.Collection)} or {@link #withEksSources(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param eksSources
+     *        The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportResourcesToDraftAppVersionRequest withEksSources(EksSource... eksSources) {
+        if (this.eksSources == null) {
+            setEksSources(new java.util.ArrayList<EksSource>(eksSources.length));
+        }
+        for (EksSource ele : eksSources) {
+            this.eksSources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * </p>
+     * 
+     * @param eksSources
+     *        The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportResourcesToDraftAppVersionRequest withEksSources(java.util.Collection<EksSource> eksSources) {
+        setEksSources(eksSources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into Resilience Hub application.
      * </p>
      * 
      * @param importStrategy
-     *        The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     *        The import strategy you would like to set to import resources into Resilience Hub application.
      * @see ResourceImportStrategyType
      */
 
@@ -130,10 +206,10 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * The import strategy you would like to set to import resources into Resilience Hub application.
      * </p>
      * 
-     * @return The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * @return The import strategy you would like to set to import resources into Resilience Hub application.
      * @see ResourceImportStrategyType
      */
 
@@ -143,11 +219,11 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * The import strategy you would like to set to import resources into Resilience Hub application.
      * </p>
      * 
      * @param importStrategy
-     *        The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     *        The import strategy you would like to set to import resources into Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceImportStrategyType
      */
@@ -159,11 +235,11 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * The import strategy you would like to set to import resources into Resilience Hub application.
      * </p>
      * 
      * @param importStrategy
-     *        The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     *        The import strategy you would like to set to import resources into Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceImportStrategyType
      */
@@ -175,10 +251,10 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources that you want to import.
+     * The Amazon Resource Names (ARNs) for the resources.
      * </p>
      * 
-     * @return The Amazon Resource Names (ARNs) for the resources that you want to import.
+     * @return The Amazon Resource Names (ARNs) for the resources.
      */
 
     public java.util.List<String> getSourceArns() {
@@ -187,11 +263,11 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources that you want to import.
+     * The Amazon Resource Names (ARNs) for the resources.
      * </p>
      * 
      * @param sourceArns
-     *        The Amazon Resource Names (ARNs) for the resources that you want to import.
+     *        The Amazon Resource Names (ARNs) for the resources.
      */
 
     public void setSourceArns(java.util.Collection<String> sourceArns) {
@@ -205,7 +281,7 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources that you want to import.
+     * The Amazon Resource Names (ARNs) for the resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -214,7 +290,7 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param sourceArns
-     *        The Amazon Resource Names (ARNs) for the resources that you want to import.
+     *        The Amazon Resource Names (ARNs) for the resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,11 +306,11 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources that you want to import.
+     * The Amazon Resource Names (ARNs) for the resources.
      * </p>
      * 
      * @param sourceArns
-     *        The Amazon Resource Names (ARNs) for the resources that you want to import.
+     *        The Amazon Resource Names (ARNs) for the resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -327,6 +403,8 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
         sb.append("{");
         if (getAppArn() != null)
             sb.append("AppArn: ").append(getAppArn()).append(",");
+        if (getEksSources() != null)
+            sb.append("EksSources: ").append(getEksSources()).append(",");
         if (getImportStrategy() != null)
             sb.append("ImportStrategy: ").append(getImportStrategy()).append(",");
         if (getSourceArns() != null)
@@ -351,6 +429,10 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
             return false;
         if (other.getAppArn() != null && other.getAppArn().equals(this.getAppArn()) == false)
             return false;
+        if (other.getEksSources() == null ^ this.getEksSources() == null)
+            return false;
+        if (other.getEksSources() != null && other.getEksSources().equals(this.getEksSources()) == false)
+            return false;
         if (other.getImportStrategy() == null ^ this.getImportStrategy() == null)
             return false;
         if (other.getImportStrategy() != null && other.getImportStrategy().equals(this.getImportStrategy()) == false)
@@ -372,6 +454,7 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAppArn() == null) ? 0 : getAppArn().hashCode());
+        hashCode = prime * hashCode + ((getEksSources() == null) ? 0 : getEksSources().hashCode());
         hashCode = prime * hashCode + ((getImportStrategy() == null) ? 0 : getImportStrategy().hashCode());
         hashCode = prime * hashCode + ((getSourceArns() == null) ? 0 : getSourceArns().hashCode());
         hashCode = prime * hashCode + ((getTerraformSources() == null) ? 0 : getTerraformSources().hashCode());

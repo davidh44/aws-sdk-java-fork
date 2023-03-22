@@ -27,7 +27,7 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      */
     private String workspaceId;
@@ -37,7 +37,7 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      */
@@ -45,11 +45,11 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
      * @param workspaceId
-     *        The workspace Id.
+     *        The workspace ID.
      */
 
     public void setWorkspaceId(String workspaceId) {
@@ -58,10 +58,10 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
-     * @return The workspace Id.
+     * @return The workspace ID.
      */
 
     public String getWorkspaceId() {
@@ -70,11 +70,11 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
      * @param workspaceId
-     *        The workspace Id.
+     *        The workspace ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,14 +89,14 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
      *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      */
 
@@ -110,13 +110,13 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @return The sync source.</p> <note>
      *         <p>
-     *         Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *         Currently the only supported syncSource is <code>SITEWISE </code>.
      *         </p>
      */
 
@@ -130,14 +130,14 @@ public class DeleteSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
      *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

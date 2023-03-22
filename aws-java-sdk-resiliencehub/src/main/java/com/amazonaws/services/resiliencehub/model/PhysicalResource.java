@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Defines a physical resource. A physical resource is a resource that exists in your account. It can be identified
- * using an Amazon Resource Name (ARN) or an AWS Resilience Hub-native identifier.
+ * using an Amazon Resource Name (ARN) or an Resilience Hub-native identifier.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/PhysicalResource" target="_top">AWS API

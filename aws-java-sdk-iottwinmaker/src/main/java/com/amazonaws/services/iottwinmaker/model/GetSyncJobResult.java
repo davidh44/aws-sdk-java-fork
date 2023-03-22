@@ -41,7 +41,7 @@ public class GetSyncJobResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      */
@@ -157,14 +157,14 @@ public class GetSyncJobResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
      *        The sync soucre.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      */
 
@@ -178,13 +178,13 @@ public class GetSyncJobResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @return The sync soucre.</p> <note>
      *         <p>
-     *         Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *         Currently the only supported syncSource is <code>SITEWISE </code>.
      *         </p>
      */
 
@@ -198,14 +198,14 @@ public class GetSyncJobResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
      *        The sync soucre.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -32,7 +32,9 @@ public enum OperatingSystem {
     DEBIAN("DEBIAN"),
     MACOS("MACOS"),
     RASPBIAN("RASPBIAN"),
-    ROCKY_LINUX("ROCKY_LINUX");
+    ROCKY_LINUX("ROCKY_LINUX"),
+    ALMA_LINUX("ALMA_LINUX"),
+    AMAZON_LINUX_2023("AMAZON_LINUX_2023");
 
     private String value;
 

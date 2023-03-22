@@ -511,9 +511,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account limits. The error message describes the limit exceeded.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.AddRoleToInstanceProfile
@@ -746,9 +747,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * @throws InvalidInputException
      *         The request was rejected because an invalid or out-of-range value was supplied for an input parameter.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws PolicyNotAttachableException
      *         The request failed because Amazon Web Services service role policies can only be attached to the
      *         service-linked role for that service.
@@ -2995,9 +2997,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account limits. The error message describes the limit exceeded.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ConcurrentModificationException
      *         The request was rejected because multiple requests to change this object were submitted simultaneously.
      *         Wait a few minutes and submit your request again.
@@ -3055,6 +3058,9 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <p>
      * Deletes the permissions boundary for the specified IAM role.
      * </p>
+     * <p>
+     * You cannot set the boundary for a service-linked role.
+     * </p>
      * <important>
      * <p>
      * Deleting the permissions boundary for a role might increase its permissions. For example, it might allow anyone
@@ -3068,9 +3074,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it referenced a resource entity that does not exist. The error message
      *         describes the resource.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.DeleteRolePermissionsBoundary
@@ -3142,9 +3149,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account limits. The error message describes the limit exceeded.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.DeleteRolePolicy
@@ -4058,9 +4066,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * @throws InvalidInputException
      *         The request was rejected because an invalid or out-of-range value was supplied for an input parameter.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.DetachRolePolicy
@@ -9089,9 +9098,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * @throws InvalidInputException
      *         The request was rejected because an invalid or out-of-range value was supplied for an input parameter.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws PolicyNotAttachableException
      *         The request failed because Amazon Web Services service role policies can only be attached to the
      *         service-linked role for that service.
@@ -9189,9 +9199,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it referenced a resource entity that does not exist. The error message
      *         describes the resource.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.PutRolePolicy
@@ -9501,9 +9512,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account limits. The error message describes the limit exceeded.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.RemoveRoleFromInstanceProfile
@@ -11759,9 +11771,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account limits. The error message describes the limit exceeded.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.UpdateAssumeRolePolicy
@@ -12070,9 +12083,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * @param updateRoleRequest
      * @return Result of the UpdateRole operation returned by the service.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws NoSuchEntityException
      *         The request was rejected because it referenced a resource entity that does not exist. The error message
      *         describes the resource.
@@ -12141,9 +12155,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         The request was rejected because it referenced a resource entity that does not exist. The error message
      *         describes the resource.
      * @throws UnmodifiableEntityException
-     *         The request was rejected because only the service that depends on the service-linked role can modify or
-     *         delete the role on your behalf. The error message includes the name of the service that depends on this
-     *         service-linked role. You must request the change through that service.
+     *         The request was rejected because service-linked roles are protected Amazon Web Services resources. Only
+     *         the service that depends on the service-linked role can modify or delete the role on your behalf. The
+     *         error message includes the name of the service that depends on this service-linked role. You must request
+     *         the change through that service.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.UpdateRoleDescription

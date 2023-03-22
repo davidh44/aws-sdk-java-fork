@@ -27,36 +27,36 @@ public class GetSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      */
     private String syncSource;
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      */
     private String workspaceId;
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
-     *        The sync soucre.</p> <note>
+     *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      */
 
@@ -66,17 +66,17 @@ public class GetSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
-     * @return The sync soucre.</p> <note>
+     * @return The sync source.</p> <note>
      *         <p>
-     *         Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *         Currently the only supported syncSource is <code>SITEWISE </code>.
      *         </p>
      */
 
@@ -86,18 +86,18 @@ public class GetSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The sync soucre.
+     * The sync source.
      * </p>
      * <note>
      * <p>
-     * Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     * Currently the only supported syncSource is <code>SITEWISE </code>.
      * </p>
      * </note>
      * 
      * @param syncSource
-     *        The sync soucre.</p> <note>
+     *        The sync source.</p> <note>
      *        <p>
-     *        Currently the only supported syncSoucre is <code>SITEWISE </code>.
+     *        Currently the only supported syncSource is <code>SITEWISE </code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -109,11 +109,11 @@ public class GetSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
      * @param workspaceId
-     *        The workspace Id.
+     *        The workspace ID.
      */
 
     public void setWorkspaceId(String workspaceId) {
@@ -122,10 +122,10 @@ public class GetSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
-     * @return The workspace Id.
+     * @return The workspace ID.
      */
 
     public String getWorkspaceId() {
@@ -134,11 +134,11 @@ public class GetSyncJobRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The workspace Id.
+     * The workspace ID.
      * </p>
      * 
      * @param workspaceId
-     *        The workspace Id.
+     *        The workspace ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

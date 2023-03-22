@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The list of AWS Resilience Hub application input sources.
+ * The list of Resilience Hub application input sources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/AppInputSource" target="_top">AWS API
@@ -30,13 +30,19 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The namespace on your Amazon Elastic Kubernetes Service cluster.
+     * </p>
+     */
+    private EksSourceClusterNamespace eksSourceClusterNamespace;
+    /**
+     * <p>
      * The resource type of the input source.
      * </p>
      */
     private String importType;
     /**
      * <p>
-     * The number of resources that were imported.
+     * The number of resources.
      * </p>
      */
     private Integer resourceCount;
@@ -60,6 +66,46 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private TerraformSource terraformSource;
+
+    /**
+     * <p>
+     * The namespace on your Amazon Elastic Kubernetes Service cluster.
+     * </p>
+     * 
+     * @param eksSourceClusterNamespace
+     *        The namespace on your Amazon Elastic Kubernetes Service cluster.
+     */
+
+    public void setEksSourceClusterNamespace(EksSourceClusterNamespace eksSourceClusterNamespace) {
+        this.eksSourceClusterNamespace = eksSourceClusterNamespace;
+    }
+
+    /**
+     * <p>
+     * The namespace on your Amazon Elastic Kubernetes Service cluster.
+     * </p>
+     * 
+     * @return The namespace on your Amazon Elastic Kubernetes Service cluster.
+     */
+
+    public EksSourceClusterNamespace getEksSourceClusterNamespace() {
+        return this.eksSourceClusterNamespace;
+    }
+
+    /**
+     * <p>
+     * The namespace on your Amazon Elastic Kubernetes Service cluster.
+     * </p>
+     * 
+     * @param eksSourceClusterNamespace
+     *        The namespace on your Amazon Elastic Kubernetes Service cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AppInputSource withEksSourceClusterNamespace(EksSourceClusterNamespace eksSourceClusterNamespace) {
+        setEksSourceClusterNamespace(eksSourceClusterNamespace);
+        return this;
+    }
 
     /**
      * <p>
@@ -122,11 +168,11 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of resources that were imported.
+     * The number of resources.
      * </p>
      * 
      * @param resourceCount
-     *        The number of resources that were imported.
+     *        The number of resources.
      */
 
     public void setResourceCount(Integer resourceCount) {
@@ -135,10 +181,10 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of resources that were imported.
+     * The number of resources.
      * </p>
      * 
-     * @return The number of resources that were imported.
+     * @return The number of resources.
      */
 
     public Integer getResourceCount() {
@@ -147,11 +193,11 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of resources that were imported.
+     * The number of resources.
      * </p>
      * 
      * @param resourceCount
-     *        The number of resources that were imported.
+     *        The number of resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -304,6 +350,8 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getEksSourceClusterNamespace() != null)
+            sb.append("EksSourceClusterNamespace: ").append(getEksSourceClusterNamespace()).append(",");
         if (getImportType() != null)
             sb.append("ImportType: ").append(getImportType()).append(",");
         if (getResourceCount() != null)
@@ -328,6 +376,10 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof AppInputSource == false)
             return false;
         AppInputSource other = (AppInputSource) obj;
+        if (other.getEksSourceClusterNamespace() == null ^ this.getEksSourceClusterNamespace() == null)
+            return false;
+        if (other.getEksSourceClusterNamespace() != null && other.getEksSourceClusterNamespace().equals(this.getEksSourceClusterNamespace()) == false)
+            return false;
         if (other.getImportType() == null ^ this.getImportType() == null)
             return false;
         if (other.getImportType() != null && other.getImportType().equals(this.getImportType()) == false)
@@ -356,6 +408,7 @@ public class AppInputSource implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getEksSourceClusterNamespace() == null) ? 0 : getEksSourceClusterNamespace().hashCode());
         hashCode = prime * hashCode + ((getImportType() == null) ? 0 : getImportType().hashCode());
         hashCode = prime * hashCode + ((getResourceCount() == null) ? 0 : getResourceCount().hashCode());
         hashCode = prime * hashCode + ((getSourceArn() == null) ? 0 : getSourceArn().hashCode());

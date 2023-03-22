@@ -41,6 +41,8 @@ public class CreateSceneRequestMarshaller {
             .marshallLocationName("capabilities").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<Map> SCENEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sceneMetadata").build();
 
     private static final CreateSceneRequestMarshaller instance = new CreateSceneRequestMarshaller();
 
@@ -64,6 +66,7 @@ public class CreateSceneRequestMarshaller {
             protocolMarshaller.marshall(createSceneRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createSceneRequest.getCapabilities(), CAPABILITIES_BINDING);
             protocolMarshaller.marshall(createSceneRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createSceneRequest.getSceneMetadata(), SCENEMETADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

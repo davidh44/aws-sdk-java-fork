@@ -29,6 +29,8 @@ public class ResourceMappingMarshaller {
 
     private static final MarshallingInfo<String> APPREGISTRYAPPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("appRegistryAppName").build();
+    private static final MarshallingInfo<String> EKSSOURCENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksSourceName").build();
     private static final MarshallingInfo<String> LOGICALSTACKNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logicalStackName").build();
     private static final MarshallingInfo<String> MAPPINGTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -59,6 +61,7 @@ public class ResourceMappingMarshaller {
 
         try {
             protocolMarshaller.marshall(resourceMapping.getAppRegistryAppName(), APPREGISTRYAPPNAME_BINDING);
+            protocolMarshaller.marshall(resourceMapping.getEksSourceName(), EKSSOURCENAME_BINDING);
             protocolMarshaller.marshall(resourceMapping.getLogicalStackName(), LOGICALSTACKNAME_BINDING);
             protocolMarshaller.marshall(resourceMapping.getMappingType(), MAPPINGTYPE_BINDING);
             protocolMarshaller.marshall(resourceMapping.getPhysicalResourceId(), PHYSICALRESOURCEID_BINDING);

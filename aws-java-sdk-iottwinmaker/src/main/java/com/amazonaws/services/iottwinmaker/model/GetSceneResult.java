@@ -71,6 +71,18 @@ public class GetSceneResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      */
     private java.util.List<String> capabilities;
+    /**
+     * <p>
+     * The response metadata.
+     * </p>
+     */
+    private java.util.Map<String, String> sceneMetadata;
+    /**
+     * <p>
+     * The generated scene metadata.
+     * </p>
+     */
+    private java.util.Map<String, String> generatedSceneMetadata;
 
     /**
      * <p>
@@ -423,6 +435,142 @@ public class GetSceneResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     }
 
     /**
+     * <p>
+     * The response metadata.
+     * </p>
+     * 
+     * @return The response metadata.
+     */
+
+    public java.util.Map<String, String> getSceneMetadata() {
+        return sceneMetadata;
+    }
+
+    /**
+     * <p>
+     * The response metadata.
+     * </p>
+     * 
+     * @param sceneMetadata
+     *        The response metadata.
+     */
+
+    public void setSceneMetadata(java.util.Map<String, String> sceneMetadata) {
+        this.sceneMetadata = sceneMetadata;
+    }
+
+    /**
+     * <p>
+     * The response metadata.
+     * </p>
+     * 
+     * @param sceneMetadata
+     *        The response metadata.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSceneResult withSceneMetadata(java.util.Map<String, String> sceneMetadata) {
+        setSceneMetadata(sceneMetadata);
+        return this;
+    }
+
+    /**
+     * Add a single SceneMetadata entry
+     *
+     * @see GetSceneResult#withSceneMetadata
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSceneResult addSceneMetadataEntry(String key, String value) {
+        if (null == this.sceneMetadata) {
+            this.sceneMetadata = new java.util.HashMap<String, String>();
+        }
+        if (this.sceneMetadata.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.sceneMetadata.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into SceneMetadata.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSceneResult clearSceneMetadataEntries() {
+        this.sceneMetadata = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * The generated scene metadata.
+     * </p>
+     * 
+     * @return The generated scene metadata.
+     */
+
+    public java.util.Map<String, String> getGeneratedSceneMetadata() {
+        return generatedSceneMetadata;
+    }
+
+    /**
+     * <p>
+     * The generated scene metadata.
+     * </p>
+     * 
+     * @param generatedSceneMetadata
+     *        The generated scene metadata.
+     */
+
+    public void setGeneratedSceneMetadata(java.util.Map<String, String> generatedSceneMetadata) {
+        this.generatedSceneMetadata = generatedSceneMetadata;
+    }
+
+    /**
+     * <p>
+     * The generated scene metadata.
+     * </p>
+     * 
+     * @param generatedSceneMetadata
+     *        The generated scene metadata.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSceneResult withGeneratedSceneMetadata(java.util.Map<String, String> generatedSceneMetadata) {
+        setGeneratedSceneMetadata(generatedSceneMetadata);
+        return this;
+    }
+
+    /**
+     * Add a single GeneratedSceneMetadata entry
+     *
+     * @see GetSceneResult#withGeneratedSceneMetadata
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSceneResult addGeneratedSceneMetadataEntry(String key, String value) {
+        if (null == this.generatedSceneMetadata) {
+            this.generatedSceneMetadata = new java.util.HashMap<String, String>();
+        }
+        if (this.generatedSceneMetadata.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.generatedSceneMetadata.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into GeneratedSceneMetadata.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSceneResult clearGeneratedSceneMetadataEntries() {
+        this.generatedSceneMetadata = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -449,7 +597,11 @@ public class GetSceneResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getCapabilities() != null)
-            sb.append("Capabilities: ").append(getCapabilities());
+            sb.append("Capabilities: ").append(getCapabilities()).append(",");
+        if (getSceneMetadata() != null)
+            sb.append("SceneMetadata: ").append(getSceneMetadata()).append(",");
+        if (getGeneratedSceneMetadata() != null)
+            sb.append("GeneratedSceneMetadata: ").append(getGeneratedSceneMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -496,6 +648,14 @@ public class GetSceneResult extends com.amazonaws.AmazonWebServiceResult<com.ama
             return false;
         if (other.getCapabilities() != null && other.getCapabilities().equals(this.getCapabilities()) == false)
             return false;
+        if (other.getSceneMetadata() == null ^ this.getSceneMetadata() == null)
+            return false;
+        if (other.getSceneMetadata() != null && other.getSceneMetadata().equals(this.getSceneMetadata()) == false)
+            return false;
+        if (other.getGeneratedSceneMetadata() == null ^ this.getGeneratedSceneMetadata() == null)
+            return false;
+        if (other.getGeneratedSceneMetadata() != null && other.getGeneratedSceneMetadata().equals(this.getGeneratedSceneMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -512,6 +672,8 @@ public class GetSceneResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         hashCode = prime * hashCode + ((getUpdateDateTime() == null) ? 0 : getUpdateDateTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
+        hashCode = prime * hashCode + ((getSceneMetadata() == null) ? 0 : getSceneMetadata().hashCode());
+        hashCode = prime * hashCode + ((getGeneratedSceneMetadata() == null) ? 0 : getGeneratedSceneMetadata().hashCode());
         return hashCode;
     }
 

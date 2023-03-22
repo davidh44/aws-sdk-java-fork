@@ -31,7 +31,7 @@ public class ListRecommendationTemplatesResult extends com.amazonaws.AmazonWebSe
     private String nextToken;
     /**
      * <p>
-     * The recommendation templates for the AWS Resilience Hub applications.
+     * The recommendation templates for the Resilience Hub applications.
      * </p>
      */
     private java.util.List<RecommendationTemplate> recommendationTemplates;
@@ -78,10 +78,10 @@ public class ListRecommendationTemplatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The recommendation templates for the AWS Resilience Hub applications.
+     * The recommendation templates for the Resilience Hub applications.
      * </p>
      * 
-     * @return The recommendation templates for the AWS Resilience Hub applications.
+     * @return The recommendation templates for the Resilience Hub applications.
      */
 
     public java.util.List<RecommendationTemplate> getRecommendationTemplates() {
@@ -90,11 +90,11 @@ public class ListRecommendationTemplatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The recommendation templates for the AWS Resilience Hub applications.
+     * The recommendation templates for the Resilience Hub applications.
      * </p>
      * 
      * @param recommendationTemplates
-     *        The recommendation templates for the AWS Resilience Hub applications.
+     *        The recommendation templates for the Resilience Hub applications.
      */
 
     public void setRecommendationTemplates(java.util.Collection<RecommendationTemplate> recommendationTemplates) {
@@ -108,7 +108,7 @@ public class ListRecommendationTemplatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The recommendation templates for the AWS Resilience Hub applications.
+     * The recommendation templates for the Resilience Hub applications.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class ListRecommendationTemplatesResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param recommendationTemplates
-     *        The recommendation templates for the AWS Resilience Hub applications.
+     *        The recommendation templates for the Resilience Hub applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class ListRecommendationTemplatesResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The recommendation templates for the AWS Resilience Hub applications.
+     * The recommendation templates for the Resilience Hub applications.
      * </p>
      * 
      * @param recommendationTemplates
-     *        The recommendation templates for the AWS Resilience Hub applications.
+     *        The recommendation templates for the Resilience Hub applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

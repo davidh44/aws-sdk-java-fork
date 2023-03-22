@@ -48,6 +48,10 @@ public class LogicalResourceIdJsonUnmarshaller implements Unmarshaller<LogicalRe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("eksSourceName", targetDepth)) {
+                    context.nextToken();
+                    logicalResourceId.setEksSourceName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("identifier", targetDepth)) {
                     context.nextToken();
                     logicalResourceId.setIdentifier(context.getUnmarshaller(String.class).unmarshall(context));

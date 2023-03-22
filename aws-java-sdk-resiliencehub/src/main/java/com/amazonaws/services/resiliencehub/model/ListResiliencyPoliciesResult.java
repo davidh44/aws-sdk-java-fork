@@ -31,7 +31,7 @@ public class ListResiliencyPoliciesResult extends com.amazonaws.AmazonWebService
     private String nextToken;
     /**
      * <p>
-     * The resiliency policies for the AWS Resilience Hub applications.
+     * The resiliency policies for the Resilience Hub applications.
      * </p>
      */
     private java.util.List<ResiliencyPolicy> resiliencyPolicies;
@@ -78,10 +78,10 @@ public class ListResiliencyPoliciesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The resiliency policies for the AWS Resilience Hub applications.
+     * The resiliency policies for the Resilience Hub applications.
      * </p>
      * 
-     * @return The resiliency policies for the AWS Resilience Hub applications.
+     * @return The resiliency policies for the Resilience Hub applications.
      */
 
     public java.util.List<ResiliencyPolicy> getResiliencyPolicies() {
@@ -90,11 +90,11 @@ public class ListResiliencyPoliciesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The resiliency policies for the AWS Resilience Hub applications.
+     * The resiliency policies for the Resilience Hub applications.
      * </p>
      * 
      * @param resiliencyPolicies
-     *        The resiliency policies for the AWS Resilience Hub applications.
+     *        The resiliency policies for the Resilience Hub applications.
      */
 
     public void setResiliencyPolicies(java.util.Collection<ResiliencyPolicy> resiliencyPolicies) {
@@ -108,7 +108,7 @@ public class ListResiliencyPoliciesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The resiliency policies for the AWS Resilience Hub applications.
+     * The resiliency policies for the Resilience Hub applications.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class ListResiliencyPoliciesResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param resiliencyPolicies
-     *        The resiliency policies for the AWS Resilience Hub applications.
+     *        The resiliency policies for the Resilience Hub applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class ListResiliencyPoliciesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The resiliency policies for the AWS Resilience Hub applications.
+     * The resiliency policies for the Resilience Hub applications.
      * </p>
      * 
      * @param resiliencyPolicies
-     *        The resiliency policies for the AWS Resilience Hub applications.
+     *        The resiliency policies for the Resilience Hub applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

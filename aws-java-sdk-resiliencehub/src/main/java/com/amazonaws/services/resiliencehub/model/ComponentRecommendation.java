@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines recommendations for an AWS Resilience Hub Application Component, returned as an object. This object contains
+ * Defines recommendations for an Resilience Hub Application Component, returned as an object. This object contains
  * component names, configuration recommendations, and recommendation statuses.
  * </p>
  * 

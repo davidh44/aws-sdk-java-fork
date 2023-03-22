@@ -25,7 +25,7 @@ public class ListAppInputSourcesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of AWS Resilience Hub application input sources.
+     * The list of Resilience Hub application input sources.
      * </p>
      */
     private java.util.List<AppInputSource> appInputSources;
@@ -38,10 +38,10 @@ public class ListAppInputSourcesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of AWS Resilience Hub application input sources.
+     * The list of Resilience Hub application input sources.
      * </p>
      * 
-     * @return The list of AWS Resilience Hub application input sources.
+     * @return The list of Resilience Hub application input sources.
      */
 
     public java.util.List<AppInputSource> getAppInputSources() {
@@ -50,11 +50,11 @@ public class ListAppInputSourcesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of AWS Resilience Hub application input sources.
+     * The list of Resilience Hub application input sources.
      * </p>
      * 
      * @param appInputSources
-     *        The list of AWS Resilience Hub application input sources.
+     *        The list of Resilience Hub application input sources.
      */
 
     public void setAppInputSources(java.util.Collection<AppInputSource> appInputSources) {
@@ -68,7 +68,7 @@ public class ListAppInputSourcesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of AWS Resilience Hub application input sources.
+     * The list of Resilience Hub application input sources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListAppInputSourcesResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param appInputSources
-     *        The list of AWS Resilience Hub application input sources.
+     *        The list of Resilience Hub application input sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListAppInputSourcesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of AWS Resilience Hub application input sources.
+     * The list of Resilience Hub application input sources.
      * </p>
      * 
      * @param appInputSources
-     *        The list of AWS Resilience Hub application input sources.
+     *        The list of Resilience Hub application input sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

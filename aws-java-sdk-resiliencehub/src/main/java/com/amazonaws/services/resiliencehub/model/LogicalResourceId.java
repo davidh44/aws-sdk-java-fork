@@ -30,6 +30,17 @@ public class LogicalResourceId implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     */
+    private String eksSourceName;
+    /**
+     * <p>
      * The identifier of the resource.
      * </p>
      */
@@ -52,6 +63,73 @@ public class LogicalResourceId implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String terraformSourceName;
+
+    /**
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @param eksSourceName
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.</p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     */
+
+    public void setEksSourceName(String eksSourceName) {
+        this.eksSourceName = eksSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @return The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.</p>
+     *         <note>
+     *         <p>
+     *         This parameter accepts values in "eks-cluster/namespace" format.
+     *         </p>
+     */
+
+    public String getEksSourceName() {
+        return this.eksSourceName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @param eksSourceName
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.</p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LogicalResourceId withEksSourceName(String eksSourceName) {
+        setEksSourceName(eksSourceName);
+        return this;
+    }
 
     /**
      * <p>
@@ -225,6 +303,8 @@ public class LogicalResourceId implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getEksSourceName() != null)
+            sb.append("EksSourceName: ").append(getEksSourceName()).append(",");
         if (getIdentifier() != null)
             sb.append("Identifier: ").append(getIdentifier()).append(",");
         if (getLogicalStackName() != null)
@@ -247,6 +327,10 @@ public class LogicalResourceId implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof LogicalResourceId == false)
             return false;
         LogicalResourceId other = (LogicalResourceId) obj;
+        if (other.getEksSourceName() == null ^ this.getEksSourceName() == null)
+            return false;
+        if (other.getEksSourceName() != null && other.getEksSourceName().equals(this.getEksSourceName()) == false)
+            return false;
         if (other.getIdentifier() == null ^ this.getIdentifier() == null)
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
@@ -271,6 +355,7 @@ public class LogicalResourceId implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getEksSourceName() == null) ? 0 : getEksSourceName().hashCode());
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
         hashCode = prime * hashCode + ((getLogicalStackName() == null) ? 0 : getLogicalStackName().hashCode());
         hashCode = prime * hashCode + ((getResourceGroupName() == null) ? 0 : getResourceGroupName().hashCode());

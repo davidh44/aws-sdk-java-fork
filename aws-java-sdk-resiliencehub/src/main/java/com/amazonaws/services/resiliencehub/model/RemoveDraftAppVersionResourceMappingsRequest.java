@@ -42,6 +42,18 @@ public class RemoveDraftAppVersionResourceMappingsRequest extends com.amazonaws.
     private java.util.List<String> appRegistryAppNames;
     /**
      * <p>
+     * The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the resource
+     * mappings.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     */
+    private java.util.List<String> eksSourceNames;
+    /**
+     * <p>
      * The names of the CloudFormation stacks you want to remove from the resource mappings.
      * </p>
      */
@@ -193,6 +205,116 @@ public class RemoveDraftAppVersionResourceMappingsRequest extends com.amazonaws.
 
     public RemoveDraftAppVersionResourceMappingsRequest withAppRegistryAppNames(java.util.Collection<String> appRegistryAppNames) {
         setAppRegistryAppNames(appRegistryAppNames);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the resource
+     * mappings.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @return The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the
+     *         resource mappings.</p> <note>
+     *         <p>
+     *         This parameter accepts values in "eks-cluster/namespace" format.
+     *         </p>
+     */
+
+    public java.util.List<String> getEksSourceNames() {
+        return eksSourceNames;
+    }
+
+    /**
+     * <p>
+     * The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the resource
+     * mappings.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @param eksSourceNames
+     *        The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the
+     *        resource mappings.</p> <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     */
+
+    public void setEksSourceNames(java.util.Collection<String> eksSourceNames) {
+        if (eksSourceNames == null) {
+            this.eksSourceNames = null;
+            return;
+        }
+
+        this.eksSourceNames = new java.util.ArrayList<String>(eksSourceNames);
+    }
+
+    /**
+     * <p>
+     * The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the resource
+     * mappings.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setEksSourceNames(java.util.Collection)} or {@link #withEksSourceNames(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param eksSourceNames
+     *        The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the
+     *        resource mappings.</p> <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RemoveDraftAppVersionResourceMappingsRequest withEksSourceNames(String... eksSourceNames) {
+        if (this.eksSourceNames == null) {
+            setEksSourceNames(new java.util.ArrayList<String>(eksSourceNames.length));
+        }
+        for (String ele : eksSourceNames) {
+            this.eksSourceNames.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the resource
+     * mappings.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * 
+     * @param eksSourceNames
+     *        The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the
+     *        resource mappings.</p> <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RemoveDraftAppVersionResourceMappingsRequest withEksSourceNames(java.util.Collection<String> eksSourceNames) {
+        setEksSourceNames(eksSourceNames);
         return this;
     }
 
@@ -492,6 +614,8 @@ public class RemoveDraftAppVersionResourceMappingsRequest extends com.amazonaws.
             sb.append("AppArn: ").append(getAppArn()).append(",");
         if (getAppRegistryAppNames() != null)
             sb.append("AppRegistryAppNames: ").append(getAppRegistryAppNames()).append(",");
+        if (getEksSourceNames() != null)
+            sb.append("EksSourceNames: ").append(getEksSourceNames()).append(",");
         if (getLogicalStackNames() != null)
             sb.append("LogicalStackNames: ").append(getLogicalStackNames()).append(",");
         if (getResourceGroupNames() != null)
@@ -522,6 +646,10 @@ public class RemoveDraftAppVersionResourceMappingsRequest extends com.amazonaws.
             return false;
         if (other.getAppRegistryAppNames() != null && other.getAppRegistryAppNames().equals(this.getAppRegistryAppNames()) == false)
             return false;
+        if (other.getEksSourceNames() == null ^ this.getEksSourceNames() == null)
+            return false;
+        if (other.getEksSourceNames() != null && other.getEksSourceNames().equals(this.getEksSourceNames()) == false)
+            return false;
         if (other.getLogicalStackNames() == null ^ this.getLogicalStackNames() == null)
             return false;
         if (other.getLogicalStackNames() != null && other.getLogicalStackNames().equals(this.getLogicalStackNames()) == false)
@@ -548,6 +676,7 @@ public class RemoveDraftAppVersionResourceMappingsRequest extends com.amazonaws.
 
         hashCode = prime * hashCode + ((getAppArn() == null) ? 0 : getAppArn().hashCode());
         hashCode = prime * hashCode + ((getAppRegistryAppNames() == null) ? 0 : getAppRegistryAppNames().hashCode());
+        hashCode = prime * hashCode + ((getEksSourceNames() == null) ? 0 : getEksSourceNames().hashCode());
         hashCode = prime * hashCode + ((getLogicalStackNames() == null) ? 0 : getLogicalStackNames().hashCode());
         hashCode = prime * hashCode + ((getResourceGroupNames() == null) ? 0 : getResourceGroupNames().hashCode());
         hashCode = prime * hashCode + ((getResourceNames() == null) ? 0 : getResourceNames().hashCode());

@@ -25,7 +25,7 @@ public class ListAppsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Summaries for the AWS Resilience Hub application.
+     * Summaries for the Resilience Hub application.
      * </p>
      */
     private java.util.List<AppSummary> appSummaries;
@@ -38,10 +38,10 @@ public class ListAppsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Summaries for the AWS Resilience Hub application.
+     * Summaries for the Resilience Hub application.
      * </p>
      * 
-     * @return Summaries for the AWS Resilience Hub application.
+     * @return Summaries for the Resilience Hub application.
      */
 
     public java.util.List<AppSummary> getAppSummaries() {
@@ -50,11 +50,11 @@ public class ListAppsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Summaries for the AWS Resilience Hub application.
+     * Summaries for the Resilience Hub application.
      * </p>
      * 
      * @param appSummaries
-     *        Summaries for the AWS Resilience Hub application.
+     *        Summaries for the Resilience Hub application.
      */
 
     public void setAppSummaries(java.util.Collection<AppSummary> appSummaries) {
@@ -68,7 +68,7 @@ public class ListAppsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Summaries for the AWS Resilience Hub application.
+     * Summaries for the Resilience Hub application.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListAppsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      * 
      * @param appSummaries
-     *        Summaries for the AWS Resilience Hub application.
+     *        Summaries for the Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListAppsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * Summaries for the AWS Resilience Hub application.
+     * Summaries for the Resilience Hub application.
      * </p>
      * 
      * @param appSummaries
-     *        Summaries for the AWS Resilience Hub application.
+     *        Summaries for the Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

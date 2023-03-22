@@ -31,7 +31,7 @@ public class ListTestRecommendationsResult extends com.amazonaws.AmazonWebServic
     private String nextToken;
     /**
      * <p>
-     * The test recommendations for the AWS Resilience Hub application.
+     * The test recommendations for the Resilience Hub application.
      * </p>
      */
     private java.util.List<TestRecommendation> testRecommendations;
@@ -78,10 +78,10 @@ public class ListTestRecommendationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The test recommendations for the AWS Resilience Hub application.
+     * The test recommendations for the Resilience Hub application.
      * </p>
      * 
-     * @return The test recommendations for the AWS Resilience Hub application.
+     * @return The test recommendations for the Resilience Hub application.
      */
 
     public java.util.List<TestRecommendation> getTestRecommendations() {
@@ -90,11 +90,11 @@ public class ListTestRecommendationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The test recommendations for the AWS Resilience Hub application.
+     * The test recommendations for the Resilience Hub application.
      * </p>
      * 
      * @param testRecommendations
-     *        The test recommendations for the AWS Resilience Hub application.
+     *        The test recommendations for the Resilience Hub application.
      */
 
     public void setTestRecommendations(java.util.Collection<TestRecommendation> testRecommendations) {
@@ -108,7 +108,7 @@ public class ListTestRecommendationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The test recommendations for the AWS Resilience Hub application.
+     * The test recommendations for the Resilience Hub application.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class ListTestRecommendationsResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param testRecommendations
-     *        The test recommendations for the AWS Resilience Hub application.
+     *        The test recommendations for the Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class ListTestRecommendationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The test recommendations for the AWS Resilience Hub application.
+     * The test recommendations for the Resilience Hub application.
      * </p>
      * 
      * @param testRecommendations
-     *        The test recommendations for the AWS Resilience Hub application.
+     *        The test recommendations for the Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

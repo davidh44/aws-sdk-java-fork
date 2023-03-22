@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iottwinmaker.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -38,6 +39,8 @@ public class UpdateSceneRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<List> CAPABILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("capabilities").build();
+    private static final MarshallingInfo<Map> SCENEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("sceneMetadata").build();
 
     private static final UpdateSceneRequestMarshaller instance = new UpdateSceneRequestMarshaller();
 
@@ -60,6 +63,7 @@ public class UpdateSceneRequestMarshaller {
             protocolMarshaller.marshall(updateSceneRequest.getContentLocation(), CONTENTLOCATION_BINDING);
             protocolMarshaller.marshall(updateSceneRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateSceneRequest.getCapabilities(), CAPABILITIES_BINDING);
+            protocolMarshaller.marshall(updateSceneRequest.getSceneMetadata(), SCENEMETADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

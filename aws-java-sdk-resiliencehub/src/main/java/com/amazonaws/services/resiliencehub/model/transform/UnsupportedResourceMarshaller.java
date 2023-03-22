@@ -33,6 +33,8 @@ public class UnsupportedResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("physicalResourceId").build();
     private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceType").build();
+    private static final MarshallingInfo<String> UNSUPPORTEDRESOURCESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("unsupportedResourceStatus").build();
 
     private static final UnsupportedResourceMarshaller instance = new UnsupportedResourceMarshaller();
 
@@ -53,6 +55,7 @@ public class UnsupportedResourceMarshaller {
             protocolMarshaller.marshall(unsupportedResource.getLogicalResourceId(), LOGICALRESOURCEID_BINDING);
             protocolMarshaller.marshall(unsupportedResource.getPhysicalResourceId(), PHYSICALRESOURCEID_BINDING);
             protocolMarshaller.marshall(unsupportedResource.getResourceType(), RESOURCETYPE_BINDING);
+            protocolMarshaller.marshall(unsupportedResource.getUnsupportedResourceStatus(), UNSUPPORTEDRESOURCESTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

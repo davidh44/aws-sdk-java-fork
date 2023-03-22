@@ -82,6 +82,16 @@ public class GetSceneResultJsonUnmarshaller implements Unmarshaller<GetSceneResu
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("sceneMetadata", targetDepth)) {
+                    context.nextToken();
+                    getSceneResult.setSceneMetadata(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("generatedSceneMetadata", targetDepth)) {
+                    context.nextToken();
+                    getSceneResult.setGeneratedSceneMetadata(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

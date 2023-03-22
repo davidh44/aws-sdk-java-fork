@@ -115,7 +115,7 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.Map<String, PropertyGroupResponse> propertyGroups;
     /**
      * <p>
-     * The syncSource of the sync job, if this entity was created by a sync job.
+     * The syncSource of the SyncJob, if this entity was created by a SyncJob.
      * </p>
      */
     private String syncSource;
@@ -873,11 +873,11 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The syncSource of the sync job, if this entity was created by a sync job.
+     * The syncSource of the SyncJob, if this entity was created by a SyncJob.
      * </p>
      * 
      * @param syncSource
-     *        The syncSource of the sync job, if this entity was created by a sync job.
+     *        The syncSource of the SyncJob, if this entity was created by a SyncJob.
      */
 
     public void setSyncSource(String syncSource) {
@@ -886,10 +886,10 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The syncSource of the sync job, if this entity was created by a sync job.
+     * The syncSource of the SyncJob, if this entity was created by a SyncJob.
      * </p>
      * 
-     * @return The syncSource of the sync job, if this entity was created by a sync job.
+     * @return The syncSource of the SyncJob, if this entity was created by a SyncJob.
      */
 
     public String getSyncSource() {
@@ -898,11 +898,11 @@ public class GetComponentTypeResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The syncSource of the sync job, if this entity was created by a sync job.
+     * The syncSource of the SyncJob, if this entity was created by a SyncJob.
      * </p>
      * 
      * @param syncSource
-     *        The syncSource of the sync job, if this entity was created by a sync job.
+     *        The syncSource of the SyncJob, if this entity was created by a SyncJob.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
