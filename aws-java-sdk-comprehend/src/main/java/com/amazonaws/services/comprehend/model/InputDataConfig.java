@@ -31,7 +31,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are calling.
+     * The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are calling.
      * The URI can point to a single input file or it can provide the prefix for a collection of data files.
      * </p>
      * <p>
@@ -71,7 +71,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are calling.
+     * The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are calling.
      * The URI can point to a single input file or it can provide the prefix for a collection of data files.
      * </p>
      * <p>
@@ -81,7 +81,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are
+     *        The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are
      *        calling. The URI can point to a single input file or it can provide the prefix for a collection of data
      *        files. </p>
      *        <p>
@@ -96,7 +96,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are calling.
+     * The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are calling.
      * The URI can point to a single input file or it can provide the prefix for a collection of data files.
      * </p>
      * <p>
@@ -105,7 +105,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * them as input.
      * </p>
      * 
-     * @return The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are
+     * @return The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are
      *         calling. The URI can point to a single input file or it can provide the prefix for a collection of data
      *         files. </p>
      *         <p>
@@ -120,7 +120,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are calling.
+     * The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are calling.
      * The URI can point to a single input file or it can provide the prefix for a collection of data files.
      * </p>
      * <p>
@@ -130,7 +130,7 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 URI for the input data. The URI must be in same region as the API endpoint that you are
+     *        The Amazon S3 URI for the input data. The URI must be in same Region as the API endpoint that you are
      *        calling. The URI can point to a single input file or it can provide the prefix for a collection of data
      *        files. </p>
      *        <p>

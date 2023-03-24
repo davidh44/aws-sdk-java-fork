@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  * For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html">Using Amazon RDS Blue/Green
  * Deployments for database updates</a> in the <i>Amazon RDS User Guide</i> and <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html"> Using Amazon RDS
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/blue-green-deployments.html">Using Amazon RDS
  * Blue/Green Deployments for database updates</a> in the <i>Amazon Aurora User Guide</i>.
  * </p>
  * 
@@ -55,27 +55,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     * <code>PROVISIONING</code> - The resource is being prepared to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ready-for-switchover</code> - The resource is ready to switch over.
+     * <code>AVAILABLE</code> - The resource is ready to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-in-progress</code> - The resource is being switched over.
+     * <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-completed</code> - The resource has been switched over.
+     * <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     * <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_TARGET</code> - The target resource has been deleted.
      * </p>
      * </li>
      * </ul>
@@ -172,27 +182,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     * <code>PROVISIONING</code> - The resource is being prepared to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ready-for-switchover</code> - The resource is ready to switch over.
+     * <code>AVAILABLE</code> - The resource is ready to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-in-progress</code> - The resource is being switched over.
+     * <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-completed</code> - The resource has been switched over.
+     * <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     * <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_TARGET</code> - The target resource has been deleted.
      * </p>
      * </li>
      * </ul>
@@ -205,27 +225,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     *        <code>PROVISIONING</code> - The resource is being prepared to switch over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ready-for-switchover</code> - The resource is ready to switch over.
+     *        <code>AVAILABLE</code> - The resource is ready to switch over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>switchover-in-progress</code> - The resource is being switched over.
+     *        <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>switchover-completed</code> - The resource has been switched over.
+     *        <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     *        <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISSING_TARGET</code> - The target resource has been deleted.
      *        </p>
      *        </li>
      */
@@ -244,27 +274,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     * <code>PROVISIONING</code> - The resource is being prepared to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ready-for-switchover</code> - The resource is ready to switch over.
+     * <code>AVAILABLE</code> - The resource is ready to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-in-progress</code> - The resource is being switched over.
+     * <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-completed</code> - The resource has been switched over.
+     * <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     * <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_TARGET</code> - The target resource has been deleted.
      * </p>
      * </li>
      * </ul>
@@ -276,27 +316,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     *         <code>PROVISIONING</code> - The resource is being prepared to switch over.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ready-for-switchover</code> - The resource is ready to switch over.
+     *         <code>AVAILABLE</code> - The resource is ready to switch over.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>switchover-in-progress</code> - The resource is being switched over.
+     *         <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>switchover-completed</code> - The resource has been switched over.
+     *         <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     *         <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MISSING_TARGET</code> - The target resource has been deleted.
      *         </p>
      *         </li>
      */
@@ -315,27 +365,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     * <code>PROVISIONING</code> - The resource is being prepared to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ready-for-switchover</code> - The resource is ready to switch over.
+     * <code>AVAILABLE</code> - The resource is ready to switch over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-in-progress</code> - The resource is being switched over.
+     * <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-completed</code> - The resource has been switched over.
+     * <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     * <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MISSING_TARGET</code> - The target resource has been deleted.
      * </p>
      * </li>
      * </ul>
@@ -348,27 +408,37 @@ public class SwitchoverDetail implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>preparing-for-switchover</code> - The resource is being prepared to switch over.
+     *        <code>PROVISIONING</code> - The resource is being prepared to switch over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ready-for-switchover</code> - The resource is ready to switch over.
+     *        <code>AVAILABLE</code> - The resource is ready to switch over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>switchover-in-progress</code> - The resource is being switched over.
+     *        <code>SWITCHOVER_IN_PROGRESS</code> - The resource is being switched over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>switchover-completed</code> - The resource has been switched over.
+     *        <code>SWITCHOVER_COMPLETED</code> - The resource has been switched over.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>switchover-failed</code> - The resource attempted to switch over but failed.
+     *        <code>SWITCHOVER_FAILED</code> - The resource attempted to switch over but failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISSING_SOURCE</code> - The source resource has been deleted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MISSING_TARGET</code> - The target resource has been deleted.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

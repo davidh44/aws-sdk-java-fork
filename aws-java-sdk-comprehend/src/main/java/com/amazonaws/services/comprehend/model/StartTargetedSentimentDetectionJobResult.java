@@ -34,7 +34,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     * identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID.
+     * The format of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
@@ -126,7 +127,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     * identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID.
+     * The format of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
@@ -140,8 +142,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *        follows:</p>
+     *        identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *        job ID. The format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
      *        </p>
@@ -159,7 +161,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     * identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID.
+     * The format of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
@@ -172,8 +175,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     *         identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *         follows:</p>
+     *         identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *         job ID. The format of the ARN is as follows:</p>
      *         <p>
      *         <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
      *         </p>
@@ -191,7 +194,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     * identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID.
+     * The format of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
@@ -205,8 +209,8 @@ public class StartTargetedSentimentDetectionJobResult extends com.amazonaws.Amaz
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the targeted sentiment detection job. It is a unique, fully qualified
-     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *        follows:</p>
+     *        identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *        job ID. The format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:targeted-sentiment-detection-job/&lt;job-id&gt;</code>
      *        </p>

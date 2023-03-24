@@ -1,3 +1,16 @@
+# __1.12.435__ __2023-03-24__
+## __Amazon CloudWatch__
+  - ### Features
+    - Doc-only update to correct alarm actions list
+
+## __Amazon Comprehend__
+  - ### Features
+    - This release adds a new field (FlywheelArn) to the EntitiesDetectionJobProperties object. The FlywheelArn field is returned in the DescribeEntitiesDetectionJob and ListEntitiesDetectionJobs responses when the EntitiesDetection job is started with a FlywheelArn instead of an EntityRecognizerArn .
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Added error code CreateCustomDBEngineVersionFault for when the create custom engine version for Custom engines fails.
+
 # __1.12.434__ __2023-03-23__
 ## __AWS Batch__
   - ### Features

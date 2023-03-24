@@ -51,9 +51,9 @@ import com.amazonaws.services.comprehend.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
- * the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
- * predominant language used, and more.
+ * Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these
+ * actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment
+ * expressed in them, the predominant language used, and more.
  * </p>
  */
 @ThreadSafe
@@ -1055,9 +1055,9 @@ public class AmazonComprehendClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * A flywheel is an AWS resource that orchestrates the ongoing training of a model for custom classification or
-     * custom entity recognition. You can create a flywheel to start with an existing trained model, or Comprehend can
-     * create and train a new model.
+     * A flywheel is an Amazon Web Services resource that orchestrates the ongoing training of a model for custom
+     * classification or custom entity recognition. You can create a flywheel to start with an existing trained model,
+     * or Comprehend can create and train a new model.
      * </p>
      * <p>
      * When you create the flywheel, Comprehend creates a data lake in your account. The data lake holds the training
@@ -3055,15 +3055,15 @@ public class AmazonComprehendClient extends AmazonWebServiceClient implements Am
     /**
      * <p>
      * Creates a new custom model that replicates a source custom model that you import. The source model can be in your
-     * AWS account or another one.
+     * Amazon Web Services account or another one.
      * </p>
      * <p>
-     * If the source model is in another AWS account, then it must have a resource-based policy that authorizes you to
-     * import it.
+     * If the source model is in another Amazon Web Services account, then it must have a resource-based policy that
+     * authorizes you to import it.
      * </p>
      * <p>
-     * The source model must be in the same AWS region that you're using when you import. You can't import a model
-     * that's in a different region.
+     * The source model must be in the same Amazon Web Services Region that you're using when you import. You can't
+     * import a model that's in a different Region.
      * </p>
      * 
      * @param importModelRequest
@@ -3138,7 +3138,7 @@ public class AmazonComprehendClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * List the datasets that you have configured in this region. For more information about datasets, see <a
+     * List the datasets that you have configured in this Region. For more information about datasets, see <a
      * href="https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html"> Flywheel overview</a> in the
      * <i>Amazon Comprehend Developer Guide</i>.
      * </p>
@@ -4308,8 +4308,9 @@ public class AmazonComprehendClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Attaches a resource-based policy to a custom model. You can use this policy to authorize an entity in another AWS
-     * account to import the custom model, which replicates it in Amazon Comprehend in their account.
+     * Attaches a resource-based policy to a custom model. You can use this policy to authorize an entity in another
+     * Amazon Web Services account to import the custom model, which replicates it in Amazon Comprehend in their
+     * account.
      * </p>
      * 
      * @param putResourcePolicyRequest

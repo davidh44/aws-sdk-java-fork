@@ -48,6 +48,53 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
+     * <p>
+     * In the IAM policy attached to your IAM role, include the following required actions to allow the transfer of
+     * files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * s3:PutObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:ListBucket
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:DeleteObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetBucketLocation
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following list of
+     * resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String iamRoleArn;
     /**
@@ -275,9 +322,103 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
+     * <p>
+     * In the IAM policy attached to your IAM role, include the following required actions to allow the transfer of
+     * files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * s3:PutObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:ListBucket
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:DeleteObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetBucketLocation
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following list of
+     * resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param iamRoleArn
-     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
+     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or
+     *        cluster.</p>
+     *        <p>
+     *        In the IAM policy attached to your IAM role, include the following required actions to allow the transfer
+     *        of files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        s3:PutObject*
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:GetObject*
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:ListBucket
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:DeleteObject*
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:GetBucketLocation
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following
+     *        list of resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     *        </p>
+     *        </li>
      */
 
     public void setIamRoleArn(String iamRoleArn) {
@@ -288,8 +429,102 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
+     * <p>
+     * In the IAM policy attached to your IAM role, include the following required actions to allow the transfer of
+     * files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * s3:PutObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:ListBucket
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:DeleteObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetBucketLocation
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following list of
+     * resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
+     * @return The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or
+     *         cluster.</p>
+     *         <p>
+     *         In the IAM policy attached to your IAM role, include the following required actions to allow the transfer
+     *         of files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         s3:PutObject*
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         s3:GetObject*
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         s3:ListBucket
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         s3:DeleteObject*
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         s3:GetBucketLocation
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following
+     *         list of resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     *         </p>
+     *         </li>
      */
 
     public String getIamRoleArn() {
@@ -300,9 +535,103 @@ public class StartExportTaskRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
      * </p>
+     * <p>
+     * In the IAM policy attached to your IAM role, include the following required actions to allow the transfer of
+     * files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * s3:PutObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:ListBucket
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:DeleteObject*
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * s3:GetBucketLocation
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following list of
+     * resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param iamRoleArn
-     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.
+     *        The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or
+     *        cluster.</p>
+     *        <p>
+     *        In the IAM policy attached to your IAM role, include the following required actions to allow the transfer
+     *        of files from Amazon RDS or Amazon Aurora to an S3 bucket:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        s3:PutObject*
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:GetObject*
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:ListBucket
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:DeleteObject*
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        s3:GetBucketLocation
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following
+     *        list of resources shows the Amazon Resource Name (ARN) format for accessing S3:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:s3:::<i>your-s3-bucket</i> </code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:s3:::<i>your-s3-bucket</i>/*</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

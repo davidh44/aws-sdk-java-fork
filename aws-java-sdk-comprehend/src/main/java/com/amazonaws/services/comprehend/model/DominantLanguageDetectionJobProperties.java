@@ -37,7 +37,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
-     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format
+     * of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
@@ -95,16 +96,15 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
     private OutputDataConfig outputDataConfig;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      */
     private String dataAccessRoleArn;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -173,7 +173,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
-     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format
+     * of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
@@ -187,8 +188,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified
-     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *        follows:</p>
+     *        identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *        job ID. The format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
      *        </p>
@@ -206,7 +207,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
-     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format
+     * of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
@@ -219,8 +221,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified
-     *         identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *         follows:</p>
+     *         identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *         job ID. The format of the ARN is as follows:</p>
      *         <p>
      *         <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
      *         </p>
@@ -238,7 +240,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
-     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format
+     * of the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
@@ -252,8 +255,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified
-     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *        follows:</p>
+     *        identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *        job ID. The format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
      *        </p>
@@ -579,13 +582,12 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -594,12 +596,11 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend read access to your input data.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *         data.
      */
 
     public String getDataAccessRoleArn() {
@@ -608,13 +609,12 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -625,9 +625,9 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -644,9 +644,9 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -667,9 +667,9 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -685,9 +685,9 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the
-     *         storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId
-     *         can be either of the following formats:</p>
+     * @return ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *         data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *         VolumeKmsKeyId can be either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -708,9 +708,9 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -727,9 +727,9 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>

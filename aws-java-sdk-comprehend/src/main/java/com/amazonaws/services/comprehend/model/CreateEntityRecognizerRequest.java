@@ -28,7 +28,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters. Alphanumeric
-     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/region.
+     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/Region.
      * </p>
      */
     private String recognizerName;
@@ -36,14 +36,13 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same recognizer name in the account/ AWS Region.
+     * models with the same recognizer name in the account/Region.
      * </p>
      */
     private String versionName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -58,7 +57,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Specifies the format and location of the input data. The S3 bucket containing the input data must be located in
-     * the same region as the entity recognizer being created.
+     * the same Region as the entity recognizer being created.
      * </p>
      */
     private EntityRecognizerInputDataConfig inputDataConfig;
@@ -78,9 +77,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     private String languageCode;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -107,8 +106,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     private VpcConfig vpcConfig;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -128,7 +127,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy, enclose
@@ -151,13 +150,13 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters. Alphanumeric
-     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/region.
+     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/Region.
      * </p>
      * 
      * @param recognizerName
      *        The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters.
      *        Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the
-     *        account/region.
+     *        account/Region.
      */
 
     public void setRecognizerName(String recognizerName) {
@@ -167,12 +166,12 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters. Alphanumeric
-     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/region.
+     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/Region.
      * </p>
      * 
      * @return The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters.
      *         Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the
-     *         account/region.
+     *         account/Region.
      */
 
     public String getRecognizerName() {
@@ -182,13 +181,13 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters. Alphanumeric
-     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/region.
+     * characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the account/Region.
      * </p>
      * 
      * @param recognizerName
      *        The name given to the newly created recognizer. Recognizer names can be a maximum of 256 characters.
      *        Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The name must be unique in the
-     *        account/region.
+     *        account/Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,13 +200,13 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same recognizer name in the account/ AWS Region.
+     * models with the same recognizer name in the account/Region.
      * </p>
      * 
      * @param versionName
      *        The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      *        Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique
-     *        among all models with the same recognizer name in the account/ AWS Region.
+     *        among all models with the same recognizer name in the account/Region.
      */
 
     public void setVersionName(String versionName) {
@@ -218,12 +217,12 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same recognizer name in the account/ AWS Region.
+     * models with the same recognizer name in the account/Region.
      * </p>
      * 
      * @return The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      *         Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique
-     *         among all models with the same recognizer name in the account/ AWS Region.
+     *         among all models with the same recognizer name in the account/Region.
      */
 
     public String getVersionName() {
@@ -234,13 +233,13 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same recognizer name in the account/ AWS Region.
+     * models with the same recognizer name in the account/Region.
      * </p>
      * 
      * @param versionName
      *        The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
      *        Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique
-     *        among all models with the same recognizer name in the account/ AWS Region.
+     *        among all models with the same recognizer name in the account/Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,13 +250,12 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -266,12 +264,11 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend read access to your input data.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *         data.
      */
 
     public String getDataAccessRoleArn() {
@@ -280,13 +277,12 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -384,12 +380,12 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Specifies the format and location of the input data. The S3 bucket containing the input data must be located in
-     * the same region as the entity recognizer being created.
+     * the same Region as the entity recognizer being created.
      * </p>
      * 
      * @param inputDataConfig
      *        Specifies the format and location of the input data. The S3 bucket containing the input data must be
-     *        located in the same region as the entity recognizer being created.
+     *        located in the same Region as the entity recognizer being created.
      */
 
     public void setInputDataConfig(EntityRecognizerInputDataConfig inputDataConfig) {
@@ -399,11 +395,11 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Specifies the format and location of the input data. The S3 bucket containing the input data must be located in
-     * the same region as the entity recognizer being created.
+     * the same Region as the entity recognizer being created.
      * </p>
      * 
      * @return Specifies the format and location of the input data. The S3 bucket containing the input data must be
-     *         located in the same region as the entity recognizer being created.
+     *         located in the same Region as the entity recognizer being created.
      */
 
     public EntityRecognizerInputDataConfig getInputDataConfig() {
@@ -413,12 +409,12 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * Specifies the format and location of the input data. The S3 bucket containing the input data must be located in
-     * the same region as the entity recognizer being created.
+     * the same Region as the entity recognizer being created.
      * </p>
      * 
      * @param inputDataConfig
      *        Specifies the format and location of the input data. The S3 bucket containing the input data must be
-     *        located in the same region as the entity recognizer being created.
+     *        located in the same Region as the entity recognizer being created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -551,9 +547,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -570,9 +566,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -593,9 +589,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -611,9 +607,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the
-     *         storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId
-     *         can be either of the following formats:</p>
+     * @return ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *         data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *         VolumeKmsKeyId can be either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -634,9 +630,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -653,9 +649,9 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -730,8 +726,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -748,8 +744,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -770,8 +766,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -787,8 +783,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *         models. The ModelKmsKeyId can be either of the following formats:</p>
+     * @return ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *         either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -809,8 +805,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -827,8 +823,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -852,7 +848,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy, enclose
@@ -872,7 +868,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param modelPolicy
      *        The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy
-     *        to allow another AWS account to import your custom model.</p>
+     *        to allow another Amazon Web Services account to import your custom model.</p>
      *        <p>
      *        Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy,
      *        enclose the attribute names and values in double quotes. If the JSON body is also enclosed in double
@@ -896,7 +892,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy, enclose
@@ -915,7 +911,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @return The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy
-     *         to allow another AWS account to import your custom model.</p>
+     *         to allow another Amazon Web Services account to import your custom model.</p>
      *         <p>
      *         Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy,
      *         enclose the attribute names and values in double quotes. If the JSON body is also enclosed in double
@@ -939,7 +935,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy, enclose
@@ -959,7 +955,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param modelPolicy
      *        The JSON resource-based policy to attach to your custom entity recognizer model. You can use this policy
-     *        to allow another AWS account to import your custom model.</p>
+     *        to allow another Amazon Web Services account to import your custom model.</p>
      *        <p>
      *        Provide your JSON as a UTF-8 encoded string without line breaks. To provide valid JSON for your policy,
      *        enclose the attribute names and values in double quotes. If the JSON body is also enclosed in double

@@ -35,11 +35,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
@@ -285,11 +280,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
@@ -361,11 +351,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        Valid Values:
      *        </p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
@@ -447,11 +432,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
@@ -522,11 +502,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *         Valid Values:
      *         </p>
      *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     *         </p>
-     *         </li>
      *         <li>
      *         <p>
      *         <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
@@ -608,11 +583,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
@@ -684,11 +654,6 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        Valid Values:
      *        </p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)

@@ -52,7 +52,10 @@ public interface AmazonCloudWatchAsync extends AmazonCloudWatch {
      * one operation, but you can't delete two composite alarms with one operation.
      * </p>
      * <p>
-     * In the event of an error, no alarms are deleted.
+     * If you specify an incorrect alarm name or make any other error in the operation, no alarms are deleted. To
+     * confirm that alarms were deleted successfully, you can use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html"
+     * >DescribeAlarms</a> operation after using <code>DeleteAlarms</code>.
      * </p>
      * <note>
      * <p>
@@ -86,7 +89,10 @@ public interface AmazonCloudWatchAsync extends AmazonCloudWatch {
      * one operation, but you can't delete two composite alarms with one operation.
      * </p>
      * <p>
-     * In the event of an error, no alarms are deleted.
+     * If you specify an incorrect alarm name or make any other error in the operation, no alarms are deleted. To
+     * confirm that alarms were deleted successfully, you can use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html"
+     * >DescribeAlarms</a> operation after using <code>DeleteAlarms</code>.
      * </p>
      * <note>
      * <p>
@@ -1851,12 +1857,13 @@ public interface AmazonCloudWatchAsync extends AmazonCloudWatch {
      * <ul>
      * <li>
      * <p>
-     * The <code>iam:CreateServiceLinkedRole</code> for all alarms with EC2 actions
+     * The <code>iam:CreateServiceLinkedRole</code> permission for all alarms with EC2 actions
      * </p>
      * </li>
      * <li>
      * <p>
-     * The <code>iam:CreateServiceLinkedRole</code> to create an alarm with Systems Manager OpsItem actions.
+     * The <code>iam:CreateServiceLinkedRole</code> permissions to create an alarm with Systems Manager OpsItem or
+     * response plan actions.
      * </p>
      * </li>
      * </ul>
@@ -1932,12 +1939,13 @@ public interface AmazonCloudWatchAsync extends AmazonCloudWatch {
      * <ul>
      * <li>
      * <p>
-     * The <code>iam:CreateServiceLinkedRole</code> for all alarms with EC2 actions
+     * The <code>iam:CreateServiceLinkedRole</code> permission for all alarms with EC2 actions
      * </p>
      * </li>
      * <li>
      * <p>
-     * The <code>iam:CreateServiceLinkedRole</code> to create an alarm with Systems Manager OpsItem actions.
+     * The <code>iam:CreateServiceLinkedRole</code> permissions to create an alarm with Systems Manager OpsItem or
+     * response plan actions.
      * </p>
      * </li>
      * </ul>

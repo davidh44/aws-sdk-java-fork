@@ -39,8 +39,8 @@ public class CreateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
     private String activeModelArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * the permissions required to access the flywheel data in the data lake.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to access
+     * the flywheel data in the data lake.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -167,13 +167,13 @@ public class CreateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * the permissions required to access the flywheel data in the data lake.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to access
+     * the flywheel data in the data lake.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend the permissions required to access the flywheel data in the data lake.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to
+     *        access the flywheel data in the data lake.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -182,12 +182,12 @@ public class CreateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * the permissions required to access the flywheel data in the data lake.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to access
+     * the flywheel data in the data lake.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend the permissions required to access the flywheel data in the data lake.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to
+     *         access the flywheel data in the data lake.
      */
 
     public String getDataAccessRoleArn() {
@@ -196,13 +196,13 @@ public class CreateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * the permissions required to access the flywheel data in the data lake.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to access
+     * the flywheel data in the data lake.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend the permissions required to access the flywheel data in the data lake.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend the permissions required to
+     *        access the flywheel data in the data lake.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

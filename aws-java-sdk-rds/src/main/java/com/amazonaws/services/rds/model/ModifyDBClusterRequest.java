@@ -334,14 +334,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2783,14 +2777,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2822,14 +2810,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        an outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code>
      *        is enabled.</p>
      *        <p>
-     *        To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     *        </p>
-     *        <p>
-     *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *        </p>
-     *        <p>
-     *        To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use
-     *        the following command:
+     *        To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3
+     *        (MySQL 8.0-compatible), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2866,14 +2848,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2904,14 +2880,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         in an outage. The change is applied during the next maintenance window unless
      *         <code>ApplyImmediately</code> is enabled.</p>
      *         <p>
-     *         To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     *         </p>
-     *         <p>
-     *         <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *         </p>
-     *         <p>
-     *         To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora,
-     *         use the following command:
+     *         To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3
+     *         (MySQL 8.0-compatible), use the following command:
      *         </p>
      *         <p>
      *         <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2948,14 +2918,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2987,14 +2951,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        an outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code>
      *        is enabled.</p>
      *        <p>
-     *        To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     *        </p>
-     *        <p>
-     *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *        </p>
-     *        <p>
-     *        To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use
-     *        the following command:
+     *        To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3
+     *        (MySQL 8.0-compatible), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>

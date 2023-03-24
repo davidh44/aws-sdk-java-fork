@@ -133,8 +133,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The name of the database engine to be used for this DB cluster.
      * </p>
      * <p>
-     * Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for MySQL
-     * 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      */
     private String engine;
@@ -143,14 +142,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora), use the
-     * following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and MySQL
      * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
@@ -160,8 +152,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>,
-     * <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      * </p>
      */
     private String engineVersion;
@@ -402,12 +393,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </p>
      * <p>
      * Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and <code>slowquery</code>.
-     * </p>
-     * <p>
-     * <b>Aurora PostgreSQL</b>
-     * </p>
-     * <p>
-     * Possible value is <code>postgresql</code>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -1240,15 +1225,13 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The name of the database engine to be used for this DB cluster.
      * </p>
      * <p>
-     * Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for MySQL
-     * 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * 
      * @param engine
      *        The name of the database engine to be used for this DB cluster.</p>
      *        <p>
-     *        Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for
-     *        MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     *        Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      */
 
     public void setEngine(String engine) {
@@ -1260,14 +1243,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The name of the database engine to be used for this DB cluster.
      * </p>
      * <p>
-     * Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for MySQL
-     * 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * 
      * @return The name of the database engine to be used for this DB cluster.</p>
      *         <p>
-     *         Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for
-     *         MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     *         Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      */
 
     public String getEngine() {
@@ -1279,15 +1260,13 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The name of the database engine to be used for this DB cluster.
      * </p>
      * <p>
-     * Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for MySQL
-     * 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * 
      * @param engine
      *        The name of the database engine to be used for this DB cluster.</p>
      *        <p>
-     *        Valid Values: <code>aurora</code> (for MySQL 5.6-compatible Aurora) and <code>aurora-mysql</code> (for
-     *        MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     *        Valid Values: <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1301,14 +1280,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora), use the
-     * following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and MySQL
      * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
@@ -1318,22 +1290,14 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>,
-     * <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      * </p>
      * 
      * @param engineVersion
      *        The version number of the database engine to use.</p>
      *        <p>
-     *        To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora),
-     *        use the following command:
-     *        </p>
-     *        <p>
-     *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *        </p>
-     *        <p>
-     *        To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and
-     *        MySQL 8.0-compatible Aurora), use the following command:
+     *        To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and MySQL
+     *        8.0-compatible Aurora), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -1342,8 +1306,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <b>Aurora MySQL</b>
      *        </p>
      *        <p>
-     *        Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>,
-     *        <code>8.0.mysql_aurora.3.02.0</code>
+     *        Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -1355,14 +1318,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora), use the
-     * following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and MySQL
      * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
@@ -1372,20 +1328,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>,
-     * <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      * </p>
      * 
      * @return The version number of the database engine to use.</p>
      *         <p>
-     *         To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora),
-     *         use the following command:
-     *         </p>
-     *         <p>
-     *         <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *         </p>
-     *         <p>
-     *         To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and
+     *         To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and
      *         MySQL 8.0-compatible Aurora), use the following command:
      *         </p>
      *         <p>
@@ -1395,7 +1343,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         <b>Aurora MySQL</b>
      *         </p>
      *         <p>
-     *         Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
+     *         Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      */
 
     public String getEngineVersion() {
@@ -1407,14 +1355,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora), use the
-     * following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and MySQL
      * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
@@ -1424,22 +1365,14 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <b>Aurora MySQL</b>
      * </p>
      * <p>
-     * Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>,
-     * <code>8.0.mysql_aurora.3.02.0</code>
+     * Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      * </p>
      * 
      * @param engineVersion
      *        The version number of the database engine to use.</p>
      *        <p>
-     *        To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora),
-     *        use the following command:
-     *        </p>
-     *        <p>
-     *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *        </p>
-     *        <p>
-     *        To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and
-     *        MySQL 8.0-compatible Aurora), use the following command:
+     *        To list all of the available engine versions for <code>aurora-mysql</code> (MySQL 5.7-compatible and MySQL
+     *        8.0-compatible Aurora), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -1448,8 +1381,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <b>Aurora MySQL</b>
      *        </p>
      *        <p>
-     *        Example: <code>5.6.10a</code>, <code>5.6.mysql_aurora.1.19.2</code>, <code>5.7.mysql_aurora.2.07.1</code>,
-     *        <code>8.0.mysql_aurora.3.02.0</code>
+     *        Examples: <code>5.7.mysql_aurora.2.07.1</code>, <code>8.0.mysql_aurora.3.02.0</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2943,12 +2875,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and <code>slowquery</code>.
      * </p>
      * <p>
-     * <b>Aurora PostgreSQL</b>
-     * </p>
-     * <p>
-     * Possible value is <code>postgresql</code>.
-     * </p>
-     * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Aurora User Guide</i>.
@@ -2962,12 +2888,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         <p>
      *         Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and
      *         <code>slowquery</code>.
-     *         </p>
-     *         <p>
-     *         <b>Aurora PostgreSQL</b>
-     *         </p>
-     *         <p>
-     *         Possible value is <code>postgresql</code>.
      *         </p>
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2994,12 +2914,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and <code>slowquery</code>.
      * </p>
      * <p>
-     * <b>Aurora PostgreSQL</b>
-     * </p>
-     * <p>
-     * Possible value is <code>postgresql</code>.
-     * </p>
-     * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Aurora User Guide</i>.
@@ -3014,12 +2928,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <p>
      *        Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and
      *        <code>slowquery</code>.
-     *        </p>
-     *        <p>
-     *        <b>Aurora PostgreSQL</b>
-     *        </p>
-     *        <p>
-     *        Possible value is <code>postgresql</code>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -3048,12 +2956,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and <code>slowquery</code>.
      * </p>
      * <p>
-     * <b>Aurora PostgreSQL</b>
-     * </p>
-     * <p>
-     * Possible value is <code>postgresql</code>.
-     * </p>
-     * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Aurora User Guide</i>.
@@ -3073,12 +2975,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <p>
      *        Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and
      *        <code>slowquery</code>.
-     *        </p>
-     *        <p>
-     *        <b>Aurora PostgreSQL</b>
-     *        </p>
-     *        <p>
-     *        Possible value is <code>postgresql</code>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -3109,12 +3005,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and <code>slowquery</code>.
      * </p>
      * <p>
-     * <b>Aurora PostgreSQL</b>
-     * </p>
-     * <p>
-     * Possible value is <code>postgresql</code>.
-     * </p>
-     * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Aurora User Guide</i>.
@@ -3129,12 +3019,6 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <p>
      *        Possible values are <code>audit</code>, <code>error</code>, <code>general</code>, and
      *        <code>slowquery</code>.
-     *        </p>
-     *        <p>
-     *        <b>Aurora PostgreSQL</b>
-     *        </p>
-     *        <p>
-     *        Possible value is <code>postgresql</code>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=

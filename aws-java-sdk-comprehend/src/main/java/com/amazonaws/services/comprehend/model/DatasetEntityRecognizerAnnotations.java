@@ -31,7 +31,7 @@ public class DatasetEntityRecognizerAnnotations implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must
-     * be in the same region as the API endpoint that you are calling.
+     * be in the same Region as the API endpoint that you are calling.
      * </p>
      */
     private String s3Uri;
@@ -39,12 +39,12 @@ public class DatasetEntityRecognizerAnnotations implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must
-     * be in the same region as the API endpoint that you are calling.
+     * be in the same Region as the API endpoint that you are calling.
      * </p>
      * 
      * @param s3Uri
      *        Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The
-     *        URI must be in the same region as the API endpoint that you are calling.
+     *        URI must be in the same Region as the API endpoint that you are calling.
      */
 
     public void setS3Uri(String s3Uri) {
@@ -54,11 +54,11 @@ public class DatasetEntityRecognizerAnnotations implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must
-     * be in the same region as the API endpoint that you are calling.
+     * be in the same Region as the API endpoint that you are calling.
      * </p>
      * 
      * @return Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The
-     *         URI must be in the same region as the API endpoint that you are calling.
+     *         URI must be in the same Region as the API endpoint that you are calling.
      */
 
     public String getS3Uri() {
@@ -68,12 +68,12 @@ public class DatasetEntityRecognizerAnnotations implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The URI must
-     * be in the same region as the API endpoint that you are calling.
+     * be in the same Region as the API endpoint that you are calling.
      * </p>
      * 
      * @param s3Uri
      *        Specifies the Amazon S3 location where the training documents for an entity recognizer are located. The
-     *        URI must be in the same region as the API endpoint that you are calling.
+     *        URI must be in the same Region as the API endpoint that you are calling.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

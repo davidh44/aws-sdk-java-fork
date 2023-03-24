@@ -30,8 +30,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -59,8 +59,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -77,8 +77,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -99,8 +99,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -116,8 +116,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *         models. The ModelKmsKeyId can be either of the following formats:</p>
+     * @return ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *         either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -138,8 +138,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -156,8 +156,8 @@ public class UpdateDataSecurityConfig implements Serializable, Cloneable, Struct
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>

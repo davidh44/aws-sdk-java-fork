@@ -85,7 +85,7 @@ public class GlobalCluster implements Serializable, Cloneable {
     private Boolean deletionProtection;
     /**
      * <p>
-     * The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1 item.
+     * The list of primary and secondary clusters within the global database cluster.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<GlobalClusterMember> globalClusterMembers;
@@ -502,11 +502,10 @@ public class GlobalCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1 item.
+     * The list of primary and secondary clusters within the global database cluster.
      * </p>
      * 
-     * @return The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1
-     *         item.
+     * @return The list of primary and secondary clusters within the global database cluster.
      */
 
     public java.util.List<GlobalClusterMember> getGlobalClusterMembers() {
@@ -518,12 +517,11 @@ public class GlobalCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1 item.
+     * The list of primary and secondary clusters within the global database cluster.
      * </p>
      * 
      * @param globalClusterMembers
-     *        The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1
-     *        item.
+     *        The list of primary and secondary clusters within the global database cluster.
      */
 
     public void setGlobalClusterMembers(java.util.Collection<GlobalClusterMember> globalClusterMembers) {
@@ -537,7 +535,7 @@ public class GlobalCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1 item.
+     * The list of primary and secondary clusters within the global database cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -546,8 +544,7 @@ public class GlobalCluster implements Serializable, Cloneable {
      * </p>
      * 
      * @param globalClusterMembers
-     *        The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1
-     *        item.
+     *        The list of primary and secondary clusters within the global database cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -563,12 +560,11 @@ public class GlobalCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1 item.
+     * The list of primary and secondary clusters within the global database cluster.
      * </p>
      * 
      * @param globalClusterMembers
-     *        The list of cluster IDs for secondary clusters within the global database cluster. Currently limited to 1
-     *        item.
+     *        The list of primary and secondary clusters within the global database cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -88,8 +88,8 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom models
+     * encrypted with a customer managed key (ModelKmsKeyId).
      * </p>
      */
     private String dataAccessRoleArn;
@@ -511,13 +511,13 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom models
+     * encrypted with a customer managed key (ModelKmsKeyId).
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom
+     *        models encrypted with a customer managed key (ModelKmsKeyId).
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -526,12 +526,12 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom models
+     * encrypted with a customer managed key (ModelKmsKeyId).
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained
+     *         custom models encrypted with a customer managed key (ModelKmsKeyId).
      */
 
     public String getDataAccessRoleArn() {
@@ -540,13 +540,13 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom models
+     * encrypted with a customer managed key (ModelKmsKeyId).
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to trained custom models encrypted with a customer managed key (ModelKmsKeyId).
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to trained custom
+     *        models encrypted with a customer managed key (ModelKmsKeyId).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

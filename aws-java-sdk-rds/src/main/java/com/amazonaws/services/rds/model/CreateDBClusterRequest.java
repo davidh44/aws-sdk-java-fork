@@ -170,12 +170,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * <code>aurora-mysql</code>
      * </p>
      * </li>
      * <li>
@@ -204,17 +199,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     * </p>
+     * <p>
+     * You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora MySQL
+     * version 2 or version 3, respectively.
      * </p>
      * <p>
      * To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -239,8 +232,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database engine
+     * updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -255,8 +248,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">Amazon
+     * RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -264,7 +257,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     * for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -635,26 +628,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private com.amazonaws.internal.SdkInternalList<String> enableCloudwatchLogsExports;
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
-     * </p>
-     * <p>
-     * The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x versions,
-     * and version 2.09 and higher 2.x versions.
-     * </p>
-     * <p>
-     * The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions, and
-     * <code>global</code> engine mode isn't required for any 2.x versions.
-     * </p>
-     * <p>
-     * The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version 5.6.10a.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     * </p>
-     * <p>
-     * For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     * <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      * </p>
      * <p>
      * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
@@ -678,21 +655,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of Parallel Query</a>
+     * >Limitations of parallel query</a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora Global Databases</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     * >Limitations of Multi-Master Clusters</a>
+     * >Limitations of Aurora global databases</a>
      * </p>
      * </li>
      * </ul>
@@ -861,8 +831,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information about valid IOPS values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned IOPS
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -2064,12 +2034,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * <code>aurora-mysql</code>
      * </p>
      * </li>
      * <li>
@@ -2100,12 +2065,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     *        <code>aurora-mysql</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2142,12 +2102,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * <code>aurora-mysql</code>
      * </p>
      * </li>
      * <li>
@@ -2177,12 +2132,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     *         <code>aurora-mysql</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2219,12 +2169,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     * <code>aurora-mysql</code>
      * </p>
      * </li>
      * <li>
@@ -2255,12 +2200,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>aurora</code> (for MySQL 5.6-compatible Aurora)
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
+     *        <code>aurora-mysql</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2294,17 +2234,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     * </p>
+     * <p>
+     * You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora MySQL
+     * version 2 or version 3, respectively.
      * </p>
      * <p>
      * To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -2329,8 +2267,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database engine
+     * updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -2345,8 +2283,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">Amazon
+     * RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -2354,7 +2292,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     * for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2363,17 +2301,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @param engineVersion
      *        The version number of the database engine to use.</p>
      *        <p>
-     *        To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     *        </p>
-     *        <p>
-     *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *        </p>
-     *        <p>
-     *        To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use
-     *        the following command:
+     *        To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3
+     *        (MySQL 8.0-compatible), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     *        </p>
+     *        <p>
+     *        You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora
+     *        MySQL version 2 or version 3, respectively.
      *        </p>
      *        <p>
      *        To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -2398,8 +2334,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        For information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     *        Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database
+     *        engine updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Aurora PostgreSQL</b>
@@ -2415,7 +2351,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
-     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Amazon RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>PostgreSQL</b>
@@ -2423,7 +2359,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Amazon RDS for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2438,17 +2374,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     * </p>
+     * <p>
+     * You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora MySQL
+     * version 2 or version 3, respectively.
      * </p>
      * <p>
      * To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -2473,8 +2407,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database engine
+     * updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -2489,8 +2423,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">Amazon
+     * RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -2498,7 +2432,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     * for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2506,17 +2440,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return The version number of the database engine to use.</p>
      *         <p>
-     *         To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     *         </p>
-     *         <p>
-     *         <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *         </p>
-     *         <p>
-     *         To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora,
-     *         use the following command:
+     *         To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3
+     *         (MySQL 8.0-compatible), use the following command:
      *         </p>
      *         <p>
      *         <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     *         </p>
+     *         <p>
+     *         You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora
+     *         MySQL version 2 or version 3, respectively.
      *         </p>
      *         <p>
      *         To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -2541,8 +2473,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         For information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     *         Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database
+     *         engine updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         <b>Aurora PostgreSQL</b>
@@ -2557,8 +2489,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         For information, see <a href=
-     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL
-     *         on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
+     *         >Amazon RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>PostgreSQL</b>
@@ -2566,7 +2498,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *         >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     *         >Amazon RDS for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2581,17 +2513,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The version number of the database engine to use.
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     * </p>
-     * <p>
-     * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     * </p>
-     * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
-     * following command:
+     * To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL
+     * 8.0-compatible), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     * </p>
+     * <p>
+     * You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora MySQL
+     * version 2 or version 3, respectively.
      * </p>
      * <p>
      * To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -2616,8 +2546,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database engine
+     * updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -2632,8 +2562,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">Amazon
+     * RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -2641,7 +2571,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     * for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2650,17 +2580,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @param engineVersion
      *        The version number of the database engine to use.</p>
      *        <p>
-     *        To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:
-     *        </p>
-     *        <p>
-     *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
-     *        </p>
-     *        <p>
-     *        To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use
-     *        the following command:
+     *        To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3
+     *        (MySQL 8.0-compatible), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
+     *        </p>
+     *        <p>
+     *        You can supply either <code>5.7</code> or <code>8.0</code> to use the default engine version for Aurora
+     *        MySQL version 2 or version 3, respectively.
      *        </p>
      *        <p>
      *        To list all of the available engine versions for Aurora PostgreSQL, use the following command:
@@ -2685,8 +2613,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        For information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     *        Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Database
+     *        engine updates for Amazon Aurora MySQL</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Aurora PostgreSQL</b>
@@ -2702,7 +2630,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
-     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Amazon RDS for MySQL</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>PostgreSQL</b>
@@ -2710,7 +2638,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Amazon RDS for PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -5109,26 +5037,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
-     * </p>
-     * <p>
-     * The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x versions,
-     * and version 2.09 and higher 2.x versions.
-     * </p>
-     * <p>
-     * The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions, and
-     * <code>global</code> engine mode isn't required for any 2.x versions.
-     * </p>
-     * <p>
-     * The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version 5.6.10a.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     * </p>
-     * <p>
-     * For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     * <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      * </p>
      * <p>
      * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
@@ -5152,21 +5064,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of Parallel Query</a>
+     * >Limitations of parallel query</a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora Global Databases</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     * >Limitations of Multi-Master Clusters</a>
+     * >Limitations of Aurora global databases</a>
      * </p>
      * </li>
      * </ul>
@@ -5175,26 +5080,9 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param engineMode
-     *        The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     *        <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
-     *        <p>
-     *        The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x
-     *        versions, and version 2.09 and higher 2.x versions.
-     *        </p>
-     *        <p>
-     *        The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions,
-     *        and <code>global</code> engine mode isn't required for any 2.x versions.
-     *        </p>
-     *        <p>
-     *        The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version
-     *        5.6.10a.
-     *        </p>
+     *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *        <p>
      *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     *        </p>
-     *        <p>
-     *        For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     *        <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      *        </p>
      *        <p>
      *        Limitations and requirements apply to some DB engine modes. For more information, see the following
@@ -5219,21 +5107,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     *        >Limitations of Parallel Query</a>
+     *        >Limitations of parallel query</a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     *        >Limitations of Aurora Global Databases</a>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     *        >Limitations of Multi-Master Clusters</a>
+     *        >Limitations of Aurora global databases</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -5247,26 +5128,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
-     * </p>
-     * <p>
-     * The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x versions,
-     * and version 2.09 and higher 2.x versions.
-     * </p>
-     * <p>
-     * The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions, and
-     * <code>global</code> engine mode isn't required for any 2.x versions.
-     * </p>
-     * <p>
-     * The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version 5.6.10a.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     * </p>
-     * <p>
-     * For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     * <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      * </p>
      * <p>
      * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
@@ -5290,21 +5155,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of Parallel Query</a>
+     * >Limitations of parallel query</a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora Global Databases</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     * >Limitations of Multi-Master Clusters</a>
+     * >Limitations of Aurora global databases</a>
      * </p>
      * </li>
      * </ul>
@@ -5312,26 +5170,9 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     *         <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
-     *         <p>
-     *         The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x
-     *         versions, and version 2.09 and higher 2.x versions.
-     *         </p>
-     *         <p>
-     *         The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions,
-     *         and <code>global</code> engine mode isn't required for any 2.x versions.
-     *         </p>
-     *         <p>
-     *         The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version
-     *         5.6.10a.
-     *         </p>
+     * @return The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *         <p>
      *         The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     *         </p>
-     *         <p>
-     *         For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     *         <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      *         </p>
      *         <p>
      *         Limitations and requirements apply to some DB engine modes. For more information, see the following
@@ -5356,21 +5197,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     *         >Limitations of Parallel Query</a>
+     *         >Limitations of parallel query</a>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     *         >Limitations of Aurora Global Databases</a>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <a href=
-     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     *         >Limitations of Multi-Master Clusters</a>
+     *         >Limitations of Aurora global databases</a>
      *         </p>
      *         </li>
      *         </ul>
@@ -5384,26 +5218,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
-     * </p>
-     * <p>
-     * The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x versions,
-     * and version 2.09 and higher 2.x versions.
-     * </p>
-     * <p>
-     * The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions, and
-     * <code>global</code> engine mode isn't required for any 2.x versions.
-     * </p>
-     * <p>
-     * The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version 5.6.10a.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     * </p>
-     * <p>
-     * For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     * <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      * </p>
      * <p>
      * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
@@ -5427,21 +5245,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of Parallel Query</a>
+     * >Limitations of parallel query</a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora Global Databases</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     * >Limitations of Multi-Master Clusters</a>
+     * >Limitations of Aurora global databases</a>
      * </p>
      * </li>
      * </ul>
@@ -5450,26 +5261,9 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param engineMode
-     *        The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     *        <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
-     *        <p>
-     *        The <code>parallelquery</code> engine mode isn't required for Aurora MySQL version 1.23 and higher 1.x
-     *        versions, and version 2.09 and higher 2.x versions.
-     *        </p>
-     *        <p>
-     *        The <code>global</code> engine mode isn't required for Aurora MySQL version 1.22 and higher 1.x versions,
-     *        and <code>global</code> engine mode isn't required for any 2.x versions.
-     *        </p>
-     *        <p>
-     *        The <code>multimaster</code> engine mode only applies for DB clusters created with Aurora MySQL version
-     *        5.6.10a.
-     *        </p>
+     *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *        <p>
      *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
-     *        </p>
-     *        <p>
-     *        For Aurora PostgreSQL, the <code>global</code> engine mode isn't required, and both the
-     *        <code>parallelquery</code> and the <code>multimaster</code> engine modes currently aren't supported.
      *        </p>
      *        <p>
      *        Limitations and requirements apply to some DB engine modes. For more information, see the following
@@ -5494,21 +5288,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     *        >Limitations of Parallel Query</a>
+     *        >Limitations of parallel query</a>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     *        >Limitations of Aurora Global Databases</a>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations"
-     *        >Limitations of Multi-Master Clusters</a>
+     *        >Limitations of Aurora global databases</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -6578,8 +6365,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information about valid IOPS values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned IOPS
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -6596,8 +6383,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        instance in the Multi-AZ DB cluster.</p>
      *        <p>
      *        For information about valid IOPS values, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned
+     *        IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required to create a Multi-AZ DB cluster.
@@ -6620,8 +6407,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information about valid IOPS values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned IOPS
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -6637,8 +6424,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         instance in the Multi-AZ DB cluster.</p>
      *         <p>
      *         For information about valid IOPS values, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *         Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned
+     *         IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting is required to create a Multi-AZ DB cluster.
@@ -6661,8 +6448,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * For information about valid IOPS values, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned
-     * IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned IOPS
+     * storage</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -6679,8 +6466,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        instance in the Multi-AZ DB cluster.</p>
      *        <p>
      *        For information about valid IOPS values, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Provisioned
+     *        IOPS storage</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required to create a Multi-AZ DB cluster.

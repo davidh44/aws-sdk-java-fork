@@ -37,7 +37,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for
-     * the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of
+     * the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
@@ -112,8 +113,7 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
     private String languageCode;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -168,7 +168,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for
-     * the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of
+     * the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
@@ -182,8 +183,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified
-     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *        follows:</p>
+     *        identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *        job ID. The format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
      *        </p>
@@ -201,7 +202,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for
-     * the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of
+     * the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
@@ -214,8 +216,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified
-     *         identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *         follows:</p>
+     *         identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *         job ID. The format of the ARN is as follows:</p>
      *         <p>
      *         <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
      *         </p>
@@ -233,7 +235,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified identifier for
-     * the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of
+     * the ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
@@ -247,8 +250,8 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the PII entities detection job. It is a unique, fully qualified
-     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *        follows:</p>
+     *        identifier for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the
+     *        job ID. The format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:pii-entities-detection-job/&lt;job-id&gt;</code>
      *        </p>
@@ -700,13 +703,12 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -715,12 +717,11 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend read access to your input data.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *         data.
      */
 
     public String getDataAccessRoleArn() {
@@ -729,13 +730,12 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

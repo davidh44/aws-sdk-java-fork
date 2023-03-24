@@ -35,7 +35,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that you are
+     * The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that you are
      * calling. The URI can point to a single input file or it can provide the prefix for a collection of input files.
      * </p>
      * <p>
@@ -61,7 +61,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that you are
+     * The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that you are
      * calling. The URI can point to a single input file or it can provide the prefix for a collection of input files.
      * </p>
      * <p>
@@ -74,7 +74,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that
+     *        The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that
      *        you are calling. The URI can point to a single input file or it can provide the prefix for a collection of
      *        input files.</p>
      *        <p>
@@ -92,7 +92,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that you are
+     * The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that you are
      * calling. The URI can point to a single input file or it can provide the prefix for a collection of input files.
      * </p>
      * <p>
@@ -104,7 +104,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
      * This parameter is required if you set <code>DataFormat</code> to <code>COMPREHEND_CSV</code>.
      * </p>
      * 
-     * @return The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that
+     * @return The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that
      *         you are calling. The URI can point to a single input file or it can provide the prefix for a collection
      *         of input files.</p>
      *         <p>
@@ -122,7 +122,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
 
     /**
      * <p>
-     * The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that you are
+     * The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that you are
      * calling. The URI can point to a single input file or it can provide the prefix for a collection of input files.
      * </p>
      * <p>
@@ -135,7 +135,7 @@ public class DatasetDocumentClassifierInputDataConfig implements Serializable, C
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 URI for the input data. The S3 bucket must be in the same region as the API endpoint that
+     *        The Amazon S3 URI for the input data. The S3 bucket must be in the same Region as the API endpoint that
      *        you are calling. The URI can point to a single input file or it can provide the prefix for a collection of
      *        input files.</p>
      *        <p>

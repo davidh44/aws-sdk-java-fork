@@ -26,7 +26,8 @@ public enum ModelStatus {
     STOP_REQUESTED("STOP_REQUESTED"),
     STOPPED("STOPPED"),
     IN_ERROR("IN_ERROR"),
-    TRAINED("TRAINED");
+    TRAINED("TRAINED"),
+    TRAINED_WITH_WARNING("TRAINED_WITH_WARNING");
 
     private String value;
 

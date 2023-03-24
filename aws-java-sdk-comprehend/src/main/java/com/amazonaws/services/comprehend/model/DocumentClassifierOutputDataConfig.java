@@ -31,7 +31,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
     /**
      * <p>
      * When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the Amazon
-     * S3 location where you want to write the confusion matrix. The URI must be in the same region as the API endpoint
+     * S3 location where you want to write the confusion matrix. The URI must be in the same Region as the API endpoint
      * that you are calling. The location is used as the prefix for the actual location of this output file.
      * </p>
      * <p>
@@ -43,8 +43,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
     private String s3Uri;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an
-     * analysis job. The KmsKeyId can be one of the following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output
+     * results from an analysis job. The KmsKeyId can be one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -81,7 +81,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
     /**
      * <p>
      * When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the Amazon
-     * S3 location where you want to write the confusion matrix. The URI must be in the same region as the API endpoint
+     * S3 location where you want to write the confusion matrix. The URI must be in the same Region as the API endpoint
      * that you are calling. The location is used as the prefix for the actual location of this output file.
      * </p>
      * <p>
@@ -92,7 +92,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
      * 
      * @param s3Uri
      *        When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the
-     *        Amazon S3 location where you want to write the confusion matrix. The URI must be in the same region as the
+     *        Amazon S3 location where you want to write the confusion matrix. The URI must be in the same Region as the
      *        API endpoint that you are calling. The location is used as the prefix for the actual location of this
      *        output file.</p>
      *        <p>
@@ -108,7 +108,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
     /**
      * <p>
      * When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the Amazon
-     * S3 location where you want to write the confusion matrix. The URI must be in the same region as the API endpoint
+     * S3 location where you want to write the confusion matrix. The URI must be in the same Region as the API endpoint
      * that you are calling. The location is used as the prefix for the actual location of this output file.
      * </p>
      * <p>
@@ -118,7 +118,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
      * </p>
      * 
      * @return When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the
-     *         Amazon S3 location where you want to write the confusion matrix. The URI must be in the same region as
+     *         Amazon S3 location where you want to write the confusion matrix. The URI must be in the same Region as
      *         the API endpoint that you are calling. The location is used as the prefix for the actual location of this
      *         output file.</p>
      *         <p>
@@ -134,7 +134,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
     /**
      * <p>
      * When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the Amazon
-     * S3 location where you want to write the confusion matrix. The URI must be in the same region as the API endpoint
+     * S3 location where you want to write the confusion matrix. The URI must be in the same Region as the API endpoint
      * that you are calling. The location is used as the prefix for the actual location of this output file.
      * </p>
      * <p>
@@ -145,7 +145,7 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
      * 
      * @param s3Uri
      *        When you use the <code>OutputDataConfig</code> object while creating a custom classifier, you specify the
-     *        Amazon S3 location where you want to write the confusion matrix. The URI must be in the same region as the
+     *        Amazon S3 location where you want to write the confusion matrix. The URI must be in the same Region as the
      *        API endpoint that you are calling. The location is used as the prefix for the actual location of this
      *        output file.</p>
      *        <p>
@@ -162,8 +162,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an
-     * analysis job. The KmsKeyId can be one of the following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output
+     * results from an analysis job. The KmsKeyId can be one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -190,8 +190,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
      * </ul>
      * 
      * @param kmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results
-     *        from an analysis job. The KmsKeyId can be one of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the
+     *        output results from an analysis job. The KmsKeyId can be one of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -222,8 +222,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an
-     * analysis job. The KmsKeyId can be one of the following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output
+     * results from an analysis job. The KmsKeyId can be one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -249,8 +249,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results
-     *         from an analysis job. The KmsKeyId can be one of the following formats:</p>
+     * @return ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *         the output results from an analysis job. The KmsKeyId can be one of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -281,8 +281,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results from an
-     * analysis job. The KmsKeyId can be one of the following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output
+     * results from an analysis job. The KmsKeyId can be one of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -309,8 +309,8 @@ public class DocumentClassifierOutputDataConfig implements Serializable, Cloneab
      * </ul>
      * 
      * @param kmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the output results
-     *        from an analysis job. The KmsKeyId can be one of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt the
+     *        output results from an analysis job. The KmsKeyId can be one of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>

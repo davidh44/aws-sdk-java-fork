@@ -91,16 +91,15 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
     private EntityRecognizerMetadata recognizerMetadata;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      */
     private String dataAccessRoleArn;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -127,8 +126,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
     private VpcConfig vpcConfig;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -153,8 +152,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
     private String versionName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
-     * create the entity recognizer model in your AWS account.
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web Services
+     * account to create the entity recognizer model in your Amazon Web Services account.
      * </p>
      */
     private String sourceModelArn;
@@ -619,13 +618,12 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -634,12 +632,11 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend read access to your input data.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *         data.
      */
 
     public String getDataAccessRoleArn() {
@@ -648,13 +645,12 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -665,9 +661,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -684,9 +680,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -707,9 +703,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -725,9 +721,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the
-     *         storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId
-     *         can be either of the following formats:</p>
+     * @return ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *         data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *         VolumeKmsKeyId can be either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -748,9 +744,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -767,9 +763,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -844,8 +840,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -862,8 +858,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -884,8 +880,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -901,8 +897,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *         models. The ModelKmsKeyId can be either of the following formats:</p>
+     * @return ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *         either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -923,8 +919,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -941,8 +937,8 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1005,13 +1001,13 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
-     * create the entity recognizer model in your AWS account.
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web Services
+     * account to create the entity recognizer model in your Amazon Web Services account.
      * </p>
      * 
      * @param sourceModelArn
-     *        The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account
-     *        to create the entity recognizer model in your AWS account.
+     *        The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web
+     *        Services account to create the entity recognizer model in your Amazon Web Services account.
      */
 
     public void setSourceModelArn(String sourceModelArn) {
@@ -1020,12 +1016,12 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
-     * create the entity recognizer model in your AWS account.
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web Services
+     * account to create the entity recognizer model in your Amazon Web Services account.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account
-     *         to create the entity recognizer model in your AWS account.
+     * @return The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web
+     *         Services account to create the entity recognizer model in your Amazon Web Services account.
      */
 
     public String getSourceModelArn() {
@@ -1034,13 +1030,13 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
-     * create the entity recognizer model in your AWS account.
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web Services
+     * account to create the entity recognizer model in your Amazon Web Services account.
      * </p>
      * 
      * @param sourceModelArn
-     *        The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account
-     *        to create the entity recognizer model in your AWS account.
+     *        The Amazon Resource Name (ARN) of the source model. This model was imported from a different Amazon Web
+     *        Services account to create the entity recognizer model in your Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

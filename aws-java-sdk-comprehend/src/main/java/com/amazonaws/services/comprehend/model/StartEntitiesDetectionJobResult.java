@@ -32,7 +32,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier for the
-     * job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the
+     * ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
@@ -133,7 +134,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier for the
-     * job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the
+     * ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
@@ -147,7 +149,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier
-     *        for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
+     *        for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The
+     *        format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
      *        </p>
@@ -165,7 +168,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier for the
-     * job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the
+     * ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
@@ -178,8 +182,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier
-     *         for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
-     *         follows:</p>
+     *         for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The
+     *         format of the ARN is as follows:</p>
      *         <p>
      *         <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
      *         </p>
@@ -197,7 +201,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier for the
-     * job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The format of the
+     * ARN is as follows:
      * </p>
      * <p>
      * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
@@ -211,7 +216,8 @@ public class StartEntitiesDetectionJobResult extends com.amazonaws.AmazonWebServ
      * 
      * @param jobArn
      *        The Amazon Resource Name (ARN) of the entities detection job. It is a unique, fully qualified identifier
-     *        for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:</p>
+     *        for the job. It includes the Amazon Web Services account, Amazon Web Services Region, and the job ID. The
+     *        format of the ARN is as follows:</p>
      *        <p>
      *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:entities-detection-job/&lt;job-id&gt;</code>
      *        </p>

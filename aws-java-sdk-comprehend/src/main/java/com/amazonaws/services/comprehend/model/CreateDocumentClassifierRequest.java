@@ -35,14 +35,13 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same classifier name in the account/AWS Region.
+     * models with the same classifier name in the Amazon Web Services account/Amazon Web Services Region.
      * </p>
      */
     private String versionName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -81,9 +80,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     private String languageCode;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -119,8 +118,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     private String mode;
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -140,7 +139,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The resource-based policy to attach to your custom document classifier model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To provide valid
@@ -204,13 +203,14 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same classifier name in the account/AWS Region.
+     * models with the same classifier name in the Amazon Web Services account/Amazon Web Services Region.
      * </p>
      * 
      * @param versionName
      *        The version name given to the newly created classifier. Version names can have a maximum of 256
      *        characters. Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be
-     *        unique among all models with the same classifier name in the account/AWS Region.
+     *        unique among all models with the same classifier name in the Amazon Web Services account/Amazon Web
+     *        Services Region.
      */
 
     public void setVersionName(String versionName) {
@@ -221,12 +221,13 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same classifier name in the account/AWS Region.
+     * models with the same classifier name in the Amazon Web Services account/Amazon Web Services Region.
      * </p>
      * 
      * @return The version name given to the newly created classifier. Version names can have a maximum of 256
      *         characters. Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must
-     *         be unique among all models with the same classifier name in the account/AWS Region.
+     *         be unique among all models with the same classifier name in the Amazon Web Services account/Amazon Web
+     *         Services Region.
      */
 
     public String getVersionName() {
@@ -237,13 +238,14 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
      * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
-     * models with the same classifier name in the account/AWS Region.
+     * models with the same classifier name in the Amazon Web Services account/Amazon Web Services Region.
      * </p>
      * 
      * @param versionName
      *        The version name given to the newly created classifier. Version names can have a maximum of 256
      *        characters. Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be
-     *        unique among all models with the same classifier name in the account/AWS Region.
+     *        unique among all models with the same classifier name in the Amazon Web Services account/Amazon Web
+     *        Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,13 +256,12 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -269,12 +270,11 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend read access to your input data.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *         data.
      */
 
     public String getDataAccessRoleArn() {
@@ -283,13 +283,12 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * read access to your input data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend read access to your input data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -576,9 +575,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -595,9 +594,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -618,9 +617,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -636,9 +635,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the
-     *         storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId
-     *         can be either of the following formats:</p>
+     * @return ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *         data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *         VolumeKmsKeyId can be either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -659,9 +658,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage volume
-     * attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be either of the
-     * following formats:
+     * ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on
+     * the storage volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can
+     * be either of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -678,9 +677,9 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * 
      * @param volumeKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt data on the storage
-     *        volume attached to the ML compute instance(s) that process the analysis job. The VolumeKmsKeyId can be
-     *        either of the following formats:</p>
+     *        ID for the Amazon Web Services Key Management Service (KMS) key that Amazon Comprehend uses to encrypt
+     *        data on the storage volume attached to the ML compute instance(s) that process the analysis job. The
+     *        VolumeKmsKeyId can be either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -838,8 +837,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -856,8 +855,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -878,8 +877,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -895,8 +894,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * </ul>
      * 
-     * @return ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *         models. The ModelKmsKeyId can be either of the following formats:</p>
+     * @return ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *         either of the following formats:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -917,8 +916,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom models. The
-     * ModelKmsKeyId can be either of the following formats:
+     * ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be either
+     * of the following formats:
      * </p>
      * <ul>
      * <li>
@@ -935,8 +934,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      * 
      * @param modelKmsKeyId
-     *        ID for the AWS Key Management Service (KMS) key that Amazon Comprehend uses to encrypt trained custom
-     *        models. The ModelKmsKeyId can be either of the following formats:</p>
+     *        ID for the KMS key that Amazon Comprehend uses to encrypt trained custom models. The ModelKmsKeyId can be
+     *        either of the following formats:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -960,7 +959,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The resource-based policy to attach to your custom document classifier model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To provide valid
@@ -980,7 +979,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * 
      * @param modelPolicy
      *        The resource-based policy to attach to your custom document classifier model. You can use this policy to
-     *        allow another AWS account to import your custom model.</p>
+     *        allow another Amazon Web Services account to import your custom model.</p>
      *        <p>
      *        Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To
      *        provide valid JSON, enclose the attribute names and values in double quotes. If the JSON body is also
@@ -1004,7 +1003,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The resource-based policy to attach to your custom document classifier model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To provide valid
@@ -1023,7 +1022,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @return The resource-based policy to attach to your custom document classifier model. You can use this policy to
-     *         allow another AWS account to import your custom model.</p>
+     *         allow another Amazon Web Services account to import your custom model.</p>
      *         <p>
      *         Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To
      *         provide valid JSON, enclose the attribute names and values in double quotes. If the JSON body is also
@@ -1047,7 +1046,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The resource-based policy to attach to your custom document classifier model. You can use this policy to allow
-     * another AWS account to import your custom model.
+     * another Amazon Web Services account to import your custom model.
      * </p>
      * <p>
      * Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To provide valid
@@ -1067,7 +1066,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
      * 
      * @param modelPolicy
      *        The resource-based policy to attach to your custom document classifier model. You can use this policy to
-     *        allow another AWS account to import your custom model.</p>
+     *        allow another Amazon Web Services account to import your custom model.</p>
      *        <p>
      *        Provide your policy as a JSON body that you enter as a UTF-8 encoded string without line breaks. To
      *        provide valid JSON, enclose the attribute names and values in double quotes. If the JSON body is also

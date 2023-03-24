@@ -39,8 +39,8 @@ public class UpdateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
     private String activeModelArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * permission to access the flywheel data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the flywheel
+     * data.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -133,13 +133,13 @@ public class UpdateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * permission to access the flywheel data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the flywheel
+     * data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend permission to access the flywheel data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the
+     *        flywheel data.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -148,12 +148,12 @@ public class UpdateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * permission to access the flywheel data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the flywheel
+     * data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *         Comprehend permission to access the flywheel data.
+     * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the
+     *         flywheel data.
      */
 
     public String getDataAccessRoleArn() {
@@ -162,13 +162,13 @@ public class UpdateFlywheelRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon Comprehend
-     * permission to access the flywheel data.
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the flywheel
+     * data.
      * </p>
      * 
      * @param dataAccessRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that grants Amazon
-     *        Comprehend permission to access the flywheel data.
+     *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend permission to access the
+     *        flywheel data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
