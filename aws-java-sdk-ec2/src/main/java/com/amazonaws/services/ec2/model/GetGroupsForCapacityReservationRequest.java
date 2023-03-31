@@ -28,7 +28,8 @@ public class GetGroupsForCapacityReservationRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the Capacity Reservation.
+     * The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the operation
+     * returns only Capacity Reservation groups that you own.
      * </p>
      */
     private String capacityReservationId;
@@ -49,11 +50,13 @@ public class GetGroupsForCapacityReservationRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the Capacity Reservation.
+     * The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the operation
+     * returns only Capacity Reservation groups that you own.
      * </p>
      * 
      * @param capacityReservationId
-     *        The ID of the Capacity Reservation.
+     *        The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the
+     *        operation returns only Capacity Reservation groups that you own.
      */
 
     public void setCapacityReservationId(String capacityReservationId) {
@@ -62,10 +65,12 @@ public class GetGroupsForCapacityReservationRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the Capacity Reservation.
+     * The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the operation
+     * returns only Capacity Reservation groups that you own.
      * </p>
      * 
-     * @return The ID of the Capacity Reservation.
+     * @return The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the
+     *         operation returns only Capacity Reservation groups that you own.
      */
 
     public String getCapacityReservationId() {
@@ -74,11 +79,13 @@ public class GetGroupsForCapacityReservationRequest extends AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the Capacity Reservation.
+     * The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the operation
+     * returns only Capacity Reservation groups that you own.
      * </p>
      * 
      * @param capacityReservationId
-     *        The ID of the Capacity Reservation.
+     *        The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the
+     *        operation returns only Capacity Reservation groups that you own.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

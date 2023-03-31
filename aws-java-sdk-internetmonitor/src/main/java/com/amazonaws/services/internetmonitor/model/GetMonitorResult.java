@@ -79,11 +79,25 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider
+     * (ISP), that clients access the resources through. This limit helps control billing costs.
+     * </p>
+     * <p>
+     * To learn more, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing a
+     * city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch User
+     * Guide</i>.
      * </p>
      */
     private Integer maxCityNetworksToMonitor;
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     */
+    private InternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
 
     /**
      * <p>
@@ -547,13 +561,26 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider
+     * (ISP), that clients access the resources through. This limit helps control billing costs.
+     * </p>
+     * <p>
+     * To learn more, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing a
+     * city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch User
+     * Guide</i>.
      * </p>
      * 
      * @param maxCityNetworksToMonitor
-     *        The maximum number of city-network combinations (that is, combinations of a city location and network,
-     *        such as an ISP) to be monitored for your resources.
+     *        The maximum number of city-networks to monitor for your resources. A city-network is the location (city)
+     *        where clients access your application resources from and the network or ASN, such as an internet service
+     *        provider (ISP), that clients access the resources through. This limit helps control billing costs.</p>
+     *        <p>
+     *        To learn more, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing
+     *        a city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch
+     *        User Guide</i>.
      */
 
     public void setMaxCityNetworksToMonitor(Integer maxCityNetworksToMonitor) {
@@ -562,12 +589,25 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider
+     * (ISP), that clients access the resources through. This limit helps control billing costs.
+     * </p>
+     * <p>
+     * To learn more, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing a
+     * city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch User
+     * Guide</i>.
      * </p>
      * 
-     * @return The maximum number of city-network combinations (that is, combinations of a city location and network,
-     *         such as an ISP) to be monitored for your resources.
+     * @return The maximum number of city-networks to monitor for your resources. A city-network is the location (city)
+     *         where clients access your application resources from and the network or ASN, such as an internet service
+     *         provider (ISP), that clients access the resources through. This limit helps control billing costs.</p>
+     *         <p>
+     *         To learn more, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing
+     *         a city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch
+     *         User Guide</i>.
      */
 
     public Integer getMaxCityNetworksToMonitor() {
@@ -576,18 +616,77 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider
+     * (ISP), that clients access the resources through. This limit helps control billing costs.
+     * </p>
+     * <p>
+     * To learn more, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing a
+     * city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch User
+     * Guide</i>.
      * </p>
      * 
      * @param maxCityNetworksToMonitor
-     *        The maximum number of city-network combinations (that is, combinations of a city location and network,
-     *        such as an ISP) to be monitored for your resources.
+     *        The maximum number of city-networks to monitor for your resources. A city-network is the location (city)
+     *        where clients access your application resources from and the network or ASN, such as an internet service
+     *        provider (ISP), that clients access the resources through. This limit helps control billing costs.</p>
+     *        <p>
+     *        To learn more, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing
+     *        a city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch
+     *        User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GetMonitorResult withMaxCityNetworksToMonitor(Integer maxCityNetworksToMonitor) {
         setMaxCityNetworksToMonitor(maxCityNetworksToMonitor);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     * 
+     * @param internetMeasurementsLogDelivery
+     *        Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     *        measurements are also published to Amazon CloudWatch Logs.
+     */
+
+    public void setInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        this.internetMeasurementsLogDelivery = internetMeasurementsLogDelivery;
+    }
+
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     * 
+     * @return Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     *         measurements are also published to Amazon CloudWatch Logs.
+     */
+
+    public InternetMeasurementsLogDelivery getInternetMeasurementsLogDelivery() {
+        return this.internetMeasurementsLogDelivery;
+    }
+
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     * 
+     * @param internetMeasurementsLogDelivery
+     *        Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     *        measurements are also published to Amazon CloudWatch Logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMonitorResult withInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        setInternetMeasurementsLogDelivery(internetMeasurementsLogDelivery);
         return this;
     }
 
@@ -622,7 +721,9 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getMaxCityNetworksToMonitor() != null)
-            sb.append("MaxCityNetworksToMonitor: ").append(getMaxCityNetworksToMonitor());
+            sb.append("MaxCityNetworksToMonitor: ").append(getMaxCityNetworksToMonitor()).append(",");
+        if (getInternetMeasurementsLogDelivery() != null)
+            sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery());
         sb.append("}");
         return sb.toString();
     }
@@ -677,6 +778,11 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
             return false;
         if (other.getMaxCityNetworksToMonitor() != null && other.getMaxCityNetworksToMonitor().equals(this.getMaxCityNetworksToMonitor()) == false)
             return false;
+        if (other.getInternetMeasurementsLogDelivery() == null ^ this.getInternetMeasurementsLogDelivery() == null)
+            return false;
+        if (other.getInternetMeasurementsLogDelivery() != null
+                && other.getInternetMeasurementsLogDelivery().equals(this.getInternetMeasurementsLogDelivery()) == false)
+            return false;
         return true;
     }
 
@@ -695,6 +801,7 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
         hashCode = prime * hashCode + ((getProcessingStatusInfo() == null) ? 0 : getProcessingStatusInfo().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getMaxCityNetworksToMonitor() == null) ? 0 : getMaxCityNetworksToMonitor().hashCode());
+        hashCode = prime * hashCode + ((getInternetMeasurementsLogDelivery() == null) ? 0 : getInternetMeasurementsLogDelivery().hashCode());
         return hashCode;
     }
 

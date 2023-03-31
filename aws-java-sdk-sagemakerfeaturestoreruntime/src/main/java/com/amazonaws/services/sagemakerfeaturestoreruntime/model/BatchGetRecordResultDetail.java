@@ -37,7 +37,7 @@ public class BatchGetRecordResultDetail implements Serializable, Cloneable, Stru
     private String featureGroupName;
     /**
      * <p>
-     * The value of the record identifer in string format.
+     * The value of the record identifier in string format.
      * </p>
      */
     private String recordIdentifierValueAsString;
@@ -90,11 +90,11 @@ public class BatchGetRecordResultDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The value of the record identifer in string format.
+     * The value of the record identifier in string format.
      * </p>
      * 
      * @param recordIdentifierValueAsString
-     *        The value of the record identifer in string format.
+     *        The value of the record identifier in string format.
      */
 
     public void setRecordIdentifierValueAsString(String recordIdentifierValueAsString) {
@@ -103,10 +103,10 @@ public class BatchGetRecordResultDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The value of the record identifer in string format.
+     * The value of the record identifier in string format.
      * </p>
      * 
-     * @return The value of the record identifer in string format.
+     * @return The value of the record identifier in string format.
      */
 
     public String getRecordIdentifierValueAsString() {
@@ -115,11 +115,11 @@ public class BatchGetRecordResultDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The value of the record identifer in string format.
+     * The value of the record identifier in string format.
      * </p>
      * 
      * @param recordIdentifierValueAsString
-     *        The value of the record identifer in string format.
+     *        The value of the record identifier in string format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -48,7 +48,7 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
     private String resourceType;
     /**
      * <p>
-     * The status of unsupported resource.
+     * The status of the unsupported resource.
      * </p>
      */
     private String unsupportedResourceStatus;
@@ -175,11 +175,11 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of unsupported resource.
+     * The status of the unsupported resource.
      * </p>
      * 
      * @param unsupportedResourceStatus
-     *        The status of unsupported resource.
+     *        The status of the unsupported resource.
      */
 
     public void setUnsupportedResourceStatus(String unsupportedResourceStatus) {
@@ -188,10 +188,10 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of unsupported resource.
+     * The status of the unsupported resource.
      * </p>
      * 
-     * @return The status of unsupported resource.
+     * @return The status of the unsupported resource.
      */
 
     public String getUnsupportedResourceStatus() {
@@ -200,11 +200,11 @@ public class UnsupportedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of unsupported resource.
+     * The status of the unsupported resource.
      * </p>
      * 
      * @param unsupportedResourceStatus
-     *        The status of unsupported resource.
+     *        The status of the unsupported resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

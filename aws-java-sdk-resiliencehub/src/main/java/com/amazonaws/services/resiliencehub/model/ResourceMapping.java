@@ -80,7 +80,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     * The resource is mapped to Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -288,7 +288,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     * The resource is mapped to Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -321,7 +321,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *        <dt>ResourceGroup</dt>
      *        <dd>
      *        <p>
-     *        The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     *        The resource is mapped to Resource Groups. The name of the resource group is contained in the
      *        <code>resourceGroupName</code> property.
      *        </p>
      *        </dd>
@@ -361,7 +361,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     * The resource is mapped to Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -393,7 +393,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *         <dt>ResourceGroup</dt>
      *         <dd>
      *         <p>
-     *         The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     *         The resource is mapped to Resource Groups. The name of the resource group is contained in the
      *         <code>resourceGroupName</code> property.
      *         </p>
      *         </dd>
@@ -433,7 +433,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     * The resource is mapped to Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -466,7 +466,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *        <dt>ResourceGroup</dt>
      *        <dd>
      *        <p>
-     *        The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     *        The resource is mapped to Resource Groups. The name of the resource group is contained in the
      *        <code>resourceGroupName</code> property.
      *        </p>
      *        </dd>
@@ -508,7 +508,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      * <dt>ResourceGroup</dt>
      * <dd>
      * <p>
-     * The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     * The resource is mapped to Resource Groups. The name of the resource group is contained in the
      * <code>resourceGroupName</code> property.
      * </p>
      * </dd>
@@ -541,7 +541,7 @@ public class ResourceMapping implements Serializable, Cloneable, StructuredPojo 
      *        <dt>ResourceGroup</dt>
      *        <dd>
      *        <p>
-     *        The resource is mapped to an Resource Groups. The name of the resource group is contained in the
+     *        The resource is mapped to Resource Groups. The name of the resource group is contained in the
      *        <code>resourceGroupName</code> property.
      *        </p>
      *        </dd>

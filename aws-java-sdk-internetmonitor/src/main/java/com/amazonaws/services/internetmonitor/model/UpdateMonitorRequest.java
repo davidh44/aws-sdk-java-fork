@@ -70,11 +70,19 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String clientToken;
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider, that
+     * clients access the resources through.
      * </p>
      */
     private Integer maxCityNetworksToMonitor;
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     */
+    private InternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
 
     /**
      * <p>
@@ -455,13 +463,15 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider, that
+     * clients access the resources through.
      * </p>
      * 
      * @param maxCityNetworksToMonitor
-     *        The maximum number of city-network combinations (that is, combinations of a city location and network,
-     *        such as an ISP) to be monitored for your resources.
+     *        The maximum number of city-networks to monitor for your resources. A city-network is the location (city)
+     *        where clients access your application resources from and the network or ASN, such as an internet service
+     *        provider, that clients access the resources through.
      */
 
     public void setMaxCityNetworksToMonitor(Integer maxCityNetworksToMonitor) {
@@ -470,12 +480,14 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider, that
+     * clients access the resources through.
      * </p>
      * 
-     * @return The maximum number of city-network combinations (that is, combinations of a city location and network,
-     *         such as an ISP) to be monitored for your resources.
+     * @return The maximum number of city-networks to monitor for your resources. A city-network is the location (city)
+     *         where clients access your application resources from and the network or ASN, such as an internet service
+     *         provider, that clients access the resources through.
      */
 
     public Integer getMaxCityNetworksToMonitor() {
@@ -484,18 +496,66 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an
-     * ISP) to be monitored for your resources.
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where
+     * clients access your application resources from and the network or ASN, such as an internet service provider, that
+     * clients access the resources through.
      * </p>
      * 
      * @param maxCityNetworksToMonitor
-     *        The maximum number of city-network combinations (that is, combinations of a city location and network,
-     *        such as an ISP) to be monitored for your resources.
+     *        The maximum number of city-networks to monitor for your resources. A city-network is the location (city)
+     *        where clients access your application resources from and the network or ASN, such as an internet service
+     *        provider, that clients access the resources through.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateMonitorRequest withMaxCityNetworksToMonitor(Integer maxCityNetworksToMonitor) {
         setMaxCityNetworksToMonitor(maxCityNetworksToMonitor);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     * 
+     * @param internetMeasurementsLogDelivery
+     *        Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     *        measurements are also published to Amazon CloudWatch Logs.
+     */
+
+    public void setInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        this.internetMeasurementsLogDelivery = internetMeasurementsLogDelivery;
+    }
+
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     * 
+     * @return Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     *         measurements are also published to Amazon CloudWatch Logs.
+     */
+
+    public InternetMeasurementsLogDelivery getInternetMeasurementsLogDelivery() {
+        return this.internetMeasurementsLogDelivery;
+    }
+
+    /**
+     * <p>
+     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     * measurements are also published to Amazon CloudWatch Logs.
+     * </p>
+     * 
+     * @param internetMeasurementsLogDelivery
+     *        Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
+     *        measurements are also published to Amazon CloudWatch Logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateMonitorRequest withInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        setInternetMeasurementsLogDelivery(internetMeasurementsLogDelivery);
         return this;
     }
 
@@ -522,7 +582,9 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getMaxCityNetworksToMonitor() != null)
-            sb.append("MaxCityNetworksToMonitor: ").append(getMaxCityNetworksToMonitor());
+            sb.append("MaxCityNetworksToMonitor: ").append(getMaxCityNetworksToMonitor()).append(",");
+        if (getInternetMeasurementsLogDelivery() != null)
+            sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery());
         sb.append("}");
         return sb.toString();
     }
@@ -561,6 +623,11 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getMaxCityNetworksToMonitor() != null && other.getMaxCityNetworksToMonitor().equals(this.getMaxCityNetworksToMonitor()) == false)
             return false;
+        if (other.getInternetMeasurementsLogDelivery() == null ^ this.getInternetMeasurementsLogDelivery() == null)
+            return false;
+        if (other.getInternetMeasurementsLogDelivery() != null
+                && other.getInternetMeasurementsLogDelivery().equals(this.getInternetMeasurementsLogDelivery()) == false)
+            return false;
         return true;
     }
 
@@ -575,6 +642,7 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getMaxCityNetworksToMonitor() == null) ? 0 : getMaxCityNetworksToMonitor().hashCode());
+        hashCode = prime * hashCode + ((getInternetMeasurementsLogDelivery() == null) ? 0 : getInternetMeasurementsLogDelivery().hashCode());
         return hashCode;
     }
 

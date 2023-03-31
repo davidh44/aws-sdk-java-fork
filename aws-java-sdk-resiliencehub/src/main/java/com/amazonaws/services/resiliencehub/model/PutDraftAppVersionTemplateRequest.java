@@ -27,7 +27,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -48,7 +48,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the Resilience Hub application.
+     * The list of logical resources that must be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -120,6 +120,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * <li>
@@ -149,7 +165,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -171,7 +190,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * The list of Application Components that this resource belongs to. If an Application Component is not part of the
-     * AWS Resilience Hub application, it will be added.
+     * Resilience Hub application, it will be added.
      * </p>
      * <p>
      * Type: Array
@@ -220,7 +239,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -285,6 +307,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>terraformSourceName</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * </li>
      * </ul>
      * </note>
      * <p>
@@ -335,6 +362,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -344,7 +387,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>version</code> </b>
      * </p>
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * </li>
      * <li>
@@ -352,7 +395,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -372,14 +418,14 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -392,13 +438,13 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -411,14 +457,14 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -445,7 +491,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the Resilience Hub application.
+     * The list of logical resources that must be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -517,6 +563,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * <li>
@@ -546,7 +608,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -568,7 +633,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * The list of Application Components that this resource belongs to. If an Application Component is not part of the
-     * AWS Resilience Hub application, it will be added.
+     * Resilience Hub application, it will be added.
      * </p>
      * <p>
      * Type: Array
@@ -617,7 +682,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -682,6 +750,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>terraformSourceName</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * </li>
      * </ul>
      * </note>
      * <p>
@@ -732,6 +805,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -741,7 +830,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>version</code> </b>
      * </p>
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * </li>
      * <li>
@@ -749,7 +838,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -778,7 +870,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <b> <code>resources</code> </b>
      *        </p>
      *        <p>
-     *        The list of logical resources that needs to be included in the Resilience Hub application.
+     *        The list of logical resources that must be included in the Resilience Hub application.
      *        </p>
      *        <p>
      *        Type: Array
@@ -850,6 +942,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        Type: String
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>eksSourceName</code>
+     *        </p>
+     *        <p>
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Type: String
+     *        </p>
+     *        </li>
      *        </ul>
      *        </li>
      *        <li>
@@ -879,7 +987,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>additionalInfo</code>
      *        </p>
      *        <p>
-     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -901,7 +1012,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        </p>
      *        <p>
      *        The list of Application Components that this resource belongs to. If an Application Component is not part
-     *        of the AWS Resilience Hub application, it will be added.
+     *        of the Resilience Hub application, it will be added.
      *        </p>
      *        <p>
      *        Type: Array
@@ -950,7 +1061,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>additionalInfo</code>
      *        </p>
      *        <p>
-     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -1015,6 +1129,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>terraformSourceName</code>
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>eksSourceName</code>
+     *        </p>
+     *        </li>
      *        </ul>
      *        </note>
      *        <p>
@@ -1065,6 +1184,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        Type: String
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>eksSourceName</code>
+     *        </p>
+     *        <p>
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Type: String
+     *        </p>
+     *        </li>
      *        </ul>
      *        </li>
      *        </ul>
@@ -1074,7 +1209,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <b> <code>version</code> </b>
      *        </p>
      *        <p>
-     *        The AWS Resilience Hub application version.
+     *        The Resilience Hub application version.
      *        </p>
      *        </li>
      *        <li>
@@ -1082,7 +1217,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>additionalInfo</code>
      *        </p>
      *        <p>
-     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -1116,7 +1254,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the Resilience Hub application.
+     * The list of logical resources that must be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -1188,6 +1326,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * <li>
@@ -1217,7 +1371,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -1239,7 +1396,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * The list of Application Components that this resource belongs to. If an Application Component is not part of the
-     * AWS Resilience Hub application, it will be added.
+     * Resilience Hub application, it will be added.
      * </p>
      * <p>
      * Type: Array
@@ -1288,7 +1445,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -1353,6 +1513,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>terraformSourceName</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * </li>
      * </ul>
      * </note>
      * <p>
@@ -1403,6 +1568,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -1412,7 +1593,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>version</code> </b>
      * </p>
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * </li>
      * <li>
@@ -1420,7 +1601,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -1448,7 +1632,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <b> <code>resources</code> </b>
      *         </p>
      *         <p>
-     *         The list of logical resources that needs to be included in the Resilience Hub application.
+     *         The list of logical resources that must be included in the Resilience Hub application.
      *         </p>
      *         <p>
      *         Type: Array
@@ -1520,6 +1704,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         Type: String
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>eksSourceName</code>
+     *         </p>
+     *         <p>
+     *         The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This parameter accepts values in "eks-cluster/namespace" format.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Type: String
+     *         </p>
+     *         </li>
      *         </ul>
      *         </li>
      *         <li>
@@ -1549,7 +1749,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <code>additionalInfo</code>
      *         </p>
      *         <p>
-     *         Additional configuration parameters for an AWS Resilience Hub application.
+     *         Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *         <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *         href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *         application configuration parameters</a>.
      *         </p>
      *         <note>
      *         <p>
@@ -1571,7 +1774,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         </p>
      *         <p>
      *         The list of Application Components that this resource belongs to. If an Application Component is not part
-     *         of the AWS Resilience Hub application, it will be added.
+     *         of the Resilience Hub application, it will be added.
      *         </p>
      *         <p>
      *         Type: Array
@@ -1620,7 +1823,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <code>additionalInfo</code>
      *         </p>
      *         <p>
-     *         Additional configuration parameters for an AWS Resilience Hub application.
+     *         Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *         <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *         href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *         application configuration parameters</a>.
      *         </p>
      *         <note>
      *         <p>
@@ -1685,6 +1891,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <code>terraformSourceName</code>
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>eksSourceName</code>
+     *         </p>
+     *         </li>
      *         </ul>
      *         </note>
      *         <p>
@@ -1735,6 +1946,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         Type: String
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>eksSourceName</code>
+     *         </p>
+     *         <p>
+     *         The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This parameter accepts values in "eks-cluster/namespace" format.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Type: String
+     *         </p>
+     *         </li>
      *         </ul>
      *         </li>
      *         </ul>
@@ -1744,7 +1971,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <b> <code>version</code> </b>
      *         </p>
      *         <p>
-     *         The AWS Resilience Hub application version.
+     *         The Resilience Hub application version.
      *         </p>
      *         </li>
      *         <li>
@@ -1752,7 +1979,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *         <code>additionalInfo</code>
      *         </p>
      *         <p>
-     *         Additional configuration parameters for an AWS Resilience Hub application.
+     *         Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *         <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *         href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *         application configuration parameters</a>.
      *         </p>
      *         <note>
      *         <p>
@@ -1786,7 +2016,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>resources</code> </b>
      * </p>
      * <p>
-     * The list of logical resources that needs to be included in the Resilience Hub application.
+     * The list of logical resources that must be included in the Resilience Hub application.
      * </p>
      * <p>
      * Type: Array
@@ -1858,6 +2088,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * <li>
@@ -1887,7 +2133,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -1909,7 +2158,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * The list of Application Components that this resource belongs to. If an Application Component is not part of the
-     * AWS Resilience Hub application, it will be added.
+     * Resilience Hub application, it will be added.
      * </p>
      * <p>
      * Type: Array
@@ -1958,7 +2207,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -2023,6 +2275,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>terraformSourceName</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * </li>
      * </ul>
      * </note>
      * <p>
@@ -2073,6 +2330,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * Type: String
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>eksSourceName</code>
+     * </p>
+     * <p>
+     * The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter accepts values in "eks-cluster/namespace" format.
+     * </p>
+     * </note>
+     * <p>
+     * Type: String
+     * </p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -2082,7 +2355,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <b> <code>version</code> </b>
      * </p>
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * </li>
      * <li>
@@ -2090,7 +2363,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      * <code>additionalInfo</code>
      * </p>
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -2119,7 +2395,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <b> <code>resources</code> </b>
      *        </p>
      *        <p>
-     *        The list of logical resources that needs to be included in the Resilience Hub application.
+     *        The list of logical resources that must be included in the Resilience Hub application.
      *        </p>
      *        <p>
      *        Type: Array
@@ -2191,6 +2467,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        Type: String
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>eksSourceName</code>
+     *        </p>
+     *        <p>
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Type: String
+     *        </p>
+     *        </li>
      *        </ul>
      *        </li>
      *        <li>
@@ -2220,7 +2512,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>additionalInfo</code>
      *        </p>
      *        <p>
-     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -2242,7 +2537,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        </p>
      *        <p>
      *        The list of Application Components that this resource belongs to. If an Application Component is not part
-     *        of the AWS Resilience Hub application, it will be added.
+     *        of the Resilience Hub application, it will be added.
      *        </p>
      *        <p>
      *        Type: Array
@@ -2291,7 +2586,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>additionalInfo</code>
      *        </p>
      *        <p>
-     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -2356,6 +2654,11 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>terraformSourceName</code>
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>eksSourceName</code>
+     *        </p>
+     *        </li>
      *        </ul>
      *        </note>
      *        <p>
@@ -2406,6 +2709,22 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        Type: String
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>eksSourceName</code>
+     *        </p>
+     *        <p>
+     *        The name of the Amazon Elastic Kubernetes Service cluster and namespace this resource belongs to.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter accepts values in "eks-cluster/namespace" format.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Type: String
+     *        </p>
+     *        </li>
      *        </ul>
      *        </li>
      *        </ul>
@@ -2415,7 +2734,7 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <b> <code>version</code> </b>
      *        </p>
      *        <p>
-     *        The AWS Resilience Hub application version.
+     *        The Resilience Hub application version.
      *        </p>
      *        </li>
      *        <li>
@@ -2423,7 +2742,10 @@ public class PutDraftAppVersionTemplateRequest extends com.amazonaws.AmazonWebSe
      *        <code>additionalInfo</code>
      *        </p>
      *        <p>
-     *        Additional configuration parameters for an AWS Resilience Hub application.
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.
      *        </p>
      *        <note>
      *        <p>

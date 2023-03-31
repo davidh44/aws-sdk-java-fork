@@ -4189,7 +4189,12 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                      // update the request with that endpoint if accelerate mode is not enabled
                      request.addHandlerContext(HandlerContextKey.SIGNING_REGION, region);
                      if (!clientOptions.isAccelerateModeEnabled()) {
-                         resolveRequestEndpoint(request, bucketName, key, RuntimeHttpUtils.toUri(RegionUtils.getRegion(region).getServiceEndpoint(S3_SERVICE_NAME), clientConfiguration));
+                         String serviceEndpoint = RegionUtils.getRegion(region).getServiceEndpoint(S3_SERVICE_NAME);
+                         resolveRequestEndpoint(request,
+                                                bucketName,
+                                                key,
+                                                RuntimeHttpUtils.toUri(serviceEndpoint, clientConfiguration),
+                                                region);
                      }
                      return updateSigV4SignerWithServiceAndRegion((AWSS3V4Signer) signer, request, region);
                 } else if (request.getOriginalRequest() instanceof GeneratePresignedUrlRequest) {
@@ -4837,7 +4842,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
                                                + "in the AWS SDK for Java 2.x.");
         }
         Request<?> request = new DefaultRequest<Object>(Constants.S3_SERVICE_DISPLAY_NAME);
-        resolveRequestEndpoint(request, bucketName, key, endpoint);
+        resolveRequestEndpoint(request, bucketName, key, endpoint, null);
         return ServiceUtils.convertRequestToUrl(request, false, false);
     }
 
@@ -4977,7 +4982,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             com.amazonaws.regions.Region region = RegionUtils.getRegion(getRegionName());
             endpoint = getEndpointForObjectLambdas(region.getDomain(), region.getName());
 
-            resolveRequestEndpoint(request, null, null, endpoint);
+            resolveRequestEndpoint(request, null, null, endpoint, null);
 
             if (originalRequest instanceof WriteGetObjectResponseRequest
                 && !clientConfiguration.isDisableHostPrefixInjection()) {
@@ -5010,7 +5015,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             }
         }
 
-        resolveRequestEndpoint(request, bucketName, key, endpoint);
+        resolveRequestEndpoint(request, bucketName, key, endpoint, null);
         request.addHandlerContext(HandlerContextKey.SIGNING_REGION, signingRegion);
 
         return request;
@@ -5202,19 +5207,25 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
      * Configure the given request with an endpoint and resource path based on the bucket name and
      * key provided
      */
-    private void resolveRequestEndpoint(Request<?> request, String bucketName, String key, URI endpoint) {
-        ServiceEndpointBuilder builder = getBuilder(endpoint, endpoint.getScheme(), false);
+    private void resolveRequestEndpoint(Request<?> request, String bucketName, String key, URI endpoint, String regionStr) {
+        ServiceEndpointBuilder builder = getBuilder(endpoint, regionStr, endpoint.getScheme(), false);
         buildEndpointResolver(builder, bucketName, key).resolveRequestEndpoint(request);
     }
 
     private S3RequestEndpointResolver buildDefaultEndpointResolver(String protocol, String bucketName, String key) {
-        ServiceEndpointBuilder builder = getBuilder(endpoint, protocol, true);
+        ServiceEndpointBuilder builder = getBuilder(endpoint, null, protocol, true);
         return new S3RequestEndpointResolver(builder, clientOptions.isPathStyleAccess(), bucketName, key);
     }
 
-    private ServiceEndpointBuilder getBuilder(URI endpoint, String protocol, boolean useDefaultBuilder) {
+    private ServiceEndpointBuilder getBuilder(URI endpoint, String regionStr, String protocol, boolean useDefaultBuilder) {
         if(clientOptions.isDualstackEnabled() && !clientOptions.isAccelerateModeEnabled()) {
-            return new DualstackEndpointBuilder(getServiceNameIntern(), protocol, getRegion().toAWSRegion());
+            com.amazonaws.regions.Region awsRegion;
+            if (regionStr != null) {
+                awsRegion = RegionUtils.getRegion(regionStr);
+            } else {
+                awsRegion = getRegion().toAWSRegion();
+            }
+            return new DualstackEndpointBuilder(getServiceNameIntern(), protocol, awsRegion);
         } else {
             if(useDefaultBuilder) {
                 return new DefaultServiceEndpointBuilder(getServiceName(), protocol);

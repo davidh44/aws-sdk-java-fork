@@ -42,8 +42,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private AvailabilityMeasurement availability;
@@ -56,8 +56,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private PerformanceMeasurement performance;
@@ -71,8 +71,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param availability
@@ -82,8 +82,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the Amazon CloudWatch User Guide.
+     *        >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     *        Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setAvailability(AvailabilityMeasurement availability) {
@@ -99,8 +99,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return Availability in Internet Monitor represents the estimated percentage of traffic that is not seeing an
@@ -109,8 +109,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *         > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
-     *         Internet Monitor section of the Amazon CloudWatch User Guide.
+     *         >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
+     *         Internet Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public AvailabilityMeasurement getAvailability() {
@@ -126,8 +126,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param availability
@@ -137,8 +137,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the Amazon CloudWatch User Guide.
+     *        >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     *        Monitor section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,8 +156,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param performance
@@ -167,8 +167,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the Amazon CloudWatch User Guide.
+     *        >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     *        Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setPerformance(PerformanceMeasurement performance) {
@@ -184,8 +184,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return Performance in Internet Monitor represents the estimated percentage of traffic that is not seeing a
@@ -194,8 +194,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *         > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
-     *         Internet Monitor section of the Amazon CloudWatch User Guide.
+     *         >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
+     *         Internet Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public PerformanceMeasurement getPerformance() {
@@ -211,8 +211,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the Amazon CloudWatch User Guide.
+     * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param performance
@@ -222,8 +222,8 @@ public class InternetHealth implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the Amazon CloudWatch User Guide.
+     *        >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     *        Monitor section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

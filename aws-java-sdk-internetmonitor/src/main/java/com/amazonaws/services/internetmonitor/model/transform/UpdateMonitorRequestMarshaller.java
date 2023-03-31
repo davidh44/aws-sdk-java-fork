@@ -43,6 +43,8 @@ public class UpdateMonitorRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Integer> MAXCITYNETWORKSTOMONITOR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxCityNetworksToMonitor").build();
+    private static final MarshallingInfo<StructuredPojo> INTERNETMEASUREMENTSLOGDELIVERY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InternetMeasurementsLogDelivery").build();
 
     private static final UpdateMonitorRequestMarshaller instance = new UpdateMonitorRequestMarshaller();
 
@@ -66,6 +68,7 @@ public class UpdateMonitorRequestMarshaller {
             protocolMarshaller.marshall(updateMonitorRequest.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(updateMonitorRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateMonitorRequest.getMaxCityNetworksToMonitor(), MAXCITYNETWORKSTOMONITOR_BINDING);
+            protocolMarshaller.marshall(updateMonitorRequest.getInternetMeasurementsLogDelivery(), INTERNETMEASUREMENTSLOGDELIVERY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

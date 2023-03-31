@@ -31,7 +31,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -86,7 +89,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -101,7 +107,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </note>
      * 
-     * @return Additional configuration parameters for an AWS Resilience Hub application.</p> <note>
+     * @return Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *         <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *         href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *         application configuration parameters</a>.</p> <note>
      *         <p>
      *         Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region
      *         and one associated account.
@@ -120,7 +129,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -136,7 +148,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
      * </note>
      * 
      * @param additionalInfo
-     *        Additional configuration parameters for an AWS Resilience Hub application.</p> <note>
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.</p> <note>
      *        <p>
      *        Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and
      *        one associated account.
@@ -155,7 +170,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -171,7 +189,10 @@ public class PhysicalResource implements Serializable, Cloneable, StructuredPojo
      * </note>
      * 
      * @param additionalInfo
-     *        Additional configuration parameters for an AWS Resilience Hub application.</p> <note>
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.</p> <note>
      *        <p>
      *        Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and
      *        one associated account.

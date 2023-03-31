@@ -91,6 +91,10 @@ public class GetMonitorResultJsonUnmarshaller implements Unmarshaller<GetMonitor
                     context.nextToken();
                     getMonitorResult.setMaxCityNetworksToMonitor(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("InternetMeasurementsLogDelivery", targetDepth)) {
+                    context.nextToken();
+                    getMonitorResult.setInternetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

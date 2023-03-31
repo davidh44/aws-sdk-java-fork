@@ -43,7 +43,7 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
     private String recordIdentifierValueAsString;
     /**
      * <p>
-     * The error code of an error that has occured when attempting to retrieve a batch of Records. For more information
+     * The error code of an error that has occurred when attempting to retrieve a batch of Records. For more information
      * on errors, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      * >Errors</a>.
@@ -52,7 +52,7 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
     private String errorCode;
     /**
      * <p>
-     * The error message of an error that has occured when attempting to retrieve a record in the batch.
+     * The error message of an error that has occurred when attempting to retrieve a record in the batch.
      * </p>
      */
     private String errorMessage;
@@ -145,14 +145,14 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The error code of an error that has occured when attempting to retrieve a batch of Records. For more information
+     * The error code of an error that has occurred when attempting to retrieve a batch of Records. For more information
      * on errors, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      * >Errors</a>.
      * </p>
      * 
      * @param errorCode
-     *        The error code of an error that has occured when attempting to retrieve a batch of Records. For more
+     *        The error code of an error that has occurred when attempting to retrieve a batch of Records. For more
      *        information on errors, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      *        >Errors</a>.
@@ -164,13 +164,13 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The error code of an error that has occured when attempting to retrieve a batch of Records. For more information
+     * The error code of an error that has occurred when attempting to retrieve a batch of Records. For more information
      * on errors, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      * >Errors</a>.
      * </p>
      * 
-     * @return The error code of an error that has occured when attempting to retrieve a batch of Records. For more
+     * @return The error code of an error that has occurred when attempting to retrieve a batch of Records. For more
      *         information on errors, see <a href=
      *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      *         >Errors</a>.
@@ -182,14 +182,14 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The error code of an error that has occured when attempting to retrieve a batch of Records. For more information
+     * The error code of an error that has occurred when attempting to retrieve a batch of Records. For more information
      * on errors, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      * >Errors</a>.
      * </p>
      * 
      * @param errorCode
-     *        The error code of an error that has occured when attempting to retrieve a batch of Records. For more
+     *        The error code of an error that has occurred when attempting to retrieve a batch of Records. For more
      *        information on errors, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors"
      *        >Errors</a>.
@@ -203,11 +203,11 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The error message of an error that has occured when attempting to retrieve a record in the batch.
+     * The error message of an error that has occurred when attempting to retrieve a record in the batch.
      * </p>
      * 
      * @param errorMessage
-     *        The error message of an error that has occured when attempting to retrieve a record in the batch.
+     *        The error message of an error that has occurred when attempting to retrieve a record in the batch.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -216,10 +216,10 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The error message of an error that has occured when attempting to retrieve a record in the batch.
+     * The error message of an error that has occurred when attempting to retrieve a record in the batch.
      * </p>
      * 
-     * @return The error message of an error that has occured when attempting to retrieve a record in the batch.
+     * @return The error message of an error that has occurred when attempting to retrieve a record in the batch.
      */
 
     public String getErrorMessage() {
@@ -228,11 +228,11 @@ public class BatchGetRecordError implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The error message of an error that has occured when attempting to retrieve a record in the batch.
+     * The error message of an error that has occurred when attempting to retrieve a record in the batch.
      * </p>
      * 
      * @param errorMessage
-     *        The error message of an error that has occured when attempting to retrieve a record in the batch.
+     *        The error message of an error that has occurred when attempting to retrieve a record in the batch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

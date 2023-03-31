@@ -27,7 +27,7 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -42,7 +42,7 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
     private String appVersion;
     /**
      * <p>
-     * Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     * Maximum number of Application Components to be displayed per Resilience Hub application version.
      * </p>
      */
     private Integer maxResults;
@@ -55,14 +55,14 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -75,13 +75,13 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -94,14 +94,14 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -156,11 +156,11 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     * Maximum number of Application Components to be displayed per Resilience Hub application version.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     *        Maximum number of Application Components to be displayed per Resilience Hub application version.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -169,10 +169,10 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     * Maximum number of Application Components to be displayed per Resilience Hub application version.
      * </p>
      * 
-     * @return Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     * @return Maximum number of Application Components to be displayed per Resilience Hub application version.
      */
 
     public Integer getMaxResults() {
@@ -181,11 +181,11 @@ public class ListAppVersionAppComponentsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     * Maximum number of Application Components to be displayed per Resilience Hub application version.
      * </p>
      * 
      * @param maxResults
-     *        Maximum number of Application Components to be displayed per AWS Resilience Hub application version.
+     *        Maximum number of Application Components to be displayed per Resilience Hub application version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

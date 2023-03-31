@@ -34,8 +34,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * For more information, see <a href=
  * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
- * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet Monitor
- * section of the Amazon CloudWatch User Guide.
+ * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet Monitor
+ * section of the <i>CloudWatch User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/PerformanceMeasurement"
@@ -56,8 +56,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
      * and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private Double experienceScore;
@@ -70,8 +70,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private Double percentOfTotalTrafficImpacted;
@@ -84,8 +84,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private Double percentOfClientLocationImpacted;
@@ -97,8 +97,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private RoundTripTime roundTripTime;
@@ -115,8 +115,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
      * and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param experienceScore
@@ -129,8 +129,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        about how Internet Monitor calculates health scores, including performance and availability scores, and
      *        when it creates and resolves health events. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the CloudWatch User Guide.
+     *        >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
+     *        Internet Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setExperienceScore(Double experienceScore) {
@@ -149,8 +149,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
      * and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return Experience scores, or health scores, are calculated for different geographic and network provider
@@ -162,8 +162,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *         about how Internet Monitor calculates health scores, including performance and availability scores, and
      *         when it creates and resolves health events. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *         > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
-     *         Internet Monitor section of the CloudWatch User Guide.
+     *         >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
+     *         Internet Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public Double getExperienceScore() {
@@ -182,8 +182,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
      * and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param experienceScore
@@ -196,8 +196,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        about how Internet Monitor calculates health scores, including performance and availability scores, and
      *        when it creates and resolves health events. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the CloudWatch User Guide.
+     *        >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
+     *        Internet Monitor section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,8 +215,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param percentOfTotalTrafficImpacted
@@ -226,8 +226,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *        > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *        Monitor section of the CloudWatch User Guide.
+     *        >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     *        section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setPercentOfTotalTrafficImpacted(Double percentOfTotalTrafficImpacted) {
@@ -243,8 +243,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return How much performance impact was caused by a health event for total traffic globally. For performance,
@@ -253,8 +253,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *         > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *         Monitor section of the CloudWatch User Guide.
+     *         >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
+     *         Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public Double getPercentOfTotalTrafficImpacted() {
@@ -270,8 +270,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param percentOfTotalTrafficImpacted
@@ -281,8 +281,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *        > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *        Monitor section of the CloudWatch User Guide.
+     *        >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     *        section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,8 +300,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param percentOfClientLocationImpacted
@@ -311,8 +311,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *        > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *        Monitor section of the CloudWatch User Guide.
+     *        >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     *        section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setPercentOfClientLocationImpacted(Double percentOfClientLocationImpacted) {
@@ -328,8 +328,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return How much performance impact was caused by a health event at a client location. For performance, this is
@@ -339,8 +339,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *         > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *         Monitor section of the CloudWatch User Guide.
+     *         >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
+     *         Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public Double getPercentOfClientLocationImpacted() {
@@ -356,8 +356,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param percentOfClientLocationImpacted
@@ -367,8 +367,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *        > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *        Monitor section of the CloudWatch User Guide.
+     *        >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     *        section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -385,8 +385,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param roundTripTime
@@ -395,8 +395,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *        > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *        Monitor section of the CloudWatch User Guide.
+     *        >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     *        section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setRoundTripTime(RoundTripTime roundTripTime) {
@@ -411,8 +411,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return This is the percentage of how much round-trip time increased during the event compared to typical
@@ -420,8 +420,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *         > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *         Monitor section of the CloudWatch User Guide.
+     *         >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
+     *         Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public RoundTripTime getRoundTripTime() {
@@ -436,8 +436,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     * > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
-     * section of the CloudWatch User Guide.
+     * >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     * section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param roundTripTime
@@ -446,8 +446,8 @@ public class PerformanceMeasurement implements Serializable, Cloneable, Structur
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMHealthEventStartStop"
-     *        > When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet
-     *        Monitor section of the CloudWatch User Guide.
+     *        >When Amazon Web Services creates and resolves health events</a> in the Amazon CloudWatch Internet Monitor
+     *        section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

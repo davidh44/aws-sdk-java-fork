@@ -34,8 +34,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * For more information, see <a href=
  * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
- * > How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet Monitor
- * section of the Amazon CloudWatch User Guide.
+ * >How Internet Monitor calculates performance and availability scores</a> in the Amazon CloudWatch Internet Monitor
+ * section of the <i>Amazon CloudWatch User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/AvailabilityMeasurement"
@@ -52,12 +52,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * provides global health scores.
      * </p>
      * <p>
-     * The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information about
-     * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
-     * and resolves health events. For more information, see <a href=
+     * The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed information
+     * about how Internet Monitor calculates health scores, including performance and availability scores, and when it
+     * creates and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      */
     private Double experienceScore;
@@ -67,8 +67,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      */
@@ -79,8 +79,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      */
@@ -94,12 +94,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * provides global health scores.
      * </p>
      * <p>
-     * The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information about
-     * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
-     * and resolves health events. For more information, see <a href=
+     * The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed information
+     * about how Internet Monitor calculates health scores, including performance and availability scores, and when it
+     * creates and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param experienceScore
@@ -108,12 +108,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *        performance or availability scores without filtering for any specific geography or service provider,
      *        Amazon CloudWatch Internet Monitor provides global health scores.</p>
      *        <p>
-     *        The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information
-     *        about how Internet Monitor calculates health scores, including performance and availability scores, and
-     *        when it creates and resolves health events. For more information, see <a href=
+     *        The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed
+     *        information about how Internet Monitor calculates health scores, including performance and availability
+     *        scores, and when it creates and resolves health events. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the CloudWatch User Guide.
+     *        >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
+     *        Internet Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public void setExperienceScore(Double experienceScore) {
@@ -128,12 +128,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * provides global health scores.
      * </p>
      * <p>
-     * The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information about
-     * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
-     * and resolves health events. For more information, see <a href=
+     * The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed information
+     * about how Internet Monitor calculates health scores, including performance and availability scores, and when it
+     * creates and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @return Experience scores, or health scores are calculated for different geographic and network provider
@@ -141,12 +141,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *         performance or availability scores without filtering for any specific geography or service provider,
      *         Amazon CloudWatch Internet Monitor provides global health scores.</p>
      *         <p>
-     *         The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information
-     *         about how Internet Monitor calculates health scores, including performance and availability scores, and
-     *         when it creates and resolves health events. For more information, see <a href=
+     *         The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed
+     *         information about how Internet Monitor calculates health scores, including performance and availability
+     *         scores, and when it creates and resolves health events. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *         > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
-     *         Internet Monitor section of the CloudWatch User Guide.
+     *         >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
+     *         Internet Monitor section of the <i>CloudWatch User Guide</i>.
      */
 
     public Double getExperienceScore() {
@@ -161,12 +161,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * provides global health scores.
      * </p>
      * <p>
-     * The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information about
-     * how Internet Monitor calculates health scores, including performance and availability scores, and when it creates
-     * and resolves health events. For more information, see <a href=
+     * The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed information
+     * about how Internet Monitor calculates health scores, including performance and availability scores, and when it
+     * creates and resolves health events. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     * > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
-     * Monitor section of the CloudWatch User Guide.
+     * >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch Internet
+     * Monitor section of the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param experienceScore
@@ -175,12 +175,12 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *        performance or availability scores without filtering for any specific geography or service provider,
      *        Amazon CloudWatch Internet Monitor provides global health scores.</p>
      *        <p>
-     *        The Amazon CloudWatch Internet Monitor chapter in the CloudWatch User Guide includes detailed information
-     *        about how Internet Monitor calculates health scores, including performance and availability scores, and
-     *        when it creates and resolves health events. For more information, see <a href=
+     *        The Amazon CloudWatch Internet Monitor chapter in the <i>CloudWatch User Guide</i> includes detailed
+     *        information about how Internet Monitor calculates health scores, including performance and availability
+     *        scores, and when it creates and resolves health events. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"
-     *        > How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
-     *        Internet Monitor section of the CloudWatch User Guide.
+     *        >How Amazon Web Services calculates performance and availability scores</a> in the Amazon CloudWatch
+     *        Internet Monitor section of the <i>CloudWatch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,8 +195,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      * 
@@ -205,7 +205,7 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *        <p>
      *        For information about how Internet Monitor calculates impact, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
-     *        > Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
+     *        >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
      *        User Guide.
      */
 
@@ -219,8 +219,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      * 
@@ -228,7 +228,7 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *         <p>
      *         For information about how Internet Monitor calculates impact, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
-     *         > Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
+     *         >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
      *         User Guide.
      */
 
@@ -242,8 +242,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      * 
@@ -252,7 +252,7 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *        <p>
      *        For information about how Internet Monitor calculates impact, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
-     *        > Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
+     *        >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
      *        User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -268,8 +268,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      * 
@@ -278,7 +278,7 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *        <p>
      *        For information about how Internet Monitor calculates impact, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
-     *        > Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
+     *        >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
      *        User Guide.
      */
 
@@ -292,8 +292,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      * 
@@ -301,7 +301,7 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *         <p>
      *         For information about how Internet Monitor calculates impact, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
-     *         > Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
+     *         >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
      *         User Guide.
      */
 
@@ -315,8 +315,8 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * For information about how Internet Monitor calculates impact, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html">
-     * Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
+     * >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User
      * Guide.
      * </p>
      * 
@@ -325,7 +325,7 @@ public class AvailabilityMeasurement implements Serializable, Cloneable, Structu
      *        <p>
      *        For information about how Internet Monitor calculates impact, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html"
-     *        > Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
+     *        >Inside Internet Monitor</a> in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch
      *        User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

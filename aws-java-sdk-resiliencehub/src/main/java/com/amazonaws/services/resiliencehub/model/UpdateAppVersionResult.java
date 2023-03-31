@@ -25,7 +25,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -36,7 +39,7 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.Map<String, java.util.List<String>> additionalInfo;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -45,14 +48,17 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
     private String appArn;
     /**
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      */
     private String appVersion;
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -60,7 +66,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * </note>
      * 
-     * @return Additional configuration parameters for an AWS Resilience Hub application.</p> <note>
+     * @return Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *         <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *         href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *         application configuration parameters</a>.</p> <note>
      *         <p>
      *         Currently, this parameter supports only failover region and account.
      *         </p>
@@ -72,7 +81,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -81,7 +93,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
      * </note>
      * 
      * @param additionalInfo
-     *        Additional configuration parameters for an AWS Resilience Hub application.</p> <note>
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.</p> <note>
      *        <p>
      *        Currently, this parameter supports only failover region and account.
      *        </p>
@@ -93,7 +108,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Additional configuration parameters for an AWS Resilience Hub application.
+     * Additional configuration parameters for an Resilience Hub application. If you want to implement
+     * <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     * href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     * application configuration parameters</a>.
      * </p>
      * <note>
      * <p>
@@ -102,7 +120,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
      * </note>
      * 
      * @param additionalInfo
-     *        Additional configuration parameters for an AWS Resilience Hub application.</p> <note>
+     *        Additional configuration parameters for an Resilience Hub application. If you want to implement
+     *        <code>additionalInfo</code> through the Resilience Hub console rather than using an API call, see <a
+     *        href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html">Configure the
+     *        application configuration parameters</a>.</p> <note>
      *        <p>
      *        Currently, this parameter supports only failover region and account.
      *        </p>
@@ -144,14 +165,14 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -164,13 +185,13 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -183,14 +204,14 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -205,11 +226,11 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * 
      * @param appVersion
-     *        The AWS Resilience Hub application version.
+     *        The Resilience Hub application version.
      */
 
     public void setAppVersion(String appVersion) {
@@ -218,10 +239,10 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * 
-     * @return The AWS Resilience Hub application version.
+     * @return The Resilience Hub application version.
      */
 
     public String getAppVersion() {
@@ -230,11 +251,11 @@ public class UpdateAppVersionResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      * </p>
      * 
      * @param appVersion
-     *        The AWS Resilience Hub application version.
+     *        The Resilience Hub application version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
