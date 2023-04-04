@@ -28,16 +28,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PredicateMarshaller {
 
+    private static final MarshallingInfo<List> OR_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("or").build();
     private static final MarshallingInfo<List> AND_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("and").build();
     private static final MarshallingInfo<String> FIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("field").build();
-    private static final MarshallingInfo<String> OPERAND_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("operand").build();
     private static final MarshallingInfo<String> OPERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("operator").build();
-    private static final MarshallingInfo<List> OR_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("or").build();
+    private static final MarshallingInfo<String> OPERAND_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("operand").build();
+    private static final MarshallingInfo<String> OPERANDTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("operandType").build();
 
     private static final PredicateMarshaller instance = new PredicateMarshaller();
 
@@ -55,11 +57,12 @@ public class PredicateMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(predicate.getOr(), OR_BINDING);
             protocolMarshaller.marshall(predicate.getAnd(), AND_BINDING);
             protocolMarshaller.marshall(predicate.getField(), FIELD_BINDING);
-            protocolMarshaller.marshall(predicate.getOperand(), OPERAND_BINDING);
             protocolMarshaller.marshall(predicate.getOperator(), OPERATOR_BINDING);
-            protocolMarshaller.marshall(predicate.getOr(), OR_BINDING);
+            protocolMarshaller.marshall(predicate.getOperand(), OPERAND_BINDING);
+            protocolMarshaller.marshall(predicate.getOperandType(), OPERANDTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

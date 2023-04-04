@@ -53,8 +53,14 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      * <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
-     * SageMaker</a>
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      */
     private String image;
     /**
@@ -62,8 +68,14 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon
      * Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html">Use a
-     * Private Docker Registry for Real-Time Inference Containers</a>
+     * Private Docker Registry for Real-Time Inference Containers</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      */
     private ImageConfig imageConfig;
     /**
@@ -239,8 +251,14 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      * <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
-     * SageMaker</a>
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      * 
      * @param image
      *        The path where inference code is stored. This can be either in Amazon EC2 Container Registry or in a
@@ -249,7 +267,11 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        meet SageMaker requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      *        <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with
-     *        Amazon SageMaker</a>
+     *        Amazon SageMaker</a>. </p> <note>
+     *        <p>
+     *        The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2
+     *        Container Registry must be in the same region as the model or endpoint you are creating.
+     *        </p>
      */
 
     public void setImage(String image) {
@@ -264,8 +286,14 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      * <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
-     * SageMaker</a>
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      * 
      * @return The path where inference code is stored. This can be either in Amazon EC2 Container Registry or in a
      *         Docker registry that is accessible from the same VPC that you configure for your endpoint. If you are
@@ -273,7 +301,11 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         meet SageMaker requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      *         <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms
-     *         with Amazon SageMaker</a>
+     *         with Amazon SageMaker</a>. </p> <note>
+     *         <p>
+     *         The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2
+     *         Container Registry must be in the same region as the model or endpoint you are creating.
+     *         </p>
      */
 
     public String getImage() {
@@ -288,8 +320,14 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      * <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
-     * SageMaker</a>
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      * 
      * @param image
      *        The path where inference code is stored. This can be either in Amazon EC2 Container Registry or in a
@@ -298,7 +336,11 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        meet SageMaker requirements. SageMaker supports both <code>registry/repository[:tag]</code> and
      *        <code>registry/repository[@digest]</code> image path formats. For more information, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with
-     *        Amazon SageMaker</a>
+     *        Amazon SageMaker</a>. </p> <note>
+     *        <p>
+     *        The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2
+     *        Container Registry must be in the same region as the model or endpoint you are creating.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,15 +354,25 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon
      * Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html">Use a
-     * Private Docker Registry for Real-Time Inference Containers</a>
+     * Private Docker Registry for Real-Time Inference Containers</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      * 
      * @param imageConfig
      *        Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your
      *        Amazon Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry,
      *        see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html"
-     *        >Use a Private Docker Registry for Real-Time Inference Containers</a>
+     *        >Use a Private Docker Registry for Real-Time Inference Containers</a>. </p> <note>
+     *        <p>
+     *        The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2
+     *        Container Registry must be in the same region as the model or endpoint you are creating.
+     *        </p>
      */
 
     public void setImageConfig(ImageConfig imageConfig) {
@@ -332,14 +384,24 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon
      * Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html">Use a
-     * Private Docker Registry for Real-Time Inference Containers</a>
+     * Private Docker Registry for Real-Time Inference Containers</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      * 
      * @return Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your
      *         Amazon Virtual Private Cloud (VPC). For information about storing containers in a private Docker
      *         registry, see <a href=
      *         "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html">Use a
-     *         Private Docker Registry for Real-Time Inference Containers</a>
+     *         Private Docker Registry for Real-Time Inference Containers</a>. </p> <note>
+     *         <p>
+     *         The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2
+     *         Container Registry must be in the same region as the model or endpoint you are creating.
+     *         </p>
      */
 
     public ImageConfig getImageConfig() {
@@ -351,15 +413,25 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon
      * Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html">Use a
-     * Private Docker Registry for Real-Time Inference Containers</a>
+     * Private Docker Registry for Real-Time Inference Containers</a>.
      * </p>
+     * <note>
+     * <p>
+     * The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2 Container
+     * Registry must be in the same region as the model or endpoint you are creating.
+     * </p>
+     * </note>
      * 
      * @param imageConfig
      *        Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your
      *        Amazon Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry,
      *        see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html"
-     *        >Use a Private Docker Registry for Real-Time Inference Containers</a>
+     *        >Use a Private Docker Registry for Real-Time Inference Containers</a>. </p> <note>
+     *        <p>
+     *        The model artifacts in an Amazon S3 bucket and the Docker image for inference container in Amazon EC2
+     *        Container Registry must be in the same region as the model or endpoint you are creating.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

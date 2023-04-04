@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.wafv2.model.transform;
+package com.amazonaws.services.amplifyuibuilder.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.wafv2.model.*;
+import com.amazonaws.services.amplifyuibuilder.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * AssociationConfig JSON Unmarshaller
+ * FormInputValuePropertyBindingProperties JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class AssociationConfigJsonUnmarshaller implements Unmarshaller<AssociationConfig, JsonUnmarshallerContext> {
+public class FormInputValuePropertyBindingPropertiesJsonUnmarshaller implements Unmarshaller<FormInputValuePropertyBindingProperties, JsonUnmarshallerContext> {
 
-    public AssociationConfig unmarshall(JsonUnmarshallerContext context) throws Exception {
-        AssociationConfig associationConfig = new AssociationConfig();
+    public FormInputValuePropertyBindingProperties unmarshall(JsonUnmarshallerContext context) throws Exception {
+        FormInputValuePropertyBindingProperties formInputValuePropertyBindingProperties = new FormInputValuePropertyBindingProperties();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -48,10 +48,13 @@ public class AssociationConfigJsonUnmarshaller implements Unmarshaller<Associati
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("RequestBody", targetDepth)) {
+                if (context.testExpression("property", targetDepth)) {
                     context.nextToken();
-                    associationConfig.setRequestBody(new MapUnmarshaller<String, RequestBodyAssociatedResourceTypeConfig>(
-                            context.getUnmarshaller(String.class), RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller.getInstance()).unmarshall(context));
+                    formInputValuePropertyBindingProperties.setProperty(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("field", targetDepth)) {
+                    context.nextToken();
+                    formInputValuePropertyBindingProperties.setField(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -62,14 +65,14 @@ public class AssociationConfigJsonUnmarshaller implements Unmarshaller<Associati
             token = context.nextToken();
         }
 
-        return associationConfig;
+        return formInputValuePropertyBindingProperties;
     }
 
-    private static AssociationConfigJsonUnmarshaller instance;
+    private static FormInputValuePropertyBindingPropertiesJsonUnmarshaller instance;
 
-    public static AssociationConfigJsonUnmarshaller getInstance() {
+    public static FormInputValuePropertyBindingPropertiesJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new AssociationConfigJsonUnmarshaller();
+            instance = new FormInputValuePropertyBindingPropertiesJsonUnmarshaller();
         return instance;
     }
 }

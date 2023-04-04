@@ -244,9 +244,9 @@ public interface AmazonSageMaker {
      * Creates an Autopilot job.
      * </p>
      * <p>
-     * Find the best-performing model after you run an Autopilot job by calling
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html">DescribeAutoMLJob</a> </code>
-     * .
+     * Find the best-performing model after you run an Autopilot job by calling <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html"
+     * >DescribeAutoMLJob</a>.
      * </p>
      * <p>
      * For information about how to use Autopilot, see <a
@@ -273,14 +273,13 @@ public interface AmazonSageMaker {
      * Natural Language Processing problems.
      * </p>
      * <p>
-     * Find the resulting model after you run an AutoML job V2 by calling
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html">DescribeAutoMLJobV2</a> </code>
-     * .
+     * Find the resulting model after you run an AutoML job V2 by calling <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html"
+     * >DescribeAutoMLJobV2</a>.
      * </p>
      * <p>
-     * To create an <code>AutoMLJob</code> using tabular data, see
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html">CreateAutoMLJob</a> </code>
-     * .
+     * To create an <code>AutoMLJob</code> using tabular data, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html">CreateAutoMLJob</a>.
      * </p>
      * <note>
      * <p>

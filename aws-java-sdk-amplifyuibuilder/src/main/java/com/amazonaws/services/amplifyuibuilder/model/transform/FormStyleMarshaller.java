@@ -29,10 +29,10 @@ public class FormStyleMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> HORIZONTALGAP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("horizontalGap").build();
-    private static final MarshallingInfo<StructuredPojo> OUTERPADDING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outerPadding").build();
     private static final MarshallingInfo<StructuredPojo> VERTICALGAP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("verticalGap").build();
+    private static final MarshallingInfo<StructuredPojo> OUTERPADDING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outerPadding").build();
 
     private static final FormStyleMarshaller instance = new FormStyleMarshaller();
 
@@ -51,8 +51,8 @@ public class FormStyleMarshaller {
 
         try {
             protocolMarshaller.marshall(formStyle.getHorizontalGap(), HORIZONTALGAP_BINDING);
-            protocolMarshaller.marshall(formStyle.getOuterPadding(), OUTERPADDING_BINDING);
             protocolMarshaller.marshall(formStyle.getVerticalGap(), VERTICALGAP_BINDING);
+            protocolMarshaller.marshall(formStyle.getOuterPadding(), OUTERPADDING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

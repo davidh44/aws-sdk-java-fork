@@ -29,10 +29,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ComponentVariantMarshaller {
 
-    private static final MarshallingInfo<Map> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("overrides").build();
     private static final MarshallingInfo<Map> VARIANTVALUES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("variantValues").build();
+    private static final MarshallingInfo<Map> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("overrides").build();
 
     private static final ComponentVariantMarshaller instance = new ComponentVariantMarshaller();
 
@@ -50,8 +50,8 @@ public class ComponentVariantMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(componentVariant.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(componentVariant.getVariantValues(), VARIANTVALUES_BINDING);
+            protocolMarshaller.marshall(componentVariant.getOverrides(), OVERRIDES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

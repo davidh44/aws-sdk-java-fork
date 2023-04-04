@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ComponentBindingPropertiesValueMarshaller {
 
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("type").build();
     private static final MarshallingInfo<StructuredPojo> BINDINGPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bindingProperties").build();
     private static final MarshallingInfo<String> DEFAULTVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultValue").build();
-    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("type").build();
 
     private static final ComponentBindingPropertiesValueMarshaller instance = new ComponentBindingPropertiesValueMarshaller();
 
@@ -50,9 +50,9 @@ public class ComponentBindingPropertiesValueMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(componentBindingPropertiesValue.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(componentBindingPropertiesValue.getBindingProperties(), BINDINGPROPERTIES_BINDING);
             protocolMarshaller.marshall(componentBindingPropertiesValue.getDefaultValue(), DEFAULTVALUE_BINDING);
-            protocolMarshaller.marshall(componentBindingPropertiesValue.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

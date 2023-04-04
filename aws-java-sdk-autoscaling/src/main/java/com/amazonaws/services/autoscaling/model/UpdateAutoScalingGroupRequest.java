@@ -102,13 +102,16 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     private com.amazonaws.internal.SdkInternalList<String> availabilityZones;
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * <p>
      * The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code> is the
      * default health check and cannot be disabled. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto Scaling
      * instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * <p>
+     * Only specify <code>EC2</code> if you must clear a value that was previously set.
      * </p>
      */
     private String healthCheckType;
@@ -757,7 +760,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * <p>
      * The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code> is the
@@ -765,14 +768,20 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto Scaling
      * instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
+     * <p>
+     * Only specify <code>EC2</code> if you must clear a value that was previously set.
+     * </p>
      * 
      * @param healthCheckType
-     *        A comma-separated list of one or more health check types.</p>
+     *        A comma-separated value string of one or more health check types.</p>
      *        <p>
      *        The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code> is
      *        the default health check and cannot be disabled. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto
      *        Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        </p>
+     *        <p>
+     *        Only specify <code>EC2</code> if you must clear a value that was previously set.
      */
 
     public void setHealthCheckType(String healthCheckType) {
@@ -781,7 +790,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * <p>
      * The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code> is the
@@ -789,13 +798,19 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto Scaling
      * instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
+     * <p>
+     * Only specify <code>EC2</code> if you must clear a value that was previously set.
+     * </p>
      * 
-     * @return A comma-separated list of one or more health check types.</p>
+     * @return A comma-separated value string of one or more health check types.</p>
      *         <p>
      *         The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code>
      *         is the default health check and cannot be disabled. For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto
      *         Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *         </p>
+     *         <p>
+     *         Only specify <code>EC2</code> if you must clear a value that was previously set.
      */
 
     public String getHealthCheckType() {
@@ -804,7 +819,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * <p>
      * The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code> is the
@@ -812,14 +827,20 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto Scaling
      * instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
+     * <p>
+     * Only specify <code>EC2</code> if you must clear a value that was previously set.
+     * </p>
      * 
      * @param healthCheckType
-     *        A comma-separated list of one or more health check types.</p>
+     *        A comma-separated value string of one or more health check types.</p>
      *        <p>
      *        The valid values are <code>EC2</code>, <code>ELB</code>, and <code>VPC_LATTICE</code>. <code>EC2</code> is
      *        the default health check and cannot be disabled. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks for Auto
      *        Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     *        </p>
+     *        <p>
+     *        Only specify <code>EC2</code> if you must clear a value that was previously set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

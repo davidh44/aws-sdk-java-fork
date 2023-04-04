@@ -34,7 +34,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      * The inspection level to use for the Bot Control rule group. The common level is the least expensive. The targeted
      * level includes all common level rules and adds rules with more advanced inspection criteria. For details, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot Control
-     * rule group</a> in the <i>WAF Developer Guide</i>.
+     * rule group</a>.
      * </p>
      */
     private String inspectionLevel;
@@ -44,7 +44,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      * The inspection level to use for the Bot Control rule group. The common level is the least expensive. The targeted
      * level includes all common level rules and adds rules with more advanced inspection criteria. For details, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot Control
-     * rule group</a> in the <i>WAF Developer Guide</i>.
+     * rule group</a>.
      * </p>
      * 
      * @param inspectionLevel
@@ -52,7 +52,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      *        targeted level includes all common level rules and adds rules with more advanced inspection criteria. For
      *        details, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot
-     *        Control rule group</a> in the <i>WAF Developer Guide</i>.
+     *        Control rule group</a>.
      * @see InspectionLevel
      */
 
@@ -65,14 +65,14 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      * The inspection level to use for the Bot Control rule group. The common level is the least expensive. The targeted
      * level includes all common level rules and adds rules with more advanced inspection criteria. For details, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot Control
-     * rule group</a> in the <i>WAF Developer Guide</i>.
+     * rule group</a>.
      * </p>
      * 
      * @return The inspection level to use for the Bot Control rule group. The common level is the least expensive. The
      *         targeted level includes all common level rules and adds rules with more advanced inspection criteria. For
      *         details, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot
-     *         Control rule group</a> in the <i>WAF Developer Guide</i>.
+     *         Control rule group</a>.
      * @see InspectionLevel
      */
 
@@ -85,7 +85,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      * The inspection level to use for the Bot Control rule group. The common level is the least expensive. The targeted
      * level includes all common level rules and adds rules with more advanced inspection criteria. For details, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot Control
-     * rule group</a> in the <i>WAF Developer Guide</i>.
+     * rule group</a>.
      * </p>
      * 
      * @param inspectionLevel
@@ -93,7 +93,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      *        targeted level includes all common level rules and adds rules with more advanced inspection criteria. For
      *        details, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot
-     *        Control rule group</a> in the <i>WAF Developer Guide</i>.
+     *        Control rule group</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InspectionLevel
      */
@@ -108,7 +108,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      * The inspection level to use for the Bot Control rule group. The common level is the least expensive. The targeted
      * level includes all common level rules and adds rules with more advanced inspection criteria. For details, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot Control
-     * rule group</a> in the <i>WAF Developer Guide</i>.
+     * rule group</a>.
      * </p>
      * 
      * @param inspectionLevel
@@ -116,7 +116,7 @@ public class AWSManagedRulesBotControlRuleSet implements Serializable, Cloneable
      *        targeted level includes all common level rules and adds rules with more advanced inspection criteria. For
      *        details, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-bot.html">WAF Bot
-     *        Control rule group</a> in the <i>WAF Developer Guide</i>.
+     *        Control rule group</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InspectionLevel
      */

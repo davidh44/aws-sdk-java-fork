@@ -48,13 +48,13 @@ public class FormButtonJsonUnmarshaller implements Unmarshaller<FormButton, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("children", targetDepth)) {
-                    context.nextToken();
-                    formButton.setChildren(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("excluded", targetDepth)) {
                     context.nextToken();
                     formButton.setExcluded(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("children", targetDepth)) {
+                    context.nextToken();
+                    formButton.setChildren(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("position", targetDepth)) {
                     context.nextToken();

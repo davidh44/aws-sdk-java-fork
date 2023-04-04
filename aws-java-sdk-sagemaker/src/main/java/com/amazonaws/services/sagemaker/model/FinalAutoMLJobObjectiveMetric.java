@@ -36,9 +36,9 @@ public class FinalAutoMLJobObjectiveMetric implements Serializable, Cloneable, S
     private String type;
     /**
      * <p>
-     * The name of the metric with the best result. For a description of the possible objective metrics, see
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     * .
+     * The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html"
+     * >AutoMLJobObjective$MetricName</a>.
      * </p>
      */
     private String metricName;
@@ -118,15 +118,15 @@ public class FinalAutoMLJobObjectiveMetric implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the metric with the best result. For a description of the possible objective metrics, see
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     * .
+     * The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html"
+     * >AutoMLJobObjective$MetricName</a>.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric with the best result. For a description of the possible objective metrics, see
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     *        .
+     *        The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
+     *        AutoMLJobObjective$MetricName</a>.
      * @see AutoMLMetricEnum
      */
 
@@ -136,14 +136,14 @@ public class FinalAutoMLJobObjectiveMetric implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the metric with the best result. For a description of the possible objective metrics, see
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     * .
+     * The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html"
+     * >AutoMLJobObjective$MetricName</a>.
      * </p>
      * 
-     * @return The name of the metric with the best result. For a description of the possible objective metrics, see
-     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     *         .
+     * @return The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
+     *         AutoMLJobObjective$MetricName</a>.
      * @see AutoMLMetricEnum
      */
 
@@ -153,15 +153,15 @@ public class FinalAutoMLJobObjectiveMetric implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the metric with the best result. For a description of the possible objective metrics, see
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     * .
+     * The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html"
+     * >AutoMLJobObjective$MetricName</a>.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric with the best result. For a description of the possible objective metrics, see
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     *        .
+     *        The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
+     *        AutoMLJobObjective$MetricName</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoMLMetricEnum
      */
@@ -173,15 +173,15 @@ public class FinalAutoMLJobObjectiveMetric implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The name of the metric with the best result. For a description of the possible objective metrics, see
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     * .
+     * The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html"
+     * >AutoMLJobObjective$MetricName</a>.
      * </p>
      * 
      * @param metricName
-     *        The name of the metric with the best result. For a description of the possible objective metrics, see
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
-     *        .
+     *        The name of the metric with the best result. For a description of the possible objective metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
+     *        AutoMLJobObjective$MetricName</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoMLMetricEnum
      */

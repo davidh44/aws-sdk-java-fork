@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ComponentChildMarshaller {
 
-    private static final MarshallingInfo<List> CHILDREN_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("children").build();
     private static final MarshallingInfo<String> COMPONENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentType").build();
-    private static final MarshallingInfo<Map> EVENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("events").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> PROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("properties").build();
+    private static final MarshallingInfo<List> CHILDREN_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("children").build();
+    private static final MarshallingInfo<Map> EVENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("events").build();
     private static final MarshallingInfo<String> SOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sourceId").build();
 
@@ -58,11 +58,11 @@ public class ComponentChildMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(componentChild.getChildren(), CHILDREN_BINDING);
             protocolMarshaller.marshall(componentChild.getComponentType(), COMPONENTTYPE_BINDING);
-            protocolMarshaller.marshall(componentChild.getEvents(), EVENTS_BINDING);
             protocolMarshaller.marshall(componentChild.getName(), NAME_BINDING);
             protocolMarshaller.marshall(componentChild.getProperties(), PROPERTIES_BINDING);
+            protocolMarshaller.marshall(componentChild.getChildren(), CHILDREN_BINDING);
+            protocolMarshaller.marshall(componentChild.getEvents(), EVENTS_BINDING);
             protocolMarshaller.marshall(componentChild.getSourceId(), SOURCEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

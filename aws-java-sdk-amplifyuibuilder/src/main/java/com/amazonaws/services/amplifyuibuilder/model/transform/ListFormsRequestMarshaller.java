@@ -31,10 +31,10 @@ public class ListFormsRequestMarshaller {
             .marshallLocationName("appId").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentName").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
 
     private static final ListFormsRequestMarshaller instance = new ListFormsRequestMarshaller();
 
@@ -54,8 +54,8 @@ public class ListFormsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listFormsRequest.getAppId(), APPID_BINDING);
             protocolMarshaller.marshall(listFormsRequest.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
-            protocolMarshaller.marshall(listFormsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listFormsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listFormsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

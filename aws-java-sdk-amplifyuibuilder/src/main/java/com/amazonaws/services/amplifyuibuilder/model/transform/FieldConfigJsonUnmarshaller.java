@@ -48,14 +48,6 @@ public class FieldConfigJsonUnmarshaller implements Unmarshaller<FieldConfig, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("excluded", targetDepth)) {
-                    context.nextToken();
-                    fieldConfig.setExcluded(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("inputType", targetDepth)) {
-                    context.nextToken();
-                    fieldConfig.setInputType(FieldInputConfigJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("label", targetDepth)) {
                     context.nextToken();
                     fieldConfig.setLabel(context.getUnmarshaller(String.class).unmarshall(context));
@@ -63,6 +55,14 @@ public class FieldConfigJsonUnmarshaller implements Unmarshaller<FieldConfig, Js
                 if (context.testExpression("position", targetDepth)) {
                     context.nextToken();
                     fieldConfig.setPosition(FieldPositionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("excluded", targetDepth)) {
+                    context.nextToken();
+                    fieldConfig.setExcluded(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("inputType", targetDepth)) {
+                    context.nextToken();
+                    fieldConfig.setInputType(FieldInputConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("validations", targetDepth)) {
                     context.nextToken();

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SortPropertyMarshaller {
 
-    private static final MarshallingInfo<String> DIRECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("direction").build();
     private static final MarshallingInfo<String> FIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("field").build();
+    private static final MarshallingInfo<String> DIRECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("direction").build();
 
     private static final SortPropertyMarshaller instance = new SortPropertyMarshaller();
 
@@ -48,8 +48,8 @@ public class SortPropertyMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(sortProperty.getDirection(), DIRECTION_BINDING);
             protocolMarshaller.marshall(sortProperty.getField(), FIELD_BINDING);
+            protocolMarshaller.marshall(sortProperty.getDirection(), DIRECTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

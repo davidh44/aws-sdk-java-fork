@@ -61,8 +61,6 @@ public class WebACLMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChallengeConfig").build();
     private static final MarshallingInfo<List> TOKENDOMAINS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("TokenDomains").build();
-    private static final MarshallingInfo<StructuredPojo> ASSOCIATIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssociationConfig").build();
 
     private static final WebACLMarshaller instance = new WebACLMarshaller();
 
@@ -96,7 +94,6 @@ public class WebACLMarshaller {
             protocolMarshaller.marshall(webACL.getCaptchaConfig(), CAPTCHACONFIG_BINDING);
             protocolMarshaller.marshall(webACL.getChallengeConfig(), CHALLENGECONFIG_BINDING);
             protocolMarshaller.marshall(webACL.getTokenDomains(), TOKENDOMAINS_BINDING);
-            protocolMarshaller.marshall(webACL.getAssociationConfig(), ASSOCIATIONCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

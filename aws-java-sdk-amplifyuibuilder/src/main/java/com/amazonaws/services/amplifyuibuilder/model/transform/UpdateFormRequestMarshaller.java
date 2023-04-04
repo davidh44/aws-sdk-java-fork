@@ -31,13 +31,13 @@ public class UpdateFormRequestMarshaller {
 
     private static final MarshallingInfo<String> APPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("appId").build();
-    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("clientToken")
-            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentName").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("id").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<StructuredPojo> UPDATEDFORM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).isExplicitPayloadMember(true).build();
 
@@ -58,9 +58,9 @@ public class UpdateFormRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateFormRequest.getAppId(), APPID_BINDING);
-            protocolMarshaller.marshall(updateFormRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateFormRequest.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
             protocolMarshaller.marshall(updateFormRequest.getId(), ID_BINDING);
+            protocolMarshaller.marshall(updateFormRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateFormRequest.getUpdatedForm(), UPDATEDFORM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

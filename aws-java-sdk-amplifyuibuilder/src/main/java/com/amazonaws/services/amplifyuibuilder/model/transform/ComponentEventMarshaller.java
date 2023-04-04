@@ -29,10 +29,10 @@ public class ComponentEventMarshaller {
 
     private static final MarshallingInfo<String> ACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("action").build();
-    private static final MarshallingInfo<String> BINDINGEVENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bindingEvent").build();
     private static final MarshallingInfo<StructuredPojo> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parameters").build();
+    private static final MarshallingInfo<String> BINDINGEVENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bindingEvent").build();
 
     private static final ComponentEventMarshaller instance = new ComponentEventMarshaller();
 
@@ -51,8 +51,8 @@ public class ComponentEventMarshaller {
 
         try {
             protocolMarshaller.marshall(componentEvent.getAction(), ACTION_BINDING);
-            protocolMarshaller.marshall(componentEvent.getBindingEvent(), BINDINGEVENT_BINDING);
             protocolMarshaller.marshall(componentEvent.getParameters(), PARAMETERS_BINDING);
+            protocolMarshaller.marshall(componentEvent.getBindingEvent(), BINDINGEVENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

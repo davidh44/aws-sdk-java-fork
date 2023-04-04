@@ -52,26 +52,9 @@ public class FormJsonUnmarshaller implements Unmarshaller<Form, JsonUnmarshaller
                     context.nextToken();
                     form.setAppId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("cta", targetDepth)) {
-                    context.nextToken();
-                    form.setCta(FormCTAJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("dataType", targetDepth)) {
-                    context.nextToken();
-                    form.setDataType(FormDataTypeConfigJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("environmentName", targetDepth)) {
                     context.nextToken();
                     form.setEnvironmentName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("fields", targetDepth)) {
-                    context.nextToken();
-                    form.setFields(new MapUnmarshaller<String, FieldConfig>(context.getUnmarshaller(String.class), FieldConfigJsonUnmarshaller.getInstance())
-                            .unmarshall(context));
-                }
-                if (context.testExpression("formActionType", targetDepth)) {
-                    context.nextToken();
-                    form.setFormActionType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
@@ -81,23 +64,44 @@ public class FormJsonUnmarshaller implements Unmarshaller<Form, JsonUnmarshaller
                     context.nextToken();
                     form.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("schemaVersion", targetDepth)) {
+                if (context.testExpression("formActionType", targetDepth)) {
                     context.nextToken();
-                    form.setSchemaVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                    form.setFormActionType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("style", targetDepth)) {
+                    context.nextToken();
+                    form.setStyle(FormStyleJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("dataType", targetDepth)) {
+                    context.nextToken();
+                    form.setDataType(FormDataTypeConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("fields", targetDepth)) {
+                    context.nextToken();
+                    form.setFields(new MapUnmarshaller<String, FieldConfig>(context.getUnmarshaller(String.class), FieldConfigJsonUnmarshaller.getInstance())
+                            .unmarshall(context));
                 }
                 if (context.testExpression("sectionalElements", targetDepth)) {
                     context.nextToken();
                     form.setSectionalElements(new MapUnmarshaller<String, SectionalElement>(context.getUnmarshaller(String.class),
                             SectionalElementJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
-                if (context.testExpression("style", targetDepth)) {
+                if (context.testExpression("schemaVersion", targetDepth)) {
                     context.nextToken();
-                    form.setStyle(FormStyleJsonUnmarshaller.getInstance().unmarshall(context));
+                    form.setSchemaVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     form.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
+                }
+                if (context.testExpression("cta", targetDepth)) {
+                    context.nextToken();
+                    form.setCta(FormCTAJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("labelDecorator", targetDepth)) {
+                    context.nextToken();
+                    form.setLabelDecorator(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

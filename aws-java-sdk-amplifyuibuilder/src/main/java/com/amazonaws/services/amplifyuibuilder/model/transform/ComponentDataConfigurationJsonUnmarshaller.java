@@ -48,23 +48,23 @@ public class ComponentDataConfigurationJsonUnmarshaller implements Unmarshaller<
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("identifiers", targetDepth)) {
-                    context.nextToken();
-                    componentDataConfiguration.setIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("model", targetDepth)) {
                     context.nextToken();
                     componentDataConfiguration.setModel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("sort", targetDepth)) {
+                    context.nextToken();
+                    componentDataConfiguration.setSort(new ListUnmarshaller<SortProperty>(SortPropertyJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
                 if (context.testExpression("predicate", targetDepth)) {
                     context.nextToken();
                     componentDataConfiguration.setPredicate(PredicateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("sort", targetDepth)) {
+                if (context.testExpression("identifiers", targetDepth)) {
                     context.nextToken();
-                    componentDataConfiguration.setSort(new ListUnmarshaller<SortProperty>(SortPropertyJsonUnmarshaller.getInstance())
+                    componentDataConfiguration.setIdentifiers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

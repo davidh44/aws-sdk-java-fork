@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class FormCTAMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> CANCEL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cancel").build();
-    private static final MarshallingInfo<StructuredPojo> CLEAR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clear").build();
     private static final MarshallingInfo<String> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("position").build();
+    private static final MarshallingInfo<StructuredPojo> CLEAR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clear").build();
+    private static final MarshallingInfo<StructuredPojo> CANCEL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cancel").build();
     private static final MarshallingInfo<StructuredPojo> SUBMIT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("submit").build();
 
@@ -52,9 +52,9 @@ public class FormCTAMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(formCTA.getCancel(), CANCEL_BINDING);
-            protocolMarshaller.marshall(formCTA.getClear(), CLEAR_BINDING);
             protocolMarshaller.marshall(formCTA.getPosition(), POSITION_BINDING);
+            protocolMarshaller.marshall(formCTA.getClear(), CLEAR_BINDING);
+            protocolMarshaller.marshall(formCTA.getCancel(), CANCEL_BINDING);
             protocolMarshaller.marshall(formCTA.getSubmit(), SUBMIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

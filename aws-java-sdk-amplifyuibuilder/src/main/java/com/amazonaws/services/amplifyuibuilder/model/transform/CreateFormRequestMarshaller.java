@@ -31,11 +31,11 @@ public class CreateFormRequestMarshaller {
 
     private static final MarshallingInfo<String> APPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("appId").build();
+    private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentName").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("clientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
-    private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentName").build();
     private static final MarshallingInfo<StructuredPojo> FORMTOCREATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).isExplicitPayloadMember(true).build();
 
@@ -56,8 +56,8 @@ public class CreateFormRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createFormRequest.getAppId(), APPID_BINDING);
-            protocolMarshaller.marshall(createFormRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createFormRequest.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
+            protocolMarshaller.marshall(createFormRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createFormRequest.getFormToCreate(), FORMTOCREATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

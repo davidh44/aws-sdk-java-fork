@@ -48,13 +48,9 @@ public class SectionalElementJsonUnmarshaller implements Unmarshaller<SectionalE
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("level", targetDepth)) {
+                if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
-                    sectionalElement.setLevel(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("orientation", targetDepth)) {
-                    context.nextToken();
-                    sectionalElement.setOrientation(context.getUnmarshaller(String.class).unmarshall(context));
+                    sectionalElement.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("position", targetDepth)) {
                     context.nextToken();
@@ -64,9 +60,17 @@ public class SectionalElementJsonUnmarshaller implements Unmarshaller<SectionalE
                     context.nextToken();
                     sectionalElement.setText(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("type", targetDepth)) {
+                if (context.testExpression("level", targetDepth)) {
                     context.nextToken();
-                    sectionalElement.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                    sectionalElement.setLevel(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("orientation", targetDepth)) {
+                    context.nextToken();
+                    sectionalElement.setOrientation(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("excluded", targetDepth)) {
+                    context.nextToken();
+                    sectionalElement.setExcluded(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

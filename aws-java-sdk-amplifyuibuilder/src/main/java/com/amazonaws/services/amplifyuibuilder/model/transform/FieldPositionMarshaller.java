@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class FieldPositionMarshaller {
 
-    private static final MarshallingInfo<String> BELOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("below").build();
     private static final MarshallingInfo<String> FIXED_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("fixed").build();
     private static final MarshallingInfo<String> RIGHTOF_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("rightOf").build();
+    private static final MarshallingInfo<String> BELOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("below").build();
 
     private static final FieldPositionMarshaller instance = new FieldPositionMarshaller();
 
@@ -50,9 +50,9 @@ public class FieldPositionMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(fieldPosition.getBelow(), BELOW_BINDING);
             protocolMarshaller.marshall(fieldPosition.getFixed(), FIXED_BINDING);
             protocolMarshaller.marshall(fieldPosition.getRightOf(), RIGHTOF_BINDING);
+            protocolMarshaller.marshall(fieldPosition.getBelow(), BELOW_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

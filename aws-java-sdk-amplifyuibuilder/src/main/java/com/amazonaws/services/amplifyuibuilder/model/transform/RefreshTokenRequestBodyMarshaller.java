@@ -29,6 +29,8 @@ public class RefreshTokenRequestBodyMarshaller {
 
     private static final MarshallingInfo<String> TOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("token").build();
+    private static final MarshallingInfo<String> CLIENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("clientId").build();
 
     private static final RefreshTokenRequestBodyMarshaller instance = new RefreshTokenRequestBodyMarshaller();
 
@@ -47,6 +49,7 @@ public class RefreshTokenRequestBodyMarshaller {
 
         try {
             protocolMarshaller.marshall(refreshTokenRequestBody.getToken(), TOKEN_BINDING);
+            protocolMarshaller.marshall(refreshTokenRequestBody.getClientId(), CLIENTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

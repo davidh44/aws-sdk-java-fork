@@ -29,24 +29,26 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateFormDataMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> CTA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cta").build();
-    private static final MarshallingInfo<StructuredPojo> DATATYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataType").build();
-    private static final MarshallingInfo<Map> FIELDS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("fields").build();
-    private static final MarshallingInfo<String> FORMACTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("formActionType").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> SCHEMAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaVersion").build();
-    private static final MarshallingInfo<Map> SECTIONALELEMENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sectionalElements").build();
+    private static final MarshallingInfo<StructuredPojo> DATATYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataType").build();
+    private static final MarshallingInfo<String> FORMACTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("formActionType").build();
+    private static final MarshallingInfo<Map> FIELDS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("fields").build();
     private static final MarshallingInfo<StructuredPojo> STYLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("style").build();
+    private static final MarshallingInfo<Map> SECTIONALELEMENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sectionalElements").build();
+    private static final MarshallingInfo<String> SCHEMAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaVersion").build();
+    private static final MarshallingInfo<StructuredPojo> CTA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cta").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> LABELDECORATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("labelDecorator").build();
 
     private static final CreateFormDataMarshaller instance = new CreateFormDataMarshaller();
 
@@ -64,15 +66,16 @@ public class CreateFormDataMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createFormData.getCta(), CTA_BINDING);
-            protocolMarshaller.marshall(createFormData.getDataType(), DATATYPE_BINDING);
-            protocolMarshaller.marshall(createFormData.getFields(), FIELDS_BINDING);
-            protocolMarshaller.marshall(createFormData.getFormActionType(), FORMACTIONTYPE_BINDING);
             protocolMarshaller.marshall(createFormData.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(createFormData.getSchemaVersion(), SCHEMAVERSION_BINDING);
-            protocolMarshaller.marshall(createFormData.getSectionalElements(), SECTIONALELEMENTS_BINDING);
+            protocolMarshaller.marshall(createFormData.getDataType(), DATATYPE_BINDING);
+            protocolMarshaller.marshall(createFormData.getFormActionType(), FORMACTIONTYPE_BINDING);
+            protocolMarshaller.marshall(createFormData.getFields(), FIELDS_BINDING);
             protocolMarshaller.marshall(createFormData.getStyle(), STYLE_BINDING);
+            protocolMarshaller.marshall(createFormData.getSectionalElements(), SECTIONALELEMENTS_BINDING);
+            protocolMarshaller.marshall(createFormData.getSchemaVersion(), SCHEMAVERSION_BINDING);
+            protocolMarshaller.marshall(createFormData.getCta(), CTA_BINDING);
             protocolMarshaller.marshall(createFormData.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createFormData.getLabelDecorator(), LABELDECORATOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

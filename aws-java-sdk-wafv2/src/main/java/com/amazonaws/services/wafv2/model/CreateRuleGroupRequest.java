@@ -34,7 +34,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -68,9 +68,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      */
     private Long capacity;
@@ -109,12 +107,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      */
     private java.util.Map<String, CustomResponseBody> customResponseBodies;
@@ -162,7 +161,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -184,7 +183,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * @param scope
      *        Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *        application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *        API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *        API, a Amazon Cognito user pool, or an App Runner service. </p>
      *        <p>
      *        To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *        </p>
@@ -210,7 +209,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -231,7 +230,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *         application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *         API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *         API, a Amazon Cognito user pool, or an App Runner service. </p>
      *         <p>
      *         To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *         </p>
@@ -257,7 +256,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -279,7 +278,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * @param scope
      *        Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *        application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *        API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *        API, a Amazon Cognito user pool, or an App Runner service. </p>
      *        <p>
      *        To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *        </p>
@@ -307,7 +306,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -329,7 +328,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * @param scope
      *        Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *        application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *        API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *        API, a Amazon Cognito user pool, or an App Runner service. </p>
      *        <p>
      *        To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *        </p>
@@ -368,9 +367,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      * 
      * @param capacity
@@ -385,9 +382,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost
      *        of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more
      *        processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage
-     *        when they use a rule group. For more information, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL
-     *        capacity units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     *        when they use a rule group. The WCU limit for web ACLs is 1,500.
      */
 
     public void setCapacity(Long capacity) {
@@ -408,9 +403,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      * 
      * @return The web ACL capacity units (WCUs) required for this rule group.</p>
@@ -424,9 +417,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative
      *         cost of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use
      *         more processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU
-     *         usage when they use a rule group. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL
-     *         capacity units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     *         usage when they use a rule group. The WCU limit for web ACLs is 1,500.
      */
 
     public Long getCapacity() {
@@ -447,9 +438,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      * 
      * @param capacity
@@ -464,9 +453,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost
      *        of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more
      *        processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage
-     *        when they use a rule group. For more information, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL
-     *        capacity units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     *        when they use a rule group. The WCU limit for web ACLs is 1,500.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -720,12 +707,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * 
      * @return A map of custom response keys and content bodies. When you create a rule with a block action, you can
@@ -734,12 +722,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For information about customizing web requests and responses, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing
-     *         web requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     *         web requests and responses in WAF</a> in the <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      *         </p>
      *         <p>
      *         For information about the limits on count and size for custom request and response settings, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      */
 
     public java.util.Map<String, CustomResponseBody> getCustomResponseBodies() {
@@ -755,12 +744,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * 
      * @param customResponseBodies
@@ -770,12 +760,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information about customizing web requests and responses, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing
-     *        web requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     *        web requests and responses in WAF</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      *        </p>
      *        <p>
      *        For information about the limits on count and size for custom request and response settings, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF
-     *        Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      */
 
     public void setCustomResponseBodies(java.util.Map<String, CustomResponseBody> customResponseBodies) {
@@ -791,12 +782,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * 
      * @param customResponseBodies
@@ -806,12 +798,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information about customizing web requests and responses, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing
-     *        web requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     *        web requests and responses in WAF</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      *        </p>
      *        <p>
      *        For information about the limits on count and size for custom request and response settings, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF
-     *        Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

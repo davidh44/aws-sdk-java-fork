@@ -10,43 +10,43 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.wafv2.model.transform;
+package com.amazonaws.services.amplifyuibuilder.model.transform;
 
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.services.wafv2.model.*;
+import com.amazonaws.services.amplifyuibuilder.model.*;
 
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * RequestBodyAssociatedResourceTypeConfigMarshaller
+ * FormInputBindingPropertiesValuePropertiesMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class RequestBodyAssociatedResourceTypeConfigMarshaller {
+public class FormInputBindingPropertiesValuePropertiesMarshaller {
 
-    private static final MarshallingInfo<String> DEFAULTSIZEINSPECTIONLIMIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultSizeInspectionLimit").build();
+    private static final MarshallingInfo<String> MODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("model").build();
 
-    private static final RequestBodyAssociatedResourceTypeConfigMarshaller instance = new RequestBodyAssociatedResourceTypeConfigMarshaller();
+    private static final FormInputBindingPropertiesValuePropertiesMarshaller instance = new FormInputBindingPropertiesValuePropertiesMarshaller();
 
-    public static RequestBodyAssociatedResourceTypeConfigMarshaller getInstance() {
+    public static FormInputBindingPropertiesValuePropertiesMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(RequestBodyAssociatedResourceTypeConfig requestBodyAssociatedResourceTypeConfig, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(FormInputBindingPropertiesValueProperties formInputBindingPropertiesValueProperties, ProtocolMarshaller protocolMarshaller) {
 
-        if (requestBodyAssociatedResourceTypeConfig == null) {
+        if (formInputBindingPropertiesValueProperties == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(requestBodyAssociatedResourceTypeConfig.getDefaultSizeInspectionLimit(), DEFAULTSIZEINSPECTIONLIMIT_BINDING);
+            protocolMarshaller.marshall(formInputBindingPropertiesValueProperties.getModel(), MODEL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

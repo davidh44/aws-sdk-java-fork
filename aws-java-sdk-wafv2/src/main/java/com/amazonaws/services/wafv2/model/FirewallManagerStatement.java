@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The processing guidance for an Firewall Manager rule. This is like a regular rule <a>Statement</a>, but it can only
- * contain a single rule group reference.
+ * contain a rule group reference.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/FirewallManagerStatement" target="_top">AWS API
@@ -31,28 +31,72 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is managed
-     * by Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the vendor
+     * name and the name of the rule group in this statement. You can retrieve the required names by calling
+     * <a>ListAvailableManagedRuleGroups</a>.
      * </p>
+     * <p>
+     * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
+     * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      */
     private ManagedRuleGroupStatement managedRuleGroupStatement;
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed by
-     * Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule group
+     * with your rules, then provide the ARN of the rule group in this statement.
+     * </p>
+     * <p>
+     * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      */
     private RuleGroupReferenceStatement ruleGroupReferenceStatement;
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is managed
-     * by Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the vendor
+     * name and the name of the rule group in this statement. You can retrieve the required names by calling
+     * <a>ListAvailableManagedRuleGroups</a>.
      * </p>
+     * <p>
+     * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
+     * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      * 
      * @param managedRuleGroupStatement
-     *        A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is
-     *        managed by Firewall Manager for an Firewall Manager WAF policy.
+     *        A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the
+     *        vendor name and the name of the rule group in this statement. You can retrieve the required names by
+     *        calling <a>ListAvailableManagedRuleGroups</a>.</p>
+     *        <p>
+     *        You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a
+     *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
+     *        within a rule.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You are charged additional fees when you use the WAF Bot Control managed rule group
+     *        <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
+     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *        href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *        </p>
      */
 
     public void setManagedRuleGroupStatement(ManagedRuleGroupStatement managedRuleGroupStatement) {
@@ -61,12 +105,38 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is managed
-     * by Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the vendor
+     * name and the name of the rule group in this statement. You can retrieve the required names by calling
+     * <a>ListAvailableManagedRuleGroups</a>.
      * </p>
+     * <p>
+     * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
+     * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      * 
-     * @return A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is
-     *         managed by Firewall Manager for an Firewall Manager WAF policy.
+     * @return A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the
+     *         vendor name and the name of the rule group in this statement. You can retrieve the required names by
+     *         calling <a>ListAvailableManagedRuleGroups</a>.</p>
+     *         <p>
+     *         You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a
+     *         <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
+     *         within a rule.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You are charged additional fees when you use the WAF Bot Control managed rule group
+     *         <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
+     *         managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *         href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *         </p>
      */
 
     public ManagedRuleGroupStatement getManagedRuleGroupStatement() {
@@ -75,13 +145,39 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is managed
-     * by Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the vendor
+     * name and the name of the rule group in this statement. You can retrieve the required names by calling
+     * <a>ListAvailableManagedRuleGroups</a>.
      * </p>
+     * <p>
+     * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
+     * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      * 
      * @param managedRuleGroupStatement
-     *        A statement used by Firewall Manager to run the rules that are defined in a managed rule group. This is
-     *        managed by Firewall Manager for an Firewall Manager WAF policy.
+     *        A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the
+     *        vendor name and the name of the rule group in this statement. You can retrieve the required names by
+     *        calling <a>ListAvailableManagedRuleGroups</a>.</p>
+     *        <p>
+     *        You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a
+     *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
+     *        within a rule.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You are charged additional fees when you use the WAF Bot Control managed rule group
+     *        <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
+     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *        href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,13 +188,22 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed by
-     * Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule group
+     * with your rules, then provide the ARN of the rule group in this statement.
+     * </p>
+     * <p>
+     * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @param ruleGroupReferenceStatement
-     *        A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed by
-     *        Firewall Manager for an Firewall Manager WAF policy.
+     *        A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule
+     *        group with your rules, then provide the ARN of the rule group in this statement.</p>
+     *        <p>
+     *        You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *        at the top level inside a web ACL.
      */
 
     public void setRuleGroupReferenceStatement(RuleGroupReferenceStatement ruleGroupReferenceStatement) {
@@ -107,12 +212,21 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed by
-     * Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule group
+     * with your rules, then provide the ARN of the rule group in this statement.
+     * </p>
+     * <p>
+     * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
-     * @return A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed
-     *         by Firewall Manager for an Firewall Manager WAF policy.
+     * @return A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule
+     *         group with your rules, then provide the ARN of the rule group in this statement.</p>
+     *         <p>
+     *         You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     *         <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *         at the top level inside a web ACL.
      */
 
     public RuleGroupReferenceStatement getRuleGroupReferenceStatement() {
@@ -121,13 +235,22 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed by
-     * Firewall Manager for an Firewall Manager WAF policy.
+     * A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule group
+     * with your rules, then provide the ARN of the rule group in this statement.
+     * </p>
+     * <p>
+     * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @param ruleGroupReferenceStatement
-     *        A statement used by Firewall Manager to run the rules that are defined in a rule group. This is managed by
-     *        Firewall Manager for an Firewall Manager WAF policy.
+     *        A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule
+     *        group with your rules, then provide the ARN of the rule group in this statement.</p>
+     *        <p>
+     *        You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *        at the top level inside a web ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

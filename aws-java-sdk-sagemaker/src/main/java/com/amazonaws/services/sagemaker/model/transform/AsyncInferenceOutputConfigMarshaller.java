@@ -33,6 +33,8 @@ public class AsyncInferenceOutputConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3OutputPath").build();
     private static final MarshallingInfo<StructuredPojo> NOTIFICATIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NotificationConfig").build();
+    private static final MarshallingInfo<String> S3FAILUREPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3FailurePath").build();
 
     private static final AsyncInferenceOutputConfigMarshaller instance = new AsyncInferenceOutputConfigMarshaller();
 
@@ -53,6 +55,7 @@ public class AsyncInferenceOutputConfigMarshaller {
             protocolMarshaller.marshall(asyncInferenceOutputConfig.getKmsKeyId(), KMSKEYID_BINDING);
             protocolMarshaller.marshall(asyncInferenceOutputConfig.getS3OutputPath(), S3OUTPUTPATH_BINDING);
             protocolMarshaller.marshall(asyncInferenceOutputConfig.getNotificationConfig(), NOTIFICATIONCONFIG_BINDING);
+            protocolMarshaller.marshall(asyncInferenceOutputConfig.getS3FailurePath(), S3FAILUREPATH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

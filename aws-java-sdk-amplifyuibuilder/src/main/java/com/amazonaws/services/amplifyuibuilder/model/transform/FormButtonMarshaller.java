@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class FormButtonMarshaller {
 
-    private static final MarshallingInfo<String> CHILDREN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("children").build();
     private static final MarshallingInfo<Boolean> EXCLUDED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("excluded").build();
+    private static final MarshallingInfo<String> CHILDREN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("children").build();
     private static final MarshallingInfo<StructuredPojo> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("position").build();
 
@@ -50,8 +50,8 @@ public class FormButtonMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(formButton.getChildren(), CHILDREN_BINDING);
             protocolMarshaller.marshall(formButton.getExcluded(), EXCLUDED_BINDING);
+            protocolMarshaller.marshall(formButton.getChildren(), CHILDREN_BINDING);
             protocolMarshaller.marshall(formButton.getPosition(), POSITION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

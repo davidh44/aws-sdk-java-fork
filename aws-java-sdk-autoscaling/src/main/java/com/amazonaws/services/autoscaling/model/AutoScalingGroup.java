@@ -106,7 +106,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> targetGroupARNs;
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      */
     private String healthCheckType;
@@ -858,11 +858,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * 
      * @param healthCheckType
-     *        A comma-separated list of one or more health check types.
+     *        A comma-separated value string of one or more health check types.
      */
 
     public void setHealthCheckType(String healthCheckType) {
@@ -871,10 +871,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * 
-     * @return A comma-separated list of one or more health check types.
+     * @return A comma-separated value string of one or more health check types.
      */
 
     public String getHealthCheckType() {
@@ -883,11 +883,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A comma-separated list of one or more health check types.
+     * A comma-separated value string of one or more health check types.
      * </p>
      * 
      * @param healthCheckType
-     *        A comma-separated list of one or more health check types.
+     *        A comma-separated value string of one or more health check types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

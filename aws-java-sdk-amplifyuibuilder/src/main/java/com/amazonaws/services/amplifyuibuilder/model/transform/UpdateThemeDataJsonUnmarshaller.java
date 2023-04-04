@@ -56,15 +56,15 @@ public class UpdateThemeDataJsonUnmarshaller implements Unmarshaller<UpdateTheme
                     context.nextToken();
                     updateThemeData.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("overrides", targetDepth)) {
-                    context.nextToken();
-                    updateThemeData.setOverrides(new ListUnmarshaller<ThemeValues>(ThemeValuesJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("values", targetDepth)) {
                     context.nextToken();
                     updateThemeData.setValues(new ListUnmarshaller<ThemeValues>(ThemeValuesJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("overrides", targetDepth)) {
+                    context.nextToken();
+                    updateThemeData.setOverrides(new ListUnmarshaller<ThemeValues>(ThemeValuesJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

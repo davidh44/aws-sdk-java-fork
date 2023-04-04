@@ -52,13 +52,13 @@ public class ComponentEventJsonUnmarshaller implements Unmarshaller<ComponentEve
                     context.nextToken();
                     componentEvent.setAction(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("bindingEvent", targetDepth)) {
-                    context.nextToken();
-                    componentEvent.setBindingEvent(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("parameters", targetDepth)) {
                     context.nextToken();
                     componentEvent.setParameters(ActionParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("bindingEvent", targetDepth)) {
+                    context.nextToken();
+                    componentEvent.setBindingEvent(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

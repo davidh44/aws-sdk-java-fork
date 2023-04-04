@@ -657,7 +657,12 @@ public enum InstanceType {
     R7g8xlarge("r7g.8xlarge"),
     R7g12xlarge("r7g.12xlarge"),
     R7g16xlarge("r7g.16xlarge"),
-    R7gMetal("r7g.metal");
+    R7gMetal("r7g.metal"),
+    C6inMetal("c6in.metal"),
+    M6inMetal("m6in.metal"),
+    M6idnMetal("m6idn.metal"),
+    R6inMetal("r6in.metal"),
+    R6idnMetal("r6idn.metal");
 
     private String value;
 

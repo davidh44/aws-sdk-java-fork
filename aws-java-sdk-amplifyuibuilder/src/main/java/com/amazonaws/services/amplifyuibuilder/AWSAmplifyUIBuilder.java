@@ -370,7 +370,7 @@ public interface AWSAmplifyUIBuilder {
 
     /**
      * <p>
-     * Stores the metadata information about a feature on a form or view.
+     * Stores the metadata information about a feature on a form.
      * </p>
      * 
      * @param putMetadataFlagRequest

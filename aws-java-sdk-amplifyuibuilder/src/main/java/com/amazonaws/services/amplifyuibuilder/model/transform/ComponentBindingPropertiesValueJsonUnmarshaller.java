@@ -48,6 +48,10 @@ public class ComponentBindingPropertiesValueJsonUnmarshaller implements Unmarsha
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("type", targetDepth)) {
+                    context.nextToken();
+                    componentBindingPropertiesValue.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("bindingProperties", targetDepth)) {
                     context.nextToken();
                     componentBindingPropertiesValue.setBindingProperties(ComponentBindingPropertiesValuePropertiesJsonUnmarshaller.getInstance().unmarshall(
@@ -56,10 +60,6 @@ public class ComponentBindingPropertiesValueJsonUnmarshaller implements Unmarsha
                 if (context.testExpression("defaultValue", targetDepth)) {
                     context.nextToken();
                     componentBindingPropertiesValue.setDefaultValue(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("type", targetDepth)) {
-                    context.nextToken();
-                    componentBindingPropertiesValue.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

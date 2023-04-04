@@ -31,28 +31,30 @@ public class FormMarshaller {
 
     private static final MarshallingInfo<String> APPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("appId").build();
-    private static final MarshallingInfo<StructuredPojo> CTA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cta").build();
-    private static final MarshallingInfo<StructuredPojo> DATATYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataType").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentName").build();
-    private static final MarshallingInfo<Map> FIELDS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("fields").build();
-    private static final MarshallingInfo<String> FORMACTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("formActionType").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> SCHEMAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaVersion").build();
-    private static final MarshallingInfo<Map> SECTIONALELEMENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sectionalElements").build();
+    private static final MarshallingInfo<String> FORMACTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("formActionType").build();
     private static final MarshallingInfo<StructuredPojo> STYLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("style").build();
+    private static final MarshallingInfo<StructuredPojo> DATATYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataType").build();
+    private static final MarshallingInfo<Map> FIELDS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("fields").build();
+    private static final MarshallingInfo<Map> SECTIONALELEMENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sectionalElements").build();
+    private static final MarshallingInfo<String> SCHEMAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaVersion").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> CTA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cta").build();
+    private static final MarshallingInfo<String> LABELDECORATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("labelDecorator").build();
 
     private static final FormMarshaller instance = new FormMarshaller();
 
@@ -71,17 +73,18 @@ public class FormMarshaller {
 
         try {
             protocolMarshaller.marshall(form.getAppId(), APPID_BINDING);
-            protocolMarshaller.marshall(form.getCta(), CTA_BINDING);
-            protocolMarshaller.marshall(form.getDataType(), DATATYPE_BINDING);
             protocolMarshaller.marshall(form.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
-            protocolMarshaller.marshall(form.getFields(), FIELDS_BINDING);
-            protocolMarshaller.marshall(form.getFormActionType(), FORMACTIONTYPE_BINDING);
             protocolMarshaller.marshall(form.getId(), ID_BINDING);
             protocolMarshaller.marshall(form.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(form.getSchemaVersion(), SCHEMAVERSION_BINDING);
-            protocolMarshaller.marshall(form.getSectionalElements(), SECTIONALELEMENTS_BINDING);
+            protocolMarshaller.marshall(form.getFormActionType(), FORMACTIONTYPE_BINDING);
             protocolMarshaller.marshall(form.getStyle(), STYLE_BINDING);
+            protocolMarshaller.marshall(form.getDataType(), DATATYPE_BINDING);
+            protocolMarshaller.marshall(form.getFields(), FIELDS_BINDING);
+            protocolMarshaller.marshall(form.getSectionalElements(), SECTIONALELEMENTS_BINDING);
+            protocolMarshaller.marshall(form.getSchemaVersion(), SCHEMAVERSION_BINDING);
             protocolMarshaller.marshall(form.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(form.getCta(), CTA_BINDING);
+            protocolMarshaller.marshall(form.getLabelDecorator(), LABELDECORATOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

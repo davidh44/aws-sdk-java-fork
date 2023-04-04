@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.wafv2.model.transform;
+package com.amazonaws.services.amplifyuibuilder.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.wafv2.model.*;
+import com.amazonaws.services.amplifyuibuilder.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * RequestBodyAssociatedResourceTypeConfig JSON Unmarshaller
+ * FormInputBindingPropertiesValue JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller implements Unmarshaller<RequestBodyAssociatedResourceTypeConfig, JsonUnmarshallerContext> {
+public class FormInputBindingPropertiesValueJsonUnmarshaller implements Unmarshaller<FormInputBindingPropertiesValue, JsonUnmarshallerContext> {
 
-    public RequestBodyAssociatedResourceTypeConfig unmarshall(JsonUnmarshallerContext context) throws Exception {
-        RequestBodyAssociatedResourceTypeConfig requestBodyAssociatedResourceTypeConfig = new RequestBodyAssociatedResourceTypeConfig();
+    public FormInputBindingPropertiesValue unmarshall(JsonUnmarshallerContext context) throws Exception {
+        FormInputBindingPropertiesValue formInputBindingPropertiesValue = new FormInputBindingPropertiesValue();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -48,9 +48,14 @@ public class RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller implements 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("DefaultSizeInspectionLimit", targetDepth)) {
+                if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
-                    requestBodyAssociatedResourceTypeConfig.setDefaultSizeInspectionLimit(context.getUnmarshaller(String.class).unmarshall(context));
+                    formInputBindingPropertiesValue.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("bindingProperties", targetDepth)) {
+                    context.nextToken();
+                    formInputBindingPropertiesValue.setBindingProperties(FormInputBindingPropertiesValuePropertiesJsonUnmarshaller.getInstance().unmarshall(
+                            context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -61,14 +66,14 @@ public class RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller implements 
             token = context.nextToken();
         }
 
-        return requestBodyAssociatedResourceTypeConfig;
+        return formInputBindingPropertiesValue;
     }
 
-    private static RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller instance;
+    private static FormInputBindingPropertiesValueJsonUnmarshaller instance;
 
-    public static RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller getInstance() {
+    public static FormInputBindingPropertiesValueJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new RequestBodyAssociatedResourceTypeConfigJsonUnmarshaller();
+            instance = new FormInputBindingPropertiesValueJsonUnmarshaller();
         return instance;
     }
 }

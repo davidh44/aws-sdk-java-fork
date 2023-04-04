@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.wafv2.model;
+package com.amazonaws.services.amplifyuibuilder.model;
 
 import javax.annotation.Generated;
 
@@ -18,16 +18,15 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum SizeInspectionLimit {
+public enum StorageAccessLevel {
 
-    KB_16("KB_16"),
-    KB_32("KB_32"),
-    KB_48("KB_48"),
-    KB_64("KB_64");
+    Public("public"),
+    Protected("protected"),
+    Private("private");
 
     private String value;
 
-    private SizeInspectionLimit(String value) {
+    private StorageAccessLevel(String value) {
         this.value = value;
     }
 
@@ -41,17 +40,17 @@ public enum SizeInspectionLimit {
      *
      * @param value
      *        real value
-     * @return SizeInspectionLimit corresponding to the value
+     * @return StorageAccessLevel corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static SizeInspectionLimit fromValue(String value) {
+    public static StorageAccessLevel fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (SizeInspectionLimit enumEntry : SizeInspectionLimit.values()) {
+        for (StorageAccessLevel enumEntry : StorageAccessLevel.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

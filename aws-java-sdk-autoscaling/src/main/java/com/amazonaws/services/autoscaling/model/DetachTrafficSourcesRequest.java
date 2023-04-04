@@ -33,8 +33,7 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
     private String autoScalingGroupName;
     /**
      * <p>
-     * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     * sources.
+     * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier> trafficSources;
@@ -81,12 +80,10 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     * sources.
+     * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
      * 
-     * @return The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *         sources.
+     * @return The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      */
 
     public java.util.List<TrafficSourceIdentifier> getTrafficSources() {
@@ -98,13 +95,11 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     * sources.
+     * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
      * 
      * @param trafficSources
-     *        The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *        sources.
+     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      */
 
     public void setTrafficSources(java.util.Collection<TrafficSourceIdentifier> trafficSources) {
@@ -118,8 +113,7 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     * sources.
+     * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,8 +122,7 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param trafficSources
-     *        The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *        sources.
+     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,13 +138,11 @@ public class DetachTrafficSourcesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     * sources.
+     * The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * </p>
      * 
      * @param trafficSources
-     *        The unique identifiers of one or more traffic sources you are detaching. You can specify up to 10 traffic
-     *        sources.
+     *        The unique identifiers of one or more traffic sources. You can specify up to 10 traffic sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

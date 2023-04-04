@@ -52,6 +52,12 @@ public class CreateThemeDataJsonUnmarshaller implements Unmarshaller<CreateTheme
                     context.nextToken();
                     createThemeData.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("values", targetDepth)) {
+                    context.nextToken();
+                    createThemeData.setValues(new ListUnmarshaller<ThemeValues>(ThemeValuesJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("overrides", targetDepth)) {
                     context.nextToken();
                     createThemeData.setOverrides(new ListUnmarshaller<ThemeValues>(ThemeValuesJsonUnmarshaller.getInstance())
@@ -62,12 +68,6 @@ public class CreateThemeDataJsonUnmarshaller implements Unmarshaller<CreateTheme
                     context.nextToken();
                     createThemeData.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
-                }
-                if (context.testExpression("values", targetDepth)) {
-                    context.nextToken();
-                    createThemeData.setValues(new ListUnmarshaller<ThemeValues>(ThemeValuesJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

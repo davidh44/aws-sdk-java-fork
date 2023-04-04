@@ -56,6 +56,12 @@ public class AsyncInferenceNotificationConfigJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     asyncInferenceNotificationConfig.setErrorTopic(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("IncludeInferenceResponseIn", targetDepth)) {
+                    context.nextToken();
+                    asyncInferenceNotificationConfig.setIncludeInferenceResponseIn(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

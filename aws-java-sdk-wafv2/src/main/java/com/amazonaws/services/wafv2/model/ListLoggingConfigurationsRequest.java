@@ -28,7 +28,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -68,7 +68,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -90,7 +90,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * @param scope
      *        Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *        application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *        API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *        API, a Amazon Cognito user pool, or an App Runner service. </p>
      *        <p>
      *        To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *        </p>
@@ -116,7 +116,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -137,7 +137,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * 
      * @return Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *         application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *         API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *         API, a Amazon Cognito user pool, or an App Runner service. </p>
      *         <p>
      *         To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *         </p>
@@ -163,7 +163,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -185,7 +185,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * @param scope
      *        Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *        application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *        API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *        API, a Amazon Cognito user pool, or an App Runner service. </p>
      *        <p>
      *        To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *        </p>
@@ -213,7 +213,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
-     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, an
+     * application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL API, a
      * Amazon Cognito user pool, or an App Runner service.
      * </p>
      * <p>
@@ -235,7 +235,7 @@ public class ListLoggingConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * @param scope
      *        Specifies whether this is for an Amazon CloudFront distribution or for a regional application. A regional
      *        application can be an Application Load Balancer (ALB), an Amazon API Gateway REST API, an AppSync GraphQL
-     *        API, an Amazon Cognito user pool, or an App Runner service. </p>
+     *        API, a Amazon Cognito user pool, or an App Runner service. </p>
      *        <p>
      *        To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:
      *        </p>

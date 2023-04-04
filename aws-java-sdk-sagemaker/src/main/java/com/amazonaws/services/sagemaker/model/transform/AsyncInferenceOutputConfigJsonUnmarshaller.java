@@ -60,6 +60,10 @@ public class AsyncInferenceOutputConfigJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     asyncInferenceOutputConfig.setNotificationConfig(AsyncInferenceNotificationConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("S3FailurePath", targetDepth)) {
+                    context.nextToken();
+                    asyncInferenceOutputConfig.setS3FailurePath(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

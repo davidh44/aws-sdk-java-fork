@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class AsyncInferenceNotificationConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SuccessTopic").build();
     private static final MarshallingInfo<String> ERRORTOPIC_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ErrorTopic").build();
+    private static final MarshallingInfo<List> INCLUDEINFERENCERESPONSEIN_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeInferenceResponseIn").build();
 
     private static final AsyncInferenceNotificationConfigMarshaller instance = new AsyncInferenceNotificationConfigMarshaller();
 
@@ -50,6 +53,7 @@ public class AsyncInferenceNotificationConfigMarshaller {
         try {
             protocolMarshaller.marshall(asyncInferenceNotificationConfig.getSuccessTopic(), SUCCESSTOPIC_BINDING);
             protocolMarshaller.marshall(asyncInferenceNotificationConfig.getErrorTopic(), ERRORTOPIC_BINDING);
+            protocolMarshaller.marshall(asyncInferenceNotificationConfig.getIncludeInferenceResponseIn(), INCLUDEINFERENCERESPONSEIN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

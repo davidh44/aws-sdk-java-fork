@@ -52,10 +52,6 @@ public class ComponentSummaryJsonUnmarshaller implements Unmarshaller<ComponentS
                     context.nextToken();
                     componentSummary.setAppId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("componentType", targetDepth)) {
-                    context.nextToken();
-                    componentSummary.setComponentType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("environmentName", targetDepth)) {
                     context.nextToken();
                     componentSummary.setEnvironmentName(context.getUnmarshaller(String.class).unmarshall(context));
@@ -67,6 +63,10 @@ public class ComponentSummaryJsonUnmarshaller implements Unmarshaller<ComponentS
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     componentSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("componentType", targetDepth)) {
+                    context.nextToken();
+                    componentSummary.setComponentType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

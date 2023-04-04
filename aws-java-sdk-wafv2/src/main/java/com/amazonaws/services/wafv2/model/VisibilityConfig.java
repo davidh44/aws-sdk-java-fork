@@ -40,7 +40,7 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      * available metrics, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     * Metrics</a> in the <i>WAF Developer Guide</i>.
+     * Metrics</a>.
      * </p>
      */
     private Boolean cloudWatchMetricsEnabled;
@@ -118,14 +118,14 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      * available metrics, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     * Metrics</a> in the <i>WAF Developer Guide</i>.
+     * Metrics</a>.
      * </p>
      * 
      * @param cloudWatchMetricsEnabled
      *        A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *        available metrics, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *        Metrics</a> in the <i>WAF Developer Guide</i>.
+     *        Metrics</a>.
      */
 
     public void setCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
@@ -137,13 +137,13 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      * available metrics, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     * Metrics</a> in the <i>WAF Developer Guide</i>.
+     * Metrics</a>.
      * </p>
      * 
      * @return A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *         available metrics, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *         Metrics</a> in the <i>WAF Developer Guide</i>.
+     *         Metrics</a>.
      */
 
     public Boolean getCloudWatchMetricsEnabled() {
@@ -155,14 +155,14 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      * available metrics, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     * Metrics</a> in the <i>WAF Developer Guide</i>.
+     * Metrics</a>.
      * </p>
      * 
      * @param cloudWatchMetricsEnabled
      *        A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *        available metrics, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *        Metrics</a> in the <i>WAF Developer Guide</i>.
+     *        Metrics</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,13 +176,13 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      * available metrics, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     * Metrics</a> in the <i>WAF Developer Guide</i>.
+     * Metrics</a>.
      * </p>
      * 
      * @return A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *         available metrics, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *         Metrics</a> in the <i>WAF Developer Guide</i>.
+     *         Metrics</a>.
      */
 
     public Boolean isCloudWatchMetricsEnabled() {

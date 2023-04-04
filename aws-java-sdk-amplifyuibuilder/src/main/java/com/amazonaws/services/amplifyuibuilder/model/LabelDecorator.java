@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.wafv2.model;
+package com.amazonaws.services.amplifyuibuilder.model;
 
 import javax.annotation.Generated;
 
@@ -18,13 +18,15 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum AssociatedResourceType {
+public enum LabelDecorator {
 
-    CLOUDFRONT("CLOUDFRONT");
+    Required("required"),
+    Optional("optional"),
+    None("none");
 
     private String value;
 
-    private AssociatedResourceType(String value) {
+    private LabelDecorator(String value) {
         this.value = value;
     }
 
@@ -38,17 +40,17 @@ public enum AssociatedResourceType {
      *
      * @param value
      *        real value
-     * @return AssociatedResourceType corresponding to the value
+     * @return LabelDecorator corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static AssociatedResourceType fromValue(String value) {
+    public static LabelDecorator fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (AssociatedResourceType enumEntry : AssociatedResourceType.values()) {
+        for (LabelDecorator enumEntry : LabelDecorator.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

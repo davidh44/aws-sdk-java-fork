@@ -34,9 +34,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Selected algorithms must belong to the list corresponding to the training mode set in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     * (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     * Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     * >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1
+     * algorithm.
      * </p>
      * </note>
      * <ul>
@@ -119,9 +120,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Selected algorithms must belong to the list corresponding to the training mode set in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     * (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     * Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     * >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1
+     * algorithm.
      * </p>
      * </note>
      * <ul>
@@ -199,9 +201,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * @return The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
      *         <note>
      *         <p>
-     *         Selected algorithms must belong to the list corresponding to the training mode set in
-     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     *         (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     *         Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     *         >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a
+     *         minimum of 1 algorithm.
      *         </p>
      *         </note>
      *         <ul>
@@ -287,9 +290,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Selected algorithms must belong to the list corresponding to the training mode set in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     * (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     * Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     * >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1
+     * algorithm.
      * </p>
      * </note>
      * <ul>
@@ -368,9 +372,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
      *        <note>
      *        <p>
-     *        Selected algorithms must belong to the list corresponding to the training mode set in
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     *        (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     *        >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a
+     *        minimum of 1 algorithm.
      *        </p>
      *        </note>
      *        <ul>
@@ -461,9 +466,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Selected algorithms must belong to the list corresponding to the training mode set in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     * (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     * Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     * >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1
+     * algorithm.
      * </p>
      * </note>
      * <ul>
@@ -547,9 +553,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
      *        <note>
      *        <p>
-     *        Selected algorithms must belong to the list corresponding to the training mode set in
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     *        (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     *        >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a
+     *        minimum of 1 algorithm.
      *        </p>
      *        </note>
      *        <ul>
@@ -642,9 +649,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Selected algorithms must belong to the list corresponding to the training mode set in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     * (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     * Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     * >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1
+     * algorithm.
      * </p>
      * </note>
      * <ul>
@@ -723,9 +731,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
      *        <note>
      *        <p>
-     *        Selected algorithms must belong to the list corresponding to the training mode set in
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     *        (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     *        >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a
+     *        minimum of 1 algorithm.
      *        </p>
      *        </note>
      *        <ul>
@@ -813,9 +822,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Selected algorithms must belong to the list corresponding to the training mode set in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     * (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     * Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     * >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1
+     * algorithm.
      * </p>
      * </note>
      * <ul>
@@ -894,9 +904,10 @@ public class AutoMLAlgorithmConfig implements Serializable, Cloneable, Structure
      *        The selection of algorithms run on a dataset to train the model candidates of an Autopilot job. </p>
      *        <note>
      *        <p>
-     *        Selected algorithms must belong to the list corresponding to the training mode set in
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode">AutoMLJobConfig.Mode</a> </code>
-     *        (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a minimum of 1 algorithm.
+     *        Selected algorithms must belong to the list corresponding to the training mode set in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobConfig.html#sagemaker-Type-AutoMLJobConfig-Mode"
+     *        >AutoMLJobConfig.Mode</a> (<code>ENSEMBLING</code> or <code>HYPERPARAMETER_TUNING</code>). Choose a
+     *        minimum of 1 algorithm.
      *        </p>
      *        </note>
      *        <ul>

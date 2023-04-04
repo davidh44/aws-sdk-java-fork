@@ -54,6 +54,11 @@ public class ValueMappingsJsonUnmarshaller implements Unmarshaller<ValueMappings
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("bindingProperties", targetDepth)) {
+                    context.nextToken();
+                    valueMappings.setBindingProperties(new MapUnmarshaller<String, FormInputBindingPropertiesValue>(context.getUnmarshaller(String.class),
+                            FormInputBindingPropertiesValueJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

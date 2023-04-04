@@ -31,22 +31,22 @@ public class ThemeMarshaller {
 
     private static final MarshallingInfo<String> APPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("appId").build();
-    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentName").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
-    private static final MarshallingInfo<java.util.Date> MODIFIEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("modifiedAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> MODIFIEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("modifiedAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<List> VALUES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("values").build();
     private static final MarshallingInfo<List> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("overrides").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
-    private static final MarshallingInfo<List> VALUES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("values").build();
 
     private static final ThemeMarshaller instance = new ThemeMarshaller();
 
@@ -65,14 +65,14 @@ public class ThemeMarshaller {
 
         try {
             protocolMarshaller.marshall(theme.getAppId(), APPID_BINDING);
-            protocolMarshaller.marshall(theme.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(theme.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
             protocolMarshaller.marshall(theme.getId(), ID_BINDING);
-            protocolMarshaller.marshall(theme.getModifiedAt(), MODIFIEDAT_BINDING);
             protocolMarshaller.marshall(theme.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(theme.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(theme.getModifiedAt(), MODIFIEDAT_BINDING);
+            protocolMarshaller.marshall(theme.getValues(), VALUES_BINDING);
             protocolMarshaller.marshall(theme.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(theme.getTags(), TAGS_BINDING);
-            protocolMarshaller.marshall(theme.getValues(), VALUES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -48,13 +48,13 @@ public class SortPropertyJsonUnmarshaller implements Unmarshaller<SortProperty, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("direction", targetDepth)) {
-                    context.nextToken();
-                    sortProperty.setDirection(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("field", targetDepth)) {
                     context.nextToken();
                     sortProperty.setField(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("direction", targetDepth)) {
+                    context.nextToken();
+                    sortProperty.setDirection(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

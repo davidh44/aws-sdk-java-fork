@@ -52,6 +52,16 @@ public class FormInputValuePropertyJsonUnmarshaller implements Unmarshaller<Form
                     context.nextToken();
                     formInputValueProperty.setValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("bindingProperties", targetDepth)) {
+                    context.nextToken();
+                    formInputValueProperty.setBindingProperties(FormInputValuePropertyBindingPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("concat", targetDepth)) {
+                    context.nextToken();
+                    formInputValueProperty.setConcat(new ListUnmarshaller<FormInputValueProperty>(FormInputValuePropertyJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

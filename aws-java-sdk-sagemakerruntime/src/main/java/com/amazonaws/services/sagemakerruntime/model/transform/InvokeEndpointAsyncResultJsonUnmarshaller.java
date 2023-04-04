@@ -37,6 +37,10 @@ public class InvokeEndpointAsyncResultJsonUnmarshaller implements Unmarshaller<I
                 context.setCurrentHeader("X-Amzn-SageMaker-OutputLocation");
                 invokeEndpointAsyncResult.setOutputLocation(context.getUnmarshaller(String.class).unmarshall(context));
             }
+            if (context.getHeader("X-Amzn-SageMaker-FailureLocation") != null) {
+                context.setCurrentHeader("X-Amzn-SageMaker-FailureLocation");
+                invokeEndpointAsyncResult.setFailureLocation(context.getUnmarshaller(String.class).unmarshall(context));
+            }
         }
 
         int originalDepth = context.getCurrentDepth();

@@ -52,13 +52,13 @@ public class FormStyleJsonUnmarshaller implements Unmarshaller<FormStyle, JsonUn
                     context.nextToken();
                     formStyle.setHorizontalGap(FormStyleConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("outerPadding", targetDepth)) {
-                    context.nextToken();
-                    formStyle.setOuterPadding(FormStyleConfigJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("verticalGap", targetDepth)) {
                     context.nextToken();
                     formStyle.setVerticalGap(FormStyleConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("outerPadding", targetDepth)) {
+                    context.nextToken();
+                    formStyle.setOuterPadding(FormStyleConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -34,9 +34,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     * supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * Similar to <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -87,9 +87,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     private AutoMLSecurityConfig securityConfig;
     /**
      * <p>
-     * Specifies a metric to minimize or maximize as the objective of a job. For
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     * , only <code>Accuracy</code> is supported.
+     * Specifies a metric to minimize or maximize as the objective of a job. For <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     * >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      * </p>
      */
     private AutoMLJobObjective autoMLJobObjective;
@@ -155,9 +155,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     * supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * Similar to <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -173,9 +173,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @return An array of channel objects describing the input data and their location. Each channel is a named input
-     *         source. Similar to
-     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     *         supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:</p>
+     *         source. Similar to <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     *         >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
+     *         problem type:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -196,9 +197,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     * supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * Similar to <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -215,9 +216,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param autoMLJobInputDataConfig
      *        An array of channel objects describing the input data and their location. Each channel is a named input
-     *        source. Similar to
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     *        supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:</p>
+     *        source. Similar to <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     *        >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
+     *        problem type:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -243,9 +245,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     * supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * Similar to <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -267,9 +269,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param autoMLJobInputDataConfig
      *        An array of channel objects describing the input data and their location. Each channel is a named input
-     *        source. Similar to
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     *        supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:</p>
+     *        source. Similar to <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     *        >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
+     *        problem type:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -297,9 +300,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     * supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * Similar to <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -316,9 +319,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param autoMLJobInputDataConfig
      *        An array of channel objects describing the input data and their location. Each channel is a named input
-     *        source. Similar to
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig">InputDataConfig</a> </code>
-     *        supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:</p>
+     *        source. Similar to <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
+     *        >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
+     *        problem type:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -597,15 +601,15 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies a metric to minimize or maximize as the objective of a job. For
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     * , only <code>Accuracy</code> is supported.
+     * Specifies a metric to minimize or maximize as the objective of a job. For <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     * >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      * </p>
      * 
      * @param autoMLJobObjective
-     *        Specifies a metric to minimize or maximize as the objective of a job. For
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     *        , only <code>Accuracy</code> is supported.
+     *        Specifies a metric to minimize or maximize as the objective of a job. For <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     *        >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      */
 
     public void setAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
@@ -614,14 +618,14 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies a metric to minimize or maximize as the objective of a job. For
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     * , only <code>Accuracy</code> is supported.
+     * Specifies a metric to minimize or maximize as the objective of a job. For <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     * >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      * </p>
      * 
-     * @return Specifies a metric to minimize or maximize as the objective of a job. For
-     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     *         , only <code>Accuracy</code> is supported.
+     * @return Specifies a metric to minimize or maximize as the objective of a job. For <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     *         >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      */
 
     public AutoMLJobObjective getAutoMLJobObjective() {
@@ -630,15 +634,15 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies a metric to minimize or maximize as the objective of a job. For
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     * , only <code>Accuracy</code> is supported.
+     * Specifies a metric to minimize or maximize as the objective of a job. For <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     * >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      * </p>
      * 
      * @param autoMLJobObjective
-     *        Specifies a metric to minimize or maximize as the objective of a job. For
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
-     *        , only <code>Accuracy</code> is supported.
+     *        Specifies a metric to minimize or maximize as the objective of a job. For <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html"
+     *        >CreateAutoMLJobV2</a>, only <code>Accuracy</code> is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

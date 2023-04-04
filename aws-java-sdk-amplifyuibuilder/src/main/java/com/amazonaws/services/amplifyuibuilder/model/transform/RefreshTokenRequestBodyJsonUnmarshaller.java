@@ -52,6 +52,10 @@ public class RefreshTokenRequestBodyJsonUnmarshaller implements Unmarshaller<Ref
                     context.nextToken();
                     refreshTokenRequestBody.setToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("clientId", targetDepth)) {
+                    context.nextToken();
+                    refreshTokenRequestBody.setClientId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

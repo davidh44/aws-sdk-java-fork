@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ComponentPropertyBindingPropertiesMarshaller {
 
-    private static final MarshallingInfo<String> FIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("field").build();
     private static final MarshallingInfo<String> PROPERTY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("property").build();
+    private static final MarshallingInfo<String> FIELD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("field").build();
 
     private static final ComponentPropertyBindingPropertiesMarshaller instance = new ComponentPropertyBindingPropertiesMarshaller();
 
@@ -48,8 +48,8 @@ public class ComponentPropertyBindingPropertiesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(componentPropertyBindingProperties.getField(), FIELD_BINDING);
             protocolMarshaller.marshall(componentPropertyBindingProperties.getProperty(), PROPERTY_BINDING);
+            protocolMarshaller.marshall(componentPropertyBindingProperties.getField(), FIELD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

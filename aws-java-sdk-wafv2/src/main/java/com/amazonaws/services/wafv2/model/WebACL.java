@@ -24,7 +24,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * action to take (allow, block) for any request that does not match any of the rules. The rules in a web ACL can be a
  * combination of the types <a>Rule</a>, <a>RuleGroup</a>, and managed rule group. You can associate a web ACL with one
  * or more Amazon Web Services resources to protect. The resources can be an Amazon CloudFront distribution, an Amazon
- * API Gateway REST API, an Application Load Balancer, an AppSync GraphQL API, an Amazon Cognito user pool, or an App
+ * API Gateway REST API, an Application Load Balancer, an AppSync GraphQL API, Amazon Cognito user pool, or an App
  * Runner service.
  * </p>
  * 
@@ -87,9 +87,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      */
     private Long capacity;
@@ -161,12 +159,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      */
     private java.util.Map<String, CustomResponseBody> customResponseBodies;
@@ -196,22 +195,6 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> tokenDomains;
-    /**
-     * <p>
-     * Specifies custom configurations for the associations between the web ACL and protected resources.
-     * </p>
-     * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     * </p>
-     * <note>
-     * <p>
-     * You are charged additional fees when your protected resources forward body sizes that are larger than the
-     * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     * </p>
-     * </note>
-     */
-    private AssociationConfig associationConfig;
 
     /**
      * <p>
@@ -554,9 +537,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      * 
      * @param capacity
@@ -566,9 +547,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      *        groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost
      *        of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more
      *        processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage
-     *        when they use a rule group. For more information, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL
-     *        capacity units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     *        when they use a rule group. The WCU limit for web ACLs is 1,500.
      */
 
     public void setCapacity(Long capacity) {
@@ -584,9 +563,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      * 
      * @return The web ACL capacity units (WCUs) currently being used by this web ACL. </p>
@@ -595,9 +572,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      *         groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative
      *         cost of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use
      *         more processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU
-     *         usage when they use a rule group. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL
-     *         capacity units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     *         usage when they use a rule group. The WCU limit for web ACLs is 1,500.
      */
 
     public Long getCapacity() {
@@ -613,9 +588,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule.
      * Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power. Rule
      * group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL capacity
-     * units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     * The WCU limit for web ACLs is 1,500.
      * </p>
      * 
      * @param capacity
@@ -625,9 +598,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      *        groups, and web ACLs. WAF calculates capacity differently for each rule type, to reflect the relative cost
      *        of each rule. Simple rules that cost little to run use fewer WCUs than more complex rules that use more
      *        processing power. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage
-     *        when they use a rule group. For more information, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-waf-capacity-units.html">WAF web ACL
-     *        capacity units (WCU)</a> in the <i>WAF Developer Guide</i>.
+     *        when they use a rule group. The WCU limit for web ACLs is 1,500.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1111,12 +1082,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * 
      * @return A map of custom response keys and content bodies. When you create a rule with a block action, you can
@@ -1125,12 +1097,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For information about customizing web requests and responses, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing
-     *         web requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     *         web requests and responses in WAF</a> in the <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      *         </p>
      *         <p>
      *         For information about the limits on count and size for custom request and response settings, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      */
 
     public java.util.Map<String, CustomResponseBody> getCustomResponseBodies() {
@@ -1146,12 +1119,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * 
      * @param customResponseBodies
@@ -1161,12 +1135,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For information about customizing web requests and responses, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing
-     *        web requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     *        web requests and responses in WAF</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      *        </p>
      *        <p>
      *        For information about the limits on count and size for custom request and response settings, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF
-     *        Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      */
 
     public void setCustomResponseBodies(java.util.Map<String, CustomResponseBody> customResponseBodies) {
@@ -1182,12 +1157,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For information about customizing web requests and responses, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing web
-     * requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     * requests and responses in WAF</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * <p>
      * For information about the limits on count and size for custom request and response settings, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF Developer
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * </p>
      * 
      * @param customResponseBodies
@@ -1197,12 +1173,13 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For information about customizing web requests and responses, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html">Customizing
-     *        web requests and responses in WAF</a> in the <i>WAF Developer Guide</i>.
+     *        web requests and responses in WAF</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      *        </p>
      *        <p>
      *        For information about the limits on count and size for custom request and response settings, see <a
-     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <i>WAF
-     *        Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF quotas</a> in the <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1446,103 +1423,6 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * Specifies custom configurations for the associations between the web ACL and protected resources.
-     * </p>
-     * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     * </p>
-     * <note>
-     * <p>
-     * You are charged additional fees when your protected resources forward body sizes that are larger than the
-     * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     * </p>
-     * </note>
-     * 
-     * @param associationConfig
-     *        Specifies custom configurations for the associations between the web ACL and protected resources. </p>
-     *        <p>
-     *        Use this to customize the maximum size of the request body that your protected CloudFront distributions
-     *        forward to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     *        </p>
-     *        <note>
-     *        <p>
-     *        You are charged additional fees when your protected resources forward body sizes that are larger than the
-     *        default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     *        </p>
-     */
-
-    public void setAssociationConfig(AssociationConfig associationConfig) {
-        this.associationConfig = associationConfig;
-    }
-
-    /**
-     * <p>
-     * Specifies custom configurations for the associations between the web ACL and protected resources.
-     * </p>
-     * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     * </p>
-     * <note>
-     * <p>
-     * You are charged additional fees when your protected resources forward body sizes that are larger than the
-     * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     * </p>
-     * </note>
-     * 
-     * @return Specifies custom configurations for the associations between the web ACL and protected resources. </p>
-     *         <p>
-     *         Use this to customize the maximum size of the request body that your protected CloudFront distributions
-     *         forward to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     *         </p>
-     *         <note>
-     *         <p>
-     *         You are charged additional fees when your protected resources forward body sizes that are larger than the
-     *         default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     *         </p>
-     */
-
-    public AssociationConfig getAssociationConfig() {
-        return this.associationConfig;
-    }
-
-    /**
-     * <p>
-     * Specifies custom configurations for the associations between the web ACL and protected resources.
-     * </p>
-     * <p>
-     * Use this to customize the maximum size of the request body that your protected CloudFront distributions forward
-     * to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     * </p>
-     * <note>
-     * <p>
-     * You are charged additional fees when your protected resources forward body sizes that are larger than the
-     * default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     * </p>
-     * </note>
-     * 
-     * @param associationConfig
-     *        Specifies custom configurations for the associations between the web ACL and protected resources. </p>
-     *        <p>
-     *        Use this to customize the maximum size of the request body that your protected CloudFront distributions
-     *        forward to WAF for inspection. The default is 16 KB (16,384 kilobytes).
-     *        </p>
-     *        <note>
-     *        <p>
-     *        You are charged additional fees when your protected resources forward body sizes that are larger than the
-     *        default. For more information, see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
-     *        </p>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WebACL withAssociationConfig(AssociationConfig associationConfig) {
-        setAssociationConfig(associationConfig);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1585,9 +1465,7 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
         if (getChallengeConfig() != null)
             sb.append("ChallengeConfig: ").append(getChallengeConfig()).append(",");
         if (getTokenDomains() != null)
-            sb.append("TokenDomains: ").append(getTokenDomains()).append(",");
-        if (getAssociationConfig() != null)
-            sb.append("AssociationConfig: ").append(getAssociationConfig());
+            sb.append("TokenDomains: ").append(getTokenDomains());
         sb.append("}");
         return sb.toString();
     }
@@ -1668,10 +1546,6 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTokenDomains() != null && other.getTokenDomains().equals(this.getTokenDomains()) == false)
             return false;
-        if (other.getAssociationConfig() == null ^ this.getAssociationConfig() == null)
-            return false;
-        if (other.getAssociationConfig() != null && other.getAssociationConfig().equals(this.getAssociationConfig()) == false)
-            return false;
         return true;
     }
 
@@ -1696,7 +1570,6 @@ public class WebACL implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCaptchaConfig() == null) ? 0 : getCaptchaConfig().hashCode());
         hashCode = prime * hashCode + ((getChallengeConfig() == null) ? 0 : getChallengeConfig().hashCode());
         hashCode = prime * hashCode + ((getTokenDomains() == null) ? 0 : getTokenDomains().hashCode());
-        hashCode = prime * hashCode + ((getAssociationConfig() == null) ? 0 : getAssociationConfig().hashCode());
         return hashCode;
     }
 

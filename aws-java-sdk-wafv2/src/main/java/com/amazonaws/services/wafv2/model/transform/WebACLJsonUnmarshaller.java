@@ -123,10 +123,6 @@ public class WebACLJsonUnmarshaller implements Unmarshaller<WebACL, JsonUnmarsha
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("AssociationConfig", targetDepth)) {
-                    context.nextToken();
-                    webACL.setAssociationConfig(AssociationConfigJsonUnmarshaller.getInstance().unmarshall(context));
-                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

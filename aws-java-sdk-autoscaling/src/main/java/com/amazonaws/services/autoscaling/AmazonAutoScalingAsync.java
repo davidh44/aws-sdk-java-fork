@@ -103,12 +103,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>AttachTrafficSources</code>) that
-     * can attach multiple traffic sources types. While we continue to support
-     * <code>AttachLoadBalancerTargetGroups</code>, and you can use both the original
-     * <code>AttachLoadBalancerTargetGroups</code> API call and the new <code>AttachTrafficSources</code> API call on
-     * the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how you manage
-     * traffic sources.
+     * This API operation is superseded by <a>AttachTrafficSources</a>, which can attach multiple traffic sources types.
+     * We recommend using <code>AttachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>AttachLoadBalancerTargetGroups</code>. You can use both the original
+     * <code>AttachLoadBalancerTargetGroups</code> API operation and <code>AttachTrafficSources</code> on the same Auto
+     * Scaling group.
      * </p>
      * </note>
      * <p>
@@ -162,12 +161,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>AttachTrafficSources</code>) that
-     * can attach multiple traffic sources types. While we continue to support
-     * <code>AttachLoadBalancerTargetGroups</code>, and you can use both the original
-     * <code>AttachLoadBalancerTargetGroups</code> API call and the new <code>AttachTrafficSources</code> API call on
-     * the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how you manage
-     * traffic sources.
+     * This API operation is superseded by <a>AttachTrafficSources</a>, which can attach multiple traffic sources types.
+     * We recommend using <code>AttachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>AttachLoadBalancerTargetGroups</code>. You can use both the original
+     * <code>AttachLoadBalancerTargetGroups</code> API operation and <code>AttachTrafficSources</code> on the same Auto
+     * Scaling group.
      * </p>
      * </note>
      * <p>
@@ -226,11 +224,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>AttachTrafficSources</code>) that
-     * can attach multiple traffic sources types. While we continue to support <code>AttachLoadBalancers</code>, and you
-     * can use both the original <code>AttachLoadBalancers</code> API call and the new <code>AttachTrafficSources</code>
-     * API call on the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how
-     * you manage traffic sources.
+     * This API operation is superseded by <a>AttachTrafficSources</a>, which can attach multiple traffic sources types.
+     * We recommend using <code>AttachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>AttachLoadBalancers</code>. You can use both the original
+     * <code>AttachLoadBalancers</code> API operation and <code>AttachTrafficSources</code> on the same Auto Scaling
+     * group.
      * </p>
      * </note>
      * <p>
@@ -263,11 +261,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>AttachTrafficSources</code>) that
-     * can attach multiple traffic sources types. While we continue to support <code>AttachLoadBalancers</code>, and you
-     * can use both the original <code>AttachLoadBalancers</code> API call and the new <code>AttachTrafficSources</code>
-     * API call on the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how
-     * you manage traffic sources.
+     * This API operation is superseded by <a>AttachTrafficSources</a>, which can attach multiple traffic sources types.
+     * We recommend using <code>AttachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>AttachLoadBalancers</code>. You can use both the original
+     * <code>AttachLoadBalancers</code> API operation and <code>AttachTrafficSources</code> on the same Auto Scaling
+     * group.
      * </p>
      * </note>
      * <p>
@@ -337,12 +335,12 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      * </li>
      * <li>
      * <p>
-     * Network Load Balancer
+     * Gateway Load Balancer
      * </p>
      * </li>
      * <li>
      * <p>
-     * Gateway Load Balancer
+     * Network Load Balancer
      * </p>
      * </li>
      * <li>
@@ -388,12 +386,12 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
      * </li>
      * <li>
      * <p>
-     * Network Load Balancer
+     * Gateway Load Balancer
      * </p>
      * </li>
      * <li>
      * <p>
-     * Gateway Load Balancer
+     * Network Load Balancer
      * </p>
      * </li>
      * <li>
@@ -1745,12 +1743,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DescribeTrafficSources</code>) that
-     * can describe multiple traffic sources types. While we continue to support
-     * <code>DescribeLoadBalancerTargetGroups</code>, and you can use both the original
-     * <code>DescribeLoadBalancerTargetGroups</code> API call and the new <code>DescribeTrafficSources</code> API call
-     * on the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how you manage
-     * traffic sources.
+     * This API operation is superseded by <a>DescribeTrafficSources</a>, which can describe multiple traffic sources
+     * types. We recommend using <code>DetachTrafficSources</code> to simplify how you manage traffic sources. However,
+     * we continue to support <code>DescribeLoadBalancerTargetGroups</code>. You can use both the original
+     * <code>DescribeLoadBalancerTargetGroups</code> API operation and <code>DescribeTrafficSources</code> on the same
+     * Auto Scaling group.
      * </p>
      * </note>
      * <p>
@@ -1800,12 +1797,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DescribeTrafficSources</code>) that
-     * can describe multiple traffic sources types. While we continue to support
-     * <code>DescribeLoadBalancerTargetGroups</code>, and you can use both the original
-     * <code>DescribeLoadBalancerTargetGroups</code> API call and the new <code>DescribeTrafficSources</code> API call
-     * on the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how you manage
-     * traffic sources.
+     * This API operation is superseded by <a>DescribeTrafficSources</a>, which can describe multiple traffic sources
+     * types. We recommend using <code>DetachTrafficSources</code> to simplify how you manage traffic sources. However,
+     * we continue to support <code>DescribeLoadBalancerTargetGroups</code>. You can use both the original
+     * <code>DescribeLoadBalancerTargetGroups</code> API operation and <code>DescribeTrafficSources</code> on the same
+     * Auto Scaling group.
      * </p>
      * </note>
      * <p>
@@ -1860,11 +1856,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DescribeTrafficSources</code>) that
-     * can describe multiple traffic sources types. While we continue to support <code>DescribeLoadBalancers</code>, and
-     * you can use both the original <code>DescribeLoadBalancers</code> API call and the new
-     * <code>DescribeTrafficSources</code> API call on the same Auto Scaling group, we recommend using the new
-     * "traffic sources" API call to simplify how you manage traffic sources.
+     * This API operation is superseded by <a>DescribeTrafficSources</a>, which can describe multiple traffic sources
+     * types. We recommend using <code>DescribeTrafficSources</code> to simplify how you manage traffic sources.
+     * However, we continue to support <code>DescribeLoadBalancers</code>. You can use both the original
+     * <code>DescribeLoadBalancers</code> API operation and <code>DescribeTrafficSources</code> on the same Auto Scaling
+     * group.
      * </p>
      * </note>
      * <p>
@@ -1909,11 +1905,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DescribeTrafficSources</code>) that
-     * can describe multiple traffic sources types. While we continue to support <code>DescribeLoadBalancers</code>, and
-     * you can use both the original <code>DescribeLoadBalancers</code> API call and the new
-     * <code>DescribeTrafficSources</code> API call on the same Auto Scaling group, we recommend using the new
-     * "traffic sources" API call to simplify how you manage traffic sources.
+     * This API operation is superseded by <a>DescribeTrafficSources</a>, which can describe multiple traffic sources
+     * types. We recommend using <code>DescribeTrafficSources</code> to simplify how you manage traffic sources.
+     * However, we continue to support <code>DescribeLoadBalancers</code>. You can use both the original
+     * <code>DescribeLoadBalancers</code> API operation and <code>DescribeTrafficSources</code> on the same Auto Scaling
+     * group.
      * </p>
      * </note>
      * <p>
@@ -2576,12 +2572,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DetachTrafficSources</code>) that
-     * can detach multiple traffic sources types. While we continue to support
-     * <code>DetachLoadBalancerTargetGroups</code>, and you can use both the original
-     * <code>DetachLoadBalancerTargetGroups</code> API call and the new <code>DetachTrafficSources</code> API call on
-     * the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how you manage
-     * traffic sources.
+     * This API operation is superseded by <a>DetachTrafficSources</a>, which can detach multiple traffic sources types.
+     * We recommend using <code>DetachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>DetachLoadBalancerTargetGroups</code>. You can use both the original
+     * <code>DetachLoadBalancerTargetGroups</code> API operation and <code>DetachTrafficSources</code> on the same Auto
+     * Scaling group.
      * </p>
      * </note>
      * <p>
@@ -2613,12 +2608,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DetachTrafficSources</code>) that
-     * can detach multiple traffic sources types. While we continue to support
-     * <code>DetachLoadBalancerTargetGroups</code>, and you can use both the original
-     * <code>DetachLoadBalancerTargetGroups</code> API call and the new <code>DetachTrafficSources</code> API call on
-     * the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how you manage
-     * traffic sources.
+     * This API operation is superseded by <a>DetachTrafficSources</a>, which can detach multiple traffic sources types.
+     * We recommend using <code>DetachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>DetachLoadBalancerTargetGroups</code>. You can use both the original
+     * <code>DetachLoadBalancerTargetGroups</code> API operation and <code>DetachTrafficSources</code> on the same Auto
+     * Scaling group.
      * </p>
      * </note>
      * <p>
@@ -2655,11 +2649,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DetachTrafficSources</code>) that
-     * can detach multiple traffic sources types. While we continue to support <code>DetachLoadBalancers</code>, and you
-     * can use both the original <code>DetachLoadBalancers</code> API call and the new <code>DetachTrafficSources</code>
-     * API call on the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how
-     * you manage traffic sources.
+     * This API operation is superseded by <a>DetachTrafficSources</a>, which can detach multiple traffic sources types.
+     * We recommend using <code>DetachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>DetachLoadBalancers</code>. You can use both the original
+     * <code>DetachLoadBalancers</code> API operation and <code>DetachTrafficSources</code> on the same Auto Scaling
+     * group.
      * </p>
      * </note>
      * <p>
@@ -2686,11 +2680,11 @@ public interface AmazonAutoScalingAsync extends AmazonAutoScaling {
     /**
      * <note>
      * <p>
-     * This API call has been replaced with a new "traffic sources" API call (<code>DetachTrafficSources</code>) that
-     * can detach multiple traffic sources types. While we continue to support <code>DetachLoadBalancers</code>, and you
-     * can use both the original <code>DetachLoadBalancers</code> API call and the new <code>DetachTrafficSources</code>
-     * API call on the same Auto Scaling group, we recommend using the new "traffic sources" API call to simplify how
-     * you manage traffic sources.
+     * This API operation is superseded by <a>DetachTrafficSources</a>, which can detach multiple traffic sources types.
+     * We recommend using <code>DetachTrafficSources</code> to simplify how you manage traffic sources. However, we
+     * continue to support <code>DetachLoadBalancers</code>. You can use both the original
+     * <code>DetachLoadBalancers</code> API operation and <code>DetachTrafficSources</code> on the same Auto Scaling
+     * group.
      * </p>
      * </note>
      * <p>

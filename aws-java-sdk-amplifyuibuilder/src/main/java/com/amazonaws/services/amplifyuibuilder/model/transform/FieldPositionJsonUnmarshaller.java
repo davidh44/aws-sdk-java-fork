@@ -48,10 +48,6 @@ public class FieldPositionJsonUnmarshaller implements Unmarshaller<FieldPosition
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("below", targetDepth)) {
-                    context.nextToken();
-                    fieldPosition.setBelow(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("fixed", targetDepth)) {
                     context.nextToken();
                     fieldPosition.setFixed(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class FieldPositionJsonUnmarshaller implements Unmarshaller<FieldPosition
                 if (context.testExpression("rightOf", targetDepth)) {
                     context.nextToken();
                     fieldPosition.setRightOf(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("below", targetDepth)) {
+                    context.nextToken();
+                    fieldPosition.setBelow(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

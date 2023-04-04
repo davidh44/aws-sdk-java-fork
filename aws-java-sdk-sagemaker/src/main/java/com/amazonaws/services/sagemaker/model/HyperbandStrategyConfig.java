@@ -46,9 +46,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      * tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a value for
      * <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the hyperparameter tuning
      * strategy, <code>HyperbandTrainingJ</code> attempts to infer <code>MaxResource</code> from the following keys (if
-     * present) in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     * :
+     * present) in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     * >StaticsHyperParameters</a>:
      * </p>
      * <ul>
      * <li>
@@ -149,9 +149,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      * tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a value for
      * <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the hyperparameter tuning
      * strategy, <code>HyperbandTrainingJ</code> attempts to infer <code>MaxResource</code> from the following keys (if
-     * present) in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     * :
+     * present) in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     * >StaticsHyperParameters</a>:
      * </p>
      * <ul>
      * <li>
@@ -197,9 +197,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      *        hyperparameter tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a
      *        value for <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the
      *        hyperparameter tuning strategy, <code>HyperbandTrainingJ</code> attempts to infer <code>MaxResource</code>
-     *        from the following keys (if present) in
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     *        :</p>
+     *        from the following keys (if present) in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     *        >StaticsHyperParameters</a>:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -249,9 +249,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      * tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a value for
      * <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the hyperparameter tuning
      * strategy, <code>HyperbandTrainingJ</code> attempts to infer <code>MaxResource</code> from the following keys (if
-     * present) in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     * :
+     * present) in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     * >StaticsHyperParameters</a>:
      * </p>
      * <ul>
      * <li>
@@ -296,9 +296,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      *         hyperparameter tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a
      *         value for <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the
      *         hyperparameter tuning strategy, <code>HyperbandTrainingJ</code> attempts to infer
-     *         <code>MaxResource</code> from the following keys (if present) in
-     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     *         :</p>
+     *         <code>MaxResource</code> from the following keys (if present) in <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     *         >StaticsHyperParameters</a>:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -348,9 +348,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      * tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a value for
      * <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the hyperparameter tuning
      * strategy, <code>HyperbandTrainingJ</code> attempts to infer <code>MaxResource</code> from the following keys (if
-     * present) in
-     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     * :
+     * present) in <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     * >StaticsHyperParameters</a>:
      * </p>
      * <ul>
      * <li>
@@ -396,9 +396,9 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
      *        hyperparameter tuning job. Once a job reaches the <code>MaxResource</code> value, it is stopped. If a
      *        value for <code>MaxResource</code> is not provided, and <code>Hyperband</code> is selected as the
      *        hyperparameter tuning strategy, <code>HyperbandTrainingJ</code> attempts to infer <code>MaxResource</code>
-     *        from the following keys (if present) in
-     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters">StaticsHyperParameters</a> </code>
-     *        :</p>
+     *        from the following keys (if present) in <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html#sagemaker-Type-HyperParameterTrainingJobDefinition-StaticHyperParameters"
+     *        >StaticsHyperParameters</a>:</p>
      *        <ul>
      *        <li>
      *        <p>

@@ -48,11 +48,9 @@ public class FieldValidationConfigurationJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("numValues", targetDepth)) {
+                if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
-                    fieldValidationConfiguration.setNumValues(new ListUnmarshaller<Integer>(context.getUnmarshaller(Integer.class))
-
-                    .unmarshall(context));
+                    fieldValidationConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("strValues", targetDepth)) {
                     context.nextToken();
@@ -60,9 +58,11 @@ public class FieldValidationConfigurationJsonUnmarshaller implements Unmarshalle
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("type", targetDepth)) {
+                if (context.testExpression("numValues", targetDepth)) {
                     context.nextToken();
-                    fieldValidationConfiguration.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                    fieldValidationConfiguration.setNumValues(new ListUnmarshaller<Integer>(context.getUnmarshaller(Integer.class))
+
+                    .unmarshall(context));
                 }
                 if (context.testExpression("validationMessage", targetDepth)) {
                     context.nextToken();

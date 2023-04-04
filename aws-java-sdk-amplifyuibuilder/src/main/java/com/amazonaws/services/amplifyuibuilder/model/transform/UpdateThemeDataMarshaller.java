@@ -32,10 +32,10 @@ public class UpdateThemeDataMarshaller {
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
-    private static final MarshallingInfo<List> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("overrides").build();
     private static final MarshallingInfo<List> VALUES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("values").build();
+    private static final MarshallingInfo<List> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("overrides").build();
 
     private static final UpdateThemeDataMarshaller instance = new UpdateThemeDataMarshaller();
 
@@ -55,8 +55,8 @@ public class UpdateThemeDataMarshaller {
         try {
             protocolMarshaller.marshall(updateThemeData.getId(), ID_BINDING);
             protocolMarshaller.marshall(updateThemeData.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(updateThemeData.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(updateThemeData.getValues(), VALUES_BINDING);
+            protocolMarshaller.marshall(updateThemeData.getOverrides(), OVERRIDES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -48,17 +48,17 @@ public class FormCTAJsonUnmarshaller implements Unmarshaller<FormCTA, JsonUnmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("cancel", targetDepth)) {
+                if (context.testExpression("position", targetDepth)) {
                     context.nextToken();
-                    formCTA.setCancel(FormButtonJsonUnmarshaller.getInstance().unmarshall(context));
+                    formCTA.setPosition(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("clear", targetDepth)) {
                     context.nextToken();
                     formCTA.setClear(FormButtonJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("position", targetDepth)) {
+                if (context.testExpression("cancel", targetDepth)) {
                     context.nextToken();
-                    formCTA.setPosition(context.getUnmarshaller(String.class).unmarshall(context));
+                    formCTA.setCancel(FormButtonJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("submit", targetDepth)) {
                     context.nextToken();
