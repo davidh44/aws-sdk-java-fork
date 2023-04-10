@@ -35,8 +35,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a task,
-     * the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for a
+     * task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      * </p>
      * </li>
      * <li>
@@ -66,8 +66,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a task,
-     * the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for a
+     * task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      * </p>
      * </li>
      * <li>
@@ -86,8 +86,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for
-     *         a task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     *         <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on
+     *         for a task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -116,8 +116,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a task,
-     * the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for a
+     * task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      * </p>
      * </li>
      * <li>
@@ -137,8 +137,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a
-     *        task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     *        <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for
+     *        a task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -169,8 +169,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a task,
-     * the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for a
+     * task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      * </p>
      * </li>
      * <li>
@@ -195,8 +195,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a
-     *        task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     *        <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for
+     *        a task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -229,8 +229,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a task,
-     * the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     * <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for a
+     * task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      * </p>
      * </li>
      * <li>
@@ -250,8 +250,8 @@ public class UpdateTaskProtectionResult extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is enabled for a
-     *        task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
+     *        <code>protectionEnabled</code>: The protection status of the task. If scale-in protection is turned on for
+     *        a task, the value is <code>true</code>. Otherwise, it is <code>false</code>.
      *        </p>
      *        </li>
      *        <li>

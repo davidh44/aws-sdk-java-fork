@@ -309,8 +309,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private String propagateTags;
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     * execute command functionality is enabled for all containers in tasks as part of the service.
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, the
+     * execute command functionality is turned on for all containers in tasks as part of the service.
      * </p>
      */
     private Boolean enableExecuteCommand;
@@ -2640,13 +2640,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     * execute command functionality is enabled for all containers in tasks as part of the service.
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, the
+     * execute command functionality is turned on for all containers in tasks as part of the service.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     *        execute command functionality is enabled for all containers in tasks as part of the service.
+     *        Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
+     *        the execute command functionality is turned on for all containers in tasks as part of the service.
      */
 
     public void setEnableExecuteCommand(Boolean enableExecuteCommand) {
@@ -2655,12 +2655,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     * execute command functionality is enabled for all containers in tasks as part of the service.
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, the
+     * execute command functionality is turned on for all containers in tasks as part of the service.
      * </p>
      * 
-     * @return Determines whether the execute command functionality is enabled for the service. If <code>true</code>,
-     *         the execute command functionality is enabled for all containers in tasks as part of the service.
+     * @return Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
+     *         the execute command functionality is turned on for all containers in tasks as part of the service.
      */
 
     public Boolean getEnableExecuteCommand() {
@@ -2669,13 +2669,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     * execute command functionality is enabled for all containers in tasks as part of the service.
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, the
+     * execute command functionality is turned on for all containers in tasks as part of the service.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     *        execute command functionality is enabled for all containers in tasks as part of the service.
+     *        Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
+     *        the execute command functionality is turned on for all containers in tasks as part of the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2686,12 +2686,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, the
-     * execute command functionality is enabled for all containers in tasks as part of the service.
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, the
+     * execute command functionality is turned on for all containers in tasks as part of the service.
      * </p>
      * 
-     * @return Determines whether the execute command functionality is enabled for the service. If <code>true</code>,
-     *         the execute command functionality is enabled for all containers in tasks as part of the service.
+     * @return Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
+     *         the execute command functionality is turned on for all containers in tasks as part of the service.
      */
 
     public Boolean isEnableExecuteCommand() {

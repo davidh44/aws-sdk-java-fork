@@ -49,7 +49,7 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private Boolean enableECSManagedTags;
     /**
      * <p>
-     * Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this enables
+     * Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this enables
      * execute command functionality on all containers in the task.
      * </p>
      */
@@ -367,12 +367,12 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this enables
+     * Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this enables
      * execute command functionality on all containers in the task.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this
+     *        Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this
      *        enables execute command functionality on all containers in the task.
      */
 
@@ -382,11 +382,11 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this enables
+     * Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this enables
      * execute command functionality on all containers in the task.
      * </p>
      * 
-     * @return Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this
+     * @return Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this
      *         enables execute command functionality on all containers in the task.
      */
 
@@ -396,12 +396,12 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this enables
+     * Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this enables
      * execute command functionality on all containers in the task.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this
+     *        Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this
      *        enables execute command functionality on all containers in the task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -413,11 +413,11 @@ public class StartTaskRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this enables
+     * Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this enables
      * execute command functionality on all containers in the task.
      * </p>
      * 
-     * @return Whether or not the execute command functionality is enabled for the task. If <code>true</code>, this
+     * @return Whether or not the execute command functionality is turned on for the task. If <code>true</code>, this
      *         enables execute command functionality on all containers in the task.
      */
 

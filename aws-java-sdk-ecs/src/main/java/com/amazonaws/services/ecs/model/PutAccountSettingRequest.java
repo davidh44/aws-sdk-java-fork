@@ -32,8 +32,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      * ARN and resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is
      * specified, the ARN and resource ID for your Amazon ECS container instances is affected. If
      * <code>awsvpcTrunking</code> is specified, the elastic network interface (ENI) limit for your Amazon ECS container
-     * instances is affected. If <code>containerInsights</code> is specified, the default setting for CloudWatch
-     * Container Insights for your clusters is affected.
+     * instances is affected. If <code>containerInsights</code> is specified, the default setting for Amazon Web
+     * Services CloudWatch Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is
+     * specified, Fargate FIPS 140 compliance is affected.
      * </p>
      */
     private String name;
@@ -66,8 +67,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      * ARN and resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is
      * specified, the ARN and resource ID for your Amazon ECS container instances is affected. If
      * <code>awsvpcTrunking</code> is specified, the elastic network interface (ENI) limit for your Amazon ECS container
-     * instances is affected. If <code>containerInsights</code> is specified, the default setting for CloudWatch
-     * Container Insights for your clusters is affected.
+     * instances is affected. If <code>containerInsights</code> is specified, the default setting for Amazon Web
+     * Services CloudWatch Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is
+     * specified, Fargate FIPS 140 compliance is affected.
      * </p>
      * 
      * @param name
@@ -77,8 +79,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *        container instances is affected. If <code>awsvpcTrunking</code> is specified, the elastic network
      *        interface (ENI) limit for your Amazon ECS container instances is affected. If
-     *        <code>containerInsights</code> is specified, the default setting for CloudWatch Container Insights for
-     *        your clusters is affected.
+     *        <code>containerInsights</code> is specified, the default setting for Amazon Web Services CloudWatch
+     *        Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is specified, Fargate
+     *        FIPS 140 compliance is affected.
      * @see SettingName
      */
 
@@ -93,8 +96,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      * ARN and resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is
      * specified, the ARN and resource ID for your Amazon ECS container instances is affected. If
      * <code>awsvpcTrunking</code> is specified, the elastic network interface (ENI) limit for your Amazon ECS container
-     * instances is affected. If <code>containerInsights</code> is specified, the default setting for CloudWatch
-     * Container Insights for your clusters is affected.
+     * instances is affected. If <code>containerInsights</code> is specified, the default setting for Amazon Web
+     * Services CloudWatch Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is
+     * specified, Fargate FIPS 140 compliance is affected.
      * </p>
      * 
      * @return The Amazon ECS resource name for which to modify the account setting. If
@@ -103,8 +107,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      *         affected. If <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your
      *         Amazon ECS container instances is affected. If <code>awsvpcTrunking</code> is specified, the elastic
      *         network interface (ENI) limit for your Amazon ECS container instances is affected. If
-     *         <code>containerInsights</code> is specified, the default setting for CloudWatch Container Insights for
-     *         your clusters is affected.
+     *         <code>containerInsights</code> is specified, the default setting for Amazon Web Services CloudWatch
+     *         Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is specified, Fargate
+     *         FIPS 140 compliance is affected.
      * @see SettingName
      */
 
@@ -119,8 +124,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      * ARN and resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is
      * specified, the ARN and resource ID for your Amazon ECS container instances is affected. If
      * <code>awsvpcTrunking</code> is specified, the elastic network interface (ENI) limit for your Amazon ECS container
-     * instances is affected. If <code>containerInsights</code> is specified, the default setting for CloudWatch
-     * Container Insights for your clusters is affected.
+     * instances is affected. If <code>containerInsights</code> is specified, the default setting for Amazon Web
+     * Services CloudWatch Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is
+     * specified, Fargate FIPS 140 compliance is affected.
      * </p>
      * 
      * @param name
@@ -130,8 +136,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *        container instances is affected. If <code>awsvpcTrunking</code> is specified, the elastic network
      *        interface (ENI) limit for your Amazon ECS container instances is affected. If
-     *        <code>containerInsights</code> is specified, the default setting for CloudWatch Container Insights for
-     *        your clusters is affected.
+     *        <code>containerInsights</code> is specified, the default setting for Amazon Web Services CloudWatch
+     *        Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is specified, Fargate
+     *        FIPS 140 compliance is affected.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SettingName
      */
@@ -148,8 +155,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      * ARN and resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is
      * specified, the ARN and resource ID for your Amazon ECS container instances is affected. If
      * <code>awsvpcTrunking</code> is specified, the elastic network interface (ENI) limit for your Amazon ECS container
-     * instances is affected. If <code>containerInsights</code> is specified, the default setting for CloudWatch
-     * Container Insights for your clusters is affected.
+     * instances is affected. If <code>containerInsights</code> is specified, the default setting for Amazon Web
+     * Services CloudWatch Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is
+     * specified, Fargate FIPS 140 compliance is affected.
      * </p>
      * 
      * @param name
@@ -159,8 +167,9 @@ public class PutAccountSettingRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *        container instances is affected. If <code>awsvpcTrunking</code> is specified, the elastic network
      *        interface (ENI) limit for your Amazon ECS container instances is affected. If
-     *        <code>containerInsights</code> is specified, the default setting for CloudWatch Container Insights for
-     *        your clusters is affected.
+     *        <code>containerInsights</code> is specified, the default setting for Amazon Web Services CloudWatch
+     *        Container Insights for your clusters is affected. If <code>fargateFIPSMode</code> is specified, Fargate
+     *        FIPS 140 compliance is affected.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SettingName
      */

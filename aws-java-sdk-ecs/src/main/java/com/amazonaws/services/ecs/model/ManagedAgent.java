@@ -36,7 +36,7 @@ public class ManagedAgent implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastStartedAt;
     /**
      * <p>
-     * The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     * The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      * <code>ExecuteCommandAgent</code>.
      * </p>
      */
@@ -96,12 +96,12 @@ public class ManagedAgent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     * The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      * <code>ExecuteCommandAgent</code>.
      * </p>
      * 
      * @param name
-     *        The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     *        The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      *        <code>ExecuteCommandAgent</code>.
      * @see ManagedAgentName
      */
@@ -112,11 +112,11 @@ public class ManagedAgent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     * The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      * <code>ExecuteCommandAgent</code>.
      * </p>
      * 
-     * @return The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     * @return The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      *         <code>ExecuteCommandAgent</code>.
      * @see ManagedAgentName
      */
@@ -127,12 +127,12 @@ public class ManagedAgent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     * The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      * <code>ExecuteCommandAgent</code>.
      * </p>
      * 
      * @param name
-     *        The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     *        The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      *        <code>ExecuteCommandAgent</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagedAgentName
@@ -145,12 +145,12 @@ public class ManagedAgent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     * The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      * <code>ExecuteCommandAgent</code>.
      * </p>
      * 
      * @param name
-     *        The name of the managed agent. When the execute command feature is enabled, the managed agent name is
+     *        The name of the managed agent. When the execute command feature is turned on, the managed agent name is
      *        <code>ExecuteCommandAgent</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ManagedAgentName

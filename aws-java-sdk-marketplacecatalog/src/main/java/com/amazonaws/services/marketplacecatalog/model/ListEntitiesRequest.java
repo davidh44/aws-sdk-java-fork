@@ -63,6 +63,8 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
      */
     private Integer maxResults;
 
+    private String ownershipType;
+
     /**
      * <p>
      * The catalog related to the request. Fixed value: <code>AWSMarketplace</code>
@@ -345,6 +347,46 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * @param ownershipType
+     * @see OwnershipType
+     */
+
+    public void setOwnershipType(String ownershipType) {
+        this.ownershipType = ownershipType;
+    }
+
+    /**
+     * @return
+     * @see OwnershipType
+     */
+
+    public String getOwnershipType() {
+        return this.ownershipType;
+    }
+
+    /**
+     * @param ownershipType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OwnershipType
+     */
+
+    public ListEntitiesRequest withOwnershipType(String ownershipType) {
+        setOwnershipType(ownershipType);
+        return this;
+    }
+
+    /**
+     * @param ownershipType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OwnershipType
+     */
+
+    public ListEntitiesRequest withOwnershipType(OwnershipType ownershipType) {
+        this.ownershipType = ownershipType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -367,7 +409,9 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getOwnershipType() != null)
+            sb.append("OwnershipType: ").append(getOwnershipType());
         sb.append("}");
         return sb.toString();
     }
@@ -406,6 +450,10 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getOwnershipType() == null ^ this.getOwnershipType() == null)
+            return false;
+        if (other.getOwnershipType() != null && other.getOwnershipType().equals(this.getOwnershipType()) == false)
+            return false;
         return true;
     }
 
@@ -420,6 +468,7 @@ public class ListEntitiesRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getSort() == null) ? 0 : getSort().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getOwnershipType() == null) ? 0 : getOwnershipType().hashCode());
         return hashCode;
     }
 

@@ -164,7 +164,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The rollout state of the deployment. When a service deployment is started, it begins in an
      * <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled, the
+     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned on, the
      * deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state doesn't launch
      * any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * </p>
@@ -1063,7 +1063,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The rollout state of the deployment. When a service deployment is started, it begins in an
      * <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled, the
+     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned on, the
      * deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state doesn't launch
      * any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * </p>
@@ -1077,8 +1077,8 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The rollout state of the deployment. When a service deployment is started, it begins in an
      *        <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     *        <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled,
-     *        the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
+     *        <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned
+     *        on, the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
      *        doesn't launch any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * @see DeploymentRolloutState
      */
@@ -1097,7 +1097,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The rollout state of the deployment. When a service deployment is started, it begins in an
      * <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled, the
+     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned on, the
      * deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state doesn't launch
      * any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * </p>
@@ -1110,9 +1110,9 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The rollout state of the deployment. When a service deployment is started, it begins in an
      *         <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     *         <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is
-     *         enabled, the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code>
-     *         state doesn't launch any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
+     *         <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned
+     *         on, the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
+     *         doesn't launch any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * @see DeploymentRolloutState
      */
 
@@ -1130,7 +1130,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The rollout state of the deployment. When a service deployment is started, it begins in an
      * <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled, the
+     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned on, the
      * deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state doesn't launch
      * any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * </p>
@@ -1144,8 +1144,8 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The rollout state of the deployment. When a service deployment is started, it begins in an
      *        <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     *        <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled,
-     *        the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
+     *        <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned
+     *        on, the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
      *        doesn't launch any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeploymentRolloutState
@@ -1166,7 +1166,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The rollout state of the deployment. When a service deployment is started, it begins in an
      * <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled, the
+     * <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned on, the
      * deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state doesn't launch
      * any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * </p>
@@ -1180,8 +1180,8 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The rollout state of the deployment. When a service deployment is started, it begins in an
      *        <code>IN_PROGRESS</code> state. When the service reaches a steady state, the deployment transitions to a
-     *        <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is enabled,
-     *        the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
+     *        <code>COMPLETED</code> state. If the service fails to reach a steady state and circuit breaker is turned
+     *        on, the deployment transitions to a <code>FAILED</code> state. A deployment in <code>FAILED</code> state
      *        doesn't launch any new tasks. For more information, see <a>DeploymentCircuitBreaker</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeploymentRolloutState

@@ -77,7 +77,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports on the
-     * host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     * host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      * </p>
      * </li>
      * </ul>
@@ -367,7 +367,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports on the
-     * host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     * host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      * </p>
      * </li>
      * </ul>
@@ -415,7 +415,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports
-     *        on the host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     *        on the host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      *        </p>
      *        </li>
      *        </ul>
@@ -469,7 +469,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports on the
-     * host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     * host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      * </p>
      * </li>
      * </ul>
@@ -516,7 +516,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports
-     *         on the host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     *         on the host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      *         </p>
      *         </li>
      *         </ul>
@@ -571,7 +571,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports on the
-     * host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     * host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      * </p>
      * </li>
      * </ul>
@@ -619,7 +619,7 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        For containers in a task with the <code>bridge</code> network mode, the Amazon ECS agent finds open ports
-     *        on the host and automaticaly binds them to the container ports. This is a dynamic mapping strategy.
+     *        on the host and automatically binds them to the container ports. This is a dynamic mapping strategy.
      *        </p>
      *        </li>
      *        </ul>

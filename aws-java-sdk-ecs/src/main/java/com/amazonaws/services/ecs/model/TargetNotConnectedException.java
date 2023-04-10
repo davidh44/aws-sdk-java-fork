@@ -31,8 +31,7 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * There is an interface Amazon VPC endpoint for Amazon ECS, but there is not one for for Systems Manager Session
- * Manager
+ * There is an interface Amazon VPC endpoint for Amazon ECS, but there is not one for Systems Manager Session Manager
  * </p>
  * </li>
  * </ul>

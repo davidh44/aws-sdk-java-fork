@@ -18,6 +18,9 @@ import javax.annotation.Generated;
  * <p>
  * Too many requests.
  * </p>
+ * <p>
+ * HTTP status code: 429
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ThrottlingException extends com.amazonaws.services.marketplacecatalog.model.AWSMarketplaceCatalogException {

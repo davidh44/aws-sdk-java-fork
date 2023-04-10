@@ -62,7 +62,7 @@ public class DetectLabelsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of the filters to be applied to returned detected labels and image properties. Specified filters can be
      * inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label categories.
      * The exact label names or label categories must be supplied. For a full list of labels and label categories, see
-     * LINK HERE.
+     * <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting labels</a>.
      * </p>
      */
     private DetectLabelsSettings settings;
@@ -376,14 +376,15 @@ public class DetectLabelsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of the filters to be applied to returned detected labels and image properties. Specified filters can be
      * inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label categories.
      * The exact label names or label categories must be supplied. For a full list of labels and label categories, see
-     * LINK HERE.
+     * <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting labels</a>.
      * </p>
      * 
      * @param settings
      *        A list of the filters to be applied to returned detected labels and image properties. Specified filters
      *        can be inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label
      *        categories. The exact label names or label categories must be supplied. For a full list of labels and
-     *        label categories, see LINK HERE.
+     *        label categories, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting
+     *        labels</a>.
      */
 
     public void setSettings(DetectLabelsSettings settings) {
@@ -395,13 +396,14 @@ public class DetectLabelsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of the filters to be applied to returned detected labels and image properties. Specified filters can be
      * inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label categories.
      * The exact label names or label categories must be supplied. For a full list of labels and label categories, see
-     * LINK HERE.
+     * <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting labels</a>.
      * </p>
      * 
      * @return A list of the filters to be applied to returned detected labels and image properties. Specified filters
      *         can be inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label
      *         categories. The exact label names or label categories must be supplied. For a full list of labels and
-     *         label categories, see LINK HERE.
+     *         label categories, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting
+     *         labels</a>.
      */
 
     public DetectLabelsSettings getSettings() {
@@ -413,14 +415,15 @@ public class DetectLabelsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of the filters to be applied to returned detected labels and image properties. Specified filters can be
      * inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label categories.
      * The exact label names or label categories must be supplied. For a full list of labels and label categories, see
-     * LINK HERE.
+     * <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting labels</a>.
      * </p>
      * 
      * @param settings
      *        A list of the filters to be applied to returned detected labels and image properties. Specified filters
      *        can be inclusive, exclusive, or a combination of both. Filters can be used for individual labels or label
      *        categories. The exact label names or label categories must be supplied. For a full list of labels and
-     *        label categories, see LINK HERE.
+     *        label categories, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting
+     *        labels</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

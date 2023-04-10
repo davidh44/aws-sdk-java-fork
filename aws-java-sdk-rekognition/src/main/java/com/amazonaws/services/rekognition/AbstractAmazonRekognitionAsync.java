@@ -80,6 +80,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateFaceLivenessSessionResult> createFaceLivenessSessionAsync(CreateFaceLivenessSessionRequest request) {
+
+        return createFaceLivenessSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFaceLivenessSessionResult> createFaceLivenessSessionAsync(CreateFaceLivenessSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFaceLivenessSessionRequest, CreateFaceLivenessSessionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProjectResult> createProjectAsync(CreateProjectRequest request) {
 
         return createProjectAsync(request, null);
@@ -413,6 +426,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<GetFaceDetectionResult> getFaceDetectionAsync(GetFaceDetectionRequest request,
             com.amazonaws.handlers.AsyncHandler<GetFaceDetectionRequest, GetFaceDetectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFaceLivenessSessionResultsResult> getFaceLivenessSessionResultsAsync(GetFaceLivenessSessionResultsRequest request) {
+
+        return getFaceLivenessSessionResultsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetFaceLivenessSessionResultsResult> getFaceLivenessSessionResultsAsync(GetFaceLivenessSessionResultsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetFaceLivenessSessionResultsRequest, GetFaceLivenessSessionResultsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -33,12 +33,22 @@ public class AbstractAWSMarketplaceCatalog implements AWSMarketplaceCatalog {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeChangeSetResult describeChangeSet(DescribeChangeSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DescribeEntityResult describeEntity(DescribeEntityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -54,6 +64,11 @@ public class AbstractAWSMarketplaceCatalog implements AWSMarketplaceCatalog {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

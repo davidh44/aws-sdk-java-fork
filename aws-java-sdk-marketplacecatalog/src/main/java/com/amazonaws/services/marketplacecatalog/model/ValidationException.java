@@ -18,6 +18,9 @@ import javax.annotation.Generated;
  * <p>
  * An error occurred during validation.
  * </p>
+ * <p>
+ * HTTP status code: 422
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.marketplacecatalog.model.AWSMarketplaceCatalogException {

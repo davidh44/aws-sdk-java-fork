@@ -40,6 +40,8 @@ public class ListEntitiesRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> OWNERSHIPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OwnershipType").build();
 
     private static final ListEntitiesRequestMarshaller instance = new ListEntitiesRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class ListEntitiesRequestMarshaller {
             protocolMarshaller.marshall(listEntitiesRequest.getSort(), SORT_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listEntitiesRequest.getOwnershipType(), OWNERSHIPTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

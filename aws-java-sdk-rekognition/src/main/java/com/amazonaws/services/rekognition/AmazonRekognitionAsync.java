@@ -583,6 +583,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * and check the value of <code>Status</code> in the <a>ProjectVersionDescription</a> object. The copy operation has
      * finished when the value of <code>Status</code> is <code>COPYING_COMPLETED</code>.
      * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:CopyProjectVersion</code> action.
+     * </p>
      * 
      * @param copyProjectVersionRequest
      * @return A Java Future containing the result of the CopyProjectVersion operation returned by the service.
@@ -618,6 +621,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * Copying a model version takes a while to complete. To get the current status, call <a>DescribeProjectVersions</a>
      * and check the value of <code>Status</code> in the <a>ProjectVersionDescription</a> object. The copy operation has
      * finished when the value of <code>Status</code> is <code>COPYING_COMPLETED</code>.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:CopyProjectVersion</code> action.
      * </p>
      * 
      * @param copyProjectVersionRequest
@@ -775,6 +781,45 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
+     * This API operation initiates a Face Liveness session. It returns a <code>SessionId</code>, which you can use to
+     * start streaming Face Liveness video and get the results for a Face Liveness session. You can use the
+     * <code>OutputConfig</code> option in the Settings parameter to provide an Amazon S3 bucket location. The Amazon S3
+     * bucket stores reference images and audit images. You can use <code>AuditImagesLimit</code> to limit of audit
+     * images returned. This number is between 0 and 4. By default, it is set to 0. The limit is best effort and based
+     * on the duration of the selfie-video.
+     * </p>
+     * 
+     * @param createFaceLivenessSessionRequest
+     * @return A Java Future containing the result of the CreateFaceLivenessSession operation returned by the service.
+     * @sample AmazonRekognitionAsync.CreateFaceLivenessSession
+     */
+    java.util.concurrent.Future<CreateFaceLivenessSessionResult> createFaceLivenessSessionAsync(
+            CreateFaceLivenessSessionRequest createFaceLivenessSessionRequest);
+
+    /**
+     * <p>
+     * This API operation initiates a Face Liveness session. It returns a <code>SessionId</code>, which you can use to
+     * start streaming Face Liveness video and get the results for a Face Liveness session. You can use the
+     * <code>OutputConfig</code> option in the Settings parameter to provide an Amazon S3 bucket location. The Amazon S3
+     * bucket stores reference images and audit images. You can use <code>AuditImagesLimit</code> to limit of audit
+     * images returned. This number is between 0 and 4. By default, it is set to 0. The limit is best effort and based
+     * on the duration of the selfie-video.
+     * </p>
+     * 
+     * @param createFaceLivenessSessionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFaceLivenessSession operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.CreateFaceLivenessSession
+     */
+    java.util.concurrent.Future<CreateFaceLivenessSessionResult> createFaceLivenessSessionAsync(
+            CreateFaceLivenessSessionRequest createFaceLivenessSessionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFaceLivenessSessionRequest, CreateFaceLivenessSessionResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new Amazon Rekognition Custom Labels project. A project is a group of resources (datasets, model
      * versions) that you use to create and manage Amazon Rekognition Custom Labels models.
      * </p>
@@ -928,9 +973,10 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <li>
      * <p>
      * If you are creating a stream processor for detecting faces, you provide as input a Kinesis video stream (
-     * <code>Input</code>) and a Kinesis data stream (<code>Output</code>) stream. You also specify the face recognition
-     * criteria in <code>Settings</code>. For example, the collection containing faces that you want to recognize. After
-     * you have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to stop processing.
+     * <code>Input</code>) and a Kinesis data stream (<code>Output</code>) stream for receiving the output. You must use
+     * the <code>FaceSearch</code> option in <code>Settings</code>, specifying the collection that contains the faces
+     * you want to recognize. After you have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to
+     * stop processing.
      * </p>
      * </li>
      * <li>
@@ -938,10 +984,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * If you are creating a stream processor to detect labels, you provide as input a Kinesis video stream (
      * <code>Input</code>), Amazon S3 bucket information (<code>Output</code>), and an Amazon SNS topic ARN (
      * <code>NotificationChannel</code>). You can also provide a KMS key ID to encrypt the data sent to your Amazon S3
-     * bucket. You specify what you want to detect in <code>ConnectedHomeSettings</code>, such as people, packages and
-     * people, or pets, people, and packages. You can also specify where in the frame you want Amazon Rekognition to
-     * monitor with <code>RegionsOfInterest</code>. When you run the <a>StartStreamProcessor</a> operation on a label
-     * detection stream processor, you input start and stop information to determine the length of the processing time.
+     * bucket. You specify what you want to detect by using the <code>ConnectedHome</code> option in settings, and
+     * selecting one of the following: <code>PERSON</code>, <code>PET</code>, <code>PACKAGE</code>, <code>ALL</code> You
+     * can also specify where in the frame you want Amazon Rekognition to monitor with <code>RegionsOfInterest</code>.
+     * When you run the <a>StartStreamProcessor</a> operation on a label detection stream processor, you input start and
+     * stop information to determine the length of the processing time.
      * </p>
      * </li>
      * </ul>
@@ -975,9 +1022,10 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <li>
      * <p>
      * If you are creating a stream processor for detecting faces, you provide as input a Kinesis video stream (
-     * <code>Input</code>) and a Kinesis data stream (<code>Output</code>) stream. You also specify the face recognition
-     * criteria in <code>Settings</code>. For example, the collection containing faces that you want to recognize. After
-     * you have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to stop processing.
+     * <code>Input</code>) and a Kinesis data stream (<code>Output</code>) stream for receiving the output. You must use
+     * the <code>FaceSearch</code> option in <code>Settings</code>, specifying the collection that contains the faces
+     * you want to recognize. After you have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to
+     * stop processing.
      * </p>
      * </li>
      * <li>
@@ -985,10 +1033,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * If you are creating a stream processor to detect labels, you provide as input a Kinesis video stream (
      * <code>Input</code>), Amazon S3 bucket information (<code>Output</code>), and an Amazon SNS topic ARN (
      * <code>NotificationChannel</code>). You can also provide a KMS key ID to encrypt the data sent to your Amazon S3
-     * bucket. You specify what you want to detect in <code>ConnectedHomeSettings</code>, such as people, packages and
-     * people, or pets, people, and packages. You can also specify where in the frame you want Amazon Rekognition to
-     * monitor with <code>RegionsOfInterest</code>. When you run the <a>StartStreamProcessor</a> operation on a label
-     * detection stream processor, you input start and stop information to determine the length of the processing time.
+     * bucket. You specify what you want to detect by using the <code>ConnectedHome</code> option in settings, and
+     * selecting one of the following: <code>PERSON</code>, <code>PET</code>, <code>PACKAGE</code>, <code>ALL</code> You
+     * can also specify where in the frame you want Amazon Rekognition to monitor with <code>RegionsOfInterest</code>.
+     * When you run the <a>StartStreamProcessor</a> operation on a label detection stream processor, you input start and
+     * stop information to determine the length of the processing time.
      * </p>
      * </li>
      * </ul>
@@ -1186,6 +1235,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * To get a list of project policies attached to a project, call <a>ListProjectPolicies</a>. To attach a project
      * policy to a project, call <a>PutProjectPolicy</a>.
      * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:DeleteProjectPolicy</code> action.
+     * </p>
      * 
      * @param deleteProjectPolicyRequest
      * @return A Java Future containing the result of the DeleteProjectPolicy operation returned by the service.
@@ -1200,6 +1252,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <p>
      * To get a list of project policies attached to a project, call <a>ListProjectPolicies</a>. To attach a project
      * policy to a project, call <a>PutProjectPolicy</a>.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:DeleteProjectPolicy</code> action.
      * </p>
      * 
      * @param deleteProjectPolicyRequest
@@ -1675,7 +1730,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * </p>
      * <p>
      * For each object, scene, and concept the API returns one or more labels. The API returns the following types of
-     * information regarding labels:
+     * information about labels:
      * </p>
      * <ul>
      * <li>
@@ -1778,7 +1833,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * </p>
      * </note>
      * <p>
-     * This is a stateless API operation. That is, the operation does not persist any data.
+     * This is a stateless API operation that doesn't return any data.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:DetectLabels</code> action.
@@ -1831,7 +1886,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * </p>
      * <p>
      * For each object, scene, and concept the API returns one or more labels. The API returns the following types of
-     * information regarding labels:
+     * information about labels:
      * </p>
      * <ul>
      * <li>
@@ -1934,7 +1989,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * </p>
      * </note>
      * <p>
-     * This is a stateless API operation. That is, the operation does not persist any data.
+     * This is a stateless API operation that doesn't return any data.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:DetectLabels</code> action.
@@ -2642,6 +2697,43 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      */
     java.util.concurrent.Future<GetFaceDetectionResult> getFaceDetectionAsync(GetFaceDetectionRequest getFaceDetectionRequest,
             com.amazonaws.handlers.AsyncHandler<GetFaceDetectionRequest, GetFaceDetectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the results of a specific Face Liveness session. It requires the <code>sessionId</code> as input, which
+     * was created using <code>CreateFaceLivenessSession</code>. Returns the corresponding Face Liveness confidence
+     * score, a reference image that includes a face bounding box, and audit images that also contain face bounding
+     * boxes. The Face Liveness confidence score ranges from 0 to 100. The reference image can optionally be returned.
+     * </p>
+     * 
+     * @param getFaceLivenessSessionResultsRequest
+     * @return A Java Future containing the result of the GetFaceLivenessSessionResults operation returned by the
+     *         service.
+     * @sample AmazonRekognitionAsync.GetFaceLivenessSessionResults
+     */
+    java.util.concurrent.Future<GetFaceLivenessSessionResultsResult> getFaceLivenessSessionResultsAsync(
+            GetFaceLivenessSessionResultsRequest getFaceLivenessSessionResultsRequest);
+
+    /**
+     * <p>
+     * Retrieves the results of a specific Face Liveness session. It requires the <code>sessionId</code> as input, which
+     * was created using <code>CreateFaceLivenessSession</code>. Returns the corresponding Face Liveness confidence
+     * score, a reference image that includes a face bounding box, and audit images that also contain face bounding
+     * boxes. The Face Liveness confidence score ranges from 0 to 100. The reference image can optionally be returned.
+     * </p>
+     * 
+     * @param getFaceLivenessSessionResultsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFaceLivenessSessionResults operation returned by the
+     *         service.
+     * @sample AmazonRekognitionAsyncHandler.GetFaceLivenessSessionResults
+     */
+    java.util.concurrent.Future<GetFaceLivenessSessionResultsResult> getFaceLivenessSessionResultsAsync(
+            GetFaceLivenessSessionResultsRequest getFaceLivenessSessionResultsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFaceLivenessSessionResultsRequest, GetFaceLivenessSessionResultsResult> asyncHandler);
 
     /**
      * <p>
@@ -3679,6 +3771,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * To attach a project policy to a project, call <a>PutProjectPolicy</a>. To remove a project policy from a project,
      * call <a>DeleteProjectPolicy</a>.
      * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:ListProjectPolicies</code> action.
+     * </p>
      * 
      * @param listProjectPoliciesRequest
      * @return A Java Future containing the result of the ListProjectPolicies operation returned by the service.
@@ -3693,6 +3788,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <p>
      * To attach a project policy to a project, call <a>PutProjectPolicy</a>. To remove a project policy from a project,
      * call <a>DeleteProjectPolicy</a>.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:ListProjectPolicies</code> action.
      * </p>
      * 
      * @param listProjectPoliciesRequest
@@ -3788,6 +3886,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <p>
      * You copy a model version by calling <a>CopyProjectVersion</a>.
      * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:PutProjectPolicy</code> action.
+     * </p>
      * 
      * @param putProjectPolicyRequest
      * @return A Java Future containing the result of the PutProjectPolicy operation returned by the service.
@@ -3816,6 +3917,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * </p>
      * <p>
      * You copy a model version by calling <a>CopyProjectVersion</a>.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:PutProjectPolicy</code> action.
      * </p>
      * 
      * @param putProjectPolicyRequest
@@ -4685,6 +4789,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * Stops a running model. The operation might take a while to complete. To check the current status, call
      * <a>DescribeProjectVersions</a>.
      * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:StopProjectVersion</code> action.
+     * </p>
      * 
      * @param stopProjectVersionRequest
      * @return A Java Future containing the result of the StopProjectVersion operation returned by the service.
@@ -4696,6 +4803,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <p>
      * Stops a running model. The operation might take a while to complete. To check the current status, call
      * <a>DescribeProjectVersions</a>.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:StopProjectVersion</code> action.
      * </p>
      * 
      * @param stopProjectVersionRequest

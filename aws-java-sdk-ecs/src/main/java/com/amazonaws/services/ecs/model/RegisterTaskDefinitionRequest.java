@@ -410,7 +410,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     * For tasks using the Fargate launch type, the task requires the following platforms:
      * </p>
      * <ul>
      * <li>
@@ -3543,7 +3543,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     * For tasks using the Fargate launch type, the task requires the following platforms:
      * </p>
      * <ul>
      * <li>
@@ -3561,7 +3561,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html">Fargate task
      *        storage</a> in the <i>Amazon ECS User Guide for Fargate</i>.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     *        For tasks using the Fargate launch type, the task requires the following platforms:
      *        </p>
      *        <ul>
      *        <li>
@@ -3585,7 +3585,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     * For tasks using the Fargate launch type, the task requires the following platforms:
      * </p>
      * <ul>
      * <li>
@@ -3602,7 +3602,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html">Fargate task
      *         storage</a> in the <i>Amazon ECS User Guide for Fargate</i>.</p> <note>
      *         <p>
-     *         This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     *         For tasks using the Fargate launch type, the task requires the following platforms:
      *         </p>
      *         <ul>
      *         <li>
@@ -3626,7 +3626,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     * For tasks using the Fargate launch type, the task requires the following platforms:
      * </p>
      * <ul>
      * <li>
@@ -3644,7 +3644,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html">Fargate task
      *        storage</a> in the <i>Amazon ECS User Guide for Fargate</i>.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on Fargate using the following platform versions:
+     *        For tasks using the Fargate launch type, the task requires the following platforms:
      *        </p>
      *        <ul>
      *        <li>

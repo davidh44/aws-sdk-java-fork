@@ -18,6 +18,9 @@ import javax.annotation.Generated;
  * <p>
  * The specified resource wasn't found.
  * </p>
+ * <p>
+ * HTTP status code: 404
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceNotFoundException extends com.amazonaws.services.marketplacecatalog.model.AWSMarketplaceCatalogException {

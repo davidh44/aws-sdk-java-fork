@@ -50,6 +50,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * A task definition must be specified if the service uses either the <code>ECS</code> or <code>CODE_DEPLOY</code>
      * deployment controllers.
      * </p>
+     * <p>
+     * For more information about deployment types, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
+     * types</a>.
+     * </p>
      */
     private String taskDefinition;
     /**
@@ -374,7 +379,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String propagateTags;
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, this
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, this
      * enables execute command functionality on all containers in the service tasks.
      * </p>
      */
@@ -503,6 +508,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * A task definition must be specified if the service uses either the <code>ECS</code> or <code>CODE_DEPLOY</code>
      * deployment controllers.
      * </p>
+     * <p>
+     * For more information about deployment types, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
+     * types</a>.
+     * </p>
      * 
      * @param taskDefinition
      *        The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
@@ -511,6 +521,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        A task definition must be specified if the service uses either the <code>ECS</code> or
      *        <code>CODE_DEPLOY</code> deployment controllers.
+     *        </p>
+     *        <p>
+     *        For more information about deployment types, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS
+     *        deployment types</a>.
      */
 
     public void setTaskDefinition(String taskDefinition) {
@@ -527,6 +542,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * A task definition must be specified if the service uses either the <code>ECS</code> or <code>CODE_DEPLOY</code>
      * deployment controllers.
      * </p>
+     * <p>
+     * For more information about deployment types, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
+     * types</a>.
+     * </p>
      * 
      * @return The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      *         definition to run in your service. If a <code>revision</code> isn't specified, the latest
@@ -534,6 +554,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <p>
      *         A task definition must be specified if the service uses either the <code>ECS</code> or
      *         <code>CODE_DEPLOY</code> deployment controllers.
+     *         </p>
+     *         <p>
+     *         For more information about deployment types, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS
+     *         deployment types</a>.
      */
 
     public String getTaskDefinition() {
@@ -550,6 +575,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * A task definition must be specified if the service uses either the <code>ECS</code> or <code>CODE_DEPLOY</code>
      * deployment controllers.
      * </p>
+     * <p>
+     * For more information about deployment types, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
+     * types</a>.
+     * </p>
      * 
      * @param taskDefinition
      *        The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
@@ -558,6 +588,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        A task definition must be specified if the service uses either the <code>ECS</code> or
      *        <code>CODE_DEPLOY</code> deployment controllers.
+     *        </p>
+     *        <p>
+     *        For more information about deployment types, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS
+     *        deployment types</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3153,12 +3188,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, this
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, this
      * enables execute command functionality on all containers in the service tasks.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether the execute command functionality is enabled for the service. If <code>true</code>,
+     *        Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
      *        this enables execute command functionality on all containers in the service tasks.
      */
 
@@ -3168,11 +3203,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, this
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, this
      * enables execute command functionality on all containers in the service tasks.
      * </p>
      * 
-     * @return Determines whether the execute command functionality is enabled for the service. If <code>true</code>,
+     * @return Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
      *         this enables execute command functionality on all containers in the service tasks.
      */
 
@@ -3182,12 +3217,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, this
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, this
      * enables execute command functionality on all containers in the service tasks.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether the execute command functionality is enabled for the service. If <code>true</code>,
+     *        Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
      *        this enables execute command functionality on all containers in the service tasks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -3199,11 +3234,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Determines whether the execute command functionality is enabled for the service. If <code>true</code>, this
+     * Determines whether the execute command functionality is turned on for the service. If <code>true</code>, this
      * enables execute command functionality on all containers in the service tasks.
      * </p>
      * 
-     * @return Determines whether the execute command functionality is enabled for the service. If <code>true</code>,
+     * @return Determines whether the execute command functionality is turned on for the service. If <code>true</code>,
      *         this enables execute command functionality on all containers in the service tasks.
      */
 

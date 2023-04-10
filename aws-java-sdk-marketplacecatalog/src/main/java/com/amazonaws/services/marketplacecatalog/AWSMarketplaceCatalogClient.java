@@ -165,17 +165,31 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param cancelChangeSetRequest
      * @return Result of the CancelChangeSet operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ResourceInUseException
      *         The resource is currently in use.
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.CancelChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/CancelChangeSet"
      *      target="_top">AWS API Documentation</a>
@@ -226,21 +240,114 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Deletes a resource-based policy on an Entity that is identified by its resource ARN.
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return Result of the DeleteResourcePolicy operation returned by the service.
+     * @throws InternalServiceException
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws AccessDeniedException
+     *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @sample AWSMarketplaceCatalog.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/DeleteResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final DeleteResourcePolicyResult executeDeleteResourcePolicy(DeleteResourcePolicyRequest deleteResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteResourcePolicyRequest> request = null;
+        Response<DeleteResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteResourcePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Marketplace Catalog");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteResourcePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteResourcePolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides information about a given change set.
      * </p>
      * 
      * @param describeChangeSetRequest
      * @return Result of the DescribeChangeSet operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.DescribeChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/DescribeChangeSet"
      *      target="_top">AWS API Documentation</a>
@@ -297,17 +404,31 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param describeEntityRequest
      * @return Result of the DescribeEntity operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotSupportedException
      *         Currently, the specified resource is not supported.
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.DescribeEntity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/DescribeEntity"
      *      target="_top">AWS API Documentation</a>
@@ -358,6 +479,85 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Gets a resource-based policy of an Entity that is identified by its resource ARN.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return Result of the GetResourcePolicy operation returned by the service.
+     * @throws InternalServiceException
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws AccessDeniedException
+     *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @sample AWSMarketplaceCatalog.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/GetResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetResourcePolicyResult executeGetResourcePolicy(GetResourcePolicyRequest getResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetResourcePolicyRequest> request = null;
+        Response<GetResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetResourcePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Marketplace Catalog");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetResourcePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetResourcePolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the list of change sets owned by the account being used to make the call. You can filter this list by
      * providing any combination of <code>entityId</code>, <code>ChangeSetName</code>, and status. If you provide more
      * than one filter, the API operation applies a logical AND between the filters.
@@ -369,13 +569,24 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param listChangeSetsRequest
      * @return Result of the ListChangeSets operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.ListChangeSets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/ListChangeSets"
      *      target="_top">AWS API Documentation</a>
@@ -432,15 +643,29 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param listEntitiesRequest
      * @return Result of the ListEntities operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.ListEntities
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/ListEntities"
      *      target="_top">AWS API Documentation</a>
@@ -501,15 +726,29 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The specified resource wasn't found.
+     *         The specified resource wasn't found.</p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws InternalServiceException
      *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -560,6 +799,86 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Attaches a resource-based policy to an Entity. Examples of an entity include: <code>AmiProduct</code> and
+     * <code>ContainerProduct</code>.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return Result of the PutResourcePolicy operation returned by the service.
+     * @throws InternalServiceException
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws AccessDeniedException
+     *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @sample AWSMarketplaceCatalog.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/PutResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutResourcePolicyResult executePutResourcePolicy(PutResourcePolicyRequest putResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutResourcePolicyRequest> request = null;
+        Response<PutResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutResourcePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Marketplace Catalog");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutResourcePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutResourcePolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Allows you to request changes for your entities. Within a single <code>ChangeSet</code>, you can't start the same
      * change type against the same entity multiple times. Additionally, when a <code>ChangeSet</code> is running, all
      * the entities targeted by the different changes are locked until the change set has completed (either succeeded,
@@ -575,23 +894,42 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * <p>
      * For more information about working with change sets, see <a href=
      * "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets">
-     * Working with change sets</a>.
+     * Working with change sets</a>. For information on change types for single-AMI products, see <a href=
+     * "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products"
+     * >Working with single-AMI products</a>. Als, for more information on change types available for container-based
+     * products, see <a href=
+     * "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products"
+     * >Working with container products</a>.
      * </p>
      * 
      * @param startChangeSetRequest
      * @return Result of the StartChangeSet operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ResourceInUseException
      *         The resource is currently in use.
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @throws ServiceQuotaExceededException
      *         The maximum number of open requests per account has been exceeded.
      * @sample AWSMarketplaceCatalog.StartChangeSet
@@ -654,15 +992,29 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The specified resource wasn't found.
+     *         The specified resource wasn't found.</p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws InternalServiceException
      *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/TagResource"
      *      target="_top">AWS API Documentation</a>
@@ -723,15 +1075,29 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The specified resource wasn't found.
+     *         The specified resource wasn't found.</p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws InternalServiceException
      *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/UntagResource"
      *      target="_top">AWS API Documentation</a>

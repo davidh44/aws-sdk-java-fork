@@ -31,6 +31,8 @@ public class MediaConcurrencyMarshaller {
             .marshallLocationName("Channel").build();
     private static final MarshallingInfo<Integer> CONCURRENCY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Concurrency").build();
+    private static final MarshallingInfo<StructuredPojo> CROSSCHANNELBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossChannelBehavior").build();
 
     private static final MediaConcurrencyMarshaller instance = new MediaConcurrencyMarshaller();
 
@@ -50,6 +52,7 @@ public class MediaConcurrencyMarshaller {
         try {
             protocolMarshaller.marshall(mediaConcurrency.getChannel(), CHANNEL_BINDING);
             protocolMarshaller.marshall(mediaConcurrency.getConcurrency(), CONCURRENCY_BINDING);
+            protocolMarshaller.marshall(mediaConcurrency.getCrossChannelBehavior(), CROSSCHANNELBEHAVIOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -162,8 +162,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
     private String desiredStatus;
     /**
      * <p>
-     * Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute command
-     * functionality is enabled on all the containers in the task.
+     * Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     * command functionality is turned on all the containers in the task.
      * </p>
      */
     private Boolean enableExecuteCommand;
@@ -1444,13 +1444,13 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute command
-     * functionality is enabled on all the containers in the task.
+     * Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     * command functionality is turned on all the containers in the task.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute
-     *        command functionality is enabled on all the containers in the task.
+     *        Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     *        command functionality is turned on all the containers in the task.
      */
 
     public void setEnableExecuteCommand(Boolean enableExecuteCommand) {
@@ -1459,12 +1459,12 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute command
-     * functionality is enabled on all the containers in the task.
+     * Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     * command functionality is turned on all the containers in the task.
      * </p>
      * 
-     * @return Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute
-     *         command functionality is enabled on all the containers in the task.
+     * @return Determines whether execute command functionality is turned on for this task. If <code>true</code>,
+     *         execute command functionality is turned on all the containers in the task.
      */
 
     public Boolean getEnableExecuteCommand() {
@@ -1473,13 +1473,13 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute command
-     * functionality is enabled on all the containers in the task.
+     * Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     * command functionality is turned on all the containers in the task.
      * </p>
      * 
      * @param enableExecuteCommand
-     *        Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute
-     *        command functionality is enabled on all the containers in the task.
+     *        Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     *        command functionality is turned on all the containers in the task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1490,12 +1490,12 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute command
-     * functionality is enabled on all the containers in the task.
+     * Determines whether execute command functionality is turned on for this task. If <code>true</code>, execute
+     * command functionality is turned on all the containers in the task.
      * </p>
      * 
-     * @return Determines whether execute command functionality is enabled for this task. If <code>true</code>, execute
-     *         command functionality is enabled on all the containers in the task.
+     * @return Determines whether execute command functionality is turned on for this task. If <code>true</code>,
+     *         execute command functionality is turned on all the containers in the task.
      */
 
     public Boolean isEnableExecuteCommand() {

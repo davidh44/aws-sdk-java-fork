@@ -30,8 +30,8 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      */
     private String contentType;
@@ -51,19 +51,26 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      */
     private String content;
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      * 
      * @param contentType
-     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     *        <code>application/json</code>.
+     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     *        <code>application/json</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      */
 
     public void setContentType(String contentType) {
@@ -72,12 +79,13 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      * 
-     * @return The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     *         <code>application/json</code>.
+     * @return The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     *         <code>application/json</code>, and
+     *         <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      */
 
     public String getContentType() {
@@ -86,13 +94,14 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      * 
      * @param contentType
-     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     *        <code>application/json</code>.
+     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     *        <code>application/json</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,6 +126,12 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param content
@@ -131,6 +146,12 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints
+     *        are Minimum of 1, Maximum of 12288.
      *        </p>
      *        </li>
      */
@@ -155,6 +176,12 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The content of the chat message. </p>
@@ -168,6 +195,12 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints
+     *         are Minimum of 1, Maximum of 12288.
      *         </p>
      *         </li>
      */
@@ -192,6 +225,12 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param content
@@ -206,6 +245,12 @@ public class ChatMessage implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints
+     *        are Minimum of 1, Maximum of 12288.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

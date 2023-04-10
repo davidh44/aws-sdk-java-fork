@@ -100,19 +100,19 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "ResourceInUseException",
@@ -120,7 +120,7 @@
         "httpStatusCode" : 423
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -143,6 +143,59 @@
       },
       "syncReturnType" : "CancelChangeSetResult"
     },
+    "DeleteResourcePolicy" : {
+      "asyncCallableType" : "java.util.concurrent.Callable<DeleteResourcePolicyResult>",
+      "asyncFutureType" : "java.util.concurrent.Future<DeleteResourcePolicyResult>",
+      "asyncHandlerType" : "com.amazonaws.handlers.AsyncHandler<DeleteResourcePolicyRequest, DeleteResourcePolicyResult>",
+      "asyncReturnType" : "DeleteResourcePolicyResult",
+      "authenticated" : true,
+      "deprecated" : false,
+      "documentation" : "<p>Deletes a resource-based policy on an Entity that is identified by its resource ARN.</p>",
+      "endpointCacheRequired" : false,
+      "endpointDiscovery" : null,
+      "endpointOperation" : false,
+      "endpointTrait" : null,
+      "exceptions" : [ {
+        "exceptionName" : "InternalServiceException",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
+        "httpStatusCode" : 422
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
+        "httpStatusCode" : 429
+      } ],
+      "hasBlobMemberAsPayload" : false,
+      "hostPrefixProcessor" : null,
+      "input" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DeleteResourcePolicyRequest",
+        "variableName" : "deleteResourcePolicyRequest",
+        "variableType" : "DeleteResourcePolicyRequest",
+        "documentation" : "",
+        "simpleType" : "DeleteResourcePolicyRequest",
+        "variableSetterType" : "DeleteResourcePolicyRequest"
+      },
+      "inputStreamPropertyName" : null,
+      "methodName" : "deleteResourcePolicy",
+      "operationName" : "DeleteResourcePolicy",
+      "returnType" : {
+        "returnType" : "DeleteResourcePolicyResult",
+        "documentation" : null
+      },
+      "syncReturnType" : "DeleteResourcePolicyResult"
+    },
     "DescribeChangeSet" : {
       "asyncCallableType" : "java.util.concurrent.Callable<DescribeChangeSetResult>",
       "asyncFutureType" : "java.util.concurrent.Future<DescribeChangeSetResult>",
@@ -157,23 +210,23 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -210,15 +263,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ResourceNotSupportedException",
@@ -226,11 +279,11 @@
         "httpStatusCode" : 415
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -253,6 +306,59 @@
       },
       "syncReturnType" : "DescribeEntityResult"
     },
+    "GetResourcePolicy" : {
+      "asyncCallableType" : "java.util.concurrent.Callable<GetResourcePolicyResult>",
+      "asyncFutureType" : "java.util.concurrent.Future<GetResourcePolicyResult>",
+      "asyncHandlerType" : "com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult>",
+      "asyncReturnType" : "GetResourcePolicyResult",
+      "authenticated" : true,
+      "deprecated" : false,
+      "documentation" : "<p>Gets a resource-based policy of an Entity that is identified by its resource ARN.</p>",
+      "endpointCacheRequired" : false,
+      "endpointDiscovery" : null,
+      "endpointOperation" : false,
+      "endpointTrait" : null,
+      "exceptions" : [ {
+        "exceptionName" : "InternalServiceException",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
+        "httpStatusCode" : 422
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
+        "httpStatusCode" : 429
+      } ],
+      "hasBlobMemberAsPayload" : false,
+      "hostPrefixProcessor" : null,
+      "input" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "GetResourcePolicyRequest",
+        "variableName" : "getResourcePolicyRequest",
+        "variableType" : "GetResourcePolicyRequest",
+        "documentation" : "",
+        "simpleType" : "GetResourcePolicyRequest",
+        "variableSetterType" : "GetResourcePolicyRequest"
+      },
+      "inputStreamPropertyName" : null,
+      "methodName" : "getResourcePolicy",
+      "operationName" : "GetResourcePolicy",
+      "returnType" : {
+        "returnType" : "GetResourcePolicyResult",
+        "documentation" : null
+      },
+      "syncReturnType" : "GetResourcePolicyResult"
+    },
     "ListChangeSets" : {
       "asyncCallableType" : "java.util.concurrent.Callable<ListChangeSetsResult>",
       "asyncFutureType" : "java.util.concurrent.Future<ListChangeSetsResult>",
@@ -267,19 +373,19 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -316,23 +422,23 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -369,23 +475,23 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -408,6 +514,59 @@
       },
       "syncReturnType" : "ListTagsForResourceResult"
     },
+    "PutResourcePolicy" : {
+      "asyncCallableType" : "java.util.concurrent.Callable<PutResourcePolicyResult>",
+      "asyncFutureType" : "java.util.concurrent.Future<PutResourcePolicyResult>",
+      "asyncHandlerType" : "com.amazonaws.handlers.AsyncHandler<PutResourcePolicyRequest, PutResourcePolicyResult>",
+      "asyncReturnType" : "PutResourcePolicyResult",
+      "authenticated" : true,
+      "deprecated" : false,
+      "documentation" : "<p>Attaches a resource-based policy to an Entity. Examples of an entity include: <code>AmiProduct</code> and <code>ContainerProduct</code>.</p>",
+      "endpointCacheRequired" : false,
+      "endpointDiscovery" : null,
+      "endpointOperation" : false,
+      "endpointTrait" : null,
+      "exceptions" : [ {
+        "exceptionName" : "InternalServiceException",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
+        "httpStatusCode" : 422
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
+        "httpStatusCode" : 429
+      } ],
+      "hasBlobMemberAsPayload" : false,
+      "hostPrefixProcessor" : null,
+      "input" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "PutResourcePolicyRequest",
+        "variableName" : "putResourcePolicyRequest",
+        "variableType" : "PutResourcePolicyRequest",
+        "documentation" : "",
+        "simpleType" : "PutResourcePolicyRequest",
+        "variableSetterType" : "PutResourcePolicyRequest"
+      },
+      "inputStreamPropertyName" : null,
+      "methodName" : "putResourcePolicy",
+      "operationName" : "PutResourcePolicy",
+      "returnType" : {
+        "returnType" : "PutResourcePolicyResult",
+        "documentation" : null
+      },
+      "syncReturnType" : "PutResourcePolicyResult"
+    },
     "StartChangeSet" : {
       "asyncCallableType" : "java.util.concurrent.Callable<StartChangeSetResult>",
       "asyncFutureType" : "java.util.concurrent.Future<StartChangeSetResult>",
@@ -415,26 +574,26 @@
       "asyncReturnType" : "StartChangeSetResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Allows you to request changes for your entities. Within a single <code>ChangeSet</code>, you can't start the same change type against the same entity multiple times. Additionally, when a <code>ChangeSet</code> is running, all the entities targeted by the different changes are locked until the change set has completed (either succeeded, cancelled, or failed). If you try to start a change set containing a change against an entity that is already locked, you will receive a <code>ResourceInUseException</code> error.</p> <p>For example, you can't start the <code>ChangeSet</code> described in the <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartChangeSet.html#API_StartChangeSet_Examples\">example</a> later in this topic because it contains two changes to run the same change type (<code>AddRevisions</code>) against the same entity (<code>entity-id@1</code>).</p> <p>For more information about working with change sets, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets\"> Working with change sets</a>.</p>",
+      "documentation" : "<p>Allows you to request changes for your entities. Within a single <code>ChangeSet</code>, you can't start the same change type against the same entity multiple times. Additionally, when a <code>ChangeSet</code> is running, all the entities targeted by the different changes are locked until the change set has completed (either succeeded, cancelled, or failed). If you try to start a change set containing a change against an entity that is already locked, you will receive a <code>ResourceInUseException</code> error.</p> <p>For example, you can't start the <code>ChangeSet</code> described in the <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartChangeSet.html#API_StartChangeSet_Examples\">example</a> later in this topic because it contains two changes to run the same change type (<code>AddRevisions</code>) against the same entity (<code>entity-id@1</code>).</p> <p>For more information about working with change sets, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets\"> Working with change sets</a>. For information on change types for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Als, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "ResourceInUseException",
@@ -442,7 +601,7 @@
         "httpStatusCode" : 423
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
@@ -483,23 +642,23 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -536,23 +695,23 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>The specified resource wasn't found.</p>",
+        "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
         "httpStatusCode" : 404
       }, {
         "exceptionName" : "InternalServiceException",
-        "documentation" : "<p>There was an internal service exception.</p>",
+        "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
         "httpStatusCode" : 500
       }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>Access is denied.</p>",
+        "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>An error occurred during validation.</p>",
+        "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
         "httpStatusCode" : 422
       }, {
         "exceptionName" : "ThrottlingException",
-        "documentation" : "<p>Too many requests.</p>",
+        "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
         "httpStatusCode" : 429
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -586,7 +745,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Access is denied.</p>",
+      "documentation" : "<p>Access is denied.</p> <p>HTTP status code: 403</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "AccessDeniedException",
@@ -1292,12 +1451,12 @@
         "c2jName" : "ChangeType",
         "c2jShape" : "ChangeType",
         "deprecated" : false,
-        "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>",
+        "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withChangeType",
-        "getterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@return Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.*/",
+        "getterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@return Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
         "getterMethodName" : "getChangeType",
         "getterModel" : {
           "returnType" : "String",
@@ -1331,7 +1490,7 @@
         "marshallingType" : "STRING",
         "name" : "ChangeType",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.*/",
+        "setterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
         "setterMethodName" : "setChangeType",
         "setterModel" : {
           "timestampFormat" : null,
@@ -1346,13 +1505,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "changeType",
           "variableType" : "String",
-          "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>",
+          "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -1583,12 +1742,12 @@
         "c2jName" : "Details",
         "c2jShape" : "Json",
         "deprecated" : false,
-        "documentation" : "<p>This object contains details specific to the change type of the requested change.</p>",
+        "documentation" : "<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@param details This object contains details specific to the change type of the requested change.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param details This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withDetails",
-        "getterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@return This object contains details specific to the change type of the requested change.*/",
+        "getterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@return This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
         "getterMethodName" : "getDetails",
         "getterModel" : {
           "returnType" : "String",
@@ -1622,7 +1781,7 @@
         "marshallingType" : "STRING",
         "name" : "Details",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@param details This object contains details specific to the change type of the requested change.*/",
+        "setterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param details This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
         "setterMethodName" : "setDetails",
         "setterModel" : {
           "timestampFormat" : null,
@@ -1637,13 +1796,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@param details This object contains details specific to the change type of the requested change.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param details This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "details",
           "variableType" : "String",
-          "documentation" : "<p>This object contains details specific to the change type of the requested change.</p>",
+          "documentation" : "<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -1793,12 +1952,12 @@
           "c2jName" : "ChangeType",
           "c2jShape" : "ChangeType",
           "deprecated" : false,
-          "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>",
+          "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withChangeType",
-          "getterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@return Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.*/",
+          "getterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@return Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
           "getterMethodName" : "getChangeType",
           "getterModel" : {
             "returnType" : "String",
@@ -1832,7 +1991,7 @@
           "marshallingType" : "STRING",
           "name" : "ChangeType",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.*/",
+          "setterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
           "setterMethodName" : "setChangeType",
           "setterModel" : {
             "timestampFormat" : null,
@@ -1847,13 +2006,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param changeType Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "changeType",
             "variableType" : "String",
-            "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope.</p>",
+            "documentation" : "<p>Change types are single string values that describe your intention for the change. Each change type is unique for each <code>EntityType</code> provided in the change's scope. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -1863,12 +2022,12 @@
           "c2jName" : "Details",
           "c2jShape" : "Json",
           "deprecated" : false,
-          "documentation" : "<p>This object contains details specific to the change type of the requested change.</p>",
+          "documentation" : "<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@param details This object contains details specific to the change type of the requested change.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param details This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withDetails",
-          "getterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@return This object contains details specific to the change type of the requested change.*/",
+          "getterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@return This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
           "getterMethodName" : "getDetails",
           "getterModel" : {
             "returnType" : "String",
@@ -1902,7 +2061,7 @@
           "marshallingType" : "STRING",
           "name" : "Details",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@param details This object contains details specific to the change type of the requested change.*/",
+          "setterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param details This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.*/",
           "setterMethodName" : "setDetails",
           "setterModel" : {
             "timestampFormat" : null,
@@ -1917,13 +2076,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change.</p>\n@param details This object contains details specific to the change type of the requested change.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>\n@param details This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "details",
             "variableType" : "String",
-            "documentation" : "<p>This object contains details specific to the change type of the requested change.</p>",
+            "documentation" : "<p>This object contains details specific to the change type of the requested change. For more information on change types available for single-AMI products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products\">Working with single-AMI products</a>. Also, for more information on change types available for container-based products, see <a href=\"https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products\">Working with container products</a>.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -4465,6 +4624,238 @@
         "documentation" : null,
         "simpleType" : "ChangeSummary",
         "variableSetterType" : "ChangeSummary"
+      },
+      "wrapper" : false
+    },
+    "DeleteResourcePolicyRequest" : {
+      "c2jName" : "DeleteResourcePolicyRequest",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.request.DeleteResourcePolicyRequest",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : {
+        "action" : "DeleteResourcePolicy",
+        "locationName" : null,
+        "requestUri" : "/DeleteResourcePolicy",
+        "target" : null,
+        "verb" : "DELETE",
+        "xmlNameSpaceUri" : null
+      },
+      "members" : [ {
+        "c2jName" : "ResourceArn",
+        "c2jShape" : "ResourceARN",
+        "deprecated" : false,
+        "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withResourceArn",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@return The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+        "getterMethodName" : "getResourceArn",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "querystring",
+          "marshallLocation" : "QUERY_PARAM",
+          "marshallLocationName" : "resourceArn",
+          "queryString" : true,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "resourceArn",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ResourceArn",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+        "setterMethodName" : "setResourceArn",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "resourceArn",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "resourceArn",
+          "variableType" : "String",
+          "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "ResourceArn" : {
+          "c2jName" : "ResourceArn",
+          "c2jShape" : "ResourceARN",
+          "deprecated" : false,
+          "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withResourceArn",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@return The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+          "getterMethodName" : "getResourceArn",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "querystring",
+            "marshallLocation" : "QUERY_PARAM",
+            "marshallLocationName" : "resourceArn",
+            "queryString" : true,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "resourceArn",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ResourceArn",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+          "setterMethodName" : "setResourceArn",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "resourceArn",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "resourceArn",
+            "variableType" : "String",
+            "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.request",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "ResourceArn" ],
+      "shapeName" : "DeleteResourcePolicyRequest",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DeleteResourcePolicyRequest",
+        "variableName" : "deleteResourcePolicyRequest",
+        "variableType" : "DeleteResourcePolicyRequest",
+        "documentation" : null,
+        "simpleType" : "DeleteResourcePolicyRequest",
+        "variableSetterType" : "DeleteResourcePolicyRequest"
+      },
+      "wrapper" : false
+    },
+    "DeleteResourcePolicyResult" : {
+      "c2jName" : "DeleteResourcePolicyResponse",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.response.DeleteResourcePolicyResult",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.response",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "DeleteResourcePolicyResult",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DeleteResourcePolicyResult",
+        "variableName" : "deleteResourcePolicyResult",
+        "variableType" : "DeleteResourcePolicyResult",
+        "documentation" : null,
+        "simpleType" : "DeleteResourcePolicyResult",
+        "variableSetterType" : "DeleteResourcePolicyResult"
       },
       "wrapper" : false
     },
@@ -9392,6 +9783,378 @@
       },
       "wrapper" : false
     },
+    "GetResourcePolicyRequest" : {
+      "c2jName" : "GetResourcePolicyRequest",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.request.GetResourcePolicyRequest",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : {
+        "action" : "GetResourcePolicy",
+        "locationName" : null,
+        "requestUri" : "/GetResourcePolicy",
+        "target" : null,
+        "verb" : "GET",
+        "xmlNameSpaceUri" : null
+      },
+      "members" : [ {
+        "c2jName" : "ResourceArn",
+        "c2jShape" : "ResourceARN",
+        "deprecated" : false,
+        "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withResourceArn",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@return The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+        "getterMethodName" : "getResourceArn",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "querystring",
+          "marshallLocation" : "QUERY_PARAM",
+          "marshallLocationName" : "resourceArn",
+          "queryString" : true,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "resourceArn",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ResourceArn",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+        "setterMethodName" : "setResourceArn",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "resourceArn",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "resourceArn",
+          "variableType" : "String",
+          "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "ResourceArn" : {
+          "c2jName" : "ResourceArn",
+          "c2jShape" : "ResourceARN",
+          "deprecated" : false,
+          "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withResourceArn",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@return The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+          "getterMethodName" : "getResourceArn",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "querystring",
+            "marshallLocation" : "QUERY_PARAM",
+            "marshallLocationName" : "resourceArn",
+            "queryString" : true,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "resourceArn",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ResourceArn",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.*/",
+          "setterMethodName" : "setResourceArn",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "resourceArn",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "resourceArn",
+            "variableType" : "String",
+            "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource that is associated with the resource policy.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.request",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "ResourceArn" ],
+      "shapeName" : "GetResourcePolicyRequest",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "GetResourcePolicyRequest",
+        "variableName" : "getResourcePolicyRequest",
+        "variableType" : "GetResourcePolicyRequest",
+        "documentation" : null,
+        "simpleType" : "GetResourcePolicyRequest",
+        "variableSetterType" : "GetResourcePolicyRequest"
+      },
+      "wrapper" : false
+    },
+    "GetResourcePolicyResult" : {
+      "c2jName" : "GetResourcePolicyResponse",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.response.GetResourcePolicyResult",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "Policy",
+        "c2jShape" : "ResourcePolicyJson",
+        "deprecated" : false,
+        "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withPolicy",
+        "getterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@return The policy document to set; formatted in JSON.*/",
+        "getterMethodName" : "getPolicy",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "Policy",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "Policy",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Policy",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.*/",
+        "setterMethodName" : "setPolicy",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "policy",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "policy",
+          "variableType" : "String",
+          "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "Policy" : {
+          "c2jName" : "Policy",
+          "c2jShape" : "ResourcePolicyJson",
+          "deprecated" : false,
+          "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withPolicy",
+          "getterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@return The policy document to set; formatted in JSON.*/",
+          "getterMethodName" : "getPolicy",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "Policy",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "Policy",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Policy",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.*/",
+          "setterMethodName" : "setPolicy",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "policy",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "policy",
+            "variableType" : "String",
+            "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.response",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "GetResourcePolicyResult",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "GetResourcePolicyResult",
+        "variableName" : "getResourcePolicyResult",
+        "variableType" : "GetResourcePolicyResult",
+        "documentation" : null,
+        "simpleType" : "GetResourcePolicyResult",
+        "variableSetterType" : "GetResourcePolicyResult"
+      },
+      "wrapper" : false
+    },
     "InternalServiceException" : {
       "c2jName" : "InternalServiceException",
       "customization" : {
@@ -9401,7 +10164,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>There was an internal service exception.</p>",
+      "documentation" : "<p>There was an internal service exception.</p> <p>HTTP status code: 500</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "InternalServiceException",
@@ -9753,7 +10516,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MaxResults",
-        "c2jShape" : "MaxResultInteger",
+        "c2jShape" : "ListChangeSetsMaxResultInteger",
         "deprecated" : false,
         "documentation" : "<p>The maximum number of results returned by a single call. This value must be provided in the next call to retrieve the next set of results. By default, this value is 20.</p>",
         "endpointDiscoveryId" : false,
@@ -10117,7 +10880,7 @@
         },
         "MaxResults" : {
           "c2jName" : "MaxResults",
-          "c2jShape" : "MaxResultInteger",
+          "c2jShape" : "ListChangeSetsMaxResultInteger",
           "deprecated" : false,
           "documentation" : "<p>The maximum number of results returned by a single call. This value must be provided in the next call to retrieve the next set of results. By default, this value is 20.</p>",
           "endpointDiscoveryId" : false,
@@ -11294,7 +12057,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "MaxResults",
-        "c2jShape" : "MaxResultInteger",
+        "c2jShape" : "ListEntitiesMaxResultInteger",
         "deprecated" : false,
         "documentation" : "<p>Specifies the upper limit of the elements on a single page. If a value isn't provided, the default value is 20.</p>",
         "endpointDiscoveryId" : false,
@@ -11359,6 +12122,75 @@
           "documentation" : "<p>Specifies the upper limit of the elements on a single page. If a value isn't provided, the default value is 20.</p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "OwnershipType",
+        "c2jShape" : "OwnershipType",
+        "deprecated" : false,
+        "documentation" : "",
+        "endpointDiscoveryId" : false,
+        "enumType" : "OwnershipType",
+        "fluentSetterDocumentation" : "/**\n@param ownershipType \n@return Returns a reference to this object so that method calls can be chained together.\n@see OwnershipType*/",
+        "fluentSetterMethodName" : "withOwnershipType",
+        "getterDocumentation" : "/**\n@return \n@see OwnershipType*/",
+        "getterMethodName" : "getOwnershipType",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "OwnershipType",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "OwnershipType",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "OwnershipType",
+        "sensitive" : false,
+        "setterDocumentation" : "/**\n@param ownershipType \n@see OwnershipType*/",
+        "setterMethodName" : "setOwnershipType",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownershipType",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**\n@param ownershipType \n@return Returns a reference to this object so that method calls can be chained together.\n@see OwnershipType*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "ownershipType",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],
@@ -11659,7 +12491,7 @@
         },
         "MaxResults" : {
           "c2jName" : "MaxResults",
-          "c2jShape" : "MaxResultInteger",
+          "c2jShape" : "ListEntitiesMaxResultInteger",
           "deprecated" : false,
           "documentation" : "<p>Specifies the upper limit of the elements on a single page. If a value isn't provided, the default value is 20.</p>",
           "endpointDiscoveryId" : false,
@@ -11792,6 +12624,76 @@
             "variableName" : "nextToken",
             "variableType" : "String",
             "documentation" : "<p>The value of the next token, if it exists. Null if there are no more results.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "OwnershipType" : {
+          "c2jName" : "OwnershipType",
+          "c2jShape" : "OwnershipType",
+          "deprecated" : false,
+          "documentation" : "",
+          "endpointDiscoveryId" : false,
+          "enumType" : "OwnershipType",
+          "fluentSetterDocumentation" : "/**\n@param ownershipType \n@return Returns a reference to this object so that method calls can be chained together.\n@see OwnershipType*/",
+          "fluentSetterMethodName" : "withOwnershipType",
+          "getterDocumentation" : "/**\n@return \n@see OwnershipType*/",
+          "getterMethodName" : "getOwnershipType",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "OwnershipType",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "OwnershipType",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "OwnershipType",
+          "sensitive" : false,
+          "setterDocumentation" : "/**\n@param ownershipType \n@see OwnershipType*/",
+          "setterMethodName" : "setOwnershipType",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownershipType",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**\n@param ownershipType \n@return Returns a reference to this object so that method calls can be chained together.\n@see OwnershipType*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "ownershipType",
+            "variableType" : "String",
+            "documentation" : "",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -13057,6 +13959,427 @@
       },
       "wrapper" : false
     },
+    "OwnershipType" : {
+      "c2jName" : "OwnershipType",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "SELF",
+        "value" : "SELF"
+      }, {
+        "name" : "SHARED",
+        "value" : "SHARED"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.enum.OwnershipType",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "OwnershipType",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "OwnershipType",
+        "variableName" : "ownershipType",
+        "variableType" : "OwnershipType",
+        "documentation" : null,
+        "simpleType" : "OwnershipType",
+        "variableSetterType" : "OwnershipType"
+      },
+      "wrapper" : false
+    },
+    "PutResourcePolicyRequest" : {
+      "c2jName" : "PutResourcePolicyRequest",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.request.PutResourcePolicyRequest",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : {
+        "action" : "PutResourcePolicy",
+        "locationName" : null,
+        "requestUri" : "/PutResourcePolicy",
+        "target" : null,
+        "verb" : "POST",
+        "xmlNameSpaceUri" : null
+      },
+      "members" : [ {
+        "c2jName" : "ResourceArn",
+        "c2jShape" : "ResourceARN",
+        "deprecated" : false,
+        "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withResourceArn",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@return The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.*/",
+        "getterMethodName" : "getResourceArn",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "ResourceArn",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "ResourceArn",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ResourceArn",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.*/",
+        "setterMethodName" : "setResourceArn",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "resourceArn",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "resourceArn",
+          "variableType" : "String",
+          "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "Policy",
+        "c2jShape" : "ResourcePolicyJson",
+        "deprecated" : false,
+        "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withPolicy",
+        "getterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@return The policy document to set; formatted in JSON.*/",
+        "getterMethodName" : "getPolicy",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "Policy",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "Policy",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Policy",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.*/",
+        "setterMethodName" : "setPolicy",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "policy",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "policy",
+          "variableType" : "String",
+          "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "Policy" : {
+          "c2jName" : "Policy",
+          "c2jShape" : "ResourcePolicyJson",
+          "deprecated" : false,
+          "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withPolicy",
+          "getterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@return The policy document to set; formatted in JSON.*/",
+          "getterMethodName" : "getPolicy",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "Policy",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "Policy",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Policy",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.*/",
+          "setterMethodName" : "setPolicy",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "policy",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The policy document to set; formatted in JSON.</p>\n@param policy The policy document to set; formatted in JSON.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "policy",
+            "variableType" : "String",
+            "documentation" : "<p>The policy document to set; formatted in JSON.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "ResourceArn" : {
+          "c2jName" : "ResourceArn",
+          "c2jShape" : "ResourceARN",
+          "deprecated" : false,
+          "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withResourceArn",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@return The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.*/",
+          "getterMethodName" : "getResourceArn",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "ResourceArn",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "ResourceArn",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ResourceArn",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.*/",
+          "setterMethodName" : "setResourceArn",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "resourceArn",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>\n@param resourceArn The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "resourceArn",
+            "variableType" : "String",
+            "documentation" : "<p>The Amazon Resource Name (ARN) of the Entity resource you want to associate with a resource policy. </p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.request",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "ResourceArn", "Policy" ],
+      "shapeName" : "PutResourcePolicyRequest",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "PutResourcePolicyRequest",
+        "variableName" : "putResourcePolicyRequest",
+        "variableType" : "PutResourcePolicyRequest",
+        "documentation" : null,
+        "simpleType" : "PutResourcePolicyRequest",
+        "variableSetterType" : "PutResourcePolicyRequest"
+      },
+      "wrapper" : false
+    },
+    "PutResourcePolicyResult" : {
+      "c2jName" : "PutResourcePolicyResponse",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.marketplacecatalog.response.PutResourcePolicyResult",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.marketplacecatalog.response",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "PutResourcePolicyResult",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "PutResourcePolicyResult",
+        "variableName" : "putResourcePolicyResult",
+        "variableType" : "PutResourcePolicyResult",
+        "documentation" : null,
+        "simpleType" : "PutResourcePolicyResult",
+        "variableSetterType" : "PutResourcePolicyResult"
+      },
+      "wrapper" : false
+    },
     "ResourceInUseException" : {
       "c2jName" : "ResourceInUseException",
       "customization" : {
@@ -13107,7 +14430,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The specified resource wasn't found.</p>",
+      "documentation" : "<p>The specified resource wasn't found.</p> <p>HTTP status code: 404</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ResourceNotFoundException",
@@ -15868,7 +17191,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Too many requests.</p>",
+      "documentation" : "<p>Too many requests.</p> <p>HTTP status code: 429</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ThrottlingException",
@@ -16448,7 +17771,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>An error occurred during validation.</p>",
+      "documentation" : "<p>An error occurred during validation.</p> <p>HTTP status code: 422</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ValidationException",

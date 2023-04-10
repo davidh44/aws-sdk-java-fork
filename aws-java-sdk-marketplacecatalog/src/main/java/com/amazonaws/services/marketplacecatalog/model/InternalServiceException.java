@@ -18,6 +18,9 @@ import javax.annotation.Generated;
  * <p>
  * There was an internal service exception.
  * </p>
+ * <p>
+ * HTTP status code: 500
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InternalServiceException extends com.amazonaws.services.marketplacecatalog.model.AWSMarketplaceCatalogException {

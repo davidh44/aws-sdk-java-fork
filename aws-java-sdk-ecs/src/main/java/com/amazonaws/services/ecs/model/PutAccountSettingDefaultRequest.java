@@ -32,14 +32,16 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is specified,
      * the ARN and resource ID for your Amazon ECS container instances is affected. If <code>awsvpcTrunking</code> is
      * specified, the ENI limit for your Amazon ECS container instances is affected. If <code>containerInsights</code>
-     * is specified, the default setting for CloudWatch Container Insights for your clusters is affected.
+     * is specified, the default setting for Amazon Web Services CloudWatch Container Insights for your clusters is
+     * affected.
      * </p>
      * <p>
-     * Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     * <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt in
-     * timeline, see <a href=
-     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     * >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     * When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     * <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more information
+     * about FIPS-140 compliance with Fargate, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     * > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     * <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
     private String name;
@@ -58,14 +60,16 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is specified,
      * the ARN and resource ID for your Amazon ECS container instances is affected. If <code>awsvpcTrunking</code> is
      * specified, the ENI limit for your Amazon ECS container instances is affected. If <code>containerInsights</code>
-     * is specified, the default setting for CloudWatch Container Insights for your clusters is affected.
+     * is specified, the default setting for Amazon Web Services CloudWatch Container Insights for your clusters is
+     * affected.
      * </p>
      * <p>
-     * Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     * <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt in
-     * timeline, see <a href=
-     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     * >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     * When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     * <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more information
+     * about FIPS-140 compliance with Fargate, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     * > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     * <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param name
@@ -75,13 +79,14 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *        <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *        container instances is affected. If <code>awsvpcTrunking</code> is specified, the ENI limit for your
      *        Amazon ECS container instances is affected. If <code>containerInsights</code> is specified, the default
-     *        setting for CloudWatch Container Insights for your clusters is affected.</p>
+     *        setting for Amazon Web Services CloudWatch Container Insights for your clusters is affected. </p>
      *        <p>
-     *        Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     *        <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt
-     *        in timeline, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     *        >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     *        When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     *        <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more
+     *        information about FIPS-140 compliance with Fargate, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     *        > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     *        <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see SettingName
      */
 
@@ -96,14 +101,16 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is specified,
      * the ARN and resource ID for your Amazon ECS container instances is affected. If <code>awsvpcTrunking</code> is
      * specified, the ENI limit for your Amazon ECS container instances is affected. If <code>containerInsights</code>
-     * is specified, the default setting for CloudWatch Container Insights for your clusters is affected.
+     * is specified, the default setting for Amazon Web Services CloudWatch Container Insights for your clusters is
+     * affected.
      * </p>
      * <p>
-     * Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     * <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt in
-     * timeline, see <a href=
-     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     * >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     * When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     * <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more information
+     * about FIPS-140 compliance with Fargate, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     * > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     * <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return The resource name for which to modify the account setting. If <code>serviceLongArnFormat</code> is
@@ -112,13 +119,14 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *         <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *         container instances is affected. If <code>awsvpcTrunking</code> is specified, the ENI limit for your
      *         Amazon ECS container instances is affected. If <code>containerInsights</code> is specified, the default
-     *         setting for CloudWatch Container Insights for your clusters is affected.</p>
+     *         setting for Amazon Web Services CloudWatch Container Insights for your clusters is affected. </p>
      *         <p>
-     *         Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     *         <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the
-     *         opt in timeline, see <a href=
-     *         "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     *         >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     *         When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     *         <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more
+     *         information about FIPS-140 compliance with Fargate, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     *         > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     *         <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see SettingName
      */
 
@@ -133,14 +141,16 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is specified,
      * the ARN and resource ID for your Amazon ECS container instances is affected. If <code>awsvpcTrunking</code> is
      * specified, the ENI limit for your Amazon ECS container instances is affected. If <code>containerInsights</code>
-     * is specified, the default setting for CloudWatch Container Insights for your clusters is affected.
+     * is specified, the default setting for Amazon Web Services CloudWatch Container Insights for your clusters is
+     * affected.
      * </p>
      * <p>
-     * Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     * <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt in
-     * timeline, see <a href=
-     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     * >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     * When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     * <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more information
+     * about FIPS-140 compliance with Fargate, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     * > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     * <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param name
@@ -150,13 +160,14 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *        <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *        container instances is affected. If <code>awsvpcTrunking</code> is specified, the ENI limit for your
      *        Amazon ECS container instances is affected. If <code>containerInsights</code> is specified, the default
-     *        setting for CloudWatch Container Insights for your clusters is affected.</p>
+     *        setting for Amazon Web Services CloudWatch Container Insights for your clusters is affected. </p>
      *        <p>
-     *        Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     *        <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt
-     *        in timeline, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     *        >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     *        When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     *        <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more
+     *        information about FIPS-140 compliance with Fargate, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     *        > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     *        <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SettingName
      */
@@ -173,14 +184,16 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * resource ID for your Amazon ECS tasks is affected. If <code>containerInstanceLongArnFormat</code> is specified,
      * the ARN and resource ID for your Amazon ECS container instances is affected. If <code>awsvpcTrunking</code> is
      * specified, the ENI limit for your Amazon ECS container instances is affected. If <code>containerInsights</code>
-     * is specified, the default setting for CloudWatch Container Insights for your clusters is affected.
+     * is specified, the default setting for Amazon Web Services CloudWatch Container Insights for your clusters is
+     * affected.
      * </p>
      * <p>
-     * Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     * <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt in
-     * timeline, see <a href=
-     * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     * >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     * When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     * <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more information
+     * about FIPS-140 compliance with Fargate, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     * > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     * <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param name
@@ -190,13 +203,14 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *        <code>containerInstanceLongArnFormat</code> is specified, the ARN and resource ID for your Amazon ECS
      *        container instances is affected. If <code>awsvpcTrunking</code> is specified, the ENI limit for your
      *        Amazon ECS container instances is affected. If <code>containerInsights</code> is specified, the default
-     *        setting for CloudWatch Container Insights for your clusters is affected.</p>
+     *        setting for Amazon Web Services CloudWatch Container Insights for your clusters is affected. </p>
      *        <p>
-     *        Fargate is transitioning from task count-based quotas to vCPU-based quotas. You can set the name to
-     *        <code>fargateVCPULimit</code> to opt in or opt out of the vCPU-based quotas. For information about the opt
-     *        in timeline, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#fargate-quota-timeline"
-     *        >Fargate vCPU-based quotas timeline</a> in the <i>Amazon ECS Developer Guide</i>.
+     *        When you specify <code>fargateFIPSMode</code> for the <code>name</code> and <code>enabled</code> for the
+     *        <code>value</code>, Fargate uses FIPS-140 compliant cryptographic algorithms on your tasks. For more
+     *        information about FIPS-140 compliance with Fargate, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2ContainerServiceDocs/build/server-root/AmazonECS/latest/developerguide/ecs-fips-compliance.html"
+     *        > Amazon Web Services Fargate Federal Information Processing Standard (FIPS) 140-2 compliance</a> in the
+     *        <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SettingName
      */

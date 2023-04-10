@@ -18,6 +18,9 @@ import javax.annotation.Generated;
  * <p>
  * Access is denied.
  * </p>
+ * <p>
+ * HTTP status code: 403
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AccessDeniedException extends com.amazonaws.services.marketplacecatalog.model.AWSMarketplaceCatalogException {

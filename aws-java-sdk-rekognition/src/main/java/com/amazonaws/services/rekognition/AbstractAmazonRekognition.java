@@ -59,6 +59,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
     }
 
     @Override
+    public CreateFaceLivenessSessionResult createFaceLivenessSession(CreateFaceLivenessSessionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateProjectResult createProject(CreateProjectRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -185,6 +190,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public GetFaceDetectionResult getFaceDetection(GetFaceDetectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetFaceLivenessSessionResultsResult getFaceLivenessSessionResults(GetFaceLivenessSessionResultsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

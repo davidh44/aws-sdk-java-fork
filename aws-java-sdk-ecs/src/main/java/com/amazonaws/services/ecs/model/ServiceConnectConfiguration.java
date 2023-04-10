@@ -48,7 +48,8 @@ public class ServiceConnectConfiguration implements Serializable, Cloneable, Str
      * The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service Connect.
      * The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and cluster. The type of
      * namespace doesn't affect Service Connect. For more information about Cloud Map, see <a
-     * href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      */
     private String namespace;
@@ -128,14 +129,16 @@ public class ServiceConnectConfiguration implements Serializable, Cloneable, Str
      * The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service Connect.
      * The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and cluster. The type of
      * namespace doesn't affect Service Connect. For more information about Cloud Map, see <a
-     * href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      * 
      * @param namespace
      *        The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service
      *        Connect. The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and
      *        cluster. The type of namespace doesn't affect Service Connect. For more information about Cloud Map, see
-     *        <a href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     *        <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with
+     *        Services</a> in the <i>Cloud Map Developer Guide</i>.
      */
 
     public void setNamespace(String namespace) {
@@ -147,13 +150,15 @@ public class ServiceConnectConfiguration implements Serializable, Cloneable, Str
      * The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service Connect.
      * The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and cluster. The type of
      * namespace doesn't affect Service Connect. For more information about Cloud Map, see <a
-     * href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      * 
      * @return The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service
      *         Connect. The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and
      *         cluster. The type of namespace doesn't affect Service Connect. For more information about Cloud Map, see
-     *         <a href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     *         <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with
+     *         Services</a> in the <i>Cloud Map Developer Guide</i>.
      */
 
     public String getNamespace() {
@@ -165,14 +170,16 @@ public class ServiceConnectConfiguration implements Serializable, Cloneable, Str
      * The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service Connect.
      * The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and cluster. The type of
      * namespace doesn't affect Service Connect. For more information about Cloud Map, see <a
-     * href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      * 
      * @param namespace
      *        The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace for use with Service
      *        Connect. The namespace must be in the same Amazon Web Services Region as the Amazon ECS service and
      *        cluster. The type of namespace doesn't affect Service Connect. For more information about Cloud Map, see
-     *        <a href="https://docs.aws.amazon.com/">Working with Services</a> in the <i>Cloud Map Developer Guide</i>.
+     *        <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with
+     *        Services</a> in the <i>Cloud Map Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -44,7 +44,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of historical
-     * metrics data. The time must be later than the start time timestamp.
+     * metrics data. The time must be later than the start time timestamp. It cannot be later than the current
+     * timestamp.
      * </p>
      * <p>
      * The time range between the start and end time must be less than 24 hours.
@@ -387,6 +388,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
      * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -395,6 +400,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
+     * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -542,7 +551,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of historical
-     * metrics data. The time must be later than the start time timestamp.
+     * metrics data. The time must be later than the start time timestamp. It cannot be later than the current
+     * timestamp.
      * </p>
      * <p>
      * The time range between the start and end time must be less than 24 hours.
@@ -550,7 +560,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param endTime
      *        The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of
-     *        historical metrics data. The time must be later than the start time timestamp.</p>
+     *        historical metrics data. The time must be later than the start time timestamp. It cannot be later than the
+     *        current timestamp.</p>
      *        <p>
      *        The time range between the start and end time must be less than 24 hours.
      */
@@ -562,14 +573,16 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of historical
-     * metrics data. The time must be later than the start time timestamp.
+     * metrics data. The time must be later than the start time timestamp. It cannot be later than the current
+     * timestamp.
      * </p>
      * <p>
      * The time range between the start and end time must be less than 24 hours.
      * </p>
      * 
      * @return The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of
-     *         historical metrics data. The time must be later than the start time timestamp.</p>
+     *         historical metrics data. The time must be later than the start time timestamp. It cannot be later than
+     *         the current timestamp.</p>
      *         <p>
      *         The time range between the start and end time must be less than 24 hours.
      */
@@ -581,7 +594,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of historical
-     * metrics data. The time must be later than the start time timestamp.
+     * metrics data. The time must be later than the start time timestamp. It cannot be later than the current
+     * timestamp.
      * </p>
      * <p>
      * The time range between the start and end time must be less than 24 hours.
@@ -589,7 +603,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param endTime
      *        The timestamp, in UNIX Epoch time format, at which to end the reporting interval for the retrieval of
-     *        historical metrics data. The time must be later than the start time timestamp.</p>
+     *        historical metrics data. The time must be later than the start time timestamp. It cannot be later than the
+     *        current timestamp.</p>
      *        <p>
      *        The time range between the start and end time must be less than 24 hours.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1532,6 +1547,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
      * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -1540,6 +1559,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
+     * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -1818,6 +1841,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile
      *         </p>
+     *         <p>
+     *         Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *         </p>
      *         </dd>
      *         <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *         <dd>
@@ -1826,6 +1853,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid groupings and filters: Queue, Channel, Routing Profile
+     *         </p>
+     *         <p>
+     *         Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *         seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *         </p>
      *         </dd>
      *         <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -2111,6 +2142,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
      * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -2119,6 +2154,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
+     * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -2398,6 +2437,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile
      *        </p>
+     *        <p>
+     *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *        <dd>
@@ -2406,6 +2449,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile
+     *        </p>
+     *        <p>
+     *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -2696,6 +2743,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
      * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -2704,6 +2755,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
+     * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -2988,6 +3043,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile
      *        </p>
+     *        <p>
+     *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *        <dd>
@@ -2996,6 +3055,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile
+     *        </p>
+     *        <p>
+     *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -3288,6 +3351,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
      * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     * </p>
      * </dd>
      * <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      * <dd>
@@ -3296,6 +3363,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid groupings and filters: Queue, Channel, Routing Profile
+     * </p>
+     * <p>
+     * Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in seconds. For
+     * <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      * </p>
      * </dd>
      * <dt>SUM_CONTACTS_DISCONNECTED</dt>
@@ -3575,6 +3646,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile
      *        </p>
+     *        <p>
+     *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
+     *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
      *        <dd>
@@ -3583,6 +3658,10 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid groupings and filters: Queue, Channel, Routing Profile
+     *        </p>
+     *        <p>
+     *        Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800 (inclusive), in
+     *        seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for "Less than").
      *        </p>
      *        </dd>
      *        <dt>SUM_CONTACTS_DISCONNECTED</dt>

@@ -61,8 +61,9 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      * for Service Connect is removed. Note that the namespace will remain in Cloud Map and must be deleted separately.
      * </p>
      * <p>
-     * For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with Services</a> in the
-     * <i>Cloud Map Developer Guide</i>.
+     * For more information about Cloud Map, see <a
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      */
     private String namespace;
@@ -88,8 +89,9 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      * for Service Connect is removed. Note that the namespace will remain in Cloud Map and must be deleted separately.
      * </p>
      * <p>
-     * For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with Services</a> in the
-     * <i>Cloud Map Developer Guide</i>.
+     * For more information about Cloud Map, see <a
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      * 
      * @param namespace
@@ -113,8 +115,9 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      *        deleted separately.
      *        </p>
      *        <p>
-     *        For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with Services</a>
-     *        in the <i>Cloud Map Developer Guide</i>.
+     *        For more information about Cloud Map, see <a
+     *        href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with
+     *        Services</a> in the <i>Cloud Map Developer Guide</i>.
      */
 
     public void setNamespace(String namespace) {
@@ -142,8 +145,9 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      * for Service Connect is removed. Note that the namespace will remain in Cloud Map and must be deleted separately.
      * </p>
      * <p>
-     * For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with Services</a> in the
-     * <i>Cloud Map Developer Guide</i>.
+     * For more information about Cloud Map, see <a
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      * 
      * @return The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace that's used when you
@@ -166,7 +170,8 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      *         be deleted separately.
      *         </p>
      *         <p>
-     *         For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with
+     *         For more information about Cloud Map, see <a
+     *         href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with
      *         Services</a> in the <i>Cloud Map Developer Guide</i>.
      */
 
@@ -195,8 +200,9 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      * for Service Connect is removed. Note that the namespace will remain in Cloud Map and must be deleted separately.
      * </p>
      * <p>
-     * For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with Services</a> in the
-     * <i>Cloud Map Developer Guide</i>.
+     * For more information about Cloud Map, see <a
+     * href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with Services</a> in
+     * the <i>Cloud Map Developer Guide</i>.
      * </p>
      * 
      * @param namespace
@@ -220,8 +226,9 @@ public class ClusterServiceConnectDefaultsRequest implements Serializable, Clone
      *        deleted separately.
      *        </p>
      *        <p>
-     *        For more information about Cloud Map, see <a href="https://docs.aws.amazon.com/">Working with Services</a>
-     *        in the <i>Cloud Map Developer Guide</i>.
+     *        For more information about Cloud Map, see <a
+     *        href="https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html">Working with
+     *        Services</a> in the <i>Cloud Map Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

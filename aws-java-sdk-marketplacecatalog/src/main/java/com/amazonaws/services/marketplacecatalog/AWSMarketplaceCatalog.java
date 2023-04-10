@@ -57,22 +57,73 @@ public interface AWSMarketplaceCatalog {
      * @param cancelChangeSetRequest
      * @return Result of the CancelChangeSet operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ResourceInUseException
      *         The resource is currently in use.
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.CancelChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/CancelChangeSet"
      *      target="_top">AWS API Documentation</a>
      */
     CancelChangeSetResult cancelChangeSet(CancelChangeSetRequest cancelChangeSetRequest);
+
+    /**
+     * <p>
+     * Deletes a resource-based policy on an Entity that is identified by its resource ARN.
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return Result of the DeleteResourcePolicy operation returned by the service.
+     * @throws InternalServiceException
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws AccessDeniedException
+     *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @sample AWSMarketplaceCatalog.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/DeleteResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
 
     /**
      * <p>
@@ -82,15 +133,29 @@ public interface AWSMarketplaceCatalog {
      * @param describeChangeSetRequest
      * @return Result of the DescribeChangeSet operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.DescribeChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/DescribeChangeSet"
      *      target="_top">AWS API Documentation</a>
@@ -105,22 +170,73 @@ public interface AWSMarketplaceCatalog {
      * @param describeEntityRequest
      * @return Result of the DescribeEntity operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotSupportedException
      *         Currently, the specified resource is not supported.
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.DescribeEntity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/DescribeEntity"
      *      target="_top">AWS API Documentation</a>
      */
     DescribeEntityResult describeEntity(DescribeEntityRequest describeEntityRequest);
+
+    /**
+     * <p>
+     * Gets a resource-based policy of an Entity that is identified by its resource ARN.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return Result of the GetResourcePolicy operation returned by the service.
+     * @throws InternalServiceException
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws AccessDeniedException
+     *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @sample AWSMarketplaceCatalog.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/GetResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest getResourcePolicyRequest);
 
     /**
      * <p>
@@ -135,13 +251,24 @@ public interface AWSMarketplaceCatalog {
      * @param listChangeSetsRequest
      * @return Result of the ListChangeSets operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.ListChangeSets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/ListChangeSets"
      *      target="_top">AWS API Documentation</a>
@@ -156,15 +283,29 @@ public interface AWSMarketplaceCatalog {
      * @param listEntitiesRequest
      * @return Result of the ListEntities operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.ListEntities
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/ListEntities"
      *      target="_top">AWS API Documentation</a>
@@ -183,20 +324,72 @@ public interface AWSMarketplaceCatalog {
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The specified resource wasn't found.
+     *         The specified resource wasn't found.</p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws InternalServiceException
      *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Attaches a resource-based policy to an Entity. Examples of an entity include: <code>AmiProduct</code> and
+     * <code>ContainerProduct</code>.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return Result of the PutResourcePolicy operation returned by the service.
+     * @throws InternalServiceException
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
+     * @throws AccessDeniedException
+     *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
+     * @throws ValidationException
+     *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
+     * @throws ResourceNotFoundException
+     *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
+     * @throws ThrottlingException
+     *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
+     * @sample AWSMarketplaceCatalog.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/PutResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest putResourcePolicyRequest);
 
     /**
      * <p>
@@ -215,23 +408,42 @@ public interface AWSMarketplaceCatalog {
      * <p>
      * For more information about working with change sets, see <a href=
      * "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets">
-     * Working with change sets</a>.
+     * Working with change sets</a>. For information on change types for single-AMI products, see <a href=
+     * "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products"
+     * >Working with single-AMI products</a>. Als, for more information on change types available for container-based
+     * products, see <a href=
+     * "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products"
+     * >Working with container products</a>.
      * </p>
      * 
      * @param startChangeSetRequest
      * @return Result of the StartChangeSet operation returned by the service.
      * @throws InternalServiceException
-     *         There was an internal service exception.
+     *         There was an internal service exception.</p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ResourceNotFoundException
      *         The specified resource wasn't found.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws ResourceInUseException
      *         The resource is currently in use.
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @throws ServiceQuotaExceededException
      *         The maximum number of open requests per account has been exceeded.
      * @sample AWSMarketplaceCatalog.StartChangeSet
@@ -252,15 +464,29 @@ public interface AWSMarketplaceCatalog {
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The specified resource wasn't found.
+     *         The specified resource wasn't found.</p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws InternalServiceException
      *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/TagResource"
      *      target="_top">AWS API Documentation</a>
@@ -279,15 +505,29 @@ public interface AWSMarketplaceCatalog {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The specified resource wasn't found.
+     *         The specified resource wasn't found.</p>
+     *         <p>
+     *         HTTP status code: 404
      * @throws InternalServiceException
      *         There was an internal service exception.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 500
      * @throws AccessDeniedException
      *         Access is denied.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 403
      * @throws ValidationException
      *         An error occurred during validation.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 422
      * @throws ThrottlingException
      *         Too many requests.
+     *         </p>
+     *         <p>
+     *         HTTP status code: 429
      * @sample AWSMarketplaceCatalog.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/UntagResource"
      *      target="_top">AWS API Documentation</a>
