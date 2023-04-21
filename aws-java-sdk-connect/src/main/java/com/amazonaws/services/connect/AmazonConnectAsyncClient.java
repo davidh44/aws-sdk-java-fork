@@ -655,6 +655,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CreateParticipantResult> createParticipantAsync(CreateParticipantRequest request) {
+
+        return createParticipantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateParticipantResult> createParticipantAsync(final CreateParticipantRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateParticipantRequest, CreateParticipantResult> asyncHandler) {
+        final CreateParticipantRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateParticipantResult>() {
+            @Override
+            public CreateParticipantResult call() throws Exception {
+                CreateParticipantResult result = null;
+
+                try {
+                    result = executeCreateParticipant(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateQueueResult> createQueueAsync(CreateQueueRequest request) {
 
         return createQueueAsync(request, null);

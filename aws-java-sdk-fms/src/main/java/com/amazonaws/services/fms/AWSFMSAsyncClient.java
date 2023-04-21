@@ -32,9 +32,9 @@ import java.util.concurrent.ExecutorService;
  * Guide</a>.
  * </p>
  * <p>
- * Some API actions require explicit resource permissions. For information, see the developer guide topic <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager required
- * permissions for API actions</a>.
+ * Some API actions require explicit resource permissions. For information, see the developer guide topic <a href=
+ * "https://docs.aws.amazon.com/waf/latest/developerguide/fms-security_iam_service-with-iam.html#fms-security_iam_service-with-iam-roles-service"
+ * >Service roles for Firewall Manager</a>.
  * </p>
  */
 @ThreadSafe
@@ -479,6 +479,39 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetAdminScopeResult> getAdminScopeAsync(GetAdminScopeRequest request) {
+
+        return getAdminScopeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAdminScopeResult> getAdminScopeAsync(final GetAdminScopeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAdminScopeRequest, GetAdminScopeResult> asyncHandler) {
+        final GetAdminScopeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAdminScopeResult>() {
+            @Override
+            public GetAdminScopeResult call() throws Exception {
+                GetAdminScopeResult result = null;
+
+                try {
+                    result = executeGetAdminScope(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAppsListResult> getAppsListAsync(GetAppsListRequest request) {
 
         return getAppsListAsync(request, null);
@@ -762,6 +795,74 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
 
                 try {
                     result = executeGetViolationDetails(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAdminAccountsForOrganizationResult> listAdminAccountsForOrganizationAsync(
+            ListAdminAccountsForOrganizationRequest request) {
+
+        return listAdminAccountsForOrganizationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAdminAccountsForOrganizationResult> listAdminAccountsForOrganizationAsync(
+            final ListAdminAccountsForOrganizationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAdminAccountsForOrganizationRequest, ListAdminAccountsForOrganizationResult> asyncHandler) {
+        final ListAdminAccountsForOrganizationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAdminAccountsForOrganizationResult>() {
+            @Override
+            public ListAdminAccountsForOrganizationResult call() throws Exception {
+                ListAdminAccountsForOrganizationResult result = null;
+
+                try {
+                    result = executeListAdminAccountsForOrganization(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAdminsManagingAccountResult> listAdminsManagingAccountAsync(ListAdminsManagingAccountRequest request) {
+
+        return listAdminsManagingAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAdminsManagingAccountResult> listAdminsManagingAccountAsync(final ListAdminsManagingAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAdminsManagingAccountRequest, ListAdminsManagingAccountResult> asyncHandler) {
+        final ListAdminsManagingAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAdminsManagingAccountResult>() {
+            @Override
+            public ListAdminsManagingAccountResult call() throws Exception {
+                ListAdminsManagingAccountResult result = null;
+
+                try {
+                    result = executeListAdminsManagingAccount(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1094,6 +1195,39 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
 
                 try {
                     result = executeListThirdPartyFirewallFirewallPolicies(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAdminAccountResult> putAdminAccountAsync(PutAdminAccountRequest request) {
+
+        return putAdminAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAdminAccountResult> putAdminAccountAsync(final PutAdminAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutAdminAccountRequest, PutAdminAccountResult> asyncHandler) {
+        final PutAdminAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutAdminAccountResult>() {
+            @Override
+            public PutAdminAccountResult call() throws Exception {
+                PutAdminAccountResult result = null;
+
+                try {
+                    result = executePutAdminAccount(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

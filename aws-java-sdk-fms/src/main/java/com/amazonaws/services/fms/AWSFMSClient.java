@@ -57,9 +57,9 @@ import com.amazonaws.services.fms.model.transform.*;
  * Guide</a>.
  * </p>
  * <p>
- * Some API actions require explicit resource permissions. For information, see the developer guide topic <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager required
- * permissions for API actions</a>.
+ * Some API actions require explicit resource permissions. For information, see the developer guide topic <a href=
+ * "https://docs.aws.amazon.com/waf/latest/developerguide/fms-security_iam_service-with-iam.html#fms-security_iam_service-with-iam-roles-service"
+ * >Service roles for Firewall Manager</a>.
  * </p>
  */
 @ThreadSafe
@@ -152,12 +152,15 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
     /**
      * <p>
-     * Sets the Firewall Manager administrator account. The account must be a member of the organization in
-     * Organizations whose resources you want to protect. Firewall Manager sets the permissions that allow the account
-     * to administer your Firewall Manager policies.
+     * Sets a Firewall Manager default administrator account. The Firewall Manager default administrator account can
+     * manage third-party firewalls and has full administrative scope that allows administration of all policy types,
+     * accounts, organizational units, and Regions. This account must be a member account of the organization in
+     * Organizations whose resources you want to protect.
      * </p>
      * <p>
-     * The account that you associate with Firewall Manager is called the Firewall Manager administrator account.
+     * For information about working with Firewall Manager administrator accounts, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/fms-administrators.html">Managing Firewall
+     * Manager administrators</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @param associateAdminAccountRequest
@@ -780,8 +783,14 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
     /**
      * <p>
-     * Disassociates the account that has been set as the Firewall Manager administrator account. To set a different
-     * account as the administrator account, you must submit an <code>AssociateAdminAccount</code> request.
+     * Disassociates an Firewall Manager administrator account. To set a different account as an Firewall Manager
+     * administrator, submit a <a>PutAdminAccount</a> request. To set an account as a default administrator account, you
+     * must submit an <a>AssociateAdminAccount</a> request.
+     * </p>
+     * <p>
+     * Disassociation of the default administrator account follows the first in, last out principle. If you are the
+     * default administrator, all Firewall Manager administrators within the organization must first disassociate their
+     * accounts before you can disassociate your account.
      * </p>
      * 
      * @param disassociateAdminAccountRequest
@@ -919,7 +928,8 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
     /**
      * <p>
-     * Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager administrator.
+     * Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager default
+     * administrator.
      * </p>
      * 
      * @param getAdminAccountRequest
@@ -972,6 +982,74 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
             HttpResponseHandler<AmazonWebServiceResponse<GetAdminAccountResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAdminAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about the specified account's administrative scope. The admistrative scope defines the
+     * resources that an Firewall Manager administrator can manage.
+     * </p>
+     * 
+     * @param getAdminScopeRequest
+     * @return Result of the GetAdminScope operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.GetAdminScope
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetAdminScope" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetAdminScopeResult getAdminScope(GetAdminScopeRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAdminScope(request);
+    }
+
+    @SdkInternalApi
+    final GetAdminScopeResult executeGetAdminScope(GetAdminScopeRequest getAdminScopeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAdminScopeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAdminScopeRequest> request = null;
+        Response<GetAdminScopeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAdminScopeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAdminScopeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FMS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAdminScope");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAdminScopeResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAdminScopeResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1605,6 +1683,143 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
     /**
      * <p>
+     * Returns a <code>AdminAccounts</code> object that lists the Firewall Manager administrators within the
+     * organization that are onboarded to Firewall Manager by <a>AssociateAdminAccount</a>.
+     * </p>
+     * <p>
+     * This operation can be called only from the organization's management account.
+     * </p>
+     * 
+     * @param listAdminAccountsForOrganizationRequest
+     * @return Result of the ListAdminAccountsForOrganization operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.ListAdminAccountsForOrganization
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListAdminAccountsForOrganization"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAdminAccountsForOrganizationResult listAdminAccountsForOrganization(ListAdminAccountsForOrganizationRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAdminAccountsForOrganization(request);
+    }
+
+    @SdkInternalApi
+    final ListAdminAccountsForOrganizationResult executeListAdminAccountsForOrganization(
+            ListAdminAccountsForOrganizationRequest listAdminAccountsForOrganizationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAdminAccountsForOrganizationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAdminAccountsForOrganizationRequest> request = null;
+        Response<ListAdminAccountsForOrganizationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAdminAccountsForOrganizationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAdminAccountsForOrganizationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FMS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAdminAccountsForOrganization");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAdminAccountsForOrganizationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAdminAccountsForOrganizationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the accounts that are managing the specified Organizations member account. This is useful for any member
+     * account so that they can view the accounts who are managing their account. This operation only returns the
+     * managing administrators that have the requested account within their <a>AdminScope</a>.
+     * </p>
+     * 
+     * @param listAdminsManagingAccountRequest
+     * @return Result of the ListAdminsManagingAccount operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.ListAdminsManagingAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListAdminsManagingAccount" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListAdminsManagingAccountResult listAdminsManagingAccount(ListAdminsManagingAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAdminsManagingAccount(request);
+    }
+
+    @SdkInternalApi
+    final ListAdminsManagingAccountResult executeListAdminsManagingAccount(ListAdminsManagingAccountRequest listAdminsManagingAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAdminsManagingAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAdminsManagingAccountRequest> request = null;
+        Response<ListAdminsManagingAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAdminsManagingAccountRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAdminsManagingAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FMS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAdminsManagingAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAdminsManagingAccountResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAdminsManagingAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns an array of <code>AppsListDataSummary</code> objects.
      * </p>
      * 
@@ -1807,8 +2022,7 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
      * Services organization.
      * </p>
      * <p>
-     * The <code>ListMemberAccounts</code> must be submitted by the account that is set as the Firewall Manager
-     * administrator.
+     * Either an Firewall Manager administrator or the organization's management account can make this request.
      * </p>
      * 
      * @param listMemberAccountsRequest
@@ -2274,6 +2488,83 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
 
     /**
      * <p>
+     * Creates or updates an Firewall Manager administrator account. The account must be a member of the organization
+     * that was onboarded to Firewall Manager by <a>AssociateAdminAccount</a>. Only the organization's management
+     * account can create an Firewall Manager administrator account. When you create an Firewall Manager administrator
+     * account, the service checks to see if the account is already a delegated administrator within Organizations. If
+     * the account isn't a delegated administrator, Firewall Manager calls Organizations to delegate the account within
+     * Organizations. For more information about administrator accounts within Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts.html">Managing the Amazon
+     * Web Services Accounts in Your Organization</a>.
+     * </p>
+     * 
+     * @param putAdminAccountRequest
+     * @return Result of the PutAdminAccount operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @throws LimitExceededException
+     *         The operation exceeds a resource limit, for example, the maximum number of <code>policy</code> objects
+     *         that you can create for an Amazon Web Services account. For more information, see <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-limits.html">Firewall Manager Limits</a>
+     *         in the <i>WAF Developer Guide</i>.
+     * @sample AWSFMS.PutAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/PutAdminAccount" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PutAdminAccountResult putAdminAccount(PutAdminAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executePutAdminAccount(request);
+    }
+
+    @SdkInternalApi
+    final PutAdminAccountResult executePutAdminAccount(PutAdminAccountRequest putAdminAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putAdminAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutAdminAccountRequest> request = null;
+        Response<PutAdminAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutAdminAccountRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putAdminAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FMS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutAdminAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutAdminAccountResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutAdminAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an Firewall Manager applications list.
      * </p>
      * 
@@ -2350,10 +2641,13 @@ public class AWSFMSClient extends AmazonWebServiceClient implements AWSFMS {
      * SNS logs.
      * </p>
      * <p>
-     * To perform this action outside of the console, you must configure the SNS topic to allow the Firewall Manager
-     * role <code>AWSServiceRoleForFMS</code> to publish SNS logs. For more information, see <a
-     * href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager
-     * required permissions for API actions</a> in the <i>Firewall Manager Developer Guide</i>.
+     * To perform this action outside of the console, you must first configure the SNS topic's access policy to allow
+     * the <code>SnsRoleName</code> to publish SNS logs. If the <code>SnsRoleName</code> provided is a role other than
+     * the <code>AWSServiceRoleForFMS</code> service-linked role, this role must have a trust relationship configured to
+     * allow the Firewall Manager service principal <code>fms.amazonaws.com</code> to assume this role. For information
+     * about configuring an SNS access policy, see <a href=
+     * "https://docs.aws.amazon.com/waf/latest/developerguide/fms-security_iam_service-with-iam.html#fms-security_iam_service-with-iam-roles-service"
+     * >Service roles for Firewall Manager</a> in the <i>Firewall Manager Developer Guide</i>.
      * </p>
      * 
      * @param putNotificationChannelRequest

@@ -35,7 +35,11 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * The key to use for filtering data.
      * </p>
      * <p>
-     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the same
+     * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * </p>
      */
     private String metricFilterKey;
@@ -61,13 +65,21 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * The key to use for filtering data.
      * </p>
      * <p>
-     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the same
+     * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * </p>
      * 
      * @param metricFilterKey
      *        The key to use for filtering data. </p>
      *        <p>
-     *        Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     *        Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the
+     *        same values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     *        >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      */
 
     public void setMetricFilterKey(String metricFilterKey) {
@@ -79,12 +91,20 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * The key to use for filtering data.
      * </p>
      * <p>
-     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the same
+     * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * </p>
      * 
      * @return The key to use for filtering data. </p>
      *         <p>
-     *         Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     *         Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the
+     *         same values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     *         >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      */
 
     public String getMetricFilterKey() {
@@ -96,13 +116,21 @@ public class MetricFilterV2 implements Serializable, Cloneable, StructuredPojo {
      * The key to use for filtering data.
      * </p>
      * <p>
-     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     * Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the same
+     * values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     * >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * </p>
      * 
      * @param metricFilterKey
      *        The key to use for filtering data. </p>
      *        <p>
-     *        Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>
+     *        Valid metric filter keys: <code>INITIATION_METHOD</code>, <code>DISCONNECT_REASON</code>. These are the
+     *        same values as the <code>InitiationMethod</code> and <code>DisconnectReason</code> in the contact record.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/ctr-data-model.html#ctr-ContactTraceRecord"
+     *        >ContactTraceRecord</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

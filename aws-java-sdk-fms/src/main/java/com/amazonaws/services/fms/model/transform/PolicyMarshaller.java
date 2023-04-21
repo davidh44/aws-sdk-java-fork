@@ -57,6 +57,8 @@ public class PolicyMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceSetIds").build();
     private static final MarshallingInfo<String> POLICYDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PolicyDescription").build();
+    private static final MarshallingInfo<String> POLICYSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PolicyStatus").build();
 
     private static final PolicyMarshaller instance = new PolicyMarshaller();
 
@@ -88,6 +90,7 @@ public class PolicyMarshaller {
             protocolMarshaller.marshall(policy.getExcludeMap(), EXCLUDEMAP_BINDING);
             protocolMarshaller.marshall(policy.getResourceSetIds(), RESOURCESETIDS_BINDING);
             protocolMarshaller.marshall(policy.getPolicyDescription(), POLICYDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(policy.getPolicyStatus(), POLICYSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

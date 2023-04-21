@@ -251,6 +251,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateParticipantResult> createParticipantAsync(CreateParticipantRequest request) {
+
+        return createParticipantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateParticipantResult> createParticipantAsync(CreateParticipantRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateParticipantRequest, CreateParticipantResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateQueueResult> createQueueAsync(CreateQueueRequest request) {
 
         return createQueueAsync(request, null);

@@ -64,6 +64,10 @@ public class ResourceSetSummaryJsonUnmarshaller implements Unmarshaller<Resource
                     context.nextToken();
                     resourceSetSummary.setLastUpdateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ResourceSetStatus", targetDepth)) {
+                    context.nextToken();
+                    resourceSetSummary.setResourceSetStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

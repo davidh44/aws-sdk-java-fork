@@ -53,6 +53,26 @@ public class ResourceSetSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private java.util.Date lastUpdateTime;
+    /**
+     * <p>
+     * Indicates whether the resource set is in or out of an admin's Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or delete the
+     * resource set. Existing protections stay in place. Any new resource that come into scope of the resource set won't
+     * be protected.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String resourceSetStatus;
 
     /**
      * <p>
@@ -222,6 +242,173 @@ public class ResourceSetSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Indicates whether the resource set is in or out of an admin's Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or delete the
+     * resource set. Existing protections stay in place. Any new resource that come into scope of the resource set won't
+     * be protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param resourceSetStatus
+     *        Indicates whether the resource set is in or out of an admin's Region scope.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or
+     *        delete the resource set. Existing protections stay in place. Any new resource that come into scope of the
+     *        resource set won't be protected.
+     *        </p>
+     *        </li>
+     * @see ResourceSetStatus
+     */
+
+    public void setResourceSetStatus(String resourceSetStatus) {
+        this.resourceSetStatus = resourceSetStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the resource set is in or out of an admin's Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or delete the
+     * resource set. Existing protections stay in place. Any new resource that come into scope of the resource set won't
+     * be protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates whether the resource set is in or out of an admin's Region scope.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or
+     *         delete the resource set. Existing protections stay in place. Any new resource that come into scope of the
+     *         resource set won't be protected.
+     *         </p>
+     *         </li>
+     * @see ResourceSetStatus
+     */
+
+    public String getResourceSetStatus() {
+        return this.resourceSetStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the resource set is in or out of an admin's Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or delete the
+     * resource set. Existing protections stay in place. Any new resource that come into scope of the resource set won't
+     * be protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param resourceSetStatus
+     *        Indicates whether the resource set is in or out of an admin's Region scope.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or
+     *        delete the resource set. Existing protections stay in place. Any new resource that come into scope of the
+     *        resource set won't be protected.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceSetStatus
+     */
+
+    public ResourceSetSummary withResourceSetStatus(String resourceSetStatus) {
+        setResourceSetStatus(resourceSetStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the resource set is in or out of an admin's Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or delete the
+     * resource set. Existing protections stay in place. Any new resource that come into scope of the resource set won't
+     * be protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param resourceSetStatus
+     *        Indicates whether the resource set is in or out of an admin's Region scope.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code> - The administrator can manage and delete the resource set.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the resource set, but they can't edit or
+     *        delete the resource set. Existing protections stay in place. Any new resource that come into scope of the
+     *        resource set won't be protected.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceSetStatus
+     */
+
+    public ResourceSetSummary withResourceSetStatus(ResourceSetStatus resourceSetStatus) {
+        this.resourceSetStatus = resourceSetStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -240,7 +427,9 @@ public class ResourceSetSummary implements Serializable, Cloneable, StructuredPo
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getLastUpdateTime() != null)
-            sb.append("LastUpdateTime: ").append(getLastUpdateTime());
+            sb.append("LastUpdateTime: ").append(getLastUpdateTime()).append(",");
+        if (getResourceSetStatus() != null)
+            sb.append("ResourceSetStatus: ").append(getResourceSetStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -271,6 +460,10 @@ public class ResourceSetSummary implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getLastUpdateTime() != null && other.getLastUpdateTime().equals(this.getLastUpdateTime()) == false)
             return false;
+        if (other.getResourceSetStatus() == null ^ this.getResourceSetStatus() == null)
+            return false;
+        if (other.getResourceSetStatus() != null && other.getResourceSetStatus().equals(this.getResourceSetStatus()) == false)
+            return false;
         return true;
     }
 
@@ -283,6 +476,7 @@ public class ResourceSetSummary implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getLastUpdateTime() == null) ? 0 : getLastUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getResourceSetStatus() == null) ? 0 : getResourceSetStatus().hashCode());
         return hashCode;
     }
 

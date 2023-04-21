@@ -201,6 +201,26 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String policyDescription;
+    /**
+     * <p>
+     * Indicates whether the policy is in or out of an admin's policy or Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     * policy. Existing policy protections stay in place. Any new resources that come into scope of the policy won't be
+     * protected.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String policyStatus;
 
     /**
      * <p>
@@ -1506,6 +1526,173 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether the policy is in or out of an admin's policy or Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     * policy. Existing policy protections stay in place. Any new resources that come into scope of the policy won't be
+     * protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param policyStatus
+     *        Indicates whether the policy is in or out of an admin's policy or Region scope.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     *        policy. Existing policy protections stay in place. Any new resources that come into scope of the policy
+     *        won't be protected.
+     *        </p>
+     *        </li>
+     * @see CustomerPolicyStatus
+     */
+
+    public void setPolicyStatus(String policyStatus) {
+        this.policyStatus = policyStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the policy is in or out of an admin's policy or Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     * policy. Existing policy protections stay in place. Any new resources that come into scope of the policy won't be
+     * protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates whether the policy is in or out of an admin's policy or Region scope.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete
+     *         the policy. Existing policy protections stay in place. Any new resources that come into scope of the
+     *         policy won't be protected.
+     *         </p>
+     *         </li>
+     * @see CustomerPolicyStatus
+     */
+
+    public String getPolicyStatus() {
+        return this.policyStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the policy is in or out of an admin's policy or Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     * policy. Existing policy protections stay in place. Any new resources that come into scope of the policy won't be
+     * protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param policyStatus
+     *        Indicates whether the policy is in or out of an admin's policy or Region scope.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     *        policy. Existing policy protections stay in place. Any new resources that come into scope of the policy
+     *        won't be protected.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomerPolicyStatus
+     */
+
+    public Policy withPolicyStatus(String policyStatus) {
+        setPolicyStatus(policyStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the policy is in or out of an admin's policy or Region scope.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     * policy. Existing policy protections stay in place. Any new resources that come into scope of the policy won't be
+     * protected.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param policyStatus
+     *        Indicates whether the policy is in or out of an admin's policy or Region scope.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ACTIVE</code> - The administrator can manage and delete the policy.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>OUT_OF_ADMIN_SCOPE</code> - The administrator can view the policy, but they can't edit or delete the
+     *        policy. Existing policy protections stay in place. Any new resources that come into scope of the policy
+     *        won't be protected.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomerPolicyStatus
+     */
+
+    public Policy withPolicyStatus(CustomerPolicyStatus policyStatus) {
+        this.policyStatus = policyStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1544,7 +1731,9 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
         if (getResourceSetIds() != null)
             sb.append("ResourceSetIds: ").append(getResourceSetIds()).append(",");
         if (getPolicyDescription() != null)
-            sb.append("PolicyDescription: ").append(getPolicyDescription());
+            sb.append("PolicyDescription: ").append(getPolicyDescription()).append(",");
+        if (getPolicyStatus() != null)
+            sb.append("PolicyStatus: ").append(getPolicyStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -1616,6 +1805,10 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPolicyDescription() != null && other.getPolicyDescription().equals(this.getPolicyDescription()) == false)
             return false;
+        if (other.getPolicyStatus() == null ^ this.getPolicyStatus() == null)
+            return false;
+        if (other.getPolicyStatus() != null && other.getPolicyStatus().equals(this.getPolicyStatus()) == false)
+            return false;
         return true;
     }
 
@@ -1638,6 +1831,7 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExcludeMap() == null) ? 0 : getExcludeMap().hashCode());
         hashCode = prime * hashCode + ((getResourceSetIds() == null) ? 0 : getResourceSetIds().hashCode());
         hashCode = prime * hashCode + ((getPolicyDescription() == null) ? 0 : getPolicyDescription().hashCode());
+        hashCode = prime * hashCode + ((getPolicyStatus() == null) ? 0 : getPolicyStatus().hashCode());
         return hashCode;
     }
 

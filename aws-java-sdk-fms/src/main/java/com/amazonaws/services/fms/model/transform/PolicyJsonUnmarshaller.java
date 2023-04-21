@@ -116,6 +116,10 @@ public class PolicyJsonUnmarshaller implements Unmarshaller<Policy, JsonUnmarsha
                     context.nextToken();
                     policy.setPolicyDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PolicyStatus", targetDepth)) {
+                    context.nextToken();
+                    policy.setPolicyStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

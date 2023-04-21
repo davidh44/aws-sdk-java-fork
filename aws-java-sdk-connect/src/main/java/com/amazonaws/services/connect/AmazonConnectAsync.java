@@ -759,6 +759,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Adds a new participant into an on-going chat contact. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-customize-flow.html">Customize chat flow
+     * experiences by integrating custom participants</a>.
+     * </p>
+     * 
+     * @param createParticipantRequest
+     * @return A Java Future containing the result of the CreateParticipant operation returned by the service.
+     * @sample AmazonConnectAsync.CreateParticipant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateParticipant" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateParticipantResult> createParticipantAsync(CreateParticipantRequest createParticipantRequest);
+
+    /**
+     * <p>
+     * Adds a new participant into an on-going chat contact. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-customize-flow.html">Customize chat flow
+     * experiences by integrating custom participants</a>.
+     * </p>
+     * 
+     * @param createParticipantRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateParticipant operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CreateParticipant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateParticipant" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateParticipantResult> createParticipantAsync(CreateParticipantRequest createParticipantRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateParticipantRequest, CreateParticipantResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>

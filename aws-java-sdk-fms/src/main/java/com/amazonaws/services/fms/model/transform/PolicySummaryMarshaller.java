@@ -41,6 +41,8 @@ public class PolicySummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemediationEnabled").build();
     private static final MarshallingInfo<Boolean> DELETEUNUSEDFMMANAGEDRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteUnusedFMManagedResources").build();
+    private static final MarshallingInfo<String> POLICYSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PolicyStatus").build();
 
     private static final PolicySummaryMarshaller instance = new PolicySummaryMarshaller();
 
@@ -65,6 +67,7 @@ public class PolicySummaryMarshaller {
             protocolMarshaller.marshall(policySummary.getSecurityServiceType(), SECURITYSERVICETYPE_BINDING);
             protocolMarshaller.marshall(policySummary.getRemediationEnabled(), REMEDIATIONENABLED_BINDING);
             protocolMarshaller.marshall(policySummary.getDeleteUnusedFMManagedResources(), DELETEUNUSEDFMMANAGEDRESOURCES_BINDING);
+            protocolMarshaller.marshall(policySummary.getPolicyStatus(), POLICYSTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

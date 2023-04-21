@@ -88,6 +88,11 @@ public class AbstractAWSFMS implements AWSFMS {
     }
 
     @Override
+    public GetAdminScopeResult getAdminScope(GetAdminScopeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAppsListResult getAppsList(GetAppsListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +134,16 @@ public class AbstractAWSFMS implements AWSFMS {
 
     @Override
     public GetViolationDetailsResult getViolationDetails(GetViolationDetailsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAdminAccountsForOrganizationResult listAdminAccountsForOrganization(ListAdminAccountsForOrganizationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAdminsManagingAccountResult listAdminsManagingAccount(ListAdminsManagingAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -179,6 +194,11 @@ public class AbstractAWSFMS implements AWSFMS {
 
     @Override
     public ListThirdPartyFirewallFirewallPoliciesResult listThirdPartyFirewallFirewallPolicies(ListThirdPartyFirewallFirewallPoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutAdminAccountResult putAdminAccount(PutAdminAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

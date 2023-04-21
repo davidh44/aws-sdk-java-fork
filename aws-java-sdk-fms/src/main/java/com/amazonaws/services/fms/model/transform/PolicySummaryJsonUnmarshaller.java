@@ -76,6 +76,10 @@ public class PolicySummaryJsonUnmarshaller implements Unmarshaller<PolicySummary
                     context.nextToken();
                     policySummary.setDeleteUnusedFMManagedResources(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("PolicyStatus", targetDepth)) {
+                    context.nextToken();
+                    policySummary.setPolicyStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

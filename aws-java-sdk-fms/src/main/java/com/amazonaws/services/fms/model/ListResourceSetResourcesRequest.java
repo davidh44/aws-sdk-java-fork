@@ -27,7 +27,7 @@ public class ListResourceSetResourcesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     * A unique identifier for the resource set, used in a request to refer to the resource set.
      * </p>
      */
     private String identifier;
@@ -51,11 +51,11 @@ public class ListResourceSetResourcesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     * A unique identifier for the resource set, used in a request to refer to the resource set.
      * </p>
      * 
      * @param identifier
-     *        A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     *        A unique identifier for the resource set, used in a request to refer to the resource set.
      */
 
     public void setIdentifier(String identifier) {
@@ -64,10 +64,10 @@ public class ListResourceSetResourcesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     * A unique identifier for the resource set, used in a request to refer to the resource set.
      * </p>
      * 
-     * @return A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     * @return A unique identifier for the resource set, used in a request to refer to the resource set.
      */
 
     public String getIdentifier() {
@@ -76,11 +76,11 @@ public class ListResourceSetResourcesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     * A unique identifier for the resource set, used in a request to refer to the resource set.
      * </p>
      * 
      * @param identifier
-     *        A unique identifier for the resource set, used in a TODO to refer to the resource set.
+     *        A unique identifier for the resource set, used in a request to refer to the resource set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

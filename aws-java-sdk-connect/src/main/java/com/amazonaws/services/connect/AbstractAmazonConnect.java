@@ -113,6 +113,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public CreateParticipantResult createParticipant(CreateParticipantRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateQueueResult createQueue(CreateQueueRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

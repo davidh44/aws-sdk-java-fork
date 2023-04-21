@@ -1,3 +1,16 @@
+# __1.12.454__ __2023-04-21__
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds a new API CreateParticipant. For Amazon Connect Chat, you can use this new API to customize chat flow experiences.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation update to address various Amazon ECS tickets.
+
+## __Firewall Management Service__
+  - ### Features
+    - AWS Firewall Manager adds support for multiple administrators. You can now delegate more than one administrator per organization.
+
 # __1.12.453__ __2023-04-20__
 ## __AWS IoT__
   - ### Features

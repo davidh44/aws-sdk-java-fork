@@ -111,6 +111,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      */
     private Integer maxSwap;
@@ -127,6 +130,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <note>
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't supported.
+     * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      * </p>
      * </note>
      */
@@ -657,6 +663,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      * 
      * @param maxSwap
@@ -674,6 +683,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't
      *        supported.
+     *        </p>
+     *        <p>
+     *        If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      *        </p>
      */
 
@@ -698,6 +710,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      * 
      * @return The total amount of swap memory (in MiB) a container can use. This parameter will be translated to the
@@ -714,6 +729,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *         <p>
      *         If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't
      *         supported.
+     *         </p>
+     *         <p>
+     *         If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      *         </p>
      */
 
@@ -738,6 +756,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      * 
      * @param maxSwap
@@ -755,6 +776,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        If you're using tasks that use the Fargate launch type, the <code>maxSwap</code> parameter isn't
      *        supported.
+     *        </p>
+     *        <p>
+     *        If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -778,6 +802,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      * 
      * @param swappiness
@@ -792,6 +819,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't
      *        supported.
+     *        </p>
+     *        <p>
+     *        If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      *        </p>
      */
 
@@ -813,6 +843,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      * 
      * @return This allows you to tune a container's memory swappiness behavior. A <code>swappiness</code> value of
@@ -826,6 +859,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *         <p>
      *         If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't
      *         supported.
+     *         </p>
+     *         <p>
+     *         If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      *         </p>
      */
 
@@ -847,6 +883,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't supported.
      * </p>
+     * <p>
+     * If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
+     * </p>
      * </note>
      * 
      * @param swappiness
@@ -861,6 +900,9 @@ public class LinuxParameters implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        If you're using tasks that use the Fargate launch type, the <code>swappiness</code> parameter isn't
      *        supported.
+     *        </p>
+     *        <p>
+     *        If you're using tasks on Amazon Linux 2023 the <code>swappiness</code> parameter isn't supported.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
