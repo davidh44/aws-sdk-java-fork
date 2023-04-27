@@ -22,7 +22,8 @@ public enum ScanStatus {
 
     RUNNING("RUNNING"),
     COMPLETED("COMPLETED"),
-    FAILED("FAILED");
+    FAILED("FAILED"),
+    SKIPPED("SKIPPED");
 
     private String value;
 

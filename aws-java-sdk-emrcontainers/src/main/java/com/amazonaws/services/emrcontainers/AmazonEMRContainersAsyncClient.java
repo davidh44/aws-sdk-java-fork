@@ -472,6 +472,41 @@ public class AmazonEMRContainersAsyncClient extends AmazonEMRContainersClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetManagedEndpointSessionCredentialsResult> getManagedEndpointSessionCredentialsAsync(
+            GetManagedEndpointSessionCredentialsRequest request) {
+
+        return getManagedEndpointSessionCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetManagedEndpointSessionCredentialsResult> getManagedEndpointSessionCredentialsAsync(
+            final GetManagedEndpointSessionCredentialsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetManagedEndpointSessionCredentialsRequest, GetManagedEndpointSessionCredentialsResult> asyncHandler) {
+        final GetManagedEndpointSessionCredentialsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetManagedEndpointSessionCredentialsResult>() {
+            @Override
+            public GetManagedEndpointSessionCredentialsResult call() throws Exception {
+                GetManagedEndpointSessionCredentialsResult result = null;
+
+                try {
+                    result = executeGetManagedEndpointSessionCredentials(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobRunsResult> listJobRunsAsync(ListJobRunsRequest request) {
 
         return listJobRunsAsync(request, null);

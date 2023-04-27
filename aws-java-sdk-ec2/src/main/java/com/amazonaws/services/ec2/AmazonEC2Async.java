@@ -22217,9 +22217,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * <b>Note: </b>Using this action to change the security groups associated with an elastic network interface (ENI)
-     * attached to an instance in a VPC can result in an error if the instance has more than one ENI. To change the
-     * security groups associated with an ENI attached to an instance that has multiple ENIs, we recommend that you use
-     * the <a>ModifyNetworkInterfaceAttribute</a> action.
+     * attached to an instance can result in an error if the instance has more than one ENI. To change the security
+     * groups associated with an ENI attached to an instance that has multiple ENIs, we recommend that you use the
+     * <a>ModifyNetworkInterfaceAttribute</a> action.
      * </p>
      * <p>
      * To modify some attributes, the instance must be stopped. For more information, see <a
@@ -22241,9 +22241,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * <b>Note: </b>Using this action to change the security groups associated with an elastic network interface (ENI)
-     * attached to an instance in a VPC can result in an error if the instance has more than one ENI. To change the
-     * security groups associated with an ENI attached to an instance that has multiple ENIs, we recommend that you use
-     * the <a>ModifyNetworkInterfaceAttribute</a> action.
+     * attached to an instance can result in an error if the instance has more than one ENI. To change the security
+     * groups associated with an ENI attached to an instance that has multiple ENIs, we recommend that you use the
+     * <a>ModifyNetworkInterfaceAttribute</a> action.
      * </p>
      * <p>
      * To modify some attributes, the instance must be stopped. For more information, see <a
@@ -23014,13 +23014,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying Reserved Instances</a> in
      * the <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param modifyReservedInstancesRequest
      *        Contains the parameters for ModifyReservedInstances.
@@ -23042,13 +23035,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying Reserved Instances</a> in
      * the <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param modifyReservedInstancesRequest
      *        Contains the parameters for ModifyReservedInstances.
@@ -24979,13 +24965,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Instances</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
      * Instance Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param purchaseReservedInstancesOfferingRequest
      *        Contains the parameters for PurchaseReservedInstancesOffering.
@@ -25018,13 +24997,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Instances</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
      * Instance Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param purchaseReservedInstancesOfferingRequest
      *        Contains the parameters for PurchaseReservedInstancesOffering.
@@ -26324,13 +26296,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use"
      * >Which is the best Spot request method to use?</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
-     * </important> <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
-     * </p>
-     * </note>
+     * </important>
      * 
      * @param requestSpotInstancesRequest
      *        Contains the parameters for RequestSpotInstances.
@@ -26356,13 +26322,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use"
      * >Which is the best Spot request method to use?</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
-     * </important> <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
-     * </p>
-     * </note>
+     * </important>
      * 
      * @param requestSpotInstancesRequest
      *        Contains the parameters for RequestSpotInstances.
@@ -27076,27 +27036,14 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <ul>
      * <li>
      * <p>
-     * [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you
-     * don't have a default VPC, you must specify a subnet ID in the request.
+     * If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a
+     * default VPC, you must specify a subnet ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * [EC2-Classic] If don't specify an Availability Zone, we choose one for you.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a
-     * subnet ID, the request fails. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#vpc-only-instance-types">Instance types
-     * available only in a VPC</a>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this
-     * address, we choose one from the IPv4 range of your subnet.
+     * All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we
+     * choose one from the IPv4 range of your subnet.
      * </p>
      * </li>
      * <li>
@@ -27145,13 +27092,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html"
      * >Troubleshooting connecting to your instance</a>.
      * </p>
-     * <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon EC2 User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param runInstancesRequest
      * @return A Java Future containing the result of the RunInstances operation returned by the service.
@@ -27171,27 +27111,14 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <ul>
      * <li>
      * <p>
-     * [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you
-     * don't have a default VPC, you must specify a subnet ID in the request.
+     * If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a
+     * default VPC, you must specify a subnet ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * [EC2-Classic] If don't specify an Availability Zone, we choose one for you.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a
-     * subnet ID, the request fails. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#vpc-only-instance-types">Instance types
-     * available only in a VPC</a>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this
-     * address, we choose one from the IPv4 range of your subnet.
+     * All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we
+     * choose one from the IPv4 range of your subnet.
      * </p>
      * </li>
      * <li>
@@ -27240,13 +27167,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html"
      * >Troubleshooting connecting to your instance</a>.
      * </p>
-     * <note>
-     * <p>
-     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
-     * VPC</a> in the <i>Amazon EC2 User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param runInstancesRequest
      * @param asyncHandler

@@ -52,6 +52,10 @@ public class ConnectivityInfoJsonUnmarshaller implements Unmarshaller<Connectivi
                     context.nextToken();
                     connectivityInfo.setPublicAccess(PublicAccessJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("vpcConnectivity", targetDepth)) {
+                    context.nextToken();
+                    connectivityInfo.setVpcConnectivity(VpcConnectivityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -92,9 +92,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     private Boolean enaSupport;
     /**
      * <p>
-     * [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must specify at
-     * least one security group, even if it's just the default security group for the VPC. You must specify the security
-     * group ID, not the security group name.
+     * Replaces the security groups of the instance with the specified security groups. You must specify the ID of at
+     * least one security group, even if it's just the default security group for the VPC.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> groups;
@@ -814,14 +813,12 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must specify at
-     * least one security group, even if it's just the default security group for the VPC. You must specify the security
-     * group ID, not the security group name.
+     * Replaces the security groups of the instance with the specified security groups. You must specify the ID of at
+     * least one security group, even if it's just the default security group for the VPC.
      * </p>
      * 
-     * @return [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must
-     *         specify at least one security group, even if it's just the default security group for the VPC. You must
-     *         specify the security group ID, not the security group name.
+     * @return Replaces the security groups of the instance with the specified security groups. You must specify the ID
+     *         of at least one security group, even if it's just the default security group for the VPC.
      */
 
     public java.util.List<String> getGroups() {
@@ -833,15 +830,13 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must specify at
-     * least one security group, even if it's just the default security group for the VPC. You must specify the security
-     * group ID, not the security group name.
+     * Replaces the security groups of the instance with the specified security groups. You must specify the ID of at
+     * least one security group, even if it's just the default security group for the VPC.
      * </p>
      * 
      * @param groups
-     *        [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must
-     *        specify at least one security group, even if it's just the default security group for the VPC. You must
-     *        specify the security group ID, not the security group name.
+     *        Replaces the security groups of the instance with the specified security groups. You must specify the ID
+     *        of at least one security group, even if it's just the default security group for the VPC.
      */
 
     public void setGroups(java.util.Collection<String> groups) {
@@ -855,9 +850,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must specify at
-     * least one security group, even if it's just the default security group for the VPC. You must specify the security
-     * group ID, not the security group name.
+     * Replaces the security groups of the instance with the specified security groups. You must specify the ID of at
+     * least one security group, even if it's just the default security group for the VPC.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -866,9 +860,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * </p>
      * 
      * @param groups
-     *        [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must
-     *        specify at least one security group, even if it's just the default security group for the VPC. You must
-     *        specify the security group ID, not the security group name.
+     *        Replaces the security groups of the instance with the specified security groups. You must specify the ID
+     *        of at least one security group, even if it's just the default security group for the VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -884,15 +877,13 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must specify at
-     * least one security group, even if it's just the default security group for the VPC. You must specify the security
-     * group ID, not the security group name.
+     * Replaces the security groups of the instance with the specified security groups. You must specify the ID of at
+     * least one security group, even if it's just the default security group for the VPC.
      * </p>
      * 
      * @param groups
-     *        [EC2-VPC] Replaces the security groups of the instance with the specified security groups. You must
-     *        specify at least one security group, even if it's just the default security group for the VPC. You must
-     *        specify the security group ID, not the security group name.
+     *        Replaces the security groups of the instance with the specified security groups. You must specify the ID
+     *        of at least one security group, even if it's just the default security group for the VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

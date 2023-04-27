@@ -575,6 +575,10 @@ public class RunInstancesRequestMarshaller implements Marshaller<Request<RunInst
             if (cpuOptions.getThreadsPerCore() != null) {
                 request.addParameter("CpuOptions.ThreadsPerCore", StringUtils.fromInteger(cpuOptions.getThreadsPerCore()));
             }
+
+            if (cpuOptions.getAmdSevSnp() != null) {
+                request.addParameter("CpuOptions.AmdSevSnp", StringUtils.fromString(cpuOptions.getAmdSevSnp()));
+            }
         }
 
         CapacityReservationSpecification capacityReservationSpecification = runInstancesRequest.getCapacityReservationSpecification();

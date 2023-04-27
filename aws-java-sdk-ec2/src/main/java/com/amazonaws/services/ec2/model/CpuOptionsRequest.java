@@ -39,6 +39,13 @@ public class CpuOptionsRequest implements Serializable, Cloneable {
      * </p>
      */
     private Integer threadsPerCore;
+    /**
+     * <p>
+     * Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     * instance types only.
+     * </p>
+     */
+    private String amdSevSnp;
 
     /**
      * <p>
@@ -127,6 +134,73 @@ public class CpuOptionsRequest implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     * instance types only.
+     * </p>
+     * 
+     * @param amdSevSnp
+     *        Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     *        instance types only.
+     * @see AmdSevSnpSpecification
+     */
+
+    public void setAmdSevSnp(String amdSevSnp) {
+        this.amdSevSnp = amdSevSnp;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     * instance types only.
+     * </p>
+     * 
+     * @return Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     *         instance types only.
+     * @see AmdSevSnpSpecification
+     */
+
+    public String getAmdSevSnp() {
+        return this.amdSevSnp;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     * instance types only.
+     * </p>
+     * 
+     * @param amdSevSnp
+     *        Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     *        instance types only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AmdSevSnpSpecification
+     */
+
+    public CpuOptionsRequest withAmdSevSnp(String amdSevSnp) {
+        setAmdSevSnp(amdSevSnp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     * instance types only.
+     * </p>
+     * 
+     * @param amdSevSnp
+     *        Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP is supported with M6a, R6a, and C6a
+     *        instance types only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AmdSevSnpSpecification
+     */
+
+    public CpuOptionsRequest withAmdSevSnp(AmdSevSnpSpecification amdSevSnp) {
+        this.amdSevSnp = amdSevSnp.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -141,7 +215,9 @@ public class CpuOptionsRequest implements Serializable, Cloneable {
         if (getCoreCount() != null)
             sb.append("CoreCount: ").append(getCoreCount()).append(",");
         if (getThreadsPerCore() != null)
-            sb.append("ThreadsPerCore: ").append(getThreadsPerCore());
+            sb.append("ThreadsPerCore: ").append(getThreadsPerCore()).append(",");
+        if (getAmdSevSnp() != null)
+            sb.append("AmdSevSnp: ").append(getAmdSevSnp());
         sb.append("}");
         return sb.toString();
     }
@@ -164,6 +240,10 @@ public class CpuOptionsRequest implements Serializable, Cloneable {
             return false;
         if (other.getThreadsPerCore() != null && other.getThreadsPerCore().equals(this.getThreadsPerCore()) == false)
             return false;
+        if (other.getAmdSevSnp() == null ^ this.getAmdSevSnp() == null)
+            return false;
+        if (other.getAmdSevSnp() != null && other.getAmdSevSnp().equals(this.getAmdSevSnp()) == false)
+            return false;
         return true;
     }
 
@@ -174,6 +254,7 @@ public class CpuOptionsRequest implements Serializable, Cloneable {
 
         hashCode = prime * hashCode + ((getCoreCount() == null) ? 0 : getCoreCount().hashCode());
         hashCode = prime * hashCode + ((getThreadsPerCore() == null) ? 0 : getThreadsPerCore().hashCode());
+        hashCode = prime * hashCode + ((getAmdSevSnp() == null) ? 0 : getAmdSevSnp().hashCode());
         return hashCode;
     }
 

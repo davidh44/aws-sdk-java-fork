@@ -48,8 +48,8 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Creates an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html">Creating and
-     * managing OpenSearch Ingestion pipelines</a>.
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/creating-pipeline.html">Creating
+     * Amazon OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param createPipelineRequest
@@ -73,9 +73,9 @@ public interface AmazonOSIS {
 
     /**
      * <p>
-     * Deletes an OpenSearch Ingestion pipeline. For more information, see <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html#delete-pipeline"
-     * >Deleting pipelines</a>.
+     * Deletes an OpenSearch Ingestion pipeline. For more information, see <a
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/delete-pipeline.html">Deleting Amazon
+     * OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param deletePipelineRequest
@@ -122,7 +122,9 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Retrieves information about a specific blueprint for OpenSearch Ingestion. Blueprints are templates for the
-     * configuration needed for a <code>CreatePipeline</code> request.
+     * configuration needed for a <code>CreatePipeline</code> request. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/creating-pipeline.html#pipeline-blueprint"
+     * >Using blueprints to create a pipeline</a>.
      * </p>
      * 
      * @param getPipelineBlueprintRequest
@@ -148,9 +150,9 @@ public interface AmazonOSIS {
      * this operation only returns information when a pipeline is being created.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html">Creating and
-     * managing OpenSearch Ingestion pipelines</a>.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/creating-pipeline.html#get-pipeline-progress"
+     * >Tracking the status of pipeline creation</a>.
      * </p>
      * 
      * @param getPipelineChangeProgressRequest
@@ -172,7 +174,9 @@ public interface AmazonOSIS {
 
     /**
      * <p>
-     * Retrieves a list of all available blueprints for Data Prepper.
+     * Retrieves a list of all available blueprints for Data Prepper. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/creating-pipeline.html#pipeline-blueprint"
+     * >Using blueprints to create a pipeline</a>.
      * </p>
      * 
      * @param listPipelineBlueprintsRequest
@@ -196,8 +200,8 @@ public interface AmazonOSIS {
      * <p>
      * Lists all OpenSearch Ingestion pipelines in the current Amazon Web Services account and Region. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html">Creating and
-     * managing OpenSearch Ingestion pipelines</a>.
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/list-pipeline.html">Viewing Amazon
+     * OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param listPipelinesRequest
@@ -220,8 +224,8 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Lists all resource tags associated with an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/tag-pipeline.html">Tagging OpenSearch
-     * Ingestion pipelines</a>.
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/tag-pipeline.html">Tagging Amazon
+     * OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -243,9 +247,9 @@ public interface AmazonOSIS {
 
     /**
      * <p>
-     * Starts an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html#start-pipeline"
-     * >Starting pipelines</a>.
+     * Starts an OpenSearch Ingestion pipeline. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/pipeline--stop-start.html#pipeline--start"
+     * >Starting an OpenSearch Ingestion pipeline</a>.
      * </p>
      * 
      * @param startPipelineRequest
@@ -269,9 +273,9 @@ public interface AmazonOSIS {
 
     /**
      * <p>
-     * Stops an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html#stop-pipeline"
-     * >Stopping pipelines</a>.
+     * Stops an OpenSearch Ingestion pipeline. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/pipeline--stop-start.html#pipeline--stop"
+     * >Stopping an OpenSearch Ingestion pipeline</a>.
      * </p>
      * 
      * @param stopPipelineRequest
@@ -296,8 +300,8 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Tags an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/tag-pipeline.html">Tagging OpenSearch
-     * Ingestion pipelines</a>.
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/tag-pipeline.html">Tagging Amazon
+     * OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -322,8 +326,8 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Removes one or more tags from an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/tag-pipeline.html">Tagging OpenSearch
-     * Ingestion pipelines</a>.
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/tag-pipeline.html">Tagging Amazon
+     * OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -346,8 +350,8 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Updates an OpenSearch Ingestion pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html">Creating and
-     * managing OpenSearch Ingestion pipelines</a>.
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/update-pipeline.html">Updating Amazon
+     * OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param updatePipelineRequest
@@ -372,8 +376,9 @@ public interface AmazonOSIS {
     /**
      * <p>
      * Checks whether an OpenSearch Ingestion pipeline configuration is valid prior to creation. For more information,
-     * see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/manage-pipeline.html">Creating
-     * and managing OpenSearch Ingestion pipelines</a>.
+     * see <a
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/creating-pipeline.html">Creating
+     * Amazon OpenSearch Ingestion pipelines</a>.
      * </p>
      * 
      * @param validatePipelineRequest

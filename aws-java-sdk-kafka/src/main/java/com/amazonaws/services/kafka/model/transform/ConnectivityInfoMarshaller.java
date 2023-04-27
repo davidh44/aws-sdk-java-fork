@@ -29,6 +29,8 @@ public class ConnectivityInfoMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> PUBLICACCESS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("publicAccess").build();
+    private static final MarshallingInfo<StructuredPojo> VPCCONNECTIVITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vpcConnectivity").build();
 
     private static final ConnectivityInfoMarshaller instance = new ConnectivityInfoMarshaller();
 
@@ -47,6 +49,7 @@ public class ConnectivityInfoMarshaller {
 
         try {
             protocolMarshaller.marshall(connectivityInfo.getPublicAccess(), PUBLICACCESS_BINDING);
+            protocolMarshaller.marshall(connectivityInfo.getVpcConnectivity(), VPCCONNECTIVITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

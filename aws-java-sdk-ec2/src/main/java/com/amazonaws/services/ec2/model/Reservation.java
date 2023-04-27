@@ -29,7 +29,7 @@ public class Reservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-Classic only] The security groups.
+     * Not supported.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<GroupIdentifier> groups;
@@ -67,10 +67,10 @@ public class Reservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-Classic only] The security groups.
+     * Not supported.
      * </p>
      * 
-     * @return [EC2-Classic only] The security groups.
+     * @return Not supported.
      */
 
     public java.util.List<GroupIdentifier> getGroups() {
@@ -82,11 +82,11 @@ public class Reservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-Classic only] The security groups.
+     * Not supported.
      * </p>
      * 
      * @param groups
-     *        [EC2-Classic only] The security groups.
+     *        Not supported.
      */
 
     public void setGroups(java.util.Collection<GroupIdentifier> groups) {
@@ -100,7 +100,7 @@ public class Reservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-Classic only] The security groups.
+     * Not supported.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -109,7 +109,7 @@ public class Reservation implements Serializable, Cloneable {
      * </p>
      * 
      * @param groups
-     *        [EC2-Classic only] The security groups.
+     *        Not supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,11 +125,11 @@ public class Reservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-Classic only] The security groups.
+     * Not supported.
      * </p>
      * 
      * @param groups
-     *        [EC2-Classic only] The security groups.
+     *        Not supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

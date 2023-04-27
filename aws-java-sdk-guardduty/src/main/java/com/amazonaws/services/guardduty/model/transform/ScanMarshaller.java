@@ -56,6 +56,8 @@ public class ScanMarshaller {
             .marshallLocationName("fileCount").build();
     private static final MarshallingInfo<List> ATTACHEDVOLUMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attachedVolumes").build();
+    private static final MarshallingInfo<String> SCANTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("scanType").build();
 
     private static final ScanMarshaller instance = new ScanMarshaller();
 
@@ -87,6 +89,7 @@ public class ScanMarshaller {
             protocolMarshaller.marshall(scan.getTotalBytes(), TOTALBYTES_BINDING);
             protocolMarshaller.marshall(scan.getFileCount(), FILECOUNT_BINDING);
             protocolMarshaller.marshall(scan.getAttachedVolumes(), ATTACHEDVOLUMES_BINDING);
+            protocolMarshaller.marshall(scan.getScanType(), SCANTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

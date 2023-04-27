@@ -31,8 +31,7 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups.
-     * When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.
+     * The security groups.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<GroupIdentifier> securityGroups;
@@ -184,13 +183,10 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups.
-     * When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.
+     * The security groups.
      * </p>
      * 
-     * @return One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security
-     *         groups. When requesting instances in EC2-Classic, you can specify the names or the IDs of the security
-     *         groups.
+     * @return The security groups.
      */
 
     public java.util.List<GroupIdentifier> getSecurityGroups() {
@@ -202,14 +198,11 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups.
-     * When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.
+     * The security groups.
      * </p>
      * 
      * @param securityGroups
-     *        One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security
-     *        groups. When requesting instances in EC2-Classic, you can specify the names or the IDs of the security
-     *        groups.
+     *        The security groups.
      */
 
     public void setSecurityGroups(java.util.Collection<GroupIdentifier> securityGroups) {
@@ -223,8 +216,7 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups.
-     * When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.
+     * The security groups.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -233,9 +225,7 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
      * </p>
      * 
      * @param securityGroups
-     *        One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security
-     *        groups. When requesting instances in EC2-Classic, you can specify the names or the IDs of the security
-     *        groups.
+     *        The security groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -251,14 +241,11 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security groups.
-     * When requesting instances in EC2-Classic, you can specify the names or the IDs of the security groups.
+     * The security groups.
      * </p>
      * 
      * @param securityGroups
-     *        One or more security groups. When requesting instances in a VPC, you must specify the IDs of the security
-     *        groups. When requesting instances in EC2-Classic, you can specify the names or the IDs of the security
-     *        groups.
+     *        The security groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

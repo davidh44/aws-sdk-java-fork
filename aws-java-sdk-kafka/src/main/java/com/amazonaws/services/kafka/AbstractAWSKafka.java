@@ -53,12 +53,27 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public CreateVpcConnectionResult createVpcConnection(CreateVpcConnectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteClusterResult deleteCluster(DeleteClusterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public DeleteClusterPolicyResult deleteClusterPolicy(DeleteClusterPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteConfigurationResult deleteConfiguration(DeleteConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteVpcConnectionResult deleteVpcConnection(DeleteVpcConnectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -88,12 +103,27 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public DescribeVpcConnectionResult describeVpcConnection(DescribeVpcConnectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetBootstrapBrokersResult getBootstrapBrokers(GetBootstrapBrokersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public GetClusterPolicyResult getClusterPolicy(GetClusterPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetCompatibleKafkaVersionsResult getCompatibleKafkaVersions(GetCompatibleKafkaVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListClientVpcConnectionsResult listClientVpcConnections(ListClientVpcConnectionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -143,7 +173,22 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public ListVpcConnectionsResult listVpcConnections(ListVpcConnectionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutClusterPolicyResult putClusterPolicy(PutClusterPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RebootBrokerResult rebootBroker(RebootBrokerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RejectClientVpcConnectionResult rejectClientVpcConnection(RejectClientVpcConnectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

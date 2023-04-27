@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum Protocol {
 
     MqttV3_1_1("MqttV3_1_1"),
-    MqttV5("MqttV5");
+    MqttV5("MqttV5"),
+    MqttV3_1_1_OverWebSocket("MqttV3_1_1_OverWebSocket"),
+    MqttV5_OverWebSocket("MqttV5_OverWebSocket");
 
     private String value;
 

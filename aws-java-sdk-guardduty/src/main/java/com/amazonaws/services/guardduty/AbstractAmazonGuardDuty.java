@@ -296,6 +296,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public StartMalwareScanResult startMalwareScan(StartMalwareScanRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartMonitoringMembersResult startMonitoringMembers(StartMonitoringMembersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

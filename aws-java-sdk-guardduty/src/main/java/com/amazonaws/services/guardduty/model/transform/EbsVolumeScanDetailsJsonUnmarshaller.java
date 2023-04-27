@@ -74,6 +74,10 @@ public class EbsVolumeScanDetailsJsonUnmarshaller implements Unmarshaller<EbsVol
                     context.nextToken();
                     ebsVolumeScanDetails.setScanDetections(ScanDetectionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("scanType", targetDepth)) {
+                    context.nextToken();
+                    ebsVolumeScanDetails.setScanType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

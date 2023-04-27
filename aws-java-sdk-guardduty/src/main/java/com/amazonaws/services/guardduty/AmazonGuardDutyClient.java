@@ -95,6 +95,9 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.guardduty.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.guardduty.model.transform.BadRequestExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -3397,6 +3400,69 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<ListThreatIntelSetsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListThreatIntelSetsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Initiates the malware scan. Invoking this API will automatically create the <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/slr-permissions-malware-protection.html">Service-linked
+     * role </a> in the corresponding account.
+     * </p>
+     * 
+     * @param startMalwareScanRequest
+     * @return Result of the StartMalwareScan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws ConflictException
+     *         A request conflict exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.StartMalwareScan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/StartMalwareScan" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartMalwareScanResult startMalwareScan(StartMalwareScanRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartMalwareScan(request);
+    }
+
+    @SdkInternalApi
+    final StartMalwareScanResult executeStartMalwareScan(StartMalwareScanRequest startMalwareScanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startMalwareScanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartMalwareScanRequest> request = null;
+        Response<StartMalwareScanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartMalwareScanRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startMalwareScanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GuardDuty");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartMalwareScan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartMalwareScanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartMalwareScanResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

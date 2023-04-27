@@ -52,8 +52,7 @@ public class LaunchTemplatePlacementRequest implements Serializable, Cloneable {
     private String hostId;
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs
-     * on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * </p>
      */
     private String tenancy;
@@ -247,13 +246,11 @@ public class LaunchTemplatePlacementRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs
-     * on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated
-     *        runs on single-tenant hardware.
+     *        The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * @see Tenancy
      */
 
@@ -263,12 +260,10 @@ public class LaunchTemplatePlacementRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs
-     * on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * </p>
      * 
-     * @return The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     *         dedicated runs on single-tenant hardware.
+     * @return The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * @see Tenancy
      */
 
@@ -278,13 +273,11 @@ public class LaunchTemplatePlacementRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs
-     * on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated
-     *        runs on single-tenant hardware.
+     *        The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Tenancy
      */
@@ -296,13 +289,11 @@ public class LaunchTemplatePlacementRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs
-     * on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated
-     *        runs on single-tenant hardware.
+     *        The tenancy of the instance. An instance with a tenancy of dedicated runs on single-tenant hardware.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Tenancy
      */

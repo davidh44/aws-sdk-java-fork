@@ -30,7 +30,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -249,7 +249,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
      * <p>
-     * One or more Spot Instance request IDs.
+     * The IDs of the Spot Instance requests.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> spotInstanceRequestIds;
@@ -271,7 +271,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -487,7 +487,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * 
-     * @return One or more filters.</p>
+     * @return The filters.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -714,7 +714,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -931,7 +931,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </ul>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1160,7 +1160,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -1382,7 +1382,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </p>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1613,7 +1613,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -1830,7 +1830,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </ul>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -2056,10 +2056,10 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more Spot Instance request IDs.
+     * The IDs of the Spot Instance requests.
      * </p>
      * 
-     * @return One or more Spot Instance request IDs.
+     * @return The IDs of the Spot Instance requests.
      */
 
     public java.util.List<String> getSpotInstanceRequestIds() {
@@ -2071,11 +2071,11 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more Spot Instance request IDs.
+     * The IDs of the Spot Instance requests.
      * </p>
      * 
      * @param spotInstanceRequestIds
-     *        One or more Spot Instance request IDs.
+     *        The IDs of the Spot Instance requests.
      */
 
     public void setSpotInstanceRequestIds(java.util.Collection<String> spotInstanceRequestIds) {
@@ -2089,7 +2089,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more Spot Instance request IDs.
+     * The IDs of the Spot Instance requests.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2098,7 +2098,7 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
      * </p>
      * 
      * @param spotInstanceRequestIds
-     *        One or more Spot Instance request IDs.
+     *        The IDs of the Spot Instance requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2114,11 +2114,11 @@ public class DescribeSpotInstanceRequestsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * One or more Spot Instance request IDs.
+     * The IDs of the Spot Instance requests.
      * </p>
      * 
      * @param spotInstanceRequestIds
-     *        One or more Spot Instance request IDs.
+     *        The IDs of the Spot Instance requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

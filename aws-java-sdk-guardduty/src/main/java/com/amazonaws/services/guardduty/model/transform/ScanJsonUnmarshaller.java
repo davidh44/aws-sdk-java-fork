@@ -106,6 +106,10 @@ public class ScanJsonUnmarshaller implements Unmarshaller<Scan, JsonUnmarshaller
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("scanType", targetDepth)) {
+                    context.nextToken();
+                    scan.setScanType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

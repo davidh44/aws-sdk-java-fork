@@ -40,6 +40,8 @@ public class EbsVolumeScanDetailsMarshaller {
             .marshallLocationName("sources").build();
     private static final MarshallingInfo<StructuredPojo> SCANDETECTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scanDetections").build();
+    private static final MarshallingInfo<String> SCANTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("scanType").build();
 
     private static final EbsVolumeScanDetailsMarshaller instance = new EbsVolumeScanDetailsMarshaller();
 
@@ -63,6 +65,7 @@ public class EbsVolumeScanDetailsMarshaller {
             protocolMarshaller.marshall(ebsVolumeScanDetails.getTriggerFindingId(), TRIGGERFINDINGID_BINDING);
             protocolMarshaller.marshall(ebsVolumeScanDetails.getSources(), SOURCES_BINDING);
             protocolMarshaller.marshall(ebsVolumeScanDetails.getScanDetections(), SCANDETECTIONS_BINDING);
+            protocolMarshaller.marshall(ebsVolumeScanDetails.getScanType(), SCANTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

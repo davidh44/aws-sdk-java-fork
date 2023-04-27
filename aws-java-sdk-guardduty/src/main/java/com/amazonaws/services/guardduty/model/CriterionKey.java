@@ -25,7 +25,8 @@ public enum CriterionKey {
     ACCOUNT_ID("ACCOUNT_ID"),
     GUARDDUTY_FINDING_ID("GUARDDUTY_FINDING_ID"),
     SCAN_START_TIME("SCAN_START_TIME"),
-    SCAN_STATUS("SCAN_STATUS");
+    SCAN_STATUS("SCAN_STATUS"),
+    SCAN_TYPE("SCAN_TYPE");
 
     private String value;
 

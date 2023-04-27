@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutorService;
  * asynchronous operation completes.
  * <p>
  * <p>
- * The control plane for Amazon QLDB
+ * The resource management API for Amazon QLDB
  * </p>
  */
 @ThreadSafe

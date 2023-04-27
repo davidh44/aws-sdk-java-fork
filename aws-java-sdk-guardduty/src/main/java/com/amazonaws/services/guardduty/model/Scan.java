@@ -113,6 +113,12 @@ public class Scan implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<VolumeDetail> attachedVolumes;
+    /**
+     * <p>
+     * Specifies the scan type that invoked the malware scan.
+     * </p>
+     */
+    private String scanType;
 
     /**
      * <p>
@@ -730,6 +736,65 @@ public class Scan implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies the scan type that invoked the malware scan.
+     * </p>
+     * 
+     * @param scanType
+     *        Specifies the scan type that invoked the malware scan.
+     * @see ScanType
+     */
+
+    public void setScanType(String scanType) {
+        this.scanType = scanType;
+    }
+
+    /**
+     * <p>
+     * Specifies the scan type that invoked the malware scan.
+     * </p>
+     * 
+     * @return Specifies the scan type that invoked the malware scan.
+     * @see ScanType
+     */
+
+    public String getScanType() {
+        return this.scanType;
+    }
+
+    /**
+     * <p>
+     * Specifies the scan type that invoked the malware scan.
+     * </p>
+     * 
+     * @param scanType
+     *        Specifies the scan type that invoked the malware scan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ScanType
+     */
+
+    public Scan withScanType(String scanType) {
+        setScanType(scanType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the scan type that invoked the malware scan.
+     * </p>
+     * 
+     * @param scanType
+     *        Specifies the scan type that invoked the malware scan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ScanType
+     */
+
+    public Scan withScanType(ScanType scanType) {
+        this.scanType = scanType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -768,7 +833,9 @@ public class Scan implements Serializable, Cloneable, StructuredPojo {
         if (getFileCount() != null)
             sb.append("FileCount: ").append(getFileCount()).append(",");
         if (getAttachedVolumes() != null)
-            sb.append("AttachedVolumes: ").append(getAttachedVolumes());
+            sb.append("AttachedVolumes: ").append(getAttachedVolumes()).append(",");
+        if (getScanType() != null)
+            sb.append("ScanType: ").append(getScanType());
         sb.append("}");
         return sb.toString();
     }
@@ -839,6 +906,10 @@ public class Scan implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAttachedVolumes() != null && other.getAttachedVolumes().equals(this.getAttachedVolumes()) == false)
             return false;
+        if (other.getScanType() == null ^ this.getScanType() == null)
+            return false;
+        if (other.getScanType() != null && other.getScanType().equals(this.getScanType()) == false)
+            return false;
         return true;
     }
 
@@ -861,6 +932,7 @@ public class Scan implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTotalBytes() == null) ? 0 : getTotalBytes().hashCode());
         hashCode = prime * hashCode + ((getFileCount() == null) ? 0 : getFileCount().hashCode());
         hashCode = prime * hashCode + ((getAttachedVolumes() == null) ? 0 : getAttachedVolumes().hashCode());
+        hashCode = prime * hashCode + ((getScanType() == null) ? 0 : getScanType().hashCode());
         return hashCode;
     }
 

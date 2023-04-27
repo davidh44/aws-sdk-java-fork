@@ -13,7 +13,7 @@
 
 /**
  * <p>
- * The control plane for Amazon QLDB
+ * The resource management API for Amazon QLDB
  * </p>
  */
 package com.amazonaws.services.qldb;

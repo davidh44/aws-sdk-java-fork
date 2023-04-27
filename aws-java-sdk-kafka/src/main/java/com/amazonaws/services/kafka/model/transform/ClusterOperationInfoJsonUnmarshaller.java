@@ -94,6 +94,10 @@ public class ClusterOperationInfoJsonUnmarshaller implements Unmarshaller<Cluste
                     context.nextToken();
                     clusterOperationInfo.setTargetClusterInfo(MutableClusterInfoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("vpcConnectionInfo", targetDepth)) {
+                    context.nextToken();
+                    clusterOperationInfo.setVpcConnectionInfo(VpcConnectionInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

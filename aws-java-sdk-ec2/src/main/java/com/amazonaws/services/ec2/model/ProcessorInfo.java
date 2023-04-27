@@ -38,6 +38,13 @@ public class ProcessorInfo implements Serializable, Cloneable {
      * </p>
      */
     private Double sustainedClockSpeedInGhz;
+    /**
+     * <p>
+     * Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>, AMD
+     * SEV-SNP is supported. Otherwise, it is not supported.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> supportedFeatures;
 
     /**
      * <p>
@@ -182,6 +189,117 @@ public class ProcessorInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>, AMD
+     * SEV-SNP is supported. Otherwise, it is not supported.
+     * </p>
+     * 
+     * @return Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>
+     *         , AMD SEV-SNP is supported. Otherwise, it is not supported.
+     * @see SupportedAdditionalProcessorFeature
+     */
+
+    public java.util.List<String> getSupportedFeatures() {
+        if (supportedFeatures == null) {
+            supportedFeatures = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return supportedFeatures;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>, AMD
+     * SEV-SNP is supported. Otherwise, it is not supported.
+     * </p>
+     * 
+     * @param supportedFeatures
+     *        Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>,
+     *        AMD SEV-SNP is supported. Otherwise, it is not supported.
+     * @see SupportedAdditionalProcessorFeature
+     */
+
+    public void setSupportedFeatures(java.util.Collection<String> supportedFeatures) {
+        if (supportedFeatures == null) {
+            this.supportedFeatures = null;
+            return;
+        }
+
+        this.supportedFeatures = new com.amazonaws.internal.SdkInternalList<String>(supportedFeatures);
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>, AMD
+     * SEV-SNP is supported. Otherwise, it is not supported.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSupportedFeatures(java.util.Collection)} or {@link #withSupportedFeatures(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param supportedFeatures
+     *        Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>,
+     *        AMD SEV-SNP is supported. Otherwise, it is not supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedAdditionalProcessorFeature
+     */
+
+    public ProcessorInfo withSupportedFeatures(String... supportedFeatures) {
+        if (this.supportedFeatures == null) {
+            setSupportedFeatures(new com.amazonaws.internal.SdkInternalList<String>(supportedFeatures.length));
+        }
+        for (String ele : supportedFeatures) {
+            this.supportedFeatures.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>, AMD
+     * SEV-SNP is supported. Otherwise, it is not supported.
+     * </p>
+     * 
+     * @param supportedFeatures
+     *        Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>,
+     *        AMD SEV-SNP is supported. Otherwise, it is not supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedAdditionalProcessorFeature
+     */
+
+    public ProcessorInfo withSupportedFeatures(java.util.Collection<String> supportedFeatures) {
+        setSupportedFeatures(supportedFeatures);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>, AMD
+     * SEV-SNP is supported. Otherwise, it is not supported.
+     * </p>
+     * 
+     * @param supportedFeatures
+     *        Indicates whether the instance type supports AMD SEV-SNP. If the request returns <code>amd-sev-snp</code>,
+     *        AMD SEV-SNP is supported. Otherwise, it is not supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedAdditionalProcessorFeature
+     */
+
+    public ProcessorInfo withSupportedFeatures(SupportedAdditionalProcessorFeature... supportedFeatures) {
+        com.amazonaws.internal.SdkInternalList<String> supportedFeaturesCopy = new com.amazonaws.internal.SdkInternalList<String>(supportedFeatures.length);
+        for (SupportedAdditionalProcessorFeature value : supportedFeatures) {
+            supportedFeaturesCopy.add(value.toString());
+        }
+        if (getSupportedFeatures() == null) {
+            setSupportedFeatures(supportedFeaturesCopy);
+        } else {
+            getSupportedFeatures().addAll(supportedFeaturesCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -196,7 +314,9 @@ public class ProcessorInfo implements Serializable, Cloneable {
         if (getSupportedArchitectures() != null)
             sb.append("SupportedArchitectures: ").append(getSupportedArchitectures()).append(",");
         if (getSustainedClockSpeedInGhz() != null)
-            sb.append("SustainedClockSpeedInGhz: ").append(getSustainedClockSpeedInGhz());
+            sb.append("SustainedClockSpeedInGhz: ").append(getSustainedClockSpeedInGhz()).append(",");
+        if (getSupportedFeatures() != null)
+            sb.append("SupportedFeatures: ").append(getSupportedFeatures());
         sb.append("}");
         return sb.toString();
     }
@@ -219,6 +339,10 @@ public class ProcessorInfo implements Serializable, Cloneable {
             return false;
         if (other.getSustainedClockSpeedInGhz() != null && other.getSustainedClockSpeedInGhz().equals(this.getSustainedClockSpeedInGhz()) == false)
             return false;
+        if (other.getSupportedFeatures() == null ^ this.getSupportedFeatures() == null)
+            return false;
+        if (other.getSupportedFeatures() != null && other.getSupportedFeatures().equals(this.getSupportedFeatures()) == false)
+            return false;
         return true;
     }
 
@@ -229,6 +353,7 @@ public class ProcessorInfo implements Serializable, Cloneable {
 
         hashCode = prime * hashCode + ((getSupportedArchitectures() == null) ? 0 : getSupportedArchitectures().hashCode());
         hashCode = prime * hashCode + ((getSustainedClockSpeedInGhz() == null) ? 0 : getSustainedClockSpeedInGhz().hashCode());
+        hashCode = prime * hashCode + ((getSupportedFeatures() == null) ? 0 : getSupportedFeatures().hashCode());
         return hashCode;
     }
 

@@ -162,7 +162,7 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
     private Boolean dedicatedHostsSupported;
     /**
      * <p>
-     * Indicates whether auto recovery is supported.
+     * Indicates whether Amazon CloudWatch action based recovery is supported.
      * </p>
      */
     private Boolean autoRecoverySupported;
@@ -1381,11 +1381,11 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether auto recovery is supported.
+     * Indicates whether Amazon CloudWatch action based recovery is supported.
      * </p>
      * 
      * @param autoRecoverySupported
-     *        Indicates whether auto recovery is supported.
+     *        Indicates whether Amazon CloudWatch action based recovery is supported.
      */
 
     public void setAutoRecoverySupported(Boolean autoRecoverySupported) {
@@ -1394,10 +1394,10 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether auto recovery is supported.
+     * Indicates whether Amazon CloudWatch action based recovery is supported.
      * </p>
      * 
-     * @return Indicates whether auto recovery is supported.
+     * @return Indicates whether Amazon CloudWatch action based recovery is supported.
      */
 
     public Boolean getAutoRecoverySupported() {
@@ -1406,11 +1406,11 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether auto recovery is supported.
+     * Indicates whether Amazon CloudWatch action based recovery is supported.
      * </p>
      * 
      * @param autoRecoverySupported
-     *        Indicates whether auto recovery is supported.
+     *        Indicates whether Amazon CloudWatch action based recovery is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1421,10 +1421,10 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether auto recovery is supported.
+     * Indicates whether Amazon CloudWatch action based recovery is supported.
      * </p>
      * 
-     * @return Indicates whether auto recovery is supported.
+     * @return Indicates whether Amazon CloudWatch action based recovery is supported.
      */
 
     public Boolean isAutoRecoverySupported() {

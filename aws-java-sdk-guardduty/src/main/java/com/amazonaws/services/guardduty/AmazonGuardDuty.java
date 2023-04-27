@@ -1062,6 +1062,27 @@ public interface AmazonGuardDuty {
 
     /**
      * <p>
+     * Initiates the malware scan. Invoking this API will automatically create the <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/slr-permissions-malware-protection.html">Service-linked
+     * role </a> in the corresponding account.
+     * </p>
+     * 
+     * @param startMalwareScanRequest
+     * @return Result of the StartMalwareScan operation returned by the service.
+     * @throws BadRequestException
+     *         A bad request exception object.
+     * @throws ConflictException
+     *         A request conflict exception object.
+     * @throws InternalServerErrorException
+     *         An internal server error exception object.
+     * @sample AmazonGuardDuty.StartMalwareScan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/StartMalwareScan" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartMalwareScanResult startMalwareScan(StartMalwareScanRequest startMalwareScanRequest);
+
+    /**
+     * <p>
      * Turns on GuardDuty monitoring of the specified member accounts. Use this operation to restart monitoring of
      * accounts that you stopped monitoring with the <a
      * href="https://docs.aws.amazon.com/guardduty/latest/APIReference/API_StopMonitoringMembers.html"

@@ -1934,6 +1934,41 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Initiates the malware scan. Invoking this API will automatically create the <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/slr-permissions-malware-protection.html">Service-linked
+     * role </a> in the corresponding account.
+     * </p>
+     * 
+     * @param startMalwareScanRequest
+     * @return A Java Future containing the result of the StartMalwareScan operation returned by the service.
+     * @sample AmazonGuardDutyAsync.StartMalwareScan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/StartMalwareScan" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartMalwareScanResult> startMalwareScanAsync(StartMalwareScanRequest startMalwareScanRequest);
+
+    /**
+     * <p>
+     * Initiates the malware scan. Invoking this API will automatically create the <a
+     * href="https://docs.aws.amazon.com/guardduty/latest/ug/slr-permissions-malware-protection.html">Service-linked
+     * role </a> in the corresponding account.
+     * </p>
+     * 
+     * @param startMalwareScanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMalwareScan operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.StartMalwareScan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/StartMalwareScan" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartMalwareScanResult> startMalwareScanAsync(StartMalwareScanRequest startMalwareScanRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMalwareScanRequest, StartMalwareScanResult> asyncHandler);
+
+    /**
+     * <p>
      * Turns on GuardDuty monitoring of the specified member accounts. Use this operation to restart monitoring of
      * accounts that you stopped monitoring with the <a
      * href="https://docs.aws.amazon.com/guardduty/latest/APIReference/API_StopMonitoringMembers.html"

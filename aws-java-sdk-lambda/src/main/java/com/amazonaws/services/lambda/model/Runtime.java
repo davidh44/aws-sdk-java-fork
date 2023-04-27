@@ -48,7 +48,8 @@ public enum Runtime {
     Provided("provided"),
     ProvidedAl2("provided.al2"),
     Nodejs18X("nodejs18.x"),
-    Python310("python3.10");
+    Python310("python3.10"),
+    Java17("java17");
 
     private String value;
 

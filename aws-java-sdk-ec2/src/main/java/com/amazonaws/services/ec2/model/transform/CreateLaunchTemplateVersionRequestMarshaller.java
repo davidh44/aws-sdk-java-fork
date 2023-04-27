@@ -554,6 +554,10 @@ public class CreateLaunchTemplateVersionRequestMarshaller implements
                 if (cpuOptions.getThreadsPerCore() != null) {
                     request.addParameter("LaunchTemplateData.CpuOptions.ThreadsPerCore", StringUtils.fromInteger(cpuOptions.getThreadsPerCore()));
                 }
+
+                if (cpuOptions.getAmdSevSnp() != null) {
+                    request.addParameter("LaunchTemplateData.CpuOptions.AmdSevSnp", StringUtils.fromString(cpuOptions.getAmdSevSnp()));
+                }
             }
 
             LaunchTemplateCapacityReservationSpecificationRequest capacityReservationSpecification = launchTemplateData.getCapacityReservationSpecification();

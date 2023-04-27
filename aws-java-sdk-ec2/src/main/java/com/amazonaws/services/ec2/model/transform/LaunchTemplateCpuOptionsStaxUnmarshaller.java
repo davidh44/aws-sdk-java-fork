@@ -52,6 +52,11 @@ public class LaunchTemplateCpuOptionsStaxUnmarshaller implements Unmarshaller<La
                     launchTemplateCpuOptions.setThreadsPerCore(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("amdSevSnp", targetDepth)) {
+                    launchTemplateCpuOptions.setAmdSevSnp(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchTemplateCpuOptions;

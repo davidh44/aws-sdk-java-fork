@@ -41,8 +41,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <ul>
      * <li>
      * <p>
-     * <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     * <code>false</code>).
+     * <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is supported (
+     * <code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -446,8 +446,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <ul>
      * <li>
      * <p>
-     * <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     * <code>false</code>).
+     * <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is supported (
+     * <code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -710,8 +710,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     *         <code>false</code>).
+     *         <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is
+     *         supported (<code>true</code> | <code>false</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -988,8 +988,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <ul>
      * <li>
      * <p>
-     * <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     * <code>false</code>).
+     * <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is supported (
+     * <code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -1253,8 +1253,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     *        <code>false</code>).
+     *        <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is
+     *        supported (<code>true</code> | <code>false</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1533,8 +1533,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <ul>
      * <li>
      * <p>
-     * <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     * <code>false</code>).
+     * <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is supported (
+     * <code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -1803,8 +1803,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     *        <code>false</code>).
+     *        <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is
+     *        supported (<code>true</code> | <code>false</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -2085,8 +2085,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <ul>
      * <li>
      * <p>
-     * <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     * <code>false</code>).
+     * <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is supported (
+     * <code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -2350,8 +2350,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>auto-recovery-supported</code> - Indicates whether auto recovery is supported (<code>true</code> |
-     *        <code>false</code>).
+     *        <code>auto-recovery-supported</code> - Indicates whether Amazon CloudWatch action based recovery is
+     *        supported (<code>true</code> | <code>false</code>).
      *        </p>
      *        </li>
      *        <li>

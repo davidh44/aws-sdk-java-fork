@@ -82,8 +82,7 @@ public class Placement implements Serializable, Cloneable {
     private String hostId;
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     * <code>dedicated</code> runs on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant hardware.
      * </p>
      * <p>
      * This parameter is not supported for <a
@@ -480,8 +479,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     * <code>dedicated</code> runs on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant hardware.
      * </p>
      * <p>
      * This parameter is not supported for <a
@@ -492,8 +490,8 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     *        <code>dedicated</code> runs on single-tenant hardware.</p>
+     *        The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant
+     *        hardware.</p>
      *        <p>
      *        This parameter is not supported for <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>. The
@@ -509,8 +507,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     * <code>dedicated</code> runs on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant hardware.
      * </p>
      * <p>
      * This parameter is not supported for <a
@@ -520,8 +517,8 @@ public class Placement implements Serializable, Cloneable {
      * T3 instances that are configured for the <code>unlimited</code> CPU credit option.
      * </p>
      * 
-     * @return The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     *         <code>dedicated</code> runs on single-tenant hardware.</p>
+     * @return The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant
+     *         hardware.</p>
      *         <p>
      *         This parameter is not supported for <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>. The
@@ -537,8 +534,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     * <code>dedicated</code> runs on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant hardware.
      * </p>
      * <p>
      * This parameter is not supported for <a
@@ -549,8 +545,8 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     *        <code>dedicated</code> runs on single-tenant hardware.</p>
+     *        The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant
+     *        hardware.</p>
      *        <p>
      *        This parameter is not supported for <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>. The
@@ -568,8 +564,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     * <code>dedicated</code> runs on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant hardware.
      * </p>
      * <p>
      * This parameter is not supported for <a
@@ -580,8 +575,8 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     *        <code>dedicated</code> runs on single-tenant hardware.</p>
+     *        The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant
+     *        hardware.</p>
      *        <p>
      *        This parameter is not supported for <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>. The
@@ -597,8 +592,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     * <code>dedicated</code> runs on single-tenant hardware.
+     * The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant hardware.
      * </p>
      * <p>
      * This parameter is not supported for <a
@@ -609,8 +603,8 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      * 
      * @param tenancy
-     *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
-     *        <code>dedicated</code> runs on single-tenant hardware.</p>
+     *        The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs on single-tenant
+     *        hardware.</p>
      *        <p>
      *        This parameter is not supported for <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>. The

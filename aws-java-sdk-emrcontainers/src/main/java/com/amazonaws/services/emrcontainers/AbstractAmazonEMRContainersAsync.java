@@ -171,6 +171,21 @@ public class AbstractAmazonEMRContainersAsync extends AbstractAmazonEMRContainer
     }
 
     @Override
+    public java.util.concurrent.Future<GetManagedEndpointSessionCredentialsResult> getManagedEndpointSessionCredentialsAsync(
+            GetManagedEndpointSessionCredentialsRequest request) {
+
+        return getManagedEndpointSessionCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetManagedEndpointSessionCredentialsResult> getManagedEndpointSessionCredentialsAsync(
+            GetManagedEndpointSessionCredentialsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetManagedEndpointSessionCredentialsRequest, GetManagedEndpointSessionCredentialsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobRunsResult> listJobRunsAsync(ListJobRunsRequest request) {
 
         return listJobRunsAsync(request, null);

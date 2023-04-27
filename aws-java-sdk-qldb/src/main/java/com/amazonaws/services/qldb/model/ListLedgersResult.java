@@ -25,7 +25,7 @@ public class ListLedgersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     * The ledgers that are associated with the current Amazon Web Services account and Region.
      * </p>
      */
     private java.util.List<LedgerSummary> ledgers;
@@ -52,11 +52,10 @@ public class ListLedgersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     * The ledgers that are associated with the current Amazon Web Services account and Region.
      * </p>
      * 
-     * @return The array of ledger summaries that are associated with the current Amazon Web Services account and
-     *         Region.
+     * @return The ledgers that are associated with the current Amazon Web Services account and Region.
      */
 
     public java.util.List<LedgerSummary> getLedgers() {
@@ -65,11 +64,11 @@ public class ListLedgersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     * The ledgers that are associated with the current Amazon Web Services account and Region.
      * </p>
      * 
      * @param ledgers
-     *        The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     *        The ledgers that are associated with the current Amazon Web Services account and Region.
      */
 
     public void setLedgers(java.util.Collection<LedgerSummary> ledgers) {
@@ -83,7 +82,7 @@ public class ListLedgersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     * The ledgers that are associated with the current Amazon Web Services account and Region.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -92,7 +91,7 @@ public class ListLedgersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      * 
      * @param ledgers
-     *        The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     *        The ledgers that are associated with the current Amazon Web Services account and Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,11 +107,11 @@ public class ListLedgersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     * The ledgers that are associated with the current Amazon Web Services account and Region.
      * </p>
      * 
      * @param ledgers
-     *        The array of ledger summaries that are associated with the current Amazon Web Services account and Region.
+     *        The ledgers that are associated with the current Amazon Web Services account and Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

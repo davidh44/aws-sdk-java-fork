@@ -111,6 +111,9 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("RequestThrottledException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.emrcontainers.model.transform.RequestThrottledExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.emrcontainers.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -845,6 +848,73 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<DescribeVirtualClusterResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeVirtualClusterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Generate a session token to connect to a managed endpoint.
+     * </p>
+     * 
+     * @param getManagedEndpointSessionCredentialsRequest
+     * @return Result of the GetManagedEndpointSessionCredentials operation returned by the service.
+     * @throws ValidationException
+     *         There are invalid parameters in the client request.
+     * @throws RequestThrottledException
+     *         The request throttled.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         This is an internal server exception.
+     * @sample AmazonEMRContainers.GetManagedEndpointSessionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/GetManagedEndpointSessionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetManagedEndpointSessionCredentialsResult getManagedEndpointSessionCredentials(GetManagedEndpointSessionCredentialsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetManagedEndpointSessionCredentials(request);
+    }
+
+    @SdkInternalApi
+    final GetManagedEndpointSessionCredentialsResult executeGetManagedEndpointSessionCredentials(
+            GetManagedEndpointSessionCredentialsRequest getManagedEndpointSessionCredentialsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getManagedEndpointSessionCredentialsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetManagedEndpointSessionCredentialsRequest> request = null;
+        Response<GetManagedEndpointSessionCredentialsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetManagedEndpointSessionCredentialsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getManagedEndpointSessionCredentialsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR containers");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetManagedEndpointSessionCredentials");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetManagedEndpointSessionCredentialsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetManagedEndpointSessionCredentialsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

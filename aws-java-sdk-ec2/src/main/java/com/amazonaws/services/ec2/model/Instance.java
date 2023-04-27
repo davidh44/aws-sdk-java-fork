@@ -87,13 +87,13 @@ public class Instance implements Serializable, Cloneable {
     private String platform;
     /**
      * <p>
-     * (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
+     * [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
      * Amazon EC2 network. This name is not available until the instance enters the <code>running</code> state.
      * </p>
      * <p>
-     * [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
-     * resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your
-     * custom domain name servers must resolve the hostname as appropriate.
+     * The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS resolution
+     * and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your custom
+     * domain name servers must resolve the hostname as appropriate.
      * </p>
      */
     private String privateDnsName;
@@ -111,9 +111,8 @@ public class Instance implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<ProductCode> productCodes;
     /**
      * <p>
-     * (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance enters
-     * the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS hostnames for your
-     * VPC.
+     * [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance enters
+     * the <code>running</code> state. This name is only available if you've enabled DNS hostnames for your VPC.
      * </p>
      */
     private String publicDnsName;
@@ -146,13 +145,13 @@ public class Instance implements Serializable, Cloneable {
     private String stateTransitionReason;
     /**
      * <p>
-     * [EC2-VPC] The ID of the subnet in which the instance is running.
+     * The ID of the subnet in which the instance is running.
      * </p>
      */
     private String subnetId;
     /**
      * <p>
-     * [EC2-VPC] The ID of the VPC in which the instance is running.
+     * The ID of the VPC in which the instance is running.
      * </p>
      */
     private String vpcId;
@@ -220,7 +219,7 @@ public class Instance implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<ElasticInferenceAcceleratorAssociation> elasticInferenceAcceleratorAssociations;
     /**
      * <p>
-     * [EC2-VPC] The network interfaces for the instance.
+     * The network interfaces for the instance.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceNetworkInterface> networkInterfaces;
@@ -868,23 +867,23 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
+     * [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
      * Amazon EC2 network. This name is not available until the instance enters the <code>running</code> state.
      * </p>
      * <p>
-     * [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
-     * resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your
-     * custom domain name servers must resolve the hostname as appropriate.
+     * The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS resolution
+     * and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your custom
+     * domain name servers must resolve the hostname as appropriate.
      * </p>
      * 
      * @param privateDnsName
-     *        (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used
+     *        [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used
      *        inside the Amazon EC2 network. This name is not available until the instance enters the
      *        <code>running</code> state. </p>
      *        <p>
-     *        [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled
-     *        DNS resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your
-     *        VPC, your custom domain name servers must resolve the hostname as appropriate.
+     *        The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
+     *        resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC,
+     *        your custom domain name servers must resolve the hostname as appropriate.
      */
 
     public void setPrivateDnsName(String privateDnsName) {
@@ -893,21 +892,21 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
+     * [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
      * Amazon EC2 network. This name is not available until the instance enters the <code>running</code> state.
      * </p>
      * <p>
-     * [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
-     * resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your
-     * custom domain name servers must resolve the hostname as appropriate.
+     * The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS resolution
+     * and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your custom
+     * domain name servers must resolve the hostname as appropriate.
      * </p>
      * 
-     * @return (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used
+     * @return [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used
      *         inside the Amazon EC2 network. This name is not available until the instance enters the
      *         <code>running</code> state. </p>
      *         <p>
-     *         [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled
-     *         DNS resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your
+     *         The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
+     *         resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your
      *         VPC, your custom domain name servers must resolve the hostname as appropriate.
      */
 
@@ -917,23 +916,23 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
+     * [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used inside the
      * Amazon EC2 network. This name is not available until the instance enters the <code>running</code> state.
      * </p>
      * <p>
-     * [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
-     * resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your
-     * custom domain name servers must resolve the hostname as appropriate.
+     * The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS resolution
+     * and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC, your custom
+     * domain name servers must resolve the hostname as appropriate.
      * </p>
      * 
      * @param privateDnsName
-     *        (IPv4 only) The private DNS hostname name assigned to the instance. This DNS hostname can only be used
+     *        [IPv4 only] The private DNS hostname name assigned to the instance. This DNS hostname can only be used
      *        inside the Amazon EC2 network. This name is not available until the instance enters the
      *        <code>running</code> state. </p>
      *        <p>
-     *        [EC2-VPC] The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled
-     *        DNS resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your
-     *        VPC, your custom domain name servers must resolve the hostname as appropriate.
+     *        The Amazon-provided DNS server resolves Amazon-provided private DNS hostnames if you've enabled DNS
+     *        resolution and DNS hostnames in your VPC. If you are not using the Amazon-provided DNS server in your VPC,
+     *        your custom domain name servers must resolve the hostname as appropriate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1057,15 +1056,14 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance enters
-     * the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS hostnames for your
-     * VPC.
+     * [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance enters
+     * the <code>running</code> state. This name is only available if you've enabled DNS hostnames for your VPC.
      * </p>
      * 
      * @param publicDnsName
-     *        (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance
-     *        enters the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS
-     *        hostnames for your VPC.
+     *        [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance
+     *        enters the <code>running</code> state. This name is only available if you've enabled DNS hostnames for
+     *        your VPC.
      */
 
     public void setPublicDnsName(String publicDnsName) {
@@ -1074,14 +1072,13 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance enters
-     * the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS hostnames for your
-     * VPC.
+     * [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance enters
+     * the <code>running</code> state. This name is only available if you've enabled DNS hostnames for your VPC.
      * </p>
      * 
-     * @return (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance
-     *         enters the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS
-     *         hostnames for your VPC.
+     * @return [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance
+     *         enters the <code>running</code> state. This name is only available if you've enabled DNS hostnames for
+     *         your VPC.
      */
 
     public String getPublicDnsName() {
@@ -1090,15 +1087,14 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance enters
-     * the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS hostnames for your
-     * VPC.
+     * [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance enters
+     * the <code>running</code> state. This name is only available if you've enabled DNS hostnames for your VPC.
      * </p>
      * 
      * @param publicDnsName
-     *        (IPv4 only) The public DNS name assigned to the instance. This name is not available until the instance
-     *        enters the <code>running</code> state. For EC2-VPC, this name is only available if you've enabled DNS
-     *        hostnames for your VPC.
+     *        [IPv4 only] The public DNS name assigned to the instance. This name is not available until the instance
+     *        enters the <code>running</code> state. This name is only available if you've enabled DNS hostnames for
+     *        your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1284,11 +1280,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The ID of the subnet in which the instance is running.
+     * The ID of the subnet in which the instance is running.
      * </p>
      * 
      * @param subnetId
-     *        [EC2-VPC] The ID of the subnet in which the instance is running.
+     *        The ID of the subnet in which the instance is running.
      */
 
     public void setSubnetId(String subnetId) {
@@ -1297,10 +1293,10 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The ID of the subnet in which the instance is running.
+     * The ID of the subnet in which the instance is running.
      * </p>
      * 
-     * @return [EC2-VPC] The ID of the subnet in which the instance is running.
+     * @return The ID of the subnet in which the instance is running.
      */
 
     public String getSubnetId() {
@@ -1309,11 +1305,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The ID of the subnet in which the instance is running.
+     * The ID of the subnet in which the instance is running.
      * </p>
      * 
      * @param subnetId
-     *        [EC2-VPC] The ID of the subnet in which the instance is running.
+     *        The ID of the subnet in which the instance is running.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1324,11 +1320,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The ID of the VPC in which the instance is running.
+     * The ID of the VPC in which the instance is running.
      * </p>
      * 
      * @param vpcId
-     *        [EC2-VPC] The ID of the VPC in which the instance is running.
+     *        The ID of the VPC in which the instance is running.
      */
 
     public void setVpcId(String vpcId) {
@@ -1337,10 +1333,10 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The ID of the VPC in which the instance is running.
+     * The ID of the VPC in which the instance is running.
      * </p>
      * 
-     * @return [EC2-VPC] The ID of the VPC in which the instance is running.
+     * @return The ID of the VPC in which the instance is running.
      */
 
     public String getVpcId() {
@@ -1349,11 +1345,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The ID of the VPC in which the instance is running.
+     * The ID of the VPC in which the instance is running.
      * </p>
      * 
      * @param vpcId
-     *        [EC2-VPC] The ID of the VPC in which the instance is running.
+     *        The ID of the VPC in which the instance is running.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2015,10 +2011,10 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The network interfaces for the instance.
+     * The network interfaces for the instance.
      * </p>
      * 
-     * @return [EC2-VPC] The network interfaces for the instance.
+     * @return The network interfaces for the instance.
      */
 
     public java.util.List<InstanceNetworkInterface> getNetworkInterfaces() {
@@ -2030,11 +2026,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The network interfaces for the instance.
+     * The network interfaces for the instance.
      * </p>
      * 
      * @param networkInterfaces
-     *        [EC2-VPC] The network interfaces for the instance.
+     *        The network interfaces for the instance.
      */
 
     public void setNetworkInterfaces(java.util.Collection<InstanceNetworkInterface> networkInterfaces) {
@@ -2048,7 +2044,7 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The network interfaces for the instance.
+     * The network interfaces for the instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2057,7 +2053,7 @@ public class Instance implements Serializable, Cloneable {
      * </p>
      * 
      * @param networkInterfaces
-     *        [EC2-VPC] The network interfaces for the instance.
+     *        The network interfaces for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2073,11 +2069,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [EC2-VPC] The network interfaces for the instance.
+     * The network interfaces for the instance.
      * </p>
      * 
      * @param networkInterfaces
-     *        [EC2-VPC] The network interfaces for the instance.
+     *        The network interfaces for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

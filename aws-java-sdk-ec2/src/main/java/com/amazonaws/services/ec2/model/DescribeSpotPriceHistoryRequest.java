@@ -30,7 +30,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -117,7 +117,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -153,7 +153,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * 
-     * @return One or more filters.</p>
+     * @return The filters.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -197,7 +197,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -234,7 +234,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
      * </ul>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -280,7 +280,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -322,7 +322,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -370,7 +370,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -407,7 +407,7 @@ public class DescribeSpotPriceHistoryRequest extends AmazonWebServiceRequest imp
      * </ul>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>

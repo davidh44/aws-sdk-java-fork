@@ -448,6 +448,43 @@ public interface AmazonEMRContainersAsync extends AmazonEMRContainers {
 
     /**
      * <p>
+     * Generate a session token to connect to a managed endpoint.
+     * </p>
+     * 
+     * @param getManagedEndpointSessionCredentialsRequest
+     * @return A Java Future containing the result of the GetManagedEndpointSessionCredentials operation returned by the
+     *         service.
+     * @sample AmazonEMRContainersAsync.GetManagedEndpointSessionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/GetManagedEndpointSessionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetManagedEndpointSessionCredentialsResult> getManagedEndpointSessionCredentialsAsync(
+            GetManagedEndpointSessionCredentialsRequest getManagedEndpointSessionCredentialsRequest);
+
+    /**
+     * <p>
+     * Generate a session token to connect to a managed endpoint.
+     * </p>
+     * 
+     * @param getManagedEndpointSessionCredentialsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetManagedEndpointSessionCredentials operation returned by the
+     *         service.
+     * @sample AmazonEMRContainersAsyncHandler.GetManagedEndpointSessionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/GetManagedEndpointSessionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetManagedEndpointSessionCredentialsResult> getManagedEndpointSessionCredentialsAsync(
+            GetManagedEndpointSessionCredentialsRequest getManagedEndpointSessionCredentialsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetManagedEndpointSessionCredentialsRequest, GetManagedEndpointSessionCredentialsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists job runs based on a set of parameters. A job run is a unit of work, such as a Spark jar, PySpark script, or
      * SparkSQL query, that you submit to Amazon EMR on EKS.
      * </p>

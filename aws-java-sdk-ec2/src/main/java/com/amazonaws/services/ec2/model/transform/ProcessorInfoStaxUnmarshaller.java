@@ -59,6 +59,17 @@ public class ProcessorInfoStaxUnmarshaller implements Unmarshaller<ProcessorInfo
                     processorInfo.setSustainedClockSpeedInGhz(DoubleStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("supportedFeatures", targetDepth)) {
+                    processorInfo.withSupportedFeatures(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("supportedFeatures/item", targetDepth)) {
+                    processorInfo.withSupportedFeatures(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return processorInfo;

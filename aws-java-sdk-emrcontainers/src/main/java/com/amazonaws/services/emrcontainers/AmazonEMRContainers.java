@@ -297,6 +297,29 @@ public interface AmazonEMRContainers {
 
     /**
      * <p>
+     * Generate a session token to connect to a managed endpoint.
+     * </p>
+     * 
+     * @param getManagedEndpointSessionCredentialsRequest
+     * @return Result of the GetManagedEndpointSessionCredentials operation returned by the service.
+     * @throws ValidationException
+     *         There are invalid parameters in the client request.
+     * @throws RequestThrottledException
+     *         The request throttled.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         This is an internal server exception.
+     * @sample AmazonEMRContainers.GetManagedEndpointSessionCredentials
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/GetManagedEndpointSessionCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetManagedEndpointSessionCredentialsResult getManagedEndpointSessionCredentials(
+            GetManagedEndpointSessionCredentialsRequest getManagedEndpointSessionCredentialsRequest);
+
+    /**
+     * <p>
      * Lists job runs based on a set of parameters. A job run is a unit of work, such as a Spark jar, PySpark script, or
      * SparkSQL query, that you submit to Amazon EMR on EKS.
      * </p>

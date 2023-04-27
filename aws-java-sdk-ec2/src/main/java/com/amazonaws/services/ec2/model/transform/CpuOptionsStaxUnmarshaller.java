@@ -52,6 +52,11 @@ public class CpuOptionsStaxUnmarshaller implements Unmarshaller<CpuOptions, Stax
                     cpuOptions.setThreadsPerCore(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("amdSevSnp", targetDepth)) {
+                    cpuOptions.setAmdSevSnp(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return cpuOptions;

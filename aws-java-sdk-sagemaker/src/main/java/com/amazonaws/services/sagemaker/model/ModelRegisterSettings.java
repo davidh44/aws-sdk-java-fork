@@ -37,8 +37,8 @@ public class ModelRegisterSettings implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions
-     * created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set
-     * up.
+     * created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services account in which
+     * SageMaker model registry is set up.
      * </p>
      */
     private String crossAccountModelRegisterRoleArn;
@@ -105,14 +105,14 @@ public class ModelRegisterSettings implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions
-     * created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set
-     * up.
+     * created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services account in which
+     * SageMaker model registry is set up.
      * </p>
      * 
      * @param crossAccountModelRegisterRoleArn
      *        The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model
-     *        versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model
-     *        registry is set up.
+     *        versions created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services
+     *        account in which SageMaker model registry is set up.
      */
 
     public void setCrossAccountModelRegisterRoleArn(String crossAccountModelRegisterRoleArn) {
@@ -122,13 +122,13 @@ public class ModelRegisterSettings implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions
-     * created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set
-     * up.
+     * created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services account in which
+     * SageMaker model registry is set up.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model
-     *         versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker
-     *         model registry is set up.
+     *         versions created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services
+     *         account in which SageMaker model registry is set up.
      */
 
     public String getCrossAccountModelRegisterRoleArn() {
@@ -138,14 +138,14 @@ public class ModelRegisterSettings implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions
-     * created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set
-     * up.
+     * created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services account in which
+     * SageMaker model registry is set up.
      * </p>
      * 
      * @param crossAccountModelRegisterRoleArn
      *        The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model
-     *        versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model
-     *        registry is set up.
+     *        versions created by a different SageMaker Canvas Amazon Web Services account than the Amazon Web Services
+     *        account in which SageMaker model registry is set up.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

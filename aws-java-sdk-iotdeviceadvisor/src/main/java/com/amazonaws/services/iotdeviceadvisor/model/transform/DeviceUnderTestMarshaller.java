@@ -31,6 +31,8 @@ public class DeviceUnderTestMarshaller {
             .marshallLocationName("thingArn").build();
     private static final MarshallingInfo<String> CERTIFICATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("certificateArn").build();
+    private static final MarshallingInfo<String> DEVICEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deviceRoleArn").build();
 
     private static final DeviceUnderTestMarshaller instance = new DeviceUnderTestMarshaller();
 
@@ -50,6 +52,7 @@ public class DeviceUnderTestMarshaller {
         try {
             protocolMarshaller.marshall(deviceUnderTest.getThingArn(), THINGARN_BINDING);
             protocolMarshaller.marshall(deviceUnderTest.getCertificateArn(), CERTIFICATEARN_BINDING);
+            protocolMarshaller.marshall(deviceUnderTest.getDeviceRoleArn(), DEVICEROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

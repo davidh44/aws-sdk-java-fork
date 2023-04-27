@@ -83,6 +83,11 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
     }
 
     @Override
+    public GetManagedEndpointSessionCredentialsResult getManagedEndpointSessionCredentials(GetManagedEndpointSessionCredentialsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListJobRunsResult listJobRuns(ListJobRunsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
