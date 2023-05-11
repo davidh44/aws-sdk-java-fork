@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,26 +24,20 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * To ensure that requests don't run multiple times, specify a unique token for each request.
-     * </p>
-     */
-    private String clientToken;
-    /**
-     * <p>
-     * A description for the store.
-     * </p>
-     */
-    private String description;
     /**
      * <p>
      * A name for the store.
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * A description for the store.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * Server-side encryption (SSE) settings for the store.
@@ -55,44 +50,56 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private java.util.Map<String, String> tags;
-
     /**
      * <p>
      * To ensure that requests don't run multiple times, specify a unique token for each request.
      * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
+     * An S3 location that is used to store files that have failed a direct upload.
+     * </p>
+     */
+    private String fallbackLocation;
+
+    /**
+     * <p>
+     * A name for the store.
+     * </p>
      * 
-     * @param clientToken
-     *        To ensure that requests don't run multiple times, specify a unique token for each request.
+     * @param name
+     *        A name for the store.
      */
 
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * To ensure that requests don't run multiple times, specify a unique token for each request.
+     * A name for the store.
      * </p>
      * 
-     * @return To ensure that requests don't run multiple times, specify a unique token for each request.
+     * @return A name for the store.
      */
 
-    public String getClientToken() {
-        return this.clientToken;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * To ensure that requests don't run multiple times, specify a unique token for each request.
+     * A name for the store.
      * </p>
      * 
-     * @param clientToken
-     *        To ensure that requests don't run multiple times, specify a unique token for each request.
+     * @param name
+     *        A name for the store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateSequenceStoreRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
+    public CreateSequenceStoreRequest withName(String name) {
+        setName(name);
         return this;
     }
 
@@ -133,46 +140,6 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     public CreateSequenceStoreRequest withDescription(String description) {
         setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * A name for the store.
-     * </p>
-     * 
-     * @param name
-     *        A name for the store.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * A name for the store.
-     * </p>
-     * 
-     * @return A name for the store.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * A name for the store.
-     * </p>
-     * 
-     * @param name
-     *        A name for the store.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateSequenceStoreRequest withName(String name) {
-        setName(name);
         return this;
     }
 
@@ -285,6 +252,86 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * To ensure that requests don't run multiple times, specify a unique token for each request.
+     * </p>
+     * 
+     * @param clientToken
+     *        To ensure that requests don't run multiple times, specify a unique token for each request.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * To ensure that requests don't run multiple times, specify a unique token for each request.
+     * </p>
+     * 
+     * @return To ensure that requests don't run multiple times, specify a unique token for each request.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * To ensure that requests don't run multiple times, specify a unique token for each request.
+     * </p>
+     * 
+     * @param clientToken
+     *        To ensure that requests don't run multiple times, specify a unique token for each request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSequenceStoreRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An S3 location that is used to store files that have failed a direct upload.
+     * </p>
+     * 
+     * @param fallbackLocation
+     *        An S3 location that is used to store files that have failed a direct upload.
+     */
+
+    public void setFallbackLocation(String fallbackLocation) {
+        this.fallbackLocation = fallbackLocation;
+    }
+
+    /**
+     * <p>
+     * An S3 location that is used to store files that have failed a direct upload.
+     * </p>
+     * 
+     * @return An S3 location that is used to store files that have failed a direct upload.
+     */
+
+    public String getFallbackLocation() {
+        return this.fallbackLocation;
+    }
+
+    /**
+     * <p>
+     * An S3 location that is used to store files that have failed a direct upload.
+     * </p>
+     * 
+     * @param fallbackLocation
+     *        An S3 location that is used to store files that have failed a direct upload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSequenceStoreRequest withFallbackLocation(String fallbackLocation) {
+        setFallbackLocation(fallbackLocation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -296,16 +343,18 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getSseConfig() != null)
             sb.append("SseConfig: ").append(getSseConfig()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getFallbackLocation() != null)
+            sb.append("FallbackLocation: ").append(getFallbackLocation());
         sb.append("}");
         return sb.toString();
     }
@@ -320,17 +369,13 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
         if (obj instanceof CreateSequenceStoreRequest == false)
             return false;
         CreateSequenceStoreRequest other = (CreateSequenceStoreRequest) obj;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getSseConfig() == null ^ this.getSseConfig() == null)
             return false;
@@ -340,6 +385,14 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
+        if (other.getFallbackLocation() == null ^ this.getFallbackLocation() == null)
+            return false;
+        if (other.getFallbackLocation() != null && other.getFallbackLocation().equals(this.getFallbackLocation()) == false)
+            return false;
         return true;
     }
 
@@ -348,17 +401,23 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getSseConfig() == null) ? 0 : getSseConfig().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getFallbackLocation() == null) ? 0 : getFallbackLocation().hashCode());
         return hashCode;
     }
 
     @Override
     public CreateSequenceStoreRequest clone() {
         return (CreateSequenceStoreRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

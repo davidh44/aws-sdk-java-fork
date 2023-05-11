@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,60 +24,20 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class UpdateAnnotationStoreRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class UpdateAnnotationStoreRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * A description for the store.
-     * </p>
-     */
-    private String description;
     /**
      * <p>
      * A name for the store.
      * </p>
      */
     private String name;
-
     /**
      * <p>
      * A description for the store.
      * </p>
-     * 
-     * @param description
-     *        A description for the store.
      */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * A description for the store.
-     * </p>
-     * 
-     * @return A description for the store.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * A description for the store.
-     * </p>
-     * 
-     * @param description
-     *        A description for the store.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateAnnotationStoreRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
+    private String description;
 
     /**
      * <p>
@@ -119,6 +80,46 @@ public class UpdateAnnotationStoreRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A description for the store.
+     * </p>
+     * 
+     * @param description
+     *        A description for the store.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * A description for the store.
+     * </p>
+     * 
+     * @return A description for the store.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * A description for the store.
+     * </p>
+     * 
+     * @param description
+     *        A description for the store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAnnotationStoreRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -130,10 +131,10 @@ public class UpdateAnnotationStoreRequest extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -148,13 +149,13 @@ public class UpdateAnnotationStoreRequest extends com.amazonaws.AmazonWebService
         if (obj instanceof UpdateAnnotationStoreRequest == false)
             return false;
         UpdateAnnotationStoreRequest other = (UpdateAnnotationStoreRequest) obj;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -164,14 +165,19 @@ public class UpdateAnnotationStoreRequest extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 
     @Override
     public UpdateAnnotationStoreRequest clone() {
         return (UpdateAnnotationStoreRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

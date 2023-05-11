@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,14 +24,8 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * The maximum number of runs to return in one page of results.
-     * </p>
-     */
-    private Integer maxResults;
     /**
      * <p>
      * Filter the list by run name.
@@ -49,46 +44,18 @@ public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      */
     private String startingToken;
-
     /**
      * <p>
      * The maximum number of runs to return in one page of results.
      * </p>
-     * 
-     * @param maxResults
-     *        The maximum number of runs to return in one page of results.
      */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
+    private Integer maxResults;
     /**
      * <p>
-     * The maximum number of runs to return in one page of results.
+     * The status of a run.
      * </p>
-     * 
-     * @return The maximum number of runs to return in one page of results.
      */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * The maximum number of runs to return in one page of results.
-     * </p>
-     * 
-     * @param maxResults
-     *        The maximum number of runs to return in one page of results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRunsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
-        return this;
-    }
+    private String status;
 
     /**
      * <p>
@@ -211,6 +178,105 @@ public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * The maximum number of runs to return in one page of results.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of runs to return in one page of results.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of runs to return in one page of results.
+     * </p>
+     * 
+     * @return The maximum number of runs to return in one page of results.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of runs to return in one page of results.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of runs to return in one page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRunsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of a run.
+     * </p>
+     * 
+     * @param status
+     *        The status of a run.
+     * @see RunStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The status of a run.
+     * </p>
+     * 
+     * @return The status of a run.
+     * @see RunStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The status of a run.
+     * </p>
+     * 
+     * @param status
+     *        The status of a run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RunStatus
+     */
+
+    public ListRunsRequest withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of a run.
+     * </p>
+     * 
+     * @param status
+     *        The status of a run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RunStatus
+     */
+
+    public ListRunsRequest withStatus(RunStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -222,14 +288,16 @@ public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getRunGroupId() != null)
             sb.append("RunGroupId: ").append(getRunGroupId()).append(",");
         if (getStartingToken() != null)
-            sb.append("StartingToken: ").append(getStartingToken());
+            sb.append("StartingToken: ").append(getStartingToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -244,10 +312,6 @@ public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest imple
         if (obj instanceof ListRunsRequest == false)
             return false;
         ListRunsRequest other = (ListRunsRequest) obj;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -260,6 +324,14 @@ public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getStartingToken() != null && other.getStartingToken().equals(this.getStartingToken()) == false)
             return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         return true;
     }
 
@@ -268,16 +340,22 @@ public class ListRunsRequest extends com.amazonaws.AmazonWebServiceRequest imple
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRunGroupId() == null) ? 0 : getRunGroupId().hashCode());
         hashCode = prime * hashCode + ((getStartingToken() == null) ? 0 : getStartingToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 
     @Override
     public ListRunsRequest clone() {
         return (ListRunsRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

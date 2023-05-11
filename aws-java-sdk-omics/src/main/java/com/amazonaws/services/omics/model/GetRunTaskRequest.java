@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,7 +24,7 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetRunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class GetRunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
     /**
      * <p>
@@ -172,6 +173,11 @@ public class GetRunTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
     @Override
     public GetRunTaskRequest clone() {
         return (GetRunTaskRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

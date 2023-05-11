@@ -16,26 +16,67 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/GetRun" target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetRunRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class GetRunRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * The run's export format.
-     * </p>
-     */
-    private java.util.List<String> export;
     /**
      * <p>
      * The run's ID.
      * </p>
      */
     private String id;
+    /**
+     * <p>
+     * The run's export format.
+     * </p>
+     */
+    private java.util.List<String> export;
+
+    /**
+     * <p>
+     * The run's ID.
+     * </p>
+     * 
+     * @param id
+     *        The run's ID.
+     */
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * <p>
+     * The run's ID.
+     * </p>
+     * 
+     * @return The run's ID.
+     */
+
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * <p>
+     * The run's ID.
+     * </p>
+     * 
+     * @param id
+     *        The run's ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRunRequest withId(String id) {
+        setId(id);
+        return this;
+    }
 
     /**
      * <p>
@@ -136,46 +177,6 @@ public class GetRunRequest extends com.amazonaws.AmazonWebServiceRequest impleme
     }
 
     /**
-     * <p>
-     * The run's ID.
-     * </p>
-     * 
-     * @param id
-     *        The run's ID.
-     */
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /**
-     * <p>
-     * The run's ID.
-     * </p>
-     * 
-     * @return The run's ID.
-     */
-
-    public String getId() {
-        return this.id;
-    }
-
-    /**
-     * <p>
-     * The run's ID.
-     * </p>
-     * 
-     * @param id
-     *        The run's ID.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetRunRequest withId(String id) {
-        setId(id);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -187,10 +188,10 @@ public class GetRunRequest extends com.amazonaws.AmazonWebServiceRequest impleme
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getExport() != null)
-            sb.append("Export: ").append(getExport()).append(",");
         if (getId() != null)
-            sb.append("Id: ").append(getId());
+            sb.append("Id: ").append(getId()).append(",");
+        if (getExport() != null)
+            sb.append("Export: ").append(getExport());
         sb.append("}");
         return sb.toString();
     }
@@ -205,13 +206,13 @@ public class GetRunRequest extends com.amazonaws.AmazonWebServiceRequest impleme
         if (obj instanceof GetRunRequest == false)
             return false;
         GetRunRequest other = (GetRunRequest) obj;
-        if (other.getExport() == null ^ this.getExport() == null)
-            return false;
-        if (other.getExport() != null && other.getExport().equals(this.getExport()) == false)
-            return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
+            return false;
+        if (other.getExport() == null ^ this.getExport() == null)
+            return false;
+        if (other.getExport() != null && other.getExport().equals(this.getExport()) == false)
             return false;
         return true;
     }
@@ -221,14 +222,19 @@ public class GetRunRequest extends com.amazonaws.AmazonWebServiceRequest impleme
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getExport() == null) ? 0 : getExport().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
+        hashCode = prime * hashCode + ((getExport() == null) ? 0 : getExport().hashCode());
         return hashCode;
     }
 
     @Override
     public GetRunRequest clone() {
         return (GetRunRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

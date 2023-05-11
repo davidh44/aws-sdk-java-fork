@@ -58,8 +58,27 @@ import com.amazonaws.services.ivsrealtime.model.transform.*;
  * EventBridge event stream for responses. JSON is used for both requests and responses, including errors.
  * </p>
  * <p>
- * Terminology: The IVS stage API sometimes is referred to as the IVS RealTime API.
+ * Terminology:
  * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * The IVS stage API sometimes is referred to as the IVS <i>RealTime</i> API.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A <i>participant token</i> is an authorization token used to publish/subscribe to a stage.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A <i>participant object</i> represents participants (people) in the stage and contains information about them. When a
+ * token is created, it includes a participant ID; when a participant uses that token to join a stage, the participant
+ * is associated with that participant ID There is a 1:1 mapping between participant tokens and participants.
+ * </p>
+ * </li>
+ * </ul>
  * <p>
  * <b>Resources</b>
  * </p>
@@ -124,13 +143,39 @@ import com.amazonaws.services.ivsrealtime.model.transform.*;
  * </li>
  * <li>
  * <p>
+ * <a>GetParticipant</a> — Gets information about the specified participant token.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a>GetStage</a> — Gets information for the specified stage.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStageSession</a> — Gets information for the specified stage session.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListParticipantEvents</a> — Lists events for a specified participant that occurred during a specified stage
+ * session.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListParticipants</a> — Lists all participants in a specified stage session.
  * </p>
  * </li>
  * <li>
  * <p>
  * <a>ListStages</a> — Gets summary information about all stages in your account, in the AWS region where the API
  * request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStageSessions</a> — Gets all sessions for a specified stage.
  * </p>
  * </li>
  * <li>
@@ -187,14 +232,14 @@ public class AmazonIVSRealTimeClient extends AmazonWebServiceClient implements A
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ivsrealtime.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.ivsrealtime.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ivsrealtime.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ivsrealtime.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.ivsrealtime.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ivsrealtime.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
@@ -498,6 +543,64 @@ public class AmazonIVSRealTimeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Gets information about the specified participant token.
+     * </p>
+     * 
+     * @param getParticipantRequest
+     * @return Result of the GetParticipant operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.GetParticipant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/GetParticipant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetParticipantResult getParticipant(GetParticipantRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetParticipant(request);
+    }
+
+    @SdkInternalApi
+    final GetParticipantResult executeGetParticipant(GetParticipantRequest getParticipantRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getParticipantRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetParticipantRequest> request = null;
+        Response<GetParticipantResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetParticipantRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getParticipantRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IVS RealTime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetParticipant");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetParticipantResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetParticipantResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information for the specified stage.
      * </p>
      * 
@@ -544,6 +647,236 @@ public class AmazonIVSRealTimeClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<GetStageResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetStageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets information for the specified stage session.
+     * </p>
+     * 
+     * @param getStageSessionRequest
+     * @return Result of the GetStageSession operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.GetStageSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/GetStageSession" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetStageSessionResult getStageSession(GetStageSessionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetStageSession(request);
+    }
+
+    @SdkInternalApi
+    final GetStageSessionResult executeGetStageSession(GetStageSessionRequest getStageSessionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getStageSessionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetStageSessionRequest> request = null;
+        Response<GetStageSessionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetStageSessionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getStageSessionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IVS RealTime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetStageSession");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetStageSessionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetStageSessionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists events for a specified participant that occurred during a specified stage session.
+     * </p>
+     * 
+     * @param listParticipantEventsRequest
+     * @return Result of the ListParticipantEvents operation returned by the service.
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.ListParticipantEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/ListParticipantEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListParticipantEventsResult listParticipantEvents(ListParticipantEventsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListParticipantEvents(request);
+    }
+
+    @SdkInternalApi
+    final ListParticipantEventsResult executeListParticipantEvents(ListParticipantEventsRequest listParticipantEventsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listParticipantEventsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListParticipantEventsRequest> request = null;
+        Response<ListParticipantEventsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListParticipantEventsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listParticipantEventsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IVS RealTime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListParticipantEvents");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListParticipantEventsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListParticipantEventsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all participants in a specified stage session.
+     * </p>
+     * 
+     * @param listParticipantsRequest
+     * @return Result of the ListParticipants operation returned by the service.
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.ListParticipants
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/ListParticipants" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListParticipantsResult listParticipants(ListParticipantsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListParticipants(request);
+    }
+
+    @SdkInternalApi
+    final ListParticipantsResult executeListParticipants(ListParticipantsRequest listParticipantsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listParticipantsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListParticipantsRequest> request = null;
+        Response<ListParticipantsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListParticipantsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listParticipantsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IVS RealTime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListParticipants");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListParticipantsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListParticipantsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets all sessions for a specified stage.
+     * </p>
+     * 
+     * @param listStageSessionsRequest
+     * @return Result of the ListStageSessions operation returned by the service.
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.ListStageSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/ListStageSessions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListStageSessionsResult listStageSessions(ListStageSessionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListStageSessions(request);
+    }
+
+    @SdkInternalApi
+    final ListStageSessionsResult executeListStageSessions(ListStageSessionsRequest listStageSessionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listStageSessionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListStageSessionsRequest> request = null;
+        Response<ListStageSessionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListStageSessionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listStageSessionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IVS RealTime");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListStageSessions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListStageSessionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListStageSessionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

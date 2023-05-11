@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,14 +24,8 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * To ensure that jobs don't run multiple times, specify a unique token for each job.
-     * </p>
-     */
-    private String clientToken;
     /**
      * <p>
      * The read set's sequence store ID.
@@ -39,50 +34,16 @@ public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebSer
     private String sequenceStoreId;
     /**
      * <p>
+     * To ensure that jobs don't run multiple times, specify a unique token for each job.
+     * </p>
+     */
+    private String clientToken;
+    /**
+     * <p>
      * The job's source files.
      * </p>
      */
     private java.util.List<StartReadSetActivationJobSourceItem> sources;
-
-    /**
-     * <p>
-     * To ensure that jobs don't run multiple times, specify a unique token for each job.
-     * </p>
-     * 
-     * @param clientToken
-     *        To ensure that jobs don't run multiple times, specify a unique token for each job.
-     */
-
-    public void setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-    }
-
-    /**
-     * <p>
-     * To ensure that jobs don't run multiple times, specify a unique token for each job.
-     * </p>
-     * 
-     * @return To ensure that jobs don't run multiple times, specify a unique token for each job.
-     */
-
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * <p>
-     * To ensure that jobs don't run multiple times, specify a unique token for each job.
-     * </p>
-     * 
-     * @param clientToken
-     *        To ensure that jobs don't run multiple times, specify a unique token for each job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartReadSetActivationJobRequest withClientToken(String clientToken) {
-        setClientToken(clientToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -121,6 +82,46 @@ public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebSer
 
     public StartReadSetActivationJobRequest withSequenceStoreId(String sequenceStoreId) {
         setSequenceStoreId(sequenceStoreId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * To ensure that jobs don't run multiple times, specify a unique token for each job.
+     * </p>
+     * 
+     * @param clientToken
+     *        To ensure that jobs don't run multiple times, specify a unique token for each job.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * To ensure that jobs don't run multiple times, specify a unique token for each job.
+     * </p>
+     * 
+     * @return To ensure that jobs don't run multiple times, specify a unique token for each job.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * To ensure that jobs don't run multiple times, specify a unique token for each job.
+     * </p>
+     * 
+     * @param clientToken
+     *        To ensure that jobs don't run multiple times, specify a unique token for each job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartReadSetActivationJobRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
         return this;
     }
 
@@ -206,10 +207,10 @@ public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getSequenceStoreId() != null)
             sb.append("SequenceStoreId: ").append(getSequenceStoreId()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getSources() != null)
             sb.append("Sources: ").append(getSources());
         sb.append("}");
@@ -226,13 +227,13 @@ public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebSer
         if (obj instanceof StartReadSetActivationJobRequest == false)
             return false;
         StartReadSetActivationJobRequest other = (StartReadSetActivationJobRequest) obj;
-        if (other.getClientToken() == null ^ this.getClientToken() == null)
-            return false;
-        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
-            return false;
         if (other.getSequenceStoreId() == null ^ this.getSequenceStoreId() == null)
             return false;
         if (other.getSequenceStoreId() != null && other.getSequenceStoreId().equals(this.getSequenceStoreId()) == false)
+            return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
         if (other.getSources() == null ^ this.getSources() == null)
             return false;
@@ -246,8 +247,8 @@ public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getSequenceStoreId() == null) ? 0 : getSequenceStoreId().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getSources() == null) ? 0 : getSources().hashCode());
         return hashCode;
     }
@@ -255,6 +256,11 @@ public class StartReadSetActivationJobRequest extends com.amazonaws.AmazonWebSer
     @Override
     public StartReadSetActivationJobRequest clone() {
         return (StartReadSetActivationJobRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

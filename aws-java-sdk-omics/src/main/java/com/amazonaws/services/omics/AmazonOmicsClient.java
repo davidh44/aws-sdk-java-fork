@@ -53,8 +53,7 @@ import com.amazonaws.services.omics.model.transform.*;
  * <p>
  * <p>
  * This is the <i>Amazon Omics API Reference</i>. For an introduction to the service, see <a
- * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics Developer
- * Guide</i>.
+ * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics User Guide</i>.
  * </p>
  */
 @ThreadSafe
@@ -103,6 +102,9 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.omics.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("NotSupportedOperationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.omics.model.transform.NotSupportedOperationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.omics.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
@@ -155,6 +157,88 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/omics/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/omics/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Stops a multipart upload.
+     * </p>
+     * 
+     * @param abortMultipartReadSetUploadRequest
+     * @return Result of the AbortMultipartReadSetUpload operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.AbortMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/AbortMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AbortMultipartReadSetUploadResult abortMultipartReadSetUpload(AbortMultipartReadSetUploadRequest request) {
+        request = beforeClientExecution(request);
+        return executeAbortMultipartReadSetUpload(request);
+    }
+
+    @SdkInternalApi
+    final AbortMultipartReadSetUploadResult executeAbortMultipartReadSetUpload(AbortMultipartReadSetUploadRequest abortMultipartReadSetUploadRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(abortMultipartReadSetUploadRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AbortMultipartReadSetUploadRequest> request = null;
+        Response<AbortMultipartReadSetUploadResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AbortMultipartReadSetUploadRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(abortMultipartReadSetUploadRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Omics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AbortMultipartReadSetUpload");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "control-storage-";
+                String resolvedHostPrefix = String.format("control-storage-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AbortMultipartReadSetUploadResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AbortMultipartReadSetUploadResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -466,6 +550,88 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
 
     /**
      * <p>
+     * Concludes a multipart upload once you have uploaded all the components.
+     * </p>
+     * 
+     * @param completeMultipartReadSetUploadRequest
+     * @return Result of the CompleteMultipartReadSetUpload operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.CompleteMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CompleteMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CompleteMultipartReadSetUploadResult completeMultipartReadSetUpload(CompleteMultipartReadSetUploadRequest request) {
+        request = beforeClientExecution(request);
+        return executeCompleteMultipartReadSetUpload(request);
+    }
+
+    @SdkInternalApi
+    final CompleteMultipartReadSetUploadResult executeCompleteMultipartReadSetUpload(CompleteMultipartReadSetUploadRequest completeMultipartReadSetUploadRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(completeMultipartReadSetUploadRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CompleteMultipartReadSetUploadRequest> request = null;
+        Response<CompleteMultipartReadSetUploadResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CompleteMultipartReadSetUploadRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(completeMultipartReadSetUploadRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Omics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CompleteMultipartReadSetUpload");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "storage-";
+                String resolvedHostPrefix = String.format("storage-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CompleteMultipartReadSetUploadResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CompleteMultipartReadSetUploadResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an annotation store.
      * </p>
      * 
@@ -533,6 +699,88 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
             HttpResponseHandler<AmazonWebServiceResponse<CreateAnnotationStoreResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new CreateAnnotationStoreResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Begins a multipart read set upload.
+     * </p>
+     * 
+     * @param createMultipartReadSetUploadRequest
+     * @return Result of the CreateMultipartReadSetUpload operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.CreateMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CreateMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateMultipartReadSetUploadResult createMultipartReadSetUpload(CreateMultipartReadSetUploadRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMultipartReadSetUpload(request);
+    }
+
+    @SdkInternalApi
+    final CreateMultipartReadSetUploadResult executeCreateMultipartReadSetUpload(CreateMultipartReadSetUploadRequest createMultipartReadSetUploadRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMultipartReadSetUploadRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMultipartReadSetUploadRequest> request = null;
+        Response<CreateMultipartReadSetUploadResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMultipartReadSetUploadRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createMultipartReadSetUploadRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Omics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMultipartReadSetUpload");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "control-storage-";
+                String resolvedHostPrefix = String.format("control-storage-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateMultipartReadSetUploadResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateMultipartReadSetUploadResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -3102,6 +3350,88 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
 
     /**
      * <p>
+     * Lists all multipart read set uploads and their statuses.
+     * </p>
+     * 
+     * @param listMultipartReadSetUploadsRequest
+     * @return Result of the ListMultipartReadSetUploads operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.ListMultipartReadSetUploads
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListMultipartReadSetUploads"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMultipartReadSetUploadsResult listMultipartReadSetUploads(ListMultipartReadSetUploadsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMultipartReadSetUploads(request);
+    }
+
+    @SdkInternalApi
+    final ListMultipartReadSetUploadsResult executeListMultipartReadSetUploads(ListMultipartReadSetUploadsRequest listMultipartReadSetUploadsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMultipartReadSetUploadsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMultipartReadSetUploadsRequest> request = null;
+        Response<ListMultipartReadSetUploadsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMultipartReadSetUploadsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listMultipartReadSetUploadsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Omics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMultipartReadSetUploads");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "control-storage-";
+                String resolvedHostPrefix = String.format("control-storage-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMultipartReadSetUploadsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListMultipartReadSetUploadsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves a list of read set activation jobs.
      * </p>
      * 
@@ -3322,6 +3652,87 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
             HttpResponseHandler<AmazonWebServiceResponse<ListReadSetImportJobsResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new ListReadSetImportJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation will list all parts in a requested multipart upload for a sequence store.
+     * </p>
+     * 
+     * @param listReadSetUploadPartsRequest
+     * @return Result of the ListReadSetUploadParts operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.ListReadSetUploadParts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListReadSetUploadParts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListReadSetUploadPartsResult listReadSetUploadParts(ListReadSetUploadPartsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListReadSetUploadParts(request);
+    }
+
+    @SdkInternalApi
+    final ListReadSetUploadPartsResult executeListReadSetUploadParts(ListReadSetUploadPartsRequest listReadSetUploadPartsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listReadSetUploadPartsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListReadSetUploadPartsRequest> request = null;
+        Response<ListReadSetUploadPartsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListReadSetUploadPartsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listReadSetUploadPartsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Omics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListReadSetUploadParts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "control-storage-";
+                String resolvedHostPrefix = String.format("control-storage-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListReadSetUploadPartsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListReadSetUploadPartsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -5271,6 +5682,90 @@ public class AmazonOmicsClient extends AmazonWebServiceClient implements AmazonO
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateWorkflowResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateWorkflowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation uploads a specific part of a read set. If you upload a new part using a previously used part
+     * number, the previously uploaded part will be overwritten.
+     * </p>
+     * 
+     * @param uploadReadSetPartRequest
+     * @return Result of the UploadReadSetPart operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.UploadReadSetPart
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/UploadReadSetPart" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UploadReadSetPartResult uploadReadSetPart(UploadReadSetPartRequest request) {
+        request = beforeClientExecution(request);
+        return executeUploadReadSetPart(request);
+    }
+
+    @SdkInternalApi
+    final UploadReadSetPartResult executeUploadReadSetPart(UploadReadSetPartRequest uploadReadSetPartRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(uploadReadSetPartRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UploadReadSetPartRequest> request = null;
+        Response<UploadReadSetPartResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UploadReadSetPartRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(uploadReadSetPartRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Omics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UploadReadSetPart");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+                request.addHandlerContext(HandlerContextKey.REQUIRES_LENGTH, Boolean.TRUE);
+                request.addHandlerContext(HandlerContextKey.HAS_STREAMING_INPUT, Boolean.TRUE);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "storage-";
+                String resolvedHostPrefix = String.format("storage-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UploadReadSetPartResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UploadReadSetPartResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();

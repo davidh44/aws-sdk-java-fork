@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,14 +24,8 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * A filter to apply to the list.
-     * </p>
-     */
-    private ListAnnotationStoresFilter filter;
     /**
      * <p>
      * IDs of stores to list.
@@ -49,46 +44,12 @@ public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private String nextToken;
-
     /**
      * <p>
      * A filter to apply to the list.
      * </p>
-     * 
-     * @param filter
-     *        A filter to apply to the list.
      */
-
-    public void setFilter(ListAnnotationStoresFilter filter) {
-        this.filter = filter;
-    }
-
-    /**
-     * <p>
-     * A filter to apply to the list.
-     * </p>
-     * 
-     * @return A filter to apply to the list.
-     */
-
-    public ListAnnotationStoresFilter getFilter() {
-        return this.filter;
-    }
-
-    /**
-     * <p>
-     * A filter to apply to the list.
-     * </p>
-     * 
-     * @param filter
-     *        A filter to apply to the list.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListAnnotationStoresRequest withFilter(ListAnnotationStoresFilter filter) {
-        setFilter(filter);
-        return this;
-    }
+    private ListAnnotationStoresFilter filter;
 
     /**
      * <p>
@@ -241,6 +202,46 @@ public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A filter to apply to the list.
+     * </p>
+     * 
+     * @param filter
+     *        A filter to apply to the list.
+     */
+
+    public void setFilter(ListAnnotationStoresFilter filter) {
+        this.filter = filter;
+    }
+
+    /**
+     * <p>
+     * A filter to apply to the list.
+     * </p>
+     * 
+     * @return A filter to apply to the list.
+     */
+
+    public ListAnnotationStoresFilter getFilter() {
+        return this.filter;
+    }
+
+    /**
+     * <p>
+     * A filter to apply to the list.
+     * </p>
+     * 
+     * @param filter
+     *        A filter to apply to the list.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAnnotationStoresRequest withFilter(ListAnnotationStoresFilter filter) {
+        setFilter(filter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -252,14 +253,14 @@ public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFilter() != null)
-            sb.append("Filter: ").append(getFilter()).append(",");
         if (getIds() != null)
             sb.append("Ids: ").append(getIds()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getFilter() != null)
+            sb.append("Filter: ").append(getFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -274,10 +275,6 @@ public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof ListAnnotationStoresRequest == false)
             return false;
         ListAnnotationStoresRequest other = (ListAnnotationStoresRequest) obj;
-        if (other.getFilter() == null ^ this.getFilter() == null)
-            return false;
-        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
-            return false;
         if (other.getIds() == null ^ this.getIds() == null)
             return false;
         if (other.getIds() != null && other.getIds().equals(this.getIds()) == false)
@@ -290,6 +287,10 @@ public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getFilter() == null ^ this.getFilter() == null)
+            return false;
+        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
+            return false;
         return true;
     }
 
@@ -298,16 +299,21 @@ public class ListAnnotationStoresRequest extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         hashCode = prime * hashCode + ((getIds() == null) ? 0 : getIds().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         return hashCode;
     }
 
     @Override
     public ListAnnotationStoresRequest clone() {
         return (ListAnnotationStoresRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

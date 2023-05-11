@@ -33,8 +33,27 @@ import java.util.concurrent.ExecutorService;
  * EventBridge event stream for responses. JSON is used for both requests and responses, including errors.
  * </p>
  * <p>
- * Terminology: The IVS stage API sometimes is referred to as the IVS RealTime API.
+ * Terminology:
  * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * The IVS stage API sometimes is referred to as the IVS <i>RealTime</i> API.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A <i>participant token</i> is an authorization token used to publish/subscribe to a stage.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * A <i>participant object</i> represents participants (people) in the stage and contains information about them. When a
+ * token is created, it includes a participant ID; when a participant uses that token to join a stage, the participant
+ * is associated with that participant ID There is a 1:1 mapping between participant tokens and participants.
+ * </p>
+ * </li>
+ * </ul>
  * <p>
  * <b>Resources</b>
  * </p>
@@ -99,13 +118,39 @@ import java.util.concurrent.ExecutorService;
  * </li>
  * <li>
  * <p>
+ * <a>GetParticipant</a> — Gets information about the specified participant token.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a>GetStage</a> — Gets information for the specified stage.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>GetStageSession</a> — Gets information for the specified stage session.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListParticipantEvents</a> — Lists events for a specified participant that occurred during a specified stage
+ * session.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListParticipants</a> — Lists all participants in a specified stage session.
  * </p>
  * </li>
  * <li>
  * <p>
  * <a>ListStages</a> — Gets summary information about all stages in your account, in the AWS region where the API
  * request is processed.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>ListStageSessions</a> — Gets all sessions for a specified stage.
  * </p>
  * </li>
  * <li>
@@ -312,6 +357,39 @@ public class AmazonIVSRealTimeAsyncClient extends AmazonIVSRealTimeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetParticipantResult> getParticipantAsync(GetParticipantRequest request) {
+
+        return getParticipantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetParticipantResult> getParticipantAsync(final GetParticipantRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetParticipantRequest, GetParticipantResult> asyncHandler) {
+        final GetParticipantRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetParticipantResult>() {
+            @Override
+            public GetParticipantResult call() throws Exception {
+                GetParticipantResult result = null;
+
+                try {
+                    result = executeGetParticipant(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetStageResult> getStageAsync(GetStageRequest request) {
 
         return getStageAsync(request, null);
@@ -329,6 +407,138 @@ public class AmazonIVSRealTimeAsyncClient extends AmazonIVSRealTimeClient implem
 
                 try {
                     result = executeGetStage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStageSessionResult> getStageSessionAsync(GetStageSessionRequest request) {
+
+        return getStageSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStageSessionResult> getStageSessionAsync(final GetStageSessionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetStageSessionRequest, GetStageSessionResult> asyncHandler) {
+        final GetStageSessionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetStageSessionResult>() {
+            @Override
+            public GetStageSessionResult call() throws Exception {
+                GetStageSessionResult result = null;
+
+                try {
+                    result = executeGetStageSession(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListParticipantEventsResult> listParticipantEventsAsync(ListParticipantEventsRequest request) {
+
+        return listParticipantEventsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListParticipantEventsResult> listParticipantEventsAsync(final ListParticipantEventsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListParticipantEventsRequest, ListParticipantEventsResult> asyncHandler) {
+        final ListParticipantEventsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListParticipantEventsResult>() {
+            @Override
+            public ListParticipantEventsResult call() throws Exception {
+                ListParticipantEventsResult result = null;
+
+                try {
+                    result = executeListParticipantEvents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListParticipantsResult> listParticipantsAsync(ListParticipantsRequest request) {
+
+        return listParticipantsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListParticipantsResult> listParticipantsAsync(final ListParticipantsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListParticipantsRequest, ListParticipantsResult> asyncHandler) {
+        final ListParticipantsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListParticipantsResult>() {
+            @Override
+            public ListParticipantsResult call() throws Exception {
+                ListParticipantsResult result = null;
+
+                try {
+                    result = executeListParticipants(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStageSessionsResult> listStageSessionsAsync(ListStageSessionsRequest request) {
+
+        return listStageSessionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStageSessionsResult> listStageSessionsAsync(final ListStageSessionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListStageSessionsRequest, ListStageSessionsResult> asyncHandler) {
+        final ListStageSessionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListStageSessionsResult>() {
+            @Override
+            public ListStageSessionsResult call() throws Exception {
+                ListStageSessionsResult result = null;
+
+                try {
+                    result = executeListStageSessions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

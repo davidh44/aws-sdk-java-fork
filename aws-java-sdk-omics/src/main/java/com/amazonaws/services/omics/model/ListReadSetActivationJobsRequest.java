@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,14 +24,14 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
     /**
      * <p>
-     * A filter to apply to the list.
+     * The read set's sequence store ID.
      * </p>
      */
-    private ActivateReadSetFilter filter;
+    private String sequenceStoreId;
     /**
      * <p>
      * The maximum number of read set activation jobs to return in one page of results.
@@ -45,48 +46,48 @@ public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebSer
     private String nextToken;
     /**
      * <p>
+     * A filter to apply to the list.
+     * </p>
+     */
+    private ActivateReadSetFilter filter;
+
+    /**
+     * <p>
      * The read set's sequence store ID.
      * </p>
-     */
-    private String sequenceStoreId;
-
-    /**
-     * <p>
-     * A filter to apply to the list.
-     * </p>
      * 
-     * @param filter
-     *        A filter to apply to the list.
+     * @param sequenceStoreId
+     *        The read set's sequence store ID.
      */
 
-    public void setFilter(ActivateReadSetFilter filter) {
-        this.filter = filter;
+    public void setSequenceStoreId(String sequenceStoreId) {
+        this.sequenceStoreId = sequenceStoreId;
     }
 
     /**
      * <p>
-     * A filter to apply to the list.
+     * The read set's sequence store ID.
      * </p>
      * 
-     * @return A filter to apply to the list.
+     * @return The read set's sequence store ID.
      */
 
-    public ActivateReadSetFilter getFilter() {
-        return this.filter;
+    public String getSequenceStoreId() {
+        return this.sequenceStoreId;
     }
 
     /**
      * <p>
-     * A filter to apply to the list.
+     * The read set's sequence store ID.
      * </p>
      * 
-     * @param filter
-     *        A filter to apply to the list.
+     * @param sequenceStoreId
+     *        The read set's sequence store ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListReadSetActivationJobsRequest withFilter(ActivateReadSetFilter filter) {
-        setFilter(filter);
+    public ListReadSetActivationJobsRequest withSequenceStoreId(String sequenceStoreId) {
+        setSequenceStoreId(sequenceStoreId);
         return this;
     }
 
@@ -172,41 +173,41 @@ public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The read set's sequence store ID.
+     * A filter to apply to the list.
      * </p>
      * 
-     * @param sequenceStoreId
-     *        The read set's sequence store ID.
+     * @param filter
+     *        A filter to apply to the list.
      */
 
-    public void setSequenceStoreId(String sequenceStoreId) {
-        this.sequenceStoreId = sequenceStoreId;
+    public void setFilter(ActivateReadSetFilter filter) {
+        this.filter = filter;
     }
 
     /**
      * <p>
-     * The read set's sequence store ID.
+     * A filter to apply to the list.
      * </p>
      * 
-     * @return The read set's sequence store ID.
+     * @return A filter to apply to the list.
      */
 
-    public String getSequenceStoreId() {
-        return this.sequenceStoreId;
+    public ActivateReadSetFilter getFilter() {
+        return this.filter;
     }
 
     /**
      * <p>
-     * The read set's sequence store ID.
+     * A filter to apply to the list.
      * </p>
      * 
-     * @param sequenceStoreId
-     *        The read set's sequence store ID.
+     * @param filter
+     *        A filter to apply to the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListReadSetActivationJobsRequest withSequenceStoreId(String sequenceStoreId) {
-        setSequenceStoreId(sequenceStoreId);
+    public ListReadSetActivationJobsRequest withFilter(ActivateReadSetFilter filter) {
+        setFilter(filter);
         return this;
     }
 
@@ -222,14 +223,14 @@ public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getFilter() != null)
-            sb.append("Filter: ").append(getFilter()).append(",");
+        if (getSequenceStoreId() != null)
+            sb.append("SequenceStoreId: ").append(getSequenceStoreId()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getSequenceStoreId() != null)
-            sb.append("SequenceStoreId: ").append(getSequenceStoreId());
+        if (getFilter() != null)
+            sb.append("Filter: ").append(getFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -244,9 +245,9 @@ public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebSer
         if (obj instanceof ListReadSetActivationJobsRequest == false)
             return false;
         ListReadSetActivationJobsRequest other = (ListReadSetActivationJobsRequest) obj;
-        if (other.getFilter() == null ^ this.getFilter() == null)
+        if (other.getSequenceStoreId() == null ^ this.getSequenceStoreId() == null)
             return false;
-        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
+        if (other.getSequenceStoreId() != null && other.getSequenceStoreId().equals(this.getSequenceStoreId()) == false)
             return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
@@ -256,9 +257,9 @@ public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
-        if (other.getSequenceStoreId() == null ^ this.getSequenceStoreId() == null)
+        if (other.getFilter() == null ^ this.getFilter() == null)
             return false;
-        if (other.getSequenceStoreId() != null && other.getSequenceStoreId().equals(this.getSequenceStoreId()) == false)
+        if (other.getFilter() != null && other.getFilter().equals(this.getFilter()) == false)
             return false;
         return true;
     }
@@ -268,16 +269,21 @@ public class ListReadSetActivationJobsRequest extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
+        hashCode = prime * hashCode + ((getSequenceStoreId() == null) ? 0 : getSequenceStoreId().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getSequenceStoreId() == null) ? 0 : getSequenceStoreId().hashCode());
+        hashCode = prime * hashCode + ((getFilter() == null) ? 0 : getFilter().hashCode());
         return hashCode;
     }
 
     @Override
     public ListReadSetActivationJobsRequest clone() {
         return (ListReadSetActivationJobsRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

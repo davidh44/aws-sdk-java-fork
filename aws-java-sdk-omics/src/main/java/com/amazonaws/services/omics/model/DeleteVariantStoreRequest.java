@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,20 +24,60 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DeleteVariantStoreRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class DeleteVariantStoreRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
-    /**
-     * <p>
-     * Whether to force deletion.
-     * </p>
-     */
-    private Boolean force;
     /**
      * <p>
      * The store's name.
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Whether to force deletion.
+     * </p>
+     */
+    private Boolean force;
+
+    /**
+     * <p>
+     * The store's name.
+     * </p>
+     * 
+     * @param name
+     *        The store's name.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The store's name.
+     * </p>
+     * 
+     * @return The store's name.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The store's name.
+     * </p>
+     * 
+     * @param name
+     *        The store's name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteVariantStoreRequest withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -91,46 +132,6 @@ public class DeleteVariantStoreRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * <p>
-     * The store's name.
-     * </p>
-     * 
-     * @param name
-     *        The store's name.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The store's name.
-     * </p>
-     * 
-     * @return The store's name.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The store's name.
-     * </p>
-     * 
-     * @param name
-     *        The store's name.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteVariantStoreRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -142,10 +143,10 @@ public class DeleteVariantStoreRequest extends com.amazonaws.AmazonWebServiceReq
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getForce() != null)
-            sb.append("Force: ").append(getForce()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getForce() != null)
+            sb.append("Force: ").append(getForce());
         sb.append("}");
         return sb.toString();
     }
@@ -160,13 +161,13 @@ public class DeleteVariantStoreRequest extends com.amazonaws.AmazonWebServiceReq
         if (obj instanceof DeleteVariantStoreRequest == false)
             return false;
         DeleteVariantStoreRequest other = (DeleteVariantStoreRequest) obj;
-        if (other.getForce() == null ^ this.getForce() == null)
-            return false;
-        if (other.getForce() != null && other.getForce().equals(this.getForce()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getForce() == null ^ this.getForce() == null)
+            return false;
+        if (other.getForce() != null && other.getForce().equals(this.getForce()) == false)
             return false;
         return true;
     }
@@ -176,14 +177,19 @@ public class DeleteVariantStoreRequest extends com.amazonaws.AmazonWebServiceReq
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getForce() == null) ? 0 : getForce().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getForce() == null) ? 0 : getForce().hashCode());
         return hashCode;
     }
 
     @Override
     public DeleteVariantStoreRequest clone() {
         return (DeleteVariantStoreRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

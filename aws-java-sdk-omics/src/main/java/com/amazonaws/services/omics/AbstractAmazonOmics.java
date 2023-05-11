@@ -29,6 +29,11 @@ public class AbstractAmazonOmics implements AmazonOmics {
     }
 
     @Override
+    public AbortMultipartReadSetUploadResult abortMultipartReadSetUpload(AbortMultipartReadSetUploadRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchDeleteReadSetResult batchDeleteReadSet(BatchDeleteReadSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -49,7 +54,17 @@ public class AbstractAmazonOmics implements AmazonOmics {
     }
 
     @Override
+    public CompleteMultipartReadSetUploadResult completeMultipartReadSetUpload(CompleteMultipartReadSetUploadRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAnnotationStoreResult createAnnotationStore(CreateAnnotationStoreRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateMultipartReadSetUploadResult createMultipartReadSetUpload(CreateMultipartReadSetUploadRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -219,6 +234,11 @@ public class AbstractAmazonOmics implements AmazonOmics {
     }
 
     @Override
+    public ListMultipartReadSetUploadsResult listMultipartReadSetUploads(ListMultipartReadSetUploadsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListReadSetActivationJobsResult listReadSetActivationJobs(ListReadSetActivationJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -230,6 +250,11 @@ public class AbstractAmazonOmics implements AmazonOmics {
 
     @Override
     public ListReadSetImportJobsResult listReadSetImportJobs(ListReadSetImportJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListReadSetUploadPartsResult listReadSetUploadParts(ListReadSetUploadPartsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -355,6 +380,11 @@ public class AbstractAmazonOmics implements AmazonOmics {
 
     @Override
     public UpdateWorkflowResult updateWorkflow(UpdateWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UploadReadSetPartResult uploadReadSetPart(UploadReadSetPartRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

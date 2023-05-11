@@ -16,6 +16,7 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
+import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -23,14 +24,14 @@ import com.amazonaws.AmazonWebServiceRequest;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
+public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
 
     /**
      * <p>
-     * The maximum number of workflows to return in one page of results.
+     * The workflows' type.
      * </p>
      */
-    private Integer maxResults;
+    private String type;
     /**
      * <p>
      * The workflows' name.
@@ -45,48 +46,67 @@ public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String startingToken;
     /**
      * <p>
+     * The maximum number of workflows to return in one page of results.
+     * </p>
+     */
+    private Integer maxResults;
+
+    /**
+     * <p>
      * The workflows' type.
      * </p>
-     */
-    private String type;
-
-    /**
-     * <p>
-     * The maximum number of workflows to return in one page of results.
-     * </p>
      * 
-     * @param maxResults
-     *        The maximum number of workflows to return in one page of results.
+     * @param type
+     *        The workflows' type.
+     * @see WorkflowType
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
      * <p>
-     * The maximum number of workflows to return in one page of results.
+     * The workflows' type.
      * </p>
      * 
-     * @return The maximum number of workflows to return in one page of results.
+     * @return The workflows' type.
+     * @see WorkflowType
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getType() {
+        return this.type;
     }
 
     /**
      * <p>
-     * The maximum number of workflows to return in one page of results.
+     * The workflows' type.
      * </p>
      * 
-     * @param maxResults
-     *        The maximum number of workflows to return in one page of results.
+     * @param type
+     *        The workflows' type.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WorkflowType
      */
 
-    public ListWorkflowsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListWorkflowsRequest withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The workflows' type.
+     * </p>
+     * 
+     * @param type
+     *        The workflows' type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WorkflowType
+     */
+
+    public ListWorkflowsRequest withType(WorkflowType type) {
+        this.type = type.toString();
         return this;
     }
 
@@ -172,60 +192,41 @@ public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The workflows' type.
+     * The maximum number of workflows to return in one page of results.
      * </p>
      * 
-     * @param type
-     *        The workflows' type.
-     * @see WorkflowType
+     * @param maxResults
+     *        The maximum number of workflows to return in one page of results.
      */
 
-    public void setType(String type) {
-        this.type = type;
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
     }
 
     /**
      * <p>
-     * The workflows' type.
+     * The maximum number of workflows to return in one page of results.
      * </p>
      * 
-     * @return The workflows' type.
-     * @see WorkflowType
+     * @return The maximum number of workflows to return in one page of results.
      */
 
-    public String getType() {
-        return this.type;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
      * <p>
-     * The workflows' type.
+     * The maximum number of workflows to return in one page of results.
      * </p>
      * 
-     * @param type
-     *        The workflows' type.
+     * @param maxResults
+     *        The maximum number of workflows to return in one page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see WorkflowType
      */
 
-    public ListWorkflowsRequest withType(String type) {
-        setType(type);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The workflows' type.
-     * </p>
-     * 
-     * @param type
-     *        The workflows' type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see WorkflowType
-     */
-
-    public ListWorkflowsRequest withType(WorkflowType type) {
-        this.type = type.toString();
+    public ListWorkflowsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
         return this;
     }
 
@@ -241,14 +242,14 @@ public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getStartingToken() != null)
             sb.append("StartingToken: ").append(getStartingToken()).append(",");
-        if (getType() != null)
-            sb.append("Type: ").append(getType());
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -263,9 +264,9 @@ public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof ListWorkflowsRequest == false)
             return false;
         ListWorkflowsRequest other = (ListWorkflowsRequest) obj;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getType() == null ^ this.getType() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
@@ -275,9 +276,9 @@ public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getStartingToken() != null && other.getStartingToken().equals(this.getStartingToken()) == false)
             return false;
-        if (other.getType() == null ^ this.getType() == null)
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -287,16 +288,21 @@ public class ListWorkflowsRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStartingToken() == null) ? 0 : getStartingToken().hashCode());
-        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 
     @Override
     public ListWorkflowsRequest clone() {
         return (ListWorkflowsRequest) super.clone();
+    }
+
+    @Override
+    public String getSignerType() {
+        return "AWS4SignerType";
     }
 
 }

@@ -27,12 +27,44 @@ import com.amazonaws.services.omics.model.*;
  * <p>
  * <p>
  * This is the <i>Amazon Omics API Reference</i>. For an introduction to the service, see <a
- * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics Developer
- * Guide</i>.
+ * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics User Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonOmicsAsync extends AmazonOmics {
+
+    /**
+     * <p>
+     * Stops a multipart upload.
+     * </p>
+     * 
+     * @param abortMultipartReadSetUploadRequest
+     * @return A Java Future containing the result of the AbortMultipartReadSetUpload operation returned by the service.
+     * @sample AmazonOmicsAsync.AbortMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/AbortMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AbortMultipartReadSetUploadResult> abortMultipartReadSetUploadAsync(
+            AbortMultipartReadSetUploadRequest abortMultipartReadSetUploadRequest);
+
+    /**
+     * <p>
+     * Stops a multipart upload.
+     * </p>
+     * 
+     * @param abortMultipartReadSetUploadRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AbortMultipartReadSetUpload operation returned by the service.
+     * @sample AmazonOmicsAsyncHandler.AbortMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/AbortMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AbortMultipartReadSetUploadResult> abortMultipartReadSetUploadAsync(
+            AbortMultipartReadSetUploadRequest abortMultipartReadSetUploadRequest,
+            com.amazonaws.handlers.AsyncHandler<AbortMultipartReadSetUploadRequest, AbortMultipartReadSetUploadResult> asyncHandler);
 
     /**
      * <p>
@@ -162,6 +194,41 @@ public interface AmazonOmicsAsync extends AmazonOmics {
 
     /**
      * <p>
+     * Concludes a multipart upload once you have uploaded all the components.
+     * </p>
+     * 
+     * @param completeMultipartReadSetUploadRequest
+     * @return A Java Future containing the result of the CompleteMultipartReadSetUpload operation returned by the
+     *         service.
+     * @sample AmazonOmicsAsync.CompleteMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CompleteMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CompleteMultipartReadSetUploadResult> completeMultipartReadSetUploadAsync(
+            CompleteMultipartReadSetUploadRequest completeMultipartReadSetUploadRequest);
+
+    /**
+     * <p>
+     * Concludes a multipart upload once you have uploaded all the components.
+     * </p>
+     * 
+     * @param completeMultipartReadSetUploadRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CompleteMultipartReadSetUpload operation returned by the
+     *         service.
+     * @sample AmazonOmicsAsyncHandler.CompleteMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CompleteMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CompleteMultipartReadSetUploadResult> completeMultipartReadSetUploadAsync(
+            CompleteMultipartReadSetUploadRequest completeMultipartReadSetUploadRequest,
+            com.amazonaws.handlers.AsyncHandler<CompleteMultipartReadSetUploadRequest, CompleteMultipartReadSetUploadResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an annotation store.
      * </p>
      * 
@@ -190,6 +257,41 @@ public interface AmazonOmicsAsync extends AmazonOmics {
      */
     java.util.concurrent.Future<CreateAnnotationStoreResult> createAnnotationStoreAsync(CreateAnnotationStoreRequest createAnnotationStoreRequest,
             com.amazonaws.handlers.AsyncHandler<CreateAnnotationStoreRequest, CreateAnnotationStoreResult> asyncHandler);
+
+    /**
+     * <p>
+     * Begins a multipart read set upload.
+     * </p>
+     * 
+     * @param createMultipartReadSetUploadRequest
+     * @return A Java Future containing the result of the CreateMultipartReadSetUpload operation returned by the
+     *         service.
+     * @sample AmazonOmicsAsync.CreateMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CreateMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMultipartReadSetUploadResult> createMultipartReadSetUploadAsync(
+            CreateMultipartReadSetUploadRequest createMultipartReadSetUploadRequest);
+
+    /**
+     * <p>
+     * Begins a multipart read set upload.
+     * </p>
+     * 
+     * @param createMultipartReadSetUploadRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMultipartReadSetUpload operation returned by the
+     *         service.
+     * @sample AmazonOmicsAsyncHandler.CreateMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CreateMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMultipartReadSetUploadResult> createMultipartReadSetUploadAsync(
+            CreateMultipartReadSetUploadRequest createMultipartReadSetUploadRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMultipartReadSetUploadRequest, CreateMultipartReadSetUploadResult> asyncHandler);
 
     /**
      * <p>
@@ -1216,6 +1318,39 @@ public interface AmazonOmicsAsync extends AmazonOmics {
 
     /**
      * <p>
+     * Lists all multipart read set uploads and their statuses.
+     * </p>
+     * 
+     * @param listMultipartReadSetUploadsRequest
+     * @return A Java Future containing the result of the ListMultipartReadSetUploads operation returned by the service.
+     * @sample AmazonOmicsAsync.ListMultipartReadSetUploads
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListMultipartReadSetUploads"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMultipartReadSetUploadsResult> listMultipartReadSetUploadsAsync(
+            ListMultipartReadSetUploadsRequest listMultipartReadSetUploadsRequest);
+
+    /**
+     * <p>
+     * Lists all multipart read set uploads and their statuses.
+     * </p>
+     * 
+     * @param listMultipartReadSetUploadsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMultipartReadSetUploads operation returned by the service.
+     * @sample AmazonOmicsAsyncHandler.ListMultipartReadSetUploads
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListMultipartReadSetUploads"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMultipartReadSetUploadsResult> listMultipartReadSetUploadsAsync(
+            ListMultipartReadSetUploadsRequest listMultipartReadSetUploadsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMultipartReadSetUploadsRequest, ListMultipartReadSetUploadsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves a list of read set activation jobs.
      * </p>
      * 
@@ -1308,6 +1443,37 @@ public interface AmazonOmicsAsync extends AmazonOmics {
      */
     java.util.concurrent.Future<ListReadSetImportJobsResult> listReadSetImportJobsAsync(ListReadSetImportJobsRequest listReadSetImportJobsRequest,
             com.amazonaws.handlers.AsyncHandler<ListReadSetImportJobsRequest, ListReadSetImportJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation will list all parts in a requested multipart upload for a sequence store.
+     * </p>
+     * 
+     * @param listReadSetUploadPartsRequest
+     * @return A Java Future containing the result of the ListReadSetUploadParts operation returned by the service.
+     * @sample AmazonOmicsAsync.ListReadSetUploadParts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListReadSetUploadParts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListReadSetUploadPartsResult> listReadSetUploadPartsAsync(ListReadSetUploadPartsRequest listReadSetUploadPartsRequest);
+
+    /**
+     * <p>
+     * This operation will list all parts in a requested multipart upload for a sequence store.
+     * </p>
+     * 
+     * @param listReadSetUploadPartsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListReadSetUploadParts operation returned by the service.
+     * @sample AmazonOmicsAsyncHandler.ListReadSetUploadParts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListReadSetUploadParts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListReadSetUploadPartsResult> listReadSetUploadPartsAsync(ListReadSetUploadPartsRequest listReadSetUploadPartsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListReadSetUploadPartsRequest, ListReadSetUploadPartsResult> asyncHandler);
 
     /**
      * <p>
@@ -2085,5 +2251,38 @@ public interface AmazonOmicsAsync extends AmazonOmics {
      */
     java.util.concurrent.Future<UpdateWorkflowResult> updateWorkflowAsync(UpdateWorkflowRequest updateWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateWorkflowRequest, UpdateWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation uploads a specific part of a read set. If you upload a new part using a previously used part
+     * number, the previously uploaded part will be overwritten.
+     * </p>
+     * 
+     * @param uploadReadSetPartRequest
+     * @return A Java Future containing the result of the UploadReadSetPart operation returned by the service.
+     * @sample AmazonOmicsAsync.UploadReadSetPart
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/UploadReadSetPart" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UploadReadSetPartResult> uploadReadSetPartAsync(UploadReadSetPartRequest uploadReadSetPartRequest);
+
+    /**
+     * <p>
+     * This operation uploads a specific part of a read set. If you upload a new part using a previously used part
+     * number, the previously uploaded part will be overwritten.
+     * </p>
+     * 
+     * @param uploadReadSetPartRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UploadReadSetPart operation returned by the service.
+     * @sample AmazonOmicsAsyncHandler.UploadReadSetPart
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/UploadReadSetPart" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UploadReadSetPartResult> uploadReadSetPartAsync(UploadReadSetPartRequest uploadReadSetPartRequest,
+            com.amazonaws.handlers.AsyncHandler<UploadReadSetPartRequest, UploadReadSetPartResult> asyncHandler);
 
 }

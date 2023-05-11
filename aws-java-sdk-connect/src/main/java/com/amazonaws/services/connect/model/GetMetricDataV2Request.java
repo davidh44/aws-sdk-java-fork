@@ -36,8 +36,8 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      * historical metrics data. The time must be before the end time timestamp. The time range between the start and end
-     * time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of the request.
-     * Historical metrics are available for 14 days.
+     * time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of the request.
+     * Historical metrics are available for 35 days.
      * </p>
      */
     private java.util.Date startTime;
@@ -494,15 +494,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      * historical metrics data. The time must be before the end time timestamp. The time range between the start and end
-     * time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of the request.
-     * Historical metrics are available for 14 days.
+     * time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of the request.
+     * Historical metrics are available for 35 days.
      * </p>
      * 
      * @param startTime
      *        The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      *        historical metrics data. The time must be before the end time timestamp. The time range between the start
-     *        and end time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of
-     *        the request. Historical metrics are available for 14 days.
+     *        and end time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of
+     *        the request. Historical metrics are available for 35 days.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -513,14 +513,14 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      * historical metrics data. The time must be before the end time timestamp. The time range between the start and end
-     * time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of the request.
-     * Historical metrics are available for 14 days.
+     * time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of the request.
+     * Historical metrics are available for 35 days.
      * </p>
      * 
      * @return The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      *         historical metrics data. The time must be before the end time timestamp. The time range between the start
-     *         and end time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of
-     *         the request. Historical metrics are available for 14 days.
+     *         and end time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of
+     *         the request. Historical metrics are available for 35 days.
      */
 
     public java.util.Date getStartTime() {
@@ -531,15 +531,15 @@ public class GetMetricDataV2Request extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      * historical metrics data. The time must be before the end time timestamp. The time range between the start and end
-     * time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of the request.
-     * Historical metrics are available for 14 days.
+     * time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of the request.
+     * Historical metrics are available for 35 days.
      * </p>
      * 
      * @param startTime
      *        The timestamp, in UNIX Epoch time format, at which to start the reporting interval for the retrieval of
      *        historical metrics data. The time must be before the end time timestamp. The time range between the start
-     *        and end time must be less than 24 hours. The start time cannot be earlier than 14 days before the time of
-     *        the request. Historical metrics are available for 14 days.
+     *        and end time must be less than 24 hours. The start time cannot be earlier than 35 days before the time of
+     *        the request. Historical metrics are available for 35 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

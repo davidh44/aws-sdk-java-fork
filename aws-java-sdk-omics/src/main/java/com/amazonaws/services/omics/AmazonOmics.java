@@ -29,8 +29,7 @@ import com.amazonaws.services.omics.waiters.AmazonOmicsWaiters;
  * <p>
  * <p>
  * This is the <i>Amazon Omics API Reference</i>. For an introduction to the service, see <a
- * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics Developer
- * Guide</i>.
+ * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics User Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -43,6 +42,35 @@ public interface AmazonOmics {
      * @see RegionUtils#getRegionsForService(String)
      */
     String ENDPOINT_PREFIX = "omics";
+
+    /**
+     * <p>
+     * Stops a multipart upload.
+     * </p>
+     * 
+     * @param abortMultipartReadSetUploadRequest
+     * @return Result of the AbortMultipartReadSetUpload operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.AbortMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/AbortMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AbortMultipartReadSetUploadResult abortMultipartReadSetUpload(AbortMultipartReadSetUploadRequest abortMultipartReadSetUploadRequest);
 
     /**
      * <p>
@@ -146,6 +174,35 @@ public interface AmazonOmics {
 
     /**
      * <p>
+     * Concludes a multipart upload once you have uploaded all the components.
+     * </p>
+     * 
+     * @param completeMultipartReadSetUploadRequest
+     * @return Result of the CompleteMultipartReadSetUpload operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.CompleteMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CompleteMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CompleteMultipartReadSetUploadResult completeMultipartReadSetUpload(CompleteMultipartReadSetUploadRequest completeMultipartReadSetUploadRequest);
+
+    /**
+     * <p>
      * Creates an annotation store.
      * </p>
      * 
@@ -170,6 +227,35 @@ public interface AmazonOmics {
      *      API Documentation</a>
      */
     CreateAnnotationStoreResult createAnnotationStore(CreateAnnotationStoreRequest createAnnotationStoreRequest);
+
+    /**
+     * <p>
+     * Begins a multipart read set upload.
+     * </p>
+     * 
+     * @param createMultipartReadSetUploadRequest
+     * @return Result of the CreateMultipartReadSetUpload operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.CreateMultipartReadSetUpload
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/CreateMultipartReadSetUpload"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateMultipartReadSetUploadResult createMultipartReadSetUpload(CreateMultipartReadSetUploadRequest createMultipartReadSetUploadRequest);
 
     /**
      * <p>
@@ -1036,6 +1122,35 @@ public interface AmazonOmics {
 
     /**
      * <p>
+     * Lists all multipart read set uploads and their statuses.
+     * </p>
+     * 
+     * @param listMultipartReadSetUploadsRequest
+     * @return Result of the ListMultipartReadSetUploads operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.ListMultipartReadSetUploads
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListMultipartReadSetUploads"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListMultipartReadSetUploadsResult listMultipartReadSetUploads(ListMultipartReadSetUploadsRequest listMultipartReadSetUploadsRequest);
+
+    /**
+     * <p>
      * Retrieves a list of read set activation jobs.
      * </p>
      * 
@@ -1108,6 +1223,35 @@ public interface AmazonOmics {
      *      API Documentation</a>
      */
     ListReadSetImportJobsResult listReadSetImportJobs(ListReadSetImportJobsRequest listReadSetImportJobsRequest);
+
+    /**
+     * <p>
+     * This operation will list all parts in a requested multipart upload for a sequence store.
+     * </p>
+     * 
+     * @param listReadSetUploadPartsRequest
+     * @return Result of the ListReadSetUploadParts operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.ListReadSetUploadParts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/ListReadSetUploadParts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListReadSetUploadPartsResult listReadSetUploadParts(ListReadSetUploadPartsRequest listReadSetUploadPartsRequest);
 
     /**
      * <p>
@@ -1769,6 +1913,36 @@ public interface AmazonOmics {
      *      Documentation</a>
      */
     UpdateWorkflowResult updateWorkflow(UpdateWorkflowRequest updateWorkflowRequest);
+
+    /**
+     * <p>
+     * This operation uploads a specific part of a read set. If you upload a new part using a previously used part
+     * number, the previously uploaded part will be overwritten.
+     * </p>
+     * 
+     * @param uploadReadSetPartRequest
+     * @return Result of the UploadReadSetPart operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error occurred. Try the request again.
+     * @throws NotSupportedOperationException
+     *         The operation is not supported by Amazon Omics, or the API does not exist.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The target resource was not found in the current Region.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws RequestTimeoutException
+     *         The request timed out.
+     * @sample AmazonOmics.UploadReadSetPart
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/omics-2022-11-28/UploadReadSetPart" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UploadReadSetPartResult uploadReadSetPart(UploadReadSetPartRequest uploadReadSetPartRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and
