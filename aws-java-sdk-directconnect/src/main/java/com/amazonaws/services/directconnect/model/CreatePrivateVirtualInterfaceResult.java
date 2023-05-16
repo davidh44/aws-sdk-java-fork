@@ -179,7 +179,7 @@ public class CreatePrivateVirtualInterfaceResult extends com.amazonaws.AmazonWeb
     private String customerRouterConfig;
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500
      * </p>
      */
     private Integer mtu;
@@ -1486,12 +1486,12 @@ public class CreatePrivateVirtualInterfaceResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500
      * </p>
      * 
      * @param mtu
-     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value
-     *        is 1500.
+     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value
+     *        is 1500
      */
 
     public void setMtu(Integer mtu) {
@@ -1500,11 +1500,11 @@ public class CreatePrivateVirtualInterfaceResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500
      * </p>
      * 
-     * @return The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value
-     *         is 1500.
+     * @return The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value
+     *         is 1500
      */
 
     public Integer getMtu() {
@@ -1513,12 +1513,12 @@ public class CreatePrivateVirtualInterfaceResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+     * The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value is 1500
      * </p>
      * 
      * @param mtu
-     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value
-     *        is 1500.
+     *        The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 8500. The default value
+     *        is 1500
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,9 +31,9 @@ public class TextTransformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF
-     * processes all transformations, from lowest priority to highest, before inspecting the transformed content. The
-     * priorities don't need to be consecutive, but they must all be different.
+     * Sets the relative processing order for multiple transformations. WAF processes all transformations, from lowest
+     * priority to highest, before inspecting the transformed content. The priorities don't need to be consecutive, but
+     * they must all be different.
      * </p>
      */
     private Integer priority;
@@ -227,15 +227,15 @@ public class TextTransformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF
-     * processes all transformations, from lowest priority to highest, before inspecting the transformed content. The
-     * priorities don't need to be consecutive, but they must all be different.
+     * Sets the relative processing order for multiple transformations. WAF processes all transformations, from lowest
+     * priority to highest, before inspecting the transformed content. The priorities don't need to be consecutive, but
+     * they must all be different.
      * </p>
      * 
      * @param priority
-     *        Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF
-     *        processes all transformations, from lowest priority to highest, before inspecting the transformed content.
-     *        The priorities don't need to be consecutive, but they must all be different.
+     *        Sets the relative processing order for multiple transformations. WAF processes all transformations, from
+     *        lowest priority to highest, before inspecting the transformed content. The priorities don't need to be
+     *        consecutive, but they must all be different.
      */
 
     public void setPriority(Integer priority) {
@@ -244,14 +244,14 @@ public class TextTransformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF
-     * processes all transformations, from lowest priority to highest, before inspecting the transformed content. The
-     * priorities don't need to be consecutive, but they must all be different.
+     * Sets the relative processing order for multiple transformations. WAF processes all transformations, from lowest
+     * priority to highest, before inspecting the transformed content. The priorities don't need to be consecutive, but
+     * they must all be different.
      * </p>
      * 
-     * @return Sets the relative processing order for multiple transformations that are defined for a rule statement.
-     *         WAF processes all transformations, from lowest priority to highest, before inspecting the transformed
-     *         content. The priorities don't need to be consecutive, but they must all be different.
+     * @return Sets the relative processing order for multiple transformations. WAF processes all transformations, from
+     *         lowest priority to highest, before inspecting the transformed content. The priorities don't need to be
+     *         consecutive, but they must all be different.
      */
 
     public Integer getPriority() {
@@ -260,15 +260,15 @@ public class TextTransformation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF
-     * processes all transformations, from lowest priority to highest, before inspecting the transformed content. The
-     * priorities don't need to be consecutive, but they must all be different.
+     * Sets the relative processing order for multiple transformations. WAF processes all transformations, from lowest
+     * priority to highest, before inspecting the transformed content. The priorities don't need to be consecutive, but
+     * they must all be different.
      * </p>
      * 
      * @param priority
-     *        Sets the relative processing order for multiple transformations that are defined for a rule statement. WAF
-     *        processes all transformations, from lowest priority to highest, before inspecting the transformed content.
-     *        The priorities don't need to be consecutive, but they must all be different.
+     *        Sets the relative processing order for multiple transformations. WAF processes all transformations, from
+     *        lowest priority to highest, before inspecting the transformed content. The priorities don't need to be
+     *        consecutive, but they must all be different.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

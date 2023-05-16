@@ -1528,9 +1528,12 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
-     * Retrieves the keys that are currently blocked by a rate-based rule instance. The maximum number of managed keys
-     * that can be blocked for a single rate-based rule instance is 10,000. If more than 10,000 addresses exceed the
-     * rate limit, those with the highest rates are blocked.
+     * Retrieves the IP addresses that are currently blocked by a rate-based rule instance. This is only available for
+     * rate-based rules that aggregate solely on the IP address or on the forwarded IP address.
+     * </p>
+     * <p>
+     * The maximum number of addresses that can be blocked for a single rate-based rule instance is 10,000. If more than
+     * 10,000 addresses exceed the rate limit, those with the highest rates are blocked.
      * </p>
      * <p>
      * For a rate-based rule that you've defined inside a rule group, provide the name of the rule group reference
@@ -1580,6 +1583,10 @@ public interface AWSWAFV2 {
      *         seconds to a number of minutes for changes to propagate.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFUnsupportedAggregateKeyTypeException
+     *         The rule that you've named doesn't aggregate solely on the IP address or solely on the forwarded IP
+     *         address. This call is only available for rate-based rules with an <code>AggregateKeyType</code> setting
+     *         of <code>IP</code> or <code>FORWARDED_IP</code>.
      * @sample AWSWAFV2.GetRateBasedStatementManagedKeys
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetRateBasedStatementManagedKeys"
      *      target="_top">AWS API Documentation</a>
