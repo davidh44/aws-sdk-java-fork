@@ -667,7 +667,13 @@ public enum InstanceType {
     Inf28xlarge("inf2.8xlarge"),
     Inf224xlarge("inf2.24xlarge"),
     Inf248xlarge("inf2.48xlarge"),
-    Trn1n32xlarge("trn1n.32xlarge");
+    Trn1n32xlarge("trn1n.32xlarge"),
+    I4gLarge("i4g.large"),
+    I4gXlarge("i4g.xlarge"),
+    I4g2xlarge("i4g.2xlarge"),
+    I4g4xlarge("i4g.4xlarge"),
+    I4g8xlarge("i4g.8xlarge"),
+    I4g16xlarge("i4g.16xlarge");
 
     private String value;
 

@@ -74,7 +74,9 @@ public enum ExportableInstanceField {
     RecommendationOptionsMigrationEffort("RecommendationOptionsMigrationEffort"),
     EffectiveRecommendationPreferencesExternalMetricsSource("EffectiveRecommendationPreferencesExternalMetricsSource"),
     InstanceState("InstanceState"),
-    Tags("Tags");
+    Tags("Tags"),
+    ExternalMetricStatusCode("ExternalMetricStatusCode"),
+    ExternalMetricStatusReason("ExternalMetricStatusReason");
 
     private String value;
 

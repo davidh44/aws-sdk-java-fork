@@ -569,6 +569,10 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         <p>
      *         The following is the format of a channel ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws TagsLimitExceededException
@@ -924,8 +928,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws NotOrganizationMasterAccountException
      *         This exception is thrown when the Amazon Web Services account making the request to create or update an
      *         organization trail or event data store is not the management account for an organization in
@@ -1087,8 +1091,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws NotOrganizationMasterAccountException
      *         This exception is thrown when the Amazon Web Services account making the request to create or update an
      *         organization trail or event data store is not the management account for an organization in
@@ -1274,8 +1278,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the specified event data store cannot yet be deleted because it is in use
      *         by a channel.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @sample AWSCloudTrail.DeleteEventDataStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteEventDataStore"
      *      target="_top">AWS API Documentation</a>
@@ -1475,8 +1479,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @sample AWSCloudTrail.DeleteTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteTrail" target="_top">AWS API
      *      Documentation</a>
@@ -1552,8 +1556,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
      *         then try the operation again.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws InvalidParameterException
      *         The request includes a parameter that is not valid.
      * @throws NotOrganizationManagementAccountException
@@ -1952,13 +1956,13 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html"
-     * >Logging management events for trails </a>
+     * >Logging management events</a>
      * </p>
      * </li>
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">
-     * Logging data events for trails </a>
+     * Logging data events</a>
      * </p>
      * </li>
      * </ul>
@@ -3071,6 +3075,10 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         <p>
      *         The following is the format of a channel ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws InvalidTrailNameException
@@ -3380,7 +3388,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
     /**
      * <p>
      * Configures an event selector or advanced event selectors for your trail. Use event selectors or advanced event
-     * selectors to specify management and data event settings for your trail. By default, trails created without
+     * selectors to specify management and data event settings for your trail. If you want your trail to log Insights
+     * events, be sure the event selector enables logging of the Insights event types you want configured for your
+     * trail. For more information about logging Insights events, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
+     * >Logging Insights events for trails</a> in the <i>CloudTrail User Guide</i>. By default, trails created without
      * specific event selectors are configured to log all read and write management events, and no data events.
      * </p>
      * <p>
@@ -3426,9 +3438,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * <p>
      * You can configure up to five event selectors for each trail. For more information, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html"
-     * >Logging management events for trails </a>, <a
+     * >Logging management events</a>, <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html"
-     * >Logging data events for trails </a>, and <a
+     * >Logging data events</a>, and <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Quotas in
      * CloudTrail</a> in the <i>CloudTrail User Guide</i>.
      * </p>
@@ -3439,7 +3451,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * existing <code>EventSelectors</code> are overwritten. For more information about advanced event selectors, see <a
      * href
      * ="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">Logging
-     * data events for trails</a> in the <i>CloudTrail User Guide</i>.
+     * data events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param putEventSelectorsRequest
@@ -3531,6 +3543,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         with a value of <code>read-only</code> is not valid.
      *         </p>
      *         </li>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -3546,8 +3563,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @sample AWSCloudTrail.PutEventSelectors
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/PutEventSelectors" target="_top">AWS
      *      API Documentation</a>
@@ -3602,6 +3619,12 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
      * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
      * and <code>ApiCallRateInsight</code>.
+     * </p>
+     * <p>
+     * To log CloudTrail Insights events on API call volume, the trail must log <code>write</code> management events. To
+     * log CloudTrail Insights events on API error rate, the trail must log <code>read</code> or <code>write</code>
+     * management events. You can call <code>GetEventSelectors</code> on a trail to check whether the trail logs
+     * management events.
      * </p>
      * 
      * @param putInsightSelectorsRequest
@@ -3840,8 +3863,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws AccountNotFoundException
      *         This exception is thrown when the specified account is not found or not part of an organization.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws InvalidParameterException
      *         The request includes a parameter that is not valid.
      * @throws CannotDelegateManagementAccountException
@@ -3953,6 +3976,10 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         <p>
      *         The following is the format of a channel ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws InvalidTrailNameException
@@ -4088,8 +4115,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws OrganizationsNotInUseException
      *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
      *         member of an organization. To make this request, sign in using the credentials of an account that belongs
@@ -4346,8 +4373,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @sample AWSCloudTrail.StartLogging
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StartLogging" target="_top">AWS API
      *      Documentation</a>
@@ -4633,8 +4660,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @sample AWSCloudTrail.StopLogging
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/StopLogging" target="_top">AWS API
      *      Documentation</a>
@@ -4846,8 +4873,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws OrganizationsNotInUseException
      *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
      *         member of an organization. To make this request, sign in using the credentials of an account that belongs
@@ -5064,8 +5091,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
      * @throws InsufficientDependencyServiceAccessPermissionException
-     *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
-     *         one or more required permissions for creating an organization resource in a required service.
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
      * @throws OrganizationsNotInUseException
      *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
      *         member of an organization. To make this request, sign in using the credentials of an account that belongs

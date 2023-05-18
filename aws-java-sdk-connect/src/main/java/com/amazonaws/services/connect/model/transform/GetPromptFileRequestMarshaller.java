@@ -10,43 +10,46 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.sagemakergeospatial.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.services.sagemakergeospatial.model.*;
+import com.amazonaws.services.connect.model.*;
 
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * EojDataSourceConfigInputMarshaller
+ * GetPromptFileRequestMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class EojDataSourceConfigInputMarshaller {
+public class GetPromptFileRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> S3DATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3Data").build();
+    private static final MarshallingInfo<String> INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("InstanceId").build();
+    private static final MarshallingInfo<String> PROMPTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("PromptId").build();
 
-    private static final EojDataSourceConfigInputMarshaller instance = new EojDataSourceConfigInputMarshaller();
+    private static final GetPromptFileRequestMarshaller instance = new GetPromptFileRequestMarshaller();
 
-    public static EojDataSourceConfigInputMarshaller getInstance() {
+    public static GetPromptFileRequestMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(EojDataSourceConfigInput eojDataSourceConfigInput, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(GetPromptFileRequest getPromptFileRequest, ProtocolMarshaller protocolMarshaller) {
 
-        if (eojDataSourceConfigInput == null) {
+        if (getPromptFileRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(eojDataSourceConfigInput.getS3Data(), S3DATA_BINDING);
+            protocolMarshaller.marshall(getPromptFileRequest.getInstanceId(), INSTANCEID_BINDING);
+            protocolMarshaller.marshall(getPromptFileRequest.getPromptId(), PROMPTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -862,6 +862,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Creates a prompt. For more information about prompts, such as supported file types and maximum length, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create prompts</a> in the <i>Amazon
+     * Connect Administrator's Guide</i>.
+     * </p>
+     * 
+     * @param createPromptRequest
+     * @return A Java Future containing the result of the CreatePrompt operation returned by the service.
+     * @sample AmazonConnectAsync.CreatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest createPromptRequest);
+
+    /**
+     * <p>
+     * Creates a prompt. For more information about prompts, such as supported file types and maximum length, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create prompts</a> in the <i>Amazon
+     * Connect Administrator's Guide</i>.
+     * </p>
+     * 
+     * @param createPromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePrompt operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CreatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest createPromptRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePromptRequest, CreatePromptResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -1576,6 +1611,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<DeleteIntegrationAssociationResult> deleteIntegrationAssociationAsync(
             DeleteIntegrationAssociationRequest deleteIntegrationAssociationRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteIntegrationAssociationRequest, DeleteIntegrationAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a prompt.
+     * </p>
+     * 
+     * @param deletePromptRequest
+     * @return A Java Future containing the result of the DeletePrompt operation returned by the service.
+     * @sample AmazonConnectAsync.DeletePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest deletePromptRequest);
+
+    /**
+     * <p>
+     * Deletes a prompt.
+     * </p>
+     * 
+     * @param deletePromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePrompt operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeletePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest deletePromptRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePromptRequest, DeletePromptResult> asyncHandler);
 
     /**
      * <p>
@@ -2336,6 +2402,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest describePhoneNumberRequest,
             com.amazonaws.handlers.AsyncHandler<DescribePhoneNumberRequest, DescribePhoneNumberResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the prompt.
+     * </p>
+     * 
+     * @param describePromptRequest
+     * @return A Java Future containing the result of the DescribePrompt operation returned by the service.
+     * @sample AmazonConnectAsync.DescribePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePromptResult> describePromptAsync(DescribePromptRequest describePromptRequest);
+
+    /**
+     * <p>
+     * Describes the prompt.
+     * </p>
+     * 
+     * @param describePromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribePrompt operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePromptResult> describePromptAsync(DescribePromptRequest describePromptRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribePromptRequest, DescribePromptResult> asyncHandler);
 
     /**
      * <p>
@@ -3328,6 +3425,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<GetMetricDataV2Result> getMetricDataV2Async(GetMetricDataV2Request getMetricDataV2Request,
             com.amazonaws.handlers.AsyncHandler<GetMetricDataV2Request, GetMetricDataV2Result> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the prompt file.
+     * </p>
+     * 
+     * @param getPromptFileRequest
+     * @return A Java Future containing the result of the GetPromptFile operation returned by the service.
+     * @sample AmazonConnectAsync.GetPromptFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetPromptFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPromptFileResult> getPromptFileAsync(GetPromptFileRequest getPromptFileRequest);
+
+    /**
+     * <p>
+     * Gets the prompt file.
+     * </p>
+     * 
+     * @param getPromptFileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPromptFile operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.GetPromptFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetPromptFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetPromptFileResult> getPromptFileAsync(GetPromptFileRequest getPromptFileRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPromptFileRequest, GetPromptFileResult> asyncHandler);
 
     /**
      * <p>
@@ -6638,6 +6766,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest updatePhoneNumberRequest,
             com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberRequest, UpdatePhoneNumberResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a prompt.
+     * </p>
+     * 
+     * @param updatePromptRequest
+     * @return A Java Future containing the result of the UpdatePrompt operation returned by the service.
+     * @sample AmazonConnectAsync.UpdatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest updatePromptRequest);
+
+    /**
+     * <p>
+     * Updates a prompt.
+     * </p>
+     * 
+     * @param updatePromptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePrompt operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest updatePromptRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePromptRequest, UpdatePromptResult> asyncHandler);
 
     /**
      * <p>

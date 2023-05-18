@@ -151,8 +151,8 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
      */
     private String segmentLengthControl;
     /**
-     * Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     * SINGLE_DIRECTORY for this setting to have an effect.
+     * Specify the number of segments to write to a subdirectory before starting a new one. You must also set Directory
+     * structure to Subdirectory per stream for this setting to have an effect.
      */
     private Integer segmentsPerSubdirectory;
     /** Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest. */
@@ -1679,12 +1679,12 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     * SINGLE_DIRECTORY for this setting to have an effect.
+     * Specify the number of segments to write to a subdirectory before starting a new one. You must also set Directory
+     * structure to Subdirectory per stream for this setting to have an effect.
      * 
      * @param segmentsPerSubdirectory
-     *        Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     *        SINGLE_DIRECTORY for this setting to have an effect.
+     *        Specify the number of segments to write to a subdirectory before starting a new one. You must also set
+     *        Directory structure to Subdirectory per stream for this setting to have an effect.
      */
 
     public void setSegmentsPerSubdirectory(Integer segmentsPerSubdirectory) {
@@ -1692,11 +1692,11 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     * SINGLE_DIRECTORY for this setting to have an effect.
+     * Specify the number of segments to write to a subdirectory before starting a new one. You must also set Directory
+     * structure to Subdirectory per stream for this setting to have an effect.
      * 
-     * @return Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     *         SINGLE_DIRECTORY for this setting to have an effect.
+     * @return Specify the number of segments to write to a subdirectory before starting a new one. You must also set
+     *         Directory structure to Subdirectory per stream for this setting to have an effect.
      */
 
     public Integer getSegmentsPerSubdirectory() {
@@ -1704,12 +1704,12 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     * SINGLE_DIRECTORY for this setting to have an effect.
+     * Specify the number of segments to write to a subdirectory before starting a new one. You must also set Directory
+     * structure to Subdirectory per stream for this setting to have an effect.
      * 
      * @param segmentsPerSubdirectory
-     *        Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
-     *        SINGLE_DIRECTORY for this setting to have an effect.
+     *        Specify the number of segments to write to a subdirectory before starting a new one. You must also set
+     *        Directory structure to Subdirectory per stream for this setting to have an effect.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

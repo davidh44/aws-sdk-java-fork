@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.sagemakergeospatial.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.sagemakergeospatial.model.*;
+import com.amazonaws.services.connect.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * EojDataSourceConfigInput JSON Unmarshaller
+ * UpdatePromptResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class EojDataSourceConfigInputJsonUnmarshaller implements Unmarshaller<EojDataSourceConfigInput, JsonUnmarshallerContext> {
+public class UpdatePromptResultJsonUnmarshaller implements Unmarshaller<UpdatePromptResult, JsonUnmarshallerContext> {
 
-    public EojDataSourceConfigInput unmarshall(JsonUnmarshallerContext context) throws Exception {
-        EojDataSourceConfigInput eojDataSourceConfigInput = new EojDataSourceConfigInput();
+    public UpdatePromptResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        UpdatePromptResult updatePromptResult = new UpdatePromptResult();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -40,7 +40,7 @@ public class EojDataSourceConfigInputJsonUnmarshaller implements Unmarshaller<Eo
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return null;
+            return updatePromptResult;
         }
 
         while (true) {
@@ -48,9 +48,13 @@ public class EojDataSourceConfigInputJsonUnmarshaller implements Unmarshaller<Eo
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("S3Data", targetDepth)) {
+                if (context.testExpression("PromptARN", targetDepth)) {
                     context.nextToken();
-                    eojDataSourceConfigInput.setS3Data(S3DataInputJsonUnmarshaller.getInstance().unmarshall(context));
+                    updatePromptResult.setPromptARN(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PromptId", targetDepth)) {
+                    context.nextToken();
+                    updatePromptResult.setPromptId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -61,14 +65,14 @@ public class EojDataSourceConfigInputJsonUnmarshaller implements Unmarshaller<Eo
             token = context.nextToken();
         }
 
-        return eojDataSourceConfigInput;
+        return updatePromptResult;
     }
 
-    private static EojDataSourceConfigInputJsonUnmarshaller instance;
+    private static UpdatePromptResultJsonUnmarshaller instance;
 
-    public static EojDataSourceConfigInputJsonUnmarshaller getInstance() {
+    public static UpdatePromptResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new EojDataSourceConfigInputJsonUnmarshaller();
+            instance = new UpdatePromptResultJsonUnmarshaller();
         return instance;
     }
 }

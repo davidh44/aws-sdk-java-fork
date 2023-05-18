@@ -128,6 +128,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public CreatePromptResult createPrompt(CreatePromptRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateQueueResult createQueue(CreateQueueRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -219,6 +224,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DeleteIntegrationAssociationResult deleteIntegrationAssociation(DeleteIntegrationAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePromptResult deletePrompt(DeletePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -319,6 +329,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DescribePhoneNumberResult describePhoneNumber(DescribePhoneNumberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribePromptResult describePrompt(DescribePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -449,6 +464,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public GetMetricDataV2Result getMetricDataV2(GetMetricDataV2Request request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetPromptFileResult getPromptFile(GetPromptFileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -839,6 +859,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdatePhoneNumberResult updatePhoneNumber(UpdatePhoneNumberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePromptResult updatePrompt(UpdatePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

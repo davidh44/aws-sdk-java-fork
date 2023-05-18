@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.sagemakergeospatial.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.sagemakergeospatial.model.*;
+import com.amazonaws.services.connect.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * S3DataInput JSON Unmarshaller
+ * GetPromptFileResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class S3DataInputJsonUnmarshaller implements Unmarshaller<S3DataInput, JsonUnmarshallerContext> {
+public class GetPromptFileResultJsonUnmarshaller implements Unmarshaller<GetPromptFileResult, JsonUnmarshallerContext> {
 
-    public S3DataInput unmarshall(JsonUnmarshallerContext context) throws Exception {
-        S3DataInput s3DataInput = new S3DataInput();
+    public GetPromptFileResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        GetPromptFileResult getPromptFileResult = new GetPromptFileResult();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -40,7 +40,7 @@ public class S3DataInputJsonUnmarshaller implements Unmarshaller<S3DataInput, Js
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return null;
+            return getPromptFileResult;
         }
 
         while (true) {
@@ -48,17 +48,9 @@ public class S3DataInputJsonUnmarshaller implements Unmarshaller<S3DataInput, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("KmsKeyId", targetDepth)) {
+                if (context.testExpression("PromptPresignedUrl", targetDepth)) {
                     context.nextToken();
-                    s3DataInput.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("MetadataProvider", targetDepth)) {
-                    context.nextToken();
-                    s3DataInput.setMetadataProvider(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("S3Uri", targetDepth)) {
-                    context.nextToken();
-                    s3DataInput.setS3Uri(context.getUnmarshaller(String.class).unmarshall(context));
+                    getPromptFileResult.setPromptPresignedUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -69,14 +61,14 @@ public class S3DataInputJsonUnmarshaller implements Unmarshaller<S3DataInput, Js
             token = context.nextToken();
         }
 
-        return s3DataInput;
+        return getPromptFileResult;
     }
 
-    private static S3DataInputJsonUnmarshaller instance;
+    private static GetPromptFileResultJsonUnmarshaller instance;
 
-    public static S3DataInputJsonUnmarshaller getInstance() {
+    public static GetPromptFileResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new S3DataInputJsonUnmarshaller();
+            instance = new GetPromptFileResultJsonUnmarshaller();
         return instance;
     }
 }

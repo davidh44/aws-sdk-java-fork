@@ -657,6 +657,33 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Creates a prompt. For more information about prompts, such as supported file types and maximum length, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/prompts.html">Create prompts</a> in the <i>Amazon
+     * Connect Administrator's Guide</i>.
+     * </p>
+     * 
+     * @param createPromptRequest
+     * @return Result of the CreatePrompt operation returned by the service.
+     * @throws DuplicateResourceException
+     *         A resource with the specified name already exists.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws LimitExceededException
+     *         The allowed limit for the resource has been exceeded.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.CreatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreatePromptResult createPrompt(CreatePromptRequest createPromptRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -1192,6 +1219,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Deletes a prompt.
+     * </p>
+     * 
+     * @param deletePromptRequest
+     * @return Result of the DeletePrompt operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DeletePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeletePromptResult deletePrompt(DeletePromptRequest deletePromptRequest);
+
+    /**
+     * <p>
      * Deletes a quick connect.
      * </p>
      * 
@@ -1714,6 +1764,29 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     DescribePhoneNumberResult describePhoneNumber(DescribePhoneNumberRequest describePhoneNumberRequest);
+
+    /**
+     * <p>
+     * Describes the prompt.
+     * </p>
+     * 
+     * @param describePromptRequest
+     * @return Result of the DescribePrompt operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DescribePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribePromptResult describePrompt(DescribePromptRequest describePromptRequest);
 
     /**
      * <p>
@@ -2389,6 +2462,29 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     GetMetricDataV2Result getMetricDataV2(GetMetricDataV2Request getMetricDataV2Request);
+
+    /**
+     * <p>
+     * Gets the prompt file.
+     * </p>
+     * 
+     * @param getPromptFileRequest
+     * @return Result of the GetPromptFile operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.GetPromptFile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetPromptFile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetPromptFileResult getPromptFile(GetPromptFileRequest getPromptFileRequest);
 
     /**
      * <p>
@@ -4628,6 +4724,29 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     UpdatePhoneNumberResult updatePhoneNumber(UpdatePhoneNumberRequest updatePhoneNumberRequest);
+
+    /**
+     * <p>
+     * Updates a prompt.
+     * </p>
+     * 
+     * @param updatePromptRequest
+     * @return Result of the UpdatePrompt operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdatePrompt
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePrompt" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdatePromptResult updatePrompt(UpdatePromptRequest updatePromptRequest);
 
     /**
      * <p>

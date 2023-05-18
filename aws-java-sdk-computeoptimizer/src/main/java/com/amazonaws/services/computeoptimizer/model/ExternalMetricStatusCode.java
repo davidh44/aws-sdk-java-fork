@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.sagemakergeospatial.model;
+package com.amazonaws.services.computeoptimizer.model;
 
 import javax.annotation.Generated;
 
@@ -18,13 +18,22 @@ import javax.annotation.Generated;
  * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum MetadataProvider {
+public enum ExternalMetricStatusCode {
 
-    PLANET_ORDER("PLANET_ORDER");
+    NO_EXTERNAL_METRIC_SET("NO_EXTERNAL_METRIC_SET"),
+    INTEGRATION_SUCCESS("INTEGRATION_SUCCESS"),
+    DATADOG_INTEGRATION_ERROR("DATADOG_INTEGRATION_ERROR"),
+    DYNATRACE_INTEGRATION_ERROR("DYNATRACE_INTEGRATION_ERROR"),
+    NEWRELIC_INTEGRATION_ERROR("NEWRELIC_INTEGRATION_ERROR"),
+    INSTANA_INTEGRATION_ERROR("INSTANA_INTEGRATION_ERROR"),
+    INSUFFICIENT_DATADOG_METRICS("INSUFFICIENT_DATADOG_METRICS"),
+    INSUFFICIENT_DYNATRACE_METRICS("INSUFFICIENT_DYNATRACE_METRICS"),
+    INSUFFICIENT_NEWRELIC_METRICS("INSUFFICIENT_NEWRELIC_METRICS"),
+    INSUFFICIENT_INSTANA_METRICS("INSUFFICIENT_INSTANA_METRICS");
 
     private String value;
 
-    private MetadataProvider(String value) {
+    private ExternalMetricStatusCode(String value) {
         this.value = value;
     }
 
@@ -38,17 +47,17 @@ public enum MetadataProvider {
      *
      * @param value
      *        real value
-     * @return MetadataProvider corresponding to the value
+     * @return ExternalMetricStatusCode corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static MetadataProvider fromValue(String value) {
+    public static ExternalMetricStatusCode fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (MetadataProvider enumEntry : MetadataProvider.values()) {
+        for (ExternalMetricStatusCode enumEntry : ExternalMetricStatusCode.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

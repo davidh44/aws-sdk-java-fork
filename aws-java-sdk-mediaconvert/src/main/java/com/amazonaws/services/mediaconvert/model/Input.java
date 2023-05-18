@@ -35,9 +35,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * Deblock and Denoise filters. To remove video compression artifacts from your input and improve the video quality:
      * Choose Enabled. Additionally, this filter can help increase the video quality of your output relative to its
      * bitrate, since noisy inputs are more complex and require more bits to encode. To help restore loss of detail after
-     * applying the filter, you can optionally add texture or sharpening as an additional step.Jobs that use this feature
-     * incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still apply
-     * basic filtering with Deblock and Denoise.
+     * applying the filter, you can optionally add texture or sharpening as an additional step. Jobs that use this
+     * feature incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still
+     * apply basic filtering with Deblock and Denoise.
      */
     private String advancedInputFilter;
     /** Optional settings for Advanced input filter when you set Advanced input filter to Enabled. */
@@ -195,9 +195,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * Deblock and Denoise filters. To remove video compression artifacts from your input and improve the video quality:
      * Choose Enabled. Additionally, this filter can help increase the video quality of your output relative to its
      * bitrate, since noisy inputs are more complex and require more bits to encode. To help restore loss of detail after
-     * applying the filter, you can optionally add texture or sharpening as an additional step.Jobs that use this feature
-     * incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still apply
-     * basic filtering with Deblock and Denoise.
+     * applying the filter, you can optionally add texture or sharpening as an additional step. Jobs that use this
+     * feature incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still
+     * apply basic filtering with Deblock and Denoise.
      * 
      * @param advancedInputFilter
      *        Use to remove noise, blocking, blurriness, or ringing from your input as a pre-filter step before
@@ -206,7 +206,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      *        improve the video quality: Choose Enabled. Additionally, this filter can help increase the video quality
      *        of your output relative to its bitrate, since noisy inputs are more complex and require more bits to
      *        encode. To help restore loss of detail after applying the filter, you can optionally add texture or
-     *        sharpening as an additional step.Jobs that use this feature incur pro-tier pricing. To not apply advanced
+     *        sharpening as an additional step. Jobs that use this feature incur pro-tier pricing. To not apply advanced
      *        input filtering: Choose Disabled. Note that you can still apply basic filtering with Deblock and Denoise.
      * @see AdvancedInputFilter
      */
@@ -221,9 +221,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * Deblock and Denoise filters. To remove video compression artifacts from your input and improve the video quality:
      * Choose Enabled. Additionally, this filter can help increase the video quality of your output relative to its
      * bitrate, since noisy inputs are more complex and require more bits to encode. To help restore loss of detail after
-     * applying the filter, you can optionally add texture or sharpening as an additional step.Jobs that use this feature
-     * incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still apply
-     * basic filtering with Deblock and Denoise.
+     * applying the filter, you can optionally add texture or sharpening as an additional step. Jobs that use this
+     * feature incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still
+     * apply basic filtering with Deblock and Denoise.
      * 
      * @return Use to remove noise, blocking, blurriness, or ringing from your input as a pre-filter step before
      *         encoding. The Advanced input filter removes more types of compression artifacts and is an improvement
@@ -231,8 +231,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      *         and improve the video quality: Choose Enabled. Additionally, this filter can help increase the video
      *         quality of your output relative to its bitrate, since noisy inputs are more complex and require more bits
      *         to encode. To help restore loss of detail after applying the filter, you can optionally add texture or
-     *         sharpening as an additional step.Jobs that use this feature incur pro-tier pricing. To not apply advanced
-     *         input filtering: Choose Disabled. Note that you can still apply basic filtering with Deblock and Denoise.
+     *         sharpening as an additional step. Jobs that use this feature incur pro-tier pricing. To not apply
+     *         advanced input filtering: Choose Disabled. Note that you can still apply basic filtering with Deblock and
+     *         Denoise.
      * @see AdvancedInputFilter
      */
 
@@ -246,9 +247,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * Deblock and Denoise filters. To remove video compression artifacts from your input and improve the video quality:
      * Choose Enabled. Additionally, this filter can help increase the video quality of your output relative to its
      * bitrate, since noisy inputs are more complex and require more bits to encode. To help restore loss of detail after
-     * applying the filter, you can optionally add texture or sharpening as an additional step.Jobs that use this feature
-     * incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still apply
-     * basic filtering with Deblock and Denoise.
+     * applying the filter, you can optionally add texture or sharpening as an additional step. Jobs that use this
+     * feature incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still
+     * apply basic filtering with Deblock and Denoise.
      * 
      * @param advancedInputFilter
      *        Use to remove noise, blocking, blurriness, or ringing from your input as a pre-filter step before
@@ -257,7 +258,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      *        improve the video quality: Choose Enabled. Additionally, this filter can help increase the video quality
      *        of your output relative to its bitrate, since noisy inputs are more complex and require more bits to
      *        encode. To help restore loss of detail after applying the filter, you can optionally add texture or
-     *        sharpening as an additional step.Jobs that use this feature incur pro-tier pricing. To not apply advanced
+     *        sharpening as an additional step. Jobs that use this feature incur pro-tier pricing. To not apply advanced
      *        input filtering: Choose Disabled. Note that you can still apply basic filtering with Deblock and Denoise.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AdvancedInputFilter
@@ -274,9 +275,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * Deblock and Denoise filters. To remove video compression artifacts from your input and improve the video quality:
      * Choose Enabled. Additionally, this filter can help increase the video quality of your output relative to its
      * bitrate, since noisy inputs are more complex and require more bits to encode. To help restore loss of detail after
-     * applying the filter, you can optionally add texture or sharpening as an additional step.Jobs that use this feature
-     * incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still apply
-     * basic filtering with Deblock and Denoise.
+     * applying the filter, you can optionally add texture or sharpening as an additional step. Jobs that use this
+     * feature incur pro-tier pricing. To not apply advanced input filtering: Choose Disabled. Note that you can still
+     * apply basic filtering with Deblock and Denoise.
      * 
      * @param advancedInputFilter
      *        Use to remove noise, blocking, blurriness, or ringing from your input as a pre-filter step before
@@ -285,7 +286,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      *        improve the video quality: Choose Enabled. Additionally, this filter can help increase the video quality
      *        of your output relative to its bitrate, since noisy inputs are more complex and require more bits to
      *        encode. To help restore loss of detail after applying the filter, you can optionally add texture or
-     *        sharpening as an additional step.Jobs that use this feature incur pro-tier pricing. To not apply advanced
+     *        sharpening as an additional step. Jobs that use this feature incur pro-tier pricing. To not apply advanced
      *        input filtering: Choose Disabled. Note that you can still apply basic filtering with Deblock and Denoise.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AdvancedInputFilter

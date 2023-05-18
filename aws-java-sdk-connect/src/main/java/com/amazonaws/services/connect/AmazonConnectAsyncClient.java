@@ -754,6 +754,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request) {
+
+        return createPromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(final CreatePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePromptRequest, CreatePromptResult> asyncHandler) {
+        final CreatePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePromptResult>() {
+            @Override
+            public CreatePromptResult call() throws Exception {
+                CreatePromptResult result = null;
+
+                try {
+                    result = executeCreatePrompt(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateQueueResult> createQueueAsync(CreateQueueRequest request) {
 
         return createQueueAsync(request, null);
@@ -1366,6 +1399,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDeleteIntegrationAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest request) {
+
+        return deletePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(final DeletePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePromptRequest, DeletePromptResult> asyncHandler) {
+        final DeletePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePromptResult>() {
+            @Override
+            public DeletePromptResult call() throws Exception {
+                DeletePromptResult result = null;
+
+                try {
+                    result = executeDeletePrompt(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2028,6 +2094,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDescribePhoneNumber(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePromptResult> describePromptAsync(DescribePromptRequest request) {
+
+        return describePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePromptResult> describePromptAsync(final DescribePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribePromptRequest, DescribePromptResult> asyncHandler) {
+        final DescribePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribePromptResult>() {
+            @Override
+            public DescribePromptResult call() throws Exception {
+                DescribePromptResult result = null;
+
+                try {
+                    result = executeDescribePrompt(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2896,6 +2995,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeGetMetricDataV2(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptFileResult> getPromptFileAsync(GetPromptFileRequest request) {
+
+        return getPromptFileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptFileResult> getPromptFileAsync(final GetPromptFileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPromptFileRequest, GetPromptFileResult> asyncHandler) {
+        final GetPromptFileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPromptFileResult>() {
+            @Override
+            public GetPromptFileResult call() throws Exception {
+                GetPromptFileResult result = null;
+
+                try {
+                    result = executeGetPromptFile(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -5475,6 +5607,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdatePhoneNumber(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest request) {
+
+        return updatePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(final UpdatePromptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePromptRequest, UpdatePromptResult> asyncHandler) {
+        final UpdatePromptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePromptResult>() {
+            @Override
+            public UpdatePromptResult call() throws Exception {
+                UpdatePromptResult result = null;
+
+                try {
+                    result = executeUpdatePrompt(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

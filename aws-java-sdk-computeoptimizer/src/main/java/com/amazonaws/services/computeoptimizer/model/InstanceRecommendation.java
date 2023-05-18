@@ -354,6 +354,12 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * An object that describes Compute Optimizer's integration status with your external metrics provider.
+     * </p>
+     */
+    private ExternalMetricStatus externalMetricStatus;
 
     /**
      * <p>
@@ -3553,6 +3559,46 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * An object that describes Compute Optimizer's integration status with your external metrics provider.
+     * </p>
+     * 
+     * @param externalMetricStatus
+     *        An object that describes Compute Optimizer's integration status with your external metrics provider.
+     */
+
+    public void setExternalMetricStatus(ExternalMetricStatus externalMetricStatus) {
+        this.externalMetricStatus = externalMetricStatus;
+    }
+
+    /**
+     * <p>
+     * An object that describes Compute Optimizer's integration status with your external metrics provider.
+     * </p>
+     * 
+     * @return An object that describes Compute Optimizer's integration status with your external metrics provider.
+     */
+
+    public ExternalMetricStatus getExternalMetricStatus() {
+        return this.externalMetricStatus;
+    }
+
+    /**
+     * <p>
+     * An object that describes Compute Optimizer's integration status with your external metrics provider.
+     * </p>
+     * 
+     * @param externalMetricStatus
+     *        An object that describes Compute Optimizer's integration status with your external metrics provider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceRecommendation withExternalMetricStatus(ExternalMetricStatus externalMetricStatus) {
+        setExternalMetricStatus(externalMetricStatus);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3595,7 +3641,9 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         if (getInstanceState() != null)
             sb.append("InstanceState: ").append(getInstanceState()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getExternalMetricStatus() != null)
+            sb.append("ExternalMetricStatus: ").append(getExternalMetricStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -3675,6 +3723,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getExternalMetricStatus() == null ^ this.getExternalMetricStatus() == null)
+            return false;
+        if (other.getExternalMetricStatus() != null && other.getExternalMetricStatus().equals(this.getExternalMetricStatus()) == false)
+            return false;
         return true;
     }
 
@@ -3699,6 +3751,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
         hashCode = prime * hashCode + ((getInstanceState() == null) ? 0 : getInstanceState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getExternalMetricStatus() == null) ? 0 : getExternalMetricStatus().hashCode());
         return hashCode;
     }
 

@@ -127,6 +127,10 @@ public class InstanceRecommendationJsonUnmarshaller implements Unmarshaller<Inst
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("externalMetricStatus", targetDepth)) {
+                    context.nextToken();
+                    instanceRecommendation.setExternalMetricStatus(ExternalMetricStatusJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

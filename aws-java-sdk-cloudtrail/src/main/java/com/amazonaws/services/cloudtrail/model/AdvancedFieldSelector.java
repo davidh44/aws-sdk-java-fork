@@ -101,12 +101,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::CloudTrail::Channel</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -116,32 +111,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
+     * <code>AWS::CloudTrail::Channel</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -151,12 +131,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -167,6 +167,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -201,20 +216,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
-     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
-     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -230,17 +238,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
-     * <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
      * or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -252,46 +249,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -307,13 +271,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -325,6 +289,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
+     * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -347,6 +355,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -471,12 +519,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::CloudTrail::Channel</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -486,32 +529,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
+     * <code>AWS::CloudTrail::Channel</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -521,12 +549,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -537,6 +585,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -571,20 +634,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
-     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
-     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -600,17 +656,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
-     * <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
      * or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -622,46 +667,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -677,13 +689,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -695,6 +707,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
+     * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -717,6 +773,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -794,12 +890,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS::CloudTrail::Channel</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3::Object</code>
+     *        <code>AWS::DynamoDB::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -809,32 +900,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::DynamoDB::Table</code>
+     *        <code>AWS::S3::Object</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::S3Outposts::Object</code>
+     *        <code>AWS::CloudTrail::Channel</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::ManagedBlockchain::Node</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::EC2::Snapshot</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3::AccessPoint</code>
+     *        <code>AWS::Cognito::IdentityPool</code>
      *        </p>
      *        </li>
      *        <li>
@@ -844,12 +920,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::Glue::Table</code>
+     *        <code>AWS::EC2::Snapshot</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::GuardDuty::Detector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::KendraRanking::ExecutionPlan</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ManagedBlockchain::Node</code>
      *        </p>
      *        </li>
      *        <li>
@@ -860,6 +956,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3Outposts::Object</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -894,20 +1005,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
-     *        events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
-     *        include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *        When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -923,17 +1027,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
      *        When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -945,46 +1038,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     *        When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set
-     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is
-     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *        <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1000,13 +1060,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *        When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1018,6 +1078,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator
+     *        is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1040,6 +1144,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
+     *        events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
+     *        include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1123,12 +1267,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::CloudTrail::Channel</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -1138,32 +1277,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
+     * <code>AWS::CloudTrail::Channel</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -1173,12 +1297,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -1189,6 +1333,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -1223,20 +1382,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
-     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
-     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1252,17 +1404,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
-     * <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
      * or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1274,46 +1415,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1329,13 +1437,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1347,6 +1455,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
+     * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1369,6 +1521,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1445,12 +1637,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>AWS::CloudTrail::Channel</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::S3::Object</code>
+     *         <code>AWS::DynamoDB::Table</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1460,32 +1647,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::DynamoDB::Table</code>
+     *         <code>AWS::S3::Object</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::S3Outposts::Object</code>
+     *         <code>AWS::CloudTrail::Channel</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::ManagedBlockchain::Node</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::S3ObjectLambda::AccessPoint</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::EC2::Snapshot</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::S3::AccessPoint</code>
+     *         <code>AWS::Cognito::IdentityPool</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1495,12 +1667,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::Glue::Table</code>
+     *         <code>AWS::EC2::Snapshot</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::FinSpace::Environment</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Glue::Table</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::GuardDuty::Detector</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::KendraRanking::ExecutionPlan</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::ManagedBlockchain::Node</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1511,6 +1703,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::SageMaker::FeatureGroup</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3::AccessPoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3Outposts::Object</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1545,20 +1752,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
-     *         events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
-     *         include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *         When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     *         <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1574,17 +1774,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
-     *         When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to
-     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
      *         When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -1596,46 +1785,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     *         When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is
-     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator
-     *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *         <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1651,13 +1807,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
-     *         When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *         When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *         <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1669,6 +1825,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator
+     *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1692,6 +1892,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
+     *         events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
+     *         include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator
+     *         is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1775,12 +2015,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::CloudTrail::Channel</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -1790,32 +2025,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
+     * <code>AWS::CloudTrail::Channel</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -1825,12 +2045,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -1841,6 +2081,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -1875,20 +2130,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
-     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
-     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
+     * <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1904,17 +2152,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to <code>Equals</code> or
-     * <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
      * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
      * or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1926,46 +2163,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1981,13 +2185,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
-     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1999,6 +2203,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator is set
+     * to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2021,6 +2269,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log events on
+     * all objects in an S3 access point, we recommend that you use only the access point ARN, don’t include the object
+     * path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2098,12 +2386,7 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS::CloudTrail::Channel</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3::Object</code>
+     *        <code>AWS::DynamoDB::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2113,32 +2396,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::DynamoDB::Table</code>
+     *        <code>AWS::S3::Object</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::S3Outposts::Object</code>
+     *        <code>AWS::CloudTrail::Channel</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::ManagedBlockchain::Node</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::EC2::Snapshot</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3::AccessPoint</code>
+     *        <code>AWS::Cognito::IdentityPool</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2148,12 +2416,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::Glue::Table</code>
+     *        <code>AWS::EC2::Snapshot</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::GuardDuty::Detector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::KendraRanking::ExecutionPlan</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ManagedBlockchain::Node</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2164,6 +2452,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3Outposts::Object</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2198,20 +2501,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
-     *        events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
-     *        include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *        When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2227,17 +2523,6 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When resources.type equals <code>AWS::DynamoDB::Table</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
      *        When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -2249,46 +2534,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     *        When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set
-     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is
-     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
-     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *        <code>arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2304,13 +2556,13 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
-     *        When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *        When <code>resources.type</code> equals <code>AWS::EC2::Snapshot</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2322,6 +2574,50 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Glue::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::GuardDuty::Detector</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::KendraRanking::ExecutionPlan</code>, and the operator
+     *        is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Node</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2344,6 +2640,46 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3::AccessPoint</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in one of the following formats. To log
+     *        events on all objects in an S3 access point, we recommend that you use only the access point ARN, don’t
+     *        include the object path, and use the <code>StartsWith</code> or <code>NotStartsWith</code> operators.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3ObjectLambda::AccessPoint</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

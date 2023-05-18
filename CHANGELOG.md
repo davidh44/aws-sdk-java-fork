@@ -1,3 +1,44 @@
+# __1.12.471__ __2023-05-18__
+## __AWS CloudTrail__
+  - ### Features
+    - Add ConflictException to PutEventSelectors, add (Channel/EDS)ARNInvalidException to Tag APIs. These exceptions provide customers with more specific error messages instead of internal errors.
+
+## __AWS Compute Optimizer__
+  - ### Features
+    - In this launch, we add support for showing integration status with external metric providers such as Instana, Datadog ...etc in GetEC2InstanceRecommendations and ExportEC2InstanceRecommendations apis
+
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - This release introduces a new MXF Profile for XDCAM which is strictly compliant with the SMPTE RDD 9 standard and improved handling of output name modifiers.
+
+## __AWS Security Token Service__
+  - ### Features
+    - API updates for the AWS Security Token Service
+
+## __Amazon Athena__
+  - ### Features
+    - Removing SparkProperties from EngineConfiguration object for StartSession API call
+
+## __Amazon Connect Service__
+  - ### Features
+    - You can programmatically create and manage prompts using APIs, for example, to extract prompts stored within Amazon Connect and add them to your Amazon S3 bucket. AWS CloudTrail, AWS CloudFormation and tagging are supported.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation only release to address various tickets.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Add support for i4g.large, i4g.xlarge, i4g.2xlarge, i4g.4xlarge, i4g.8xlarge and i4g.16xlarge instances powered by AWS Graviton2 processors that deliver up to 15% better compute performance than our other storage-optimized instances.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - RDS documentation update for the EngineVersion parameter of ModifyDBSnapshot
+
+## __Amazon SageMaker geospatial capabilities__
+  - ### Features
+    - This release makes ExecutionRoleArn a required field in the StartEarthObservationJob API.
+
 # __1.12.470__ __2023-05-16__
 ## __AWS Direct Connect__
   - ### Features

@@ -290,6 +290,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request) {
+
+        return createPromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePromptResult> createPromptAsync(CreatePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePromptRequest, CreatePromptResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateQueueResult> createQueueAsync(CreateQueueRequest request) {
 
         return createQueueAsync(request, null);
@@ -532,6 +545,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DeleteIntegrationAssociationResult> deleteIntegrationAssociationAsync(DeleteIntegrationAssociationRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteIntegrationAssociationRequest, DeleteIntegrationAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest request) {
+
+        return deletePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePromptResult> deletePromptAsync(DeletePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePromptRequest, DeletePromptResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -792,6 +818,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribePhoneNumberRequest, DescribePhoneNumberResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePromptResult> describePromptAsync(DescribePromptRequest request) {
+
+        return describePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePromptResult> describePromptAsync(DescribePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribePromptRequest, DescribePromptResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1138,6 +1177,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<GetMetricDataV2Result> getMetricDataV2Async(GetMetricDataV2Request request,
             com.amazonaws.handlers.AsyncHandler<GetMetricDataV2Request, GetMetricDataV2Result> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptFileResult> getPromptFileAsync(GetPromptFileRequest request) {
+
+        return getPromptFileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPromptFileResult> getPromptFileAsync(GetPromptFileRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPromptFileRequest, GetPromptFileResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2154,6 +2206,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberRequest, UpdatePhoneNumberResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest request) {
+
+        return updatePromptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePromptResult> updatePromptAsync(UpdatePromptRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePromptRequest, UpdatePromptResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

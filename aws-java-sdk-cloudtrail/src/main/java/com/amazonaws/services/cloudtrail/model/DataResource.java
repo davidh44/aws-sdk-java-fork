@@ -104,7 +104,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -114,7 +114,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -131,27 +131,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -161,12 +141,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -177,6 +177,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -253,7 +268,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -263,7 +278,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -280,27 +295,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -310,12 +305,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -328,6 +343,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param type
@@ -336,7 +366,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS::S3::Object</code>
+     *        <code>AWS::DynamoDB::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -346,7 +376,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::DynamoDB::Table</code>
+     *        <code>AWS::S3::Object</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -363,27 +393,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::S3Outposts::Object</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::ManagedBlockchain::Node</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::EC2::Snapshot</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3::AccessPoint</code>
+     *        <code>AWS::Cognito::IdentityPool</code>
      *        </p>
      *        </li>
      *        <li>
@@ -393,12 +403,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::Glue::Table</code>
+     *        <code>AWS::EC2::Snapshot</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::GuardDuty::Detector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::KendraRanking::ExecutionPlan</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ManagedBlockchain::Node</code>
      *        </p>
      *        </li>
      *        <li>
@@ -409,6 +439,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3Outposts::Object</code>
      *        </p>
      *        </li>
      */
@@ -425,7 +470,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -435,7 +480,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -452,27 +497,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -482,12 +507,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -500,6 +545,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The resource type in which you want to log data events. You can specify the following <i>basic</i> event
@@ -507,7 +567,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>AWS::S3::Object</code>
+     *         <code>AWS::DynamoDB::Table</code>
      *         </p>
      *         </li>
      *         <li>
@@ -517,7 +577,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::DynamoDB::Table</code>
+     *         <code>AWS::S3::Object</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -534,27 +594,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::S3Outposts::Object</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::ManagedBlockchain::Node</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::S3ObjectLambda::AccessPoint</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::EC2::Snapshot</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>AWS::S3::AccessPoint</code>
+     *         <code>AWS::Cognito::IdentityPool</code>
      *         </p>
      *         </li>
      *         <li>
@@ -564,12 +604,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS::Glue::Table</code>
+     *         <code>AWS::EC2::Snapshot</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::FinSpace::Environment</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Glue::Table</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::GuardDuty::Detector</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::KendraRanking::ExecutionPlan</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::ManagedBlockchain::Node</code>
      *         </p>
      *         </li>
      *         <li>
@@ -580,6 +640,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::SageMaker::FeatureGroup</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3::AccessPoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::S3Outposts::Object</code>
      *         </p>
      *         </li>
      */
@@ -596,7 +671,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>AWS::S3::Object</code>
+     * <code>AWS::DynamoDB::Table</code>
      * </p>
      * </li>
      * <li>
@@ -606,7 +681,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::DynamoDB::Table</code>
+     * <code>AWS::S3::Object</code>
      * </p>
      * </li>
      * </ul>
@@ -623,27 +698,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::S3Outposts::Object</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::ManagedBlockchain::Node</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3ObjectLambda::AccessPoint</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::EC2::Snapshot</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>AWS::S3::AccessPoint</code>
+     * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
      * <li>
@@ -653,12 +708,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>AWS::Glue::Table</code>
+     * <code>AWS::EC2::Snapshot</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::GuardDuty::Detector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::KendraRanking::ExecutionPlan</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::ManagedBlockchain::Node</code>
      * </p>
      * </li>
      * <li>
@@ -671,6 +746,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3ObjectLambda::AccessPoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::S3Outposts::Object</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param type
@@ -679,7 +769,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS::S3::Object</code>
+     *        <code>AWS::DynamoDB::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -689,7 +779,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::DynamoDB::Table</code>
+     *        <code>AWS::S3::Object</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -706,27 +796,7 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::S3Outposts::Object</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::ManagedBlockchain::Node</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::EC2::Snapshot</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>AWS::S3::AccessPoint</code>
+     *        <code>AWS::Cognito::IdentityPool</code>
      *        </p>
      *        </li>
      *        <li>
@@ -736,12 +806,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS::Glue::Table</code>
+     *        <code>AWS::EC2::Snapshot</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::GuardDuty::Detector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::KendraRanking::ExecutionPlan</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::ManagedBlockchain::Node</code>
      *        </p>
      *        </li>
      *        <li>
@@ -752,6 +842,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3ObjectLambda::AccessPoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::S3Outposts::Object</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
