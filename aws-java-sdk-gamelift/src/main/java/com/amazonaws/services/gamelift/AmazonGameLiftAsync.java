@@ -204,7 +204,9 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
      * <p>
      * To claim a game server, identify a game server group. You can also specify a game server ID, although this
      * approach bypasses Amazon GameLift FleetIQ placement optimization. Optionally, include game data to pass to the
-     * game server at the start of a game session, such as a game map or player information.
+     * game server at the start of a game session, such as a game map or player information. Filter options may be
+     * included to further restrict how a game server is chosen, such as only allowing game servers on
+     * <code>ACTIVE</code> instances to be claimed.
      * </p>
      * <p>
      * When a game server is successfully claimed, connection information is returned. A claimed game server's
@@ -228,15 +230,13 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
      * If the game server claim status is <code>CLAIMED</code>.
      * </p>
      * </li>
-     * </ul>
-     * <note>
+     * <li>
      * <p>
-     * When claiming a specific game server, this request will succeed even if the game server is running on an instance
-     * in <code>DRAINING</code> status. To avoid this, first check the instance status by calling <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServerInstances.html"
-     * >DescribeGameServerInstances</a> .
+     * If the game server is running on an instance in <code>DRAINING</code> status and provided filter option does not
+     * allow placing on <code>DRAINING</code> instances.
      * </p>
-     * </note>
+     * </li>
+     * </ul>
      * <p>
      * <b>Learn more</b>
      * </p>
@@ -266,7 +266,9 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
      * <p>
      * To claim a game server, identify a game server group. You can also specify a game server ID, although this
      * approach bypasses Amazon GameLift FleetIQ placement optimization. Optionally, include game data to pass to the
-     * game server at the start of a game session, such as a game map or player information.
+     * game server at the start of a game session, such as a game map or player information. Filter options may be
+     * included to further restrict how a game server is chosen, such as only allowing game servers on
+     * <code>ACTIVE</code> instances to be claimed.
      * </p>
      * <p>
      * When a game server is successfully claimed, connection information is returned. A claimed game server's
@@ -290,15 +292,13 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
      * If the game server claim status is <code>CLAIMED</code>.
      * </p>
      * </li>
-     * </ul>
-     * <note>
+     * <li>
      * <p>
-     * When claiming a specific game server, this request will succeed even if the game server is running on an instance
-     * in <code>DRAINING</code> status. To avoid this, first check the instance status by calling <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServerInstances.html"
-     * >DescribeGameServerInstances</a> .
+     * If the game server is running on an instance in <code>DRAINING</code> status and provided filter option does not
+     * allow placing on <code>DRAINING</code> instances.
      * </p>
-     * </note>
+     * </li>
+     * </ul>
      * <p>
      * <b>Learn more</b>
      * </p>
@@ -402,28 +402,27 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
      * <p>
      * When setting up a new game build for Amazon GameLift, we recommend using the CLI command <b> <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/gamelift/upload-build.html">upload-build</a> </b>. This
-     * helper command combines two tasks: (1) it uploads your build files from a file directory to a Amazon GameLift
+     * helper command combines two tasks: (1) it uploads your build files from a file directory to an Amazon GameLift
      * Amazon S3 location, and (2) it creates a new build resource.
      * </p>
      * </important>
      * <p>
-     * You can use the operation in the following scenarios:
+     * You can use the <code>CreateBuild</code> operation in the following scenarios:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * To create a new game build with build files that are in an Amazon S3 location under an Amazon Web Services
-     * account that you control. To use this option, you give Amazon GameLift access to the Amazon S3 bucket. With
-     * permissions in place, specify a build name, operating system, and the Amazon S3 storage location of your game
-     * build.
+     * Create a new game build with build files that are in an Amazon S3 location under an Amazon Web Services account
+     * that you control. To use this option, you give Amazon GameLift access to the Amazon S3 bucket. With permissions
+     * in place, specify a build name, operating system, and the Amazon S3 storage location of your game build.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To directly upload your build files to a Amazon GameLift Amazon S3 location. To use this option, specify a build
-     * name and operating system. This operation creates a new build resource and also returns an Amazon S3 location
-     * with temporary access credentials. Use the credentials to manually upload your build files to the specified
-     * Amazon S3 location. For more information, see <a
+     * Upload your build files to a Amazon GameLift Amazon S3 location. To use this option, specify a build name and
+     * operating system. This operation creates a new build resource and also returns an Amazon S3 location with
+     * temporary access credentials. Use the credentials to manually upload your build files to the specified Amazon S3
+     * location. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html">Uploading Objects</a> in the
      * <i>Amazon S3 Developer Guide</i>. After you upload build files to the Amazon GameLift Amazon S3 location, you
      * can't update them.
@@ -470,28 +469,27 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
      * <p>
      * When setting up a new game build for Amazon GameLift, we recommend using the CLI command <b> <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/gamelift/upload-build.html">upload-build</a> </b>. This
-     * helper command combines two tasks: (1) it uploads your build files from a file directory to a Amazon GameLift
+     * helper command combines two tasks: (1) it uploads your build files from a file directory to an Amazon GameLift
      * Amazon S3 location, and (2) it creates a new build resource.
      * </p>
      * </important>
      * <p>
-     * You can use the operation in the following scenarios:
+     * You can use the <code>CreateBuild</code> operation in the following scenarios:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * To create a new game build with build files that are in an Amazon S3 location under an Amazon Web Services
-     * account that you control. To use this option, you give Amazon GameLift access to the Amazon S3 bucket. With
-     * permissions in place, specify a build name, operating system, and the Amazon S3 storage location of your game
-     * build.
+     * Create a new game build with build files that are in an Amazon S3 location under an Amazon Web Services account
+     * that you control. To use this option, you give Amazon GameLift access to the Amazon S3 bucket. With permissions
+     * in place, specify a build name, operating system, and the Amazon S3 storage location of your game build.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To directly upload your build files to a Amazon GameLift Amazon S3 location. To use this option, specify a build
-     * name and operating system. This operation creates a new build resource and also returns an Amazon S3 location
-     * with temporary access credentials. Use the credentials to manually upload your build files to the specified
-     * Amazon S3 location. For more information, see <a
+     * Upload your build files to a Amazon GameLift Amazon S3 location. To use this option, specify a build name and
+     * operating system. This operation creates a new build resource and also returns an Amazon S3 location with
+     * temporary access credentials. Use the credentials to manually upload your build files to the specified Amazon S3
+     * location. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html">Uploading Objects</a> in the
      * <i>Amazon S3 Developer Guide</i>. After you upload build files to the Amazon GameLift Amazon S3 location, you
      * can't update them.
@@ -5199,9 +5197,9 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
 
     /**
      * <p>
-     * Retrieves the location of stored game session logs for a specified game session. When a game session is
-     * terminated, Amazon GameLift automatically stores the logs in Amazon S3 and retains them for 14 days. Use this URL
-     * to download the logs.
+     * Retrieves the location of stored game session logs for a specified game session on Amazon GameLift managed
+     * fleets. When a game session is terminated, Amazon GameLift automatically stores the logs in Amazon S3 and retains
+     * them for 14 days. Use this URL to download the logs.
      * </p>
      * <note>
      * <p>
@@ -5225,9 +5223,9 @@ public interface AmazonGameLiftAsync extends AmazonGameLift {
 
     /**
      * <p>
-     * Retrieves the location of stored game session logs for a specified game session. When a game session is
-     * terminated, Amazon GameLift automatically stores the logs in Amazon S3 and retains them for 14 days. Use this URL
-     * to download the logs.
+     * Retrieves the location of stored game session logs for a specified game session on Amazon GameLift managed
+     * fleets. When a game session is terminated, Amazon GameLift automatically stores the logs in Amazon S3 and retains
+     * them for 14 days. Use this URL to download the logs.
      * </p>
      * <note>
      * <p>

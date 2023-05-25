@@ -8676,7 +8676,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Gets a description of a hyperparameter tuning job.
+     * Returns a description of a hyperparameter tuning job, depending on the fields selected. These fields can include
+     * the name, Amazon Resource Name (ARN), job status of your tuning job and more.
      * </p>
      * 
      * @param describeHyperParameterTuningJobRequest

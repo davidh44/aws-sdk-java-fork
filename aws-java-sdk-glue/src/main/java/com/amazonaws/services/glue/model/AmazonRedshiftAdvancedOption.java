@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies an Amazon Redshift data store.
+ * Specifies an optional value when connecting to the Redshift cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/AmazonRedshiftAdvancedOption" target="_top">AWS
@@ -30,24 +30,24 @@ public class AmazonRedshiftAdvancedOption implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The key when specifying a key-value pair.
+     * The key for the additional connection option.
      * </p>
      */
     private String key;
     /**
      * <p>
-     * The value when specifying a key-value pair.
+     * The value for the additional connection option.
      * </p>
      */
     private String value;
 
     /**
      * <p>
-     * The key when specifying a key-value pair.
+     * The key for the additional connection option.
      * </p>
      * 
      * @param key
-     *        The key when specifying a key-value pair.
+     *        The key for the additional connection option.
      */
 
     public void setKey(String key) {
@@ -56,10 +56,10 @@ public class AmazonRedshiftAdvancedOption implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The key when specifying a key-value pair.
+     * The key for the additional connection option.
      * </p>
      * 
-     * @return The key when specifying a key-value pair.
+     * @return The key for the additional connection option.
      */
 
     public String getKey() {
@@ -68,11 +68,11 @@ public class AmazonRedshiftAdvancedOption implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The key when specifying a key-value pair.
+     * The key for the additional connection option.
      * </p>
      * 
      * @param key
-     *        The key when specifying a key-value pair.
+     *        The key for the additional connection option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class AmazonRedshiftAdvancedOption implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The value when specifying a key-value pair.
+     * The value for the additional connection option.
      * </p>
      * 
      * @param value
-     *        The value when specifying a key-value pair.
+     *        The value for the additional connection option.
      */
 
     public void setValue(String value) {
@@ -96,10 +96,10 @@ public class AmazonRedshiftAdvancedOption implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The value when specifying a key-value pair.
+     * The value for the additional connection option.
      * </p>
      * 
-     * @return The value when specifying a key-value pair.
+     * @return The value for the additional connection option.
      */
 
     public String getValue() {
@@ -108,11 +108,11 @@ public class AmazonRedshiftAdvancedOption implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The value when specifying a key-value pair.
+     * The value for the additional connection option.
      * </p>
      * 
      * @param value
-     *        The value when specifying a key-value pair.
+     *        The value for the additional connection option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

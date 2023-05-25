@@ -310,6 +310,10 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setAmazonRedshiftTarget(AmazonRedshiftTargetJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("EvaluateDataQualityMultiFrame", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setEvaluateDataQualityMultiFrame(EvaluateDataQualityMultiFrameJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -430,6 +430,13 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private AmazonRedshiftTarget amazonRedshiftTarget;
+    /**
+     * <p>
+     * Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of Dynamic
+     * Frames.
+     * </p>
+     */
+    private EvaluateDataQualityMultiFrame evaluateDataQualityMultiFrame;
 
     /**
      * <p>
@@ -3114,6 +3121,52 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of Dynamic
+     * Frames.
+     * </p>
+     * 
+     * @param evaluateDataQualityMultiFrame
+     *        Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of
+     *        Dynamic Frames.
+     */
+
+    public void setEvaluateDataQualityMultiFrame(EvaluateDataQualityMultiFrame evaluateDataQualityMultiFrame) {
+        this.evaluateDataQualityMultiFrame = evaluateDataQualityMultiFrame;
+    }
+
+    /**
+     * <p>
+     * Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of Dynamic
+     * Frames.
+     * </p>
+     * 
+     * @return Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of
+     *         Dynamic Frames.
+     */
+
+    public EvaluateDataQualityMultiFrame getEvaluateDataQualityMultiFrame() {
+        return this.evaluateDataQualityMultiFrame;
+    }
+
+    /**
+     * <p>
+     * Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of Dynamic
+     * Frames.
+     * </p>
+     * 
+     * @param evaluateDataQualityMultiFrame
+     *        Specifies your data quality evaluation criteria. Allows multiple input data and returns a collection of
+     *        Dynamic Frames.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withEvaluateDataQualityMultiFrame(EvaluateDataQualityMultiFrame evaluateDataQualityMultiFrame) {
+        setEvaluateDataQualityMultiFrame(evaluateDataQualityMultiFrame);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3254,7 +3307,9 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getAmazonRedshiftSource() != null)
             sb.append("AmazonRedshiftSource: ").append(getAmazonRedshiftSource()).append(",");
         if (getAmazonRedshiftTarget() != null)
-            sb.append("AmazonRedshiftTarget: ").append(getAmazonRedshiftTarget());
+            sb.append("AmazonRedshiftTarget: ").append(getAmazonRedshiftTarget()).append(",");
+        if (getEvaluateDataQualityMultiFrame() != null)
+            sb.append("EvaluateDataQualityMultiFrame: ").append(getEvaluateDataQualityMultiFrame());
         sb.append("}");
         return sb.toString();
     }
@@ -3531,6 +3586,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getAmazonRedshiftTarget() != null && other.getAmazonRedshiftTarget().equals(this.getAmazonRedshiftTarget()) == false)
             return false;
+        if (other.getEvaluateDataQualityMultiFrame() == null ^ this.getEvaluateDataQualityMultiFrame() == null)
+            return false;
+        if (other.getEvaluateDataQualityMultiFrame() != null
+                && other.getEvaluateDataQualityMultiFrame().equals(this.getEvaluateDataQualityMultiFrame()) == false)
+            return false;
         return true;
     }
 
@@ -3604,6 +3664,7 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getS3DeltaDirectTarget() == null) ? 0 : getS3DeltaDirectTarget().hashCode());
         hashCode = prime * hashCode + ((getAmazonRedshiftSource() == null) ? 0 : getAmazonRedshiftSource().hashCode());
         hashCode = prime * hashCode + ((getAmazonRedshiftTarget() == null) ? 0 : getAmazonRedshiftTarget().hashCode());
+        hashCode = prime * hashCode + ((getEvaluateDataQualityMultiFrame() == null) ? 0 : getEvaluateDataQualityMultiFrame().hashCode());
         return hashCode;
     }
 

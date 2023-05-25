@@ -36,7 +36,7 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     * The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      * <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      * </p>
      */
@@ -55,8 +55,8 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
     private ArtifactStore artifactStore;
     /**
      * <p>
-     * A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an artifact
-     * store for the pipeline Region and for each cross-region action in the pipeline.
+     * A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There must
+     * be an artifact store for the pipeline Region and for each cross-region action in the pipeline.
      * </p>
      * <note>
      * <p>
@@ -122,12 +122,12 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     * The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      * <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     *        The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      *        <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      */
 
@@ -137,11 +137,11 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     * The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      * <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     * @return The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      *         <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      */
 
@@ -151,12 +151,12 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     * The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      * <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) for AWS CodePipeline to use to either perform actions with no
+     *        The Amazon Resource Name (ARN) for CodePipeline to use to either perform actions with no
      *        <code>actionRoleArn</code>, or to use to assume roles for actions with an <code>actionRoleArn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -241,8 +241,8 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an artifact
-     * store for the pipeline Region and for each cross-region action in the pipeline.
+     * A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There must
+     * be an artifact store for the pipeline Region and for each cross-region action in the pipeline.
      * </p>
      * <note>
      * <p>
@@ -251,8 +251,9 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </p>
      * </note>
      * 
-     * @return A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an
-     *         artifact store for the pipeline Region and for each cross-region action in the pipeline.</p> <note>
+     * @return A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions.
+     *         There must be an artifact store for the pipeline Region and for each cross-region action in the
+     *         pipeline.</p> <note>
      *         <p>
      *         You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but
      *         you cannot use both. If you create a cross-region action in your pipeline, you must use
@@ -266,8 +267,8 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an artifact
-     * store for the pipeline Region and for each cross-region action in the pipeline.
+     * A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There must
+     * be an artifact store for the pipeline Region and for each cross-region action in the pipeline.
      * </p>
      * <note>
      * <p>
@@ -277,8 +278,9 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </note>
      * 
      * @param artifactStores
-     *        A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an
-     *        artifact store for the pipeline Region and for each cross-region action in the pipeline.</p> <note>
+     *        A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There
+     *        must be an artifact store for the pipeline Region and for each cross-region action in the pipeline.</p>
+     *        <note>
      *        <p>
      *        You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but
      *        you cannot use both. If you create a cross-region action in your pipeline, you must use
@@ -292,8 +294,8 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an artifact
-     * store for the pipeline Region and for each cross-region action in the pipeline.
+     * A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There must
+     * be an artifact store for the pipeline Region and for each cross-region action in the pipeline.
      * </p>
      * <note>
      * <p>
@@ -303,8 +305,9 @@ public class PipelineDeclaration implements Serializable, Cloneable, StructuredP
      * </note>
      * 
      * @param artifactStores
-     *        A mapping of <code>artifactStore</code> objects and their corresponding AWS Regions. There must be an
-     *        artifact store for the pipeline Region and for each cross-region action in the pipeline.</p> <note>
+     *        A mapping of <code>artifactStore</code> objects and their corresponding Amazon Web Services Regions. There
+     *        must be an artifact store for the pipeline Region and for each cross-region action in the pipeline.</p>
+     *        <note>
      *        <p>
      *        You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but
      *        you cannot use both. If you create a cross-region action in your pipeline, you must use

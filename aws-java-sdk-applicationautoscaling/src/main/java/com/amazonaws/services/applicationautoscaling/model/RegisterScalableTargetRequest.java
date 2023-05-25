@@ -309,12 +309,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint provisioned concurrency
+     * SageMaker endpoint variants
      * </p>
      * </li>
      * <li>
      * <p>
-     * SageMaker endpoint variants
+     * SageMaker Serverless endpoint provisioned concurrency
      * </p>
      * </li>
      * <li>
@@ -2514,12 +2514,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint provisioned concurrency
+     * SageMaker endpoint variants
      * </p>
      * </li>
      * <li>
      * <p>
-     * SageMaker endpoint variants
+     * SageMaker Serverless endpoint provisioned concurrency
      * </p>
      * </li>
      * <li>
@@ -2579,12 +2579,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        SageMaker Serverless endpoint provisioned concurrency
+     *        SageMaker endpoint variants
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        SageMaker endpoint variants
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
@@ -2650,12 +2650,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint provisioned concurrency
+     * SageMaker endpoint variants
      * </p>
      * </li>
      * <li>
      * <p>
-     * SageMaker endpoint variants
+     * SageMaker Serverless endpoint provisioned concurrency
      * </p>
      * </li>
      * <li>
@@ -2714,12 +2714,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      *         </li>
      *         <li>
      *         <p>
-     *         SageMaker Serverless endpoint provisioned concurrency
+     *         SageMaker endpoint variants
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         SageMaker endpoint variants
+     *         SageMaker Serverless endpoint provisioned concurrency
      *         </p>
      *         </li>
      *         <li>
@@ -2785,12 +2785,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
-     * SageMaker Serverless endpoint provisioned concurrency
+     * SageMaker endpoint variants
      * </p>
      * </li>
      * <li>
      * <p>
-     * SageMaker endpoint variants
+     * SageMaker Serverless endpoint provisioned concurrency
      * </p>
      * </li>
      * <li>
@@ -2850,12 +2850,12 @@ public class RegisterScalableTargetRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        <li>
      *        <p>
-     *        SageMaker Serverless endpoint provisioned concurrency
+     *        SageMaker endpoint variants
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        SageMaker endpoint variants
+     *        SageMaker Serverless endpoint provisioned concurrency
      *        </p>
      *        </li>
      *        <li>
