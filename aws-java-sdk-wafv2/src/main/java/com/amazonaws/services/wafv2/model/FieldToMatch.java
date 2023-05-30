@@ -153,6 +153,17 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Cookies cookies;
+    /**
+     * <p>
+     * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
+     * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
+     * </p>
+     * <p>
+     * Matches against the header order string are case insensitive.
+     * </p>
+     */
+    private HeaderOrder headerOrder;
 
     /**
      * <p>
@@ -853,6 +864,76 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
+     * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
+     * </p>
+     * <p>
+     * Matches against the header order string are case insensitive.
+     * </p>
+     * 
+     * @param headerOrder
+     *        Inspect a string containing the list of the request's header names, ordered as they appear in the web
+     *        request that WAF receives for inspection. WAF generates the string and then uses that as the field to
+     *        match component in its inspection. WAF separates the header names in the string using commas and no added
+     *        spaces.</p>
+     *        <p>
+     *        Matches against the header order string are case insensitive.
+     */
+
+    public void setHeaderOrder(HeaderOrder headerOrder) {
+        this.headerOrder = headerOrder;
+    }
+
+    /**
+     * <p>
+     * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
+     * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
+     * </p>
+     * <p>
+     * Matches against the header order string are case insensitive.
+     * </p>
+     * 
+     * @return Inspect a string containing the list of the request's header names, ordered as they appear in the web
+     *         request that WAF receives for inspection. WAF generates the string and then uses that as the field to
+     *         match component in its inspection. WAF separates the header names in the string using commas and no added
+     *         spaces.</p>
+     *         <p>
+     *         Matches against the header order string are case insensitive.
+     */
+
+    public HeaderOrder getHeaderOrder() {
+        return this.headerOrder;
+    }
+
+    /**
+     * <p>
+     * Inspect a string containing the list of the request's header names, ordered as they appear in the web request
+     * that WAF receives for inspection. WAF generates the string and then uses that as the field to match component in
+     * its inspection. WAF separates the header names in the string using commas and no added spaces.
+     * </p>
+     * <p>
+     * Matches against the header order string are case insensitive.
+     * </p>
+     * 
+     * @param headerOrder
+     *        Inspect a string containing the list of the request's header names, ordered as they appear in the web
+     *        request that WAF receives for inspection. WAF generates the string and then uses that as the field to
+     *        match component in its inspection. WAF separates the header names in the string using commas and no added
+     *        spaces.</p>
+     *        <p>
+     *        Matches against the header order string are case insensitive.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldToMatch withHeaderOrder(HeaderOrder headerOrder) {
+        setHeaderOrder(headerOrder);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -883,7 +964,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
         if (getHeaders() != null)
             sb.append("Headers: ").append(getHeaders()).append(",");
         if (getCookies() != null)
-            sb.append("Cookies: ").append(getCookies());
+            sb.append("Cookies: ").append(getCookies()).append(",");
+        if (getHeaderOrder() != null)
+            sb.append("HeaderOrder: ").append(getHeaderOrder());
         sb.append("}");
         return sb.toString();
     }
@@ -938,6 +1021,10 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCookies() != null && other.getCookies().equals(this.getCookies()) == false)
             return false;
+        if (other.getHeaderOrder() == null ^ this.getHeaderOrder() == null)
+            return false;
+        if (other.getHeaderOrder() != null && other.getHeaderOrder().equals(this.getHeaderOrder()) == false)
+            return false;
         return true;
     }
 
@@ -956,6 +1043,7 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getJsonBody() == null) ? 0 : getJsonBody().hashCode());
         hashCode = prime * hashCode + ((getHeaders() == null) ? 0 : getHeaders().hashCode());
         hashCode = prime * hashCode + ((getCookies() == null) ? 0 : getCookies().hashCode());
+        hashCode = prime * hashCode + ((getHeaderOrder() == null) ? 0 : getHeaderOrder().hashCode());
         return hashCode;
     }
 

@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -5444,6 +5444,9 @@
       }, {
         "name" : "NoPassword",
         "value" : "no-password"
+      }, {
+        "name" : "Iam",
+        "value" : "iam"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.memorydb.enum.AuthenticationType",
@@ -43268,6 +43271,9 @@
       "enums" : [ {
         "name" : "Password",
         "value" : "password"
+      }, {
+        "name" : "Iam",
+        "value" : "iam"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.memorydb.enum.InputAuthenticationType",

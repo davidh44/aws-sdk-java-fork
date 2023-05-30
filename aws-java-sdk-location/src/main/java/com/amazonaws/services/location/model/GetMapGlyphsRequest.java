@@ -106,7 +106,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      * <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     * <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     * <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     * <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     * <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      * </p>
      * </li>
      * </ul>
@@ -221,7 +227,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      * <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     * <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     * <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     * <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     * <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      * </p>
      * </li>
      * </ul>
@@ -311,7 +323,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      *        <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      *        <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     *        <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     *        <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     *        <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     *        <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     *        <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     *        <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     *        <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     *        <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -407,7 +425,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      * <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     * <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     * <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     * <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     * <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      * </p>
      * </li>
      * </ul>
@@ -497,7 +521,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      *         <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      *         <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     *         <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     *         <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     *         <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     *         <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     *         <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     *         <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     *         <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     *         <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -593,7 +623,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      * <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     * <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     * <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     * <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     * <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     * <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      * </p>
      * </li>
      * </ul>
@@ -683,7 +719,13 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <code>Amazon Ember Bold,Noto Sans Bold</code> | <code>Amazon Ember Medium,Noto Sans Medium</code> |
      *        <code>Amazon Ember Regular Italic,Noto Sans Italic</code> |
      *        <code>Amazon Ember Condensed RC Regular,Noto Sans Regular</code> |
-     *        <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code>
+     *        <code>Amazon Ember Condensed RC Bold,Noto Sans Bold</code> |
+     *        <code>Amazon Ember Regular,Noto Sans Regular,Noto Sans Arabic Regular</code> |
+     *        <code>Amazon Ember Condensed RC Bold,Noto Sans Bold,Noto Sans Arabic Condensed Bold</code> |
+     *        <code>Amazon Ember Bold,Noto Sans Bold,Noto Sans Arabic Bold</code> |
+     *        <code>Amazon Ember Regular Italic,Noto Sans Italic,Noto Sans Arabic Regular</code> |
+     *        <code>Amazon Ember Condensed RC Regular,Noto Sans Regular,Noto Sans Arabic Condensed Regular</code> |
+     *        <code>Amazon Ember Medium,Noto Sans Medium,Noto Sans Arabic Medium</code>
      *        </p>
      *        </li>
      *        </ul>

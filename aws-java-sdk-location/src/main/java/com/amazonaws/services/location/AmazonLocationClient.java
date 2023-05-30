@@ -1443,6 +1443,10 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ServiceQuotaExceededException
+     *         The operation was denied because the request would exceed the maximum <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/location-quotas.html">quota</a> set for
+     *         Amazon Location Service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateTracker

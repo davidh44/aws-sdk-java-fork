@@ -63,7 +63,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private JobCommand command;
     /**
      * <p>
-     * The default arguments for this job.
+     * The default arguments for every run of this job, specified as name-value pairs.
      * </p>
      * <p>
      * You can specify arguments here that your own job-execution script consumes, as well as arguments that Glue itself
@@ -79,15 +79,21 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Python</a> topic in the developer guide.
      * </p>
      * <p>
-     * For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     * For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      * href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters
      * Used by Glue</a> topic in the developer guide.
+     * </p>
+     * <p>
+     * For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters in Ray
+     * jobs</a> in the developer guide.
      * </p>
      */
     private java.util.Map<String, String> defaultArguments;
     /**
      * <p>
-     * Non-overridable arguments for this job, specified as name-value pairs.
+     * Arguments for this job that are not overridden when providing job arguments in a job run, specified as name-value
+     * pairs.
      * </p>
      */
     private java.util.Map<String, String> nonOverridableArguments;
@@ -128,14 +134,18 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing units
      * (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power that consists of
      * 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     * href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.
+     * href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.
      * </p>
      * <p>
-     * Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     * For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should specify a
+     * <code>Worker type</code> and the <code>Number of workers</code>.
+     * </p>
+     * <p>
+     * Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      * </p>
      * <p>
      * The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python shell
-     * job or an Apache Spark ETL job:
+     * job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      * </p>
      * <ul>
      * <li>
@@ -147,15 +157,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <li>
      * <p>
      * When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark streaming ETL
-     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs. The default is 10 DPUs.
+     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs. The default is 10 DPUs.
      * This job type cannot have a fractional DPU allocation.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you should
-     * specify a <code>Worker type</code> and the <code>Number of workers</code>.
-     * </p>
      */
     private Double maxCapacity;
     /**
@@ -180,8 +186,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private NotificationProperty notificationProperty;
     /**
      * <p>
-     * Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version indicates
-     * the version supported for jobs of type Spark.
+     * In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue available in
+     * a job. The Python version indicates the version supported for jobs of type Spark.
+     * </p>
+     * <p>
+     * Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of Ray, Python
+     * and additional libraries available in your Ray job are determined by the <code>Runtime</code> parameter of the
+     * Job command.
      * </p>
      * <p>
      * For more information about the available Glue versions and corresponding Spark and Python versions, see <a
@@ -201,7 +212,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X, or
-     * G.025X.
+     * G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.
      * </p>
      * <ul>
      * <li>
@@ -227,6 +238,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPU, 4 GB of memory, 64 GB disk), and
      * provides 1 executor per worker. We recommend this worker type for low volume streaming jobs. This worker type is
      * only available for Glue version 3.0 streaming jobs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk), and
+     * provides up to 8 Ray workers based on the autoscaler.
      * </p>
      * </li>
      * </ul>
@@ -503,7 +520,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The default arguments for this job.
+     * The default arguments for every run of this job, specified as name-value pairs.
      * </p>
      * <p>
      * You can specify arguments here that your own job-execution script consumes, as well as arguments that Glue itself
@@ -519,12 +536,17 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Python</a> topic in the developer guide.
      * </p>
      * <p>
-     * For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     * For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      * href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters
      * Used by Glue</a> topic in the developer guide.
      * </p>
+     * <p>
+     * For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters in Ray
+     * jobs</a> in the developer guide.
+     * </p>
      * 
-     * @return The default arguments for this job.</p>
+     * @return The default arguments for every run of this job, specified as name-value pairs.</p>
      *         <p>
      *         You can specify arguments here that your own job-execution script consumes, as well as arguments that
      *         Glue itself consumes.
@@ -540,9 +562,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         APIs in Python</a> topic in the developer guide.
      *         </p>
      *         <p>
-     *         For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     *         For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      *         href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special
      *         Parameters Used by Glue</a> topic in the developer guide.
+     *         </p>
+     *         <p>
+     *         For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     *         href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters
+     *         in Ray jobs</a> in the developer guide.
      */
 
     public java.util.Map<String, String> getDefaultArguments() {
@@ -551,7 +578,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The default arguments for this job.
+     * The default arguments for every run of this job, specified as name-value pairs.
      * </p>
      * <p>
      * You can specify arguments here that your own job-execution script consumes, as well as arguments that Glue itself
@@ -567,13 +594,18 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Python</a> topic in the developer guide.
      * </p>
      * <p>
-     * For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     * For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      * href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters
      * Used by Glue</a> topic in the developer guide.
      * </p>
+     * <p>
+     * For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters in Ray
+     * jobs</a> in the developer guide.
+     * </p>
      * 
      * @param defaultArguments
-     *        The default arguments for this job.</p>
+     *        The default arguments for every run of this job, specified as name-value pairs.</p>
      *        <p>
      *        You can specify arguments here that your own job-execution script consumes, as well as arguments that Glue
      *        itself consumes.
@@ -589,9 +621,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        APIs in Python</a> topic in the developer guide.
      *        </p>
      *        <p>
-     *        For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     *        For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      *        href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special
      *        Parameters Used by Glue</a> topic in the developer guide.
+     *        </p>
+     *        <p>
+     *        For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     *        href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters
+     *        in Ray jobs</a> in the developer guide.
      */
 
     public void setDefaultArguments(java.util.Map<String, String> defaultArguments) {
@@ -600,7 +637,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The default arguments for this job.
+     * The default arguments for every run of this job, specified as name-value pairs.
      * </p>
      * <p>
      * You can specify arguments here that your own job-execution script consumes, as well as arguments that Glue itself
@@ -616,13 +653,18 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Python</a> topic in the developer guide.
      * </p>
      * <p>
-     * For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     * For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      * href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters
      * Used by Glue</a> topic in the developer guide.
      * </p>
+     * <p>
+     * For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters in Ray
+     * jobs</a> in the developer guide.
+     * </p>
      * 
      * @param defaultArguments
-     *        The default arguments for this job.</p>
+     *        The default arguments for every run of this job, specified as name-value pairs.</p>
      *        <p>
      *        You can specify arguments here that your own job-execution script consumes, as well as arguments that Glue
      *        itself consumes.
@@ -638,9 +680,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        APIs in Python</a> topic in the developer guide.
      *        </p>
      *        <p>
-     *        For information about the key-value pairs that Glue consumes to set up your job, see the <a
+     *        For information about the arguments you can provide to this field when configuring Spark jobs, see the <a
      *        href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special
      *        Parameters Used by Glue</a> topic in the developer guide.
+     *        </p>
+     *        <p>
+     *        For information about the arguments you can provide to this field when configuring Ray jobs, see <a
+     *        href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using job parameters
+     *        in Ray jobs</a> in the developer guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -679,10 +726,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Non-overridable arguments for this job, specified as name-value pairs.
+     * Arguments for this job that are not overridden when providing job arguments in a job run, specified as name-value
+     * pairs.
      * </p>
      * 
-     * @return Non-overridable arguments for this job, specified as name-value pairs.
+     * @return Arguments for this job that are not overridden when providing job arguments in a job run, specified as
+     *         name-value pairs.
      */
 
     public java.util.Map<String, String> getNonOverridableArguments() {
@@ -691,11 +740,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Non-overridable arguments for this job, specified as name-value pairs.
+     * Arguments for this job that are not overridden when providing job arguments in a job run, specified as name-value
+     * pairs.
      * </p>
      * 
      * @param nonOverridableArguments
-     *        Non-overridable arguments for this job, specified as name-value pairs.
+     *        Arguments for this job that are not overridden when providing job arguments in a job run, specified as
+     *        name-value pairs.
      */
 
     public void setNonOverridableArguments(java.util.Map<String, String> nonOverridableArguments) {
@@ -704,11 +755,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Non-overridable arguments for this job, specified as name-value pairs.
+     * Arguments for this job that are not overridden when providing job arguments in a job run, specified as name-value
+     * pairs.
      * </p>
      * 
      * @param nonOverridableArguments
-     *        Non-overridable arguments for this job, specified as name-value pairs.
+     *        Arguments for this job that are not overridden when providing job arguments in a job run, specified as
+     *        name-value pairs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -949,14 +1002,18 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing units
      * (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power that consists of
      * 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     * href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.
+     * href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.
      * </p>
      * <p>
-     * Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     * For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should specify a
+     * <code>Worker type</code> and the <code>Number of workers</code>.
+     * </p>
+     * <p>
+     * Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      * </p>
      * <p>
      * The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python shell
-     * job or an Apache Spark ETL job:
+     * job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      * </p>
      * <ul>
      * <li>
@@ -968,27 +1025,27 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <li>
      * <p>
      * When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark streaming ETL
-     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs. The default is 10 DPUs.
+     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs. The default is 10 DPUs.
      * This job type cannot have a fractional DPU allocation.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you should
-     * specify a <code>Worker type</code> and the <code>Number of workers</code>.
-     * </p>
      * 
      * @param maxCapacity
      *        For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing
      *        units (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power
      *        that consists of 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     *        href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.</p>
+     *        href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.</p>
      *        <p>
-     *        Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     *        For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should
+     *        specify a <code>Worker type</code> and the <code>Number of workers</code>.
+     *        </p>
+     *        <p>
+     *        Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      *        </p>
      *        <p>
      *        The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python
-     *        shell job or an Apache Spark ETL job:
+     *        shell job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      *        </p>
      *        <ul>
      *        <li>
@@ -1000,14 +1057,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark
-     *        streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs.
-     *        The default is 10 DPUs. This job type cannot have a fractional DPU allocation.
+     *        streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs. The
+     *        default is 10 DPUs. This job type cannot have a fractional DPU allocation.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you should
-     *        specify a <code>Worker type</code> and the <code>Number of workers</code>.
      */
 
     public void setMaxCapacity(Double maxCapacity) {
@@ -1019,14 +1072,18 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing units
      * (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power that consists of
      * 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     * href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.
+     * href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.
      * </p>
      * <p>
-     * Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     * For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should specify a
+     * <code>Worker type</code> and the <code>Number of workers</code>.
+     * </p>
+     * <p>
+     * Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      * </p>
      * <p>
      * The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python shell
-     * job or an Apache Spark ETL job:
+     * job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      * </p>
      * <ul>
      * <li>
@@ -1038,26 +1095,26 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <li>
      * <p>
      * When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark streaming ETL
-     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs. The default is 10 DPUs.
+     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs. The default is 10 DPUs.
      * This job type cannot have a fractional DPU allocation.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you should
-     * specify a <code>Worker type</code> and the <code>Number of workers</code>.
-     * </p>
      * 
      * @return For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing
      *         units (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power
      *         that consists of 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     *         href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.</p>
+     *         href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.</p>
      *         <p>
-     *         Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     *         For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should
+     *         specify a <code>Worker type</code> and the <code>Number of workers</code>.
+     *         </p>
+     *         <p>
+     *         Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      *         </p>
      *         <p>
      *         The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python
-     *         shell job or an Apache Spark ETL job:
+     *         shell job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      *         </p>
      *         <ul>
      *         <li>
@@ -1069,14 +1126,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         <li>
      *         <p>
      *         When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark
-     *         streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs.
+     *         streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs.
      *         The default is 10 DPUs. This job type cannot have a fractional DPU allocation.
      *         </p>
      *         </li>
-     *         </ul>
-     *         <p>
-     *         For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you
-     *         should specify a <code>Worker type</code> and the <code>Number of workers</code>.
      */
 
     public Double getMaxCapacity() {
@@ -1088,14 +1141,18 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing units
      * (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power that consists of
      * 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     * href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.
+     * href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.
      * </p>
      * <p>
-     * Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     * For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should specify a
+     * <code>Worker type</code> and the <code>Number of workers</code>.
+     * </p>
+     * <p>
+     * Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      * </p>
      * <p>
      * The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python shell
-     * job or an Apache Spark ETL job:
+     * job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      * </p>
      * <ul>
      * <li>
@@ -1107,27 +1164,27 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <li>
      * <p>
      * When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark streaming ETL
-     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs. The default is 10 DPUs.
+     * job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs. The default is 10 DPUs.
      * This job type cannot have a fractional DPU allocation.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you should
-     * specify a <code>Worker type</code> and the <code>Number of workers</code>.
-     * </p>
      * 
      * @param maxCapacity
      *        For Glue version 1.0 or earlier jobs, using the standard worker type, the number of Glue data processing
      *        units (DPUs) that can be allocated when this job runs. A DPU is a relative measure of processing power
      *        that consists of 4 vCPUs of compute capacity and 16 GB of memory. For more information, see the <a
-     *        href="https://aws.amazon.com/glue/pricing/">Glue pricing page</a>.</p>
+     *        href="https://aws.amazon.com/glue/pricing/"> Glue pricing page</a>.</p>
      *        <p>
-     *        Do not set <code>Max Capacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
+     *        For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>. Instead, you should
+     *        specify a <code>Worker type</code> and the <code>Number of workers</code>.
+     *        </p>
+     *        <p>
+     *        Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.
      *        </p>
      *        <p>
      *        The value that can be allocated for <code>MaxCapacity</code> depends on whether you are running a Python
-     *        shell job or an Apache Spark ETL job:
+     *        shell job, an Apache Spark ETL job, or an Apache Spark streaming ETL job:
      *        </p>
      *        <ul>
      *        <li>
@@ -1139,14 +1196,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache Spark
-     *        streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate a minimum of 2 DPUs.
-     *        The default is 10 DPUs. This job type cannot have a fractional DPU allocation.
+     *        streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs. The
+     *        default is 10 DPUs. This job type cannot have a fractional DPU allocation.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        For Glue version 2.0 jobs, you cannot instead specify a <code>Maximum capacity</code>. Instead, you should
-     *        specify a <code>Worker type</code> and the <code>Number of workers</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1317,8 +1370,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version indicates
-     * the version supported for jobs of type Spark.
+     * In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue available in
+     * a job. The Python version indicates the version supported for jobs of type Spark.
+     * </p>
+     * <p>
+     * Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of Ray, Python
+     * and additional libraries available in your Ray job are determined by the <code>Runtime</code> parameter of the
+     * Job command.
      * </p>
      * <p>
      * For more information about the available Glue versions and corresponding Spark and Python versions, see <a
@@ -1329,8 +1387,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param glueVersion
-     *        Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version
-     *        indicates the version supported for jobs of type Spark. </p>
+     *        In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue
+     *        available in a job. The Python version indicates the version supported for jobs of type Spark. </p>
+     *        <p>
+     *        Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of Ray,
+     *        Python and additional libraries available in your Ray job are determined by the <code>Runtime</code>
+     *        parameter of the Job command.
+     *        </p>
      *        <p>
      *        For more information about the available Glue versions and corresponding Spark and Python versions, see <a
      *        href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html">Glue version</a> in the developer guide.
@@ -1345,8 +1408,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version indicates
-     * the version supported for jobs of type Spark.
+     * In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue available in
+     * a job. The Python version indicates the version supported for jobs of type Spark.
+     * </p>
+     * <p>
+     * Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of Ray, Python
+     * and additional libraries available in your Ray job are determined by the <code>Runtime</code> parameter of the
+     * Job command.
      * </p>
      * <p>
      * For more information about the available Glue versions and corresponding Spark and Python versions, see <a
@@ -1356,8 +1424,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Jobs that are created without specifying a Glue version default to Glue 0.9.
      * </p>
      * 
-     * @return Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version
-     *         indicates the version supported for jobs of type Spark. </p>
+     * @return In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue
+     *         available in a job. The Python version indicates the version supported for jobs of type Spark. </p>
+     *         <p>
+     *         Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of
+     *         Ray, Python and additional libraries available in your Ray job are determined by the <code>Runtime</code>
+     *         parameter of the Job command.
+     *         </p>
      *         <p>
      *         For more information about the available Glue versions and corresponding Spark and Python versions, see
      *         <a href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html">Glue version</a> in the developer
@@ -1373,8 +1446,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version indicates
-     * the version supported for jobs of type Spark.
+     * In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue available in
+     * a job. The Python version indicates the version supported for jobs of type Spark.
+     * </p>
+     * <p>
+     * Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of Ray, Python
+     * and additional libraries available in your Ray job are determined by the <code>Runtime</code> parameter of the
+     * Job command.
      * </p>
      * <p>
      * For more information about the available Glue versions and corresponding Spark and Python versions, see <a
@@ -1385,8 +1463,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param glueVersion
-     *        Glue version determines the versions of Apache Spark and Python that Glue supports. The Python version
-     *        indicates the version supported for jobs of type Spark. </p>
+     *        In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python that Glue
+     *        available in a job. The Python version indicates the version supported for jobs of type Spark. </p>
+     *        <p>
+     *        Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However, the versions of Ray,
+     *        Python and additional libraries available in your Ray job are determined by the <code>Runtime</code>
+     *        parameter of the Job command.
+     *        </p>
      *        <p>
      *        For more information about the available Glue versions and corresponding Spark and Python versions, see <a
      *        href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html">Glue version</a> in the developer guide.
@@ -1444,7 +1527,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X, or
-     * G.025X.
+     * G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.
      * </p>
      * <ul>
      * <li>
@@ -1472,11 +1555,17 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * only available for Glue version 3.0 streaming jobs.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk), and
+     * provides up to 8 Ray workers based on the autoscaler.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param workerType
      *        The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X,
-     *        or G.025X.</p>
+     *        or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1503,6 +1592,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        This worker type is only available for Glue version 3.0 streaming jobs.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk),
+     *        and provides up to 8 Ray workers based on the autoscaler.
+     *        </p>
+     *        </li>
      * @see WorkerType
      */
 
@@ -1513,7 +1608,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X, or
-     * G.025X.
+     * G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.
      * </p>
      * <ul>
      * <li>
@@ -1541,10 +1636,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * only available for Glue version 3.0 streaming jobs.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk), and
+     * provides up to 8 Ray workers based on the autoscaler.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X,
-     *         or G.025X.</p>
+     *         or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1571,6 +1672,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         This worker type is only available for Glue version 3.0 streaming jobs.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB
+     *         disk), and provides up to 8 Ray workers based on the autoscaler.
+     *         </p>
+     *         </li>
      * @see WorkerType
      */
 
@@ -1581,7 +1688,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X, or
-     * G.025X.
+     * G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.
      * </p>
      * <ul>
      * <li>
@@ -1609,11 +1716,17 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * only available for Glue version 3.0 streaming jobs.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk), and
+     * provides up to 8 Ray workers based on the autoscaler.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param workerType
      *        The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X,
-     *        or G.025X.</p>
+     *        or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1638,6 +1751,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPU, 4 GB of memory, 64 GB
      *        disk), and provides 1 executor per worker. We recommend this worker type for low volume streaming jobs.
      *        This worker type is only available for Glue version 3.0 streaming jobs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk),
+     *        and provides up to 8 Ray workers based on the autoscaler.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1652,7 +1771,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X, or
-     * G.025X.
+     * G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.
      * </p>
      * <ul>
      * <li>
@@ -1680,11 +1799,17 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * only available for Glue version 3.0 streaming jobs.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk), and
+     * provides up to 8 Ray workers based on the autoscaler.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param workerType
      *        The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, G.2X,
-     *        or G.025X.</p>
+     *        or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1709,6 +1834,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPU, 4 GB of memory, 64 GB
      *        disk), and provides 1 executor per worker. We recommend this worker type for low volume streaming jobs.
      *        This worker type is only available for Glue version 3.0 streaming jobs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPU, 64 GB of m emory, 128 GB disk),
+     *        and provides up to 8 Ray workers based on the autoscaler.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

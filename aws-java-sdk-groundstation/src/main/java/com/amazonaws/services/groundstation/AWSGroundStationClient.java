@@ -1031,7 +1031,7 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
-     * Returns the number of minutes used by account.
+     * Returns the number of reserved minutes used by account.
      * </p>
      * 
      * @param getMinuteUsageRequest

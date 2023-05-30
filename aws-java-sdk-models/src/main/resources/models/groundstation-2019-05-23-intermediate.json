@@ -727,7 +727,7 @@
       "asyncReturnType" : "GetMinuteUsageResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Returns the number of minutes used by account.</p>",
+      "documentation" : "<p>Returns the number of reserved minutes used by account.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,

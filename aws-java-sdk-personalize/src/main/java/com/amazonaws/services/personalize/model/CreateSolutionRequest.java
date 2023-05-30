@@ -43,6 +43,13 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      */
     private Boolean performHPO;
     /**
+     * <important>
+     * <p>
+     * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
+     * Personalize recipes. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * </p>
+     * </important>
      * <p>
      * Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case, you
      * must specify <code>recipeArn</code>.
@@ -92,8 +99,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     private SolutionConfig solutionConfig;
     /**
      * <p>
-     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
-     * to the solution.
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to apply to
+     * the solution.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -227,6 +234,13 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <important>
+     * <p>
+     * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
+     * Personalize recipes. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * </p>
+     * </important>
      * <p>
      * Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case, you
      * must specify <code>recipeArn</code>.
@@ -239,8 +253,17 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param performAutoML
+     *        <p>
+     *        We don't recommend enabling automated machine learning. Instead, match your use case to the available
+     *        Amazon Personalize recipes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
+     *        case.</a>
+     *        </p>
+     *        </important>
+     *        <p>
      *        Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case,
-     *        you must specify <code>recipeArn</code>.</p>
+     *        you must specify <code>recipeArn</code>.
+     *        </p>
      *        <p>
      *        When set to <code>true</code>, Amazon Personalize analyzes your training data and selects the optimal
      *        USER_PERSONALIZATION recipe and hyperparameters. In this case, you must omit <code>recipeArn</code>.
@@ -253,6 +276,13 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <important>
+     * <p>
+     * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
+     * Personalize recipes. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * </p>
+     * </important>
      * <p>
      * Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case, you
      * must specify <code>recipeArn</code>.
@@ -264,8 +294,17 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * lengthens the training process as compared to selecting a specific recipe.
      * </p>
      * 
-     * @return Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case,
-     *         you must specify <code>recipeArn</code>.</p>
+     * @return <p>
+     *         We don't recommend enabling automated machine learning. Instead, match your use case to the available
+     *         Amazon Personalize recipes. For more information, see <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
+     *         case.</a>
+     *         </p>
+     *         </important>
+     *         <p>
+     *         Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case,
+     *         you must specify <code>recipeArn</code>.
+     *         </p>
      *         <p>
      *         When set to <code>true</code>, Amazon Personalize analyzes your training data and selects the optimal
      *         USER_PERSONALIZATION recipe and hyperparameters. In this case, you must omit <code>recipeArn</code>.
@@ -278,6 +317,13 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <important>
+     * <p>
+     * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
+     * Personalize recipes. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * </p>
+     * </important>
      * <p>
      * Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case, you
      * must specify <code>recipeArn</code>.
@@ -290,8 +336,17 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param performAutoML
+     *        <p>
+     *        We don't recommend enabling automated machine learning. Instead, match your use case to the available
+     *        Amazon Personalize recipes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
+     *        case.</a>
+     *        </p>
+     *        </important>
+     *        <p>
      *        Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case,
-     *        you must specify <code>recipeArn</code>.</p>
+     *        you must specify <code>recipeArn</code>.
+     *        </p>
      *        <p>
      *        When set to <code>true</code>, Amazon Personalize analyzes your training data and selects the optimal
      *        USER_PERSONALIZATION recipe and hyperparameters. In this case, you must omit <code>recipeArn</code>.
@@ -306,6 +361,13 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <important>
+     * <p>
+     * We don't recommend enabling automated machine learning. Instead, match your use case to the available Amazon
+     * Personalize recipes. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use case.</a>
+     * </p>
+     * </important>
      * <p>
      * Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case, you
      * must specify <code>recipeArn</code>.
@@ -317,8 +379,17 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * lengthens the training process as compared to selecting a specific recipe.
      * </p>
      * 
-     * @return Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case,
-     *         you must specify <code>recipeArn</code>.</p>
+     * @return <p>
+     *         We don't recommend enabling automated machine learning. Instead, match your use case to the available
+     *         Amazon Personalize recipes. For more information, see <a
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html">Determining your use
+     *         case.</a>
+     *         </p>
+     *         </important>
+     *         <p>
+     *         Whether to perform automated machine learning (AutoML). The default is <code>false</code>. For this case,
+     *         you must specify <code>recipeArn</code>.
+     *         </p>
      *         <p>
      *         When set to <code>true</code>, Amazon Personalize analyzes your training data and selects the optimal
      *         USER_PERSONALIZATION recipe and hyperparameters. In this case, you must omit <code>recipeArn</code>.
@@ -550,11 +621,11 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
-     * to the solution.
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to apply to
+     * the solution.
      * </p>
      * 
-     * @return A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     * @return A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to
      *         apply to the solution.
      */
 
@@ -564,12 +635,12 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
-     * to the solution.
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to apply to
+     * the solution.
      * </p>
      * 
      * @param tags
-     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to
      *        apply to the solution.
      */
 
@@ -584,8 +655,8 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
-     * to the solution.
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to apply to
+     * the solution.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -594,7 +665,7 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param tags
-     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to
      *        apply to the solution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -611,12 +682,12 @@ public class CreateSolutionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
-     * to the solution.
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to apply to
+     * the solution.
      * </p>
      * 
      * @param tags
-     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dg/tagging-resources.html">tags</a> to
      *        apply to the solution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

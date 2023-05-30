@@ -32,9 +32,11 @@ public class FindingHistoryRecord implements Serializable, Cloneable, Structured
     private AwsSecurityFindingIdentifier findingIdentifier;
     /**
      * <p>
-     * An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the finding
-     * record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
-     * and date and time should be separated by <code>T</code>. For more information, see <a
+     * An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding record.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
@@ -103,16 +105,19 @@ public class FindingHistoryRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the finding
-     * record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
-     * and date and time should be separated by <code>T</code>. For more information, see <a
+     * An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding record.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param updateTime
-     *        An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the
-     *        finding record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot
-     *        contain spaces, and date and time should be separated by <code>T</code>. For more information, see <a
+     *        An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding record.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
      *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>.
      */
@@ -123,15 +128,19 @@ public class FindingHistoryRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the finding
-     * record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
-     * and date and time should be separated by <code>T</code>. For more information, see <a
+     * An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding record.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
-     * @return An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the
-     *         finding record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot
-     *         contain spaces, and date and time should be separated by <code>T</code>. For more information, see <a
+     * @return An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding
+     *         record.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
      *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *         Format</a>.
      */
@@ -142,16 +151,19 @@ public class FindingHistoryRecord implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the finding
-     * record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
-     * and date and time should be separated by <code>T</code>. For more information, see <a
+     * An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding record.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param updateTime
-     *        An ISO 8601-formatted timestamp that indicates when the security findings provider last updated the
-     *        finding record. A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot
-     *        contain spaces, and date and time should be separated by <code>T</code>. For more information, see <a
+     *        An ISO 8601-formatted timestamp that indicates when Security Hub processed the updated finding record.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
      *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -52,6 +52,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
+     * contains the ordered list of header names, from the headers in the web request, and then matches against that
+     * string.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * If <code>SearchString</code> includes alphabetic characters A-Z and a-z, note that the value is case sensitive.
@@ -172,6 +179,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
+     * contains the ordered list of header names, from the headers in the web request, and then matches against that
+     * string.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * If <code>SearchString</code> includes alphabetic characters A-Z and a-z, note that the value is case sensitive.
@@ -223,6 +237,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        <code>UriPath</code>: The value that you want WAF to search for in the URI path, for example,
      *        <code>/images/daily-ad.jpg</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
+     *        contains the ordered list of header names, from the headers in the web request, and then matches against
+     *        that string.
      *        </p>
      *        </li>
      *        </ul>
@@ -275,6 +296,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
+     * contains the ordered list of header names, from the headers in the web request, and then matches against that
+     * string.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * If <code>SearchString</code> includes alphabetic characters A-Z and a-z, note that the value is case sensitive.
@@ -322,6 +350,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *         <p>
      *         <code>UriPath</code>: The value that you want WAF to search for in the URI path, for example,
      *         <code>/images/daily-ad.jpg</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string
+     *         that contains the ordered list of header names, from the headers in the web request, and then matches
+     *         against that string.
      *         </p>
      *         </li>
      *         </ul>
@@ -372,6 +407,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * <p>
      * <code>UriPath</code>: The value that you want WAF to search for in the URI path, for example,
      * <code>/images/daily-ad.jpg</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
+     * contains the ordered list of header names, from the headers in the web request, and then matches against that
+     * string.
      * </p>
      * </li>
      * </ul>
@@ -425,6 +467,13 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        <code>UriPath</code>: The value that you want WAF to search for in the URI path, for example,
      *        <code>/images/daily-ad.jpg</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>HeaderOrder</code>: The comma-separated list of header names to match for. WAF creates a string that
+     *        contains the ordered list of header names, from the headers in the web request, and then matches against
+     *        that string.
      *        </p>
      *        </li>
      *        </ul>

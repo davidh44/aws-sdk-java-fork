@@ -25,7 +25,8 @@ public enum WorkerType {
     G2X("G.2X"),
     G025X("G.025X"),
     G4X("G.4X"),
-    G8X("G.8X");
+    G8X("G.8X"),
+    Z2X("Z.2X");
 
     private String value;
 

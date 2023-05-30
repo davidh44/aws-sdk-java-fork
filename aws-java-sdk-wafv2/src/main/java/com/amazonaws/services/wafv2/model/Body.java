@@ -47,7 +47,7 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -89,7 +89,7 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -128,7 +128,8 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     *        <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection
+     *        criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -173,7 +174,7 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -211,7 +212,8 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     *         <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection
+     *         criteria.
      *         </p>
      *         </li>
      *         <li>
@@ -256,7 +258,7 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -295,7 +297,8 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     *        <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection
+     *        criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -342,7 +345,7 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -381,7 +384,8 @@ public class Body implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria.
+     *        <code>CONTINUE</code> - Inspect the available body contents normally, according to the rule inspection
+     *        criteria.
      *        </p>
      *        </li>
      *        <li>

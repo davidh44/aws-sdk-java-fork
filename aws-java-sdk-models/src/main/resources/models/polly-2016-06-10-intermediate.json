@@ -3348,6 +3348,9 @@
       }, {
         "name" : "FiFI",
         "value" : "fi-FI"
+      }, {
+        "name" : "EnIE",
+        "value" : "en-IE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.LanguageCode",
@@ -16053,6 +16056,12 @@
       }, {
         "name" : "Tomoko",
         "value" : "Tomoko"
+      }, {
+        "name" : "Niamh",
+        "value" : "Niamh"
+      }, {
+        "name" : "Sofie",
+        "value" : "Sofie"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

@@ -62,9 +62,10 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
     private String matchScope;
     /**
      * <p>
-     * What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting
-     * the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying
-     * host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
+     * What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF does not
+     * support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total
+     * headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to
+     * WAF.
      * </p>
      * <p>
      * The options for oversize handling are the following:
@@ -72,7 +73,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -238,9 +239,10 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting
-     * the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying
-     * host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
+     * What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF does not
+     * support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total
+     * headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to
+     * WAF.
      * </p>
      * <p>
      * The options for oversize handling are the following:
@@ -248,7 +250,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -265,17 +267,17 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param oversizeHandling
-     *        What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support
-     *        inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers.
-     *        The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
-     *        </p>
+     *        What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF
+     *        does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or
+     *        200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of
+     *        header contents to WAF. </p>
      *        <p>
      *        The options for oversize handling are the following:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     *        <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -298,9 +300,10 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting
-     * the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying
-     * host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
+     * What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF does not
+     * support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total
+     * headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to
+     * WAF.
      * </p>
      * <p>
      * The options for oversize handling are the following:
@@ -308,7 +311,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -324,17 +327,18 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support
-     *         inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total
-     *         headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header
-     *         contents to WAF. </p>
+     * @return What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF
+     *         does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or
+     *         200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of
+     *         header contents to WAF. </p>
      *         <p>
      *         The options for oversize handling are the following:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     *         <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection
+     *         criteria.
      *         </p>
      *         </li>
      *         <li>
@@ -357,9 +361,10 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting
-     * the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying
-     * host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
+     * What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF does not
+     * support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total
+     * headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to
+     * WAF.
      * </p>
      * <p>
      * The options for oversize handling are the following:
@@ -367,7 +372,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -384,17 +389,17 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param oversizeHandling
-     *        What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support
-     *        inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers.
-     *        The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
-     *        </p>
+     *        What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF
+     *        does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or
+     *        200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of
+     *        header contents to WAF. </p>
      *        <p>
      *        The options for oversize handling are the following:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     *        <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -419,9 +424,10 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting
-     * the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying
-     * host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
+     * What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF does not
+     * support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total
+     * headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to
+     * WAF.
      * </p>
      * <p>
      * The options for oversize handling are the following:
@@ -429,7 +435,7 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     * <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      * </p>
      * </li>
      * <li>
@@ -446,17 +452,17 @@ public class Headers implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param oversizeHandling
-     *        What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support
-     *        inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers.
-     *        The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF.
-     *        </p>
+     *        What WAF should do if the headers of the request are more numerous or larger than WAF can inspect. WAF
+     *        does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or
+     *        200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of
+     *        header contents to WAF. </p>
      *        <p>
      *        The options for oversize handling are the following:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria.
+     *        <code>CONTINUE</code> - Inspect the available headers normally, according to the rule inspection criteria.
      *        </p>
      *        </li>
      *        <li>

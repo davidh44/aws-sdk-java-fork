@@ -42,6 +42,13 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
+     * <p>
+     * For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies the
+     * default action to web requests that pass the inspection of all rules in the web ACL without being either allowed
+     * or blocked. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL default
+     * action</a> in the <i>WAF Developer Guide</i>.
+     * </p>
      */
     private Boolean cloudWatchMetricsEnabled;
     /**
@@ -120,12 +127,25 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
+     * <p>
+     * For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies the
+     * default action to web requests that pass the inspection of all rules in the web ACL without being either allowed
+     * or blocked. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL default
+     * action</a> in the <i>WAF Developer Guide</i>.
+     * </p>
      * 
      * @param cloudWatchMetricsEnabled
      *        A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *        available metrics, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *        Metrics</a> in the <i>WAF Developer Guide</i>.
+     *        Metrics</a> in the <i>WAF Developer Guide</i>.</p>
+     *        <p>
+     *        For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies
+     *        the default action to web requests that pass the inspection of all rules in the web ACL without being
+     *        either allowed or blocked. For more information, see <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL
+     *        default action</a> in the <i>WAF Developer Guide</i>.
      */
 
     public void setCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
@@ -139,11 +159,24 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
+     * <p>
+     * For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies the
+     * default action to web requests that pass the inspection of all rules in the web ACL without being either allowed
+     * or blocked. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL default
+     * action</a> in the <i>WAF Developer Guide</i>.
+     * </p>
      * 
      * @return A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *         available metrics, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *         Metrics</a> in the <i>WAF Developer Guide</i>.
+     *         Metrics</a> in the <i>WAF Developer Guide</i>.</p>
+     *         <p>
+     *         For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies
+     *         the default action to web requests that pass the inspection of all rules in the web ACL without being
+     *         either allowed or blocked. For more information, see <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL
+     *         default action</a> in the <i>WAF Developer Guide</i>.
      */
 
     public Boolean getCloudWatchMetricsEnabled() {
@@ -157,12 +190,25 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
+     * <p>
+     * For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies the
+     * default action to web requests that pass the inspection of all rules in the web ACL without being either allowed
+     * or blocked. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL default
+     * action</a> in the <i>WAF Developer Guide</i>.
+     * </p>
      * 
      * @param cloudWatchMetricsEnabled
      *        A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *        available metrics, see <a
      *        href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *        Metrics</a> in the <i>WAF Developer Guide</i>.
+     *        Metrics</a> in the <i>WAF Developer Guide</i>.</p>
+     *        <p>
+     *        For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies
+     *        the default action to web requests that pass the inspection of all rules in the web ACL without being
+     *        either allowed or blocked. For more information, see <a
+     *        href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL
+     *        default action</a> in the <i>WAF Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,11 +224,24 @@ public class VisibilityConfig implements Serializable, Cloneable, StructuredPojo
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
      * Metrics</a> in the <i>WAF Developer Guide</i>.
      * </p>
+     * <p>
+     * For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies the
+     * default action to web requests that pass the inspection of all rules in the web ACL without being either allowed
+     * or blocked. For more information, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL default
+     * action</a> in the <i>WAF Developer Guide</i>.
+     * </p>
      * 
      * @return A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch. For the list of
      *         available metrics, see <a
      *         href="https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics">WAF
-     *         Metrics</a> in the <i>WAF Developer Guide</i>.
+     *         Metrics</a> in the <i>WAF Developer Guide</i>.</p>
+     *         <p>
+     *         For web ACLs, the metrics are for web requests that have the web ACL default action applied. WAF applies
+     *         the default action to web requests that pass the inspection of all rules in the web ACL without being
+     *         either allowed or blocked. For more information, see <a
+     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-default-action.html">The web ACL
+     *         default action</a> in the <i>WAF Developer Guide</i>.
      */
 
     public Boolean isCloudWatchMetricsEnabled() {

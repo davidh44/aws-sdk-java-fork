@@ -553,6 +553,41 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsEc2RouteTableDetails awsEc2RouteTable;
+    /**
+     * <p>
+     * Provides details about AppSync message broker. A message broker allows software applications and components to
+     * communicate using various programming languages, operating systems, and formal messaging protocols.
+     * </p>
+     */
+    private AwsAmazonMqBrokerDetails awsAmazonMqBroker;
+    /**
+     * <p>
+     * Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices, and APIs
+     * from a single GraphQL endpoint.
+     * </p>
+     */
+    private AwsAppSyncGraphQlApiDetails awsAppSyncGraphQlApi;
+    /**
+     * <p>
+     * A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are containers
+     * for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     * </p>
+     */
+    private AwsEventSchemasRegistryDetails awsEventSchemasRegistry;
+    /**
+     * <p>
+     * Provides details about an Amazon GuardDuty detector. A detector is an object that represents the GuardDuty
+     * service. A detector is required for GuardDuty to become operational.
+     * </p>
+     */
+    private AwsGuardDutyDetectorDetails awsGuardDutyDetector;
+    /**
+     * <p>
+     * Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     * event-driven steps.
+     * </p>
+     */
+    private AwsStepFunctionStateMachineDetails awsStepFunctionStateMachine;
 
     /**
      * <p>
@@ -4034,6 +4069,239 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about AppSync message broker. A message broker allows software applications and components to
+     * communicate using various programming languages, operating systems, and formal messaging protocols.
+     * </p>
+     * 
+     * @param awsAmazonMqBroker
+     *        Provides details about AppSync message broker. A message broker allows software applications and
+     *        components to communicate using various programming languages, operating systems, and formal messaging
+     *        protocols.
+     */
+
+    public void setAwsAmazonMqBroker(AwsAmazonMqBrokerDetails awsAmazonMqBroker) {
+        this.awsAmazonMqBroker = awsAmazonMqBroker;
+    }
+
+    /**
+     * <p>
+     * Provides details about AppSync message broker. A message broker allows software applications and components to
+     * communicate using various programming languages, operating systems, and formal messaging protocols.
+     * </p>
+     * 
+     * @return Provides details about AppSync message broker. A message broker allows software applications and
+     *         components to communicate using various programming languages, operating systems, and formal messaging
+     *         protocols.
+     */
+
+    public AwsAmazonMqBrokerDetails getAwsAmazonMqBroker() {
+        return this.awsAmazonMqBroker;
+    }
+
+    /**
+     * <p>
+     * Provides details about AppSync message broker. A message broker allows software applications and components to
+     * communicate using various programming languages, operating systems, and formal messaging protocols.
+     * </p>
+     * 
+     * @param awsAmazonMqBroker
+     *        Provides details about AppSync message broker. A message broker allows software applications and
+     *        components to communicate using various programming languages, operating systems, and formal messaging
+     *        protocols.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsAmazonMqBroker(AwsAmazonMqBrokerDetails awsAmazonMqBroker) {
+        setAwsAmazonMqBroker(awsAmazonMqBroker);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices, and APIs
+     * from a single GraphQL endpoint.
+     * </p>
+     * 
+     * @param awsAppSyncGraphQlApi
+     *        Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices,
+     *        and APIs from a single GraphQL endpoint.
+     */
+
+    public void setAwsAppSyncGraphQlApi(AwsAppSyncGraphQlApiDetails awsAppSyncGraphQlApi) {
+        this.awsAppSyncGraphQlApi = awsAppSyncGraphQlApi;
+    }
+
+    /**
+     * <p>
+     * Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices, and APIs
+     * from a single GraphQL endpoint.
+     * </p>
+     * 
+     * @return Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices,
+     *         and APIs from a single GraphQL endpoint.
+     */
+
+    public AwsAppSyncGraphQlApiDetails getAwsAppSyncGraphQlApi() {
+        return this.awsAppSyncGraphQlApi;
+    }
+
+    /**
+     * <p>
+     * Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices, and APIs
+     * from a single GraphQL endpoint.
+     * </p>
+     * 
+     * @param awsAppSyncGraphQlApi
+     *        Provides details about an AppSync Graph QL API, which lets you query multiple databases, microservices,
+     *        and APIs from a single GraphQL endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsAppSyncGraphQlApi(AwsAppSyncGraphQlApiDetails awsAppSyncGraphQlApi) {
+        setAwsAppSyncGraphQlApi(awsAppSyncGraphQlApi);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are containers
+     * for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     * </p>
+     * 
+     * @param awsEventSchemasRegistry
+     *        A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are
+     *        containers for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     */
+
+    public void setAwsEventSchemasRegistry(AwsEventSchemasRegistryDetails awsEventSchemasRegistry) {
+        this.awsEventSchemasRegistry = awsEventSchemasRegistry;
+    }
+
+    /**
+     * <p>
+     * A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are containers
+     * for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     * </p>
+     * 
+     * @return A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are
+     *         containers for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     */
+
+    public AwsEventSchemasRegistryDetails getAwsEventSchemasRegistry() {
+        return this.awsEventSchemasRegistry;
+    }
+
+    /**
+     * <p>
+     * A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are containers
+     * for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     * </p>
+     * 
+     * @param awsEventSchemasRegistry
+     *        A schema defines the structure of events that are sent to Amazon EventBridge. Schema registries are
+     *        containers for schemas. They collect and organize schemas so that your schemas are in logical groups.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEventSchemasRegistry(AwsEventSchemasRegistryDetails awsEventSchemasRegistry) {
+        setAwsEventSchemasRegistry(awsEventSchemasRegistry);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon GuardDuty detector. A detector is an object that represents the GuardDuty
+     * service. A detector is required for GuardDuty to become operational.
+     * </p>
+     * 
+     * @param awsGuardDutyDetector
+     *        Provides details about an Amazon GuardDuty detector. A detector is an object that represents the GuardDuty
+     *        service. A detector is required for GuardDuty to become operational.
+     */
+
+    public void setAwsGuardDutyDetector(AwsGuardDutyDetectorDetails awsGuardDutyDetector) {
+        this.awsGuardDutyDetector = awsGuardDutyDetector;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon GuardDuty detector. A detector is an object that represents the GuardDuty
+     * service. A detector is required for GuardDuty to become operational.
+     * </p>
+     * 
+     * @return Provides details about an Amazon GuardDuty detector. A detector is an object that represents the
+     *         GuardDuty service. A detector is required for GuardDuty to become operational.
+     */
+
+    public AwsGuardDutyDetectorDetails getAwsGuardDutyDetector() {
+        return this.awsGuardDutyDetector;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon GuardDuty detector. A detector is an object that represents the GuardDuty
+     * service. A detector is required for GuardDuty to become operational.
+     * </p>
+     * 
+     * @param awsGuardDutyDetector
+     *        Provides details about an Amazon GuardDuty detector. A detector is an object that represents the GuardDuty
+     *        service. A detector is required for GuardDuty to become operational.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsGuardDutyDetector(AwsGuardDutyDetectorDetails awsGuardDutyDetector) {
+        setAwsGuardDutyDetector(awsGuardDutyDetector);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     * event-driven steps.
+     * </p>
+     * 
+     * @param awsStepFunctionStateMachine
+     *        Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     *        event-driven steps.
+     */
+
+    public void setAwsStepFunctionStateMachine(AwsStepFunctionStateMachineDetails awsStepFunctionStateMachine) {
+        this.awsStepFunctionStateMachine = awsStepFunctionStateMachine;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     * event-driven steps.
+     * </p>
+     * 
+     * @return Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     *         event-driven steps.
+     */
+
+    public AwsStepFunctionStateMachineDetails getAwsStepFunctionStateMachine() {
+        return this.awsStepFunctionStateMachine;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     * event-driven steps.
+     * </p>
+     * 
+     * @param awsStepFunctionStateMachine
+     *        Provides details about an Step Functions state machine, which is a workflow consisting of a series of
+     *        event-driven steps.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsStepFunctionStateMachine(AwsStepFunctionStateMachineDetails awsStepFunctionStateMachine) {
+        setAwsStepFunctionStateMachine(awsStepFunctionStateMachine);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4212,7 +4480,17 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsWafv2RuleGroup() != null)
             sb.append("AwsWafv2RuleGroup: ").append(getAwsWafv2RuleGroup()).append(",");
         if (getAwsEc2RouteTable() != null)
-            sb.append("AwsEc2RouteTable: ").append(getAwsEc2RouteTable());
+            sb.append("AwsEc2RouteTable: ").append(getAwsEc2RouteTable()).append(",");
+        if (getAwsAmazonMqBroker() != null)
+            sb.append("AwsAmazonMqBroker: ").append(getAwsAmazonMqBroker()).append(",");
+        if (getAwsAppSyncGraphQlApi() != null)
+            sb.append("AwsAppSyncGraphQlApi: ").append(getAwsAppSyncGraphQlApi()).append(",");
+        if (getAwsEventSchemasRegistry() != null)
+            sb.append("AwsEventSchemasRegistry: ").append(getAwsEventSchemasRegistry()).append(",");
+        if (getAwsGuardDutyDetector() != null)
+            sb.append("AwsGuardDutyDetector: ").append(getAwsGuardDutyDetector()).append(",");
+        if (getAwsStepFunctionStateMachine() != null)
+            sb.append("AwsStepFunctionStateMachine: ").append(getAwsStepFunctionStateMachine());
         sb.append("}");
         return sb.toString();
     }
@@ -4569,6 +4847,26 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsEc2RouteTable() != null && other.getAwsEc2RouteTable().equals(this.getAwsEc2RouteTable()) == false)
             return false;
+        if (other.getAwsAmazonMqBroker() == null ^ this.getAwsAmazonMqBroker() == null)
+            return false;
+        if (other.getAwsAmazonMqBroker() != null && other.getAwsAmazonMqBroker().equals(this.getAwsAmazonMqBroker()) == false)
+            return false;
+        if (other.getAwsAppSyncGraphQlApi() == null ^ this.getAwsAppSyncGraphQlApi() == null)
+            return false;
+        if (other.getAwsAppSyncGraphQlApi() != null && other.getAwsAppSyncGraphQlApi().equals(this.getAwsAppSyncGraphQlApi()) == false)
+            return false;
+        if (other.getAwsEventSchemasRegistry() == null ^ this.getAwsEventSchemasRegistry() == null)
+            return false;
+        if (other.getAwsEventSchemasRegistry() != null && other.getAwsEventSchemasRegistry().equals(this.getAwsEventSchemasRegistry()) == false)
+            return false;
+        if (other.getAwsGuardDutyDetector() == null ^ this.getAwsGuardDutyDetector() == null)
+            return false;
+        if (other.getAwsGuardDutyDetector() != null && other.getAwsGuardDutyDetector().equals(this.getAwsGuardDutyDetector()) == false)
+            return false;
+        if (other.getAwsStepFunctionStateMachine() == null ^ this.getAwsStepFunctionStateMachine() == null)
+            return false;
+        if (other.getAwsStepFunctionStateMachine() != null && other.getAwsStepFunctionStateMachine().equals(this.getAwsStepFunctionStateMachine()) == false)
+            return false;
         return true;
     }
 
@@ -4661,6 +4959,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsWafv2WebAcl() == null) ? 0 : getAwsWafv2WebAcl().hashCode());
         hashCode = prime * hashCode + ((getAwsWafv2RuleGroup() == null) ? 0 : getAwsWafv2RuleGroup().hashCode());
         hashCode = prime * hashCode + ((getAwsEc2RouteTable() == null) ? 0 : getAwsEc2RouteTable().hashCode());
+        hashCode = prime * hashCode + ((getAwsAmazonMqBroker() == null) ? 0 : getAwsAmazonMqBroker().hashCode());
+        hashCode = prime * hashCode + ((getAwsAppSyncGraphQlApi() == null) ? 0 : getAwsAppSyncGraphQlApi().hashCode());
+        hashCode = prime * hashCode + ((getAwsEventSchemasRegistry() == null) ? 0 : getAwsEventSchemasRegistry().hashCode());
+        hashCode = prime * hashCode + ((getAwsGuardDutyDetector() == null) ? 0 : getAwsGuardDutyDetector().hashCode());
+        hashCode = prime * hashCode + ((getAwsStepFunctionStateMachine() == null) ? 0 : getAwsStepFunctionStateMachine().hashCode());
         return hashCode;
     }
 

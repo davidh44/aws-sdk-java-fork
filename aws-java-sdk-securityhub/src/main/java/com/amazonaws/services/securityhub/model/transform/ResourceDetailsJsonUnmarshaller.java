@@ -388,6 +388,26 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setAwsEc2RouteTable(AwsEc2RouteTableDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AwsAmazonMqBroker", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsAmazonMqBroker(AwsAmazonMqBrokerDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsAppSyncGraphQlApi", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsAppSyncGraphQlApi(AwsAppSyncGraphQlApiDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEventSchemasRegistry", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEventSchemasRegistry(AwsEventSchemasRegistryDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsGuardDutyDetector", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsGuardDutyDetector(AwsGuardDutyDetectorDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsStepFunctionStateMachine", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsStepFunctionStateMachine(AwsStepFunctionStateMachineDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
