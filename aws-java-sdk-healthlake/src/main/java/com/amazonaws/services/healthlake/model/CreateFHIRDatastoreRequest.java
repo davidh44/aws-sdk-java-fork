@@ -63,6 +63,12 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The configuration of the identity provider that you want to use for your Data Store.
+     * </p>
+     */
+    private IdentityProviderConfiguration identityProviderConfiguration;
 
     /**
      * <p>
@@ -366,6 +372,46 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The configuration of the identity provider that you want to use for your Data Store.
+     * </p>
+     * 
+     * @param identityProviderConfiguration
+     *        The configuration of the identity provider that you want to use for your Data Store.
+     */
+
+    public void setIdentityProviderConfiguration(IdentityProviderConfiguration identityProviderConfiguration) {
+        this.identityProviderConfiguration = identityProviderConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the identity provider that you want to use for your Data Store.
+     * </p>
+     * 
+     * @return The configuration of the identity provider that you want to use for your Data Store.
+     */
+
+    public IdentityProviderConfiguration getIdentityProviderConfiguration() {
+        return this.identityProviderConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the identity provider that you want to use for your Data Store.
+     * </p>
+     * 
+     * @param identityProviderConfiguration
+     *        The configuration of the identity provider that you want to use for your Data Store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFHIRDatastoreRequest withIdentityProviderConfiguration(IdentityProviderConfiguration identityProviderConfiguration) {
+        setIdentityProviderConfiguration(identityProviderConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -388,7 +434,9 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getIdentityProviderConfiguration() != null)
+            sb.append("IdentityProviderConfiguration: ").append(getIdentityProviderConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -427,6 +475,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getIdentityProviderConfiguration() == null ^ this.getIdentityProviderConfiguration() == null)
+            return false;
+        if (other.getIdentityProviderConfiguration() != null
+                && other.getIdentityProviderConfiguration().equals(this.getIdentityProviderConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -441,6 +494,7 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getPreloadDataConfig() == null) ? 0 : getPreloadDataConfig().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getIdentityProviderConfiguration() == null) ? 0 : getIdentityProviderConfiguration().hashCode());
         return hashCode;
     }
 

@@ -809,6 +809,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
+     * <p>
+     * For more information on storage types for Aurora DB clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     * >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for Multi-AZ DB
+     * clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     * >Settings for creating Multi-AZ DB clusters</a>.
+     * </p>
      */
     private String storageType;
     /**
@@ -6154,6 +6162,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
+     * <p>
+     * For more information on storage types for Aurora DB clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     * >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for Multi-AZ DB
+     * clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     * >Settings for creating Multi-AZ DB clusters</a>.
+     * </p>
      * 
      * @param storageType
      *        Specifies the storage type to be associated with the DB cluster.</p>
@@ -6172,6 +6188,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     *        </p>
+     *        <p>
+     *        For more information on storage types for Aurora DB clusters, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     *        >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for
+     *        Multi-AZ DB clusters, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     *        >Settings for creating Multi-AZ DB clusters</a>.
      */
 
     public void setStorageType(String storageType) {
@@ -6198,6 +6222,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
+     * <p>
+     * For more information on storage types for Aurora DB clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     * >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for Multi-AZ DB
+     * clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     * >Settings for creating Multi-AZ DB clusters</a>.
+     * </p>
      * 
      * @return Specifies the storage type to be associated with the DB cluster.</p>
      *         <p>
@@ -6215,6 +6247,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     *         </p>
+     *         <p>
+     *         For more information on storage types for Aurora DB clusters, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     *         >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for
+     *         Multi-AZ DB clusters, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     *         >Settings for creating Multi-AZ DB clusters</a>.
      */
 
     public String getStorageType() {
@@ -6241,6 +6281,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
+     * <p>
+     * For more information on storage types for Aurora DB clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     * >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for Multi-AZ DB
+     * clusters, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     * >Settings for creating Multi-AZ DB clusters</a>.
+     * </p>
      * 
      * @param storageType
      *        Specifies the storage type to be associated with the DB cluster.</p>
@@ -6259,6 +6307,14 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     *        </p>
+     *        <p>
+     *        For more information on storage types for Aurora DB clusters, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html#aurora-storage-type"
+     *        >Storage configurations for Amazon Aurora DB clusters</a>. For more information on storage types for
+     *        Multi-AZ DB clusters, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html#create-multi-az-db-cluster-settings"
+     *        >Settings for creating Multi-AZ DB clusters</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

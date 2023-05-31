@@ -1209,6 +1209,56 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String masterUserSecretKmsKeyId;
+    /**
+     * <p>
+     * The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to upgrade
+     * an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.
+     * </p>
+     * <p>
+     * Note the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can't convert a CDB to a non-CDB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a replica database.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert the existing custom parameter or option group when it has options or parameters that are
+     * permanent or persistent. In this situation, the DB instance reverts to the default option and parameter group. To
+     * avoid reverting to the default, specify a new parameter group with <code>--db-parameter-group-name</code> and a
+     * new option group with <code>--option-group-name</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String engine;
 
     /**
      * Default constructor for ModifyDBInstanceRequest object. Callers should use the setter or fluent setter (with...)
@@ -9251,6 +9301,307 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to upgrade
+     * an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.
+     * </p>
+     * <p>
+     * Note the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can't convert a CDB to a non-CDB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a replica database.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert the existing custom parameter or option group when it has options or parameters that are
+     * permanent or persistent. In this situation, the DB instance reverts to the default option and parameter group. To
+     * avoid reverting to the default, specify a new parameter group with <code>--db-parameter-group-name</code> and a
+     * new option group with <code>--option-group-name</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param engine
+     *        The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to
+     *        upgrade an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.</p>
+     *        <p>
+     *        Note the following requirements:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following limitations:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can't convert a CDB to a non-CDB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can't convert a replica database.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can't convert the existing custom parameter or option group when it has options or parameters that are
+     *        permanent or persistent. In this situation, the DB instance reverts to the default option and parameter
+     *        group. To avoid reverting to the default, specify a new parameter group with
+     *        <code>--db-parameter-group-name</code> and a new option group with <code>--option-group-name</code>.
+     *        </p>
+     *        </li>
+     */
+
+    public void setEngine(String engine) {
+        this.engine = engine;
+    }
+
+    /**
+     * <p>
+     * The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to upgrade
+     * an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.
+     * </p>
+     * <p>
+     * Note the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can't convert a CDB to a non-CDB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a replica database.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert the existing custom parameter or option group when it has options or parameters that are
+     * permanent or persistent. In this situation, the DB instance reverts to the default option and parameter group. To
+     * avoid reverting to the default, specify a new parameter group with <code>--db-parameter-group-name</code> and a
+     * new option group with <code>--option-group-name</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to
+     *         upgrade an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.</p>
+     *         <p>
+     *         Note the following requirements:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Note the following limitations:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You can't convert a CDB to a non-CDB.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You can't convert a replica database.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You can't convert the existing custom parameter or option group when it has options or parameters that
+     *         are permanent or persistent. In this situation, the DB instance reverts to the default option and
+     *         parameter group. To avoid reverting to the default, specify a new parameter group with
+     *         <code>--db-parameter-group-name</code> and a new option group with <code>--option-group-name</code>.
+     *         </p>
+     *         </li>
+     */
+
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * <p>
+     * The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to upgrade
+     * an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.
+     * </p>
+     * <p>
+     * Note the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note the following limitations:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You can't convert a CDB to a non-CDB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a replica database.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can't convert the existing custom parameter or option group when it has options or parameters that are
+     * permanent or persistent. In this situation, the DB instance reverts to the default option and parameter group. To
+     * avoid reverting to the default, specify a new parameter group with <code>--db-parameter-group-name</code> and a
+     * new option group with <code>--option-group-name</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param engine
+     *        The target Oracle DB engine when you convert a non-CDB to a CDB. This intermediate step is necessary to
+     *        upgrade an Oracle Database 19c non-CDB to an Oracle Database 21c CDB.</p>
+     *        <p>
+     *        Note the following requirements:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Make sure that you specify <code>oracle-ee-cdb</code> or <code>oracle-se2-cdb</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Make sure that your DB engine runs Oracle Database 19c with an April 2021 or later RU.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following limitations:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        You can't convert a CDB to a non-CDB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can't convert a replica database.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can't convert a non-CDB to a CDB and upgrade the engine version in the same command.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        You can't convert the existing custom parameter or option group when it has options or parameters that are
+     *        permanent or persistent. In this situation, the DB instance reverts to the default option and parameter
+     *        group. To avoid reverting to the default, specify a new parameter group with
+     *        <code>--db-parameter-group-name</code> and a new option group with <code>--option-group-name</code>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBInstanceRequest withEngine(String engine) {
+        setEngine(engine);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -9365,7 +9716,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getRotateMasterUserPassword() != null)
             sb.append("RotateMasterUserPassword: ").append(getRotateMasterUserPassword()).append(",");
         if (getMasterUserSecretKmsKeyId() != null)
-            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId());
+            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId()).append(",");
+        if (getEngine() != null)
+            sb.append("Engine: ").append(getEngine());
         sb.append("}");
         return sb.toString();
     }
@@ -9592,6 +9945,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getMasterUserSecretKmsKeyId() != null && other.getMasterUserSecretKmsKeyId().equals(this.getMasterUserSecretKmsKeyId()) == false)
             return false;
+        if (other.getEngine() == null ^ this.getEngine() == null)
+            return false;
+        if (other.getEngine() != null && other.getEngine().equals(this.getEngine()) == false)
+            return false;
         return true;
     }
 
@@ -9652,6 +10009,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getManageMasterUserPassword() == null) ? 0 : getManageMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getRotateMasterUserPassword() == null) ? 0 : getRotateMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecretKmsKeyId() == null) ? 0 : getMasterUserSecretKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         return hashCode;
     }
 

@@ -320,6 +320,10 @@ public class ModifyDBInstanceRequestMarshaller implements Marshaller<Request<Mod
             request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(modifyDBInstanceRequest.getMasterUserSecretKmsKeyId()));
         }
 
+        if (modifyDBInstanceRequest.getEngine() != null) {
+            request.addParameter("Engine", StringUtils.fromString(modifyDBInstanceRequest.getEngine()));
+        }
+
         return request;
     }
 

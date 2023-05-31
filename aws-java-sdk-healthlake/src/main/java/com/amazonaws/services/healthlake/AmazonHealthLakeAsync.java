@@ -378,7 +378,7 @@ public interface AmazonHealthLakeAsync extends AmazonHealthLake {
 
     /**
      * <p>
-     * Adds a user specifed key and value tag to a Data Store.
+     * Adds a user specified key and value tag to a Data Store.
      * </p>
      * 
      * @param tagResourceRequest
@@ -391,7 +391,7 @@ public interface AmazonHealthLakeAsync extends AmazonHealthLake {
 
     /**
      * <p>
-     * Adds a user specifed key and value tag to a Data Store.
+     * Adds a user specified key and value tag to a Data Store.
      * </p>
      * 
      * @param tagResourceRequest

@@ -31,7 +31,7 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
     private String datastoreId;
     /**
      * <p>
-     * The datastore ARN is generated during the creation of the Data Store and can be found in the output from the
+     * The Data Store ARN is generated during the creation of the Data Store and can be found in the output from the
      * initial Data Store creation call.
      * </p>
      */
@@ -44,7 +44,7 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
     private String datastoreStatus;
     /**
      * <p>
-     * The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     * The AWS endpoint for the created Data Store.
      * </p>
      */
     private String datastoreEndpoint;
@@ -91,12 +91,12 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The datastore ARN is generated during the creation of the Data Store and can be found in the output from the
+     * The Data Store ARN is generated during the creation of the Data Store and can be found in the output from the
      * initial Data Store creation call.
      * </p>
      * 
      * @param datastoreArn
-     *        The datastore ARN is generated during the creation of the Data Store and can be found in the output from
+     *        The Data Store ARN is generated during the creation of the Data Store and can be found in the output from
      *        the initial Data Store creation call.
      */
 
@@ -106,11 +106,11 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The datastore ARN is generated during the creation of the Data Store and can be found in the output from the
+     * The Data Store ARN is generated during the creation of the Data Store and can be found in the output from the
      * initial Data Store creation call.
      * </p>
      * 
-     * @return The datastore ARN is generated during the creation of the Data Store and can be found in the output from
+     * @return The Data Store ARN is generated during the creation of the Data Store and can be found in the output from
      *         the initial Data Store creation call.
      */
 
@@ -120,12 +120,12 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The datastore ARN is generated during the creation of the Data Store and can be found in the output from the
+     * The Data Store ARN is generated during the creation of the Data Store and can be found in the output from the
      * initial Data Store creation call.
      * </p>
      * 
      * @param datastoreArn
-     *        The datastore ARN is generated during the creation of the Data Store and can be found in the output from
+     *        The Data Store ARN is generated during the creation of the Data Store and can be found in the output from
      *        the initial Data Store creation call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -196,11 +196,11 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     * The AWS endpoint for the created Data Store.
      * </p>
      * 
      * @param datastoreEndpoint
-     *        The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     *        The AWS endpoint for the created Data Store.
      */
 
     public void setDatastoreEndpoint(String datastoreEndpoint) {
@@ -209,10 +209,10 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     * The AWS endpoint for the created Data Store.
      * </p>
      * 
-     * @return The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     * @return The AWS endpoint for the created Data Store.
      */
 
     public String getDatastoreEndpoint() {
@@ -221,11 +221,11 @@ public class CreateFHIRDatastoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     * The AWS endpoint for the created Data Store.
      * </p>
      * 
      * @param datastoreEndpoint
-     *        The AWS endpoint for the created Data Store. For preview, only US-east-1 endpoints are supported.
+     *        The AWS endpoint for the created Data Store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

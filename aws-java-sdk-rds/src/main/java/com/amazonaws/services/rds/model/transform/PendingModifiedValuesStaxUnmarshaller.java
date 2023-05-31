@@ -144,6 +144,11 @@ public class PendingModifiedValuesStaxUnmarshaller implements Unmarshaller<Pendi
                     pendingModifiedValues.setStorageThroughput(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Engine", targetDepth)) {
+                    pendingModifiedValues.setEngine(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return pendingModifiedValues;

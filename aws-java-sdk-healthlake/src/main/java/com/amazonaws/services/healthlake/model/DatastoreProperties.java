@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Displays the properties of the Data Store, including the ID, Arn, name, and the status of the Data Store.
+ * Displays the properties of the Data Store, including the ID, ARN, name, and the status of the Data Store.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/DatastoreProperties" target="_top">AWS API
@@ -83,6 +83,12 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private PreloadDataConfig preloadDataConfig;
+    /**
+     * <p>
+     * The identity provider that you selected when you created the Data Store.
+     * </p>
+     */
+    private IdentityProviderConfiguration identityProviderConfiguration;
 
     /**
      * <p>
@@ -489,6 +495,46 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The identity provider that you selected when you created the Data Store.
+     * </p>
+     * 
+     * @param identityProviderConfiguration
+     *        The identity provider that you selected when you created the Data Store.
+     */
+
+    public void setIdentityProviderConfiguration(IdentityProviderConfiguration identityProviderConfiguration) {
+        this.identityProviderConfiguration = identityProviderConfiguration;
+    }
+
+    /**
+     * <p>
+     * The identity provider that you selected when you created the Data Store.
+     * </p>
+     * 
+     * @return The identity provider that you selected when you created the Data Store.
+     */
+
+    public IdentityProviderConfiguration getIdentityProviderConfiguration() {
+        return this.identityProviderConfiguration;
+    }
+
+    /**
+     * <p>
+     * The identity provider that you selected when you created the Data Store.
+     * </p>
+     * 
+     * @param identityProviderConfiguration
+     *        The identity provider that you selected when you created the Data Store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DatastoreProperties withIdentityProviderConfiguration(IdentityProviderConfiguration identityProviderConfiguration) {
+        setIdentityProviderConfiguration(identityProviderConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -517,7 +563,9 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
         if (getSseConfiguration() != null)
             sb.append("SseConfiguration: ").append(getSseConfiguration()).append(",");
         if (getPreloadDataConfig() != null)
-            sb.append("PreloadDataConfig: ").append(getPreloadDataConfig());
+            sb.append("PreloadDataConfig: ").append(getPreloadDataConfig()).append(",");
+        if (getIdentityProviderConfiguration() != null)
+            sb.append("IdentityProviderConfiguration: ").append(getIdentityProviderConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -568,6 +616,11 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getPreloadDataConfig() != null && other.getPreloadDataConfig().equals(this.getPreloadDataConfig()) == false)
             return false;
+        if (other.getIdentityProviderConfiguration() == null ^ this.getIdentityProviderConfiguration() == null)
+            return false;
+        if (other.getIdentityProviderConfiguration() != null
+                && other.getIdentityProviderConfiguration().equals(this.getIdentityProviderConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -585,6 +638,7 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getDatastoreEndpoint() == null) ? 0 : getDatastoreEndpoint().hashCode());
         hashCode = prime * hashCode + ((getSseConfiguration() == null) ? 0 : getSseConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPreloadDataConfig() == null) ? 0 : getPreloadDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getIdentityProviderConfiguration() == null) ? 0 : getIdentityProviderConfiguration().hashCode());
         return hashCode;
     }
 

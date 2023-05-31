@@ -81,20 +81,20 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.healthlake.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.healthlake.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.healthlake.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.healthlake.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.healthlake.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.healthlake.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.healthlake.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.healthlake.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.healthlake.model.AmazonHealthLakeException.class));
 
     public static AmazonHealthLakeClientBuilder builder() {
@@ -848,7 +848,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Adds a user specifed key and value tag to a Data Store.
+     * Adds a user specified key and value tag to a Data Store.
      * </p>
      * 
      * @param tagResourceRequest

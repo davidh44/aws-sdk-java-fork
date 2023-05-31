@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that specifies organization managed rule metadata such as resource type and ID of Amazon Web Services
- * resource along with the rule identifier. It also provides the frequency with which you want Config to run evaluations
- * for the rule if the trigger type is periodic.
+ * organization managed rule metadata such as resource type and ID of Amazon Web Services resource along with the rule
+ * identifier. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger
+ * type is periodic.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationManagedRuleMetadata"

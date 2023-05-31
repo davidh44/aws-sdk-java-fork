@@ -42,7 +42,8 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
     private String jobName;
     /**
      * <p>
-     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED,
+     * FAILED.
      * </p>
      */
     private String jobStatus;
@@ -167,11 +168,13 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED,
+     * FAILED.
      * </p>
      * 
      * @param jobStatus
-     *        The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     *        The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS,
+     *        COMPLETED, FAILED.
      * @see JobStatus
      */
 
@@ -181,10 +184,12 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED,
+     * FAILED.
      * </p>
      * 
-     * @return The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     * @return The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS,
+     *         COMPLETED, FAILED.
      * @see JobStatus
      */
 
@@ -194,11 +199,13 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED,
+     * FAILED.
      * </p>
      * 
      * @param jobStatus
-     *        The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     *        The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS,
+     *        COMPLETED, FAILED.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see JobStatus
      */
@@ -210,11 +217,13 @@ public class ImportJobProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     * The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS, COMPLETED,
+     * FAILED.
      * </p>
      * 
      * @param jobStatus
-     *        The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED, FAILED.
+     *        The job status for an Import job. Possible statuses are SUBMITTED, IN_PROGRESS, COMPLETED_WITH_ERRORS,
+     *        COMPLETED, FAILED.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see JobStatus
      */

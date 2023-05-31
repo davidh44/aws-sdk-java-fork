@@ -66,6 +66,12 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
      * A list of tags to apply to the application.
      * </p>
      */
@@ -353,6 +359,46 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the role associated with the application.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the role associated with the application.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the role associated with the application.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of the role associated with the application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateApplicationRequest withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of tags to apply to the application.
      * </p>
      * 
@@ -443,6 +489,8 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -483,6 +531,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
+            return false;
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -501,6 +553,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getEngineType() == null) ? 0 : getEngineType().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

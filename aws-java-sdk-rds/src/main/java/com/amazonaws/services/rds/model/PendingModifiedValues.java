@@ -152,6 +152,12 @@ public class PendingModifiedValues implements Serializable, Cloneable {
      * </p>
      */
     private Integer storageThroughput;
+    /**
+     * <p>
+     * The database engine of the DB instance.
+     * </p>
+     */
+    private String engine;
 
     /**
      * <p>
@@ -1067,6 +1073,46 @@ public class PendingModifiedValues implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The database engine of the DB instance.
+     * </p>
+     * 
+     * @param engine
+     *        The database engine of the DB instance.
+     */
+
+    public void setEngine(String engine) {
+        this.engine = engine;
+    }
+
+    /**
+     * <p>
+     * The database engine of the DB instance.
+     * </p>
+     * 
+     * @return The database engine of the DB instance.
+     */
+
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * <p>
+     * The database engine of the DB instance.
+     * </p>
+     * 
+     * @param engine
+     *        The database engine of the DB instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PendingModifiedValues withEngine(String engine) {
+        setEngine(engine);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1115,7 +1161,9 @@ public class PendingModifiedValues implements Serializable, Cloneable {
         if (getResumeFullAutomationModeTime() != null)
             sb.append("ResumeFullAutomationModeTime: ").append(getResumeFullAutomationModeTime()).append(",");
         if (getStorageThroughput() != null)
-            sb.append("StorageThroughput: ").append(getStorageThroughput());
+            sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
+        if (getEngine() != null)
+            sb.append("Engine: ").append(getEngine());
         sb.append("}");
         return sb.toString();
     }
@@ -1207,6 +1255,10 @@ public class PendingModifiedValues implements Serializable, Cloneable {
             return false;
         if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
             return false;
+        if (other.getEngine() == null ^ this.getEngine() == null)
+            return false;
+        if (other.getEngine() != null && other.getEngine().equals(this.getEngine()) == false)
+            return false;
         return true;
     }
 
@@ -1234,6 +1286,7 @@ public class PendingModifiedValues implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAutomationMode() == null) ? 0 : getAutomationMode().hashCode());
         hashCode = prime * hashCode + ((getResumeFullAutomationModeTime() == null) ? 0 : getResumeFullAutomationModeTime().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
+        hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         return hashCode;
     }
 
