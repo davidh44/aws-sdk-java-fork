@@ -30,31 +30,31 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.
+     * The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.
      * </p>
      * <p>
-     * If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK encodes
-     * Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK of a different
-     * language or are receiving related errors, try to Base64 encode your data.
+     * If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or PHP, the
+     * SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are using an SDK for
+     * a different language or receiving related errors, try to base64 encode your data.
      * </p>
      */
     private java.nio.ByteBuffer body;
     /**
      * <p>
-     * The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
-     * access to. The file must be a zip format file and can't exceed 20MB.
+     * The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
+     * access to. The file must be a zip format file and can't exceed 20 MB.
      * </p>
      */
     private String s3Uri;
 
     /**
      * <p>
-     * The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.
+     * The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.
      * </p>
      * <p>
-     * If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK encodes
-     * Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK of a different
-     * language or are receiving related errors, try to Base64 encode your data.
+     * If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or PHP, the
+     * SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are using an SDK for
+     * a different language or receiving related errors, try to base64 encode your data.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -68,11 +68,11 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param body
-     *        The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.</p>
+     *        The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.</p>
      *        <p>
-     *        If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK
-     *        encodes Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK
-     *        of a different language or are receiving related errors, try to Base64 encode your data.
+     *        If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or
+     *        PHP, the SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are
+     *        using an SDK for a different language or receiving related errors, try to base64 encode your data.
      */
 
     public void setBody(java.nio.ByteBuffer body) {
@@ -81,12 +81,12 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.
+     * The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.
      * </p>
      * <p>
-     * If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK encodes
-     * Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK of a different
-     * language or are receiving related errors, try to Base64 encode your data.
+     * If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or PHP, the
+     * SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are using an SDK for
+     * a different language or receiving related errors, try to base64 encode your data.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -96,11 +96,11 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
      * {@code position}.
      * </p>
      * 
-     * @return The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.</p>
+     * @return The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.</p>
      *         <p>
-     *         If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK
-     *         encodes Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK
-     *         of a different language or are receiving related errors, try to Base64 encode your data.
+     *         If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or
+     *         PHP, the SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are
+     *         using an SDK for a different language or receiving related errors, try to base64 encode your data.
      */
 
     public java.nio.ByteBuffer getBody() {
@@ -109,12 +109,12 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.
+     * The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.
      * </p>
      * <p>
-     * If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK encodes
-     * Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK of a different
-     * language or are receiving related errors, try to Base64 encode your data.
+     * If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or PHP, the
+     * SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are using an SDK for
+     * a different language or receiving related errors, try to base64 encode your data.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -128,11 +128,11 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param body
-     *        The bytes of the Base64 encoded asset bundle import zip file. This file can't exceed 20MB.</p>
+     *        The bytes of the base64 encoded asset bundle import zip file. This file can't exceed 20 MB.</p>
      *        <p>
-     *        If you are calling the APIs from the Amazon Web Services Java, JavaScript, Python, or PHP SDKs, the SDK
-     *        encodes Base64 automatically to allow the direct setting of the zip file's bytes. If you are using a SDK
-     *        of a different language or are receiving related errors, try to Base64 encode your data.
+     *        If you are calling the API operations from the Amazon Web Services SDK for Java, JavaScript, Python, or
+     *        PHP, the SDK encodes base64 automatically to allow the direct setting of the zip file's bytes. If you are
+     *        using an SDK for a different language or receiving related errors, try to base64 encode your data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,13 +143,13 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
-     * access to. The file must be a zip format file and can't exceed 20MB.
+     * The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
+     * access to. The file must be a zip format file and can't exceed 20 MB.
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has
-     *        read access to. The file must be a zip format file and can't exceed 20MB.
+     *        The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has
+     *        read access to. The file must be a zip format file and can't exceed 20 MB.
      */
 
     public void setS3Uri(String s3Uri) {
@@ -158,12 +158,12 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
-     * access to. The file must be a zip format file and can't exceed 20MB.
+     * The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
+     * access to. The file must be a zip format file and can't exceed 20 MB.
      * </p>
      * 
-     * @return The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has
-     *         read access to. The file must be a zip format file and can't exceed 20MB.
+     * @return The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has
+     *         read access to. The file must be a zip format file and can't exceed 20 MB.
      */
 
     public String getS3Uri() {
@@ -172,13 +172,13 @@ public class AssetBundleImportSource implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
-     * access to. The file must be a zip format file and can't exceed 20MB.
+     * The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has read
+     * access to. The file must be a zip format file and can't exceed 20 MB.
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 uri for an asset bundle import file that exists in an Amazon S3 bucket that the caller has
-     *        read access to. The file must be a zip format file and can't exceed 20MB.
+     *        The Amazon S3 URI for an asset bundle import file that exists in an Amazon S3 bucket that the caller has
+     *        read access to. The file must be a zip format file and can't exceed 20 MB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

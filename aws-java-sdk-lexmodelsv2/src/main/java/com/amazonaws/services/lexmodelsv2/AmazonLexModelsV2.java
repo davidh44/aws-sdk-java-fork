@@ -489,6 +489,33 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Create a report that describes the differences between the bot and the test set.
+     * </p>
+     * 
+     * @param createTestSetDiscrepancyReportRequest
+     * @return Result of the CreateTestSetDiscrepancyReport operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @sample AmazonLexModelsV2.CreateTestSetDiscrepancyReport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateTestSetDiscrepancyReport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTestSetDiscrepancyReportResult createTestSetDiscrepancyReport(CreateTestSetDiscrepancyReportRequest createTestSetDiscrepancyReportRequest);
+
+    /**
+     * <p>
      * Gets a pre-signed S3 write URL that you use to upload the zip archive when importing a bot or a bot locale.
      * </p>
      * 
@@ -848,6 +875,33 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * The action to delete the selected test set.
+     * </p>
+     * 
+     * @param deleteTestSetRequest
+     * @return Result of the DeleteTestSet operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DeleteTestSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteTestSet" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteTestSetResult deleteTestSet(DeleteTestSetRequest deleteTestSetRequest);
+
+    /**
+     * <p>
      * Deletes stored utterances.
      * </p>
      * <p>
@@ -1156,6 +1210,126 @@ public interface AmazonLexModelsV2 {
      *      API Documentation</a>
      */
     DescribeSlotTypeResult describeSlotType(DescribeSlotTypeRequest describeSlotTypeRequest);
+
+    /**
+     * <p>
+     * Gets metadata information about the test execution.
+     * </p>
+     * 
+     * @param describeTestExecutionRequest
+     * @return Result of the DescribeTestExecution operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeTestExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeTestExecution"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTestExecutionResult describeTestExecution(DescribeTestExecutionRequest describeTestExecutionRequest);
+
+    /**
+     * <p>
+     * Gets metadata information about the test set.
+     * </p>
+     * 
+     * @param describeTestSetRequest
+     * @return Result of the DescribeTestSet operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeTestSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeTestSet" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeTestSetResult describeTestSet(DescribeTestSetRequest describeTestSetRequest);
+
+    /**
+     * <p>
+     * Gets metadata information about the test set discrepancy report.
+     * </p>
+     * 
+     * @param describeTestSetDiscrepancyReportRequest
+     * @return Result of the DescribeTestSetDiscrepancyReport operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeTestSetDiscrepancyReport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeTestSetDiscrepancyReport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTestSetDiscrepancyReportResult describeTestSetDiscrepancyReport(DescribeTestSetDiscrepancyReportRequest describeTestSetDiscrepancyReportRequest);
+
+    /**
+     * <p>
+     * Gets metadata information about the test set generation.
+     * </p>
+     * 
+     * @param describeTestSetGenerationRequest
+     * @return Result of the DescribeTestSetGeneration operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeTestSetGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeTestSetGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTestSetGenerationResult describeTestSetGeneration(DescribeTestSetGenerationRequest describeTestSetGenerationRequest);
+
+    /**
+     * <p>
+     * The pre-signed Amazon S3 URL to download the test execution result artifacts.
+     * </p>
+     * 
+     * @param getTestExecutionArtifactsUrlRequest
+     * @return Result of the GetTestExecutionArtifactsUrl operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.GetTestExecutionArtifactsUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/GetTestExecutionArtifactsUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTestExecutionArtifactsUrlResult getTestExecutionArtifactsUrl(GetTestExecutionArtifactsUrlRequest getTestExecutionArtifactsUrlRequest);
 
     /**
      * <p>
@@ -1548,6 +1722,96 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Gets a list of test execution result items.
+     * </p>
+     * 
+     * @param listTestExecutionResultItemsRequest
+     * @return Result of the ListTestExecutionResultItems operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListTestExecutionResultItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListTestExecutionResultItems"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTestExecutionResultItemsResult listTestExecutionResultItems(ListTestExecutionResultItemsRequest listTestExecutionResultItemsRequest);
+
+    /**
+     * <p>
+     * The list of test set executions.
+     * </p>
+     * 
+     * @param listTestExecutionsRequest
+     * @return Result of the ListTestExecutions operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListTestExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListTestExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTestExecutionsResult listTestExecutions(ListTestExecutionsRequest listTestExecutionsRequest);
+
+    /**
+     * <p>
+     * The list of test set records.
+     * </p>
+     * 
+     * @param listTestSetRecordsRequest
+     * @return Result of the ListTestSetRecords operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListTestSetRecords
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListTestSetRecords"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTestSetRecordsResult listTestSetRecords(ListTestSetRecordsRequest listTestSetRecordsRequest);
+
+    /**
+     * <p>
+     * The list of the test sets
+     * </p>
+     * 
+     * @param listTestSetsRequest
+     * @return Result of the ListTestSets operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListTestSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListTestSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListTestSetsResult listTestSets(ListTestSetsRequest listTestSetsRequest);
+
+    /**
+     * <p>
      * Search for associated transcripts that meet the specified criteria.
      * </p>
      * 
@@ -1629,6 +1893,60 @@ public interface AmazonLexModelsV2 {
      *      Documentation</a>
      */
     StartImportResult startImport(StartImportRequest startImportRequest);
+
+    /**
+     * <p>
+     * The action to start test set execution.
+     * </p>
+     * 
+     * @param startTestExecutionRequest
+     * @return Result of the StartTestExecution operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.StartTestExecution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/StartTestExecution"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartTestExecutionResult startTestExecution(StartTestExecutionRequest startTestExecutionRequest);
+
+    /**
+     * <p>
+     * The action to start the generation of test set.
+     * </p>
+     * 
+     * @param startTestSetGenerationRequest
+     * @return Result of the StartTestSetGeneration operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.StartTestSetGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/StartTestSetGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartTestSetGenerationResult startTestSetGeneration(StartTestSetGenerationRequest startTestSetGenerationRequest);
 
     /**
      * <p>
@@ -1963,6 +2281,33 @@ public interface AmazonLexModelsV2 {
      *      API Documentation</a>
      */
     UpdateSlotTypeResult updateSlotType(UpdateSlotTypeRequest updateSlotTypeRequest);
+
+    /**
+     * <p>
+     * The action to update the test set.
+     * </p>
+     * 
+     * @param updateTestSetRequest
+     * @return Result of the UpdateTestSet operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.UpdateTestSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateTestSet" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateTestSetResult updateTestSet(UpdateTestSetRequest updateTestSetRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

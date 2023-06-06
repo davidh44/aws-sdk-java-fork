@@ -541,6 +541,40 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateTestSetDiscrepancyReportResult> createTestSetDiscrepancyReportAsync(CreateTestSetDiscrepancyReportRequest request) {
+
+        return createTestSetDiscrepancyReportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTestSetDiscrepancyReportResult> createTestSetDiscrepancyReportAsync(
+            final CreateTestSetDiscrepancyReportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateTestSetDiscrepancyReportRequest, CreateTestSetDiscrepancyReportResult> asyncHandler) {
+        final CreateTestSetDiscrepancyReportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateTestSetDiscrepancyReportResult>() {
+            @Override
+            public CreateTestSetDiscrepancyReportResult call() throws Exception {
+                CreateTestSetDiscrepancyReportResult result = null;
+
+                try {
+                    result = executeCreateTestSetDiscrepancyReport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateUploadUrlResult> createUploadUrlAsync(CreateUploadUrlRequest request) {
 
         return createUploadUrlAsync(request, null);
@@ -955,6 +989,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeDeleteSlotType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTestSetResult> deleteTestSetAsync(DeleteTestSetRequest request) {
+
+        return deleteTestSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTestSetResult> deleteTestSetAsync(final DeleteTestSetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTestSetRequest, DeleteTestSetResult> asyncHandler) {
+        final DeleteTestSetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteTestSetResult>() {
+            @Override
+            public DeleteTestSetResult call() throws Exception {
+                DeleteTestSetResult result = null;
+
+                try {
+                    result = executeDeleteTestSet(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1386,6 +1453,173 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeDescribeSlotType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestExecutionResult> describeTestExecutionAsync(DescribeTestExecutionRequest request) {
+
+        return describeTestExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestExecutionResult> describeTestExecutionAsync(final DescribeTestExecutionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTestExecutionRequest, DescribeTestExecutionResult> asyncHandler) {
+        final DescribeTestExecutionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTestExecutionResult>() {
+            @Override
+            public DescribeTestExecutionResult call() throws Exception {
+                DescribeTestExecutionResult result = null;
+
+                try {
+                    result = executeDescribeTestExecution(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetResult> describeTestSetAsync(DescribeTestSetRequest request) {
+
+        return describeTestSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetResult> describeTestSetAsync(final DescribeTestSetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTestSetRequest, DescribeTestSetResult> asyncHandler) {
+        final DescribeTestSetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTestSetResult>() {
+            @Override
+            public DescribeTestSetResult call() throws Exception {
+                DescribeTestSetResult result = null;
+
+                try {
+                    result = executeDescribeTestSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetDiscrepancyReportResult> describeTestSetDiscrepancyReportAsync(
+            DescribeTestSetDiscrepancyReportRequest request) {
+
+        return describeTestSetDiscrepancyReportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetDiscrepancyReportResult> describeTestSetDiscrepancyReportAsync(
+            final DescribeTestSetDiscrepancyReportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTestSetDiscrepancyReportRequest, DescribeTestSetDiscrepancyReportResult> asyncHandler) {
+        final DescribeTestSetDiscrepancyReportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTestSetDiscrepancyReportResult>() {
+            @Override
+            public DescribeTestSetDiscrepancyReportResult call() throws Exception {
+                DescribeTestSetDiscrepancyReportResult result = null;
+
+                try {
+                    result = executeDescribeTestSetDiscrepancyReport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetGenerationResult> describeTestSetGenerationAsync(DescribeTestSetGenerationRequest request) {
+
+        return describeTestSetGenerationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetGenerationResult> describeTestSetGenerationAsync(final DescribeTestSetGenerationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTestSetGenerationRequest, DescribeTestSetGenerationResult> asyncHandler) {
+        final DescribeTestSetGenerationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTestSetGenerationResult>() {
+            @Override
+            public DescribeTestSetGenerationResult call() throws Exception {
+                DescribeTestSetGenerationResult result = null;
+
+                try {
+                    result = executeDescribeTestSetGeneration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTestExecutionArtifactsUrlResult> getTestExecutionArtifactsUrlAsync(GetTestExecutionArtifactsUrlRequest request) {
+
+        return getTestExecutionArtifactsUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTestExecutionArtifactsUrlResult> getTestExecutionArtifactsUrlAsync(final GetTestExecutionArtifactsUrlRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTestExecutionArtifactsUrlRequest, GetTestExecutionArtifactsUrlResult> asyncHandler) {
+        final GetTestExecutionArtifactsUrlRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTestExecutionArtifactsUrlResult>() {
+            @Override
+            public GetTestExecutionArtifactsUrlResult call() throws Exception {
+                GetTestExecutionArtifactsUrlResult result = null;
+
+                try {
+                    result = executeGetTestExecutionArtifactsUrl(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1930,6 +2164,138 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListTestExecutionResultItemsResult> listTestExecutionResultItemsAsync(ListTestExecutionResultItemsRequest request) {
+
+        return listTestExecutionResultItemsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestExecutionResultItemsResult> listTestExecutionResultItemsAsync(final ListTestExecutionResultItemsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTestExecutionResultItemsRequest, ListTestExecutionResultItemsResult> asyncHandler) {
+        final ListTestExecutionResultItemsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTestExecutionResultItemsResult>() {
+            @Override
+            public ListTestExecutionResultItemsResult call() throws Exception {
+                ListTestExecutionResultItemsResult result = null;
+
+                try {
+                    result = executeListTestExecutionResultItems(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestExecutionsResult> listTestExecutionsAsync(ListTestExecutionsRequest request) {
+
+        return listTestExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestExecutionsResult> listTestExecutionsAsync(final ListTestExecutionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTestExecutionsRequest, ListTestExecutionsResult> asyncHandler) {
+        final ListTestExecutionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTestExecutionsResult>() {
+            @Override
+            public ListTestExecutionsResult call() throws Exception {
+                ListTestExecutionsResult result = null;
+
+                try {
+                    result = executeListTestExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetRecordsResult> listTestSetRecordsAsync(ListTestSetRecordsRequest request) {
+
+        return listTestSetRecordsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetRecordsResult> listTestSetRecordsAsync(final ListTestSetRecordsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTestSetRecordsRequest, ListTestSetRecordsResult> asyncHandler) {
+        final ListTestSetRecordsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTestSetRecordsResult>() {
+            @Override
+            public ListTestSetRecordsResult call() throws Exception {
+                ListTestSetRecordsResult result = null;
+
+                try {
+                    result = executeListTestSetRecords(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetsResult> listTestSetsAsync(ListTestSetsRequest request) {
+
+        return listTestSetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetsResult> listTestSetsAsync(final ListTestSetsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTestSetsRequest, ListTestSetsResult> asyncHandler) {
+        final ListTestSetsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTestSetsResult>() {
+            @Override
+            public ListTestSetsResult call() throws Exception {
+                ListTestSetsResult result = null;
+
+                try {
+                    result = executeListTestSets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchAssociatedTranscriptsResult> searchAssociatedTranscriptsAsync(SearchAssociatedTranscriptsRequest request) {
 
         return searchAssociatedTranscriptsAsync(request, null);
@@ -2013,6 +2379,72 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeStartImport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestExecutionResult> startTestExecutionAsync(StartTestExecutionRequest request) {
+
+        return startTestExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestExecutionResult> startTestExecutionAsync(final StartTestExecutionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartTestExecutionRequest, StartTestExecutionResult> asyncHandler) {
+        final StartTestExecutionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartTestExecutionResult>() {
+            @Override
+            public StartTestExecutionResult call() throws Exception {
+                StartTestExecutionResult result = null;
+
+                try {
+                    result = executeStartTestExecution(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestSetGenerationResult> startTestSetGenerationAsync(StartTestSetGenerationRequest request) {
+
+        return startTestSetGenerationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestSetGenerationResult> startTestSetGenerationAsync(final StartTestSetGenerationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartTestSetGenerationRequest, StartTestSetGenerationResult> asyncHandler) {
+        final StartTestSetGenerationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartTestSetGenerationResult>() {
+            @Override
+            public StartTestSetGenerationResult call() throws Exception {
+                StartTestSetGenerationResult result = null;
+
+                try {
+                    result = executeStartTestSetGeneration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2409,6 +2841,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeUpdateSlotType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTestSetResult> updateTestSetAsync(UpdateTestSetRequest request) {
+
+        return updateTestSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTestSetResult> updateTestSetAsync(final UpdateTestSetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateTestSetRequest, UpdateTestSetResult> asyncHandler) {
+        final UpdateTestSetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateTestSetResult>() {
+            @Override
+            public UpdateTestSetResult call() throws Exception {
+                UpdateTestSetResult result = null;
+
+                try {
+                    result = executeUpdateTestSet(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

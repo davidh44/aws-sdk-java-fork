@@ -202,7 +202,7 @@ public interface AmazonSQS {
      * </li>
      * <li>
      * <p>
-     * An Amazon SQS policy can have a maximum of 7 actions.
+     * An Amazon SQS policy can have a maximum of seven actions per statement.
      * </p>
      * </li>
      * <li>
@@ -211,23 +211,17 @@ public interface AmazonSQS {
      * <code>RemovePermission</code>, and <code>SetQueueAttributes</code> actions in your IAM policy.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Amazon SQS <code>AddPermission</code> does not support adding a non-account principal.
+     * </p>
+     * </li>
      * </ul>
-     * </note>
-     * <p>
-     * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values
-     * of <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.1=first</code>
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.2=second</code>
-     * </p>
-     * <note>
+     * </note> <note>
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -235,7 +229,7 @@ public interface AmazonSQS {
      * @return Result of the AddPermission operation returned by the service.
      * @throws OverLimitException
      *         The specified action violates a limit. For example, <code>ReceiveMessage</code> returns this error if the
-     *         maximum number of inflight messages is reached and <code>AddPermission</code> returns this error if the
+     *         maximum number of in flight messages is reached and <code>AddPermission</code> returns this error if the
      *         maximum number of permissions for the queue is reached.
      * @sample AmazonSQS.AddPermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/AddPermission" target="_top">AWS API
@@ -252,16 +246,49 @@ public interface AmazonSQS {
 
     /**
      * <p>
+     * Cancels a specified message movement task.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * A message movement can only be cancelled when the current status is RUNNING.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Cancelling a message movement task does not revert the messages that have already been moved. It can only stop
+     * the messages that have not been moved yet.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param cancelMessageMoveTaskRequest
+     * @return Result of the CancelMessageMoveTask operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more specified resources don't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @sample AmazonSQS.CancelMessageMoveTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/CancelMessageMoveTask" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CancelMessageMoveTaskResult cancelMessageMoveTask(CancelMessageMoveTaskRequest cancelMessageMoveTaskRequest);
+
+    /**
+     * <p>
      * Changes the visibility timeout of a specified message in a queue to a new value. The default visibility timeout
      * for a message is 30 seconds. The minimum is 0 seconds. The maximum is 12 hours. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html">
      * Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * <p>
-     * For example, you have a message with a visibility timeout of 5 minutes. After 3 minutes, you call
-     * <code>ChangeMessageVisibility</code> with a timeout of 10 minutes. You can continue to call
-     * <code>ChangeMessageVisibility</code> to extend the visibility timeout to the maximum allowed time. If you try to
-     * extend the visibility timeout beyond the maximum, your request is rejected.
+     * For example, if the default timeout for a queue is 60 seconds, 15 seconds have elapsed since you received the
+     * message, and you send a ChangeMessageVisibility call with <code>VisibilityTimeout</code> set to 10 seconds, the
+     * 10 seconds begin to count from the time that you make the <code>ChangeMessageVisibility</code> call. Thus, any
+     * attempt to change the visibility timeout or to delete that message 10 seconds after you initially change the
+     * visibility timeout (a total of 25 seconds) might result in an error.
      * </p>
      * <p>
      * An Amazon SQS message has three basic states:
@@ -287,14 +314,14 @@ public interface AmazonSQS {
      * A message is considered to be <i>stored</i> after it is sent to a queue by a producer, but not yet received from
      * the queue by a consumer (that is, between states 1 and 2). There is no limit to the number of stored messages. A
      * message is considered to be <i>in flight</i> after it is received from a queue by a consumer, but not yet deleted
-     * from the queue (that is, between states 2 and 3). There is a limit to the number of inflight messages.
+     * from the queue (that is, between states 2 and 3). There is a limit to the number of in flight messages.
      * </p>
      * <p>
-     * Limits that apply to inflight messages are unrelated to the <i>unlimited</i> number of stored messages.
+     * Limits that apply to in flight messages are unrelated to the <i>unlimited</i> number of stored messages.
      * </p>
      * <p>
      * For most standard queues (depending on queue traffic and message backlog), there can be a maximum of
-     * approximately 120,000 inflight messages (received from a queue by a consumer, but not yet deleted from the
+     * approximately 120,000 in flight messages (received from a queue by a consumer, but not yet deleted from the
      * queue). If you reach this limit, Amazon SQS returns the <code>OverLimit</code> error message. To avoid reaching
      * the limit, you should delete messages from the queue after they're processed. You can also increase the number of
      * queues you use to process your messages. To request a limit increase, <a href=
@@ -302,8 +329,8 @@ public interface AmazonSQS {
      * >file a support request</a>.
      * </p>
      * <p>
-     * For FIFO queues, there can be a maximum of 20,000 inflight messages (received from a queue by a consumer, but not
-     * yet deleted from the queue). If you reach this limit, Amazon SQS returns no error messages.
+     * For FIFO queues, there can be a maximum of 20,000 in flight messages (received from a queue by a consumer, but
+     * not yet deleted from the queue). If you reach this limit, Amazon SQS returns no error messages.
      * </p>
      * <important>
      * <p>
@@ -351,16 +378,6 @@ public interface AmazonSQS {
      * for batch errors even when the call returns an HTTP status code of <code>200</code>.
      * </p>
      * </important>
-     * <p>
-     * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values
-     * of <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.1=first</code>
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.2=second</code>
-     * </p>
      * 
      * @param changeMessageVisibilityBatchRequest
      * @return Result of the ChangeMessageVisibilityBatch operation returned by the service.
@@ -444,21 +461,11 @@ public interface AmazonSQS {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values
-     * of <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.1=first</code>
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.2=second</code>
-     * </p>
      * <note>
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -495,7 +502,7 @@ public interface AmazonSQS {
      * The <code>ReceiptHandle</code> is associated with a <i>specific instance</i> of receiving a message. If you
      * receive a message more than once, the <code>ReceiptHandle</code> is different each time you receive a message.
      * When you use the <code>DeleteMessage</code> action, you must provide the most recently received
-     * <code>ReceiptHandle</code> for the message (otherwise, the request succeeds, but the message might not be
+     * <code>ReceiptHandle</code> for the message (otherwise, the request succeeds, but the message will not be
      * deleted).
      * </p>
      * <p>
@@ -538,16 +545,6 @@ public interface AmazonSQS {
      * for batch errors even when the call returns an HTTP status code of <code>200</code>.
      * </p>
      * </important>
-     * <p>
-     * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values
-     * of <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.1=first</code>
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.2=second</code>
-     * </p>
      * 
      * @param deleteMessageBatchRequest
      * @return Result of the DeleteMessageBatch operation returned by the service.
@@ -594,7 +591,10 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
+     * </p>
+     * <p>
+     * The delete operation uses the HTTP <code>GET</code> verb.
      * </p>
      * </note>
      * 
@@ -702,6 +702,23 @@ public interface AmazonSQS {
 
     /**
      * <p>
+     * Gets the most recent message movement tasks (up to 10) under a specific source queue.
+     * </p>
+     * 
+     * @param listMessageMoveTasksRequest
+     * @return Result of the ListMessageMoveTasks operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more specified resources don't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @sample AmazonSQS.ListMessageMoveTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ListMessageMoveTasks" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListMessageMoveTasksResult listMessageMoveTasks(ListMessageMoveTasksRequest listMessageMoveTasksRequest);
+
+    /**
+     * <p>
      * List all cost allocation tags added to the specified Amazon SQS queue. For an overview, see <a
      * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-tags.html">Tagging
      * Your Amazon SQS Queues</a> in the <i>Amazon SQS Developer Guide</i>.
@@ -710,7 +727,7 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -746,7 +763,7 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -886,7 +903,7 @@ public interface AmazonSQS {
      * @return Result of the ReceiveMessage operation returned by the service.
      * @throws OverLimitException
      *         The specified action violates a limit. For example, <code>ReceiveMessage</code> returns this error if the
-     *         maximum number of inflight messages is reached and <code>AddPermission</code> returns this error if the
+     *         maximum number of in flight messages is reached and <code>AddPermission</code> returns this error if the
      *         maximum number of permissions for the queue is reached.
      * @sample AmazonSQS.ReceiveMessage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ReceiveMessage" target="_top">AWS API
@@ -916,7 +933,7 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -982,8 +999,10 @@ public interface AmazonSQS {
 
     /**
      * <p>
-     * Delivers up to ten messages to the specified queue. This is a batch version of <code> <a>SendMessage</a>.</code>
-     * For a FIFO queue, multiple messages within a single batch are enqueued in the order they are sent.
+     * You can use <code>SendMessageBatch</code> to send up to 10 messages to the specified queue by assigning either
+     * identical or different values to each message (or by not assigning values at all). This is a batch version of
+     * <code> <a>SendMessage</a>.</code> For a FIFO queue, multiple messages within a single batch are enqueued in the
+     * order they are sent.
      * </p>
      * <p>
      * The result of sending each message is reported individually in the response. Because the batch request can result
@@ -992,7 +1011,7 @@ public interface AmazonSQS {
      * </p>
      * <p>
      * The maximum allowed individual message size and the maximum total payload size (the sum of the individual lengths
-     * of all of the batched messages) are both 256 KB (262,144 bytes).
+     * of all of the batched messages) are both 256 KiB (262,144 bytes).
      * </p>
      * <important>
      * <p>
@@ -1010,16 +1029,6 @@ public interface AmazonSQS {
      * <p>
      * If you don't specify the <code>DelaySeconds</code> parameter for an entry, Amazon SQS uses the default value for
      * the queue.
-     * </p>
-     * <p>
-     * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values
-     * of <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.1=first</code>
-     * </p>
-     * <p>
-     * <code>&amp;AttributeName.2=second</code>
      * </p>
      * 
      * @param sendMessageBatchRequest
@@ -1053,7 +1062,9 @@ public interface AmazonSQS {
      * <p>
      * Sets the value of one or more queue attributes. When you change a queue's attributes, the change can take up to
      * 60 seconds for most of the attributes to propagate throughout the Amazon SQS system. Changes made to the
-     * <code>MessageRetentionPeriod</code> attribute can take up to 15 minutes.
+     * <code>MessageRetentionPeriod</code> attribute can take up to 15 minutes and will impact existing messages in the
+     * queue potentially causing them to be expired and deleted if the <code>MessageRetentionPeriod</code> is reduced
+     * below the age of existing messages.
      * </p>
      * <note>
      * <ul>
@@ -1067,7 +1078,7 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -1095,6 +1106,44 @@ public interface AmazonSQS {
      * @see #setQueueAttributes(SetQueueAttributesRequest)
      */
     SetQueueAttributesResult setQueueAttributes(String queueUrl, java.util.Map<String, String> attributes);
+
+    /**
+     * <p>
+     * Starts an asynchronous task to move messages from a specified source queue to a specified destination queue.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * This action is currently limited to supporting message redrive from dead-letter queues (DLQs) only. In this
+     * context, the source queue is the dead-letter queue (DLQ), while the destination queue can be the original source
+     * queue (from which the messages were driven to the dead-letter-queue), or a custom destination queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Currently, only standard queues are supported.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Only one active message movement task is supported per queue at any given time.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param startMessageMoveTaskRequest
+     * @return Result of the StartMessageMoveTask operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more specified resources don't exist.
+     * @throws UnsupportedOperationException
+     *         Error code 400. Unsupported operation.
+     * @sample AmazonSQS.StartMessageMoveTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/StartMessageMoveTask" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartMessageMoveTaskResult startMessageMoveTask(StartMessageMoveTaskRequest startMessageMoveTaskRequest);
 
     /**
      * <p>
@@ -1136,7 +1185,7 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -1165,7 +1214,7 @@ public interface AmazonSQS {
      * <p>
      * Cross-account permissions don't apply to this action. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name"
-     * >Grant cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer Guide</i>.
+     * >Grant cross-account permissions to a role and a username</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * </note>
      * 

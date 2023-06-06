@@ -2441,9 +2441,6 @@ public interface AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html">Historical
      * metrics definitions</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * </p>
-     * <p>
-     * This API is not available in the Amazon Web Services GovCloud (US) Regions.
-     * </p>
      * 
      * @param getMetricDataV2Request
      * @return Result of the GetMetricDataV2 operation returned by the service.

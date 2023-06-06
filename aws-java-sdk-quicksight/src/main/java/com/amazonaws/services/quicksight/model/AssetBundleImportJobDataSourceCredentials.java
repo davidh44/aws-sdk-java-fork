@@ -30,28 +30,28 @@ public class AssetBundleImportJobDataSourceCredentials implements Serializable, 
 
     /**
      * <p>
-     * A username and password credential pair to be used to create the imported data source. Leave this field blank if
-     * you are using an Secrets Manager Secret to provide credentials.
+     * A username and password credential pair to be used to create the imported data source. Keep this field blank if
+     * you are using a Secrets Manager secret to provide credentials.
      * </p>
      */
     private AssetBundleImportJobDataSourceCredentialPair credentialPair;
     /**
      * <p>
-     * The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field blank if you
-     * aren't using a Secret in place of a credential pair.
+     * The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field blank,
+     * unless you are using a secret in place of a credential pair.
      * </p>
      */
     private String secretArn;
 
     /**
      * <p>
-     * A username and password credential pair to be used to create the imported data source. Leave this field blank if
-     * you are using an Secrets Manager Secret to provide credentials.
+     * A username and password credential pair to be used to create the imported data source. Keep this field blank if
+     * you are using a Secrets Manager secret to provide credentials.
      * </p>
      * 
      * @param credentialPair
-     *        A username and password credential pair to be used to create the imported data source. Leave this field
-     *        blank if you are using an Secrets Manager Secret to provide credentials.
+     *        A username and password credential pair to be used to create the imported data source. Keep this field
+     *        blank if you are using a Secrets Manager secret to provide credentials.
      */
 
     public void setCredentialPair(AssetBundleImportJobDataSourceCredentialPair credentialPair) {
@@ -60,12 +60,12 @@ public class AssetBundleImportJobDataSourceCredentials implements Serializable, 
 
     /**
      * <p>
-     * A username and password credential pair to be used to create the imported data source. Leave this field blank if
-     * you are using an Secrets Manager Secret to provide credentials.
+     * A username and password credential pair to be used to create the imported data source. Keep this field blank if
+     * you are using a Secrets Manager secret to provide credentials.
      * </p>
      * 
-     * @return A username and password credential pair to be used to create the imported data source. Leave this field
-     *         blank if you are using an Secrets Manager Secret to provide credentials.
+     * @return A username and password credential pair to be used to create the imported data source. Keep this field
+     *         blank if you are using a Secrets Manager secret to provide credentials.
      */
 
     public AssetBundleImportJobDataSourceCredentialPair getCredentialPair() {
@@ -74,13 +74,13 @@ public class AssetBundleImportJobDataSourceCredentials implements Serializable, 
 
     /**
      * <p>
-     * A username and password credential pair to be used to create the imported data source. Leave this field blank if
-     * you are using an Secrets Manager Secret to provide credentials.
+     * A username and password credential pair to be used to create the imported data source. Keep this field blank if
+     * you are using a Secrets Manager secret to provide credentials.
      * </p>
      * 
      * @param credentialPair
-     *        A username and password credential pair to be used to create the imported data source. Leave this field
-     *        blank if you are using an Secrets Manager Secret to provide credentials.
+     *        A username and password credential pair to be used to create the imported data source. Keep this field
+     *        blank if you are using a Secrets Manager secret to provide credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,13 +91,13 @@ public class AssetBundleImportJobDataSourceCredentials implements Serializable, 
 
     /**
      * <p>
-     * The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field blank if you
-     * aren't using a Secret in place of a credential pair.
+     * The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field blank,
+     * unless you are using a secret in place of a credential pair.
      * </p>
      * 
      * @param secretArn
-     *        The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field blank
-     *        if you aren't using a Secret in place of a credential pair.
+     *        The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field
+     *        blank, unless you are using a secret in place of a credential pair.
      */
 
     public void setSecretArn(String secretArn) {
@@ -106,12 +106,12 @@ public class AssetBundleImportJobDataSourceCredentials implements Serializable, 
 
     /**
      * <p>
-     * The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field blank if you
-     * aren't using a Secret in place of a credential pair.
+     * The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field blank,
+     * unless you are using a secret in place of a credential pair.
      * </p>
      * 
-     * @return The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field
-     *         blank if you aren't using a Secret in place of a credential pair.
+     * @return The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field
+     *         blank, unless you are using a secret in place of a credential pair.
      */
 
     public String getSecretArn() {
@@ -120,13 +120,13 @@ public class AssetBundleImportJobDataSourceCredentials implements Serializable, 
 
     /**
      * <p>
-     * The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field blank if you
-     * aren't using a Secret in place of a credential pair.
+     * The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field blank,
+     * unless you are using a secret in place of a credential pair.
      * </p>
      * 
      * @param secretArn
-     *        The ARN of the Secrets Manager Secret to be used to create the imported data source leave this field blank
-     *        if you aren't using a Secret in place of a credential pair.
+     *        The ARN of the Secrets Manager secret that's used to create the imported data source. Keep this field
+     *        blank, unless you are using a secret in place of a credential pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

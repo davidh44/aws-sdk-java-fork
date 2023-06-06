@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An optional structure that configures resource ID overrides for the import job
+ * An optional structure that configures resource ID overrides for the import job.
  * </p>
  * 
  * @see <a

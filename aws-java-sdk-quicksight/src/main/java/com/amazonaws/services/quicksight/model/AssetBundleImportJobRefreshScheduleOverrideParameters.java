@@ -46,7 +46,7 @@ public class AssetBundleImportJobRefreshScheduleOverrideParameters implements Se
     private String scheduleId;
     /**
      * <p>
-     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      * <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      * </p>
      */
@@ -146,12 +146,12 @@ public class AssetBundleImportJobRefreshScheduleOverrideParameters implements Se
 
     /**
      * <p>
-     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      * <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      * </p>
      * 
      * @param startAfterDateTime
-     *        An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     *        An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      *        <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      */
 
@@ -161,11 +161,11 @@ public class AssetBundleImportJobRefreshScheduleOverrideParameters implements Se
 
     /**
      * <p>
-     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      * <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      * </p>
      * 
-     * @return An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     * @return An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      *         <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      */
 
@@ -175,12 +175,12 @@ public class AssetBundleImportJobRefreshScheduleOverrideParameters implements Se
 
     /**
      * <p>
-     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     * An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      * <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      * </p>
      * 
      * @param startAfterDateTime
-     *        An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code> to ensure that the
+     *        An override for the <code>StartAfterDateTime</code> of a <code>RefreshSchedule</code>. Make sure that the
      *        <code>StartAfterDateTime</code> is set to a time that takes place in the future.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

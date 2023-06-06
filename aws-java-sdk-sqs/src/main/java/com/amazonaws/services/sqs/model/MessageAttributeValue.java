@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  * <p>
  * <code>Name</code>, <code>type</code>, <code>value</code> and the message body must not be empty or null. All parts of
  * the message attribute, including <code>Name</code>, <code>Type</code>, and <code>Value</code>, are part of the
- * message size restriction (256 KB or 262,144 bytes).
+ * message size restriction (256 KiB or 262,144 bytes).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/MessageAttributeValue" target="_top">AWS API

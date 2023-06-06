@@ -25,11 +25,11 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
-     * Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
-     * values.
+     * Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -134,11 +134,11 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
-     * Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
-     * values.
+     * Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -164,10 +164,10 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
      * </ul>
      * 
      * @param jobStatus
-     *        Indicates tha status of a job through its queueing and execution.</p>
+     *        Indicates the status of a job through its queuing and execution.</p>
      *        <p>
-     *        Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
-     *        following values.
+     *        Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
+     *        following values:
      *        </p>
      *        <ul>
      *        <li>
@@ -199,11 +199,11 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
-     * Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
-     * values.
+     * Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -228,10 +228,10 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
      * </li>
      * </ul>
      * 
-     * @return Indicates tha status of a job through its queueing and execution.</p>
+     * @return Indicates the status of a job through its queuing and execution.</p>
      *         <p>
-     *         Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
-     *         following values.
+     *         Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
+     *         following values:
      *         </p>
      *         <ul>
      *         <li>
@@ -263,11 +263,11 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
-     * Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
-     * values.
+     * Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -293,10 +293,10 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
      * </ul>
      * 
      * @param jobStatus
-     *        Indicates tha status of a job through its queueing and execution.</p>
+     *        Indicates the status of a job through its queuing and execution.</p>
      *        <p>
-     *        Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
-     *        following values.
+     *        Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
+     *        following values:
      *        </p>
      *        <ul>
      *        <li>
@@ -330,11 +330,11 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
-     * Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
-     * values.
+     * Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the following
+     * values:
      * </p>
      * <ul>
      * <li>
@@ -360,10 +360,10 @@ public class DescribeAssetBundleImportJobResult extends com.amazonaws.AmazonWebS
      * </ul>
      * 
      * @param jobStatus
-     *        Indicates tha status of a job through its queueing and execution.</p>
+     *        Indicates the status of a job through its queuing and execution.</p>
      *        <p>
-     *        Poll this <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
-     *        following values.
+     *        Poll the <code>DescribeAssetBundleImport</code> API until <code>JobStatus</code> returns one of the
+     *        following values:
      *        </p>
      *        <ul>
      *        <li>

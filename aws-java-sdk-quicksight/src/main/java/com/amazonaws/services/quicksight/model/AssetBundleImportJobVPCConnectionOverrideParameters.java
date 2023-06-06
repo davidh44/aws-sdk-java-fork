@@ -44,20 +44,20 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A list of new subnet IDs for the VPC connection you are importing. This field is required if you are importing
-     * the VPC connection from another Amazon Web Services account or region.
+     * the VPC connection from another Amazon Web Services account or Region.
      * </p>
      */
     private java.util.List<String> subnetIds;
     /**
      * <p>
      * A new security group ID for the VPC connection you are importing. This field is required if you are importing the
-     * VPC connection from another Amazon Web Services account or region.
+     * VPC connection from another Amazon Web Services account or Region.
      * </p>
      */
     private java.util.List<String> securityGroupIds;
     /**
      * <p>
-     * An optional override of dns resolvers to be used by the VPC connection.
+     * An optional override of DNS resolvers to be used by the VPC connection.
      * </p>
      */
     private java.util.List<String> dnsResolvers;
@@ -151,11 +151,11 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A list of new subnet IDs for the VPC connection you are importing. This field is required if you are importing
-     * the VPC connection from another Amazon Web Services account or region.
+     * the VPC connection from another Amazon Web Services account or Region.
      * </p>
      * 
      * @return A list of new subnet IDs for the VPC connection you are importing. This field is required if you are
-     *         importing the VPC connection from another Amazon Web Services account or region.
+     *         importing the VPC connection from another Amazon Web Services account or Region.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -165,12 +165,12 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A list of new subnet IDs for the VPC connection you are importing. This field is required if you are importing
-     * the VPC connection from another Amazon Web Services account or region.
+     * the VPC connection from another Amazon Web Services account or Region.
      * </p>
      * 
      * @param subnetIds
      *        A list of new subnet IDs for the VPC connection you are importing. This field is required if you are
-     *        importing the VPC connection from another Amazon Web Services account or region.
+     *        importing the VPC connection from another Amazon Web Services account or Region.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -185,7 +185,7 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A list of new subnet IDs for the VPC connection you are importing. This field is required if you are importing
-     * the VPC connection from another Amazon Web Services account or region.
+     * the VPC connection from another Amazon Web Services account or Region.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -195,7 +195,7 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
      * 
      * @param subnetIds
      *        A list of new subnet IDs for the VPC connection you are importing. This field is required if you are
-     *        importing the VPC connection from another Amazon Web Services account or region.
+     *        importing the VPC connection from another Amazon Web Services account or Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -212,12 +212,12 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A list of new subnet IDs for the VPC connection you are importing. This field is required if you are importing
-     * the VPC connection from another Amazon Web Services account or region.
+     * the VPC connection from another Amazon Web Services account or Region.
      * </p>
      * 
      * @param subnetIds
      *        A list of new subnet IDs for the VPC connection you are importing. This field is required if you are
-     *        importing the VPC connection from another Amazon Web Services account or region.
+     *        importing the VPC connection from another Amazon Web Services account or Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,11 +229,11 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A new security group ID for the VPC connection you are importing. This field is required if you are importing the
-     * VPC connection from another Amazon Web Services account or region.
+     * VPC connection from another Amazon Web Services account or Region.
      * </p>
      * 
      * @return A new security group ID for the VPC connection you are importing. This field is required if you are
-     *         importing the VPC connection from another Amazon Web Services account or region.
+     *         importing the VPC connection from another Amazon Web Services account or Region.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -243,12 +243,12 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A new security group ID for the VPC connection you are importing. This field is required if you are importing the
-     * VPC connection from another Amazon Web Services account or region.
+     * VPC connection from another Amazon Web Services account or Region.
      * </p>
      * 
      * @param securityGroupIds
      *        A new security group ID for the VPC connection you are importing. This field is required if you are
-     *        importing the VPC connection from another Amazon Web Services account or region.
+     *        importing the VPC connection from another Amazon Web Services account or Region.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -263,7 +263,7 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A new security group ID for the VPC connection you are importing. This field is required if you are importing the
-     * VPC connection from another Amazon Web Services account or region.
+     * VPC connection from another Amazon Web Services account or Region.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -273,7 +273,7 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
      * 
      * @param securityGroupIds
      *        A new security group ID for the VPC connection you are importing. This field is required if you are
-     *        importing the VPC connection from another Amazon Web Services account or region.
+     *        importing the VPC connection from another Amazon Web Services account or Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -290,12 +290,12 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
     /**
      * <p>
      * A new security group ID for the VPC connection you are importing. This field is required if you are importing the
-     * VPC connection from another Amazon Web Services account or region.
+     * VPC connection from another Amazon Web Services account or Region.
      * </p>
      * 
      * @param securityGroupIds
      *        A new security group ID for the VPC connection you are importing. This field is required if you are
-     *        importing the VPC connection from another Amazon Web Services account or region.
+     *        importing the VPC connection from another Amazon Web Services account or Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,10 +306,10 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
 
     /**
      * <p>
-     * An optional override of dns resolvers to be used by the VPC connection.
+     * An optional override of DNS resolvers to be used by the VPC connection.
      * </p>
      * 
-     * @return An optional override of dns resolvers to be used by the VPC connection.
+     * @return An optional override of DNS resolvers to be used by the VPC connection.
      */
 
     public java.util.List<String> getDnsResolvers() {
@@ -318,11 +318,11 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
 
     /**
      * <p>
-     * An optional override of dns resolvers to be used by the VPC connection.
+     * An optional override of DNS resolvers to be used by the VPC connection.
      * </p>
      * 
      * @param dnsResolvers
-     *        An optional override of dns resolvers to be used by the VPC connection.
+     *        An optional override of DNS resolvers to be used by the VPC connection.
      */
 
     public void setDnsResolvers(java.util.Collection<String> dnsResolvers) {
@@ -336,7 +336,7 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
 
     /**
      * <p>
-     * An optional override of dns resolvers to be used by the VPC connection.
+     * An optional override of DNS resolvers to be used by the VPC connection.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -345,7 +345,7 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
      * </p>
      * 
      * @param dnsResolvers
-     *        An optional override of dns resolvers to be used by the VPC connection.
+     *        An optional override of DNS resolvers to be used by the VPC connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,11 +361,11 @@ public class AssetBundleImportJobVPCConnectionOverrideParameters implements Seri
 
     /**
      * <p>
-     * An optional override of dns resolvers to be used by the VPC connection.
+     * An optional override of DNS resolvers to be used by the VPC connection.
      * </p>
      * 
      * @param dnsResolvers
-     *        An optional override of dns resolvers to be used by the VPC connection.
+     *        An optional override of DNS resolvers to be used by the VPC connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

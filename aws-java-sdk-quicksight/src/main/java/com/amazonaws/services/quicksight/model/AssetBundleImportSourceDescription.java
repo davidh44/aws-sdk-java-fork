@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A description of the import source that you provide at the start of an import job. This value is set to either
- * <code>Body</code> or <code>S3Uri</code> depending on how the <code>StartAssetBundleImportJobRequest</code> is
+ * <code>Body</code> or <code>S3Uri</code>, depending on how the <code>StartAssetBundleImportJobRequest</code> is
  * configured.
  * </p>
  * 
@@ -32,30 +32,31 @@ public class AssetBundleImportSourceDescription implements Serializable, Cloneab
 
     /**
      * <p>
-     * A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
-     * This URL is valid for 5 minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a fresh
-     * URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
+     * An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
+     * This URL is valid for five minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a
+     * fresh URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
      * </p>
      */
     private String body;
     /**
      * <p>
-     * The Amazon S3 uri that you provided at the start of the import job.
+     * The Amazon S3 URI that you provided at the start of the import job.
      * </p>
      */
     private String s3Uri;
 
     /**
      * <p>
-     * A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
-     * This URL is valid for 5 minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a fresh
-     * URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
+     * An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
+     * This URL is valid for five minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a
+     * fresh URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
      * </p>
      * 
      * @param body
-     *        A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import
-     *        job. This URL is valid for 5 minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again
-     *        for a fresh URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
+     *        An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the
+     *        import job. This URL is valid for five minutes after issuance. Call
+     *        <code>DescribeAssetBundleExportJob</code> again for a fresh URL if needed. The downloaded asset bundle is
+     *        a <code>.qs</code> zip file.
      */
 
     public void setBody(String body) {
@@ -64,13 +65,13 @@ public class AssetBundleImportSourceDescription implements Serializable, Cloneab
 
     /**
      * <p>
-     * A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
-     * This URL is valid for 5 minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a fresh
-     * URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
+     * An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
+     * This URL is valid for five minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a
+     * fresh URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
      * </p>
      * 
-     * @return A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the
-     *         import job. This URL is valid for 5 minutes after issuance. Call
+     * @return An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the
+     *         import job. This URL is valid for five minutes after issuance. Call
      *         <code>DescribeAssetBundleExportJob</code> again for a fresh URL if needed. The downloaded asset bundle is
      *         a <code>.qs</code> zip file.
      */
@@ -81,15 +82,16 @@ public class AssetBundleImportSourceDescription implements Serializable, Cloneab
 
     /**
      * <p>
-     * A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
-     * This URL is valid for 5 minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a fresh
-     * URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
+     * An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import job.
+     * This URL is valid for five minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again for a
+     * fresh URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
      * </p>
      * 
      * @param body
-     *        A HTTPS download URL for the provided asset bundle that you optionally provided at the start of the import
-     *        job. This URL is valid for 5 minutes after issuance. Call <code>DescribeAssetBundleExportJob</code> again
-     *        for a fresh URL if needed. The downloaded asset bundle is a <code>.qs</code> zip file.
+     *        An HTTPS download URL for the provided asset bundle that you optionally provided at the start of the
+     *        import job. This URL is valid for five minutes after issuance. Call
+     *        <code>DescribeAssetBundleExportJob</code> again for a fresh URL if needed. The downloaded asset bundle is
+     *        a <code>.qs</code> zip file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +102,11 @@ public class AssetBundleImportSourceDescription implements Serializable, Cloneab
 
     /**
      * <p>
-     * The Amazon S3 uri that you provided at the start of the import job.
+     * The Amazon S3 URI that you provided at the start of the import job.
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 uri that you provided at the start of the import job.
+     *        The Amazon S3 URI that you provided at the start of the import job.
      */
 
     public void setS3Uri(String s3Uri) {
@@ -113,10 +115,10 @@ public class AssetBundleImportSourceDescription implements Serializable, Cloneab
 
     /**
      * <p>
-     * The Amazon S3 uri that you provided at the start of the import job.
+     * The Amazon S3 URI that you provided at the start of the import job.
      * </p>
      * 
-     * @return The Amazon S3 uri that you provided at the start of the import job.
+     * @return The Amazon S3 URI that you provided at the start of the import job.
      */
 
     public String getS3Uri() {
@@ -125,11 +127,11 @@ public class AssetBundleImportSourceDescription implements Serializable, Cloneab
 
     /**
      * <p>
-     * The Amazon S3 uri that you provided at the start of the import job.
+     * The Amazon S3 URI that you provided at the start of the import job.
      * </p>
      * 
      * @param s3Uri
-     *        The Amazon S3 uri that you provided at the start of the import job.
+     *        The Amazon S3 URI that you provided at the start of the import job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

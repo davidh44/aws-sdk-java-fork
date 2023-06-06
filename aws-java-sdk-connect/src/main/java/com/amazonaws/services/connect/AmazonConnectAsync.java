@@ -3380,9 +3380,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html">Historical
      * metrics definitions</a> in the <i>Amazon Connect Administrator's Guide</i>.
      * </p>
-     * <p>
-     * This API is not available in the Amazon Web Services GovCloud (US) Regions.
-     * </p>
      * 
      * @param getMetricDataV2Request
      * @return A Java Future containing the result of the GetMetricDataV2 operation returned by the service.
@@ -3408,9 +3405,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <code>GetMetricData</code>, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html">Historical
      * metrics definitions</a> in the <i>Amazon Connect Administrator's Guide</i>.
-     * </p>
-     * <p>
-     * This API is not available in the Amazon Web Services GovCloud (US) Regions.
      * </p>
      * 
      * @param getMetricDataV2Request

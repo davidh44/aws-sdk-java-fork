@@ -60,7 +60,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <p>
      * If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes caused
-     * by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     * by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * </p>
      */
     private String failureAction;
@@ -241,7 +241,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <p>
      * If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes caused
-     * by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     * by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * </p>
      * 
      * @param failureAction
@@ -252,7 +252,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      *        </p>
      *        <p>
      *        If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes
-     *        caused by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     *        caused by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * @see AssetBundleImportFailureAction
      */
 
@@ -270,7 +270,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <p>
      * If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes caused
-     * by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     * by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * </p>
      * 
      * @return The failure action for the import job.</p>
@@ -280,7 +280,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      *         </p>
      *         <p>
      *         If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes
-     *         caused by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     *         caused by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * @see AssetBundleImportFailureAction
      */
 
@@ -298,7 +298,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <p>
      * If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes caused
-     * by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     * by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * </p>
      * 
      * @param failureAction
@@ -309,7 +309,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      *        </p>
      *        <p>
      *        If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes
-     *        caused by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     *        caused by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetBundleImportFailureAction
      */
@@ -329,7 +329,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <p>
      * If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes caused
-     * by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     * by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * </p>
      * 
      * @param failureAction
@@ -340,7 +340,7 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
      *        </p>
      *        <p>
      *        If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back any asset changes
-     *        caused by the failed job, possibly leaving the Amazon QuickSight account in an inconsistent state.
+     *        caused by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetBundleImportFailureAction
      */

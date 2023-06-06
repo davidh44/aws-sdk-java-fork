@@ -99,6 +99,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public CreateTestSetDiscrepancyReportResult createTestSetDiscrepancyReport(CreateTestSetDiscrepancyReportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateUploadUrlResult createUploadUrl(CreateUploadUrlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -164,6 +169,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public DeleteTestSetResult deleteTestSet(DeleteTestSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteUtterancesResult deleteUtterances(DeleteUtterancesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -225,6 +235,31 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public DescribeSlotTypeResult describeSlotType(DescribeSlotTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTestExecutionResult describeTestExecution(DescribeTestExecutionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTestSetResult describeTestSet(DescribeTestSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTestSetDiscrepancyReportResult describeTestSetDiscrepancyReport(DescribeTestSetDiscrepancyReportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTestSetGenerationResult describeTestSetGeneration(DescribeTestSetGenerationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetTestExecutionArtifactsUrlResult getTestExecutionArtifactsUrl(GetTestExecutionArtifactsUrlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -309,6 +344,26 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public ListTestExecutionResultItemsResult listTestExecutionResultItems(ListTestExecutionResultItemsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTestExecutionsResult listTestExecutions(ListTestExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTestSetRecordsResult listTestSetRecords(ListTestSetRecordsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTestSetsResult listTestSets(ListTestSetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchAssociatedTranscriptsResult searchAssociatedTranscripts(SearchAssociatedTranscriptsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -320,6 +375,16 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public StartImportResult startImport(StartImportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartTestExecutionResult startTestExecution(StartTestExecutionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartTestSetGenerationResult startTestSetGeneration(StartTestSetGenerationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -380,6 +445,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public UpdateSlotTypeResult updateSlotType(UpdateSlotTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTestSetResult updateTestSet(UpdateTestSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

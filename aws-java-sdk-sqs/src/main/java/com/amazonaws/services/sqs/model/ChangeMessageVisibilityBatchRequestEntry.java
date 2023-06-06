@@ -17,23 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Encloses a receipt handle and an entry id for each message in <code> <a>ChangeMessageVisibilityBatch</a>.</code>
- * </p>
- * <important>
- * <p>
- * All of the following list parameters must be prefixed with <code>ChangeMessageVisibilityBatchRequestEntry.n</code>,
- * where <code>n</code> is an integer value starting with <code>1</code>. For example, a parameter list for this action
- * might look like this:
- * </p>
- * </important>
- * <p>
- * <code>&amp;ChangeMessageVisibilityBatchRequestEntry.1.Id=change_visibility_msg_2</code>
- * </p>
- * <p>
- * <code>&amp;ChangeMessageVisibilityBatchRequestEntry.1.ReceiptHandle=your_receipt_handle</code>
- * </p>
- * <p>
- * <code>&amp;ChangeMessageVisibilityBatchRequestEntry.1.VisibilityTimeout=45</code>
+ * Encloses a receipt handle and an entry ID for each message in <code> <a>ChangeMessageVisibilityBatch</a>.</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/ChangeMessageVisibilityBatchRequestEntry"

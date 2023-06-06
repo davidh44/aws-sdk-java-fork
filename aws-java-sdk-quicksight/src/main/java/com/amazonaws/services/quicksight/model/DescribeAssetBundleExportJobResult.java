@@ -25,7 +25,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
      * Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
@@ -125,7 +125,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
      * Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
@@ -133,7 +133,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param jobStatus
-     *        Indicates tha status of a job through its queueing and execution.</p>
+     *        Indicates the status of a job through its queuing and execution.</p>
      *        <p>
      *        Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
      *        <code>SUCCESSFUL</code> or <code>FAILED</code>.
@@ -146,14 +146,14 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
      * Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
      * <code>SUCCESSFUL</code> or <code>FAILED</code>.
      * </p>
      * 
-     * @return Indicates tha status of a job through its queueing and execution.</p>
+     * @return Indicates the status of a job through its queuing and execution.</p>
      *         <p>
      *         Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
      *         <code>SUCCESSFUL</code> or <code>FAILED</code>.
@@ -166,7 +166,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
      * Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
@@ -174,7 +174,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param jobStatus
-     *        Indicates tha status of a job through its queueing and execution.</p>
+     *        Indicates the status of a job through its queuing and execution.</p>
      *        <p>
      *        Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
      *        <code>SUCCESSFUL</code> or <code>FAILED</code>.
@@ -189,7 +189,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Indicates tha status of a job through its queueing and execution.
+     * Indicates the status of a job through its queuing and execution.
      * </p>
      * <p>
      * Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
@@ -197,7 +197,7 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param jobStatus
-     *        Indicates tha status of a job through its queueing and execution.</p>
+     *        Indicates the status of a job through its queuing and execution.</p>
      *        <p>
      *        Poll this <code>DescribeAssetBundleExportApi</code> until <code>JobStatus</code> is either
      *        <code>SUCCESSFUL</code> or <code>FAILED</code>.

@@ -89,7 +89,7 @@ public class StartAssetBundleExportJobRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the job.
      * For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that is a
+     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource that is a
      * dependency of the dashboard is also exported.
      * </p>
      */
@@ -596,15 +596,15 @@ public class StartAssetBundleExportJobRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the job.
      * For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that is a
+     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource that is a
      * dependency of the dashboard is also exported.
      * </p>
      * 
      * @param includeAllDependencies
      *        A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the
      *        job. For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     *        <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that
-     *        is a dependency of the dashboard is also exported.
+     *        <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource
+     *        that is a dependency of the dashboard is also exported.
      */
 
     public void setIncludeAllDependencies(Boolean includeAllDependencies) {
@@ -615,14 +615,14 @@ public class StartAssetBundleExportJobRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the job.
      * For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that is a
+     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource that is a
      * dependency of the dashboard is also exported.
      * </p>
      * 
      * @return A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the
      *         job. For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     *         <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that
-     *         is a dependency of the dashboard is also exported.
+     *         <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource
+     *         that is a dependency of the dashboard is also exported.
      */
 
     public Boolean getIncludeAllDependencies() {
@@ -633,15 +633,15 @@ public class StartAssetBundleExportJobRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the job.
      * For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that is a
+     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource that is a
      * dependency of the dashboard is also exported.
      * </p>
      * 
      * @param includeAllDependencies
      *        A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the
      *        job. For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     *        <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that
-     *        is a dependency of the dashboard is also exported.
+     *        <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource
+     *        that is a dependency of the dashboard is also exported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -654,14 +654,14 @@ public class StartAssetBundleExportJobRequest extends com.amazonaws.AmazonWebSer
      * <p>
      * A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the job.
      * For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that is a
+     * <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource that is a
      * dependency of the dashboard is also exported.
      * </p>
      * 
      * @return A Boolean that determines whether all dependencies of each resource ARN are recursively exported with the
      *         job. For example, say you provided a Dashboard ARN to the <code>ResourceArns</code> parameter. If you set
-     *         <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and dataource resource that
-     *         is a dependency of the dashboard is also exported.
+     *         <code>IncludeAllDependencies</code> to <code>TRUE</code>, any theme, dataset, and data source resource
+     *         that is a dependency of the dashboard is also exported.
      */
 
     public Boolean isIncludeAllDependencies() {

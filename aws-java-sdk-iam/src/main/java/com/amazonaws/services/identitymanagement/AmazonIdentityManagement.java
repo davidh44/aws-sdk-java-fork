@@ -412,12 +412,16 @@ public interface AmazonIdentityManagement {
     /**
      * <p>
      * Creates an alias for your Amazon Web Services account. For information about using an Amazon Web Services account
-     * alias, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an alias for your
-     * Amazon Web Services account ID</a> in the <i>IAM User Guide</i>.
+     * alias, see <a href="https://docs.aws.amazon.com/signin/latest/userguide/CreateAccountAlias.html">Creating,
+     * deleting, and listing an Amazon Web Services account alias</a> in the <i>Amazon Web Services Sign-In User
+     * Guide</i>.
      * </p>
      * 
      * @param createAccountAliasRequest
      * @return Result of the CreateAccountAlias operation returned by the service.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @throws EntityAlreadyExistsException
      *         The request was rejected because it attempted to create a resource that already exists.
      * @throws LimitExceededException
@@ -943,6 +947,9 @@ public interface AmazonIdentityManagement {
      *         account limits. The error message describes the limit exceeded.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @sample AmazonIdentityManagement.DeactivateMFADevice
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/DeactivateMFADevice" target="_top">AWS API
      *      Documentation</a>
@@ -979,12 +986,16 @@ public interface AmazonIdentityManagement {
     /**
      * <p>
      * Deletes the specified Amazon Web Services account alias. For information about using an Amazon Web Services
-     * account alias, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an alias
-     * for your Amazon Web Services account ID</a> in the <i>IAM User Guide</i>.
+     * account alias, see <a
+     * href="https://docs.aws.amazon.com/signin/latest/userguide/CreateAccountAlias.html">Creating, deleting, and
+     * listing an Amazon Web Services account alias</a> in the <i>Amazon Web Services Sign-In User Guide</i>.
      * </p>
      * 
      * @param deleteAccountAliasRequest
      * @return Result of the DeleteAccountAlias operation returned by the service.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @throws NoSuchEntityException
      *         The request was rejected because it referenced a resource entity that does not exist. The error message
      *         describes the resource.
@@ -1574,6 +1585,9 @@ public interface AmazonIdentityManagement {
      * @throws LimitExceededException
      *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
      *         account limits. The error message describes the limit exceeded.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.DeleteSigningCertificate
@@ -1735,6 +1749,9 @@ public interface AmazonIdentityManagement {
      *         account limits. The error message describes the limit exceeded.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @sample AmazonIdentityManagement.DeleteVirtualMFADevice
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/DeleteVirtualMFADevice" target="_top">AWS API
      *      Documentation</a>
@@ -1858,6 +1875,9 @@ public interface AmazonIdentityManagement {
      *         describes the resource.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @sample AmazonIdentityManagement.EnableMFADevice
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/EnableMFADevice" target="_top">AWS API
      *      Documentation</a>
@@ -2980,8 +3000,8 @@ public interface AmazonIdentityManagement {
      * <p>
      * Lists the account alias associated with the Amazon Web Services account (Note: you can have only one). For
      * information about using an Amazon Web Services account alias, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an alias for your Amazon Web
-     * Services account ID</a> in the <i>IAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/signin/latest/userguide/CreateAccountAlias.html">Creating, deleting, and
+     * listing an Amazon Web Services account alias</a> in the <i>Amazon Web Services Sign-In User Guide</i>.
      * </p>
      * 
      * @param listAccountAliasesRequest
@@ -4306,6 +4326,9 @@ public interface AmazonIdentityManagement {
      *         account limits. The error message describes the limit exceeded.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @sample AmazonIdentityManagement.ResyncMFADevice
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/ResyncMFADevice" target="_top">AWS API
      *      Documentation</a>
@@ -5889,6 +5912,9 @@ public interface AmazonIdentityManagement {
      * @throws NoSuchEntityException
      *         The request was rejected because it referenced a resource entity that does not exist. The error message
      *         describes the resource.
+     * @throws ConcurrentModificationException
+     *         The request was rejected because multiple requests to change this object were submitted simultaneously.
+     *         Wait a few minutes and submit your request again.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AmazonIdentityManagement.UploadSigningCertificate

@@ -216,6 +216,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateTestSetDiscrepancyReportResult> createTestSetDiscrepancyReportAsync(CreateTestSetDiscrepancyReportRequest request) {
+
+        return createTestSetDiscrepancyReportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTestSetDiscrepancyReportResult> createTestSetDiscrepancyReportAsync(CreateTestSetDiscrepancyReportRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateTestSetDiscrepancyReportRequest, CreateTestSetDiscrepancyReportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateUploadUrlResult> createUploadUrlAsync(CreateUploadUrlRequest request) {
 
         return createUploadUrlAsync(request, null);
@@ -380,6 +393,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<DeleteSlotTypeResult> deleteSlotTypeAsync(DeleteSlotTypeRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteSlotTypeRequest, DeleteSlotTypeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTestSetResult> deleteTestSetAsync(DeleteTestSetRequest request) {
+
+        return deleteTestSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTestSetResult> deleteTestSetAsync(DeleteTestSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTestSetRequest, DeleteTestSetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -551,6 +577,73 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<DescribeSlotTypeResult> describeSlotTypeAsync(DescribeSlotTypeRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeSlotTypeRequest, DescribeSlotTypeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestExecutionResult> describeTestExecutionAsync(DescribeTestExecutionRequest request) {
+
+        return describeTestExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestExecutionResult> describeTestExecutionAsync(DescribeTestExecutionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTestExecutionRequest, DescribeTestExecutionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetResult> describeTestSetAsync(DescribeTestSetRequest request) {
+
+        return describeTestSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetResult> describeTestSetAsync(DescribeTestSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTestSetRequest, DescribeTestSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetDiscrepancyReportResult> describeTestSetDiscrepancyReportAsync(
+            DescribeTestSetDiscrepancyReportRequest request) {
+
+        return describeTestSetDiscrepancyReportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetDiscrepancyReportResult> describeTestSetDiscrepancyReportAsync(
+            DescribeTestSetDiscrepancyReportRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTestSetDiscrepancyReportRequest, DescribeTestSetDiscrepancyReportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetGenerationResult> describeTestSetGenerationAsync(DescribeTestSetGenerationRequest request) {
+
+        return describeTestSetGenerationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTestSetGenerationResult> describeTestSetGenerationAsync(DescribeTestSetGenerationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTestSetGenerationRequest, DescribeTestSetGenerationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTestExecutionArtifactsUrlResult> getTestExecutionArtifactsUrlAsync(GetTestExecutionArtifactsUrlRequest request) {
+
+        return getTestExecutionArtifactsUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTestExecutionArtifactsUrlResult> getTestExecutionArtifactsUrlAsync(GetTestExecutionArtifactsUrlRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTestExecutionArtifactsUrlRequest, GetTestExecutionArtifactsUrlResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -764,6 +857,58 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     }
 
     @Override
+    public java.util.concurrent.Future<ListTestExecutionResultItemsResult> listTestExecutionResultItemsAsync(ListTestExecutionResultItemsRequest request) {
+
+        return listTestExecutionResultItemsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestExecutionResultItemsResult> listTestExecutionResultItemsAsync(ListTestExecutionResultItemsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTestExecutionResultItemsRequest, ListTestExecutionResultItemsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestExecutionsResult> listTestExecutionsAsync(ListTestExecutionsRequest request) {
+
+        return listTestExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestExecutionsResult> listTestExecutionsAsync(ListTestExecutionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTestExecutionsRequest, ListTestExecutionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetRecordsResult> listTestSetRecordsAsync(ListTestSetRecordsRequest request) {
+
+        return listTestSetRecordsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetRecordsResult> listTestSetRecordsAsync(ListTestSetRecordsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTestSetRecordsRequest, ListTestSetRecordsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetsResult> listTestSetsAsync(ListTestSetsRequest request) {
+
+        return listTestSetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTestSetsResult> listTestSetsAsync(ListTestSetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTestSetsRequest, ListTestSetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchAssociatedTranscriptsResult> searchAssociatedTranscriptsAsync(SearchAssociatedTranscriptsRequest request) {
 
         return searchAssociatedTranscriptsAsync(request, null);
@@ -798,6 +943,32 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<StartImportResult> startImportAsync(StartImportRequest request,
             com.amazonaws.handlers.AsyncHandler<StartImportRequest, StartImportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestExecutionResult> startTestExecutionAsync(StartTestExecutionRequest request) {
+
+        return startTestExecutionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestExecutionResult> startTestExecutionAsync(StartTestExecutionRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartTestExecutionRequest, StartTestExecutionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestSetGenerationResult> startTestSetGenerationAsync(StartTestSetGenerationRequest request) {
+
+        return startTestSetGenerationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTestSetGenerationResult> startTestSetGenerationAsync(StartTestSetGenerationRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartTestSetGenerationRequest, StartTestSetGenerationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -954,6 +1125,19 @@ public class AbstractAmazonLexModelsV2Async extends AbstractAmazonLexModelsV2 im
     @Override
     public java.util.concurrent.Future<UpdateSlotTypeResult> updateSlotTypeAsync(UpdateSlotTypeRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateSlotTypeRequest, UpdateSlotTypeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTestSetResult> updateTestSetAsync(UpdateTestSetRequest request) {
+
+        return updateTestSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTestSetResult> updateTestSetAsync(UpdateTestSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateTestSetRequest, UpdateTestSetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
