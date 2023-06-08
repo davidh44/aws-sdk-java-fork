@@ -1,3 +1,28 @@
+# __1.12.485__ __2023-06-08__
+## __AWS Comprehend Medical__
+  - ### Features
+    - This release supports a new set of entities and traits.
+
+## __AWS Service Catalog__
+  - ### Features
+    - New parameter added in ServiceCatalog DescribeProvisioningArtifact api - IncludeProvisioningArtifactParameters. This parameter can be used to return information about the parameters used to provision the product
+
+## __Amazon Athena__
+  - ### Features
+    - You can now define custom spark properties at start of the session for use cases like cluster encryption, table formats, and general Spark tuning.
+
+## __Amazon Timestream Write__
+  - ### Features
+    - This release adds the capability for customers to define how their data should be partitioned, optimizing for certain access patterns. This definition will take place as a part of the table creation.
+
+## __Payment Cryptography Control Plane__
+  - ### Features
+    - Initial release of AWS Payment Cryptography Control Plane service for creating and managing cryptographic keys used during card payment processing.
+
+## __Payment Cryptography Data Plane__
+  - ### Features
+    - Initial release of AWS Payment Cryptography DataPlane Plane service for performing cryptographic operations typically used during card payment processing.
+
 # __1.12.484__ __2023-06-07__
 ## __AWS CloudFormation__
   - ### Features

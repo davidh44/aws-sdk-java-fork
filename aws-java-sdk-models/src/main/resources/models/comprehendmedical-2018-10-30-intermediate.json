@@ -16831,6 +16831,9 @@
       }, {
         "name" : "SYSTEM_ORGAN_SITE",
         "value" : "SYSTEM_ORGAN_SITE"
+      }, {
+        "name" : "QUALITY",
+        "value" : "QUALITY"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.ICD10CMRelationshipType",
@@ -25721,6 +25724,12 @@
       }, {
         "name" : "AMOUNT",
         "value" : "AMOUNT"
+      }, {
+        "name" : "USAGE",
+        "value" : "USAGE"
+      }, {
+        "name" : "QUALITY",
+        "value" : "QUALITY"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.RelationshipType",
@@ -30020,6 +30029,9 @@
       "enums" : [ {
         "name" : "NEGATION",
         "value" : "NEGATION"
+      }, {
+        "name" : "PAST_HISTORY",
+        "value" : "PAST_HISTORY"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.RxNormTraitName",
@@ -35026,6 +35038,9 @@
       }, {
         "name" : "SYSTEM_ORGAN_SITE",
         "value" : "SYSTEM_ORGAN_SITE"
+      }, {
+        "name" : "TEST_UNIT",
+        "value" : "TEST_UNIT"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.SNOMEDCTRelationshipType",

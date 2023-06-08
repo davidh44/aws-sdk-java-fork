@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.485-SNAPSHOT</version>
+    <version>1.12.485</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,18 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-paymentcryptography</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-paymentcryptographydata</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-mediapackagev2</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2192,6 +2204,14 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Payment Cryptography Control Plane</title>
+                                  <packages>com.amazonaws.services.paymentcryptography*</packages>
+                              </group>
+                              <group>
+                                  <title>Payment Cryptography Data Plane</title>
+                                  <packages>com.amazonaws.services.paymentcryptographydata*</packages>
+                              </group>
                               <group>
                                   <title>AWS Elemental MediaPackage v2</title>
                                   <packages>com.amazonaws.services.mediapackagev2*</packages>

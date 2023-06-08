@@ -50,7 +50,7 @@ dependencies.
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-bom</artifactId>
-      <version>1.12.484</version>
+      <version>1.12.485</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
