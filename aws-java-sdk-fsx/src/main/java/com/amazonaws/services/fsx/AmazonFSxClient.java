@@ -663,8 +663,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * <p>
      * Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link
      * between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data
-     * repository associations on a file system. Data repository associations are supported for all file systems except
-     * for <code>Scratch_1</code> deployment type.
+     * repository associations on a file system. Data repository associations are supported on all FSx for Lustre 2.12
+     * and newer file systems, excluding <code>scratch_1</code> deployment type.
      * </p>
      * <p>
      * Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or
@@ -1589,7 +1589,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository
      * association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you
      * have the option of deleting the data in the file system that corresponds to the data repository association. Data
-     * repository associations are supported for all file systems except for <code>Scratch_1</code> deployment type.
+     * repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+     * <code>scratch_1</code> deployment type.
      * </p>
      * 
      * @param deleteDataRepositoryAssociationRequest
@@ -1980,6 +1981,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      *         A generic error indicating a server-side failure.
      * @throws VolumeNotFoundException
      *         No Amazon FSx volumes were found based upon the supplied parameters.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
      * @sample AmazonFSx.DeleteVolume
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteVolume" target="_top">AWS API
      *      Documentation</a>
@@ -2129,8 +2133,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * <p>
      * Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository associations, if
      * one or more <code>AssociationIds</code> values are provided in the request, or if filters are used in the
-     * request. Data repository associations are supported on Amazon File Cache resources and all Amazon FSx for Lustre
-     * file systems excluding <code>Scratch_1</code> deployment types.
+     * request. Data repository associations are supported on Amazon File Cache resources and all FSx for Lustre 2.12
+     * and newer file systems, excluding <code>scratch_1</code> deployment type.
      * </p>
      * <p>
      * You can use filters to narrow the response to include just data repository associations for specific file systems
@@ -3191,8 +3195,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
     /**
      * <p>
      * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.
-     * Data repository associations are supported for all file systems except for <code>Scratch_1</code> deployment
-     * type.
+     * Data repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+     * <code>scratch_1</code> deployment type.
      * </p>
      * 
      * @param updateDataRepositoryAssociationRequest
@@ -3645,7 +3649,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Updates an Amazon FSx for ONTAP storage virtual machine (SVM).
+     * Updates an FSx for ONTAP storage virtual machine (SVM).
      * </p>
      * 
      * @param updateStorageVirtualMachineRequest

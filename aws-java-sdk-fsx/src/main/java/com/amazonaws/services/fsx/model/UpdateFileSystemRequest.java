@@ -92,7 +92,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
      * capacity. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     * capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
@@ -114,7 +114,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private UpdateFileSystemOntapConfiguration ontapConfiguration;
     /**
      * <p>
-     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * The configuration updates for an FSx for OpenZFS file system.
      * </p>
      */
     private UpdateFileSystemOpenZFSConfiguration openZFSConfiguration;
@@ -259,7 +259,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
      * capacity. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     * capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
@@ -316,7 +316,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
      *        of throughput capacity. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     *        capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      *        </p>
      *        <p>
      *        For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the
@@ -380,7 +380,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
      * capacity. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     * capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
@@ -437,7 +437,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
      *         of throughput capacity. For more information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing
-     *         storage capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     *         storage capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      *         </p>
      *         <p>
      *         For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the
@@ -501,7 +501,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
      * capacity. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     * capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      * </p>
      * <p>
      * For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the current
@@ -558,7 +558,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
      *        of throughput capacity. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+     *        capacity</a> in the <i>Amazon FSxfor Windows File Server User Guide</i>.
      *        </p>
      *        <p>
      *        For ONTAP file systems, the storage capacity target value must be at least 10 percent greater than the
@@ -667,11 +667,11 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * The configuration updates for an FSx for OpenZFS file system.
      * </p>
      * 
      * @param openZFSConfiguration
-     *        The configuration updates for an Amazon FSx for OpenZFS file system.
+     *        The configuration updates for an FSx for OpenZFS file system.
      */
 
     public void setOpenZFSConfiguration(UpdateFileSystemOpenZFSConfiguration openZFSConfiguration) {
@@ -680,10 +680,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * The configuration updates for an FSx for OpenZFS file system.
      * </p>
      * 
-     * @return The configuration updates for an Amazon FSx for OpenZFS file system.
+     * @return The configuration updates for an FSx for OpenZFS file system.
      */
 
     public UpdateFileSystemOpenZFSConfiguration getOpenZFSConfiguration() {
@@ -692,11 +692,11 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * The configuration updates for an FSx for OpenZFS file system.
      * </p>
      * 
      * @param openZFSConfiguration
-     *        The configuration updates for an Amazon FSx for OpenZFS file system.
+     *        The configuration updates for an FSx for OpenZFS file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

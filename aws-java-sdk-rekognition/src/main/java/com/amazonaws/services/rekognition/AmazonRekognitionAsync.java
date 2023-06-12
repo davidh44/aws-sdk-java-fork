@@ -39,6 +39,11 @@ import com.amazonaws.services.rekognition.model.*;
  * <ul>
  * <li>
  * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_AssociateFaces.html">AssociateFaces</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CompareFaces.html">CompareFaces</a>
  * </p>
  * </li>
@@ -49,12 +54,22 @@ import com.amazonaws.services.rekognition.model.*;
  * </li>
  * <li>
  * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateUser.html">CreateUser</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteCollection.html">DeleteCollection</a>
  * </p>
  * </li>
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteFaces.html">DeleteFaces</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteUser.html">DeleteUser</a>
  * </p>
  * </li>
  * <li>
@@ -92,6 +107,12 @@ import com.amazonaws.services.rekognition.model.*;
  * </li>
  * <li>
  * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DisassociateFaces.html">DisassociateFaces</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetCelebrityInfo.html">GetCelebrityInfo</a>
  * </p>
  * </li>
@@ -112,6 +133,11 @@ import com.amazonaws.services.rekognition.model.*;
  * </li>
  * <li>
  * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListFaces.html">ListUsers</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_RecognizeCelebrities.html">
  * RecognizeCelebrities</a>
  * </p>
@@ -125,6 +151,17 @@ import com.amazonaws.services.rekognition.model.*;
  * <p>
  * <a
  * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchFacesByImage.html">SearchFacesByImage</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchUsers.html">SearchUsers</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchUsersByImage.html">SearchUsersByImage</a>
  * </p>
  * </li>
  * </ul>
@@ -400,6 +437,109 @@ import com.amazonaws.services.rekognition.model.*;
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonRekognitionAsync extends AmazonRekognition {
+
+    /**
+     * <p>
+     * Associates one or more faces with an existing UserID. Takes an array of <code>FaceIds</code>. Each
+     * <code>FaceId</code> that are present in the <code>FaceIds</code> list is associated with the provided UserID. The
+     * maximum number of total <code>FaceIds</code> per UserID is 100.
+     * </p>
+     * <p>
+     * The <code>UserMatchThreshold</code> parameter specifies the minimum user match confidence required for the face
+     * to be associated with a UserID that has at least one <code>FaceID</code> already associated. This ensures that
+     * the <code>FaceIds</code> are associated with the right UserID. The value ranges from 0-100 and default value is
+     * 75.
+     * </p>
+     * <p>
+     * If successful, an array of <code>AssociatedFace</code> objects containing the associated <code>FaceIds</code> is
+     * returned. If a given face is already associated with the given <code>UserID</code>, it will be ignored and will
+     * not be returned in the response. If a given face is already associated to a different <code>UserID</code>, isn't
+     * found in the collection, doesn’t meet the <code>UserMatchThreshold</code>, or there are already 100 faces
+     * associated with the <code>UserID</code>, it will be returned as part of an array of
+     * <code>UnsuccessfulFaceAssociations.</code>
+     * </p>
+     * <p>
+     * The <code>UserStatus</code> reflects the status of an operation which updates a UserID representation with a list
+     * of given faces. The <code>UserStatus</code> can be:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * ACTIVE - All associations or disassociations of FaceID(s) for a UserID are complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CREATED - A UserID has been created, but has no FaceID(s) associated with it.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING - A UserID is being updated and there are current associations or disassociations of FaceID(s) taking
+     * place.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param associateFacesRequest
+     * @return A Java Future containing the result of the AssociateFaces operation returned by the service.
+     * @sample AmazonRekognitionAsync.AssociateFaces
+     */
+    java.util.concurrent.Future<AssociateFacesResult> associateFacesAsync(AssociateFacesRequest associateFacesRequest);
+
+    /**
+     * <p>
+     * Associates one or more faces with an existing UserID. Takes an array of <code>FaceIds</code>. Each
+     * <code>FaceId</code> that are present in the <code>FaceIds</code> list is associated with the provided UserID. The
+     * maximum number of total <code>FaceIds</code> per UserID is 100.
+     * </p>
+     * <p>
+     * The <code>UserMatchThreshold</code> parameter specifies the minimum user match confidence required for the face
+     * to be associated with a UserID that has at least one <code>FaceID</code> already associated. This ensures that
+     * the <code>FaceIds</code> are associated with the right UserID. The value ranges from 0-100 and default value is
+     * 75.
+     * </p>
+     * <p>
+     * If successful, an array of <code>AssociatedFace</code> objects containing the associated <code>FaceIds</code> is
+     * returned. If a given face is already associated with the given <code>UserID</code>, it will be ignored and will
+     * not be returned in the response. If a given face is already associated to a different <code>UserID</code>, isn't
+     * found in the collection, doesn’t meet the <code>UserMatchThreshold</code>, or there are already 100 faces
+     * associated with the <code>UserID</code>, it will be returned as part of an array of
+     * <code>UnsuccessfulFaceAssociations.</code>
+     * </p>
+     * <p>
+     * The <code>UserStatus</code> reflects the status of an operation which updates a UserID representation with a list
+     * of given faces. The <code>UserStatus</code> can be:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * ACTIVE - All associations or disassociations of FaceID(s) for a UserID are complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CREATED - A UserID has been created, but has no FaceID(s) associated with it.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING - A UserID is being updated and there are current associations or disassociations of FaceID(s) taking
+     * place.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param associateFacesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateFaces operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.AssociateFaces
+     */
+    java.util.concurrent.Future<AssociateFacesResult> associateFacesAsync(AssociateFacesRequest associateFacesRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateFacesRequest, AssociateFacesResult> asyncHandler);
 
     /**
      * <p>
@@ -1065,6 +1205,47 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
+     * Creates a new User within a collection specified by <code>CollectionId</code>. Takes <code>UserId</code> as a
+     * parameter, which is a user provided ID which should be unique within the collection. The provided
+     * <code>UserId</code> will alias the system generated UUID to make the <code>UserId</code> more user friendly.
+     * </p>
+     * <p>
+     * Uses a <code>ClientToken</code>, an idempotency token that ensures a call to <code>CreateUser</code> completes
+     * only once. If the value is not supplied, the AWS SDK generates an idempotency token for the requests. This
+     * prevents retries after a network error results from making multiple <code>CreateUser</code> calls.
+     * </p>
+     * 
+     * @param createUserRequest
+     * @return A Java Future containing the result of the CreateUser operation returned by the service.
+     * @sample AmazonRekognitionAsync.CreateUser
+     */
+    java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest);
+
+    /**
+     * <p>
+     * Creates a new User within a collection specified by <code>CollectionId</code>. Takes <code>UserId</code> as a
+     * parameter, which is a user provided ID which should be unique within the collection. The provided
+     * <code>UserId</code> will alias the system generated UUID to make the <code>UserId</code> more user friendly.
+     * </p>
+     * <p>
+     * Uses a <code>ClientToken</code>, an idempotency token that ensures a call to <code>CreateUser</code> completes
+     * only once. If the value is not supplied, the AWS SDK generates an idempotency token for the requests. This
+     * prevents retries after a network error results from making multiple <code>CreateUser</code> calls.
+     * </p>
+     * 
+     * @param createUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateUser operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.CreateUser
+     */
+    java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateUserRequest, CreateUserResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified collection. Note that this operation removes all faces in the collection. For an example,
      * see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/delete-collection-procedure.html">Deleting a
      * collection</a>.
@@ -1341,6 +1522,39 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      */
     java.util.concurrent.Future<DeleteStreamProcessorResult> deleteStreamProcessorAsync(DeleteStreamProcessorRequest deleteStreamProcessorRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteStreamProcessorRequest, DeleteStreamProcessorResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified UserID within the collection. Faces that are associated with the UserID are disassociated
+     * from the UserID before deleting the specified UserID. If the specified <code>Collection</code> or
+     * <code>UserID</code> is already deleted or not found, a <code>ResourceNotFoundException</code> will be thrown. If
+     * the action is successful with a 200 response, an empty HTTP body is returned.
+     * </p>
+     * 
+     * @param deleteUserRequest
+     * @return A Java Future containing the result of the DeleteUser operation returned by the service.
+     * @sample AmazonRekognitionAsync.DeleteUser
+     */
+    java.util.concurrent.Future<DeleteUserResult> deleteUserAsync(DeleteUserRequest deleteUserRequest);
+
+    /**
+     * <p>
+     * Deletes the specified UserID within the collection. Faces that are associated with the UserID are disassociated
+     * from the UserID before deleting the specified UserID. If the specified <code>Collection</code> or
+     * <code>UserID</code> is already deleted or not found, a <code>ResourceNotFoundException</code> will be thrown. If
+     * the action is successful with a 200 response, an empty HTTP body is returned.
+     * </p>
+     * 
+     * @param deleteUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteUser operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.DeleteUser
+     */
+    java.util.concurrent.Future<DeleteUserResult> deleteUserAsync(DeleteUserRequest deleteUserRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteUserRequest, DeleteUserResult> asyncHandler);
 
     /**
      * <p>
@@ -2300,6 +2514,43 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      */
     java.util.concurrent.Future<DetectTextResult> detectTextAsync(DetectTextRequest detectTextRequest,
             com.amazonaws.handlers.AsyncHandler<DetectTextRequest, DetectTextResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the association between a <code>Face</code> supplied in an array of <code>FaceIds</code> and the User. If
+     * the User is not present already, then a <code>ResourceNotFound</code> exception is thrown. If successful, an
+     * array of faces that are disassociated from the User is returned. If a given face is already disassociated from
+     * the given UserID, it will be ignored and not be returned in the response. If a given face is already associated
+     * with a different User or not found in the collection it will be returned as part of
+     * <code>UnsuccessfulDisassociations</code>. You can remove 1 - 100 face IDs from a user at one time.
+     * </p>
+     * 
+     * @param disassociateFacesRequest
+     * @return A Java Future containing the result of the DisassociateFaces operation returned by the service.
+     * @sample AmazonRekognitionAsync.DisassociateFaces
+     */
+    java.util.concurrent.Future<DisassociateFacesResult> disassociateFacesAsync(DisassociateFacesRequest disassociateFacesRequest);
+
+    /**
+     * <p>
+     * Removes the association between a <code>Face</code> supplied in an array of <code>FaceIds</code> and the User. If
+     * the User is not present already, then a <code>ResourceNotFound</code> exception is thrown. If successful, an
+     * array of faces that are disassociated from the User is returned. If a given face is already disassociated from
+     * the given UserID, it will be ignored and not be returned in the response. If a given face is already associated
+     * with a different User or not found in the collection it will be returned as part of
+     * <code>UnsuccessfulDisassociations</code>. You can remove 1 - 100 face IDs from a user at one time.
+     * </p>
+     * 
+     * @param disassociateFacesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateFaces operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.DisassociateFaces
+     */
+    java.util.concurrent.Future<DisassociateFacesResult> disassociateFacesAsync(DisassociateFacesRequest disassociateFacesRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateFacesRequest, DisassociateFacesResult> asyncHandler);
 
     /**
      * <p>
@@ -3872,6 +4123,39 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
+     * Returns metadata of the User such as <code>UserID</code> in the specified collection. Anonymous User (to reserve
+     * faces without any identity) is not returned as part of this request. The results are sorted by system generated
+     * primary key ID. If the response is truncated, <code>NextToken</code> is returned in the response that can be used
+     * in the subsequent request to retrieve the next set of identities.
+     * </p>
+     * 
+     * @param listUsersRequest
+     * @return A Java Future containing the result of the ListUsers operation returned by the service.
+     * @sample AmazonRekognitionAsync.ListUsers
+     */
+    java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest);
+
+    /**
+     * <p>
+     * Returns metadata of the User such as <code>UserID</code> in the specified collection. Anonymous User (to reserve
+     * faces without any identity) is not returned as part of this request. The results are sorted by system generated
+     * primary key ID. If the response is truncated, <code>NextToken</code> is returned in the response that can be used
+     * in the subsequent request to retrieve the next set of identities.
+     * </p>
+     * 
+     * @param listUsersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListUsers operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.ListUsers
+     */
+    java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListUsersRequest, ListUsersResult> asyncHandler);
+
+    /**
+     * <p>
      * Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project
      * policy specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in
      * the trusted AWS account. To copy a model version you use the <a>CopyProjectVersion</a> operation.
@@ -4207,6 +4491,86 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      */
     java.util.concurrent.Future<SearchFacesByImageResult> searchFacesByImageAsync(SearchFacesByImageRequest searchFacesByImageRequest,
             com.amazonaws.handlers.AsyncHandler<SearchFacesByImageRequest, SearchFacesByImageResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches for UserIDs within a collection based on a <code>FaceId</code> or <code>UserId</code>. This API can be
+     * used to find the closest UserID (with a highest similarity) to associate a face. The request must be provided
+     * with either <code>FaceId</code> or <code>UserId</code>. The operation returns an array of UserID that match the
+     * <code>FaceId</code> or <code>UserId</code>, ordered by similarity score with the highest similarity first.
+     * </p>
+     * 
+     * @param searchUsersRequest
+     * @return A Java Future containing the result of the SearchUsers operation returned by the service.
+     * @sample AmazonRekognitionAsync.SearchUsers
+     */
+    java.util.concurrent.Future<SearchUsersResult> searchUsersAsync(SearchUsersRequest searchUsersRequest);
+
+    /**
+     * <p>
+     * Searches for UserIDs within a collection based on a <code>FaceId</code> or <code>UserId</code>. This API can be
+     * used to find the closest UserID (with a highest similarity) to associate a face. The request must be provided
+     * with either <code>FaceId</code> or <code>UserId</code>. The operation returns an array of UserID that match the
+     * <code>FaceId</code> or <code>UserId</code>, ordered by similarity score with the highest similarity first.
+     * </p>
+     * 
+     * @param searchUsersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchUsers operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.SearchUsers
+     */
+    java.util.concurrent.Future<SearchUsersResult> searchUsersAsync(SearchUsersRequest searchUsersRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchUsersRequest, SearchUsersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches for UserIDs using a supplied image. It first detects the largest face in the image, and then searches a
+     * specified collection for matching UserIDs.
+     * </p>
+     * <p>
+     * The operation returns an array of UserIDs that match the face in the supplied image, ordered by similarity score
+     * with the highest similarity first. It also returns a bounding box for the face found in the input image.
+     * </p>
+     * <p>
+     * Information about faces detected in the supplied image, but not used for the search, is returned in an array of
+     * <code>UnsearchedFace</code> objects. If no valid face is detected in the image, the response will contain an
+     * empty <code>UserMatches</code> list and no <code>SearchedFace</code> object.
+     * </p>
+     * 
+     * @param searchUsersByImageRequest
+     * @return A Java Future containing the result of the SearchUsersByImage operation returned by the service.
+     * @sample AmazonRekognitionAsync.SearchUsersByImage
+     */
+    java.util.concurrent.Future<SearchUsersByImageResult> searchUsersByImageAsync(SearchUsersByImageRequest searchUsersByImageRequest);
+
+    /**
+     * <p>
+     * Searches for UserIDs using a supplied image. It first detects the largest face in the image, and then searches a
+     * specified collection for matching UserIDs.
+     * </p>
+     * <p>
+     * The operation returns an array of UserIDs that match the face in the supplied image, ordered by similarity score
+     * with the highest similarity first. It also returns a bounding box for the face found in the input image.
+     * </p>
+     * <p>
+     * Information about faces detected in the supplied image, but not used for the search, is returned in an array of
+     * <code>UnsearchedFace</code> objects. If no valid face is detected in the image, the response will contain an
+     * empty <code>UserMatches</code> list and no <code>SearchedFace</code> object.
+     * </p>
+     * 
+     * @param searchUsersByImageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchUsersByImage operation returned by the service.
+     * @sample AmazonRekognitionAsyncHandler.SearchUsersByImage
+     */
+    java.util.concurrent.Future<SearchUsersByImageResult> searchUsersByImageAsync(SearchUsersByImageRequest searchUsersByImageRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchUsersByImageRequest, SearchUsersByImageResult> asyncHandler);
 
     /**
      * <p>

@@ -65,6 +65,11 @@ import com.amazonaws.services.rekognition.model.transform.*;
  * <ul>
  * <li>
  * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_AssociateFaces.html">AssociateFaces</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CompareFaces.html">CompareFaces</a>
  * </p>
  * </li>
@@ -75,12 +80,22 @@ import com.amazonaws.services.rekognition.model.transform.*;
  * </li>
  * <li>
  * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateUser.html">CreateUser</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteCollection.html">DeleteCollection</a>
  * </p>
  * </li>
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteFaces.html">DeleteFaces</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteUser.html">DeleteUser</a>
  * </p>
  * </li>
  * <li>
@@ -118,6 +133,12 @@ import com.amazonaws.services.rekognition.model.transform.*;
  * </li>
  * <li>
  * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DisassociateFaces.html">DisassociateFaces</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetCelebrityInfo.html">GetCelebrityInfo</a>
  * </p>
  * </li>
@@ -138,6 +159,11 @@ import com.amazonaws.services.rekognition.model.transform.*;
  * </li>
  * <li>
  * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListFaces.html">ListUsers</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_RecognizeCelebrities.html">
  * RecognizeCelebrities</a>
  * </p>
@@ -151,6 +177,17 @@ import com.amazonaws.services.rekognition.model.transform.*;
  * <p>
  * <a
  * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchFacesByImage.html">SearchFacesByImage</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchUsers.html">SearchUsers</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchUsersByImage.html">SearchUsersByImage</a>
  * </p>
  * </li>
  * </ul>
@@ -506,6 +543,9 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.rekognition.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.rekognition.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ImageTooLargeException").withExceptionUnmarshaller(
                                     com.amazonaws.services.rekognition.model.transform.ImageTooLargeExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -711,6 +751,120 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/rekognition/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/rekognition/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Associates one or more faces with an existing UserID. Takes an array of <code>FaceIds</code>. Each
+     * <code>FaceId</code> that are present in the <code>FaceIds</code> list is associated with the provided UserID. The
+     * maximum number of total <code>FaceIds</code> per UserID is 100.
+     * </p>
+     * <p>
+     * The <code>UserMatchThreshold</code> parameter specifies the minimum user match confidence required for the face
+     * to be associated with a UserID that has at least one <code>FaceID</code> already associated. This ensures that
+     * the <code>FaceIds</code> are associated with the right UserID. The value ranges from 0-100 and default value is
+     * 75.
+     * </p>
+     * <p>
+     * If successful, an array of <code>AssociatedFace</code> objects containing the associated <code>FaceIds</code> is
+     * returned. If a given face is already associated with the given <code>UserID</code>, it will be ignored and will
+     * not be returned in the response. If a given face is already associated to a different <code>UserID</code>, isn't
+     * found in the collection, doesn’t meet the <code>UserMatchThreshold</code>, or there are already 100 faces
+     * associated with the <code>UserID</code>, it will be returned as part of an array of
+     * <code>UnsuccessfulFaceAssociations.</code>
+     * </p>
+     * <p>
+     * The <code>UserStatus</code> reflects the status of an operation which updates a UserID representation with a list
+     * of given faces. The <code>UserStatus</code> can be:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * ACTIVE - All associations or disassociations of FaceID(s) for a UserID are complete.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * CREATED - A UserID has been created, but has no FaceID(s) associated with it.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * UPDATING - A UserID is being updated and there are current associations or disassociations of FaceID(s) taking
+     * place.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param associateFacesRequest
+     * @return Result of the AssociateFaces operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws ConflictException
+     *         A User with the same Id already exists within the collection, or the update or deletion of the User
+     *         caused an inconsistent state. **
+     * @throws ServiceQuotaExceededException
+     *         <p>
+     *         The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in
+     *         Amazon Rekognition in the Amazon Rekognition Developer Guide.
+     * @sample AmazonRekognition.AssociateFaces
+     */
+    @Override
+    public AssociateFacesResult associateFaces(AssociateFacesRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateFaces(request);
+    }
+
+    @SdkInternalApi
+    final AssociateFacesResult executeAssociateFaces(AssociateFacesRequest associateFacesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateFacesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateFacesRequest> request = null;
+        Response<AssociateFacesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateFacesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(associateFacesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateFaces");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateFacesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AssociateFacesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -1521,6 +1675,89 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Creates a new User within a collection specified by <code>CollectionId</code>. Takes <code>UserId</code> as a
+     * parameter, which is a user provided ID which should be unique within the collection. The provided
+     * <code>UserId</code> will alias the system generated UUID to make the <code>UserId</code> more user friendly.
+     * </p>
+     * <p>
+     * Uses a <code>ClientToken</code>, an idempotency token that ensures a call to <code>CreateUser</code> completes
+     * only once. If the value is not supplied, the AWS SDK generates an idempotency token for the requests. This
+     * prevents retries after a network error results from making multiple <code>CreateUser</code> calls.
+     * </p>
+     * 
+     * @param createUserRequest
+     * @return Result of the CreateUser operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws ConflictException
+     *         A User with the same Id already exists within the collection, or the update or deletion of the User
+     *         caused an inconsistent state. **
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws ServiceQuotaExceededException
+     *         <p>
+     *         The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in
+     *         Amazon Rekognition in the Amazon Rekognition Developer Guide.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.CreateUser
+     */
+    @Override
+    public CreateUserResult createUser(CreateUserRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateUser(request);
+    }
+
+    @SdkInternalApi
+    final CreateUserResult executeCreateUser(CreateUserRequest createUserRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createUserRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateUserRequest> request = null;
+        Response<CreateUserResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateUserRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createUserRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateUser");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateUserResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateUserResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified collection. Note that this operation removes all faces in the collection. For an example,
      * see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/delete-collection-procedure.html">Deleting a
      * collection</a>.
@@ -2032,6 +2269,81 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<DeleteStreamProcessorResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new DeleteStreamProcessorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the specified UserID within the collection. Faces that are associated with the UserID are disassociated
+     * from the UserID before deleting the specified UserID. If the specified <code>Collection</code> or
+     * <code>UserID</code> is already deleted or not found, a <code>ResourceNotFoundException</code> will be thrown. If
+     * the action is successful with a 200 response, an empty HTTP body is returned.
+     * </p>
+     * 
+     * @param deleteUserRequest
+     * @return Result of the DeleteUser operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws ConflictException
+     *         A User with the same Id already exists within the collection, or the update or deletion of the User
+     *         caused an inconsistent state. **
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.DeleteUser
+     */
+    @Override
+    public DeleteUserResult deleteUser(DeleteUserRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteUser(request);
+    }
+
+    @SdkInternalApi
+    final DeleteUserResult executeDeleteUser(DeleteUserRequest deleteUserRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteUserRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteUserRequest> request = null;
+        Response<DeleteUserResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteUserRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteUserRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteUser");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteUserResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteUserResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3145,6 +3457,83 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<DetectTextResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DetectTextResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the association between a <code>Face</code> supplied in an array of <code>FaceIds</code> and the User. If
+     * the User is not present already, then a <code>ResourceNotFound</code> exception is thrown. If successful, an
+     * array of faces that are disassociated from the User is returned. If a given face is already disassociated from
+     * the given UserID, it will be ignored and not be returned in the response. If a given face is already associated
+     * with a different User or not found in the collection it will be returned as part of
+     * <code>UnsuccessfulDisassociations</code>. You can remove 1 - 100 face IDs from a user at one time.
+     * </p>
+     * 
+     * @param disassociateFacesRequest
+     * @return Result of the DisassociateFaces operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws ConflictException
+     *         A User with the same Id already exists within the collection, or the update or deletion of the User
+     *         caused an inconsistent state. **
+     * @sample AmazonRekognition.DisassociateFaces
+     */
+    @Override
+    public DisassociateFacesResult disassociateFaces(DisassociateFacesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateFaces(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateFacesResult executeDisassociateFaces(DisassociateFacesRequest disassociateFacesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateFacesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateFacesRequest> request = null;
+        Response<DisassociateFacesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateFacesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disassociateFacesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateFaces");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateFacesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateFacesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4994,6 +5383,77 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Returns metadata of the User such as <code>UserID</code> in the specified collection. Anonymous User (to reserve
+     * faces without any identity) is not returned as part of this request. The results are sorted by system generated
+     * primary key ID. If the response is truncated, <code>NextToken</code> is returned in the response that can be used
+     * in the subsequent request to retrieve the next set of identities.
+     * </p>
+     * 
+     * @param listUsersRequest
+     * @return Result of the ListUsers operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws InvalidPaginationTokenException
+     *         Pagination token in the request is not valid.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.ListUsers
+     */
+    @Override
+    public ListUsersResult listUsers(ListUsersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListUsers(request);
+    }
+
+    @SdkInternalApi
+    final ListUsersResult executeListUsers(ListUsersRequest listUsersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listUsersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListUsersRequest> request = null;
+        Response<ListUsersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListUsersRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listUsersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListUsers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListUsersResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListUsersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project
      * policy specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in
      * the trusted AWS account. To copy a model version you use the <a>CopyProjectVersion</a> operation.
@@ -5393,6 +5853,159 @@ public class AmazonRekognitionClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<SearchFacesByImageResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchFacesByImageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Searches for UserIDs within a collection based on a <code>FaceId</code> or <code>UserId</code>. This API can be
+     * used to find the closest UserID (with a highest similarity) to associate a face. The request must be provided
+     * with either <code>FaceId</code> or <code>UserId</code>. The operation returns an array of UserID that match the
+     * <code>FaceId</code> or <code>UserId</code>, ordered by similarity score with the highest similarity first.
+     * </p>
+     * 
+     * @param searchUsersRequest
+     * @return Result of the SearchUsers operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.SearchUsers
+     */
+    @Override
+    public SearchUsersResult searchUsers(SearchUsersRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchUsers(request);
+    }
+
+    @SdkInternalApi
+    final SearchUsersResult executeSearchUsers(SearchUsersRequest searchUsersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchUsersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchUsersRequest> request = null;
+        Response<SearchUsersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchUsersRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchUsersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchUsers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchUsersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchUsersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Searches for UserIDs using a supplied image. It first detects the largest face in the image, and then searches a
+     * specified collection for matching UserIDs.
+     * </p>
+     * <p>
+     * The operation returns an array of UserIDs that match the face in the supplied image, ordered by similarity score
+     * with the highest similarity first. It also returns a bounding box for the face found in the input image.
+     * </p>
+     * <p>
+     * Information about faces detected in the supplied image, but not used for the search, is returned in an array of
+     * <code>UnsearchedFace</code> objects. If no valid face is detected in the image, the response will contain an
+     * empty <code>UserMatches</code> list and no <code>SearchedFace</code> object.
+     * </p>
+     * 
+     * @param searchUsersByImageRequest
+     * @return Result of the SearchUsersByImage operation returned by the service.
+     * @throws InvalidParameterException
+     *         Input parameter violated a constraint. Validate your parameter before calling the API operation again.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request cannot be found.
+     * @throws InvalidImageFormatException
+     *         The provided image format is not supported.
+     * @throws InvalidS3ObjectException
+     *         Amazon Rekognition is unable to access the S3 object specified in the request.
+     * @throws ImageTooLargeException
+     *         The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image
+     *         size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon
+     *         Rekognition in the Amazon Rekognition Developer Guide.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Rekognition.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform the action.
+     * @throws InternalServerErrorException
+     *         Amazon Rekognition experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Rekognition is temporarily unable to process the request. Try your call again.
+     * @sample AmazonRekognition.SearchUsersByImage
+     */
+    @Override
+    public SearchUsersByImageResult searchUsersByImage(SearchUsersByImageRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchUsersByImage(request);
+    }
+
+    @SdkInternalApi
+    final SearchUsersByImageResult executeSearchUsersByImage(SearchUsersByImageRequest searchUsersByImageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchUsersByImageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchUsersByImageRequest> request = null;
+        Response<SearchUsersByImageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchUsersByImageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchUsersByImageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Rekognition");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchUsersByImage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchUsersByImageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchUsersByImageResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -27,7 +27,7 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the pipeline.
+     * The name or Amazon Resource Name (ARN) of the pipeline.
      * </p>
      */
     private String pipelineName;
@@ -72,11 +72,11 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the pipeline.
+     * The name or Amazon Resource Name (ARN) of the pipeline.
      * </p>
      * 
      * @param pipelineName
-     *        The name of the pipeline.
+     *        The name or Amazon Resource Name (ARN) of the pipeline.
      */
 
     public void setPipelineName(String pipelineName) {
@@ -85,10 +85,10 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the pipeline.
+     * The name or Amazon Resource Name (ARN) of the pipeline.
      * </p>
      * 
-     * @return The name of the pipeline.
+     * @return The name or Amazon Resource Name (ARN) of the pipeline.
      */
 
     public String getPipelineName() {
@@ -97,11 +97,11 @@ public class StartPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the pipeline.
+     * The name or Amazon Resource Name (ARN) of the pipeline.
      * </p>
      * 
      * @param pipelineName
-     *        The name of the pipeline.
+     *        The name or Amazon Resource Name (ARN) of the pipeline.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

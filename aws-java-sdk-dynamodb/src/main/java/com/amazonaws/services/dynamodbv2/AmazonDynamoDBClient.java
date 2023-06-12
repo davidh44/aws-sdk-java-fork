@@ -486,9 +486,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * A single operation can retrieve up to 16 MB of data, which can contain as many as 100 items.
      * <code>BatchGetItem</code> returns a partial result if the response size limit is exceeded, the table's
-     * provisioned throughput is exceeded, or an internal processing failure occurs. If a partial result is returned,
-     * the operation returns a value for <code>UnprocessedKeys</code>. You can use this value to retry the operation
-     * starting with the next item to get.
+     * provisioned throughput is exceeded, more than 1MB per partition is requested, or an internal processing failure
+     * occurs. If a partial result is returned, the operation returns a value for <code>UnprocessedKeys</code>. You can
+     * use this value to retry the operation starting with the next item to get.
      * </p>
      * <important>
      * <p>
@@ -889,6 +889,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.CreateBackup
@@ -1053,6 +1060,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @throws GlobalTableAlreadyExistsException
@@ -1158,6 +1172,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.CreateTable
@@ -1253,6 +1274,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DeleteBackup
@@ -1473,6 +1501,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DeleteTable
@@ -1827,6 +1862,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.DescribeExport
@@ -2562,6 +2604,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
      *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
@@ -2653,6 +2702,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
      *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
@@ -3299,6 +3355,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InvalidExportTimeException
      *         The specified <code>ExportTime</code> is outside of the point in time recovery window.
      * @throws ExportConflictException
@@ -3476,6 +3539,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws ImportConflictException
      *         There was a conflict when importing from the specified S3 source. This can occur when the current import
      *         conflicts with a previous import request that had the same client token.
@@ -3685,6 +3755,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.ListExports
@@ -3837,6 +3914,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @sample AmazonDynamoDB.ListImports
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListImports" target="_top">AWS API
      *      Documentation</a>
@@ -4364,6 +4448,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.RestoreTableFromBackup
@@ -4527,6 +4618,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InvalidRestoreTimeException
      *         An invalid restore time was specified. RestoreDateTime must be between EarliestRestorableDateTime and
      *         LatestRestorableDateTime.
@@ -4741,6 +4839,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws ResourceNotFoundException
      *         The operation tried to access a nonexistent table or index. The resource might not be specified
      *         correctly, or its status might not be <code>ACTIVE</code>.
@@ -5770,6 +5875,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws ResourceNotFoundException
      *         The operation tried to access a nonexistent table or index. The resource might not be specified
      *         correctly, or its status might not be <code>ACTIVE</code>.
@@ -6145,6 +6257,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws ResourceInUseException
      *         The operation conflicts with the resource's availability. For example, you attempted to recreate an
      *         existing table, or tried to delete a table currently in the <code>CREATING</code> state.
@@ -6373,6 +6492,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.UpdateTable
@@ -6471,6 +6597,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.UpdateTableReplicaAutoScaling
@@ -6588,6 +6721,13 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      *         </p>
      *         <p>
      *         There is a soft account quota of 2,500 tables.
+     *         </p>
+     *         <p>
+     *         GetRecords was called with a value of more than 1000 for the limit request parameter.
+     *         </p>
+     *         <p>
+     *         More than 2 processes are reading from the same streams shard at the same time. Exceeding this limit may
+     *         result in request throttling.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AmazonDynamoDB.UpdateTimeToLive

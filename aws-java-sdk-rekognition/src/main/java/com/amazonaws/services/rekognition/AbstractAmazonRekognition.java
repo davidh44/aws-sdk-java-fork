@@ -39,6 +39,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
     }
 
     @Override
+    public AssociateFacesResult associateFaces(AssociateFacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CompareFacesResult compareFaces(CompareFacesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,6 +84,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
     }
 
     @Override
+    public CreateUserResult createUser(CreateUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteCollectionResult deleteCollection(DeleteCollectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -110,6 +120,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public DeleteStreamProcessorResult deleteStreamProcessor(DeleteStreamProcessorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteUserResult deleteUser(DeleteUserRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -165,6 +180,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public DetectTextResult detectText(DetectTextRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateFacesResult disassociateFaces(DisassociateFacesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -264,6 +284,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
     }
 
     @Override
+    public ListUsersResult listUsers(ListUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutProjectPolicyResult putProjectPolicy(PutProjectPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -280,6 +305,16 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public SearchFacesByImageResult searchFacesByImage(SearchFacesByImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchUsersResult searchUsers(SearchUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchUsersByImageResult searchUsersByImage(SearchUsersByImageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
