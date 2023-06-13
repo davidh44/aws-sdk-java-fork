@@ -139,7 +139,7 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * The type of network interface. The default is <code>interface</code>.
      * </p>
      * <p>
-     * The only supported values are <code>efa</code> and <code>trunk</code>.
+     * The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * </p>
      */
     private String interfaceType;
@@ -1034,13 +1034,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * The type of network interface. The default is <code>interface</code>.
      * </p>
      * <p>
-     * The only supported values are <code>efa</code> and <code>trunk</code>.
+     * The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * </p>
      * 
      * @param interfaceType
      *        The type of network interface. The default is <code>interface</code>.</p>
      *        <p>
-     *        The only supported values are <code>efa</code> and <code>trunk</code>.
+     *        The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * @see NetworkInterfaceCreationType
      */
 
@@ -1053,12 +1053,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * The type of network interface. The default is <code>interface</code>.
      * </p>
      * <p>
-     * The only supported values are <code>efa</code> and <code>trunk</code>.
+     * The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * </p>
      * 
      * @return The type of network interface. The default is <code>interface</code>.</p>
      *         <p>
-     *         The only supported values are <code>efa</code> and <code>trunk</code>.
+     *         The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * @see NetworkInterfaceCreationType
      */
 
@@ -1071,13 +1071,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * The type of network interface. The default is <code>interface</code>.
      * </p>
      * <p>
-     * The only supported values are <code>efa</code> and <code>trunk</code>.
+     * The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * </p>
      * 
      * @param interfaceType
      *        The type of network interface. The default is <code>interface</code>.</p>
      *        <p>
-     *        The only supported values are <code>efa</code> and <code>trunk</code>.
+     *        The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkInterfaceCreationType
      */
@@ -1092,13 +1092,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * The type of network interface. The default is <code>interface</code>.
      * </p>
      * <p>
-     * The only supported values are <code>efa</code> and <code>trunk</code>.
+     * The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * </p>
      * 
      * @param interfaceType
      *        The type of network interface. The default is <code>interface</code>.</p>
      *        <p>
-     *        The only supported values are <code>efa</code> and <code>trunk</code>.
+     *        The only supported values are <code>interface</code>, <code>efa</code>, and <code>trunk</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkInterfaceCreationType
      */

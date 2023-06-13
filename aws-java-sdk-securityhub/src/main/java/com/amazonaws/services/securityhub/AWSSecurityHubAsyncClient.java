@@ -201,6 +201,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDeleteAutomationRulesResult> batchDeleteAutomationRulesAsync(BatchDeleteAutomationRulesRequest request) {
+
+        return batchDeleteAutomationRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteAutomationRulesResult> batchDeleteAutomationRulesAsync(final BatchDeleteAutomationRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDeleteAutomationRulesRequest, BatchDeleteAutomationRulesResult> asyncHandler) {
+        final BatchDeleteAutomationRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDeleteAutomationRulesResult>() {
+            @Override
+            public BatchDeleteAutomationRulesResult call() throws Exception {
+                BatchDeleteAutomationRulesResult result = null;
+
+                try {
+                    result = executeBatchDeleteAutomationRules(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchDisableStandardsResult> batchDisableStandardsAsync(BatchDisableStandardsRequest request) {
 
         return batchDisableStandardsAsync(request, null);
@@ -251,6 +284,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeBatchEnableStandards(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAutomationRulesResult> batchGetAutomationRulesAsync(BatchGetAutomationRulesRequest request) {
+
+        return batchGetAutomationRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetAutomationRulesResult> batchGetAutomationRulesAsync(final BatchGetAutomationRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetAutomationRulesRequest, BatchGetAutomationRulesResult> asyncHandler) {
+        final BatchGetAutomationRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetAutomationRulesResult>() {
+            @Override
+            public BatchGetAutomationRulesResult call() throws Exception {
+                BatchGetAutomationRulesResult result = null;
+
+                try {
+                    result = executeBatchGetAutomationRules(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -368,6 +434,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchUpdateAutomationRulesResult> batchUpdateAutomationRulesAsync(BatchUpdateAutomationRulesRequest request) {
+
+        return batchUpdateAutomationRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateAutomationRulesResult> batchUpdateAutomationRulesAsync(final BatchUpdateAutomationRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchUpdateAutomationRulesRequest, BatchUpdateAutomationRulesResult> asyncHandler) {
+        final BatchUpdateAutomationRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchUpdateAutomationRulesResult>() {
+            @Override
+            public BatchUpdateAutomationRulesResult call() throws Exception {
+                BatchUpdateAutomationRulesResult result = null;
+
+                try {
+                    result = executeBatchUpdateAutomationRules(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchUpdateFindingsResult> batchUpdateFindingsAsync(BatchUpdateFindingsRequest request) {
 
         return batchUpdateFindingsAsync(request, null);
@@ -453,6 +552,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeCreateActionTarget(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAutomationRuleResult> createAutomationRuleAsync(CreateAutomationRuleRequest request) {
+
+        return createAutomationRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAutomationRuleResult> createAutomationRuleAsync(final CreateAutomationRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAutomationRuleRequest, CreateAutomationRuleResult> asyncHandler) {
+        final CreateAutomationRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAutomationRuleResult>() {
+            @Override
+            public CreateAutomationRuleResult call() throws Exception {
+                CreateAutomationRuleResult result = null;
+
+                try {
+                    result = executeCreateAutomationRule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1623,6 +1755,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeInviteMembers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutomationRulesResult> listAutomationRulesAsync(ListAutomationRulesRequest request) {
+
+        return listAutomationRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutomationRulesResult> listAutomationRulesAsync(final ListAutomationRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAutomationRulesRequest, ListAutomationRulesResult> asyncHandler) {
+        final ListAutomationRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAutomationRulesResult>() {
+            @Override
+            public ListAutomationRulesResult call() throws Exception {
+                ListAutomationRulesResult result = null;
+
+                try {
+                    result = executeListAutomationRules(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

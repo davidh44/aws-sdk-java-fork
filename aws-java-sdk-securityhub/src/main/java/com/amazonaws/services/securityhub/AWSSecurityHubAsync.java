@@ -212,6 +212,39 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Deletes one or more automation rules.
+     * </p>
+     * 
+     * @param batchDeleteAutomationRulesRequest
+     * @return A Java Future containing the result of the BatchDeleteAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsync.BatchDeleteAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDeleteAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteAutomationRulesResult> batchDeleteAutomationRulesAsync(
+            BatchDeleteAutomationRulesRequest batchDeleteAutomationRulesRequest);
+
+    /**
+     * <p>
+     * Deletes one or more automation rules.
+     * </p>
+     * 
+     * @param batchDeleteAutomationRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDeleteAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.BatchDeleteAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDeleteAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteAutomationRulesResult> batchDeleteAutomationRulesAsync(
+            BatchDeleteAutomationRulesRequest batchDeleteAutomationRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteAutomationRulesRequest, BatchDeleteAutomationRulesResult> asyncHandler);
+
+    /**
+     * <p>
      * Disables the standards specified by the provided <code>StandardsSubscriptionArns</code>.
      * </p>
      * <p>
@@ -293,6 +326,37 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<BatchEnableStandardsResult> batchEnableStandardsAsync(BatchEnableStandardsRequest batchEnableStandardsRequest,
             com.amazonaws.handlers.AsyncHandler<BatchEnableStandardsRequest, BatchEnableStandardsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of details for automation rules based on rule Amazon Resource Names (ARNs).
+     * </p>
+     * 
+     * @param batchGetAutomationRulesRequest
+     * @return A Java Future containing the result of the BatchGetAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsync.BatchGetAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAutomationRulesResult> batchGetAutomationRulesAsync(BatchGetAutomationRulesRequest batchGetAutomationRulesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of details for automation rules based on rule Amazon Resource Names (ARNs).
+     * </p>
+     * 
+     * @param batchGetAutomationRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.BatchGetAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetAutomationRulesResult> batchGetAutomationRulesAsync(BatchGetAutomationRulesRequest batchGetAutomationRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetAutomationRulesRequest, BatchGetAutomationRulesResult> asyncHandler);
 
     /**
      * <p>
@@ -565,6 +629,39 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Updates one or more automation rules based on rule Amazon Resource Names (ARNs) and input parameters.
+     * </p>
+     * 
+     * @param batchUpdateAutomationRulesRequest
+     * @return A Java Future containing the result of the BatchUpdateAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsync.BatchUpdateAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateAutomationRulesResult> batchUpdateAutomationRulesAsync(
+            BatchUpdateAutomationRulesRequest batchUpdateAutomationRulesRequest);
+
+    /**
+     * <p>
+     * Updates one or more automation rules based on rule Amazon Resource Names (ARNs) and input parameters.
+     * </p>
+     * 
+     * @param batchUpdateAutomationRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchUpdateAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.BatchUpdateAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateAutomationRulesResult> batchUpdateAutomationRulesAsync(
+            BatchUpdateAutomationRulesRequest batchUpdateAutomationRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateAutomationRulesRequest, BatchUpdateAutomationRulesResult> asyncHandler);
+
+    /**
+     * <p>
      * Used by Security Hub customers to update information about their investigation into a finding. Requested by
      * administrator accounts or member accounts. Administrator accounts can update findings for their account and their
      * member accounts. Member accounts can update findings for their account.
@@ -795,6 +892,37 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<CreateActionTargetResult> createActionTargetAsync(CreateActionTargetRequest createActionTargetRequest,
             com.amazonaws.handlers.AsyncHandler<CreateActionTargetRequest, CreateActionTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an automation rule based on input parameters.
+     * </p>
+     * 
+     * @param createAutomationRuleRequest
+     * @return A Java Future containing the result of the CreateAutomationRule operation returned by the service.
+     * @sample AWSSecurityHubAsync.CreateAutomationRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateAutomationRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAutomationRuleResult> createAutomationRuleAsync(CreateAutomationRuleRequest createAutomationRuleRequest);
+
+    /**
+     * <p>
+     * Creates an automation rule based on input parameters.
+     * </p>
+     * 
+     * @param createAutomationRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAutomationRule operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.CreateAutomationRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateAutomationRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAutomationRuleResult> createAutomationRuleAsync(CreateAutomationRuleRequest createAutomationRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAutomationRuleRequest, CreateAutomationRuleResult> asyncHandler);
 
     /**
      * <p>
@@ -2374,6 +2502,37 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<InviteMembersResult> inviteMembersAsync(InviteMembersRequest inviteMembersRequest,
             com.amazonaws.handlers.AsyncHandler<InviteMembersRequest, InviteMembersResult> asyncHandler);
+
+    /**
+     * <p>
+     * A list of automation rules and their metadata for the calling account.
+     * </p>
+     * 
+     * @param listAutomationRulesRequest
+     * @return A Java Future containing the result of the ListAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsync.ListAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAutomationRulesResult> listAutomationRulesAsync(ListAutomationRulesRequest listAutomationRulesRequest);
+
+    /**
+     * <p>
+     * A list of automation rules and their metadata for the calling account.
+     * </p>
+     * 
+     * @param listAutomationRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAutomationRules operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.ListAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAutomationRulesResult> listAutomationRulesAsync(ListAutomationRulesRequest listAutomationRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAutomationRulesRequest, ListAutomationRulesResult> asyncHandler);
 
     /**
      * <p>

@@ -58,6 +58,18 @@ public class ShareInvitationSummary implements Serializable, Cloneable, Structur
      * </p>
      */
     private String lensArn;
+    /**
+     * <p>
+     * The profile name.
+     * </p>
+     */
+    private String profileName;
+    /**
+     * <p>
+     * The profile ARN.
+     * </p>
+     */
+    private String profileArn;
 
     /**
      * <p>
@@ -369,6 +381,86 @@ public class ShareInvitationSummary implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The profile name.
+     * </p>
+     * 
+     * @param profileName
+     *        The profile name.
+     */
+
+    public void setProfileName(String profileName) {
+        this.profileName = profileName;
+    }
+
+    /**
+     * <p>
+     * The profile name.
+     * </p>
+     * 
+     * @return The profile name.
+     */
+
+    public String getProfileName() {
+        return this.profileName;
+    }
+
+    /**
+     * <p>
+     * The profile name.
+     * </p>
+     * 
+     * @param profileName
+     *        The profile name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ShareInvitationSummary withProfileName(String profileName) {
+        setProfileName(profileName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The profile ARN.
+     * </p>
+     * 
+     * @param profileArn
+     *        The profile ARN.
+     */
+
+    public void setProfileArn(String profileArn) {
+        this.profileArn = profileArn;
+    }
+
+    /**
+     * <p>
+     * The profile ARN.
+     * </p>
+     * 
+     * @return The profile ARN.
+     */
+
+    public String getProfileArn() {
+        return this.profileArn;
+    }
+
+    /**
+     * <p>
+     * The profile ARN.
+     * </p>
+     * 
+     * @param profileArn
+     *        The profile ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ShareInvitationSummary withProfileArn(String profileArn) {
+        setProfileArn(profileArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -397,7 +489,11 @@ public class ShareInvitationSummary implements Serializable, Cloneable, Structur
         if (getLensName() != null)
             sb.append("LensName: ").append(getLensName()).append(",");
         if (getLensArn() != null)
-            sb.append("LensArn: ").append(getLensArn());
+            sb.append("LensArn: ").append(getLensArn()).append(",");
+        if (getProfileName() != null)
+            sb.append("ProfileName: ").append(getProfileName()).append(",");
+        if (getProfileArn() != null)
+            sb.append("ProfileArn: ").append(getProfileArn());
         sb.append("}");
         return sb.toString();
     }
@@ -448,6 +544,14 @@ public class ShareInvitationSummary implements Serializable, Cloneable, Structur
             return false;
         if (other.getLensArn() != null && other.getLensArn().equals(this.getLensArn()) == false)
             return false;
+        if (other.getProfileName() == null ^ this.getProfileName() == null)
+            return false;
+        if (other.getProfileName() != null && other.getProfileName().equals(this.getProfileName()) == false)
+            return false;
+        if (other.getProfileArn() == null ^ this.getProfileArn() == null)
+            return false;
+        if (other.getProfileArn() != null && other.getProfileArn().equals(this.getProfileArn()) == false)
+            return false;
         return true;
     }
 
@@ -465,6 +569,8 @@ public class ShareInvitationSummary implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getWorkloadId() == null) ? 0 : getWorkloadId().hashCode());
         hashCode = prime * hashCode + ((getLensName() == null) ? 0 : getLensName().hashCode());
         hashCode = prime * hashCode + ((getLensArn() == null) ? 0 : getLensArn().hashCode());
+        hashCode = prime * hashCode + ((getProfileName() == null) ? 0 : getProfileName().hashCode());
+        hashCode = prime * hashCode + ((getProfileArn() == null) ? 0 : getProfileArn().hashCode());
         return hashCode;
     }
 

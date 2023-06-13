@@ -88,6 +88,31 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * Associate a profile with a workload.
+     * </p>
+     * 
+     * @param associateProfilesRequest
+     * @return Result of the AssociateProfiles operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.AssociateProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/AssociateProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateProfilesResult associateProfiles(AssociateProfilesRequest associateProfilesRequest);
+
+    /**
+     * <p>
      * Create a lens share.
      * </p>
      * <p>
@@ -203,6 +228,58 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     CreateMilestoneResult createMilestone(CreateMilestoneRequest createMilestoneRequest);
+
+    /**
+     * <p>
+     * Create a profile.
+     * </p>
+     * 
+     * @param createProfileRequest
+     * @return Result of the CreateProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateProfileResult createProfile(CreateProfileRequest createProfileRequest);
+
+    /**
+     * <p>
+     * Create a profile share.
+     * </p>
+     * 
+     * @param createProfileShareRequest
+     * @return Result of the CreateProfileShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateProfileShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateProfileShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateProfileShareResult createProfileShare(CreateProfileShareRequest createProfileShareRequest);
 
     /**
      * <p>
@@ -375,6 +452,67 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * Delete a profile.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your profile with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will
+     * make your profile available to those other accounts. Those other accounts may continue to access and use your
+     * shared profile even if you delete the profile from your own Amazon Web Services account or terminate your Amazon
+     * Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteProfileRequest
+     * @return Result of the DeleteProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteProfileResult deleteProfile(DeleteProfileRequest deleteProfileRequest);
+
+    /**
+     * <p>
+     * Delete a profile share.
+     * </p>
+     * 
+     * @param deleteProfileShareRequest
+     * @return Result of the DeleteProfileShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteProfileShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteProfileShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteProfileShareResult deleteProfileShare(DeleteProfileShareRequest deleteProfileShareRequest);
+
+    /**
+     * <p>
      * Delete an existing workload.
      * </p>
      * 
@@ -459,6 +597,31 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     DisassociateLensesResult disassociateLenses(DisassociateLensesRequest disassociateLensesRequest);
+
+    /**
+     * <p>
+     * Disassociate a profile from a workload.
+     * </p>
+     * 
+     * @param disassociateProfilesRequest
+     * @return Result of the DisassociateProfiles operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DisassociateProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DisassociateProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateProfilesResult disassociateProfiles(DisassociateProfilesRequest disassociateProfilesRequest);
 
     /**
      * <p>
@@ -670,6 +833,52 @@ public interface AWSWellArchitected {
      *      API Documentation</a>
      */
     GetMilestoneResult getMilestone(GetMilestoneRequest getMilestoneRequest);
+
+    /**
+     * <p>
+     * Get profile information.
+     * </p>
+     * 
+     * @param getProfileRequest
+     * @return Result of the GetProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetProfileResult getProfile(GetProfileRequest getProfileRequest);
+
+    /**
+     * <p>
+     * Get profile template.
+     * </p>
+     * 
+     * @param getProfileTemplateRequest
+     * @return Result of the GetProfileTemplate operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetProfileTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetProfileTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetProfileTemplateResult getProfileTemplate(GetProfileTemplateRequest getProfileTemplateRequest);
 
     /**
      * <p>
@@ -959,6 +1168,71 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * List profile notifications.
+     * </p>
+     * 
+     * @param listProfileNotificationsRequest
+     * @return Result of the ListProfileNotifications operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListProfileNotifications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListProfileNotifications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListProfileNotificationsResult listProfileNotifications(ListProfileNotificationsRequest listProfileNotificationsRequest);
+
+    /**
+     * <p>
+     * List profile shares.
+     * </p>
+     * 
+     * @param listProfileSharesRequest
+     * @return Result of the ListProfileShares operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListProfileShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListProfileShares"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListProfileSharesResult listProfileShares(ListProfileSharesRequest listProfileSharesRequest);
+
+    /**
+     * <p>
+     * List profiles.
+     * </p>
+     * 
+     * @param listProfilesRequest
+     * @return Result of the ListProfiles operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListProfilesResult listProfiles(ListProfilesRequest listProfilesRequest);
+
+    /**
+     * <p>
      * List the workload invitations.
      * </p>
      * 
@@ -985,7 +1259,7 @@ public interface AWSWellArchitected {
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
      * </p>
      * </note>
      * 
@@ -1053,7 +1327,7 @@ public interface AWSWellArchitected {
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
      * </p>
      * </note>
      * 
@@ -1075,7 +1349,7 @@ public interface AWSWellArchitected {
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
      * </p>
      * </note>
      * <p>
@@ -1172,6 +1446,31 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateLensReviewResult updateLensReview(UpdateLensReviewRequest updateLensReviewRequest);
+
+    /**
+     * <p>
+     * Update a profile.
+     * </p>
+     * 
+     * @param updateProfileRequest
+     * @return Result of the UpdateProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateProfileResult updateProfile(UpdateProfileRequest updateProfileRequest);
 
     /**
      * <p>
@@ -1281,6 +1580,31 @@ public interface AWSWellArchitected {
      *      target="_top">AWS API Documentation</a>
      */
     UpgradeLensReviewResult upgradeLensReview(UpgradeLensReviewRequest upgradeLensReviewRequest);
+
+    /**
+     * <p>
+     * Upgrade a profile.
+     * </p>
+     * 
+     * @param upgradeProfileVersionRequest
+     * @return Result of the UpgradeProfileVersion operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpgradeProfileVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeProfileVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpgradeProfileVersionResult upgradeProfileVersion(UpgradeProfileVersionRequest upgradeProfileVersionRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

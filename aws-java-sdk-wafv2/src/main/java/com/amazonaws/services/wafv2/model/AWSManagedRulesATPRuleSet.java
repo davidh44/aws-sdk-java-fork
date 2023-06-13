@@ -49,19 +49,25 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
      * <p>
      * The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure rates.
      * </p>
-     * <p>
-     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
-     * keeping count of successful and failed attempts from each IP address and client session. Using this information,
-     * the rule group labels and mitigates requests from client sessions and IP addresses that submit too many failed
-     * login attempts in a short amount of time.
-     * </p>
      * <note>
      * <p>
      * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      * </p>
      * </note>
+     * <p>
+     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
+     * keeping count of successful and failed attempts for each IP address and client session. Using this information,
+     * the rule group labels and mitigates requests from client sessions and IP addresses that have had too many failed
+     * login attempts in a short amount of time.
+     * </p>
      */
     private ResponseInspection responseInspection;
+    /**
+     * <p>
+     * Allow the use of regular expressions in the login page path.
+     * </p>
+     */
+    private Boolean enableRegexInPath;
 
     /**
      * <p>
@@ -168,31 +174,30 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
      * <p>
      * The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure rates.
      * </p>
-     * <p>
-     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
-     * keeping count of successful and failed attempts from each IP address and client session. Using this information,
-     * the rule group labels and mitigates requests from client sessions and IP addresses that submit too many failed
-     * login attempts in a short amount of time.
-     * </p>
      * <note>
      * <p>
      * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      * </p>
      * </note>
+     * <p>
+     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
+     * keeping count of successful and failed attempts for each IP address and client session. Using this information,
+     * the rule group labels and mitigates requests from client sessions and IP addresses that have had too many failed
+     * login attempts in a short amount of time.
+     * </p>
      * 
      * @param responseInspection
      *        The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure
-     *        rates. </p>
-     *        <p>
-     *        The ATP rule group evaluates the responses that your protected resources send back to client login
-     *        attempts, keeping count of successful and failed attempts from each IP address and client session. Using
-     *        this information, the rule group labels and mitigates requests from client sessions and IP addresses that
-     *        submit too many failed login attempts in a short amount of time.
-     *        </p>
-     *        <note>
+     *        rates. </p> <note>
      *        <p>
      *        Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      *        </p>
+     *        </note>
+     *        <p>
+     *        The ATP rule group evaluates the responses that your protected resources send back to client login
+     *        attempts, keeping count of successful and failed attempts for each IP address and client session. Using
+     *        this information, the rule group labels and mitigates requests from client sessions and IP addresses that
+     *        have had too many failed login attempts in a short amount of time.
      */
 
     public void setResponseInspection(ResponseInspection responseInspection) {
@@ -203,30 +208,29 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
      * <p>
      * The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure rates.
      * </p>
-     * <p>
-     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
-     * keeping count of successful and failed attempts from each IP address and client session. Using this information,
-     * the rule group labels and mitigates requests from client sessions and IP addresses that submit too many failed
-     * login attempts in a short amount of time.
-     * </p>
      * <note>
      * <p>
      * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      * </p>
      * </note>
+     * <p>
+     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
+     * keeping count of successful and failed attempts for each IP address and client session. Using this information,
+     * the rule group labels and mitigates requests from client sessions and IP addresses that have had too many failed
+     * login attempts in a short amount of time.
+     * </p>
      * 
      * @return The criteria for inspecting responses to login requests, used by the ATP rule group to track login
-     *         failure rates. </p>
-     *         <p>
-     *         The ATP rule group evaluates the responses that your protected resources send back to client login
-     *         attempts, keeping count of successful and failed attempts from each IP address and client session. Using
-     *         this information, the rule group labels and mitigates requests from client sessions and IP addresses that
-     *         submit too many failed login attempts in a short amount of time.
-     *         </p>
-     *         <note>
+     *         failure rates. </p> <note>
      *         <p>
      *         Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      *         </p>
+     *         </note>
+     *         <p>
+     *         The ATP rule group evaluates the responses that your protected resources send back to client login
+     *         attempts, keeping count of successful and failed attempts for each IP address and client session. Using
+     *         this information, the rule group labels and mitigates requests from client sessions and IP addresses that
+     *         have had too many failed login attempts in a short amount of time.
      */
 
     public ResponseInspection getResponseInspection() {
@@ -237,37 +241,88 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
      * <p>
      * The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure rates.
      * </p>
-     * <p>
-     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
-     * keeping count of successful and failed attempts from each IP address and client session. Using this information,
-     * the rule group labels and mitigates requests from client sessions and IP addresses that submit too many failed
-     * login attempts in a short amount of time.
-     * </p>
      * <note>
      * <p>
      * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      * </p>
      * </note>
+     * <p>
+     * The ATP rule group evaluates the responses that your protected resources send back to client login attempts,
+     * keeping count of successful and failed attempts for each IP address and client session. Using this information,
+     * the rule group labels and mitigates requests from client sessions and IP addresses that have had too many failed
+     * login attempts in a short amount of time.
+     * </p>
      * 
      * @param responseInspection
      *        The criteria for inspecting responses to login requests, used by the ATP rule group to track login failure
-     *        rates. </p>
-     *        <p>
-     *        The ATP rule group evaluates the responses that your protected resources send back to client login
-     *        attempts, keeping count of successful and failed attempts from each IP address and client session. Using
-     *        this information, the rule group labels and mitigates requests from client sessions and IP addresses that
-     *        submit too many failed login attempts in a short amount of time.
-     *        </p>
-     *        <note>
+     *        rates. </p> <note>
      *        <p>
      *        Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
      *        </p>
+     *        </note>
+     *        <p>
+     *        The ATP rule group evaluates the responses that your protected resources send back to client login
+     *        attempts, keeping count of successful and failed attempts for each IP address and client session. Using
+     *        this information, the rule group labels and mitigates requests from client sessions and IP addresses that
+     *        have had too many failed login attempts in a short amount of time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AWSManagedRulesATPRuleSet withResponseInspection(ResponseInspection responseInspection) {
         setResponseInspection(responseInspection);
         return this;
+    }
+
+    /**
+     * <p>
+     * Allow the use of regular expressions in the login page path.
+     * </p>
+     * 
+     * @param enableRegexInPath
+     *        Allow the use of regular expressions in the login page path.
+     */
+
+    public void setEnableRegexInPath(Boolean enableRegexInPath) {
+        this.enableRegexInPath = enableRegexInPath;
+    }
+
+    /**
+     * <p>
+     * Allow the use of regular expressions in the login page path.
+     * </p>
+     * 
+     * @return Allow the use of regular expressions in the login page path.
+     */
+
+    public Boolean getEnableRegexInPath() {
+        return this.enableRegexInPath;
+    }
+
+    /**
+     * <p>
+     * Allow the use of regular expressions in the login page path.
+     * </p>
+     * 
+     * @param enableRegexInPath
+     *        Allow the use of regular expressions in the login page path.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AWSManagedRulesATPRuleSet withEnableRegexInPath(Boolean enableRegexInPath) {
+        setEnableRegexInPath(enableRegexInPath);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Allow the use of regular expressions in the login page path.
+     * </p>
+     * 
+     * @return Allow the use of regular expressions in the login page path.
+     */
+
+    public Boolean isEnableRegexInPath() {
+        return this.enableRegexInPath;
     }
 
     /**
@@ -287,7 +342,9 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
         if (getRequestInspection() != null)
             sb.append("RequestInspection: ").append(getRequestInspection()).append(",");
         if (getResponseInspection() != null)
-            sb.append("ResponseInspection: ").append(getResponseInspection());
+            sb.append("ResponseInspection: ").append(getResponseInspection()).append(",");
+        if (getEnableRegexInPath() != null)
+            sb.append("EnableRegexInPath: ").append(getEnableRegexInPath());
         sb.append("}");
         return sb.toString();
     }
@@ -314,6 +371,10 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
             return false;
         if (other.getResponseInspection() != null && other.getResponseInspection().equals(this.getResponseInspection()) == false)
             return false;
+        if (other.getEnableRegexInPath() == null ^ this.getEnableRegexInPath() == null)
+            return false;
+        if (other.getEnableRegexInPath() != null && other.getEnableRegexInPath().equals(this.getEnableRegexInPath()) == false)
+            return false;
         return true;
     }
 
@@ -325,6 +386,7 @@ public class AWSManagedRulesATPRuleSet implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getLoginPath() == null) ? 0 : getLoginPath().hashCode());
         hashCode = prime * hashCode + ((getRequestInspection() == null) ? 0 : getRequestInspection().hashCode());
         hashCode = prime * hashCode + ((getResponseInspection() == null) ? 0 : getResponseInspection().hashCode());
+        hashCode = prime * hashCode + ((getEnableRegexInPath() == null) ? 0 : getEnableRegexInPath().hashCode());
         return hashCode;
     }
 

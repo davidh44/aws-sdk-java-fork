@@ -75,294 +75,6 @@ import com.amazonaws.services.cloudtrail.model.transform.*;
  * User Guide</a> for information about the data that is included with each Amazon Web Services API call listed in the
  * log files.
  * </p>
- * <p>
- * <b>Actions available for CloudTrail trails</b>
- * </p>
- * <p>
- * The following actions are available for CloudTrail trails.
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>AddTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>CreateTrail</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteTrail</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DescribeTrails</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetEventSelectors</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetInsightSelectors</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetTrail</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetTrailStatus</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListTrails</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutEventSelectors</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutInsightSelectors</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>RemoveTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StartLogging</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopLogging</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UpdateTrail</a>
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Actions available for CloudTrail event data stores</b>
- * </p>
- * <p>
- * The following actions are available for CloudTrail event data stores.
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>AddTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>CancelQuery</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>CreateEventDataStore</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteEventDataStore</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DescribeQuery</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetEventDataStore</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetQueryResults</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListEventDataStores</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListQueries</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>RemoveTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>RestoreEventDataStore</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StartEventDataStoreIngestion</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StartImport</a>
- * </p>
- * <p>
- * The following additional actions are available for imports.
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetImport</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListImportFailures</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListImports</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopImport</a>
- * </p>
- * </li>
- * </ul>
- * </li>
- * <li>
- * <p>
- * <a>StartQuery</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StartEventDataStoreIngestion</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UpdateEventDataStore</a>
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Actions available for CloudTrail channels</b>
- * </p>
- * <p>
- * The following actions are available for CloudTrail channels.
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>AddTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>CreateChannel</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteChannel</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteResourcePolicy</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetChannel</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetResourcePolicy</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListChannels</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>PutResourcePolicy</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>RemoveTags</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UpdateChannel</a>
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Actions available for managing delegated administrators</b>
- * </p>
- * <p>
- * The following actions are available for adding or a removing a delegated administrator to manage an Organizations
- * organization’s CloudTrail resources.
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>DeregisterOrganizationDelegatedAdmin</a>
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>RegisterOrganizationDelegatedAdmin</a>
- * </p>
- * </li>
- * </ul>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -1916,7 +1628,12 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
     /**
      * <p>
      * Returns metadata about a query, including query run time in milliseconds, number of events scanned and matched,
-     * and query status. You must specify an ARN for <code>EventDataStore</code>, and a value for <code>QueryID</code>.
+     * and query status. If the query results were delivered to an S3 bucket, the response also provides the S3 URI and
+     * the delivery status.
+     * </p>
+     * <p>
+     * You must specify either a <code>QueryID</code> or a <code>QueryAlias</code>. Specifying the
+     * <code>QueryAlias</code> parameter returns information about the last query run for the alias.
      * </p>
      * 
      * @param describeQueryRequest
@@ -2547,7 +2264,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
     /**
      * <p>
      * Gets event data results of a query. You must specify the <code>QueryID</code> value returned by the
-     * <code>StartQuery</code> operation, and an ARN for <code>EventDataStore</code>.
+     * <code>StartQuery</code> operation.
      * </p>
      * 
      * @param getQueryResultsRequest
@@ -4799,9 +4516,15 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Starts a CloudTrail Lake query. The required <code>QueryStatement</code> parameter provides your SQL query,
-     * enclosed in single quotation marks. Use the optional <code>DeliveryS3Uri</code> parameter to deliver the query
-     * results to an S3 bucket.
+     * Starts a CloudTrail Lake query. Use the <code>QueryStatement</code> parameter to provide your SQL query, enclosed
+     * in single quotation marks. Use the optional <code>DeliveryS3Uri</code> parameter to deliver the query results to
+     * an S3 bucket.
+     * </p>
+     * <p>
+     * <code>StartQuery</code> requires you specify either the <code>QueryStatement</code> parameter, or a
+     * <code>QueryAlias</code> and any <code>QueryParameters</code>. In the current release, the <code>QueryAlias</code>
+     * and <code>QueryParameters</code> parameters are used only for the queries that populate the CloudTrail Lake
+     * dashboards.
      * </p>
      * 
      * @param startQueryRequest
@@ -5254,8 +4977,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * </p>
      * <p>
      * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
-     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see
-     * <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
+     * AdvancedEventSelectors</a>.
      * </p>
      * <p>
      * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
@@ -5264,6 +4988,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * 
      * @param updateEventDataStoreRequest
      * @return Result of the UpdateEventDataStore operation returned by the service.
+     * @throws EventDataStoreAlreadyExistsException
+     *         An event data store with that name already exists.
      * @throws EventDataStoreARNInvalidException
      *         The specified event data store ARN is not valid or does not map to an event data store in your account.
      * @throws EventDataStoreNotFoundException

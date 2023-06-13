@@ -27,17 +27,13 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * Indicates whether the Elastic IP address is for use with instances in a VPC or instances in EC2-Classic.
-     * </p>
-     * <p>
-     * Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default is
-     * <code>vpc</code>.
+     * The network (<code>vpc</code>).
      * </p>
      */
     private String domain;
     /**
      * <p>
-     * [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     * The Elastic IP address to recover or an IPv4 address from an address pool.
      * </p>
      */
     private String address;
@@ -80,19 +76,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * Indicates whether the Elastic IP address is for use with instances in a VPC or instances in EC2-Classic.
-     * </p>
-     * <p>
-     * Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default is
-     * <code>vpc</code>.
+     * The network (<code>vpc</code>).
      * </p>
      * 
      * @param domain
-     *        Indicates whether the Elastic IP address is for use with instances in a VPC or instances in
-     *        EC2-Classic.</p>
-     *        <p>
-     *        Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default
-     *        is <code>vpc</code>.
+     *        The network (<code>vpc</code>).
      * @see DomainType
      */
 
@@ -102,18 +90,10 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * Indicates whether the Elastic IP address is for use with instances in a VPC or instances in EC2-Classic.
-     * </p>
-     * <p>
-     * Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default is
-     * <code>vpc</code>.
+     * The network (<code>vpc</code>).
      * </p>
      * 
-     * @return Indicates whether the Elastic IP address is for use with instances in a VPC or instances in
-     *         EC2-Classic.</p>
-     *         <p>
-     *         Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default
-     *         is <code>vpc</code>.
+     * @return The network (<code>vpc</code>).
      * @see DomainType
      */
 
@@ -123,19 +103,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * Indicates whether the Elastic IP address is for use with instances in a VPC or instances in EC2-Classic.
-     * </p>
-     * <p>
-     * Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default is
-     * <code>vpc</code>.
+     * The network (<code>vpc</code>).
      * </p>
      * 
      * @param domain
-     *        Indicates whether the Elastic IP address is for use with instances in a VPC or instances in
-     *        EC2-Classic.</p>
-     *        <p>
-     *        Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default
-     *        is <code>vpc</code>.
+     *        The network (<code>vpc</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DomainType
      */
@@ -147,19 +119,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * Indicates whether the Elastic IP address is for use with instances in a VPC or instances in EC2-Classic.
-     * </p>
-     * <p>
-     * Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default is
-     * <code>vpc</code>.
+     * The network (<code>vpc</code>).
      * </p>
      * 
      * @param domain
-     *        Indicates whether the Elastic IP address is for use with instances in a VPC or instances in
-     *        EC2-Classic.</p>
-     *        <p>
-     *        Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default
-     *        is <code>vpc</code>.
+     *        The network (<code>vpc</code>).
      * @see DomainType
      */
 
@@ -169,19 +133,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * Indicates whether the Elastic IP address is for use with instances in a VPC or instances in EC2-Classic.
-     * </p>
-     * <p>
-     * Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default is
-     * <code>vpc</code>.
+     * The network (<code>vpc</code>).
      * </p>
      * 
      * @param domain
-     *        Indicates whether the Elastic IP address is for use with instances in a VPC or instances in
-     *        EC2-Classic.</p>
-     *        <p>
-     *        Default: If the Region supports EC2-Classic, the default is <code>standard</code>. Otherwise, the default
-     *        is <code>vpc</code>.
+     *        The network (<code>vpc</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DomainType
      */
@@ -193,11 +149,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     * The Elastic IP address to recover or an IPv4 address from an address pool.
      * </p>
      * 
      * @param address
-     *        [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     *        The Elastic IP address to recover or an IPv4 address from an address pool.
      */
 
     public void setAddress(String address) {
@@ -206,10 +162,10 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     * The Elastic IP address to recover or an IPv4 address from an address pool.
      * </p>
      * 
-     * @return [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     * @return The Elastic IP address to recover or an IPv4 address from an address pool.
      */
 
     public String getAddress() {
@@ -218,11 +174,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     * The Elastic IP address to recover or an IPv4 address from an address pool.
      * </p>
      * 
      * @param address
-     *        [EC2-VPC] The Elastic IP address to recover or an IPv4 address from an address pool.
+     *        The Elastic IP address to recover or an IPv4 address from an address pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.488-SNAPSHOT</version>
+    <version>1.12.488</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,18 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-verifiedpermissions</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-codegurusecurity</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-paymentcryptography</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2204,6 +2216,14 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon Verified Permissions</title>
+                                  <packages>com.amazonaws.services.verifiedpermissions*</packages>
+                              </group>
+                              <group>
+                                  <title>Amazon CodeGuru Security</title>
+                                  <packages>com.amazonaws.services.codegurusecurity*</packages>
+                              </group>
                               <group>
                                   <title>Payment Cryptography Control Plane</title>
                                   <packages>com.amazonaws.services.paymentcryptography*</packages>

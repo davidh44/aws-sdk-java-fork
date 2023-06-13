@@ -114,6 +114,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateProfilesResult> associateProfilesAsync(AssociateProfilesRequest request) {
+
+        return associateProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateProfilesResult> associateProfilesAsync(final AssociateProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateProfilesRequest, AssociateProfilesResult> asyncHandler) {
+        final AssociateProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateProfilesResult>() {
+            @Override
+            public AssociateProfilesResult call() throws Exception {
+                AssociateProfilesResult result = null;
+
+                try {
+                    result = executeAssociateProfiles(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest request) {
 
         return createLensShareAsync(request, null);
@@ -197,6 +230,72 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeCreateMilestone(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileResult> createProfileAsync(CreateProfileRequest request) {
+
+        return createProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileResult> createProfileAsync(final CreateProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateProfileRequest, CreateProfileResult> asyncHandler) {
+        final CreateProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateProfileResult>() {
+            @Override
+            public CreateProfileResult call() throws Exception {
+                CreateProfileResult result = null;
+
+                try {
+                    result = executeCreateProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileShareResult> createProfileShareAsync(CreateProfileShareRequest request) {
+
+        return createProfileShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileShareResult> createProfileShareAsync(final CreateProfileShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateProfileShareRequest, CreateProfileShareResult> asyncHandler) {
+        final CreateProfileShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateProfileShareResult>() {
+            @Override
+            public CreateProfileShareResult call() throws Exception {
+                CreateProfileShareResult result = null;
+
+                try {
+                    result = executeCreateProfileShare(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -345,6 +444,72 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteProfileResult> deleteProfileAsync(DeleteProfileRequest request) {
+
+        return deleteProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProfileResult> deleteProfileAsync(final DeleteProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteProfileRequest, DeleteProfileResult> asyncHandler) {
+        final DeleteProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteProfileResult>() {
+            @Override
+            public DeleteProfileResult call() throws Exception {
+                DeleteProfileResult result = null;
+
+                try {
+                    result = executeDeleteProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProfileShareResult> deleteProfileShareAsync(DeleteProfileShareRequest request) {
+
+        return deleteProfileShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProfileShareResult> deleteProfileShareAsync(final DeleteProfileShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteProfileShareRequest, DeleteProfileShareResult> asyncHandler) {
+        final DeleteProfileShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteProfileShareResult>() {
+            @Override
+            public DeleteProfileShareResult call() throws Exception {
+                DeleteProfileShareResult result = null;
+
+                try {
+                    result = executeDeleteProfileShare(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteWorkloadResult> deleteWorkloadAsync(DeleteWorkloadRequest request) {
 
         return deleteWorkloadAsync(request, null);
@@ -428,6 +593,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeDisassociateLenses(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateProfilesResult> disassociateProfilesAsync(DisassociateProfilesRequest request) {
+
+        return disassociateProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateProfilesResult> disassociateProfilesAsync(final DisassociateProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateProfilesRequest, DisassociateProfilesResult> asyncHandler) {
+        final DisassociateProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateProfilesResult>() {
+            @Override
+            public DisassociateProfilesResult call() throws Exception {
+                DisassociateProfilesResult result = null;
+
+                try {
+                    result = executeDisassociateProfiles(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -692,6 +890,72 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeGetMilestone(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileResult> getProfileAsync(GetProfileRequest request) {
+
+        return getProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileResult> getProfileAsync(final GetProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetProfileRequest, GetProfileResult> asyncHandler) {
+        final GetProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetProfileResult>() {
+            @Override
+            public GetProfileResult call() throws Exception {
+                GetProfileResult result = null;
+
+                try {
+                    result = executeGetProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileTemplateResult> getProfileTemplateAsync(GetProfileTemplateRequest request) {
+
+        return getProfileTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileTemplateResult> getProfileTemplateAsync(final GetProfileTemplateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetProfileTemplateRequest, GetProfileTemplateResult> asyncHandler) {
+        final GetProfileTemplateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetProfileTemplateResult>() {
+            @Override
+            public GetProfileTemplateResult call() throws Exception {
+                GetProfileTemplateResult result = null;
+
+                try {
+                    result = executeGetProfileTemplate(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1071,6 +1335,105 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListProfileNotificationsResult> listProfileNotificationsAsync(ListProfileNotificationsRequest request) {
+
+        return listProfileNotificationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfileNotificationsResult> listProfileNotificationsAsync(final ListProfileNotificationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListProfileNotificationsRequest, ListProfileNotificationsResult> asyncHandler) {
+        final ListProfileNotificationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListProfileNotificationsResult>() {
+            @Override
+            public ListProfileNotificationsResult call() throws Exception {
+                ListProfileNotificationsResult result = null;
+
+                try {
+                    result = executeListProfileNotifications(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfileSharesResult> listProfileSharesAsync(ListProfileSharesRequest request) {
+
+        return listProfileSharesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfileSharesResult> listProfileSharesAsync(final ListProfileSharesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListProfileSharesRequest, ListProfileSharesResult> asyncHandler) {
+        final ListProfileSharesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListProfileSharesResult>() {
+            @Override
+            public ListProfileSharesResult call() throws Exception {
+                ListProfileSharesResult result = null;
+
+                try {
+                    result = executeListProfileShares(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfilesResult> listProfilesAsync(ListProfilesRequest request) {
+
+        return listProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfilesResult> listProfilesAsync(final ListProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListProfilesRequest, ListProfilesResult> asyncHandler) {
+        final ListProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListProfilesResult>() {
+            @Override
+            public ListProfilesResult call() throws Exception {
+                ListProfilesResult result = null;
+
+                try {
+                    result = executeListProfiles(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListShareInvitationsResult> listShareInvitationsAsync(ListShareInvitationsRequest request) {
 
         return listShareInvitationsAsync(request, null);
@@ -1368,6 +1731,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateProfileResult> updateProfileAsync(UpdateProfileRequest request) {
+
+        return updateProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProfileResult> updateProfileAsync(final UpdateProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateProfileRequest, UpdateProfileResult> asyncHandler) {
+        final UpdateProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateProfileResult>() {
+            @Override
+            public UpdateProfileResult call() throws Exception {
+                UpdateProfileResult result = null;
+
+                try {
+                    result = executeUpdateProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateShareInvitationResult> updateShareInvitationAsync(UpdateShareInvitationRequest request) {
 
         return updateShareInvitationAsync(request, null);
@@ -1484,6 +1880,39 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
 
                 try {
                     result = executeUpgradeLensReview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpgradeProfileVersionResult> upgradeProfileVersionAsync(UpgradeProfileVersionRequest request) {
+
+        return upgradeProfileVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpgradeProfileVersionResult> upgradeProfileVersionAsync(final UpgradeProfileVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpgradeProfileVersionRequest, UpgradeProfileVersionResult> asyncHandler) {
+        final UpgradeProfileVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpgradeProfileVersionResult>() {
+            @Override
+            public UpgradeProfileVersionResult call() throws Exception {
+                UpgradeProfileVersionResult result = null;
+
+                try {
+                    result = executeUpgradeProfileVersion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

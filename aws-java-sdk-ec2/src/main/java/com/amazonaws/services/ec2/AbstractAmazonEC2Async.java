@@ -1032,6 +1032,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateInstanceConnectEndpointResult> createInstanceConnectEndpointAsync(CreateInstanceConnectEndpointRequest request) {
+
+        return createInstanceConnectEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateInstanceConnectEndpointResult> createInstanceConnectEndpointAsync(CreateInstanceConnectEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateInstanceConnectEndpointRequest, CreateInstanceConnectEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateInstanceEventWindowResult> createInstanceEventWindowAsync(CreateInstanceEventWindowRequest request) {
 
         return createInstanceEventWindowAsync(request, null);
@@ -2091,6 +2104,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteFpgaImageResult> deleteFpgaImageAsync(DeleteFpgaImageRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteFpgaImageRequest, DeleteFpgaImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInstanceConnectEndpointResult> deleteInstanceConnectEndpointAsync(DeleteInstanceConnectEndpointRequest request) {
+
+        return deleteInstanceConnectEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInstanceConnectEndpointResult> deleteInstanceConnectEndpointAsync(DeleteInstanceConnectEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteInstanceConnectEndpointRequest, DeleteInstanceConnectEndpointResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3992,6 +4018,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DescribeInstanceAttributeResult> describeInstanceAttributeAsync(DescribeInstanceAttributeRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeInstanceAttributeRequest, DescribeInstanceAttributeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstanceConnectEndpointsResult> describeInstanceConnectEndpointsAsync(
+            DescribeInstanceConnectEndpointsRequest request) {
+
+        return describeInstanceConnectEndpointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstanceConnectEndpointsResult> describeInstanceConnectEndpointsAsync(
+            DescribeInstanceConnectEndpointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeInstanceConnectEndpointsRequest, DescribeInstanceConnectEndpointsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

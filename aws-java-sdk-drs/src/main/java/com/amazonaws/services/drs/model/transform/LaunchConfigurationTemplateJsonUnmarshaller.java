@@ -60,6 +60,10 @@ public class LaunchConfigurationTemplateJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     launchConfigurationTemplate.setCopyTags(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("exportBucketArn", targetDepth)) {
+                    context.nextToken();
+                    launchConfigurationTemplate.setExportBucketArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("launchConfigurationTemplateID", targetDepth)) {
                     context.nextToken();
                     launchConfigurationTemplate.setLaunchConfigurationTemplateID(context.getUnmarshaller(String.class).unmarshall(context));

@@ -331,8 +331,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * You are charged additional fees when you use the WAF Bot Control managed rule group
-     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
-     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation fraud prevention
+     * (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information, see <a
      * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
@@ -2139,8 +2140,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * You are charged additional fees when you use the WAF Bot Control managed rule group
-     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
-     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation fraud prevention
+     * (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information, see <a
      * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
@@ -2157,8 +2159,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        You are charged additional fees when you use the WAF Bot Control managed rule group
-     *        <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
-     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *        <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP)
+     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation fraud
+     *        prevention (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information, see <a
      *        href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *        </p>
      */
@@ -2180,8 +2183,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * You are charged additional fees when you use the WAF Bot Control managed rule group
-     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
-     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation fraud prevention
+     * (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information, see <a
      * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
@@ -2197,9 +2201,10 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *         <note>
      *         <p>
      *         You are charged additional fees when you use the WAF Bot Control managed rule group
-     *         <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
-     *         managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
-     *         href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *         <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP)
+     *         managed rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation
+     *         fraud prevention (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information,
+     *         see <a href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *         </p>
      */
 
@@ -2220,8 +2225,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * <note>
      * <p>
      * You are charged additional fees when you use the WAF Bot Control managed rule group
-     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
-     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation fraud prevention
+     * (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information, see <a
      * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      * </p>
      * </note>
@@ -2238,8 +2244,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        <note>
      *        <p>
      *        You are charged additional fees when you use the WAF Bot Control managed rule group
-     *        <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
-     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *        <code>AWSManagedRulesBotControlRuleSet</code>, the WAF Fraud Control account takeover prevention (ATP)
+     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>, or the WAF Fraud Control account creation fraud
+     *        prevention (ACFP) managed rule group <code>AWSManagedRulesACFPRuleSet</code>. For more information, see <a
      *        href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

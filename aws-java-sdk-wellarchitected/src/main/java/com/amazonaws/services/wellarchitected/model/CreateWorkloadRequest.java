@@ -73,6 +73,12 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.List<String> applications;
+    /**
+     * <p>
+     * The list of profile ARNs associated with the workload.
+     * </p>
+     */
+    private java.util.List<String> profileArns;
 
     /**
      * @param workloadName
@@ -761,6 +767,76 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The list of profile ARNs associated with the workload.
+     * </p>
+     * 
+     * @return The list of profile ARNs associated with the workload.
+     */
+
+    public java.util.List<String> getProfileArns() {
+        return profileArns;
+    }
+
+    /**
+     * <p>
+     * The list of profile ARNs associated with the workload.
+     * </p>
+     * 
+     * @param profileArns
+     *        The list of profile ARNs associated with the workload.
+     */
+
+    public void setProfileArns(java.util.Collection<String> profileArns) {
+        if (profileArns == null) {
+            this.profileArns = null;
+            return;
+        }
+
+        this.profileArns = new java.util.ArrayList<String>(profileArns);
+    }
+
+    /**
+     * <p>
+     * The list of profile ARNs associated with the workload.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setProfileArns(java.util.Collection)} or {@link #withProfileArns(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param profileArns
+     *        The list of profile ARNs associated with the workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkloadRequest withProfileArns(String... profileArns) {
+        if (this.profileArns == null) {
+            setProfileArns(new java.util.ArrayList<String>(profileArns.length));
+        }
+        for (String ele : profileArns) {
+            this.profileArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of profile ARNs associated with the workload.
+     * </p>
+     * 
+     * @param profileArns
+     *        The list of profile ARNs associated with the workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkloadRequest withProfileArns(java.util.Collection<String> profileArns) {
+        setProfileArns(profileArns);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -805,7 +881,9 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getDiscoveryConfig() != null)
             sb.append("DiscoveryConfig: ").append(getDiscoveryConfig()).append(",");
         if (getApplications() != null)
-            sb.append("Applications: ").append(getApplications());
+            sb.append("Applications: ").append(getApplications()).append(",");
+        if (getProfileArns() != null)
+            sb.append("ProfileArns: ").append(getProfileArns());
         sb.append("}");
         return sb.toString();
     }
@@ -888,6 +966,10 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getApplications() != null && other.getApplications().equals(this.getApplications()) == false)
             return false;
+        if (other.getProfileArns() == null ^ this.getProfileArns() == null)
+            return false;
+        if (other.getProfileArns() != null && other.getProfileArns().equals(this.getProfileArns()) == false)
+            return false;
         return true;
     }
 
@@ -913,6 +995,7 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDiscoveryConfig() == null) ? 0 : getDiscoveryConfig().hashCode());
         hashCode = prime * hashCode + ((getApplications() == null) ? 0 : getApplications().hashCode());
+        hashCode = prime * hashCode + ((getProfileArns() == null) ? 0 : getProfileArns().hashCode());
         return hashCode;
     }
 

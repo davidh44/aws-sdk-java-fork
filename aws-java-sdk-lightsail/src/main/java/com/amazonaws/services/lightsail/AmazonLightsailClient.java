@@ -6139,7 +6139,7 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <note>
      * <p>
-     * To get a summary of a certificate, ommit <code>includeCertificateDetails</code> from your request. The response
+     * To get a summary of a certificate, omit <code>includeCertificateDetails</code> from your request. The response
      * will include only the certificate Amazon Resource Name (ARN), certificate name, domain name, and tags.
      * </p>
      * </note>

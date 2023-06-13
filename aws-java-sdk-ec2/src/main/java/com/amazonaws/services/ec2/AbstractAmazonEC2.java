@@ -406,6 +406,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public CreateInstanceConnectEndpointResult createInstanceConnectEndpoint(CreateInstanceConnectEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateInstanceEventWindowResult createInstanceEventWindow(CreateInstanceEventWindowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -793,6 +798,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DeleteFpgaImageResult deleteFpgaImage(DeleteFpgaImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteInstanceConnectEndpointResult deleteInstanceConnectEndpoint(DeleteInstanceConnectEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1448,6 +1458,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DescribeInstanceAttributeResult describeInstanceAttribute(DescribeInstanceAttributeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeInstanceConnectEndpointsResult describeInstanceConnectEndpoints(DescribeInstanceConnectEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

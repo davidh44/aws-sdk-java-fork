@@ -31,6 +31,8 @@ public class UpdateLaunchConfigurationTemplateRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("copyPrivateIp").build();
     private static final MarshallingInfo<Boolean> COPYTAGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("copyTags").build();
+    private static final MarshallingInfo<String> EXPORTBUCKETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("exportBucketArn").build();
     private static final MarshallingInfo<String> LAUNCHCONFIGURATIONTEMPLATEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchConfigurationTemplateID").build();
     private static final MarshallingInfo<String> LAUNCHDISPOSITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -58,6 +60,7 @@ public class UpdateLaunchConfigurationTemplateRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getCopyPrivateIp(), COPYPRIVATEIP_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getCopyTags(), COPYTAGS_BINDING);
+            protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getExportBucketArn(), EXPORTBUCKETARN_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLaunchConfigurationTemplateID(), LAUNCHCONFIGURATIONTEMPLATEID_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLaunchDisposition(), LAUNCHDISPOSITION_BINDING);
             protocolMarshaller.marshall(updateLaunchConfigurationTemplateRequest.getLicensing(), LICENSING_BINDING);

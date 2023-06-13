@@ -121,12 +121,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
-     * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     * basic event selectors. For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     * >AdvancedFieldSelector</a>.
      * </p>
      * <ul>
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
      * <li>
@@ -142,6 +149,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -285,12 +297,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
-     * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     * basic event selectors. For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     * >AdvancedFieldSelector</a>.
      * </p>
      * <ul>
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
      * <li>
@@ -306,6 +325,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -383,12 +407,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The following resource types are also available through <i>advanced</i> event selectors. Basic event
      *        selector resource types are valid in advanced event selectors, but advanced event selector resource types
-     *        are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     *        are not valid in basic event selectors. For more information, see <a
+     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     *        >AdvancedFieldSelector</a>.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CodeWhisperer::Profile</code>
      *        </p>
      *        </li>
      *        <li>
@@ -404,6 +435,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::EC2::Snapshot</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::EMRWAL::Workspace</code>
      *        </p>
      *        </li>
      *        <li>
@@ -487,12 +523,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
-     * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     * basic event selectors. For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     * >AdvancedFieldSelector</a>.
      * </p>
      * <ul>
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
      * <li>
@@ -508,6 +551,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -584,12 +632,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The following resource types are also available through <i>advanced</i> event selectors. Basic event
      *         selector resource types are valid in advanced event selectors, but advanced event selector resource types
-     *         are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     *         are not valid in basic event selectors. For more information, see <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     *         >AdvancedFieldSelector</a>.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
      *         <code>AWS::CloudTrail::Channel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::CodeWhisperer::Profile</code>
      *         </p>
      *         </li>
      *         <li>
@@ -605,6 +660,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::EC2::Snapshot</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::EMRWAL::Workspace</code>
      *         </p>
      *         </li>
      *         <li>
@@ -688,12 +748,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The following resource types are also available through <i>advanced</i> event selectors. Basic event selector
      * resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in
-     * basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     * basic event selectors. For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     * >AdvancedFieldSelector</a>.
      * </p>
      * <ul>
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
      * <li>
@@ -709,6 +776,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -786,12 +858,19 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The following resource types are also available through <i>advanced</i> event selectors. Basic event
      *        selector resource types are valid in advanced event selectors, but advanced event selector resource types
-     *        are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
+     *        are not valid in basic event selectors. For more information, see <a
+     *        href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html"
+     *        >AdvancedFieldSelector</a>.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CodeWhisperer::Profile</code>
      *        </p>
      *        </li>
      *        <li>
@@ -807,6 +886,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::EC2::Snapshot</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::EMRWAL::Workspace</code>
      *        </p>
      *        </li>
      *        <li>

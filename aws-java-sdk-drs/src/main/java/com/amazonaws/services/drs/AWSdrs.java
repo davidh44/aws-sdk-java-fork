@@ -43,6 +43,34 @@ public interface AWSdrs {
 
     /**
      * <p>
+     * Associate a Source Network to an existing CloudFormation Stack and modify launch templates to use this network.
+     * Can be used for reverting to previously deployed CloudFormation stacks.
+     * </p>
+     * 
+     * @param associateSourceNetworkStackRequest
+     * @return Result of the AssociateSourceNetworkStack operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.AssociateSourceNetworkStack
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/AssociateSourceNetworkStack"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateSourceNetworkStackResult associateSourceNetworkStack(AssociateSourceNetworkStackRequest associateSourceNetworkStackRequest);
+
+    /**
+     * <p>
      * Create an extended source server in the target Account based on the source server in staging account.
      * </p>
      * 
@@ -118,6 +146,33 @@ public interface AWSdrs {
      */
     CreateReplicationConfigurationTemplateResult createReplicationConfigurationTemplate(
             CreateReplicationConfigurationTemplateRequest createReplicationConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Create a new Source Network resource for a provided VPC ID.
+     * </p>
+     * 
+     * @param createSourceNetworkRequest
+     * @return Result of the CreateSourceNetwork operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.CreateSourceNetwork
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/CreateSourceNetwork" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateSourceNetworkResult createSourceNetwork(CreateSourceNetworkRequest createSourceNetworkRequest);
 
     /**
      * <p>
@@ -212,6 +267,29 @@ public interface AWSdrs {
      */
     DeleteReplicationConfigurationTemplateResult deleteReplicationConfigurationTemplate(
             DeleteReplicationConfigurationTemplateRequest deleteReplicationConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Delete Source Network resource.
+     * </p>
+     * 
+     * @param deleteSourceNetworkRequest
+     * @return Result of the DeleteSourceNetwork operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DeleteSourceNetwork
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteSourceNetwork" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteSourceNetworkResult deleteSourceNetwork(DeleteSourceNetworkRequest deleteSourceNetworkRequest);
 
     /**
      * <p>
@@ -376,6 +454,27 @@ public interface AWSdrs {
 
     /**
      * <p>
+     * Lists all Source Networks or multiple Source Networks filtered by ID.
+     * </p>
+     * 
+     * @param describeSourceNetworksRequest
+     * @return Result of the DescribeSourceNetworks operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DescribeSourceNetworks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DescribeSourceNetworks" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeSourceNetworksResult describeSourceNetworks(DescribeSourceNetworksRequest describeSourceNetworksRequest);
+
+    /**
+     * <p>
      * Lists all Source Servers or multiple Source Servers filtered by ID.
      * </p>
      * 
@@ -456,6 +555,31 @@ public interface AWSdrs {
      *      Documentation</a>
      */
     DisconnectSourceServerResult disconnectSourceServer(DisconnectSourceServerRequest disconnectSourceServerRequest);
+
+    /**
+     * <p>
+     * Export the Source Network CloudFormation template to an S3 bucket.
+     * </p>
+     * 
+     * @param exportSourceNetworkCfnTemplateRequest
+     * @return Result of the ExportSourceNetworkCfnTemplate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.ExportSourceNetworkCfnTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/ExportSourceNetworkCfnTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ExportSourceNetworkCfnTemplateResult exportSourceNetworkCfnTemplate(ExportSourceNetworkCfnTemplateRequest exportSourceNetworkCfnTemplateRequest);
 
     /**
      * <p>
@@ -746,6 +870,55 @@ public interface AWSdrs {
 
     /**
      * <p>
+     * Deploy VPC for the specified Source Network and modify launch templates to use this network. The VPC will be
+     * deployed using a dedicated CloudFormation stack.
+     * </p>
+     * 
+     * @param startSourceNetworkRecoveryRequest
+     * @return Result of the StartSourceNetworkRecovery operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.StartSourceNetworkRecovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/StartSourceNetworkRecovery" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartSourceNetworkRecoveryResult startSourceNetworkRecovery(StartSourceNetworkRecoveryRequest startSourceNetworkRecoveryRequest);
+
+    /**
+     * <p>
+     * Starts replication for a Source Network. This action would make the Source Network protected.
+     * </p>
+     * 
+     * @param startSourceNetworkReplicationRequest
+     * @return Result of the StartSourceNetworkReplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.StartSourceNetworkReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/StartSourceNetworkReplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartSourceNetworkReplicationResult startSourceNetworkReplication(StartSourceNetworkReplicationRequest startSourceNetworkReplicationRequest);
+
+    /**
+     * <p>
      * Stops the failback process for a specified Recovery Instance. This changes the Failback State of the Recovery
      * Instance back to FAILBACK_NOT_STARTED.
      * </p>
@@ -789,6 +962,31 @@ public interface AWSdrs {
      *      Documentation</a>
      */
     StopReplicationResult stopReplication(StopReplicationRequest stopReplicationRequest);
+
+    /**
+     * <p>
+     * Stops replication for a Source Network. This action would make the Source Network unprotected.
+     * </p>
+     * 
+     * @param stopSourceNetworkReplicationRequest
+     * @return Result of the StopSourceNetworkReplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.StopSourceNetworkReplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/StopSourceNetworkReplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopSourceNetworkReplicationResult stopSourceNetworkReplication(StopSourceNetworkReplicationRequest stopSourceNetworkReplicationRequest);
 
     /**
      * <p>

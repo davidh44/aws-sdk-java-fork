@@ -48,6 +48,12 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
     private Boolean copyTags;
     /**
      * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     */
+    private String exportBucketArn;
+    /**
+     * <p>
      * ID of the Launch Configuration Template.
      * </p>
      */
@@ -219,6 +225,46 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
 
     public Boolean isCopyTags() {
         return this.copyTags;
+    }
+
+    /**
+     * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     * 
+     * @param exportBucketArn
+     *        S3 bucket ARN to export Source Network templates.
+     */
+
+    public void setExportBucketArn(String exportBucketArn) {
+        this.exportBucketArn = exportBucketArn;
+    }
+
+    /**
+     * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     * 
+     * @return S3 bucket ARN to export Source Network templates.
+     */
+
+    public String getExportBucketArn() {
+        return this.exportBucketArn;
+    }
+
+    /**
+     * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     * 
+     * @param exportBucketArn
+     *        S3 bucket ARN to export Source Network templates.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchConfigurationTemplate withExportBucketArn(String exportBucketArn) {
+        setExportBucketArn(exportBucketArn);
+        return this;
     }
 
     /**
@@ -505,6 +551,8 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
             sb.append("CopyPrivateIp: ").append(getCopyPrivateIp()).append(",");
         if (getCopyTags() != null)
             sb.append("CopyTags: ").append(getCopyTags()).append(",");
+        if (getExportBucketArn() != null)
+            sb.append("ExportBucketArn: ").append(getExportBucketArn()).append(",");
         if (getLaunchConfigurationTemplateID() != null)
             sb.append("LaunchConfigurationTemplateID: ").append(getLaunchConfigurationTemplateID()).append(",");
         if (getLaunchDisposition() != null)
@@ -541,6 +589,10 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
             return false;
         if (other.getCopyTags() != null && other.getCopyTags().equals(this.getCopyTags()) == false)
             return false;
+        if (other.getExportBucketArn() == null ^ this.getExportBucketArn() == null)
+            return false;
+        if (other.getExportBucketArn() != null && other.getExportBucketArn().equals(this.getExportBucketArn()) == false)
+            return false;
         if (other.getLaunchConfigurationTemplateID() == null ^ this.getLaunchConfigurationTemplateID() == null)
             return false;
         if (other.getLaunchConfigurationTemplateID() != null
@@ -574,6 +626,7 @@ public class LaunchConfigurationTemplate implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getCopyPrivateIp() == null) ? 0 : getCopyPrivateIp().hashCode());
         hashCode = prime * hashCode + ((getCopyTags() == null) ? 0 : getCopyTags().hashCode());
+        hashCode = prime * hashCode + ((getExportBucketArn() == null) ? 0 : getExportBucketArn().hashCode());
         hashCode = prime * hashCode + ((getLaunchConfigurationTemplateID() == null) ? 0 : getLaunchConfigurationTemplateID().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());

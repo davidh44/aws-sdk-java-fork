@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ShareResourceType {
 
     WORKLOAD("WORKLOAD"),
-    LENS("LENS");
+    LENS("LENS"),
+    PROFILE("PROFILE");
 
     private String value;
 

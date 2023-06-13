@@ -53,7 +53,7 @@ public class Trail implements Serializable, Cloneable, StructuredPojo {
     private String s3KeyPrefix;
     /**
      * <p>
-     * This field is no longer in use. Use SnsTopicARN.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      */
     @Deprecated
@@ -296,11 +296,11 @@ public class Trail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field is no longer in use. Use SnsTopicARN.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      * 
      * @param snsTopicName
-     *        This field is no longer in use. Use SnsTopicARN.
+     *        This field is no longer in use. Use <code>SnsTopicARN</code>.
      */
     @Deprecated
     public void setSnsTopicName(String snsTopicName) {
@@ -309,10 +309,10 @@ public class Trail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field is no longer in use. Use SnsTopicARN.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      * 
-     * @return This field is no longer in use. Use SnsTopicARN.
+     * @return This field is no longer in use. Use <code>SnsTopicARN</code>.
      */
     @Deprecated
     public String getSnsTopicName() {
@@ -321,11 +321,11 @@ public class Trail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field is no longer in use. Use SnsTopicARN.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      * 
      * @param snsTopicName
-     *        This field is no longer in use. Use SnsTopicARN.
+     *        This field is no longer in use. Use <code>SnsTopicARN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated

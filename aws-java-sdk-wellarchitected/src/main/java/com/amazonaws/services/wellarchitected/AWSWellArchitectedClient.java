@@ -83,26 +83,26 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wellarchitected.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wellarchitected.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wellarchitected.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wellarchitected.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wellarchitected.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wellarchitected.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wellarchitected.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wellarchitected.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wellarchitected.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wellarchitected.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.wellarchitected.model.AWSWellArchitectedException.class));
 
     public static AWSWellArchitectedClientBuilder builder() {
@@ -223,6 +223,73 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<AssociateLensesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AssociateLensesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Associate a profile with a workload.
+     * </p>
+     * 
+     * @param associateProfilesRequest
+     * @return Result of the AssociateProfiles operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.AssociateProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/AssociateProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateProfilesResult associateProfiles(AssociateProfilesRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateProfiles(request);
+    }
+
+    @SdkInternalApi
+    final AssociateProfilesResult executeAssociateProfiles(AssociateProfilesRequest associateProfilesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateProfilesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateProfilesRequest> request = null;
+        Response<AssociateProfilesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateProfilesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(associateProfilesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateProfiles");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AssociateProfilesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -467,6 +534,142 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateMilestoneResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateMilestoneResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a profile.
+     * </p>
+     * 
+     * @param createProfileRequest
+     * @return Result of the CreateProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateProfileResult createProfile(CreateProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateProfile(request);
+    }
+
+    @SdkInternalApi
+    final CreateProfileResult executeCreateProfile(CreateProfileRequest createProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateProfileRequest> request = null;
+        Response<CreateProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a profile share.
+     * </p>
+     * 
+     * @param createProfileShareRequest
+     * @return Result of the CreateProfileShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateProfileShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateProfileShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateProfileShareResult createProfileShare(CreateProfileShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateProfileShare(request);
+    }
+
+    @SdkInternalApi
+    final CreateProfileShareResult executeCreateProfileShare(CreateProfileShareRequest createProfileShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createProfileShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateProfileShareRequest> request = null;
+        Response<CreateProfileShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateProfileShareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createProfileShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateProfileShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateProfileShareResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateProfileShareResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -816,6 +1019,151 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Delete a profile.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your profile with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will
+     * make your profile available to those other accounts. Those other accounts may continue to access and use your
+     * shared profile even if you delete the profile from your own Amazon Web Services account or terminate your Amazon
+     * Web Services account.
+     * </p>
+     * </note>
+     * 
+     * @param deleteProfileRequest
+     * @return Result of the DeleteProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteProfileResult deleteProfile(DeleteProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteProfile(request);
+    }
+
+    @SdkInternalApi
+    final DeleteProfileResult executeDeleteProfile(DeleteProfileRequest deleteProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteProfileRequest> request = null;
+        Response<DeleteProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a profile share.
+     * </p>
+     * 
+     * @param deleteProfileShareRequest
+     * @return Result of the DeleteProfileShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteProfileShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteProfileShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteProfileShareResult deleteProfileShare(DeleteProfileShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteProfileShare(request);
+    }
+
+    @SdkInternalApi
+    final DeleteProfileShareResult executeDeleteProfileShare(DeleteProfileShareRequest deleteProfileShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteProfileShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteProfileShareRequest> request = null;
+        Response<DeleteProfileShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteProfileShareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteProfileShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteProfileShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteProfileShareResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteProfileShareResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Delete an existing workload.
      * </p>
      * 
@@ -1017,6 +1365,73 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<DisassociateLensesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateLensesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Disassociate a profile from a workload.
+     * </p>
+     * 
+     * @param disassociateProfilesRequest
+     * @return Result of the DisassociateProfiles operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DisassociateProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DisassociateProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateProfilesResult disassociateProfiles(DisassociateProfilesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateProfiles(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateProfilesResult executeDisassociateProfiles(DisassociateProfilesRequest disassociateProfilesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateProfilesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateProfilesRequest> request = null;
+        Response<DisassociateProfilesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateProfilesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disassociateProfilesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateProfiles");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateProfilesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1567,6 +1982,136 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<GetMilestoneResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetMilestoneResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get profile information.
+     * </p>
+     * 
+     * @param getProfileRequest
+     * @return Result of the GetProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetProfileResult getProfile(GetProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetProfile(request);
+    }
+
+    @SdkInternalApi
+    final GetProfileResult executeGetProfile(GetProfileRequest getProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetProfileRequest> request = null;
+        Response<GetProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetProfileResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get profile template.
+     * </p>
+     * 
+     * @param getProfileTemplateRequest
+     * @return Result of the GetProfileTemplate operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetProfileTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetProfileTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetProfileTemplateResult getProfileTemplate(GetProfileTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetProfileTemplate(request);
+    }
+
+    @SdkInternalApi
+    final GetProfileTemplateResult executeGetProfileTemplate(GetProfileTemplateRequest getProfileTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getProfileTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetProfileTemplateRequest> request = null;
+        Response<GetProfileTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetProfileTemplateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getProfileTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetProfileTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetProfileTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetProfileTemplateResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2329,6 +2874,199 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * List profile notifications.
+     * </p>
+     * 
+     * @param listProfileNotificationsRequest
+     * @return Result of the ListProfileNotifications operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListProfileNotifications
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListProfileNotifications"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListProfileNotificationsResult listProfileNotifications(ListProfileNotificationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListProfileNotifications(request);
+    }
+
+    @SdkInternalApi
+    final ListProfileNotificationsResult executeListProfileNotifications(ListProfileNotificationsRequest listProfileNotificationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listProfileNotificationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListProfileNotificationsRequest> request = null;
+        Response<ListProfileNotificationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListProfileNotificationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listProfileNotificationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListProfileNotifications");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListProfileNotificationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListProfileNotificationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List profile shares.
+     * </p>
+     * 
+     * @param listProfileSharesRequest
+     * @return Result of the ListProfileShares operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListProfileShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListProfileShares"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListProfileSharesResult listProfileShares(ListProfileSharesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListProfileShares(request);
+    }
+
+    @SdkInternalApi
+    final ListProfileSharesResult executeListProfileShares(ListProfileSharesRequest listProfileSharesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listProfileSharesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListProfileSharesRequest> request = null;
+        Response<ListProfileSharesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListProfileSharesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listProfileSharesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListProfileShares");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListProfileSharesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListProfileSharesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List profiles.
+     * </p>
+     * 
+     * @param listProfilesRequest
+     * @return Result of the ListProfiles operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListProfilesResult listProfiles(ListProfilesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListProfiles(request);
+    }
+
+    @SdkInternalApi
+    final ListProfilesResult executeListProfiles(ListProfilesRequest listProfilesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listProfilesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListProfilesRequest> request = null;
+        Response<ListProfilesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListProfilesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listProfilesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListProfiles");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListProfilesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * List the workload invitations.
      * </p>
      * 
@@ -2397,7 +3135,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
      * </p>
      * </note>
      * 
@@ -2591,7 +3329,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
      * </p>
      * </note>
      * 
@@ -2655,7 +3393,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
      * </p>
      * </note>
      * <p>
@@ -2911,6 +3649,73 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateLensReviewResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateLensReviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a profile.
+     * </p>
+     * 
+     * @param updateProfileRequest
+     * @return Result of the UpdateProfile operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateProfile" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateProfileResult updateProfile(UpdateProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateProfile(request);
+    }
+
+    @SdkInternalApi
+    final UpdateProfileResult executeUpdateProfile(UpdateProfileRequest updateProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateProfileRequest> request = null;
+        Response<UpdateProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateProfileResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3189,6 +3994,74 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<UpgradeLensReviewResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpgradeLensReviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Upgrade a profile.
+     * </p>
+     * 
+     * @param upgradeProfileVersionRequest
+     * @return Result of the UpgradeProfileVersion operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpgradeProfileVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeProfileVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpgradeProfileVersionResult upgradeProfileVersion(UpgradeProfileVersionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpgradeProfileVersion(request);
+    }
+
+    @SdkInternalApi
+    final UpgradeProfileVersionResult executeUpgradeProfileVersion(UpgradeProfileVersionRequest upgradeProfileVersionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(upgradeProfileVersionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpgradeProfileVersionRequest> request = null;
+        Response<UpgradeProfileVersionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpgradeProfileVersionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(upgradeProfileVersionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpgradeProfileVersion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpgradeProfileVersionResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpgradeProfileVersionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -136,23 +136,23 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.securityhub.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidInputException").withExceptionUnmarshaller(
                                     com.amazonaws.services.securityhub.model.transform.InvalidInputExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidAccessException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.securityhub.model.transform.InvalidAccessExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.securityhub.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.securityhub.model.transform.ResourceConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalException").withExceptionUnmarshaller(
                                     com.amazonaws.services.securityhub.model.transform.InternalExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.securityhub.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidAccessException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.securityhub.model.transform.InvalidAccessExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.securityhub.model.transform.ResourceConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.securityhub.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
@@ -367,6 +367,74 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Deletes one or more automation rules.
+     * </p>
+     * 
+     * @param batchDeleteAutomationRulesRequest
+     * @return Result of the BatchDeleteAutomationRules operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.BatchDeleteAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDeleteAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchDeleteAutomationRulesResult batchDeleteAutomationRules(BatchDeleteAutomationRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDeleteAutomationRules(request);
+    }
+
+    @SdkInternalApi
+    final BatchDeleteAutomationRulesResult executeBatchDeleteAutomationRules(BatchDeleteAutomationRulesRequest batchDeleteAutomationRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDeleteAutomationRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDeleteAutomationRulesRequest> request = null;
+        Response<BatchDeleteAutomationRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDeleteAutomationRulesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchDeleteAutomationRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDeleteAutomationRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDeleteAutomationRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchDeleteAutomationRulesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disables the standards specified by the provided <code>StandardsSubscriptionArns</code>.
      * </p>
      * <p>
@@ -495,6 +563,76 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<BatchEnableStandardsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new BatchEnableStandardsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a list of details for automation rules based on rule Amazon Resource Names (ARNs).
+     * </p>
+     * 
+     * @param batchGetAutomationRulesRequest
+     * @return Result of the BatchGetAutomationRules operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.BatchGetAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetAutomationRulesResult batchGetAutomationRules(BatchGetAutomationRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetAutomationRules(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetAutomationRulesResult executeBatchGetAutomationRules(BatchGetAutomationRulesRequest batchGetAutomationRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetAutomationRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetAutomationRulesRequest> request = null;
+        Response<BatchGetAutomationRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetAutomationRulesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetAutomationRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetAutomationRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetAutomationRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetAutomationRulesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -790,6 +928,74 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Updates one or more automation rules based on rule Amazon Resource Names (ARNs) and input parameters.
+     * </p>
+     * 
+     * @param batchUpdateAutomationRulesRequest
+     * @return Result of the BatchUpdateAutomationRules operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.BatchUpdateAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchUpdateAutomationRulesResult batchUpdateAutomationRules(BatchUpdateAutomationRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchUpdateAutomationRules(request);
+    }
+
+    @SdkInternalApi
+    final BatchUpdateAutomationRulesResult executeBatchUpdateAutomationRules(BatchUpdateAutomationRulesRequest batchUpdateAutomationRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchUpdateAutomationRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchUpdateAutomationRulesRequest> request = null;
+        Response<BatchUpdateAutomationRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchUpdateAutomationRulesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchUpdateAutomationRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchUpdateAutomationRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchUpdateAutomationRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchUpdateAutomationRulesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Used by Security Hub customers to update information about their investigation into a finding. Requested by
      * administrator accounts or member accounts. Administrator accounts can update findings for their account and their
      * member accounts. Member accounts can update findings for their account.
@@ -1043,6 +1249,72 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateActionTargetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateActionTargetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an automation rule based on input parameters.
+     * </p>
+     * 
+     * @param createAutomationRuleRequest
+     * @return Result of the CreateAutomationRule operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @sample AWSSecurityHub.CreateAutomationRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateAutomationRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateAutomationRuleResult createAutomationRule(CreateAutomationRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAutomationRule(request);
+    }
+
+    @SdkInternalApi
+    final CreateAutomationRuleResult executeCreateAutomationRule(CreateAutomationRuleRequest createAutomationRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAutomationRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAutomationRuleRequest> request = null;
+        Response<CreateAutomationRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAutomationRuleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createAutomationRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAutomationRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateAutomationRuleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateAutomationRuleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3581,6 +3853,72 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
             HttpResponseHandler<AmazonWebServiceResponse<InviteMembersResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new InviteMembersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * A list of automation rules and their metadata for the calling account.
+     * </p>
+     * 
+     * @param listAutomationRulesRequest
+     * @return Result of the ListAutomationRules operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @sample AWSSecurityHub.ListAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAutomationRulesResult listAutomationRules(ListAutomationRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAutomationRules(request);
+    }
+
+    @SdkInternalApi
+    final ListAutomationRulesResult executeListAutomationRules(ListAutomationRulesRequest listAutomationRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAutomationRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAutomationRulesRequest> request = null;
+        Response<ListAutomationRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAutomationRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listAutomationRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAutomationRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAutomationRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAutomationRulesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -41,6 +41,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateProfilesResult> associateProfilesAsync(AssociateProfilesRequest request) {
+
+        return associateProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateProfilesResult> associateProfilesAsync(AssociateProfilesRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateProfilesRequest, AssociateProfilesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLensShareResult> createLensShareAsync(CreateLensShareRequest request) {
 
         return createLensShareAsync(request, null);
@@ -75,6 +88,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<CreateMilestoneResult> createMilestoneAsync(CreateMilestoneRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateMilestoneRequest, CreateMilestoneResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileResult> createProfileAsync(CreateProfileRequest request) {
+
+        return createProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileResult> createProfileAsync(CreateProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateProfileRequest, CreateProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileShareResult> createProfileShareAsync(CreateProfileShareRequest request) {
+
+        return createProfileShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProfileShareResult> createProfileShareAsync(CreateProfileShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateProfileShareRequest, CreateProfileShareResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -132,6 +171,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteProfileResult> deleteProfileAsync(DeleteProfileRequest request) {
+
+        return deleteProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProfileResult> deleteProfileAsync(DeleteProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteProfileRequest, DeleteProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProfileShareResult> deleteProfileShareAsync(DeleteProfileShareRequest request) {
+
+        return deleteProfileShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProfileShareResult> deleteProfileShareAsync(DeleteProfileShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteProfileShareRequest, DeleteProfileShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteWorkloadResult> deleteWorkloadAsync(DeleteWorkloadRequest request) {
 
         return deleteWorkloadAsync(request, null);
@@ -166,6 +231,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<DisassociateLensesResult> disassociateLensesAsync(DisassociateLensesRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateLensesRequest, DisassociateLensesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateProfilesResult> disassociateProfilesAsync(DisassociateProfilesRequest request) {
+
+        return disassociateProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateProfilesResult> disassociateProfilesAsync(DisassociateProfilesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateProfilesRequest, DisassociateProfilesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -270,6 +348,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<GetMilestoneResult> getMilestoneAsync(GetMilestoneRequest request,
             com.amazonaws.handlers.AsyncHandler<GetMilestoneRequest, GetMilestoneResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileResult> getProfileAsync(GetProfileRequest request) {
+
+        return getProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileResult> getProfileAsync(GetProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetProfileRequest, GetProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileTemplateResult> getProfileTemplateAsync(GetProfileTemplateRequest request) {
+
+        return getProfileTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProfileTemplateResult> getProfileTemplateAsync(GetProfileTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetProfileTemplateRequest, GetProfileTemplateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -418,6 +522,45 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<ListProfileNotificationsResult> listProfileNotificationsAsync(ListProfileNotificationsRequest request) {
+
+        return listProfileNotificationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfileNotificationsResult> listProfileNotificationsAsync(ListProfileNotificationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListProfileNotificationsRequest, ListProfileNotificationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfileSharesResult> listProfileSharesAsync(ListProfileSharesRequest request) {
+
+        return listProfileSharesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfileSharesResult> listProfileSharesAsync(ListProfileSharesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListProfileSharesRequest, ListProfileSharesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfilesResult> listProfilesAsync(ListProfilesRequest request) {
+
+        return listProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProfilesResult> listProfilesAsync(ListProfilesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListProfilesRequest, ListProfilesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListShareInvitationsResult> listShareInvitationsAsync(ListShareInvitationsRequest request) {
 
         return listShareInvitationsAsync(request, null);
@@ -535,6 +678,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateProfileResult> updateProfileAsync(UpdateProfileRequest request) {
+
+        return updateProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProfileResult> updateProfileAsync(UpdateProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateProfileRequest, UpdateProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateShareInvitationResult> updateShareInvitationAsync(UpdateShareInvitationRequest request) {
 
         return updateShareInvitationAsync(request, null);
@@ -582,6 +738,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<UpgradeLensReviewResult> upgradeLensReviewAsync(UpgradeLensReviewRequest request,
             com.amazonaws.handlers.AsyncHandler<UpgradeLensReviewRequest, UpgradeLensReviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpgradeProfileVersionResult> upgradeProfileVersionAsync(UpgradeProfileVersionRequest request) {
+
+        return upgradeProfileVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpgradeProfileVersionResult> upgradeProfileVersionAsync(UpgradeProfileVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpgradeProfileVersionRequest, UpgradeProfileVersionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

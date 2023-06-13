@@ -33,6 +33,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public AssociateProfilesResult associateProfiles(AssociateProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLensShareResult createLensShare(CreateLensShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -44,6 +49,16 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public CreateMilestoneResult createMilestone(CreateMilestoneRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateProfileResult createProfile(CreateProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateProfileShareResult createProfileShare(CreateProfileShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -68,6 +83,16 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public DeleteProfileResult deleteProfile(DeleteProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteProfileShareResult deleteProfileShare(DeleteProfileShareRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteWorkloadResult deleteWorkload(DeleteWorkloadRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,6 +104,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public DisassociateLensesResult disassociateLenses(DisassociateLensesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateProfilesResult disassociateProfiles(DisassociateProfilesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -119,6 +149,16 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public GetMilestoneResult getMilestone(GetMilestoneRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetProfileResult getProfile(GetProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetProfileTemplateResult getProfileTemplate(GetProfileTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -178,6 +218,21 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public ListProfileNotificationsResult listProfileNotifications(ListProfileNotificationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListProfileSharesResult listProfileShares(ListProfileSharesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListProfilesResult listProfiles(ListProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListShareInvitationsResult listShareInvitations(ListShareInvitationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -223,6 +278,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public UpdateProfileResult updateProfile(UpdateProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateShareInvitationResult updateShareInvitation(UpdateShareInvitationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -239,6 +299,11 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
 
     @Override
     public UpgradeLensReviewResult upgradeLensReview(UpgradeLensReviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpgradeProfileVersionResult upgradeProfileVersion(UpgradeProfileVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

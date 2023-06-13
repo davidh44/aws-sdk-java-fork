@@ -39,6 +39,12 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
     private Boolean copyTags;
     /**
      * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     */
+    private String exportBucketArn;
+    /**
+     * <p>
      * Launch disposition.
      * </p>
      */
@@ -164,6 +170,46 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
 
     public Boolean isCopyTags() {
         return this.copyTags;
+    }
+
+    /**
+     * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     * 
+     * @param exportBucketArn
+     *        S3 bucket ARN to export Source Network templates.
+     */
+
+    public void setExportBucketArn(String exportBucketArn) {
+        this.exportBucketArn = exportBucketArn;
+    }
+
+    /**
+     * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     * 
+     * @return S3 bucket ARN to export Source Network templates.
+     */
+
+    public String getExportBucketArn() {
+        return this.exportBucketArn;
+    }
+
+    /**
+     * <p>
+     * S3 bucket ARN to export Source Network templates.
+     * </p>
+     * 
+     * @param exportBucketArn
+     *        S3 bucket ARN to export Source Network templates.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLaunchConfigurationTemplateRequest withExportBucketArn(String exportBucketArn) {
+        setExportBucketArn(exportBucketArn);
+        return this;
     }
 
     /**
@@ -409,6 +455,8 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             sb.append("CopyPrivateIp: ").append(getCopyPrivateIp()).append(",");
         if (getCopyTags() != null)
             sb.append("CopyTags: ").append(getCopyTags()).append(",");
+        if (getExportBucketArn() != null)
+            sb.append("ExportBucketArn: ").append(getExportBucketArn()).append(",");
         if (getLaunchDisposition() != null)
             sb.append("LaunchDisposition: ").append(getLaunchDisposition()).append(",");
         if (getLicensing() != null)
@@ -439,6 +487,10 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
             return false;
         if (other.getCopyTags() != null && other.getCopyTags().equals(this.getCopyTags()) == false)
             return false;
+        if (other.getExportBucketArn() == null ^ this.getExportBucketArn() == null)
+            return false;
+        if (other.getExportBucketArn() != null && other.getExportBucketArn().equals(this.getExportBucketArn()) == false)
+            return false;
         if (other.getLaunchDisposition() == null ^ this.getLaunchDisposition() == null)
             return false;
         if (other.getLaunchDisposition() != null && other.getLaunchDisposition().equals(this.getLaunchDisposition()) == false)
@@ -466,6 +518,7 @@ public class CreateLaunchConfigurationTemplateRequest extends com.amazonaws.Amaz
 
         hashCode = prime * hashCode + ((getCopyPrivateIp() == null) ? 0 : getCopyPrivateIp().hashCode());
         hashCode = prime * hashCode + ((getCopyTags() == null) ? 0 : getCopyTags().hashCode());
+        hashCode = prime * hashCode + ((getExportBucketArn() == null) ? 0 : getExportBucketArn().hashCode());
         hashCode = prime * hashCode + ((getLaunchDisposition() == null) ? 0 : getLaunchDisposition().hashCode());
         hashCode = prime * hashCode + ((getLicensing() == null) ? 0 : getLicensing().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

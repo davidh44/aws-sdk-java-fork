@@ -49,7 +49,7 @@ public class UpdateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String s3KeyPrefix;
     /**
      * <p>
-     * This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      */
     @Deprecated
@@ -260,11 +260,11 @@ public class UpdateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      * 
      * @param snsTopicName
-     *        This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     *        This field is no longer in use. Use <code>SnsTopicARN</code>.
      */
     @Deprecated
     public void setSnsTopicName(String snsTopicName) {
@@ -273,10 +273,10 @@ public class UpdateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      * 
-     * @return This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     * @return This field is no longer in use. Use <code>SnsTopicARN</code>.
      */
     @Deprecated
     public String getSnsTopicName() {
@@ -285,11 +285,11 @@ public class UpdateTrailResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     * This field is no longer in use. Use <code>SnsTopicARN</code>.
      * </p>
      * 
      * @param snsTopicName
-     *        This field is no longer in use. Use <a>UpdateTrailResponse$SnsTopicARN</a>.
+     *        This field is no longer in use. Use <code>SnsTopicARN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated

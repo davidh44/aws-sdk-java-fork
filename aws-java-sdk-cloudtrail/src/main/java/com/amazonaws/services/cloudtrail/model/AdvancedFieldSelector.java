@@ -121,6 +121,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
@@ -132,6 +137,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -249,6 +259,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -278,6 +299,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -539,6 +571,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
@@ -550,6 +587,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -667,6 +709,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -696,6 +749,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -910,6 +974,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::CodeWhisperer::Profile</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::Cognito::IdentityPool</code>
      *        </p>
      *        </li>
@@ -921,6 +990,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::EC2::Snapshot</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::EMRWAL::Workspace</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1038,6 +1112,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1067,6 +1152,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1287,6 +1383,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
@@ -1298,6 +1399,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -1415,6 +1521,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1444,6 +1561,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1657,6 +1785,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::CodeWhisperer::Profile</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::Cognito::IdentityPool</code>
      *         </p>
      *         </li>
@@ -1668,6 +1801,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::EC2::Snapshot</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::EMRWAL::Workspace</code>
      *         </p>
      *         </li>
      *         <li>
@@ -1785,6 +1923,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -1814,6 +1963,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2035,6 +2195,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Profile</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::Cognito::IdentityPool</code>
      * </p>
      * </li>
@@ -2046,6 +2211,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::EC2::Snapshot</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::EMRWAL::Workspace</code>
      * </p>
      * </li>
      * <li>
@@ -2163,6 +2333,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2192,6 +2373,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2406,6 +2598,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::CodeWhisperer::Profile</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::Cognito::IdentityPool</code>
      *        </p>
      *        </li>
@@ -2417,6 +2614,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::EC2::Snapshot</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::EMRWAL::Workspace</code>
      *        </p>
      *        </li>
      *        <li>
@@ -2534,6 +2736,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When resources.type equals <code>AWS::CodeWhisperer::Profile</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When resources.type equals <code>AWS::Cognito::IdentityPool</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -2563,6 +2776,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::EMRWAL::Workspace</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:emrwal:&lt;region&gt;::workspace/&lt;workspace_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

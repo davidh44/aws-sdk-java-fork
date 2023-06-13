@@ -49,6 +49,12 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * Profile name prefix.
+     * </p>
+     */
+    private String profileNamePrefix;
 
     /**
      * @param workloadNamePrefix
@@ -242,6 +248,46 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Profile name prefix.
+     * </p>
+     * 
+     * @param profileNamePrefix
+     *        Profile name prefix.
+     */
+
+    public void setProfileNamePrefix(String profileNamePrefix) {
+        this.profileNamePrefix = profileNamePrefix;
+    }
+
+    /**
+     * <p>
+     * Profile name prefix.
+     * </p>
+     * 
+     * @return Profile name prefix.
+     */
+
+    public String getProfileNamePrefix() {
+        return this.profileNamePrefix;
+    }
+
+    /**
+     * <p>
+     * Profile name prefix.
+     * </p>
+     * 
+     * @param profileNamePrefix
+     *        Profile name prefix.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListShareInvitationsRequest withProfileNamePrefix(String profileNamePrefix) {
+        setProfileNamePrefix(profileNamePrefix);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -262,7 +308,9 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getProfileNamePrefix() != null)
+            sb.append("ProfileNamePrefix: ").append(getProfileNamePrefix());
         sb.append("}");
         return sb.toString();
     }
@@ -297,6 +345,10 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getProfileNamePrefix() == null ^ this.getProfileNamePrefix() == null)
+            return false;
+        if (other.getProfileNamePrefix() != null && other.getProfileNamePrefix().equals(this.getProfileNamePrefix()) == false)
+            return false;
         return true;
     }
 
@@ -310,6 +362,7 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getShareResourceType() == null) ? 0 : getShareResourceType().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getProfileNamePrefix() == null) ? 0 : getProfileNamePrefix().hashCode());
         return hashCode;
     }
 

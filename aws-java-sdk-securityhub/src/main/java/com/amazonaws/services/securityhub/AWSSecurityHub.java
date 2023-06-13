@@ -176,6 +176,30 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Deletes one or more automation rules.
+     * </p>
+     * 
+     * @param batchDeleteAutomationRulesRequest
+     * @return Result of the BatchDeleteAutomationRules operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.BatchDeleteAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDeleteAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDeleteAutomationRulesResult batchDeleteAutomationRules(BatchDeleteAutomationRulesRequest batchDeleteAutomationRulesRequest);
+
+    /**
+     * <p>
      * Disables the standards specified by the provided <code>StandardsSubscriptionArns</code>.
      * </p>
      * <p>
@@ -228,6 +252,32 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     BatchEnableStandardsResult batchEnableStandards(BatchEnableStandardsRequest batchEnableStandardsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of details for automation rules based on rule Amazon Resource Names (ARNs).
+     * </p>
+     * 
+     * @param batchGetAutomationRulesRequest
+     * @return Result of the BatchGetAutomationRules operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.BatchGetAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetAutomationRulesResult batchGetAutomationRules(BatchGetAutomationRulesRequest batchGetAutomationRulesRequest);
 
     /**
      * <p>
@@ -384,6 +434,30 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Updates one or more automation rules based on rule Amazon Resource Names (ARNs) and input parameters.
+     * </p>
+     * 
+     * @param batchUpdateAutomationRulesRequest
+     * @return Result of the BatchUpdateAutomationRules operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.BatchUpdateAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchUpdateAutomationRulesResult batchUpdateAutomationRules(BatchUpdateAutomationRulesRequest batchUpdateAutomationRulesRequest);
+
+    /**
+     * <p>
      * Used by Security Hub customers to update information about their investigation into a finding. Requested by
      * administrator accounts or member accounts. Administrator accounts can update findings for their account and their
      * member accounts. Member accounts can update findings for their account.
@@ -518,6 +592,30 @@ public interface AWSSecurityHub {
      *      API Documentation</a>
      */
     CreateActionTargetResult createActionTarget(CreateActionTargetRequest createActionTargetRequest);
+
+    /**
+     * <p>
+     * Creates an automation rule based on input parameters.
+     * </p>
+     * 
+     * @param createAutomationRuleRequest
+     * @return Result of the CreateAutomationRule operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @sample AWSSecurityHub.CreateAutomationRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/CreateAutomationRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateAutomationRuleResult createAutomationRule(CreateAutomationRuleRequest createAutomationRuleRequest);
 
     /**
      * <p>
@@ -1560,6 +1658,30 @@ public interface AWSSecurityHub {
      *      Documentation</a>
      */
     InviteMembersResult inviteMembers(InviteMembersRequest inviteMembersRequest);
+
+    /**
+     * <p>
+     * A list of automation rules and their metadata for the calling account.
+     * </p>
+     * 
+     * @param listAutomationRulesRequest
+     * @return Result of the ListAutomationRules operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permission to perform the action specified in the request.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @sample AWSSecurityHub.ListAutomationRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListAutomationRules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAutomationRulesResult listAutomationRules(ListAutomationRulesRequest listAutomationRulesRequest);
 
     /**
      * <p>
