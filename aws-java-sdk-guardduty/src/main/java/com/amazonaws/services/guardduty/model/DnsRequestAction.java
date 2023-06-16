@@ -30,7 +30,7 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the API request.
+     * The domain information for the DNS query.
      * </p>
      */
     private String domain;
@@ -49,11 +49,11 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the API request.
+     * The domain information for the DNS query.
      * </p>
      * 
      * @param domain
-     *        The domain information for the API request.
+     *        The domain information for the DNS query.
      */
 
     public void setDomain(String domain) {
@@ -62,10 +62,10 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the API request.
+     * The domain information for the DNS query.
      * </p>
      * 
-     * @return The domain information for the API request.
+     * @return The domain information for the DNS query.
      */
 
     public String getDomain() {
@@ -74,11 +74,11 @@ public class DnsRequestAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the API request.
+     * The domain information for the DNS query.
      * </p>
      * 
      * @param domain
-     *        The domain information for the API request.
+     *        The domain information for the DNS query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

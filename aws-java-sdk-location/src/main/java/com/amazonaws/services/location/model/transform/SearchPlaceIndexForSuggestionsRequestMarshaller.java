@@ -32,6 +32,8 @@ public class SearchPlaceIndexForSuggestionsRequestMarshaller {
             .marshallLocationName("BiasPosition").build();
     private static final MarshallingInfo<List> FILTERBBOX_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("FilterBBox").build();
+    private static final MarshallingInfo<List> FILTERCATEGORIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCategories").build();
     private static final MarshallingInfo<List> FILTERCOUNTRIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCountries").build();
     private static final MarshallingInfo<String> INDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
@@ -61,6 +63,7 @@ public class SearchPlaceIndexForSuggestionsRequestMarshaller {
         try {
             protocolMarshaller.marshall(searchPlaceIndexForSuggestionsRequest.getBiasPosition(), BIASPOSITION_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForSuggestionsRequest.getFilterBBox(), FILTERBBOX_BINDING);
+            protocolMarshaller.marshall(searchPlaceIndexForSuggestionsRequest.getFilterCategories(), FILTERCATEGORIES_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForSuggestionsRequest.getFilterCountries(), FILTERCOUNTRIES_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForSuggestionsRequest.getIndexName(), INDEXNAME_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForSuggestionsRequest.getLanguage(), LANGUAGE_BINDING);

@@ -1,3 +1,20 @@
+# __1.12.489__ __2023-06-15__
+## __AWS Audit Manager__
+  - ### Features
+    - This release introduces 2 Audit Manager features: CSV exports and new manual evidence options. You can now export your evidence finder results in CSV format. In addition, you can now add manual evidence to a control by entering free-form text or uploading a file from your browser.
+
+## __Amazon Elastic File System__
+  - ### Features
+    - Documentation updates for EFS.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Updated descriptions for some APIs.
+
+## __Amazon Location Service__
+  - ### Features
+    - Amazon Location Service adds categories to places, including filtering on those categories in searches. Also, you can now add metadata properties to your geofences.
+
 # __1.12.488__ __2023-06-13__
 ## __AWS CloudTrail__
   - ### Features

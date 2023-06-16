@@ -48,13 +48,13 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The framework type, such as a custom framework or a standard framework.
+     * Specifies whether the framework is a standard framework or a custom framework.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     * The compliance type that the framework supports, such as CIS or HIPAA.
      * </p>
      */
     private String complianceType;
@@ -72,7 +72,7 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
     private String logo;
     /**
      * <p>
-     * The sources that Audit Manager collects evidence from for the control.
+     * The control data sources where Audit Manager collects evidence from.
      * </p>
      */
     private String controlSources;
@@ -235,11 +235,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as a custom framework or a standard framework.
+     * Specifies whether the framework is a standard framework or a custom framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as a custom framework or a standard framework.
+     *        Specifies whether the framework is a standard framework or a custom framework.
      * @see FrameworkType
      */
 
@@ -249,10 +249,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as a custom framework or a standard framework.
+     * Specifies whether the framework is a standard framework or a custom framework.
      * </p>
      * 
-     * @return The framework type, such as a custom framework or a standard framework.
+     * @return Specifies whether the framework is a standard framework or a custom framework.
      * @see FrameworkType
      */
 
@@ -262,11 +262,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as a custom framework or a standard framework.
+     * Specifies whether the framework is a standard framework or a custom framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as a custom framework or a standard framework.
+     *        Specifies whether the framework is a standard framework or a custom framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FrameworkType
      */
@@ -278,11 +278,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as a custom framework or a standard framework.
+     * Specifies whether the framework is a standard framework or a custom framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as a custom framework or a standard framework.
+     *        Specifies whether the framework is a standard framework or a custom framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FrameworkType
      */
@@ -294,11 +294,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     * The compliance type that the framework supports, such as CIS or HIPAA.
      * </p>
      * 
      * @param complianceType
-     *        The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     *        The compliance type that the framework supports, such as CIS or HIPAA.
      */
 
     public void setComplianceType(String complianceType) {
@@ -307,10 +307,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     * The compliance type that the framework supports, such as CIS or HIPAA.
      * </p>
      * 
-     * @return The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     * @return The compliance type that the framework supports, such as CIS or HIPAA.
      */
 
     public String getComplianceType() {
@@ -319,11 +319,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     * The compliance type that the framework supports, such as CIS or HIPAA.
      * </p>
      * 
      * @param complianceType
-     *        The compliance type that the new custom framework supports, such as CIS or HIPAA.
+     *        The compliance type that the framework supports, such as CIS or HIPAA.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -414,11 +414,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources that Audit Manager collects evidence from for the control.
+     * The control data sources where Audit Manager collects evidence from.
      * </p>
      * 
      * @param controlSources
-     *        The sources that Audit Manager collects evidence from for the control.
+     *        The control data sources where Audit Manager collects evidence from.
      */
 
     public void setControlSources(String controlSources) {
@@ -427,10 +427,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources that Audit Manager collects evidence from for the control.
+     * The control data sources where Audit Manager collects evidence from.
      * </p>
      * 
-     * @return The sources that Audit Manager collects evidence from for the control.
+     * @return The control data sources where Audit Manager collects evidence from.
      */
 
     public String getControlSources() {
@@ -439,11 +439,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources that Audit Manager collects evidence from for the control.
+     * The control data sources where Audit Manager collects evidence from.
      * </p>
      * 
      * @param controlSources
-     *        The sources that Audit Manager collects evidence from for the control.
+     *        The control data sources where Audit Manager collects evidence from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -660,8 +660,9 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Uploads position update data for one or more devices to a tracker resource. Amazon Location uses the data when it
-     * reports the last known device position and position history. Amazon Location retains location data for 30 days.
+     * Uploads position update data for one or more devices to a tracker resource (up to 10 devices per batch). Amazon
+     * Location uses the data when it reports the last known device position and position history. Amazon Location
+     * retains location data for 30 days.
      * </p>
      * <note>
      * <p>
