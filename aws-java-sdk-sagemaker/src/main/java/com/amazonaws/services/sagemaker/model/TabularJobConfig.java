@@ -115,6 +115,14 @@ public class TabularJobConfig implements Serializable, Cloneable, StructuredPojo
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
      * Amazon SageMaker Autopilot problem types</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide the <a
+     * href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     * >AutoMLJobObjective</a> metric, or none at all.
+     * </p>
+     * </note>
      */
     private String problemType;
     /**
@@ -734,12 +742,26 @@ public class TabularJobConfig implements Serializable, Cloneable, StructuredPojo
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
      * Amazon SageMaker Autopilot problem types</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide the <a
+     * href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     * >AutoMLJobObjective</a> metric, or none at all.
+     * </p>
+     * </note>
      * 
      * @param problemType
      *        The type of supervised learning problem available for the model candidates of the AutoML job V2. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
-     *        > Amazon SageMaker Autopilot problem types</a>.
+     *        > Amazon SageMaker Autopilot problem types</a>.</p> <note>
+     *        <p>
+     *        You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide
+     *        the <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     *        >AutoMLJobObjective</a> metric, or none at all.
+     *        </p>
      * @see ProblemType
      */
 
@@ -754,11 +776,25 @@ public class TabularJobConfig implements Serializable, Cloneable, StructuredPojo
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
      * Amazon SageMaker Autopilot problem types</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide the <a
+     * href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     * >AutoMLJobObjective</a> metric, or none at all.
+     * </p>
+     * </note>
      * 
      * @return The type of supervised learning problem available for the model candidates of the AutoML job V2. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
-     *         > Amazon SageMaker Autopilot problem types</a>.
+     *         > Amazon SageMaker Autopilot problem types</a>.</p> <note>
+     *         <p>
+     *         You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide
+     *         the <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     *         >AutoMLJobObjective</a> metric, or none at all.
+     *         </p>
      * @see ProblemType
      */
 
@@ -773,12 +809,26 @@ public class TabularJobConfig implements Serializable, Cloneable, StructuredPojo
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
      * Amazon SageMaker Autopilot problem types</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide the <a
+     * href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     * >AutoMLJobObjective</a> metric, or none at all.
+     * </p>
+     * </note>
      * 
      * @param problemType
      *        The type of supervised learning problem available for the model candidates of the AutoML job V2. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
-     *        > Amazon SageMaker Autopilot problem types</a>.
+     *        > Amazon SageMaker Autopilot problem types</a>.</p> <note>
+     *        <p>
+     *        You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide
+     *        the <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     *        >AutoMLJobObjective</a> metric, or none at all.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ProblemType
      */
@@ -795,12 +845,26 @@ public class TabularJobConfig implements Serializable, Cloneable, StructuredPojo
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
      * Amazon SageMaker Autopilot problem types</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide the <a
+     * href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     * >AutoMLJobObjective</a> metric, or none at all.
+     * </p>
+     * </note>
      * 
      * @param problemType
      *        The type of supervised learning problem available for the model candidates of the AutoML job V2. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
-     *        > Amazon SageMaker Autopilot problem types</a>.
+     *        > Amazon SageMaker Autopilot problem types</a>.</p> <note>
+     *        <p>
+     *        You must either specify the type of supervised learning problem in <code>ProblemType</code> and provide
+     *        the <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html#sagemaker-CreateAutoMLJobV2-request-AutoMLJobObjective"
+     *        >AutoMLJobObjective</a> metric, or none at all.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ProblemType
      */

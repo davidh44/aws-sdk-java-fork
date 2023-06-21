@@ -2435,6 +2435,68 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
+     * A list of the instance types that Amazon EMR supports. You can filter the list by Amazon Web Services Region and
+     * Amazon EMR release.
+     * </p>
+     * 
+     * @param listSupportedInstanceTypesRequest
+     * @return Result of the ListSupportedInstanceTypes operation returned by the service.
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Amazon EMR service.
+     * @throws InvalidRequestException
+     *         This exception occurs when there is something wrong with user input.
+     * @sample AmazonElasticMapReduce.ListSupportedInstanceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSupportedInstanceTypes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSupportedInstanceTypesResult listSupportedInstanceTypes(ListSupportedInstanceTypesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSupportedInstanceTypes(request);
+    }
+
+    @SdkInternalApi
+    final ListSupportedInstanceTypesResult executeListSupportedInstanceTypes(ListSupportedInstanceTypesRequest listSupportedInstanceTypesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSupportedInstanceTypesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSupportedInstanceTypesRequest> request = null;
+        Response<ListSupportedInstanceTypesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSupportedInstanceTypesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listSupportedInstanceTypesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSupportedInstanceTypes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSupportedInstanceTypesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListSupportedInstanceTypesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modifies the number of steps that can be executed concurrently for the cluster specified using ClusterID.
      * </p>
      * 

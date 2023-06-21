@@ -332,6 +332,29 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private WorkflowDetails workflowDetails;
+    /**
+     * <p>
+     * Specifies the log groups to which your server logs are sent.
+     * </p>
+     * <p>
+     * To specify a log group, you must provide the ARN for an existing log group. In this case, the format of the log
+     * group is as follows:
+     * </p>
+     * <p>
+     * <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     * </p>
+     * <p>
+     * For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     * </p>
+     * <p>
+     * If you have previously specified a log group for a server, you can clear it, and in effect turn off structured
+     * logging, by providing an empty value for this parameter in an <code>update-server</code> call. For example:
+     * </p>
+     * <p>
+     * <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * </p>
+     */
+    private java.util.List<String> structuredLogDestinations;
 
     /**
      * <p>
@@ -2564,6 +2587,212 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specifies the log groups to which your server logs are sent.
+     * </p>
+     * <p>
+     * To specify a log group, you must provide the ARN for an existing log group. In this case, the format of the log
+     * group is as follows:
+     * </p>
+     * <p>
+     * <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     * </p>
+     * <p>
+     * For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     * </p>
+     * <p>
+     * If you have previously specified a log group for a server, you can clear it, and in effect turn off structured
+     * logging, by providing an empty value for this parameter in an <code>update-server</code> call. For example:
+     * </p>
+     * <p>
+     * <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * </p>
+     * 
+     * @return Specifies the log groups to which your server logs are sent.</p>
+     *         <p>
+     *         To specify a log group, you must provide the ARN for an existing log group. In this case, the format of
+     *         the log group is as follows:
+     *         </p>
+     *         <p>
+     *         <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     *         </p>
+     *         <p>
+     *         For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     *         </p>
+     *         <p>
+     *         If you have previously specified a log group for a server, you can clear it, and in effect turn off
+     *         structured logging, by providing an empty value for this parameter in an <code>update-server</code> call.
+     *         For example:
+     *         </p>
+     *         <p>
+     *         <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     */
+
+    public java.util.List<String> getStructuredLogDestinations() {
+        return structuredLogDestinations;
+    }
+
+    /**
+     * <p>
+     * Specifies the log groups to which your server logs are sent.
+     * </p>
+     * <p>
+     * To specify a log group, you must provide the ARN for an existing log group. In this case, the format of the log
+     * group is as follows:
+     * </p>
+     * <p>
+     * <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     * </p>
+     * <p>
+     * For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     * </p>
+     * <p>
+     * If you have previously specified a log group for a server, you can clear it, and in effect turn off structured
+     * logging, by providing an empty value for this parameter in an <code>update-server</code> call. For example:
+     * </p>
+     * <p>
+     * <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * </p>
+     * 
+     * @param structuredLogDestinations
+     *        Specifies the log groups to which your server logs are sent.</p>
+     *        <p>
+     *        To specify a log group, you must provide the ARN for an existing log group. In this case, the format of
+     *        the log group is as follows:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     *        </p>
+     *        <p>
+     *        For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     *        </p>
+     *        <p>
+     *        If you have previously specified a log group for a server, you can clear it, and in effect turn off
+     *        structured logging, by providing an empty value for this parameter in an <code>update-server</code> call.
+     *        For example:
+     *        </p>
+     *        <p>
+     *        <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     */
+
+    public void setStructuredLogDestinations(java.util.Collection<String> structuredLogDestinations) {
+        if (structuredLogDestinations == null) {
+            this.structuredLogDestinations = null;
+            return;
+        }
+
+        this.structuredLogDestinations = new java.util.ArrayList<String>(structuredLogDestinations);
+    }
+
+    /**
+     * <p>
+     * Specifies the log groups to which your server logs are sent.
+     * </p>
+     * <p>
+     * To specify a log group, you must provide the ARN for an existing log group. In this case, the format of the log
+     * group is as follows:
+     * </p>
+     * <p>
+     * <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     * </p>
+     * <p>
+     * For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     * </p>
+     * <p>
+     * If you have previously specified a log group for a server, you can clear it, and in effect turn off structured
+     * logging, by providing an empty value for this parameter in an <code>update-server</code> call. For example:
+     * </p>
+     * <p>
+     * <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStructuredLogDestinations(java.util.Collection)} or
+     * {@link #withStructuredLogDestinations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param structuredLogDestinations
+     *        Specifies the log groups to which your server logs are sent.</p>
+     *        <p>
+     *        To specify a log group, you must provide the ARN for an existing log group. In this case, the format of
+     *        the log group is as follows:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     *        </p>
+     *        <p>
+     *        For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     *        </p>
+     *        <p>
+     *        If you have previously specified a log group for a server, you can clear it, and in effect turn off
+     *        structured logging, by providing an empty value for this parameter in an <code>update-server</code> call.
+     *        For example:
+     *        </p>
+     *        <p>
+     *        <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServerRequest withStructuredLogDestinations(String... structuredLogDestinations) {
+        if (this.structuredLogDestinations == null) {
+            setStructuredLogDestinations(new java.util.ArrayList<String>(structuredLogDestinations.length));
+        }
+        for (String ele : structuredLogDestinations) {
+            this.structuredLogDestinations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the log groups to which your server logs are sent.
+     * </p>
+     * <p>
+     * To specify a log group, you must provide the ARN for an existing log group. In this case, the format of the log
+     * group is as follows:
+     * </p>
+     * <p>
+     * <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     * </p>
+     * <p>
+     * For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     * </p>
+     * <p>
+     * If you have previously specified a log group for a server, you can clear it, and in effect turn off structured
+     * logging, by providing an empty value for this parameter in an <code>update-server</code> call. For example:
+     * </p>
+     * <p>
+     * <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * </p>
+     * 
+     * @param structuredLogDestinations
+     *        Specifies the log groups to which your server logs are sent.</p>
+     *        <p>
+     *        To specify a log group, you must provide the ARN for an existing log group. In this case, the format of
+     *        the log group is as follows:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:logs:region-name:amazon-account-id:log-group:log-group-name:*</code>
+     *        </p>
+     *        <p>
+     *        For example, <code>arn:aws:logs:us-east-1:111122223333:log-group:mytestgroup:*</code>
+     *        </p>
+     *        <p>
+     *        If you have previously specified a log group for a server, you can clear it, and in effect turn off
+     *        structured logging, by providing an empty value for this parameter in an <code>update-server</code> call.
+     *        For example:
+     *        </p>
+     *        <p>
+     *        <code>update-server --server-id s-1234567890abcdef0 --structured-log-destinations</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServerRequest withStructuredLogDestinations(java.util.Collection<String> structuredLogDestinations) {
+        setStructuredLogDestinations(structuredLogDestinations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2600,7 +2829,9 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getServerId() != null)
             sb.append("ServerId: ").append(getServerId()).append(",");
         if (getWorkflowDetails() != null)
-            sb.append("WorkflowDetails: ").append(getWorkflowDetails());
+            sb.append("WorkflowDetails: ").append(getWorkflowDetails()).append(",");
+        if (getStructuredLogDestinations() != null)
+            sb.append("StructuredLogDestinations: ").append(getStructuredLogDestinations());
         sb.append("}");
         return sb.toString();
     }
@@ -2668,6 +2899,10 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getWorkflowDetails() != null && other.getWorkflowDetails().equals(this.getWorkflowDetails()) == false)
             return false;
+        if (other.getStructuredLogDestinations() == null ^ this.getStructuredLogDestinations() == null)
+            return false;
+        if (other.getStructuredLogDestinations() != null && other.getStructuredLogDestinations().equals(this.getStructuredLogDestinations()) == false)
+            return false;
         return true;
     }
 
@@ -2689,6 +2924,7 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getSecurityPolicyName() == null) ? 0 : getSecurityPolicyName().hashCode());
         hashCode = prime * hashCode + ((getServerId() == null) ? 0 : getServerId().hashCode());
         hashCode = prime * hashCode + ((getWorkflowDetails() == null) ? 0 : getWorkflowDetails().hashCode());
+        hashCode = prime * hashCode + ((getStructuredLogDestinations() == null) ? 0 : getStructuredLogDestinations().hashCode());
         return hashCode;
     }
 

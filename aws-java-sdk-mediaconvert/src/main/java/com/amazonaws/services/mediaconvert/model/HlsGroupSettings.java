@@ -132,6 +132,16 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     /** Period of insertion of EXT-X-PROGRAM-DATE-TIME entry, in seconds. */
     private Integer programDateTimePeriod;
     /**
+     * Specify whether MediaConvert generates HLS manifests while your job is running or when your job is complete. To
+     * generate HLS manifests while your job is running: Choose Enabled. Use if you want to play back your content as
+     * soon as it's available. MediaConvert writes the parent and child manifests after the first three media segments
+     * are written to your destination S3 bucket. It then writes new updated manifests after each additional segment is
+     * written. The parent manifest includes the latest BANDWIDTH and AVERAGE-BANDWIDTH attributes, and child manifests
+     * include the latest available media segment. When your job completes, the final child playlists include an
+     * EXT-X-ENDLIST tag. To generate HLS manifests only when your job completes: Choose Disabled.
+     */
+    private String progressiveWriteHlsManifest;
+    /**
      * When set to SINGLE_FILE, emits program as a single media resource (.ts) file, uses #EXT-X-BYTERANGE tags to index
      * segment for playback.
      */
@@ -1490,6 +1500,109 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * Specify whether MediaConvert generates HLS manifests while your job is running or when your job is complete. To
+     * generate HLS manifests while your job is running: Choose Enabled. Use if you want to play back your content as
+     * soon as it's available. MediaConvert writes the parent and child manifests after the first three media segments
+     * are written to your destination S3 bucket. It then writes new updated manifests after each additional segment is
+     * written. The parent manifest includes the latest BANDWIDTH and AVERAGE-BANDWIDTH attributes, and child manifests
+     * include the latest available media segment. When your job completes, the final child playlists include an
+     * EXT-X-ENDLIST tag. To generate HLS manifests only when your job completes: Choose Disabled.
+     * 
+     * @param progressiveWriteHlsManifest
+     *        Specify whether MediaConvert generates HLS manifests while your job is running or when your job is
+     *        complete. To generate HLS manifests while your job is running: Choose Enabled. Use if you want to play
+     *        back your content as soon as it's available. MediaConvert writes the parent and child manifests after the
+     *        first three media segments are written to your destination S3 bucket. It then writes new updated manifests
+     *        after each additional segment is written. The parent manifest includes the latest BANDWIDTH and
+     *        AVERAGE-BANDWIDTH attributes, and child manifests include the latest available media segment. When your
+     *        job completes, the final child playlists include an EXT-X-ENDLIST tag. To generate HLS manifests only when
+     *        your job completes: Choose Disabled.
+     * @see HlsProgressiveWriteHlsManifest
+     */
+
+    public void setProgressiveWriteHlsManifest(String progressiveWriteHlsManifest) {
+        this.progressiveWriteHlsManifest = progressiveWriteHlsManifest;
+    }
+
+    /**
+     * Specify whether MediaConvert generates HLS manifests while your job is running or when your job is complete. To
+     * generate HLS manifests while your job is running: Choose Enabled. Use if you want to play back your content as
+     * soon as it's available. MediaConvert writes the parent and child manifests after the first three media segments
+     * are written to your destination S3 bucket. It then writes new updated manifests after each additional segment is
+     * written. The parent manifest includes the latest BANDWIDTH and AVERAGE-BANDWIDTH attributes, and child manifests
+     * include the latest available media segment. When your job completes, the final child playlists include an
+     * EXT-X-ENDLIST tag. To generate HLS manifests only when your job completes: Choose Disabled.
+     * 
+     * @return Specify whether MediaConvert generates HLS manifests while your job is running or when your job is
+     *         complete. To generate HLS manifests while your job is running: Choose Enabled. Use if you want to play
+     *         back your content as soon as it's available. MediaConvert writes the parent and child manifests after the
+     *         first three media segments are written to your destination S3 bucket. It then writes new updated
+     *         manifests after each additional segment is written. The parent manifest includes the latest BANDWIDTH and
+     *         AVERAGE-BANDWIDTH attributes, and child manifests include the latest available media segment. When your
+     *         job completes, the final child playlists include an EXT-X-ENDLIST tag. To generate HLS manifests only
+     *         when your job completes: Choose Disabled.
+     * @see HlsProgressiveWriteHlsManifest
+     */
+
+    public String getProgressiveWriteHlsManifest() {
+        return this.progressiveWriteHlsManifest;
+    }
+
+    /**
+     * Specify whether MediaConvert generates HLS manifests while your job is running or when your job is complete. To
+     * generate HLS manifests while your job is running: Choose Enabled. Use if you want to play back your content as
+     * soon as it's available. MediaConvert writes the parent and child manifests after the first three media segments
+     * are written to your destination S3 bucket. It then writes new updated manifests after each additional segment is
+     * written. The parent manifest includes the latest BANDWIDTH and AVERAGE-BANDWIDTH attributes, and child manifests
+     * include the latest available media segment. When your job completes, the final child playlists include an
+     * EXT-X-ENDLIST tag. To generate HLS manifests only when your job completes: Choose Disabled.
+     * 
+     * @param progressiveWriteHlsManifest
+     *        Specify whether MediaConvert generates HLS manifests while your job is running or when your job is
+     *        complete. To generate HLS manifests while your job is running: Choose Enabled. Use if you want to play
+     *        back your content as soon as it's available. MediaConvert writes the parent and child manifests after the
+     *        first three media segments are written to your destination S3 bucket. It then writes new updated manifests
+     *        after each additional segment is written. The parent manifest includes the latest BANDWIDTH and
+     *        AVERAGE-BANDWIDTH attributes, and child manifests include the latest available media segment. When your
+     *        job completes, the final child playlists include an EXT-X-ENDLIST tag. To generate HLS manifests only when
+     *        your job completes: Choose Disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsProgressiveWriteHlsManifest
+     */
+
+    public HlsGroupSettings withProgressiveWriteHlsManifest(String progressiveWriteHlsManifest) {
+        setProgressiveWriteHlsManifest(progressiveWriteHlsManifest);
+        return this;
+    }
+
+    /**
+     * Specify whether MediaConvert generates HLS manifests while your job is running or when your job is complete. To
+     * generate HLS manifests while your job is running: Choose Enabled. Use if you want to play back your content as
+     * soon as it's available. MediaConvert writes the parent and child manifests after the first three media segments
+     * are written to your destination S3 bucket. It then writes new updated manifests after each additional segment is
+     * written. The parent manifest includes the latest BANDWIDTH and AVERAGE-BANDWIDTH attributes, and child manifests
+     * include the latest available media segment. When your job completes, the final child playlists include an
+     * EXT-X-ENDLIST tag. To generate HLS manifests only when your job completes: Choose Disabled.
+     * 
+     * @param progressiveWriteHlsManifest
+     *        Specify whether MediaConvert generates HLS manifests while your job is running or when your job is
+     *        complete. To generate HLS manifests while your job is running: Choose Enabled. Use if you want to play
+     *        back your content as soon as it's available. MediaConvert writes the parent and child manifests after the
+     *        first three media segments are written to your destination S3 bucket. It then writes new updated manifests
+     *        after each additional segment is written. The parent manifest includes the latest BANDWIDTH and
+     *        AVERAGE-BANDWIDTH attributes, and child manifests include the latest available media segment. When your
+     *        job completes, the final child playlists include an EXT-X-ENDLIST tag. To generate HLS manifests only when
+     *        your job completes: Choose Disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsProgressiveWriteHlsManifest
+     */
+
+    public HlsGroupSettings withProgressiveWriteHlsManifest(HlsProgressiveWriteHlsManifest progressiveWriteHlsManifest) {
+        this.progressiveWriteHlsManifest = progressiveWriteHlsManifest.toString();
+        return this;
+    }
+
+    /**
      * When set to SINGLE_FILE, emits program as a single media resource (.ts) file, uses #EXT-X-BYTERANGE tags to index
      * segment for playback.
      * 
@@ -2079,6 +2192,8 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             sb.append("ProgramDateTime: ").append(getProgramDateTime()).append(",");
         if (getProgramDateTimePeriod() != null)
             sb.append("ProgramDateTimePeriod: ").append(getProgramDateTimePeriod()).append(",");
+        if (getProgressiveWriteHlsManifest() != null)
+            sb.append("ProgressiveWriteHlsManifest: ").append(getProgressiveWriteHlsManifest()).append(",");
         if (getSegmentControl() != null)
             sb.append("SegmentControl: ").append(getSegmentControl()).append(",");
         if (getSegmentLength() != null)
@@ -2199,6 +2314,10 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getProgramDateTimePeriod() != null && other.getProgramDateTimePeriod().equals(this.getProgramDateTimePeriod()) == false)
             return false;
+        if (other.getProgressiveWriteHlsManifest() == null ^ this.getProgressiveWriteHlsManifest() == null)
+            return false;
+        if (other.getProgressiveWriteHlsManifest() != null && other.getProgressiveWriteHlsManifest().equals(this.getProgressiveWriteHlsManifest()) == false)
+            return false;
         if (other.getSegmentControl() == null ^ this.getSegmentControl() == null)
             return false;
         if (other.getSegmentControl() != null && other.getSegmentControl().equals(this.getSegmentControl()) == false)
@@ -2266,6 +2385,7 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getOutputSelection() == null) ? 0 : getOutputSelection().hashCode());
         hashCode = prime * hashCode + ((getProgramDateTime() == null) ? 0 : getProgramDateTime().hashCode());
         hashCode = prime * hashCode + ((getProgramDateTimePeriod() == null) ? 0 : getProgramDateTimePeriod().hashCode());
+        hashCode = prime * hashCode + ((getProgressiveWriteHlsManifest() == null) ? 0 : getProgressiveWriteHlsManifest().hashCode());
         hashCode = prime * hashCode + ((getSegmentControl() == null) ? 0 : getSegmentControl().hashCode());
         hashCode = prime * hashCode + ((getSegmentLength() == null) ? 0 : getSegmentLength().hashCode());
         hashCode = prime * hashCode + ((getSegmentLengthControl() == null) ? 0 : getSegmentLengthControl().hashCode());

@@ -42,6 +42,14 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
      */
     private String alternateTransferFunctionSei;
     /**
+     * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
+     * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
+     * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     */
+    private BandwidthReductionFilter bandwidthReductionFilter;
+    /**
      * Specify the average bitrate in bits per second. Required for VBR and CBR. For MS Smooth outputs, bitrates must be
      * unique when rounded down to the nearest multiple of 1000.
      */
@@ -478,6 +486,67 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
 
     public H265Settings withAlternateTransferFunctionSei(H265AlternateTransferFunctionSei alternateTransferFunctionSei) {
         this.alternateTransferFunctionSei = alternateTransferFunctionSei.toString();
+        return this;
+    }
+
+    /**
+     * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
+     * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
+     * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * 
+     * @param bandwidthReductionFilter
+     *        The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to
+     *        lower the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality.
+     *        Or, use to increase the video quality of outputs with other rate control modes relative to the bitrate
+     *        that you specify. Bandwidth reduction increases further when your input is low quality or noisy. Outputs
+     *        that use this feature incur pro-tier pricing. When you include Bandwidth reduction filter, you cannot
+     *        include the Noise reducer preprocessor.
+     */
+
+    public void setBandwidthReductionFilter(BandwidthReductionFilter bandwidthReductionFilter) {
+        this.bandwidthReductionFilter = bandwidthReductionFilter;
+    }
+
+    /**
+     * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
+     * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
+     * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * 
+     * @return The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to
+     *         lower the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality.
+     *         Or, use to increase the video quality of outputs with other rate control modes relative to the bitrate
+     *         that you specify. Bandwidth reduction increases further when your input is low quality or noisy. Outputs
+     *         that use this feature incur pro-tier pricing. When you include Bandwidth reduction filter, you cannot
+     *         include the Noise reducer preprocessor.
+     */
+
+    public BandwidthReductionFilter getBandwidthReductionFilter() {
+        return this.bandwidthReductionFilter;
+    }
+
+    /**
+     * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
+     * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
+     * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * 
+     * @param bandwidthReductionFilter
+     *        The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to
+     *        lower the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality.
+     *        Or, use to increase the video quality of outputs with other rate control modes relative to the bitrate
+     *        that you specify. Bandwidth reduction increases further when your input is low quality or noisy. Outputs
+     *        that use this feature incur pro-tier pricing. When you include Bandwidth reduction filter, you cannot
+     *        include the Noise reducer preprocessor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public H265Settings withBandwidthReductionFilter(BandwidthReductionFilter bandwidthReductionFilter) {
+        setBandwidthReductionFilter(bandwidthReductionFilter);
         return this;
     }
 
@@ -3254,6 +3323,8 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdaptiveQuantization: ").append(getAdaptiveQuantization()).append(",");
         if (getAlternateTransferFunctionSei() != null)
             sb.append("AlternateTransferFunctionSei: ").append(getAlternateTransferFunctionSei()).append(",");
+        if (getBandwidthReductionFilter() != null)
+            sb.append("BandwidthReductionFilter: ").append(getBandwidthReductionFilter()).append(",");
         if (getBitrate() != null)
             sb.append("Bitrate: ").append(getBitrate()).append(",");
         if (getCodecLevel() != null)
@@ -3353,6 +3424,10 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
         if (other.getAlternateTransferFunctionSei() == null ^ this.getAlternateTransferFunctionSei() == null)
             return false;
         if (other.getAlternateTransferFunctionSei() != null && other.getAlternateTransferFunctionSei().equals(this.getAlternateTransferFunctionSei()) == false)
+            return false;
+        if (other.getBandwidthReductionFilter() == null ^ this.getBandwidthReductionFilter() == null)
+            return false;
+        if (other.getBandwidthReductionFilter() != null && other.getBandwidthReductionFilter().equals(this.getBandwidthReductionFilter()) == false)
             return false;
         if (other.getBitrate() == null ^ this.getBitrate() == null)
             return false;
@@ -3523,6 +3598,7 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getAdaptiveQuantization() == null) ? 0 : getAdaptiveQuantization().hashCode());
         hashCode = prime * hashCode + ((getAlternateTransferFunctionSei() == null) ? 0 : getAlternateTransferFunctionSei().hashCode());
+        hashCode = prime * hashCode + ((getBandwidthReductionFilter() == null) ? 0 : getBandwidthReductionFilter().hashCode());
         hashCode = prime * hashCode + ((getBitrate() == null) ? 0 : getBitrate().hashCode());
         hashCode = prime * hashCode + ((getCodecLevel() == null) ? 0 : getCodecLevel().hashCode());
         hashCode = prime * hashCode + ((getCodecProfile() == null) ? 0 : getCodecProfile().hashCode());

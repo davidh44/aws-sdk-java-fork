@@ -56,6 +56,10 @@ public class H265SettingsJsonUnmarshaller implements Unmarshaller<H265Settings, 
                     context.nextToken();
                     h265Settings.setAlternateTransferFunctionSei(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("bandwidthReductionFilter", targetDepth)) {
+                    context.nextToken();
+                    h265Settings.setBandwidthReductionFilter(BandwidthReductionFilterJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("bitrate", targetDepth)) {
                     context.nextToken();
                     h265Settings.setBitrate(context.getUnmarshaller(Integer.class).unmarshall(context));

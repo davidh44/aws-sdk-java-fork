@@ -31,6 +31,8 @@ public class H265SettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("adaptiveQuantization").build();
     private static final MarshallingInfo<String> ALTERNATETRANSFERFUNCTIONSEI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("alternateTransferFunctionSei").build();
+    private static final MarshallingInfo<StructuredPojo> BANDWIDTHREDUCTIONFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bandwidthReductionFilter").build();
     private static final MarshallingInfo<Integer> BITRATE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("bitrate").build();
     private static final MarshallingInfo<String> CODECLEVEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -128,6 +130,7 @@ public class H265SettingsMarshaller {
         try {
             protocolMarshaller.marshall(h265Settings.getAdaptiveQuantization(), ADAPTIVEQUANTIZATION_BINDING);
             protocolMarshaller.marshall(h265Settings.getAlternateTransferFunctionSei(), ALTERNATETRANSFERFUNCTIONSEI_BINDING);
+            protocolMarshaller.marshall(h265Settings.getBandwidthReductionFilter(), BANDWIDTHREDUCTIONFILTER_BINDING);
             protocolMarshaller.marshall(h265Settings.getBitrate(), BITRATE_BINDING);
             protocolMarshaller.marshall(h265Settings.getCodecLevel(), CODECLEVEL_BINDING);
             protocolMarshaller.marshall(h265Settings.getCodecProfile(), CODECPROFILE_BINDING);

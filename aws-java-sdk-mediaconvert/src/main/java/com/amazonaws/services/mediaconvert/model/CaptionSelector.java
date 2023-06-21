@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * Use captions selectors to specify the captions data from your input that you use in your outputs. You can use up to
- * 20 captions selectors per input.
+ * 100 captions selectors per input.
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CaptionSelector" target="_top">AWS API
  *      Documentation</a>

@@ -54,6 +54,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetCodeSnippetResult> batchGetCodeSnippetAsync(BatchGetCodeSnippetRequest request) {
+
+        return batchGetCodeSnippetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetCodeSnippetResult> batchGetCodeSnippetAsync(BatchGetCodeSnippetRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetCodeSnippetRequest, BatchGetCodeSnippetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetFreeTrialInfoResult> batchGetFreeTrialInfoAsync(BatchGetFreeTrialInfoRequest request) {
 
         return batchGetFreeTrialInfoAsync(request, null);
@@ -110,6 +123,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     }
 
     @Override
+    public java.util.concurrent.Future<CancelSbomExportResult> cancelSbomExportAsync(CancelSbomExportRequest request) {
+
+        return cancelSbomExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelSbomExportResult> cancelSbomExportAsync(CancelSbomExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelSbomExportRequest, CancelSbomExportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFilterResult> createFilterAsync(CreateFilterRequest request) {
 
         return createFilterAsync(request, null);
@@ -131,6 +157,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     @Override
     public java.util.concurrent.Future<CreateFindingsReportResult> createFindingsReportAsync(CreateFindingsReportRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateFindingsReportRequest, CreateFindingsReportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSbomExportResult> createSbomExportAsync(CreateSbomExportRequest request) {
+
+        return createSbomExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSbomExportResult> createSbomExportAsync(CreateSbomExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateSbomExportRequest, CreateSbomExportResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -270,6 +309,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetEncryptionKeyResult> getEncryptionKeyAsync(GetEncryptionKeyRequest request) {
+
+        return getEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEncryptionKeyResult> getEncryptionKeyAsync(GetEncryptionKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEncryptionKeyRequest, GetEncryptionKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFindingsReportStatusResult> getFindingsReportStatusAsync(GetFindingsReportStatusRequest request) {
 
         return getFindingsReportStatusAsync(request, null);
@@ -291,6 +343,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     @Override
     public java.util.concurrent.Future<GetMemberResult> getMemberAsync(GetMemberRequest request,
             com.amazonaws.handlers.AsyncHandler<GetMemberRequest, GetMemberResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSbomExportResult> getSbomExportAsync(GetSbomExportRequest request) {
+
+        return getSbomExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSbomExportResult> getSbomExportAsync(GetSbomExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSbomExportRequest, GetSbomExportResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -426,6 +491,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     }
 
     @Override
+    public java.util.concurrent.Future<ResetEncryptionKeyResult> resetEncryptionKeyAsync(ResetEncryptionKeyRequest request) {
+
+        return resetEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetEncryptionKeyResult> resetEncryptionKeyAsync(ResetEncryptionKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<ResetEncryptionKeyRequest, ResetEncryptionKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchVulnerabilitiesResult> searchVulnerabilitiesAsync(SearchVulnerabilitiesRequest request) {
 
         return searchVulnerabilitiesAsync(request, null);
@@ -488,6 +566,19 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     public java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
             UpdateEc2DeepInspectionConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateEc2DeepInspectionConfigurationRequest, UpdateEc2DeepInspectionConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEncryptionKeyResult> updateEncryptionKeyAsync(UpdateEncryptionKeyRequest request) {
+
+        return updateEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEncryptionKeyResult> updateEncryptionKeyAsync(UpdateEncryptionKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEncryptionKeyRequest, UpdateEncryptionKeyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

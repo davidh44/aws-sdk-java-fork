@@ -38,6 +38,11 @@ public class AbstractAWSInspector2 implements AWSInspector2 {
     }
 
     @Override
+    public BatchGetCodeSnippetResult batchGetCodeSnippet(BatchGetCodeSnippetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetFreeTrialInfoResult batchGetFreeTrialInfo(BatchGetFreeTrialInfoRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -58,12 +63,22 @@ public class AbstractAWSInspector2 implements AWSInspector2 {
     }
 
     @Override
+    public CancelSbomExportResult cancelSbomExport(CancelSbomExportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateFilterResult createFilter(CreateFilterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public CreateFindingsReportResult createFindingsReport(CreateFindingsReportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateSbomExportResult createSbomExport(CreateSbomExportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -118,12 +133,22 @@ public class AbstractAWSInspector2 implements AWSInspector2 {
     }
 
     @Override
+    public GetEncryptionKeyResult getEncryptionKey(GetEncryptionKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetFindingsReportStatusResult getFindingsReportStatus(GetFindingsReportStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetMemberResult getMember(GetMemberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSbomExportResult getSbomExport(GetSbomExportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -178,6 +203,11 @@ public class AbstractAWSInspector2 implements AWSInspector2 {
     }
 
     @Override
+    public ResetEncryptionKeyResult resetEncryptionKey(ResetEncryptionKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchVulnerabilitiesResult searchVulnerabilities(SearchVulnerabilitiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -199,6 +229,11 @@ public class AbstractAWSInspector2 implements AWSInspector2 {
 
     @Override
     public UpdateEc2DeepInspectionConfigurationResult updateEc2DeepInspectionConfiguration(UpdateEc2DeepInspectionConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEncryptionKeyResult updateEncryptionKey(UpdateEncryptionKeyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

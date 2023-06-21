@@ -286,6 +286,69 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
+     * Retrieves code snippets from findings that Amazon Inspector detected code vulnerabilities in.
+     * </p>
+     * 
+     * @param batchGetCodeSnippetRequest
+     * @return Result of the BatchGetCodeSnippet operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.BatchGetCodeSnippet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchGetCodeSnippet" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public BatchGetCodeSnippetResult batchGetCodeSnippet(BatchGetCodeSnippetRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetCodeSnippet(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetCodeSnippetResult executeBatchGetCodeSnippet(BatchGetCodeSnippetRequest batchGetCodeSnippetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetCodeSnippetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetCodeSnippetRequest> request = null;
+        Response<BatchGetCodeSnippetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetCodeSnippetRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(batchGetCodeSnippetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetCodeSnippet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetCodeSnippetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new BatchGetCodeSnippetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets free trial status for multiple Amazon Web Services accounts.
      * </p>
      * 
@@ -550,6 +613,71 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
+     * Cancels a software bill of materials (SBOM) report.
+     * </p>
+     * 
+     * @param cancelSbomExportRequest
+     * @return Result of the CancelSbomExport operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.CancelSbomExport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/CancelSbomExport" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CancelSbomExportResult cancelSbomExport(CancelSbomExportRequest request) {
+        request = beforeClientExecution(request);
+        return executeCancelSbomExport(request);
+    }
+
+    @SdkInternalApi
+    final CancelSbomExportResult executeCancelSbomExport(CancelSbomExportRequest cancelSbomExportRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(cancelSbomExportRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CancelSbomExportRequest> request = null;
+        Response<CancelSbomExportResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CancelSbomExportRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(cancelSbomExportRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CancelSbomExport");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CancelSbomExportResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CancelSbomExportResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a filter resource using specified filter criteria.
      * </p>
      * 
@@ -673,6 +801,71 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateFindingsReportResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateFindingsReportResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a software bill of materials (SBOM) report.
+     * </p>
+     * 
+     * @param createSbomExportRequest
+     * @return Result of the CreateSbomExport operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.CreateSbomExport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/CreateSbomExport" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateSbomExportResult createSbomExport(CreateSbomExportRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSbomExport(request);
+    }
+
+    @SdkInternalApi
+    final CreateSbomExportResult executeCreateSbomExport(CreateSbomExportRequest createSbomExportRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSbomExportRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSbomExportRequest> request = null;
+        Response<CreateSbomExportResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSbomExportRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createSbomExportRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSbomExport");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSbomExportResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateSbomExportResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1343,6 +1536,71 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
+     * Gets an encryption key.
+     * </p>
+     * 
+     * @param getEncryptionKeyRequest
+     * @return Result of the GetEncryptionKey operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.GetEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/GetEncryptionKey" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetEncryptionKeyResult getEncryptionKey(GetEncryptionKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEncryptionKey(request);
+    }
+
+    @SdkInternalApi
+    final GetEncryptionKeyResult executeGetEncryptionKey(GetEncryptionKeyRequest getEncryptionKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEncryptionKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEncryptionKeyRequest> request = null;
+        Response<GetEncryptionKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEncryptionKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getEncryptionKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEncryptionKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEncryptionKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEncryptionKeyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets the status of a findings report.
      * </p>
      * 
@@ -1463,6 +1721,71 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
             HttpResponseHandler<AmazonWebServiceResponse<GetMemberResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetMemberResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets details of a software bill of materials (SBOM) report.
+     * </p>
+     * 
+     * @param getSbomExportRequest
+     * @return Result of the GetSbomExport operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.GetSbomExport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/GetSbomExport" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetSbomExportResult getSbomExport(GetSbomExportRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSbomExport(request);
+    }
+
+    @SdkInternalApi
+    final GetSbomExportResult executeGetSbomExport(GetSbomExportRequest getSbomExportRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSbomExportRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSbomExportRequest> request = null;
+        Response<GetSbomExportResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSbomExportRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSbomExportRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSbomExport");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSbomExportResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSbomExportResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2103,6 +2426,72 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
+     * Resets an encryption key. After the key is reset your resources will be encrypted by an Amazon Web Services owned
+     * key.
+     * </p>
+     * 
+     * @param resetEncryptionKeyRequest
+     * @return Result of the ResetEncryptionKey operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.ResetEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/ResetEncryptionKey" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ResetEncryptionKeyResult resetEncryptionKey(ResetEncryptionKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeResetEncryptionKey(request);
+    }
+
+    @SdkInternalApi
+    final ResetEncryptionKeyResult executeResetEncryptionKey(ResetEncryptionKeyRequest resetEncryptionKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(resetEncryptionKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ResetEncryptionKeyRequest> request = null;
+        Response<ResetEncryptionKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ResetEncryptionKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(resetEncryptionKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ResetEncryptionKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ResetEncryptionKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ResetEncryptionKeyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists Amazon Inspector coverage details for a specific vulnerability.
      * </p>
      * 
@@ -2414,6 +2803,72 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
             HttpResponseHandler<AmazonWebServiceResponse<UpdateEc2DeepInspectionConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateEc2DeepInspectionConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an encryption key. A <code>ResourceNotFoundException</code> means that an AWS owned key is being used for
+     * encryption.
+     * </p>
+     * 
+     * @param updateEncryptionKeyRequest
+     * @return Result of the UpdateEncryptionKey operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.UpdateEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateEncryptionKey" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateEncryptionKeyResult updateEncryptionKey(UpdateEncryptionKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEncryptionKey(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEncryptionKeyResult executeUpdateEncryptionKey(UpdateEncryptionKeyRequest updateEncryptionKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEncryptionKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEncryptionKeyRequest> request = null;
+        Response<UpdateEncryptionKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEncryptionKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateEncryptionKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEncryptionKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEncryptionKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateEncryptionKeyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

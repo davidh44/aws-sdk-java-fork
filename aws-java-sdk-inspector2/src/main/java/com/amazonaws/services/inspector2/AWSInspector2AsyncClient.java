@@ -141,6 +141,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetCodeSnippetResult> batchGetCodeSnippetAsync(BatchGetCodeSnippetRequest request) {
+
+        return batchGetCodeSnippetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetCodeSnippetResult> batchGetCodeSnippetAsync(final BatchGetCodeSnippetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetCodeSnippetRequest, BatchGetCodeSnippetResult> asyncHandler) {
+        final BatchGetCodeSnippetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetCodeSnippetResult>() {
+            @Override
+            public BatchGetCodeSnippetResult call() throws Exception {
+                BatchGetCodeSnippetResult result = null;
+
+                try {
+                    result = executeBatchGetCodeSnippet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetFreeTrialInfoResult> batchGetFreeTrialInfoAsync(BatchGetFreeTrialInfoRequest request) {
 
         return batchGetFreeTrialInfoAsync(request, null);
@@ -277,6 +310,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CancelSbomExportResult> cancelSbomExportAsync(CancelSbomExportRequest request) {
+
+        return cancelSbomExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelSbomExportResult> cancelSbomExportAsync(final CancelSbomExportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelSbomExportRequest, CancelSbomExportResult> asyncHandler) {
+        final CancelSbomExportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelSbomExportResult>() {
+            @Override
+            public CancelSbomExportResult call() throws Exception {
+                CancelSbomExportResult result = null;
+
+                try {
+                    result = executeCancelSbomExport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFilterResult> createFilterAsync(CreateFilterRequest request) {
 
         return createFilterAsync(request, null);
@@ -327,6 +393,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
 
                 try {
                     result = executeCreateFindingsReport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSbomExportResult> createSbomExportAsync(CreateSbomExportRequest request) {
+
+        return createSbomExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSbomExportResult> createSbomExportAsync(final CreateSbomExportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSbomExportRequest, CreateSbomExportResult> asyncHandler) {
+        final CreateSbomExportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSbomExportResult>() {
+            @Override
+            public CreateSbomExportResult call() throws Exception {
+                CreateSbomExportResult result = null;
+
+                try {
+                    result = executeCreateSbomExport(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -677,6 +776,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<GetEncryptionKeyResult> getEncryptionKeyAsync(GetEncryptionKeyRequest request) {
+
+        return getEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEncryptionKeyResult> getEncryptionKeyAsync(final GetEncryptionKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEncryptionKeyRequest, GetEncryptionKeyResult> asyncHandler) {
+        final GetEncryptionKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEncryptionKeyResult>() {
+            @Override
+            public GetEncryptionKeyResult call() throws Exception {
+                GetEncryptionKeyResult result = null;
+
+                try {
+                    result = executeGetEncryptionKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFindingsReportStatusResult> getFindingsReportStatusAsync(GetFindingsReportStatusRequest request) {
 
         return getFindingsReportStatusAsync(request, null);
@@ -727,6 +859,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
 
                 try {
                     result = executeGetMember(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSbomExportResult> getSbomExportAsync(GetSbomExportRequest request) {
+
+        return getSbomExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSbomExportResult> getSbomExportAsync(final GetSbomExportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSbomExportRequest, GetSbomExportResult> asyncHandler) {
+        final GetSbomExportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSbomExportResult>() {
+            @Override
+            public GetSbomExportResult call() throws Exception {
+                GetSbomExportResult result = null;
+
+                try {
+                    result = executeGetSbomExport(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1073,6 +1238,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<ResetEncryptionKeyResult> resetEncryptionKeyAsync(ResetEncryptionKeyRequest request) {
+
+        return resetEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetEncryptionKeyResult> resetEncryptionKeyAsync(final ResetEncryptionKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ResetEncryptionKeyRequest, ResetEncryptionKeyResult> asyncHandler) {
+        final ResetEncryptionKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ResetEncryptionKeyResult>() {
+            @Override
+            public ResetEncryptionKeyResult call() throws Exception {
+                ResetEncryptionKeyResult result = null;
+
+                try {
+                    result = executeResetEncryptionKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchVulnerabilitiesResult> searchVulnerabilitiesAsync(SearchVulnerabilitiesRequest request) {
 
         return searchVulnerabilitiesAsync(request, null);
@@ -1224,6 +1422,39 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
 
                 try {
                     result = executeUpdateEc2DeepInspectionConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEncryptionKeyResult> updateEncryptionKeyAsync(UpdateEncryptionKeyRequest request) {
+
+        return updateEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEncryptionKeyResult> updateEncryptionKeyAsync(final UpdateEncryptionKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEncryptionKeyRequest, UpdateEncryptionKeyResult> asyncHandler) {
+        final UpdateEncryptionKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEncryptionKeyResult>() {
+            @Override
+            public UpdateEncryptionKeyResult call() throws Exception {
+                UpdateEncryptionKeyResult result = null;
+
+                try {
+                    result = executeUpdateEncryptionKey(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

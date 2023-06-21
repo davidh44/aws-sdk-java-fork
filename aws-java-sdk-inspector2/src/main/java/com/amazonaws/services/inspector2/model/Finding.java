@@ -36,10 +36,22 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
     private String awsAccountId;
     /**
      * <p>
+     * Details about the code vulnerability identified in a Lambda function used to filter findings.
+     * </p>
+     */
+    private CodeVulnerabilityDetails codeVulnerabilityDetails;
+    /**
+     * <p>
      * The description of the finding.
      * </p>
      */
     private String description;
+    /**
+     * <p>
+     * The finding's EPSS score.
+     * </p>
+     */
+    private EpssDetails epss;
     /**
      * <p>
      * If a finding discovered in your environment has an exploit available.
@@ -187,6 +199,46 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Details about the code vulnerability identified in a Lambda function used to filter findings.
+     * </p>
+     * 
+     * @param codeVulnerabilityDetails
+     *        Details about the code vulnerability identified in a Lambda function used to filter findings.
+     */
+
+    public void setCodeVulnerabilityDetails(CodeVulnerabilityDetails codeVulnerabilityDetails) {
+        this.codeVulnerabilityDetails = codeVulnerabilityDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the code vulnerability identified in a Lambda function used to filter findings.
+     * </p>
+     * 
+     * @return Details about the code vulnerability identified in a Lambda function used to filter findings.
+     */
+
+    public CodeVulnerabilityDetails getCodeVulnerabilityDetails() {
+        return this.codeVulnerabilityDetails;
+    }
+
+    /**
+     * <p>
+     * Details about the code vulnerability identified in a Lambda function used to filter findings.
+     * </p>
+     * 
+     * @param codeVulnerabilityDetails
+     *        Details about the code vulnerability identified in a Lambda function used to filter findings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Finding withCodeVulnerabilityDetails(CodeVulnerabilityDetails codeVulnerabilityDetails) {
+        setCodeVulnerabilityDetails(codeVulnerabilityDetails);
+        return this;
+    }
+
+    /**
+     * <p>
      * The description of the finding.
      * </p>
      * 
@@ -222,6 +274,46 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     public Finding withDescription(String description) {
         setDescription(description);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The finding's EPSS score.
+     * </p>
+     * 
+     * @param epss
+     *        The finding's EPSS score.
+     */
+
+    public void setEpss(EpssDetails epss) {
+        this.epss = epss;
+    }
+
+    /**
+     * <p>
+     * The finding's EPSS score.
+     * </p>
+     * 
+     * @return The finding's EPSS score.
+     */
+
+    public EpssDetails getEpss() {
+        return this.epss;
+    }
+
+    /**
+     * <p>
+     * The finding's EPSS score.
+     * </p>
+     * 
+     * @param epss
+     *        The finding's EPSS score.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Finding withEpss(EpssDetails epss) {
+        setEpss(epss);
         return this;
     }
 
@@ -1060,8 +1152,12 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAwsAccountId() != null)
             sb.append("AwsAccountId: ").append(getAwsAccountId()).append(",");
+        if (getCodeVulnerabilityDetails() != null)
+            sb.append("CodeVulnerabilityDetails: ").append(getCodeVulnerabilityDetails()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getEpss() != null)
+            sb.append("Epss: ").append(getEpss()).append(",");
         if (getExploitAvailable() != null)
             sb.append("ExploitAvailable: ").append(getExploitAvailable()).append(",");
         if (getExploitabilityDetails() != null)
@@ -1114,9 +1210,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAwsAccountId() != null && other.getAwsAccountId().equals(this.getAwsAccountId()) == false)
             return false;
+        if (other.getCodeVulnerabilityDetails() == null ^ this.getCodeVulnerabilityDetails() == null)
+            return false;
+        if (other.getCodeVulnerabilityDetails() != null && other.getCodeVulnerabilityDetails().equals(this.getCodeVulnerabilityDetails()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getEpss() == null ^ this.getEpss() == null)
+            return false;
+        if (other.getEpss() != null && other.getEpss().equals(this.getEpss()) == false)
             return false;
         if (other.getExploitAvailable() == null ^ this.getExploitAvailable() == null)
             return false;
@@ -1195,7 +1299,9 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAwsAccountId() == null) ? 0 : getAwsAccountId().hashCode());
+        hashCode = prime * hashCode + ((getCodeVulnerabilityDetails() == null) ? 0 : getCodeVulnerabilityDetails().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getEpss() == null) ? 0 : getEpss().hashCode());
         hashCode = prime * hashCode + ((getExploitAvailable() == null) ? 0 : getExploitAvailable().hashCode());
         hashCode = prime * hashCode + ((getExploitabilityDetails() == null) ? 0 : getExploitabilityDetails().hashCode());
         hashCode = prime * hashCode + ((getFindingArn() == null) ? 0 : getFindingArn().hashCode());

@@ -788,6 +788,24 @@ public interface AmazonElasticMapReduce {
 
     /**
      * <p>
+     * A list of the instance types that Amazon EMR supports. You can filter the list by Amazon Web Services Region and
+     * Amazon EMR release.
+     * </p>
+     * 
+     * @param listSupportedInstanceTypesRequest
+     * @return Result of the ListSupportedInstanceTypes operation returned by the service.
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Amazon EMR service.
+     * @throws InvalidRequestException
+     *         This exception occurs when there is something wrong with user input.
+     * @sample AmazonElasticMapReduce.ListSupportedInstanceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSupportedInstanceTypes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSupportedInstanceTypesResult listSupportedInstanceTypes(ListSupportedInstanceTypesRequest listSupportedInstanceTypesRequest);
+
+    /**
+     * <p>
      * Modifies the number of steps that can be executed concurrently for the cluster specified using ClusterID.
      * </p>
      * 

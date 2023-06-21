@@ -78,18 +78,10 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
     private Integer blockDurationMinutes;
     /**
      * <p>
-     * Specifies one of the following strategies to launch Spot Instance fleets: <code>price-capacity-optimized</code>,
-     * <code>capacity-optimized</code>, <code>lowest-price</code>, or <code>diversified</code>. For more information on
-     * the provisioning strategies, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     * strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized
+     * (the default), which launches instances from Spot Instance pools with optimal capacity for the number of
+     * instances that are launching.
      * </p>
-     * <note>
-     * <p>
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     * <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     * </p>
-     * </note>
      */
     private String allocationStrategy;
 
@@ -363,29 +355,15 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Specifies one of the following strategies to launch Spot Instance fleets: <code>price-capacity-optimized</code>,
-     * <code>capacity-optimized</code>, <code>lowest-price</code>, or <code>diversified</code>. For more information on
-     * the provisioning strategies, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     * strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized
+     * (the default), which launches instances from Spot Instance pools with optimal capacity for the number of
+     * instances that are launching.
      * </p>
-     * <note>
-     * <p>
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     * <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     * </p>
-     * </note>
      * 
      * @param allocationStrategy
-     *        Specifies one of the following strategies to launch Spot Instance fleets:
-     *        <code>price-capacity-optimized</code>, <code>capacity-optimized</code>, <code>lowest-price</code>, or
-     *        <code>diversified</code>. For more information on the provisioning strategies, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     *        strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
-     *        <p>
-     *        When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     *        <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     *        </p>
+     *        Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is
+     *        capacity-optimized (the default), which launches instances from Spot Instance pools with optimal capacity
+     *        for the number of instances that are launching.
      * @see SpotProvisioningAllocationStrategy
      */
 
@@ -395,28 +373,14 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Specifies one of the following strategies to launch Spot Instance fleets: <code>price-capacity-optimized</code>,
-     * <code>capacity-optimized</code>, <code>lowest-price</code>, or <code>diversified</code>. For more information on
-     * the provisioning strategies, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     * strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized
+     * (the default), which launches instances from Spot Instance pools with optimal capacity for the number of
+     * instances that are launching.
      * </p>
-     * <note>
-     * <p>
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     * <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     * </p>
-     * </note>
      * 
-     * @return Specifies one of the following strategies to launch Spot Instance fleets:
-     *         <code>price-capacity-optimized</code>, <code>capacity-optimized</code>, <code>lowest-price</code>, or
-     *         <code>diversified</code>. For more information on the provisioning strategies, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     *         strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
-     *         <p>
-     *         When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     *         <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     *         </p>
+     * @return Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is
+     *         capacity-optimized (the default), which launches instances from Spot Instance pools with optimal capacity
+     *         for the number of instances that are launching.
      * @see SpotProvisioningAllocationStrategy
      */
 
@@ -426,29 +390,15 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Specifies one of the following strategies to launch Spot Instance fleets: <code>price-capacity-optimized</code>,
-     * <code>capacity-optimized</code>, <code>lowest-price</code>, or <code>diversified</code>. For more information on
-     * the provisioning strategies, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     * strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized
+     * (the default), which launches instances from Spot Instance pools with optimal capacity for the number of
+     * instances that are launching.
      * </p>
-     * <note>
-     * <p>
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     * <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     * </p>
-     * </note>
      * 
      * @param allocationStrategy
-     *        Specifies one of the following strategies to launch Spot Instance fleets:
-     *        <code>price-capacity-optimized</code>, <code>capacity-optimized</code>, <code>lowest-price</code>, or
-     *        <code>diversified</code>. For more information on the provisioning strategies, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     *        strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
-     *        <p>
-     *        When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     *        <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     *        </p>
+     *        Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is
+     *        capacity-optimized (the default), which launches instances from Spot Instance pools with optimal capacity
+     *        for the number of instances that are launching.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SpotProvisioningAllocationStrategy
      */
@@ -460,29 +410,15 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Specifies one of the following strategies to launch Spot Instance fleets: <code>price-capacity-optimized</code>,
-     * <code>capacity-optimized</code>, <code>lowest-price</code>, or <code>diversified</code>. For more information on
-     * the provisioning strategies, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     * strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized
+     * (the default), which launches instances from Spot Instance pools with optimal capacity for the number of
+     * instances that are launching.
      * </p>
-     * <note>
-     * <p>
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     * <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     * </p>
-     * </note>
      * 
      * @param allocationStrategy
-     *        Specifies one of the following strategies to launch Spot Instance fleets:
-     *        <code>price-capacity-optimized</code>, <code>capacity-optimized</code>, <code>lowest-price</code>, or
-     *        <code>diversified</code>. For more information on the provisioning strategies, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     *        strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
-     *        <p>
-     *        When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     *        <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     *        </p>
+     *        Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is
+     *        capacity-optimized (the default), which launches instances from Spot Instance pools with optimal capacity
+     *        for the number of instances that are launching.
      * @see SpotProvisioningAllocationStrategy
      */
 
@@ -492,29 +428,15 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Specifies one of the following strategies to launch Spot Instance fleets: <code>price-capacity-optimized</code>,
-     * <code>capacity-optimized</code>, <code>lowest-price</code>, or <code>diversified</code>. For more information on
-     * the provisioning strategies, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     * strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is capacity-optimized
+     * (the default), which launches instances from Spot Instance pools with optimal capacity for the number of
+     * instances that are launching.
      * </p>
-     * <note>
-     * <p>
-     * When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     * <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     * </p>
-     * </note>
      * 
      * @param allocationStrategy
-     *        Specifies one of the following strategies to launch Spot Instance fleets:
-     *        <code>price-capacity-optimized</code>, <code>capacity-optimized</code>, <code>lowest-price</code>, or
-     *        <code>diversified</code>. For more information on the provisioning strategies, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html">Allocation
-     *        strategies for Spot Instances</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
-     *        <p>
-     *        When you launch a Spot Instance fleet with the old console, it automatically launches with the
-     *        <code>capacity-optimized</code> strategy. You can't change the allocation strategy from the old console.
-     *        </p>
+     *        Specifies the strategy to use in launching Spot Instance fleets. Currently, the only option is
+     *        capacity-optimized (the default), which launches instances from Spot Instance pools with optimal capacity
+     *        for the number of instances that are launching.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SpotProvisioningAllocationStrategy
      */

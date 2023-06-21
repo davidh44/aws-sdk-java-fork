@@ -34,9 +34,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to <a href=
+     * Similar to the <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats depend
+     * on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -67,13 +68,6 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Defines the configuration settings of one of the supported problem types.
      * </p>
-     * <note>
-     * <p>
-     * For tabular problem types, you must either specify the type of supervised learning problem in
-     * <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     * <code>AutoMLJobObjective</code>, or none at all.
-     * </p>
-     * </note>
      */
     private AutoMLProblemTypeConfig autoMLProblemTypeConfig;
     /**
@@ -106,9 +100,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the type of
-     * supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>),
-     * or none.
+     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
+     * ), or none at all.
      * </p>
      * </note>
      */
@@ -173,9 +167,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to <a href=
+     * Similar to the <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats depend
+     * on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -196,10 +191,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * </ul>
      * 
      * @return An array of channel objects describing the input data and their location. Each channel is a named input
-     *         source. Similar to <a href=
+     *         source. Similar to the <a href=
      *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     *         >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
-     *         problem type:</p>
+     *         >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported
+     *         formats depend on the problem type:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -226,9 +221,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to <a href=
+     * Similar to the <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats depend
+     * on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -250,10 +246,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param autoMLJobInputDataConfig
      *        An array of channel objects describing the input data and their location. Each channel is a named input
-     *        source. Similar to <a href=
+     *        source. Similar to the <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     *        >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
-     *        problem type:</p>
+     *        >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats
+     *        depend on the problem type:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -285,9 +281,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to <a href=
+     * Similar to the <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats depend
+     * on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -314,10 +311,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param autoMLJobInputDataConfig
      *        An array of channel objects describing the input data and their location. Each channel is a named input
-     *        source. Similar to <a href=
+     *        source. Similar to the <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     *        >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
-     *        problem type:</p>
+     *        >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats
+     *        depend on the problem type:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -351,9 +348,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * An array of channel objects describing the input data and their location. Each channel is a named input source.
-     * Similar to <a href=
+     * Similar to the <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     * >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the problem type:
+     * >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats depend
+     * on the problem type:
      * </p>
      * <ul>
      * <li>
@@ -375,10 +373,10 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param autoMLJobInputDataConfig
      *        An array of channel objects describing the input data and their location. Each channel is a named input
-     *        source. Similar to <a href=
+     *        source. Similar to the <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html#sagemaker-CreateAutoMLJob-request-InputDataConfig"
-     *        >InputDataConfig</a> supported by <code>CreateAutoMLJob</code>. The supported formats depend on the
-     *        problem type:</p>
+     *        >InputDataConfig</a> attribute in the <code>CreateAutoMLJob</code> input parameters. The supported formats
+     *        depend on the problem type:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -451,21 +449,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Defines the configuration settings of one of the supported problem types.
      * </p>
-     * <note>
-     * <p>
-     * For tabular problem types, you must either specify the type of supervised learning problem in
-     * <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     * <code>AutoMLJobObjective</code>, or none at all.
-     * </p>
-     * </note>
      * 
      * @param autoMLProblemTypeConfig
-     *        Defines the configuration settings of one of the supported problem types.</p> <note>
-     *        <p>
-     *        For tabular problem types, you must either specify the type of supervised learning problem in
-     *        <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     *        <code>AutoMLJobObjective</code>, or none at all.
-     *        </p>
+     *        Defines the configuration settings of one of the supported problem types.
      */
 
     public void setAutoMLProblemTypeConfig(AutoMLProblemTypeConfig autoMLProblemTypeConfig) {
@@ -476,20 +462,8 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Defines the configuration settings of one of the supported problem types.
      * </p>
-     * <note>
-     * <p>
-     * For tabular problem types, you must either specify the type of supervised learning problem in
-     * <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     * <code>AutoMLJobObjective</code>, or none at all.
-     * </p>
-     * </note>
      * 
-     * @return Defines the configuration settings of one of the supported problem types.</p> <note>
-     *         <p>
-     *         For tabular problem types, you must either specify the type of supervised learning problem in
-     *         <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     *         <code>AutoMLJobObjective</code>, or none at all.
-     *         </p>
+     * @return Defines the configuration settings of one of the supported problem types.
      */
 
     public AutoMLProblemTypeConfig getAutoMLProblemTypeConfig() {
@@ -500,21 +474,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Defines the configuration settings of one of the supported problem types.
      * </p>
-     * <note>
-     * <p>
-     * For tabular problem types, you must either specify the type of supervised learning problem in
-     * <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     * <code>AutoMLJobObjective</code>, or none at all.
-     * </p>
-     * </note>
      * 
      * @param autoMLProblemTypeConfig
-     *        Defines the configuration settings of one of the supported problem types.</p> <note>
-     *        <p>
-     *        For tabular problem types, you must either specify the type of supervised learning problem in
-     *        <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>) and provide the
-     *        <code>AutoMLJobObjective</code>, or none at all.
-     *        </p>
+     *        Defines the configuration settings of one of the supported problem types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -706,9 +668,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the type of
-     * supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>),
-     * or none.
+     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
+     * ), or none at all.
      * </p>
      * </note>
      * 
@@ -718,9 +680,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
      *        AutoMLJobObjective</a>.</p> <note>
      *        <p>
-     *        For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the
-     *        type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
-     *        <code>TabularJobConfig.ProblemType</code>), or none.
+     *        For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate
+     *        the type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
+     *        <code>TabularJobConfig.ProblemType</code>), or none at all.
      *        </p>
      */
 
@@ -737,9 +699,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the type of
-     * supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>),
-     * or none.
+     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
+     * ), or none at all.
      * </p>
      * </note>
      * 
@@ -748,9 +710,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
      *         AutoMLJobObjective</a>.</p> <note>
      *         <p>
-     *         For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the
-     *         type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
-     *         <code>TabularJobConfig.ProblemType</code>), or none.
+     *         For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate
+     *         the type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
+     *         <code>TabularJobConfig.ProblemType</code>), or none at all.
      *         </p>
      */
 
@@ -767,9 +729,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <note>
      * <p>
-     * For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the type of
-     * supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>),
-     * or none.
+     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
+     * ), or none at all.
      * </p>
      * </note>
      * 
@@ -779,9 +741,9 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
      *        AutoMLJobObjective</a>.</p> <note>
      *        <p>
-     *        For tabular problem types, you must either provide the <code>AutoMLJobObjective</code> and indicate the
-     *        type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
-     *        <code>TabularJobConfig.ProblemType</code>), or none.
+     *        For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate
+     *        the type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
+     *        <code>TabularJobConfig.ProblemType</code>), or none at all.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
