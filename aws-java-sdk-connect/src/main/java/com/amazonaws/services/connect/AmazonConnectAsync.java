@@ -509,6 +509,22 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * operation.
      * </p>
      * </important>
+     * <p>
+     * If you plan to claim and release numbers frequently during a 30 day period, contact us for a service quota
+     * exception. Otherwise, it is possible you will be blocked from claiming and releasing any more numbers until 30
+     * days past the oldest number released has expired.
+     * </p>
+     * <p>
+     * By default you can claim and release up to 200% of your maximum number of active phone numbers during any 30 day
+     * period. If you claim and release phone numbers using the UI or API during a rolling 30 day cycle that exceeds
+     * 200% of your phone number service level quota, you will be blocked from claiming any more numbers until 30 days
+     * past the oldest number released has expired.
+     * </p>
+     * <p>
+     * For example, if you already have 99 claimed numbers and a service level quota of 99 phone numbers, and in any 30
+     * day period you release 99, claim 99, and then release 99, you will have exceeded the 200% limit. At that point
+     * you are blocked from claiming any more numbers until you open an Amazon Web Services support ticket.
+     * </p>
      * 
      * @param claimPhoneNumberRequest
      * @return A Java Future containing the result of the ClaimPhoneNumber operation returned by the service.
@@ -542,6 +558,22 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * operation.
      * </p>
      * </important>
+     * <p>
+     * If you plan to claim and release numbers frequently during a 30 day period, contact us for a service quota
+     * exception. Otherwise, it is possible you will be blocked from claiming and releasing any more numbers until 30
+     * days past the oldest number released has expired.
+     * </p>
+     * <p>
+     * By default you can claim and release up to 200% of your maximum number of active phone numbers during any 30 day
+     * period. If you claim and release phone numbers using the UI or API during a rolling 30 day cycle that exceeds
+     * 200% of your phone number service level quota, you will be blocked from claiming any more numbers until 30 days
+     * past the oldest number released has expired.
+     * </p>
+     * <p>
+     * For example, if you already have 99 claimed numbers and a service level quota of 99 phone numbers, and in any 30
+     * day period you release 99, claim 99, and then release 99, you will have exceeded the 200% limit. At that point
+     * you are blocked from claiming any more numbers until you open an Amazon Web Services support ticket.
+     * </p>
      * 
      * @param claimPhoneNumberRequest
      * @param asyncHandler
@@ -4930,6 +4962,22 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Services Support.
      * </p>
      * </important>
+     * <p>
+     * If you plan to claim and release numbers frequently during a 30 day period, contact us for a service quota
+     * exception. Otherwise, it is possible you will be blocked from claiming and releasing any more numbers until 30
+     * days past the oldest number released has expired.
+     * </p>
+     * <p>
+     * By default you can claim and release up to 200% of your maximum number of active phone numbers during any 30 day
+     * period. If you claim and release phone numbers using the UI or API during a rolling 30 day cycle that exceeds
+     * 200% of your phone number service level quota, you will be blocked from claiming any more numbers until 30 days
+     * past the oldest number released has expired.
+     * </p>
+     * <p>
+     * For example, if you already have 99 claimed numbers and a service level quota of 99 phone numbers, and in any 30
+     * day period you release 99, claim 99, and then release 99, you will have exceeded the 200% limit. At that point
+     * you are blocked from claiming any more numbers until you open an Amazon Web Services support ticket.
+     * </p>
      * 
      * @param releasePhoneNumberRequest
      * @return A Java Future containing the result of the ReleasePhoneNumber operation returned by the service.
@@ -4955,6 +5003,22 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Services Support.
      * </p>
      * </important>
+     * <p>
+     * If you plan to claim and release numbers frequently during a 30 day period, contact us for a service quota
+     * exception. Otherwise, it is possible you will be blocked from claiming and releasing any more numbers until 30
+     * days past the oldest number released has expired.
+     * </p>
+     * <p>
+     * By default you can claim and release up to 200% of your maximum number of active phone numbers during any 30 day
+     * period. If you claim and release phone numbers using the UI or API during a rolling 30 day cycle that exceeds
+     * 200% of your phone number service level quota, you will be blocked from claiming any more numbers until 30 days
+     * past the oldest number released has expired.
+     * </p>
+     * <p>
+     * For example, if you already have 99 claimed numbers and a service level quota of 99 phone numbers, and in any 30
+     * day period you release 99, claim 99, and then release 99, you will have exceeded the 200% limit. At that point
+     * you are blocked from claiming any more numbers until you open an Amazon Web Services support ticket.
+     * </p>
      * 
      * @param releasePhoneNumberRequest
      * @param asyncHandler
@@ -5215,6 +5279,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<SearchQuickConnectsResult> searchQuickConnectsAsync(SearchQuickConnectsRequest searchQuickConnectsRequest,
             com.amazonaws.handlers.AsyncHandler<SearchQuickConnectsRequest, SearchQuickConnectsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches tags used in an Amazon Connect instance using optional search criteria.
+     * </p>
+     * 
+     * @param searchResourceTagsRequest
+     * @return A Java Future containing the result of the SearchResourceTags operation returned by the service.
+     * @sample AmazonConnectAsync.SearchResourceTags
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchResourceTags" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchResourceTagsResult> searchResourceTagsAsync(SearchResourceTagsRequest searchResourceTagsRequest);
+
+    /**
+     * <p>
+     * Searches tags used in an Amazon Connect instance using optional search criteria.
+     * </p>
+     * 
+     * @param searchResourceTagsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchResourceTags operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchResourceTags
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchResourceTags" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchResourceTagsResult> searchResourceTagsAsync(SearchResourceTagsRequest searchResourceTagsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchResourceTagsRequest, SearchResourceTagsResult> asyncHandler);
 
     /**
      * <p>

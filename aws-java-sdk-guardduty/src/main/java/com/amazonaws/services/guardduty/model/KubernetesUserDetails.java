@@ -46,6 +46,12 @@ public class KubernetesUserDetails implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.List<String> groups;
+    /**
+     * <p>
+     * Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * </p>
+     */
+    private java.util.List<String> sessionName;
 
     /**
      * <p>
@@ -198,6 +204,76 @@ public class KubernetesUserDetails implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * </p>
+     * 
+     * @return Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     */
+
+    public java.util.List<String> getSessionName() {
+        return sessionName;
+    }
+
+    /**
+     * <p>
+     * Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * </p>
+     * 
+     * @param sessionName
+     *        Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     */
+
+    public void setSessionName(java.util.Collection<String> sessionName) {
+        if (sessionName == null) {
+            this.sessionName = null;
+            return;
+        }
+
+        this.sessionName = new java.util.ArrayList<String>(sessionName);
+    }
+
+    /**
+     * <p>
+     * Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSessionName(java.util.Collection)} or {@link #withSessionName(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param sessionName
+     *        Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KubernetesUserDetails withSessionName(String... sessionName) {
+        if (this.sessionName == null) {
+            setSessionName(new java.util.ArrayList<String>(sessionName.length));
+        }
+        for (String ele : sessionName) {
+            this.sessionName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * </p>
+     * 
+     * @param sessionName
+     *        Entity that assumes the IAM role when Kubernetes RBAC permissions are assigned to that role.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KubernetesUserDetails withSessionName(java.util.Collection<String> sessionName) {
+        setSessionName(sessionName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -214,7 +290,9 @@ public class KubernetesUserDetails implements Serializable, Cloneable, Structure
         if (getUid() != null)
             sb.append("Uid: ").append(getUid()).append(",");
         if (getGroups() != null)
-            sb.append("Groups: ").append(getGroups());
+            sb.append("Groups: ").append(getGroups()).append(",");
+        if (getSessionName() != null)
+            sb.append("SessionName: ").append(getSessionName());
         sb.append("}");
         return sb.toString();
     }
@@ -241,6 +319,10 @@ public class KubernetesUserDetails implements Serializable, Cloneable, Structure
             return false;
         if (other.getGroups() != null && other.getGroups().equals(this.getGroups()) == false)
             return false;
+        if (other.getSessionName() == null ^ this.getSessionName() == null)
+            return false;
+        if (other.getSessionName() != null && other.getSessionName().equals(this.getSessionName()) == false)
+            return false;
         return true;
     }
 
@@ -252,6 +334,7 @@ public class KubernetesUserDetails implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getUsername() == null) ? 0 : getUsername().hashCode());
         hashCode = prime * hashCode + ((getUid() == null) ? 0 : getUid().hashCode());
         hashCode = prime * hashCode + ((getGroups() == null) ? 0 : getGroups().hashCode());
+        hashCode = prime * hashCode + ((getSessionName() == null) ? 0 : getSessionName().hashCode());
         return hashCode;
     }
 

@@ -708,6 +708,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SearchResourceTagsResult searchResourceTags(SearchResourceTagsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchRoutingProfilesResult searchRoutingProfiles(SearchRoutingProfilesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

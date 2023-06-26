@@ -635,8 +635,9 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * Attaches the specified managed policy to the specified IAM group.
      * </p>
      * <p>
-     * You use this operation to attach a managed policy to a group. To embed an inline policy in a group, use
-     * <a>PutGroupPolicy</a>.
+     * You use this operation to attach a managed policy to a group. To embed an inline policy in a group, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutGroupPolicy.html"> <code>PutGroupPolicy</code>
+     * </a>.
      * </p>
      * <p>
      * As a best practice, you can validate your IAM policies. To learn more, see <a
@@ -721,12 +722,16 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * <note>
      * <p>
      * You cannot use a managed policy as the role's trust policy. The role's trust policy is created at the same time
-     * as the role, using <a>CreateRole</a>. You can update a role's trust policy using <a>UpdateAssumeRolePolicy</a>.
+     * as the role, using <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">
+     * <code>CreateRole</code> </a>. You can update a role's trust policy using <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAssumeRolePolicy.html">
+     * <code>UpdateAssumerolePolicy</code> </a>.
      * </p>
      * </note>
      * <p>
-     * Use this operation to attach a <i>managed</i> policy to a role. To embed an inline policy in a role, use
-     * <a>PutRolePolicy</a>. For more information about policies, see <a
+     * Use this operation to attach a <i>managed</i> policy to a role. To embed an inline policy in a role, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutRolePolicy.html"> <code>PutRolePolicy</code>
+     * </a>. For more information about policies, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed policies and
      * inline policies</a> in the <i>IAM User Guide</i>.
      * </p>
@@ -810,8 +815,9 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * Attaches the specified managed policy to the specified user.
      * </p>
      * <p>
-     * You use this operation to attach a <i>managed</i> policy to a user. To embed an inline policy in a user, use
-     * <a>PutUserPolicy</a>.
+     * You use this operation to attach a <i>managed</i> policy to a user. To embed an inline policy in a user, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutUserPolicy.html"> <code>PutUserPolicy</code>
+     * </a>.
      * </p>
      * <p>
      * As a best practice, you can validate your IAM policies. To learn more, see <a
@@ -5454,6 +5460,66 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
 
     /**
      * <p>
+     * Retrieves information about an MFA device for a specified user.
+     * </p>
+     * 
+     * @param getMFADeviceRequest
+     * @return Result of the GetMFADevice operation returned by the service.
+     * @throws NoSuchEntityException
+     *         The request was rejected because it referenced a resource entity that does not exist. The error message
+     *         describes the resource.
+     * @throws ServiceFailureException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @sample AmazonIdentityManagement.GetMFADevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/GetMFADevice" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetMFADeviceResult getMFADevice(GetMFADeviceRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMFADevice(request);
+    }
+
+    @SdkInternalApi
+    final GetMFADeviceResult executeGetMFADevice(GetMFADeviceRequest getMFADeviceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMFADeviceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMFADeviceRequest> request = null;
+        Response<GetMFADeviceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMFADeviceRequestMarshaller().marshall(super.beforeMarshalling(getMFADeviceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IAM");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMFADevice");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetMFADeviceResult> responseHandler = new StaxResponseHandler<GetMFADeviceResult>(new GetMFADeviceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns information about the specified OpenID Connect (OIDC) provider resource object in IAM.
      * </p>
      * 
@@ -9043,10 +9109,13 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * Adds or updates an inline policy document that is embedded in the specified IAM group.
      * </p>
      * <p>
-     * A user can also have managed policies attached to it. To attach a managed policy to a group, use
-     * <a>AttachGroupPolicy</a>. To create a new managed policy, use <a>CreatePolicy</a>. For information about
-     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed
-     * policies and inline policies</a> in the <i>IAM User Guide</i>.
+     * A user can also have managed policies attached to it. To attach a managed policy to a group, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachGroupPolicy.html">
+     * <code>AttachGroupPolicy</code> </a>. To create a new managed policy, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html"> <code>CreatePolicy</code> </a>.
+     * For information about policies, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed policies and
+     * inline policies</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * For information about the maximum number of inline policies that you can embed in a group, see <a
@@ -9215,16 +9284,22 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * </p>
      * <p>
      * When you embed an inline policy in a role, the inline policy is used as part of the role's access (permissions)
-     * policy. The role's trust policy is created at the same time as the role, using <a>CreateRole</a>. You can update
-     * a role's trust policy using <a>UpdateAssumeRolePolicy</a>. For more information about IAM roles, see <a
+     * policy. The role's trust policy is created at the same time as the role, using <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html"> <code>CreateRole</code> </a>. You
+     * can update a role's trust policy using <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAssumeRolePolicy.html">
+     * <code>UpdateAssumerolePolicy</code> </a>. For more information about IAM roles, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using roles to delegate permissions
      * and federate identities</a>.
      * </p>
      * <p>
-     * A role can also have a managed policy attached to it. To attach a managed policy to a role, use
-     * <a>AttachRolePolicy</a>. To create a new managed policy, use <a>CreatePolicy</a>. For information about policies,
-     * see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed policies
-     * and inline policies</a> in the <i>IAM User Guide</i>.
+     * A role can also have a managed policy attached to it. To attach a managed policy to a role, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachRolePolicy.html">
+     * <code>AttachRolePolicy</code> </a>. To create a new managed policy, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html"> <code>CreatePolicy</code> </a>.
+     * For information about policies, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed policies and
+     * inline policies</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * For information about the maximum number of inline policies that you can embed with a role, see <a
@@ -9388,10 +9463,13 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      * Adds or updates an inline policy document that is embedded in the specified IAM user.
      * </p>
      * <p>
-     * An IAM user can also have a managed policy attached to it. To attach a managed policy to a user, use
-     * <a>AttachUserPolicy</a>. To create a new managed policy, use <a>CreatePolicy</a>. For information about policies,
-     * see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed policies
-     * and inline policies</a> in the <i>IAM User Guide</i>.
+     * An IAM user can also have a managed policy attached to it. To attach a managed policy to a user, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachUserPolicy.html">
+     * <code>AttachUserPolicy</code> </a>. To create a new managed policy, use <a
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html"> <code>CreatePolicy</code> </a>.
+     * For information about policies, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed policies and
+     * inline policies</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * For information about the maximum number of inline policies that you can embed in a user, see <a
