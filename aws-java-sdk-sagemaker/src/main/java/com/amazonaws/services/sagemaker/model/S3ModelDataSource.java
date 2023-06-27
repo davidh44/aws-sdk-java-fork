@@ -44,7 +44,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * identified by <code>S3Uri</code> always ends with a forward slash (/).
      * </p>
      * <p>
-     * If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     * If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to deploy.
      * </p>
      */
     private String s3DataType;
@@ -123,8 +123,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model consists
      * of two S3 objects <code>s3://mybucket/model/weights</code> and <code>s3://mybucket/model/weights/part1</code> and
      * you specify <code>s3://mybucket/model/</code> as the value of <code>S3Uri</code> and <code>S3Prefix</code> as the
-     * value of S3DataType, then it will result in name clash between <code>/opt/ml/model/weights</code> (a regular
-     * file) and <code>/opt/ml/model/weights/</code> (a directory).
+     * value of <code>S3DataType</code>, then it will result in name clash between <code>/opt/ml/model/weights</code> (a
+     * regular file) and <code>/opt/ml/model/weights/</code> (a directory).
      * </p>
      * </li>
      * <li>
@@ -190,7 +190,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * identified by <code>S3Uri</code> always ends with a forward slash (/).
      * </p>
      * <p>
-     * If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     * If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to deploy.
      * </p>
      * 
      * @param s3DataType
@@ -201,7 +201,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *        prefix identified by <code>S3Uri</code> always ends with a forward slash (/).
      *        </p>
      *        <p>
-     *        If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     *        If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to
+     *        deploy.
      * @see S3ModelDataType
      */
 
@@ -219,7 +220,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * identified by <code>S3Uri</code> always ends with a forward slash (/).
      * </p>
      * <p>
-     * If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     * If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to deploy.
      * </p>
      * 
      * @return Specifies the type of ML model data to deploy.</p>
@@ -229,7 +230,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *         prefix identified by <code>S3Uri</code> always ends with a forward slash (/).
      *         </p>
      *         <p>
-     *         If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     *         If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to
+     *         deploy.
      * @see S3ModelDataType
      */
 
@@ -247,7 +249,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * identified by <code>S3Uri</code> always ends with a forward slash (/).
      * </p>
      * <p>
-     * If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     * If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to deploy.
      * </p>
      * 
      * @param s3DataType
@@ -258,7 +260,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *        prefix identified by <code>S3Uri</code> always ends with a forward slash (/).
      *        </p>
      *        <p>
-     *        If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     *        If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to
+     *        deploy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ModelDataType
      */
@@ -278,7 +281,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * identified by <code>S3Uri</code> always ends with a forward slash (/).
      * </p>
      * <p>
-     * If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     * If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to deploy.
      * </p>
      * 
      * @param s3DataType
@@ -289,7 +292,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *        prefix identified by <code>S3Uri</code> always ends with a forward slash (/).
      *        </p>
      *        <p>
-     *        If you choose S3Object, S3Uri identifies an object that is the ML model data to deploy.
+     *        If you choose <code>S3Object</code>, <code>S3Uri</code> identifies an object that is the ML model data to
+     *        deploy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ModelDataType
      */
@@ -374,8 +378,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model consists
      * of two S3 objects <code>s3://mybucket/model/weights</code> and <code>s3://mybucket/model/weights/part1</code> and
      * you specify <code>s3://mybucket/model/</code> as the value of <code>S3Uri</code> and <code>S3Prefix</code> as the
-     * value of S3DataType, then it will result in name clash between <code>/opt/ml/model/weights</code> (a regular
-     * file) and <code>/opt/ml/model/weights/</code> (a directory).
+     * value of <code>S3DataType</code>, then it will result in name clash between <code>/opt/ml/model/weights</code> (a
+     * regular file) and <code>/opt/ml/model/weights/</code> (a directory).
      * </p>
      * </li>
      * <li>
@@ -463,8 +467,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *        Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model
      *        consists of two S3 objects <code>s3://mybucket/model/weights</code> and
      *        <code>s3://mybucket/model/weights/part1</code> and you specify <code>s3://mybucket/model/</code> as the
-     *        value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of S3DataType, then it will result in
-     *        name clash between <code>/opt/ml/model/weights</code> (a regular file) and
+     *        value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of <code>S3DataType</code>, then it
+     *        will result in name clash between <code>/opt/ml/model/weights</code> (a regular file) and
      *        <code>/opt/ml/model/weights/</code> (a directory).
      *        </p>
      *        </li>
@@ -559,8 +563,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model consists
      * of two S3 objects <code>s3://mybucket/model/weights</code> and <code>s3://mybucket/model/weights/part1</code> and
      * you specify <code>s3://mybucket/model/</code> as the value of <code>S3Uri</code> and <code>S3Prefix</code> as the
-     * value of S3DataType, then it will result in name clash between <code>/opt/ml/model/weights</code> (a regular
-     * file) and <code>/opt/ml/model/weights/</code> (a directory).
+     * value of <code>S3DataType</code>, then it will result in name clash between <code>/opt/ml/model/weights</code> (a
+     * regular file) and <code>/opt/ml/model/weights/</code> (a directory).
      * </p>
      * </li>
      * <li>
@@ -646,8 +650,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *         Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model
      *         consists of two S3 objects <code>s3://mybucket/model/weights</code> and
      *         <code>s3://mybucket/model/weights/part1</code> and you specify <code>s3://mybucket/model/</code> as the
-     *         value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of S3DataType, then it will result in
-     *         name clash between <code>/opt/ml/model/weights</code> (a regular file) and
+     *         value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of <code>S3DataType</code>, then it
+     *         will result in name clash between <code>/opt/ml/model/weights</code> (a regular file) and
      *         <code>/opt/ml/model/weights/</code> (a directory).
      *         </p>
      *         </li>
@@ -742,8 +746,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model consists
      * of two S3 objects <code>s3://mybucket/model/weights</code> and <code>s3://mybucket/model/weights/part1</code> and
      * you specify <code>s3://mybucket/model/</code> as the value of <code>S3Uri</code> and <code>S3Prefix</code> as the
-     * value of S3DataType, then it will result in name clash between <code>/opt/ml/model/weights</code> (a regular
-     * file) and <code>/opt/ml/model/weights/</code> (a directory).
+     * value of <code>S3DataType</code>, then it will result in name clash between <code>/opt/ml/model/weights</code> (a
+     * regular file) and <code>/opt/ml/model/weights/</code> (a directory).
      * </p>
      * </li>
      * <li>
@@ -831,8 +835,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *        Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model
      *        consists of two S3 objects <code>s3://mybucket/model/weights</code> and
      *        <code>s3://mybucket/model/weights/part1</code> and you specify <code>s3://mybucket/model/</code> as the
-     *        value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of S3DataType, then it will result in
-     *        name clash between <code>/opt/ml/model/weights</code> (a regular file) and
+     *        value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of <code>S3DataType</code>, then it
+     *        will result in name clash between <code>/opt/ml/model/weights</code> (a regular file) and
      *        <code>/opt/ml/model/weights/</code> (a directory).
      *        </p>
      *        </li>
@@ -929,8 +933,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model consists
      * of two S3 objects <code>s3://mybucket/model/weights</code> and <code>s3://mybucket/model/weights/part1</code> and
      * you specify <code>s3://mybucket/model/</code> as the value of <code>S3Uri</code> and <code>S3Prefix</code> as the
-     * value of S3DataType, then it will result in name clash between <code>/opt/ml/model/weights</code> (a regular
-     * file) and <code>/opt/ml/model/weights/</code> (a directory).
+     * value of <code>S3DataType</code>, then it will result in name clash between <code>/opt/ml/model/weights</code> (a
+     * regular file) and <code>/opt/ml/model/weights/</code> (a directory).
      * </p>
      * </li>
      * <li>
@@ -1018,8 +1022,8 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      *        Ambiguous file names will result in model deployment failure. For example, if your uncompressed ML model
      *        consists of two S3 objects <code>s3://mybucket/model/weights</code> and
      *        <code>s3://mybucket/model/weights/part1</code> and you specify <code>s3://mybucket/model/</code> as the
-     *        value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of S3DataType, then it will result in
-     *        name clash between <code>/opt/ml/model/weights</code> (a regular file) and
+     *        value of <code>S3Uri</code> and <code>S3Prefix</code> as the value of <code>S3DataType</code>, then it
+     *        will result in name clash between <code>/opt/ml/model/weights</code> (a regular file) and
      *        <code>/opt/ml/model/weights/</code> (a directory).
      *        </p>
      *        </li>

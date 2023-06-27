@@ -296,7 +296,7 @@ import com.amazonaws.services.ivs.model.*;
  * </li>
  * </ul>
  * <p>
- * <b>PlaybackKeyPair Endpoints</b>
+ * <b>Private Channel Endpoints</b>
  * </p>
  * <p>
  * For more information, see <a href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html">Setting Up
@@ -326,6 +326,19 @@ import com.amazonaws.services.ivs.model.*;
  * <p>
  * <a>DeletePlaybackKeyPair</a> — Deletes a specified authorization key pair. This invalidates future viewer tokens
  * generated using the key pair’s <code>privateKey</code>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>StartViewerSessionRevocation</a> — Starts the process of revoking the viewer session associated with a specified
+ * channel ARN and viewer ID. Optionally, you can provide a version to revoke viewer sessions less than and including
+ * that version.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a>BatchStartViewerSessionRevocation</a> — Performs <a>StartViewerSessionRevocation</a> on multiple channel ARN and
+ * viewer ID pairs simultaneously.
  * </p>
  * </li>
  * </ul>
@@ -412,6 +425,20 @@ public interface AmazonIVS {
      *      Documentation</a>
      */
     BatchGetStreamKeyResult batchGetStreamKey(BatchGetStreamKeyRequest batchGetStreamKeyRequest);
+
+    /**
+     * <p>
+     * Performs <a>StartViewerSessionRevocation</a> on multiple channel ARN and viewer ID pairs simultaneously.
+     * </p>
+     * 
+     * @param batchStartViewerSessionRevocationRequest
+     * @return Result of the BatchStartViewerSessionRevocation operation returned by the service.
+     * @throws ValidationException
+     * @sample AmazonIVS.BatchStartViewerSessionRevocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/BatchStartViewerSessionRevocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchStartViewerSessionRevocationResult batchStartViewerSessionRevocation(BatchStartViewerSessionRevocationRequest batchStartViewerSessionRevocationRequest);
 
     /**
      * <p>
@@ -832,6 +859,26 @@ public interface AmazonIVS {
      *      Documentation</a>
      */
     PutMetadataResult putMetadata(PutMetadataRequest putMetadataRequest);
+
+    /**
+     * <p>
+     * Starts the process of revoking the viewer session associated with a specified channel ARN and viewer ID.
+     * Optionally, you can provide a version to revoke viewer sessions less than and including that version. For
+     * instructions on associating a viewer ID with a viewer session, see <a
+     * href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html">Setting Up Private Channels</a>.
+     * </p>
+     * 
+     * @param startViewerSessionRevocationRequest
+     * @return Result of the StartViewerSessionRevocation operation returned by the service.
+     * @throws InternalServerException
+     * @throws AccessDeniedException
+     * @throws ValidationException
+     * @throws ThrottlingException
+     * @sample AmazonIVS.StartViewerSessionRevocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/StartViewerSessionRevocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartViewerSessionRevocationResult startViewerSessionRevocation(StartViewerSessionRevocationRequest startViewerSessionRevocationRequest);
 
     /**
      * <p>

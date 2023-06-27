@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an application. EMR Serverless uses applications to run jobs.
+ * Information about an application. Amazon EMR Serverless uses applications to run jobs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/Application" target="_top">AWS API
@@ -48,7 +48,7 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      */
     private String releaseLabel;
@@ -261,11 +261,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      * 
      * @param releaseLabel
-     *        The EMR release associated with the application.
+     *        The Amazon EMR release associated with the application.
      */
 
     public void setReleaseLabel(String releaseLabel) {
@@ -274,10 +274,10 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      * 
-     * @return The EMR release associated with the application.
+     * @return The Amazon EMR release associated with the application.
      */
 
     public String getReleaseLabel() {
@@ -286,11 +286,11 @@ public class Application implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      * 
      * @param releaseLabel
-     *        The EMR release associated with the application.
+     *        The Amazon EMR release associated with the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

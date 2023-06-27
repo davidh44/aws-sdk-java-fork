@@ -33,7 +33,7 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      */
     private String releaseLabel;
@@ -153,11 +153,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      * 
      * @param releaseLabel
-     *        The EMR release associated with the application.
+     *        The Amazon EMR release associated with the application.
      */
 
     public void setReleaseLabel(String releaseLabel) {
@@ -166,10 +166,10 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      * 
-     * @return The EMR release associated with the application.
+     * @return The Amazon EMR release associated with the application.
      */
 
     public String getReleaseLabel() {
@@ -178,11 +178,11 @@ public class CreateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The EMR release associated with the application.
+     * The Amazon EMR release associated with the application.
      * </p>
      * 
      * @param releaseLabel
-     *        The EMR release associated with the application.
+     *        The Amazon EMR release associated with the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

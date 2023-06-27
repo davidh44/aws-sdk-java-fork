@@ -373,6 +373,85 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * An asynchronous API that deletes a stream’s existing edge configuration, as well as the corresponding media from
+     * the Edge Agent.
+     * </p>
+     * <p>
+     * When you invoke this API, the sync status is set to <code>DELETING</code>. A deletion process starts, in which
+     * active edge jobs are stopped and all media is deleted from the edge device. The time to delete varies, depending
+     * on the total amount of stored media. If the deletion process fails, the sync status changes to
+     * <code>DELETE_FAILED</code>. You will need to re-try the deletion.
+     * </p>
+     * <p>
+     * When the deletion process has completed successfully, the edge configuration is no longer accessible.
+     * </p>
+     * 
+     * @param deleteEdgeConfigurationRequest
+     * @return Result of the DeleteEdgeConfiguration operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have required permissions to perform this operation.
+     * @throws ClientLimitExceededException
+     *         Kinesis Video Streams has throttled the request because you have exceeded the limit of allowed client
+     *         calls. Try making the call later.
+     * @throws InvalidArgumentException
+     *         The value for this input parameter is invalid.
+     * @throws ResourceNotFoundException
+     *         Amazon Kinesis Video Streams can't find the stream that you specified.
+     * @throws StreamEdgeConfigurationNotFoundException
+     *         The Exception rendered when the Amazon Kinesis Video Stream can't find a stream's edge configuration that
+     *         you specified.
+     * @sample AmazonKinesisVideo.DeleteEdgeConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DeleteEdgeConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteEdgeConfigurationResult deleteEdgeConfiguration(DeleteEdgeConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteEdgeConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteEdgeConfigurationResult executeDeleteEdgeConfiguration(DeleteEdgeConfigurationRequest deleteEdgeConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteEdgeConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteEdgeConfigurationRequest> request = null;
+        Response<DeleteEdgeConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteEdgeConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteEdgeConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kinesis Video");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteEdgeConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteEdgeConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteEdgeConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a specified signaling channel. <code>DeleteSignalingChannel</code> is an asynchronous operation. If you
      * don't specify the channel's current version, the most recent version is deleted.
      * </p>
@@ -574,8 +653,10 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Describes a stream’s edge configuration that was set using the <code>StartEdgeConfigurationUpdate</code> API. Use
-     * this API to get the status of the configuration if the configuration is in sync with the Edge Agent.
+     * Describes a stream’s edge configuration that was set using the <code>StartEdgeConfigurationUpdate</code> API and
+     * the latest status of the edge agent's recorder and uploader jobs. Use this API to get the status of the
+     * configuration to determine if the configuration is in sync with the Edge Agent. Use this API to evaluate the
+     * health of the Edge Agent.
      * </p>
      * 
      * @param describeEdgeConfigurationRequest
@@ -711,10 +792,6 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
     }
 
     /**
-     * <p>
-     * Returns the most current information about the stream. Either streamName or streamARN should be provided in the
-     * input.
-     * </p>
      * <p>
      * Returns the most current information about the stream. The <code>streamName</code> or <code>streamARN</code>
      * should be provided in the input.
@@ -1217,6 +1294,73 @@ public class AmazonKinesisVideoClient extends AmazonWebServiceClient implements 
             HttpResponseHandler<AmazonWebServiceResponse<GetSignalingChannelEndpointResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetSignalingChannelEndpointResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns an array of edge configurations associated with the specified Edge Agent.
+     * </p>
+     * <p>
+     * In the request, you must specify the Edge Agent <code>HubDeviceArn</code>.
+     * </p>
+     * 
+     * @param listEdgeAgentConfigurationsRequest
+     * @return Result of the ListEdgeAgentConfigurations operation returned by the service.
+     * @throws NotAuthorizedException
+     *         The caller is not authorized to perform this operation.
+     * @throws ClientLimitExceededException
+     *         Kinesis Video Streams has throttled the request because you have exceeded the limit of allowed client
+     *         calls. Try making the call later.
+     * @throws InvalidArgumentException
+     *         The value for this input parameter is invalid.
+     * @sample AmazonKinesisVideo.ListEdgeAgentConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/ListEdgeAgentConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListEdgeAgentConfigurationsResult listEdgeAgentConfigurations(ListEdgeAgentConfigurationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListEdgeAgentConfigurations(request);
+    }
+
+    @SdkInternalApi
+    final ListEdgeAgentConfigurationsResult executeListEdgeAgentConfigurations(ListEdgeAgentConfigurationsRequest listEdgeAgentConfigurationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listEdgeAgentConfigurationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListEdgeAgentConfigurationsRequest> request = null;
+        Response<ListEdgeAgentConfigurationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListEdgeAgentConfigurationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listEdgeAgentConfigurationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kinesis Video");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListEdgeAgentConfigurations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListEdgeAgentConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListEdgeAgentConfigurationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

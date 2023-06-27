@@ -44,6 +44,14 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private java.util.List<String> featureNames;
+    /**
+     * <p>
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
+     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>BatchGetRecord</code> will return null.
+     * </p>
+     */
+    private String expirationTimeResponse;
 
     /**
      * <p>
@@ -206,6 +214,81 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
+     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>BatchGetRecord</code> will return null.
+     * </p>
+     * 
+     * @param expirationTimeResponse
+     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
+     *        <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
+     *        <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     * @see ExpirationTimeResponse
+     */
+
+    public void setExpirationTimeResponse(String expirationTimeResponse) {
+        this.expirationTimeResponse = expirationTimeResponse;
+    }
+
+    /**
+     * <p>
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
+     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>BatchGetRecord</code> will return null.
+     * </p>
+     * 
+     * @return Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
+     *         <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
+     *         <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     * @see ExpirationTimeResponse
+     */
+
+    public String getExpirationTimeResponse() {
+        return this.expirationTimeResponse;
+    }
+
+    /**
+     * <p>
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
+     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>BatchGetRecord</code> will return null.
+     * </p>
+     * 
+     * @param expirationTimeResponse
+     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
+     *        <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
+     *        <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExpirationTimeResponse
+     */
+
+    public GetRecordRequest withExpirationTimeResponse(String expirationTimeResponse) {
+        setExpirationTimeResponse(expirationTimeResponse);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>, <code>BatchGetRecord</code>
+     * will return the value of <code>ExpiresAt</code>, if it is not null. If <code>Disabled</code> and null,
+     * <code>BatchGetRecord</code> will return null.
+     * </p>
+     * 
+     * @param expirationTimeResponse
+     *        Parameter to request <code>ExpiresAt</code> in response. If <code>Enabled</code>,
+     *        <code>BatchGetRecord</code> will return the value of <code>ExpiresAt</code>, if it is not null. If
+     *        <code>Disabled</code> and null, <code>BatchGetRecord</code> will return null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExpirationTimeResponse
+     */
+
+    public GetRecordRequest withExpirationTimeResponse(ExpirationTimeResponse expirationTimeResponse) {
+        this.expirationTimeResponse = expirationTimeResponse.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -222,7 +305,9 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getRecordIdentifierValueAsString() != null)
             sb.append("RecordIdentifierValueAsString: ").append(getRecordIdentifierValueAsString()).append(",");
         if (getFeatureNames() != null)
-            sb.append("FeatureNames: ").append(getFeatureNames());
+            sb.append("FeatureNames: ").append(getFeatureNames()).append(",");
+        if (getExpirationTimeResponse() != null)
+            sb.append("ExpirationTimeResponse: ").append(getExpirationTimeResponse());
         sb.append("}");
         return sb.toString();
     }
@@ -250,6 +335,10 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getFeatureNames() != null && other.getFeatureNames().equals(this.getFeatureNames()) == false)
             return false;
+        if (other.getExpirationTimeResponse() == null ^ this.getExpirationTimeResponse() == null)
+            return false;
+        if (other.getExpirationTimeResponse() != null && other.getExpirationTimeResponse().equals(this.getExpirationTimeResponse()) == false)
+            return false;
         return true;
     }
 
@@ -261,6 +350,7 @@ public class GetRecordRequest extends com.amazonaws.AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getFeatureGroupName() == null) ? 0 : getFeatureGroupName().hashCode());
         hashCode = prime * hashCode + ((getRecordIdentifierValueAsString() == null) ? 0 : getRecordIdentifierValueAsString().hashCode());
         hashCode = prime * hashCode + ((getFeatureNames() == null) ? 0 : getFeatureNames().hashCode());
+        hashCode = prime * hashCode + ((getExpirationTimeResponse() == null) ? 0 : getExpirationTimeResponse().hashCode());
         return hashCode;
     }
 

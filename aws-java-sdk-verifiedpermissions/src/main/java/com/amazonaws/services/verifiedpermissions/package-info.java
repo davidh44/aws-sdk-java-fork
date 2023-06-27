@@ -31,8 +31,8 @@
  * Guide</a>.
  * </p>
  * <p>
- * For more information about the Cedar policy language, see the <a href="docs.cedarpolicy.com">Cedar Policy Language
- * Guide</a>.
+ * For more information about the Cedar policy language, see the <a href="https://docs.cedarpolicy.com/">Cedar Policy
+ * Language Guide</a>.
  * </p>
  * <important>
  * <p>

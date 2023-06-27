@@ -46,7 +46,7 @@ import com.amazonaws.services.simplesystemsmanagement.waiters.AWSSimpleSystemsMa
  * <li>
  * <p>
  * For information about each of the capabilities that comprise Systems Manager, see <a href=
- * "https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/what-is-systems-manager.html#systems-manager-capabilities"
+ * "https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/systems-manager-capabilities.html"
  * >Systems Manager capabilities</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
  * </li>
@@ -227,10 +227,7 @@ public interface AWSSimpleSystemsManagement {
      * @throws OpsItemNotFoundException
      *         The specified OpsItem ID doesn't exist. Verify the ID and try again.
      * @throws OpsItemLimitExceededException
-     *         The request caused OpsItems to exceed one or more quotas. For information about OpsItem quotas, see <a
-     *         href=
-     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-learn-more.html#OpsCenter-learn-more-limits"
-     *         >What are the resource limits for OpsCenter?</a>.
+     *         The request caused OpsItems to exceed one or more quotas.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
      * @throws OpsItemRelatedItemAlreadyExistsException
@@ -553,8 +550,8 @@ public interface AWSSimpleSystemsManagement {
      * <p>
      * Creates a new OpsItem. You must have permission in Identity and Access Management (IAM) to create a new OpsItem.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting
-     * started with OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setup.html">Set up OpsCenter</a> in
+     * the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
@@ -571,10 +568,7 @@ public interface AWSSimpleSystemsManagement {
      * @throws OpsItemAlreadyExistsException
      *         The OpsItem already exists.
      * @throws OpsItemLimitExceededException
-     *         The request caused OpsItems to exceed one or more quotas. For information about OpsItem quotas, see <a
-     *         href=
-     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-learn-more.html#OpsCenter-learn-more-limits"
-     *         >What are the resource limits for OpsCenter?</a>.
+     *         The request caused OpsItems to exceed one or more quotas.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
      * @throws OpsItemAccessDeniedException
@@ -1393,18 +1387,19 @@ public interface AWSSimpleSystemsManagement {
 
     /**
      * <p>
-     * Describes one or more of your managed nodes, including information about the operating system platform, the
-     * version of SSM Agent installed on the managed node, node status, and so on.
+     * Provides information about one or more of your managed nodes, including the operating system platform, SSM Agent
+     * version, association status, and IP address. This operation does not return information for nodes that are either
+     * Stopped or Terminated.
      * </p>
      * <p>
-     * If you specify one or more managed node IDs, it returns information for those managed nodes. If you don't specify
-     * node IDs, it returns information for all your managed nodes. If you specify a node ID that isn't valid or a node
-     * that you don't own, you receive an error.
+     * If you specify one or more node IDs, the operation returns information for those managed nodes. If you don't
+     * specify node IDs, it returns information for all your managed nodes. If you specify a node ID that isn't valid or
+     * a node that you don't own, you receive an error.
      * </p>
      * <note>
      * <p>
-     * The <code>IamRole</code> field for this API operation is the Identity and Access Management (IAM) role assigned
-     * to on-premises managed nodes. This call doesn't return the IAM role for EC2 instances.
+     * The <code>IamRole</code> field returned for this API operation is the Identity and Access Management (IAM) role
+     * assigned to on-premises managed nodes. This operation does not return the IAM role for EC2 instances.
      * </p>
      * </note>
      * 
@@ -1724,8 +1719,8 @@ public interface AWSSimpleSystemsManagement {
      * <p>
      * Query a set of OpsItems. You must have permission in Identity and Access Management (IAM) to query a list of
      * OpsItems. For more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting
-     * started with OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setup.html">Set up OpsCenter</a> in
+     * the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
@@ -2329,8 +2324,8 @@ public interface AWSSimpleSystemsManagement {
      * <p>
      * Get information about an OpsItem by using the ID. You must have permission in Identity and Access Management
      * (IAM) to view information about an OpsItem. For more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting
-     * started with OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setup.html">Set up OpsCenter</a> in
+     * the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
@@ -2984,10 +2979,7 @@ public interface AWSSimpleSystemsManagement {
      * @throws OpsItemNotFoundException
      *         The specified OpsItem ID doesn't exist. Verify the ID and try again.
      * @throws OpsItemLimitExceededException
-     *         The request caused OpsItems to exceed one or more quotas. For information about OpsItem quotas, see <a
-     *         href=
-     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-learn-more.html#OpsCenter-learn-more-limits"
-     *         >What are the resource limits for OpsCenter?</a>.
+     *         The request caused OpsItems to exceed one or more quotas.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
      * @sample AWSSimpleSystemsManagement.ListOpsItemEvents
@@ -4311,8 +4303,8 @@ public interface AWSSimpleSystemsManagement {
      * <p>
      * Edit or change an OpsItem. You must have permission in Identity and Access Management (IAM) to update an OpsItem.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting
-     * started with OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setup.html">Set up OpsCenter</a> in
+     * the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate,
@@ -4331,10 +4323,7 @@ public interface AWSSimpleSystemsManagement {
      * @throws OpsItemAlreadyExistsException
      *         The OpsItem already exists.
      * @throws OpsItemLimitExceededException
-     *         The request caused OpsItems to exceed one or more quotas. For information about OpsItem quotas, see <a
-     *         href=
-     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-learn-more.html#OpsCenter-learn-more-limits"
-     *         >What are the resource limits for OpsCenter?</a>.
+     *         The request caused OpsItems to exceed one or more quotas.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
      * @throws OpsItemAccessDeniedException

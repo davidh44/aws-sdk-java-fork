@@ -88,6 +88,13 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private java.util.Map<String, WorkerTypeSpecificationInput> workerTypeSpecifications;
+    /**
+     * <p>
+     * The Amazon EMR release label for the application. You can change the release label to use a different release of
+     * Amazon EMR.
+     * </p>
+     */
+    private String releaseLabel;
 
     /**
      * <p>
@@ -593,6 +600,52 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The Amazon EMR release label for the application. You can change the release label to use a different release of
+     * Amazon EMR.
+     * </p>
+     * 
+     * @param releaseLabel
+     *        The Amazon EMR release label for the application. You can change the release label to use a different
+     *        release of Amazon EMR.
+     */
+
+    public void setReleaseLabel(String releaseLabel) {
+        this.releaseLabel = releaseLabel;
+    }
+
+    /**
+     * <p>
+     * The Amazon EMR release label for the application. You can change the release label to use a different release of
+     * Amazon EMR.
+     * </p>
+     * 
+     * @return The Amazon EMR release label for the application. You can change the release label to use a different
+     *         release of Amazon EMR.
+     */
+
+    public String getReleaseLabel() {
+        return this.releaseLabel;
+    }
+
+    /**
+     * <p>
+     * The Amazon EMR release label for the application. You can change the release label to use a different release of
+     * Amazon EMR.
+     * </p>
+     * 
+     * @param releaseLabel
+     *        The Amazon EMR release label for the application. You can change the release label to use a different
+     *        release of Amazon EMR.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateApplicationRequest withReleaseLabel(String releaseLabel) {
+        setReleaseLabel(releaseLabel);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -623,7 +676,9 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getImageConfiguration() != null)
             sb.append("ImageConfiguration: ").append(getImageConfiguration()).append(",");
         if (getWorkerTypeSpecifications() != null)
-            sb.append("WorkerTypeSpecifications: ").append(getWorkerTypeSpecifications());
+            sb.append("WorkerTypeSpecifications: ").append(getWorkerTypeSpecifications()).append(",");
+        if (getReleaseLabel() != null)
+            sb.append("ReleaseLabel: ").append(getReleaseLabel());
         sb.append("}");
         return sb.toString();
     }
@@ -678,6 +733,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getWorkerTypeSpecifications() != null && other.getWorkerTypeSpecifications().equals(this.getWorkerTypeSpecifications()) == false)
             return false;
+        if (other.getReleaseLabel() == null ^ this.getReleaseLabel() == null)
+            return false;
+        if (other.getReleaseLabel() != null && other.getReleaseLabel().equals(this.getReleaseLabel()) == false)
+            return false;
         return true;
     }
 
@@ -696,6 +755,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getArchitecture() == null) ? 0 : getArchitecture().hashCode());
         hashCode = prime * hashCode + ((getImageConfiguration() == null) ? 0 : getImageConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWorkerTypeSpecifications() == null) ? 0 : getWorkerTypeSpecifications().hashCode());
+        hashCode = prime * hashCode + ((getReleaseLabel() == null) ? 0 : getReleaseLabel().hashCode());
         return hashCode;
     }
 

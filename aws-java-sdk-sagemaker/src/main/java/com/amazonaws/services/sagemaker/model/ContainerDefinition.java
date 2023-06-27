@@ -145,7 +145,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform, SageMaker
+     * Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform, SageMaker
      * serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      * </p>
      * </note>
@@ -896,7 +896,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform, SageMaker
+     * Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform, SageMaker
      * serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      * </p>
      * </note>
@@ -904,7 +904,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * @param modelDataSource
      *        Specifies the location of ML model data to deploy.</p> <note>
      *        <p>
-     *        Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform,
+     *        Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform,
      *        SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      *        </p>
      */
@@ -919,14 +919,14 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform, SageMaker
+     * Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform, SageMaker
      * serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      * </p>
      * </note>
      * 
      * @return Specifies the location of ML model data to deploy.</p> <note>
      *         <p>
-     *         Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform,
+     *         Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform,
      *         SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      *         </p>
      */
@@ -941,7 +941,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform, SageMaker
+     * Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform, SageMaker
      * serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      * </p>
      * </note>
@@ -949,7 +949,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * @param modelDataSource
      *        Specifies the location of ML model data to deploy.</p> <note>
      *        <p>
-     *        Currently you cannot use <code>ModelDataSource</code> in conjuction with SageMaker batch transform,
+     *        Currently you cannot use <code>ModelDataSource</code> in conjunction with SageMaker batch transform,
      *        SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

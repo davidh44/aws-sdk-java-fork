@@ -41,8 +41,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a>
-     * type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a> type.
      * </p>
      * <p>
      * Example: <code>{"boolean": true}</code>
@@ -62,7 +61,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
     private EntityIdentifier entityIdentifier;
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a> type.
      * </p>
      * <p>
      * Example: <code>{"long": 0}</code>
@@ -71,7 +70,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
     private Long longValue;
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a> type.
      * </p>
      * <p>
      * Example: <code>{"string": "abc"}</code>
@@ -80,7 +79,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
     private String string;
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.
      * </p>
      * <p>
      * Example: <code>{"set": [ {} ] }</code>
@@ -89,7 +88,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<AttributeValue> set;
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a> type.
      * </p>
      * <p>
      * Example: <code>{"record": { "keyName": {} } }</code>
@@ -99,16 +98,15 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a>
-     * type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a> type.
      * </p>
      * <p>
      * Example: <code>{"boolean": true}</code>
      * </p>
      * 
      * @param booleanValue
-     *        An attribute value of <a
-     *        href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a> type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a>
+     *        type.</p>
      *        <p>
      *        Example: <code>{"boolean": true}</code>
      */
@@ -119,15 +117,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a>
-     * type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a> type.
      * </p>
      * <p>
      * Example: <code>{"boolean": true}</code>
      * </p>
      * 
-     * @return An attribute value of <a
-     *         href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a> type.</p>
+     * @return An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a>
+     *         type.</p>
      *         <p>
      *         Example: <code>{"boolean": true}</code>
      */
@@ -138,16 +135,15 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a>
-     * type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a> type.
      * </p>
      * <p>
      * Example: <code>{"boolean": true}</code>
      * </p>
      * 
      * @param booleanValue
-     *        An attribute value of <a
-     *        href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a> type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a>
+     *        type.</p>
      *        <p>
      *        Example: <code>{"boolean": true}</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -160,15 +156,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a>
-     * type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a> type.
      * </p>
      * <p>
      * Example: <code>{"boolean": true}</code>
      * </p>
      * 
-     * @return An attribute value of <a
-     *         href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-boolean">Boolean</a> type.</p>
+     * @return An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#boolean">Boolean</a>
+     *         type.</p>
      *         <p>
      *         Example: <code>{"boolean": true}</code>
      */
@@ -247,15 +242,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a> type.
      * </p>
      * <p>
      * Example: <code>{"long": 0}</code>
      * </p>
      * 
      * @param longValue
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a>
-     *        type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a> type.</p>
      *        <p>
      *        Example: <code>{"long": 0}</code>
      */
@@ -266,13 +260,13 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a> type.
      * </p>
      * <p>
      * Example: <code>{"long": 0}</code>
      * </p>
      * 
-     * @return An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a>
+     * @return An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a>
      *         type.</p>
      *         <p>
      *         Example: <code>{"long": 0}</code>
@@ -284,15 +278,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a> type.
      * </p>
      * <p>
      * Example: <code>{"long": 0}</code>
      * </p>
      * 
      * @param longValue
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-long">Long</a>
-     *        type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#long">Long</a> type.</p>
      *        <p>
      *        Example: <code>{"long": 0}</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -305,14 +298,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a> type.
      * </p>
      * <p>
      * Example: <code>{"string": "abc"}</code>
      * </p>
      * 
      * @param string
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a>
      *        type.</p>
      *        <p>
      *        Example: <code>{"string": "abc"}</code>
@@ -324,14 +317,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a> type.
      * </p>
      * <p>
      * Example: <code>{"string": "abc"}</code>
      * </p>
      * 
-     * @return An attribute value of <a
-     *         href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a> type.</p>
+     * @return An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a>
+     *         type.</p>
      *         <p>
      *         Example: <code>{"string": "abc"}</code>
      */
@@ -342,14 +335,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a> type.
      * </p>
      * <p>
      * Example: <code>{"string": "abc"}</code>
      * </p>
      * 
      * @param string
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-string">String</a>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#string">String</a>
      *        type.</p>
      *        <p>
      *        Example: <code>{"string": "abc"}</code>
@@ -363,14 +356,13 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.
      * </p>
      * <p>
      * Example: <code>{"set": [ {} ] }</code>
      * </p>
      * 
-     * @return An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a>
-     *         type.</p>
+     * @return An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.</p>
      *         <p>
      *         Example: <code>{"set": [ {} ] }</code>
      */
@@ -381,15 +373,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.
      * </p>
      * <p>
      * Example: <code>{"set": [ {} ] }</code>
      * </p>
      * 
      * @param set
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a>
-     *        type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.</p>
      *        <p>
      *        Example: <code>{"set": [ {} ] }</code>
      */
@@ -405,7 +396,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.
      * </p>
      * <p>
      * Example: <code>{"set": [ {} ] }</code>
@@ -417,8 +408,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param set
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a>
-     *        type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.</p>
      *        <p>
      *        Example: <code>{"set": [ {} ] }</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -436,15 +426,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.
      * </p>
      * <p>
      * Example: <code>{"set": [ {} ] }</code>
      * </p>
      * 
      * @param set
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-set">Set</a>
-     *        type.</p>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#set">Set</a> type.</p>
      *        <p>
      *        Example: <code>{"set": [ {} ] }</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -457,14 +446,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a> type.
      * </p>
      * <p>
      * Example: <code>{"record": { "keyName": {} } }</code>
      * </p>
      * 
-     * @return An attribute value of <a
-     *         href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a> type.</p>
+     * @return An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a>
+     *         type.</p>
      *         <p>
      *         Example: <code>{"record": { "keyName": {} } }</code>
      */
@@ -475,14 +464,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a> type.
      * </p>
      * <p>
      * Example: <code>{"record": { "keyName": {} } }</code>
      * </p>
      * 
      * @param record
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a>
      *        type.</p>
      *        <p>
      *        Example: <code>{"record": { "keyName": {} } }</code>
@@ -494,14 +483,14 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a> type.
+     * An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a> type.
      * </p>
      * <p>
      * Example: <code>{"record": { "keyName": {} } }</code>
      * </p>
      * 
      * @param record
-     *        An attribute value of <a href="docs.cedarpolicy.comcedar-syntax-datatypes.html#datatype-record">Record</a>
+     *        An attribute value of <a href="https://docs.cedarpolicy.com/syntax-datatypes.html#record">Record</a>
      *        type.</p>
      *        <p>
      *        Example: <code>{"record": { "keyName": {} } }</code>

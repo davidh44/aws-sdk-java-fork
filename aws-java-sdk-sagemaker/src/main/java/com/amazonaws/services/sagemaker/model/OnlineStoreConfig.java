@@ -49,6 +49,15 @@ public class OnlineStoreConfig implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private Boolean enableOnlineStore;
+    /**
+     * <p>
+     * Time to live duration, where the record is hard deleted after the expiration time is reached;
+     * <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on HardDelete, see
+     * the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html">
+     * DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     * </p>
+     */
+    private TtlDuration ttlDuration;
 
     /**
      * <p>
@@ -176,6 +185,67 @@ public class OnlineStoreConfig implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Time to live duration, where the record is hard deleted after the expiration time is reached;
+     * <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on HardDelete, see
+     * the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html">
+     * DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     * </p>
+     * 
+     * @param ttlDuration
+     *        Time to live duration, where the record is hard deleted after the expiration time is reached;
+     *        <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on HardDelete,
+     *        see the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html"
+     *        >DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     */
+
+    public void setTtlDuration(TtlDuration ttlDuration) {
+        this.ttlDuration = ttlDuration;
+    }
+
+    /**
+     * <p>
+     * Time to live duration, where the record is hard deleted after the expiration time is reached;
+     * <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on HardDelete, see
+     * the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html">
+     * DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     * </p>
+     * 
+     * @return Time to live duration, where the record is hard deleted after the expiration time is reached;
+     *         <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on
+     *         HardDelete, see the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html"
+     *         >DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     */
+
+    public TtlDuration getTtlDuration() {
+        return this.ttlDuration;
+    }
+
+    /**
+     * <p>
+     * Time to live duration, where the record is hard deleted after the expiration time is reached;
+     * <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on HardDelete, see
+     * the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html">
+     * DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     * </p>
+     * 
+     * @param ttlDuration
+     *        Time to live duration, where the record is hard deleted after the expiration time is reached;
+     *        <code>ExpiresAt</code> = <code>EventTime</code> + <code>TtlDuration</code>. For information on HardDelete,
+     *        see the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_DeleteRecord.html"
+     *        >DeleteRecord</a> API in the Amazon SageMaker API Reference guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OnlineStoreConfig withTtlDuration(TtlDuration ttlDuration) {
+        setTtlDuration(ttlDuration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -190,7 +260,9 @@ public class OnlineStoreConfig implements Serializable, Cloneable, StructuredPoj
         if (getSecurityConfig() != null)
             sb.append("SecurityConfig: ").append(getSecurityConfig()).append(",");
         if (getEnableOnlineStore() != null)
-            sb.append("EnableOnlineStore: ").append(getEnableOnlineStore());
+            sb.append("EnableOnlineStore: ").append(getEnableOnlineStore()).append(",");
+        if (getTtlDuration() != null)
+            sb.append("TtlDuration: ").append(getTtlDuration());
         sb.append("}");
         return sb.toString();
     }
@@ -213,6 +285,10 @@ public class OnlineStoreConfig implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getEnableOnlineStore() != null && other.getEnableOnlineStore().equals(this.getEnableOnlineStore()) == false)
             return false;
+        if (other.getTtlDuration() == null ^ this.getTtlDuration() == null)
+            return false;
+        if (other.getTtlDuration() != null && other.getTtlDuration().equals(this.getTtlDuration()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +299,7 @@ public class OnlineStoreConfig implements Serializable, Cloneable, StructuredPoj
 
         hashCode = prime * hashCode + ((getSecurityConfig() == null) ? 0 : getSecurityConfig().hashCode());
         hashCode = prime * hashCode + ((getEnableOnlineStore() == null) ? 0 : getEnableOnlineStore().hashCode());
+        hashCode = prime * hashCode + ((getTtlDuration() == null) ? 0 : getTtlDuration().hashCode());
         return hashCode;
     }
 
