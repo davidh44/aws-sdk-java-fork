@@ -39,6 +39,13 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
     private String description;
     /**
      * <p>
+     * Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to <code>true</code>
+     * these events will be sent to EventBridge.
+     * </p>
+     */
+    private Boolean eventBridgeEnabled;
+    /**
+     * <p>
      * A key identifier for an <a href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html">Amazon
      * Web Services KMS customer managed key</a> assigned to the Amazon Location resource.
      * </p>
@@ -189,6 +196,66 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
     public DescribeTrackerResult withDescription(String description) {
         setDescription(description);
         return this;
+    }
+
+    /**
+     * <p>
+     * Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to <code>true</code>
+     * these events will be sent to EventBridge.
+     * </p>
+     * 
+     * @param eventBridgeEnabled
+     *        Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to
+     *        <code>true</code> these events will be sent to EventBridge.
+     */
+
+    public void setEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        this.eventBridgeEnabled = eventBridgeEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to <code>true</code>
+     * these events will be sent to EventBridge.
+     * </p>
+     * 
+     * @return Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to
+     *         <code>true</code> these events will be sent to EventBridge.
+     */
+
+    public Boolean getEventBridgeEnabled() {
+        return this.eventBridgeEnabled;
+    }
+
+    /**
+     * <p>
+     * Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to <code>true</code>
+     * these events will be sent to EventBridge.
+     * </p>
+     * 
+     * @param eventBridgeEnabled
+     *        Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to
+     *        <code>true</code> these events will be sent to EventBridge.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTrackerResult withEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        setEventBridgeEnabled(eventBridgeEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to <code>true</code>
+     * these events will be sent to EventBridge.
+     * </p>
+     * 
+     * @return Whether <code>UPDATE</code> events from this tracker in EventBridge are enabled. If set to
+     *         <code>true</code> these events will be sent to EventBridge.
+     */
+
+    public Boolean isEventBridgeEnabled() {
+        return this.eventBridgeEnabled;
     }
 
     /**
@@ -659,6 +726,8 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getEventBridgeEnabled() != null)
+            sb.append("EventBridgeEnabled: ").append(getEventBridgeEnabled()).append(",");
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getPositionFiltering() != null)
@@ -696,6 +765,10 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getEventBridgeEnabled() == null ^ this.getEventBridgeEnabled() == null)
+            return false;
+        if (other.getEventBridgeEnabled() != null && other.getEventBridgeEnabled().equals(this.getEventBridgeEnabled()) == false)
             return false;
         if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
             return false;
@@ -739,6 +812,7 @@ public class DescribeTrackerResult extends com.amazonaws.AmazonWebServiceResult<
 
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getEventBridgeEnabled() == null) ? 0 : getEventBridgeEnabled().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getPositionFiltering() == null) ? 0 : getPositionFiltering().hashCode());
         hashCode = prime * hashCode + ((getPricingPlan() == null) ? 0 : getPricingPlan().hashCode());

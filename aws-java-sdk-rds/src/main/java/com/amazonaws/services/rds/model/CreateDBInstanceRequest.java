@@ -32,14 +32,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon Aurora MySQL</dt>
-     * <dt>Amazon Aurora PostgreSQL</dt>
-     * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created. If you
@@ -61,6 +53,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon Aurora PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is created.
@@ -89,6 +82,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -117,11 +111,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -148,6 +144,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -174,6 +171,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created DB instance.
@@ -197,6 +195,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created.
@@ -225,6 +224,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
@@ -273,11 +273,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -297,6 +292,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -319,6 +315,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -341,6 +338,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -363,6 +361,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -385,6 +384,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -969,12 +969,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for Microsoft SQL Server</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
@@ -984,12 +978,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS Custom for
      * SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -997,6 +993,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Microsoft SQL Server</dt>
      * <dd>
      * <p>
      * For information, see <a href=
@@ -1004,6 +1001,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -1011,6 +1009,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -1018,6 +1017,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -1321,7 +1321,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String domain;
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -1329,7 +1329,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -1353,7 +1353,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -1364,7 +1364,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String domainOu;
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
@@ -1393,7 +1393,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private com.amazonaws.internal.SdkInternalList<String> domainDnsIps;
     /**
      * <p>
-     * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
      * <p>
@@ -1903,11 +1903,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <dl>
      *        <dt>Amazon RDS Custom</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
-     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -1927,6 +1922,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -1949,6 +1945,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -1971,6 +1968,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -1993,6 +1991,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -2015,6 +2014,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -2251,14 +2251,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon Aurora MySQL</dt>
-     * <dt>Amazon Aurora PostgreSQL</dt>
-     * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created. If you
@@ -2280,6 +2272,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon Aurora PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is created.
@@ -2308,6 +2301,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -2336,11 +2330,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -2367,6 +2363,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -2393,6 +2390,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created DB instance.
@@ -2416,6 +2414,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created.
@@ -2444,6 +2443,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
@@ -2455,14 +2455,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The meaning of this parameter differs depending on the database engine.</p>
      *        <dl>
      *        <dt>Amazon Aurora MySQL</dt>
-     *        <dt>Amazon Aurora PostgreSQL</dt>
-     *        <dt>Amazon RDS Custom for Oracle</dt>
-     *        <dt>Amazon RDS Custom for SQL Server</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
-     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created.
@@ -2484,6 +2476,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>Amazon Aurora PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is
@@ -2513,6 +2506,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>Amazon RDS Custom for Oracle</dt>
      *        <dd>
      *        <p>
      *        The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -2541,11 +2535,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>Amazon RDS Custom for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Not applicable. Must be null.
      *        </p>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created. If you don't specify a value, Amazon
@@ -2572,6 +2568,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created. If you don't specify a value, Amazon
@@ -2598,6 +2595,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        The Oracle System ID (SID) of the created DB instance.
@@ -2621,6 +2619,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created.
@@ -2649,6 +2648,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Not applicable. Must be null.
@@ -2666,14 +2666,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon Aurora MySQL</dt>
-     * <dt>Amazon Aurora PostgreSQL</dt>
-     * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created. If you
@@ -2695,6 +2687,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon Aurora PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is created.
@@ -2723,6 +2716,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -2751,11 +2745,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -2782,6 +2778,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -2808,6 +2805,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created DB instance.
@@ -2831,6 +2829,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created.
@@ -2859,6 +2858,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
@@ -2869,14 +2869,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The meaning of this parameter differs depending on the database engine.</p>
      *         <dl>
      *         <dt>Amazon Aurora MySQL</dt>
-     *         <dt>Amazon Aurora PostgreSQL</dt>
-     *         <dt>Amazon RDS Custom for Oracle</dt>
-     *         <dt>Amazon RDS Custom for SQL Server</dt>
-     *         <dt>RDS for MariaDB</dt>
-     *         <dt>RDS for MySQL</dt>
-     *         <dt>RDS for Oracle</dt>
-     *         <dt>RDS for PostgreSQL</dt>
-     *         <dt>RDS for SQL Server</dt>
      *         <dd>
      *         <p>
      *         The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is
@@ -2898,6 +2890,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>Amazon Aurora PostgreSQL</dt>
      *         <dd>
      *         <p>
      *         The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is
@@ -2927,6 +2920,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>Amazon RDS Custom for Oracle</dt>
      *         <dd>
      *         <p>
      *         The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -2955,11 +2949,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>Amazon RDS Custom for SQL Server</dt>
      *         <dd>
      *         <p>
      *         Not applicable. Must be null.
      *         </p>
      *         </dd>
+     *         <dt>RDS for MariaDB</dt>
      *         <dd>
      *         <p>
      *         The name of the database to create when the DB instance is created. If you don't specify a value, Amazon
@@ -2986,6 +2982,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for MySQL</dt>
      *         <dd>
      *         <p>
      *         The name of the database to create when the DB instance is created. If you don't specify a value, Amazon
@@ -3012,6 +3009,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for Oracle</dt>
      *         <dd>
      *         <p>
      *         The Oracle System ID (SID) of the created DB instance.
@@ -3035,6 +3033,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for PostgreSQL</dt>
      *         <dd>
      *         <p>
      *         The name of the database to create when the DB instance is created.
@@ -3063,6 +3062,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for SQL Server</dt>
      *         <dd>
      *         <p>
      *         Not applicable. Must be null.
@@ -3080,14 +3080,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon Aurora MySQL</dt>
-     * <dt>Amazon Aurora PostgreSQL</dt>
-     * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created. If you
@@ -3109,6 +3101,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon Aurora PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is created.
@@ -3137,6 +3130,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -3165,11 +3159,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -3196,6 +3192,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created. If you don't specify a value, Amazon RDS
@@ -3222,6 +3219,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * The Oracle System ID (SID) of the created DB instance.
@@ -3245,6 +3243,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * The name of the database to create when the DB instance is created.
@@ -3273,6 +3272,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Not applicable. Must be null.
@@ -3284,14 +3284,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The meaning of this parameter differs depending on the database engine.</p>
      *        <dl>
      *        <dt>Amazon Aurora MySQL</dt>
-     *        <dt>Amazon Aurora PostgreSQL</dt>
-     *        <dt>Amazon RDS Custom for Oracle</dt>
-     *        <dt>Amazon RDS Custom for SQL Server</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
-     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created.
@@ -3313,6 +3305,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>Amazon Aurora PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is
@@ -3342,6 +3335,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>Amazon RDS Custom for Oracle</dt>
      *        <dd>
      *        <p>
      *        The Oracle System ID (SID) of the created RDS Custom DB instance.
@@ -3370,11 +3364,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>Amazon RDS Custom for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Not applicable. Must be null.
      *        </p>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created. If you don't specify a value, Amazon
@@ -3401,6 +3397,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created. If you don't specify a value, Amazon
@@ -3427,6 +3424,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        The Oracle System ID (SID) of the created DB instance.
@@ -3450,6 +3448,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        The name of the database to create when the DB instance is created.
@@ -3478,6 +3477,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Not applicable. Must be null.
@@ -3677,11 +3677,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -3701,6 +3696,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -3723,6 +3719,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -3745,6 +3742,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -3767,6 +3765,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -3789,6 +3788,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -3858,11 +3858,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <dl>
      *        <dt>Amazon RDS Custom</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
-     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -3882,6 +3877,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -3904,6 +3900,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -3926,6 +3923,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -3948,6 +3946,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -3970,6 +3969,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -4045,11 +4045,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4069,6 +4064,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4091,6 +4087,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4113,6 +4110,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4135,6 +4133,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4157,6 +4156,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4225,11 +4225,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <dl>
      *         <dt>Amazon RDS Custom</dt>
-     *         <dt>RDS for MariaDB</dt>
-     *         <dt>RDS for MySQL</dt>
-     *         <dt>RDS for Oracle</dt>
-     *         <dt>RDS for PostgreSQL</dt>
-     *         <dt>RDS for SQL Server</dt>
      *         <dd>
      *         <p>
      *         Constraints to the amount of storage for each storage type are the following:
@@ -4249,6 +4244,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for MariaDB</dt>
      *         <dd>
      *         <p>
      *         Constraints to the amount of storage for each storage type are the following:
@@ -4271,6 +4267,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for MySQL</dt>
      *         <dd>
      *         <p>
      *         Constraints to the amount of storage for each storage type are the following:
@@ -4293,6 +4290,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for Oracle</dt>
      *         <dd>
      *         <p>
      *         Constraints to the amount of storage for each storage type are the following:
@@ -4315,6 +4313,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for PostgreSQL</dt>
      *         <dd>
      *         <p>
      *         Constraints to the amount of storage for each storage type are the following:
@@ -4337,6 +4336,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         </dd>
+     *         <dt>RDS for SQL Server</dt>
      *         <dd>
      *         <p>
      *         Constraints to the amount of storage for each storage type are the following:
@@ -4412,11 +4412,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
-     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4436,6 +4431,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4458,6 +4454,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4480,6 +4477,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4502,6 +4500,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4524,6 +4523,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * </dd>
+     * <dt>RDS for SQL Server</dt>
      * <dd>
      * <p>
      * Constraints to the amount of storage for each storage type are the following:
@@ -4593,11 +4593,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <dl>
      *        <dt>Amazon RDS Custom</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
-     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -4617,6 +4612,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -4639,6 +4635,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -4661,6 +4658,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -4683,6 +4681,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -4705,6 +4704,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        </dd>
+     *        <dt>RDS for SQL Server</dt>
      *        <dd>
      *        <p>
      *        Constraints to the amount of storage for each storage type are the following:
@@ -7973,12 +7973,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for Microsoft SQL Server</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
@@ -7988,12 +7982,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS Custom for
      * SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8001,6 +7997,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Microsoft SQL Server</dt>
      * <dd>
      * <p>
      * For information, see <a href=
@@ -8008,6 +8005,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8015,6 +8013,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8022,6 +8021,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8047,12 +8047,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <dl>
      *        <dt>Amazon RDS Custom for Oracle</dt>
-     *        <dt>Amazon RDS Custom for SQL Server</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for Microsoft SQL Server</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom
@@ -8062,12 +8056,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>Amazon RDS Custom for SQL Server</dt>
      *        <dd>
      *        <p>
      *        See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS Custom
      *        for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        For information, see <a href=
@@ -8075,6 +8071,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for Microsoft SQL Server</dt>
      *        <dd>
      *        <p>
      *        For information, see <a href=
@@ -8082,6 +8079,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        For information, see <a
@@ -8089,6 +8087,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        >MySQL on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        For information, see <a
@@ -8096,6 +8095,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        For information, see <a
@@ -8126,12 +8126,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for Microsoft SQL Server</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
@@ -8141,12 +8135,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS Custom for
      * SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8154,6 +8150,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Microsoft SQL Server</dt>
      * <dd>
      * <p>
      * For information, see <a href=
@@ -8161,6 +8158,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8168,6 +8166,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8175,6 +8174,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8199,12 +8199,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <dl>
      *         <dt>Amazon RDS Custom for Oracle</dt>
-     *         <dt>Amazon RDS Custom for SQL Server</dt>
-     *         <dt>RDS for MariaDB</dt>
-     *         <dt>RDS for Microsoft SQL Server</dt>
-     *         <dt>RDS for MySQL</dt>
-     *         <dt>RDS for Oracle</dt>
-     *         <dt>RDS for PostgreSQL</dt>
      *         <dd>
      *         <p>
      *         A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom
@@ -8214,12 +8208,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         > Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         </dd>
+     *         <dt>Amazon RDS Custom for SQL Server</dt>
      *         <dd>
      *         <p>
      *         See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS
      *         Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         </dd>
+     *         <dt>RDS for MariaDB</dt>
      *         <dd>
      *         <p>
      *         For information, see <a href=
@@ -8227,6 +8223,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         </dd>
+     *         <dt>RDS for Microsoft SQL Server</dt>
      *         <dd>
      *         <p>
      *         For information, see <a href=
@@ -8234,6 +8231,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         </dd>
+     *         <dt>RDS for MySQL</dt>
      *         <dd>
      *         <p>
      *         For information, see <a href=
@@ -8241,6 +8239,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         </dd>
+     *         <dt>RDS for Oracle</dt>
      *         <dd>
      *         <p>
      *         For information, see <a
@@ -8248,6 +8247,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         >Oracle Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         </dd>
+     *         <dt>RDS for PostgreSQL</dt>
      *         <dd>
      *         <p>
      *         For information, see <a
@@ -8278,12 +8278,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <dl>
      * <dt>Amazon RDS Custom for Oracle</dt>
-     * <dt>Amazon RDS Custom for SQL Server</dt>
-     * <dt>RDS for MariaDB</dt>
-     * <dt>RDS for Microsoft SQL Server</dt>
-     * <dt>RDS for MySQL</dt>
-     * <dt>RDS for Oracle</dt>
-     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
@@ -8293,12 +8287,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>Amazon RDS Custom for SQL Server</dt>
      * <dd>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS Custom for
      * SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MariaDB</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8306,6 +8302,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Microsoft SQL Server</dt>
      * <dd>
      * <p>
      * For information, see <a href=
@@ -8313,6 +8310,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for MySQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8320,6 +8318,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for Oracle</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8327,6 +8326,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </dd>
+     * <dt>RDS for PostgreSQL</dt>
      * <dd>
      * <p>
      * For information, see <a
@@ -8352,12 +8352,6 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <dl>
      *        <dt>Amazon RDS Custom for Oracle</dt>
-     *        <dt>Amazon RDS Custom for SQL Server</dt>
-     *        <dt>RDS for MariaDB</dt>
-     *        <dt>RDS for Microsoft SQL Server</dt>
-     *        <dt>RDS for MySQL</dt>
-     *        <dt>RDS for Oracle</dt>
-     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom
@@ -8367,12 +8361,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>Amazon RDS Custom for SQL Server</dt>
      *        <dd>
      *        <p>
      *        See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits-MS.html">RDS Custom
      *        for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for MariaDB</dt>
      *        <dd>
      *        <p>
      *        For information, see <a href=
@@ -8380,6 +8376,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        >MariaDB on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for Microsoft SQL Server</dt>
      *        <dd>
      *        <p>
      *        For information, see <a href=
@@ -8387,6 +8384,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        >Microsoft SQL Server versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for MySQL</dt>
      *        <dd>
      *        <p>
      *        For information, see <a
@@ -8394,6 +8392,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        >MySQL on Amazon RDS versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for Oracle</dt>
      *        <dd>
      *        <p>
      *        For information, see <a
@@ -8401,6 +8400,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Database Engine release notes</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        </dd>
+     *        <dt>RDS for PostgreSQL</dt>
      *        <dd>
      *        <p>
      *        For information, see <a
@@ -10388,7 +10388,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -10396,7 +10396,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -10405,14 +10405,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -10426,7 +10426,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -10434,7 +10434,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -10442,14 +10442,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
      * </p>
      * 
-     * @return Specifies the fully qualified domain name of an Active Directory domain.</p>
+     * @return The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -10463,7 +10463,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -10471,7 +10471,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -10480,14 +10480,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -10516,7 +10516,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -10537,7 +10537,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -10564,7 +10564,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -10584,7 +10584,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -10611,7 +10611,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -10632,7 +10632,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -10648,15 +10648,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      */
@@ -10667,14 +10666,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
-     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *         join.</p>
+     * @return The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *         <p>
      *         Example:
      *         <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
@@ -10686,15 +10684,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -10888,7 +10885,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
      * <p>
@@ -10897,7 +10894,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param copyTagsToSnapshot
-     *        Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
+     *        Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
      *        not copied.</p>
      *        <p>
      *        This setting doesn't apply to Amazon Aurora DB instances. Copying tags to snapshots is managed by the DB
@@ -10910,7 +10907,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
      * <p>
@@ -10918,7 +10915,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Setting this value for an Aurora DB instance has no effect on the DB cluster setting.
      * </p>
      * 
-     * @return Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
+     * @return Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
      *         not copied.</p>
      *         <p>
      *         This setting doesn't apply to Amazon Aurora DB instances. Copying tags to snapshots is managed by the DB
@@ -10931,7 +10928,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
      * <p>
@@ -10940,7 +10937,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param copyTagsToSnapshot
-     *        Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
+     *        Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
      *        not copied.</p>
      *        <p>
      *        This setting doesn't apply to Amazon Aurora DB instances. Copying tags to snapshots is managed by the DB
@@ -10955,7 +10952,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
+     * Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are not
      * copied.
      * </p>
      * <p>
@@ -10963,7 +10960,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Setting this value for an Aurora DB instance has no effect on the DB cluster setting.
      * </p>
      * 
-     * @return Spcifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
+     * @return Specifies whether to copy tags from the DB instance to snapshots of the DB instance. By default, tags are
      *         not copied.</p>
      *         <p>
      *         This setting doesn't apply to Amazon Aurora DB instances. Copying tags to snapshots is managed by the DB

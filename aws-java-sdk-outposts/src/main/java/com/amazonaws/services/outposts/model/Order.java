@@ -112,7 +112,7 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
     private String paymentTerm;
     /**
      * <p>
-     * The type of order.
+     * Type of order.
      * </p>
      */
     private String orderType;
@@ -793,11 +793,11 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of order.
+     * Type of order.
      * </p>
      * 
      * @param orderType
-     *        The type of order.
+     *        Type of order.
      * @see OrderType
      */
 
@@ -807,10 +807,10 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of order.
+     * Type of order.
      * </p>
      * 
-     * @return The type of order.
+     * @return Type of order.
      * @see OrderType
      */
 
@@ -820,11 +820,11 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of order.
+     * Type of order.
      * </p>
      * 
      * @param orderType
-     *        The type of order.
+     *        Type of order.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrderType
      */
@@ -836,11 +836,11 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of order.
+     * Type of order.
      * </p>
      * 
      * @param orderType
-     *        The type of order.
+     *        Type of order.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrderType
      */

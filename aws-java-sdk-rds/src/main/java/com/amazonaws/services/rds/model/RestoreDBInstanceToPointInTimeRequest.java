@@ -401,16 +401,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
     private String domain;
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      */
     private String domainIAMRoleName;
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -418,7 +418,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -442,7 +442,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -453,7 +453,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
     private String domainOu;
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -461,7 +461,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3250,16 +3250,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        The name of the IAM role to use when making API calls to the Directory Service.</p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom DB instances.
      */
 
     public void setDomainIAMRoleName(String domainIAMRoleName) {
@@ -3268,15 +3268,15 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
-     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     * @return The name of the IAM role to use when making API calls to the Directory Service.</p>
      *         <p>
-     *         This setting doesn't apply to RDS Custom.
+     *         This setting doesn't apply to RDS Custom DB instances.
      */
 
     public String getDomainIAMRoleName() {
@@ -3285,16 +3285,16 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        The name of the IAM role to use when making API calls to the Directory Service.</p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom DB instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3305,7 +3305,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -3313,7 +3313,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3322,14 +3322,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3343,7 +3343,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -3351,7 +3351,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3359,14 +3359,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
      * </p>
      * 
-     * @return Specifies the fully qualified domain name of an Active Directory domain.</p>
+     * @return The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -3380,7 +3380,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -3388,7 +3388,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3397,14 +3397,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3433,7 +3433,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3454,7 +3454,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3481,7 +3481,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3501,7 +3501,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *         </li>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -3528,7 +3528,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3549,7 +3549,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3565,7 +3565,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -3573,7 +3573,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3582,15 +3582,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3604,7 +3603,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -3612,7 +3611,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3620,15 +3619,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
-     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *         join.</p>
+     * @return The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -3643,7 +3641,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -3651,7 +3649,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3660,15 +3658,14 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>

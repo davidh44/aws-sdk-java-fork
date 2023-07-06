@@ -34,8 +34,8 @@ public class DomainMembership implements Serializable, Cloneable {
     private String domain;
     /**
      * <p>
-     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include joined,
-     * pending-join, failed, and so on.
+     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include
+     * <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      * </p>
      */
     private String status;
@@ -47,25 +47,25 @@ public class DomainMembership implements Serializable, Cloneable {
     private String fQDN;
     /**
      * <p>
-     * The name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role used when making API calls to the Directory Service.
      * </p>
      */
     private String iAMRoleName;
     /**
      * <p>
-     * The Active Directory organizational unit for your DB instance to join.
+     * The Active Directory organizational unit for the DB instance or cluster.
      * </p>
      */
     private String oU;
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      * </p>
      */
     private String authSecretArn;
     /**
      * <p>
-     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> dnsIps;
@@ -112,13 +112,13 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include joined,
-     * pending-join, failed, and so on.
+     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include
+     * <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      * </p>
      * 
      * @param status
      *        The status of the Active Directory Domain membership for the DB instance or cluster. Values include
-     *        joined, pending-join, failed, and so on.
+     *        <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      */
 
     public void setStatus(String status) {
@@ -127,12 +127,12 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include joined,
-     * pending-join, failed, and so on.
+     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include
+     * <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      * </p>
      * 
      * @return The status of the Active Directory Domain membership for the DB instance or cluster. Values include
-     *         joined, pending-join, failed, and so on.
+     *         <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      */
 
     public String getStatus() {
@@ -141,13 +141,13 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include joined,
-     * pending-join, failed, and so on.
+     * The status of the Active Directory Domain membership for the DB instance or cluster. Values include
+     * <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      * </p>
      * 
      * @param status
      *        The status of the Active Directory Domain membership for the DB instance or cluster. Values include
-     *        joined, pending-join, failed, and so on.
+     *        <code>joined</code>, <code>pending-join</code>, <code>failed</code>, and so on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,11 +198,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role used when making API calls to the Directory Service.
      * </p>
      * 
      * @param iAMRoleName
-     *        The name of the IAM role to be used when making API calls to the Directory Service.
+     *        The name of the IAM role used when making API calls to the Directory Service.
      */
 
     public void setIAMRoleName(String iAMRoleName) {
@@ -211,10 +211,10 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role used when making API calls to the Directory Service.
      * </p>
      * 
-     * @return The name of the IAM role to be used when making API calls to the Directory Service.
+     * @return The name of the IAM role used when making API calls to the Directory Service.
      */
 
     public String getIAMRoleName() {
@@ -223,11 +223,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role used when making API calls to the Directory Service.
      * </p>
      * 
      * @param iAMRoleName
-     *        The name of the IAM role to be used when making API calls to the Directory Service.
+     *        The name of the IAM role used when making API calls to the Directory Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,11 +238,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Active Directory organizational unit for your DB instance to join.
+     * The Active Directory organizational unit for the DB instance or cluster.
      * </p>
      * 
      * @param oU
-     *        The Active Directory organizational unit for your DB instance to join.
+     *        The Active Directory organizational unit for the DB instance or cluster.
      */
 
     public void setOU(String oU) {
@@ -251,10 +251,10 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Active Directory organizational unit for your DB instance to join.
+     * The Active Directory organizational unit for the DB instance or cluster.
      * </p>
      * 
-     * @return The Active Directory organizational unit for your DB instance to join.
+     * @return The Active Directory organizational unit for the DB instance or cluster.
      */
 
     public String getOU() {
@@ -263,11 +263,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Active Directory organizational unit for your DB instance to join.
+     * The Active Directory organizational unit for the DB instance or cluster.
      * </p>
      * 
      * @param oU
-     *        The Active Directory organizational unit for your DB instance to join.
+     *        The Active Directory organizational unit for the DB instance or cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,12 +278,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      * </p>
      * 
      * @param authSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.
+     *        The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      */
 
     public void setAuthSecretArn(String authSecretArn) {
@@ -292,11 +291,10 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      * </p>
      * 
-     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *         join.
+     * @return The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      */
 
     public String getAuthSecretArn() {
@@ -305,12 +303,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      * </p>
      * 
      * @param authSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.
+     *        The ARN for the Secrets Manager secret with the credentials for the user that's a member of the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -321,10 +318,10 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * </p>
      * 
-     * @return The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * @return The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      */
 
     public java.util.List<String> getDnsIps() {
@@ -336,11 +333,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * </p>
      * 
      * @param dnsIps
-     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     *        The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      */
 
     public void setDnsIps(java.util.Collection<String> dnsIps) {
@@ -354,7 +351,7 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -363,7 +360,7 @@ public class DomainMembership implements Serializable, Cloneable {
      * </p>
      * 
      * @param dnsIps
-     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     *        The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -379,11 +376,11 @@ public class DomainMembership implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     * The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * </p>
      * 
      * @param dnsIps
-     *        The IPv4 DNS IP addresses of your primary and secondary Active Directory domain controllers.
+     *        The IPv4 DNS IP addresses of the primary and secondary Active Directory domain controllers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

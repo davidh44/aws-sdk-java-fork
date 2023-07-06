@@ -40,7 +40,8 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
     private String assetBundleImportJobId;
     /**
      * <p>
-     * The source of the asset bundle zip file that contains the data that you want to import.
+     * The source of the asset bundle zip file that contains the data that you want to import. The file must be in
+     * <code>QUICKSIGHT_JSON</code> format.
      * </p>
      */
     private AssetBundleImportSource assetBundleImportSource;
@@ -153,11 +154,13 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The source of the asset bundle zip file that contains the data that you want to import.
+     * The source of the asset bundle zip file that contains the data that you want to import. The file must be in
+     * <code>QUICKSIGHT_JSON</code> format.
      * </p>
      * 
      * @param assetBundleImportSource
-     *        The source of the asset bundle zip file that contains the data that you want to import.
+     *        The source of the asset bundle zip file that contains the data that you want to import. The file must be
+     *        in <code>QUICKSIGHT_JSON</code> format.
      */
 
     public void setAssetBundleImportSource(AssetBundleImportSource assetBundleImportSource) {
@@ -166,10 +169,12 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The source of the asset bundle zip file that contains the data that you want to import.
+     * The source of the asset bundle zip file that contains the data that you want to import. The file must be in
+     * <code>QUICKSIGHT_JSON</code> format.
      * </p>
      * 
-     * @return The source of the asset bundle zip file that contains the data that you want to import.
+     * @return The source of the asset bundle zip file that contains the data that you want to import. The file must be
+     *         in <code>QUICKSIGHT_JSON</code> format.
      */
 
     public AssetBundleImportSource getAssetBundleImportSource() {
@@ -178,11 +183,13 @@ public class StartAssetBundleImportJobRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The source of the asset bundle zip file that contains the data that you want to import.
+     * The source of the asset bundle zip file that contains the data that you want to import. The file must be in
+     * <code>QUICKSIGHT_JSON</code> format.
      * </p>
      * 
      * @param assetBundleImportSource
-     *        The source of the asset bundle zip file that contains the data that you want to import.
+     *        The source of the asset bundle zip file that contains the data that you want to import. The file must be
+     *        in <code>QUICKSIGHT_JSON</code> format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

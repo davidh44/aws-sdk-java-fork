@@ -174,6 +174,12 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> supportedBootModes;
+    /**
+     * <p>
+     * Indicates whether Nitro Enclaves is supported.
+     * </p>
+     */
+    private String nitroEnclavesSupport;
 
     /**
      * <p>
@@ -1553,6 +1559,65 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether Nitro Enclaves is supported.
+     * </p>
+     * 
+     * @param nitroEnclavesSupport
+     *        Indicates whether Nitro Enclaves is supported.
+     * @see NitroEnclavesSupport
+     */
+
+    public void setNitroEnclavesSupport(String nitroEnclavesSupport) {
+        this.nitroEnclavesSupport = nitroEnclavesSupport;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Nitro Enclaves is supported.
+     * </p>
+     * 
+     * @return Indicates whether Nitro Enclaves is supported.
+     * @see NitroEnclavesSupport
+     */
+
+    public String getNitroEnclavesSupport() {
+        return this.nitroEnclavesSupport;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Nitro Enclaves is supported.
+     * </p>
+     * 
+     * @param nitroEnclavesSupport
+     *        Indicates whether Nitro Enclaves is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see NitroEnclavesSupport
+     */
+
+    public InstanceTypeInfo withNitroEnclavesSupport(String nitroEnclavesSupport) {
+        setNitroEnclavesSupport(nitroEnclavesSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Nitro Enclaves is supported.
+     * </p>
+     * 
+     * @param nitroEnclavesSupport
+     *        Indicates whether Nitro Enclaves is supported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see NitroEnclavesSupport
+     */
+
+    public InstanceTypeInfo withNitroEnclavesSupport(NitroEnclavesSupport nitroEnclavesSupport) {
+        this.nitroEnclavesSupport = nitroEnclavesSupport.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1611,7 +1676,9 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
         if (getAutoRecoverySupported() != null)
             sb.append("AutoRecoverySupported: ").append(getAutoRecoverySupported()).append(",");
         if (getSupportedBootModes() != null)
-            sb.append("SupportedBootModes: ").append(getSupportedBootModes());
+            sb.append("SupportedBootModes: ").append(getSupportedBootModes()).append(",");
+        if (getNitroEnclavesSupport() != null)
+            sb.append("NitroEnclavesSupport: ").append(getNitroEnclavesSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -1723,6 +1790,10 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
             return false;
         if (other.getSupportedBootModes() != null && other.getSupportedBootModes().equals(this.getSupportedBootModes()) == false)
             return false;
+        if (other.getNitroEnclavesSupport() == null ^ this.getNitroEnclavesSupport() == null)
+            return false;
+        if (other.getNitroEnclavesSupport() != null && other.getNitroEnclavesSupport().equals(this.getNitroEnclavesSupport()) == false)
+            return false;
         return true;
     }
 
@@ -1755,6 +1826,7 @@ public class InstanceTypeInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDedicatedHostsSupported() == null) ? 0 : getDedicatedHostsSupported().hashCode());
         hashCode = prime * hashCode + ((getAutoRecoverySupported() == null) ? 0 : getAutoRecoverySupported().hashCode());
         hashCode = prime * hashCode + ((getSupportedBootModes() == null) ? 0 : getSupportedBootModes().hashCode());
+        hashCode = prime * hashCode + ((getNitroEnclavesSupport() == null) ? 0 : getNitroEnclavesSupport().hashCode());
         return hashCode;
     }
 

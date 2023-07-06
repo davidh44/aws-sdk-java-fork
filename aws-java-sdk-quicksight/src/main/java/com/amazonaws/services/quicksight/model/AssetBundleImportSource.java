@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The source of the asset bundle zip file that contains the data that you want to import.
+ * The source of the asset bundle zip file that contains the data that you want to import. The file must be in
+ * <code>QUICKSIGHT_JSON</code> format.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/AssetBundleImportSource" target="_top">AWS

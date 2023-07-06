@@ -39,7 +39,11 @@ public class GetGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String geofenceId;
     /**
      * <p>
-     * Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     * User defined properties of the geofence. A property is a key-value pair stored with the geofence and added to any
+     * geofence event triggered with that geofence.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
      * </p>
      */
     private java.util.Map<String, String> geofenceProperties;
@@ -185,10 +189,17 @@ public class GetGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     * User defined properties of the geofence. A property is a key-value pair stored with the geofence and added to any
+     * geofence event triggered with that geofence.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
      * </p>
      * 
-     * @return Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     * @return User defined properties of the geofence. A property is a key-value pair stored with the geofence and
+     *         added to any geofence event triggered with that geofence.</p>
+     *         <p>
+     *         Format: <code>"key" : "value"</code>
      */
 
     public java.util.Map<String, String> getGeofenceProperties() {
@@ -197,11 +208,18 @@ public class GetGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     * User defined properties of the geofence. A property is a key-value pair stored with the geofence and added to any
+     * geofence event triggered with that geofence.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
      * </p>
      * 
      * @param geofenceProperties
-     *        Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     *        User defined properties of the geofence. A property is a key-value pair stored with the geofence and added
+     *        to any geofence event triggered with that geofence.</p>
+     *        <p>
+     *        Format: <code>"key" : "value"</code>
      */
 
     public void setGeofenceProperties(java.util.Map<String, String> geofenceProperties) {
@@ -210,11 +228,18 @@ public class GetGeofenceResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     * User defined properties of the geofence. A property is a key-value pair stored with the geofence and added to any
+     * geofence event triggered with that geofence.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
      * </p>
      * 
      * @param geofenceProperties
-     *        Contains additional user-defined properties stored with the geofence. An array of key-value pairs.
+     *        User defined properties of the geofence. A property is a key-value pair stored with the geofence and added
+     *        to any geofence event triggered with that geofence.</p>
+     *        <p>
+     *        Format: <code>"key" : "value"</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -724,7 +724,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String domain;
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -732,7 +732,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -756,7 +756,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -767,7 +767,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String domainOu;
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
@@ -943,7 +943,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String domainIAMRoleName;
     /**
      * <p>
-     * Boolean. If present, removes the instance from the Active Directory domain.
+     * Specifies whether to remove the DB instance from the Active Directory domain.
      * </p>
      */
     private Boolean disableDomain;
@@ -5954,7 +5954,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -5962,7 +5962,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -5971,14 +5971,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -5992,7 +5992,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -6000,7 +6000,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -6008,14 +6008,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
      * </p>
      * 
-     * @return Specifies the fully qualified domain name of an Active Directory domain.</p>
+     * @return The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -6029,7 +6029,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -6037,7 +6037,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -6046,14 +6046,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -6082,7 +6082,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -6103,7 +6103,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -6130,7 +6130,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -6150,7 +6150,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -6177,7 +6177,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -6198,7 +6198,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -6214,15 +6214,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      */
@@ -6233,14 +6232,13 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
-     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *         join.</p>
+     * @return The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *         <p>
      *         Example:
      *         <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
@@ -6252,15 +6250,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -7419,11 +7416,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Boolean. If present, removes the instance from the Active Directory domain.
+     * Specifies whether to remove the DB instance from the Active Directory domain.
      * </p>
      * 
      * @param disableDomain
-     *        Boolean. If present, removes the instance from the Active Directory domain.
+     *        Specifies whether to remove the DB instance from the Active Directory domain.
      */
 
     public void setDisableDomain(Boolean disableDomain) {
@@ -7432,10 +7429,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Boolean. If present, removes the instance from the Active Directory domain.
+     * Specifies whether to remove the DB instance from the Active Directory domain.
      * </p>
      * 
-     * @return Boolean. If present, removes the instance from the Active Directory domain.
+     * @return Specifies whether to remove the DB instance from the Active Directory domain.
      */
 
     public Boolean getDisableDomain() {
@@ -7444,11 +7441,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Boolean. If present, removes the instance from the Active Directory domain.
+     * Specifies whether to remove the DB instance from the Active Directory domain.
      * </p>
      * 
      * @param disableDomain
-     *        Boolean. If present, removes the instance from the Active Directory domain.
+     *        Specifies whether to remove the DB instance from the Active Directory domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -7459,10 +7456,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Boolean. If present, removes the instance from the Active Directory domain.
+     * Specifies whether to remove the DB instance from the Active Directory domain.
      * </p>
      * 
-     * @return Boolean. If present, removes the instance from the Active Directory domain.
+     * @return Specifies whether to remove the DB instance from the Active Directory domain.
      */
 
     public Boolean isDisableDomain() {

@@ -4218,7 +4218,7 @@ public interface AmazonQuickSight {
      * dependencies in the same job. Export jobs run asynchronously and can be polled with a
      * <code>DescribeAssetBundleExportJob</code> API call. When a job is successfully completed, a download URL that
      * contains the exported assets is returned. The URL is valid for 5 minutes and can be refreshed with a
-     * <code>DescribeAssetBundleExportJob</code> API call. Each Amazon QuickSight account can run up to 10 export jobs
+     * <code>DescribeAssetBundleExportJob</code> API call. Each Amazon QuickSight account can run up to 5 export jobs
      * concurrently.
      * </p>
      * <p>
@@ -4261,7 +4261,7 @@ public interface AmazonQuickSight {
      * An Asset Bundle import job imports specified Amazon QuickSight assets into an Amazon QuickSight account. You can
      * also choose to import a naming prefix and specified configuration overrides. The assets that are contained in the
      * bundle file that you provide are used to create or update a new or existing asset in your Amazon QuickSight
-     * account. Each Amazon QuickSight account can run up to 10 import jobs concurrently.
+     * account. Each Amazon QuickSight account can run up to 5 import jobs concurrently.
      * </p>
      * <p>
      * The API caller must have the necessary <code>"create"</code>, <code>"describe"</code>, and <code>"update"</code>

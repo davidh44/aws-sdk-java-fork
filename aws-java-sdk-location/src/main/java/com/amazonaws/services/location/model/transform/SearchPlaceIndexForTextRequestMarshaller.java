@@ -38,6 +38,8 @@ public class SearchPlaceIndexForTextRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCountries").build();
     private static final MarshallingInfo<String> INDEXNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("IndexName").build();
+    private static final MarshallingInfo<String> KEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("key").build();
     private static final MarshallingInfo<String> LANGUAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Language").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -66,6 +68,7 @@ public class SearchPlaceIndexForTextRequestMarshaller {
             protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getFilterCategories(), FILTERCATEGORIES_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getFilterCountries(), FILTERCOUNTRIES_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getIndexName(), INDEXNAME_BINDING);
+            protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getKey(), KEY_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getLanguage(), LANGUAGE_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(searchPlaceIndexForTextRequest.getText(), TEXT_BINDING);

@@ -377,7 +377,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private String domain;
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -385,7 +385,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -409,7 +409,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -420,7 +420,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private String domainOu;
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -469,10 +469,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private Boolean copyTagsToSnapshot;
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      */
     private String domainIAMRoleName;
@@ -3093,7 +3093,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -3101,7 +3101,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3110,14 +3110,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3131,7 +3131,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -3139,7 +3139,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3147,14 +3147,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
      * </p>
      * 
-     * @return Specifies the fully qualified domain name of an Active Directory domain.</p>
+     * @return The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -3168,7 +3168,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -3176,7 +3176,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3185,14 +3185,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3221,7 +3221,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3242,7 +3242,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3269,7 +3269,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3289,7 +3289,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -3316,7 +3316,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -3337,7 +3337,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -3353,7 +3353,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -3363,8 +3363,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -3378,7 +3377,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -3387,8 +3386,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
-     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *         join.</p>
+     * @return The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -3403,7 +3401,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Constraints:
@@ -3413,8 +3411,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -3751,16 +3748,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        The name of the IAM role to use when making API calls to the Directory Service.</p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom DB instances.
      */
 
     public void setDomainIAMRoleName(String domainIAMRoleName) {
@@ -3769,15 +3766,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
-     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     * @return The name of the IAM role to use when making API calls to the Directory Service.</p>
      *         <p>
-     *         This setting doesn't apply to RDS Custom.
+     *         This setting doesn't apply to RDS Custom DB instances.
      */
 
     public String getDomainIAMRoleName() {
@@ -3786,16 +3783,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * The name of the IAM role to use when making API calls to the Directory Service.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        The name of the IAM role to use when making API calls to the Directory Service.</p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom DB instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

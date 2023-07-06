@@ -100,7 +100,9 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
     private Boolean includeAllDependencies;
     /**
      * <p>
-     * The format of the export.
+     * The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make a
+     * <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can be used in
+     * the CloudFormation console and with the CloudFormation APIs.
      * </p>
      */
     private String exportFormat;
@@ -707,11 +709,15 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The format of the export.
+     * The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make a
+     * <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can be used in
+     * the CloudFormation console and with the CloudFormation APIs.
      * </p>
      * 
      * @param exportFormat
-     *        The format of the export.
+     *        The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make
+     *        a <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can
+     *        be used in the CloudFormation console and with the CloudFormation APIs.
      * @see AssetBundleExportFormat
      */
 
@@ -721,10 +727,14 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The format of the export.
+     * The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make a
+     * <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can be used in
+     * the CloudFormation console and with the CloudFormation APIs.
      * </p>
      * 
-     * @return The format of the export.
+     * @return The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to
+     *         make a <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file
+     *         can be used in the CloudFormation console and with the CloudFormation APIs.
      * @see AssetBundleExportFormat
      */
 
@@ -734,11 +744,15 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The format of the export.
+     * The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make a
+     * <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can be used in
+     * the CloudFormation console and with the CloudFormation APIs.
      * </p>
      * 
      * @param exportFormat
-     *        The format of the export.
+     *        The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make
+     *        a <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can
+     *        be used in the CloudFormation console and with the CloudFormation APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetBundleExportFormat
      */
@@ -750,11 +764,15 @@ public class DescribeAssetBundleExportJobResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The format of the export.
+     * The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make a
+     * <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can be used in
+     * the CloudFormation console and with the CloudFormation APIs.
      * </p>
      * 
      * @param exportFormat
-     *        The format of the export.
+     *        The format of the exported asset bundle. A <code>QUICKSIGHT_JSON</code> formatted file can be used to make
+     *        a <code>StartAssetBundleImportJob</code> API call. A <code>CLOUDFORMATION_JSON</code> formatted file can
+     *        be used in the CloudFormation console and with the CloudFormation APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssetBundleExportFormat
      */

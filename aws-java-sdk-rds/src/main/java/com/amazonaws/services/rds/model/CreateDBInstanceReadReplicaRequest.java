@@ -616,7 +616,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     private String domainIAMRoleName;
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -624,7 +624,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -648,7 +648,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -659,7 +659,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     private String domainOu;
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
@@ -4910,7 +4910,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -4918,7 +4918,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -4927,14 +4927,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -4948,7 +4948,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -4956,7 +4956,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -4964,14 +4964,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * Example: <code>mymanagedADtest.mymanagedAD.mydomain</code>
      * </p>
      * 
-     * @return Specifies the fully qualified domain name of an Active Directory domain.</p>
+     * @return The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *         <p>
      *         Constraints:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -4985,7 +4985,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Specifies the fully qualified domain name of an Active Directory domain.
+     * The fully qualified domain name (FQDN) of an Active Directory domain.
      * </p>
      * <p>
      * Constraints:
@@ -4993,7 +4993,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <ul>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -5002,14 +5002,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param domainFqdn
-     *        Specifies the fully qualified domain name of an Active Directory domain.</p>
+     *        The fully qualified domain name (FQDN) of an Active Directory domain.</p>
      *        <p>
      *        Constraints:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -5038,7 +5038,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -5059,7 +5059,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -5086,7 +5086,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -5106,7 +5106,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         </li>
      *         <li>
      *         <p>
-     *         Cannot be greater than 64 characters.
+     *         Can't be longer than 64 characters.
      *         </p>
      *         </li>
      *         </ul>
@@ -5133,7 +5133,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * Cannot be greater than 64 characters.
+     * Can't be longer than 64 characters.
      * </p>
      * </li>
      * </ul>
@@ -5154,7 +5154,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        </li>
      *        <li>
      *        <p>
-     *        Cannot be greater than 64 characters.
+     *        Can't be longer than 64 characters.
      *        </p>
      *        </li>
      *        </ul>
@@ -5170,15 +5170,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      */
@@ -5189,14 +5188,13 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
-     * @return The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *         join.</p>
+     * @return The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *         <p>
      *         Example:
      *         <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
@@ -5208,15 +5206,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain join.
+     * The ARN for the Secrets Manager secret with the credentials for the user joining the domain.
      * </p>
      * <p>
      * Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * </p>
      * 
      * @param domainAuthSecretArn
-     *        The ARN for the Secrets Manager secret that contains the credentials for the user performing the domain
-     *        join.</p>
+     *        The ARN for the Secrets Manager secret with the credentials for the user joining the domain.</p>
      *        <p>
      *        Example: <code>arn:aws:secretsmanager:region:account-number:secret:myselfmanagedADtestsecret-123456</code>
      * @return Returns a reference to this object so that method calls can be chained together.
