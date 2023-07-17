@@ -631,7 +631,10 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
      * 
      * @param batchStartViewerSessionRevocationRequest
      * @return Result of the BatchStartViewerSessionRevocation operation returned by the service.
+     * @throws AccessDeniedException
      * @throws ValidationException
+     * @throws PendingVerificationException
+     * @throws ThrottlingException
      * @sample AmazonIVS.BatchStartViewerSessionRevocation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/BatchStartViewerSessionRevocation"
      *      target="_top">AWS API Documentation</a>
@@ -2047,9 +2050,11 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
      * 
      * @param startViewerSessionRevocationRequest
      * @return Result of the StartViewerSessionRevocation operation returned by the service.
+     * @throws ResourceNotFoundException
      * @throws InternalServerException
      * @throws AccessDeniedException
      * @throws ValidationException
+     * @throws PendingVerificationException
      * @throws ThrottlingException
      * @sample AmazonIVS.StartViewerSessionRevocation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-2020-07-14/StartViewerSessionRevocation"

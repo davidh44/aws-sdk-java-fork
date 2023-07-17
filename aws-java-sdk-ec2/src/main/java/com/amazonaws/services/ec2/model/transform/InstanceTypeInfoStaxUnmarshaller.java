@@ -189,6 +189,16 @@ public class InstanceTypeInfoStaxUnmarshaller implements Unmarshaller<InstanceTy
                     instanceTypeInfo.setNitroEnclavesSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("nitroTpmSupport", targetDepth)) {
+                    instanceTypeInfo.setNitroTpmSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("nitroTpmInfo", targetDepth)) {
+                    instanceTypeInfo.setNitroTpmInfo(NitroTpmInfoStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceTypeInfo;

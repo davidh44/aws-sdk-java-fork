@@ -800,7 +800,7 @@ public interface AWSLakeFormation {
      * </p>
      * <p>
      * For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
