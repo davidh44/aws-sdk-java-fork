@@ -159,6 +159,8 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmazonRedshiftTarget").build();
     private static final MarshallingInfo<StructuredPojo> EVALUATEDATAQUALITYMULTIFRAME_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EvaluateDataQualityMultiFrame").build();
+    private static final MarshallingInfo<StructuredPojo> RECIPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Recipe").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -242,6 +244,7 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getAmazonRedshiftSource(), AMAZONREDSHIFTSOURCE_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getAmazonRedshiftTarget(), AMAZONREDSHIFTTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getEvaluateDataQualityMultiFrame(), EVALUATEDATAQUALITYMULTIFRAME_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getRecipe(), RECIPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

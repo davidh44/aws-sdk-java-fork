@@ -113,6 +113,8 @@ public enum CloudFormationActions implements Action {
     ListExports("cloudformation:ListExports"),
     /** Action for the ListImports operation. */
     ListImports("cloudformation:ListImports"),
+    /** Action for the ListStackInstanceResourceDrifts operation. */
+    ListStackInstanceResourceDrifts("cloudformation:ListStackInstanceResourceDrifts"),
     /** Action for the ListStackInstances operation. */
     ListStackInstances("cloudformation:ListStackInstances"),
     /** Action for the ListStackResources operation. */

@@ -93,8 +93,8 @@ public class StackSet implements Serializable, Cloneable {
      * <p>
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting Permissions
+     * for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String administrationRoleARN;
@@ -738,8 +738,8 @@ public class StackSet implements Serializable, Cloneable {
      * <p>
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting Permissions
+     * for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param administrationRoleARN
@@ -747,8 +747,8 @@ public class StackSet implements Serializable, Cloneable {
      *        <p>
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     *        Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting
+     *        Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setAdministrationRoleARN(String administrationRoleARN) {
@@ -762,17 +762,16 @@ public class StackSet implements Serializable, Cloneable {
      * <p>
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting Permissions
+     * for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
      *         <p>
      *         Use customized administrator roles to control which users or groups can manage specific stack sets within
      *         the same administrator account. For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html"
-     *         >Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User
-     *         Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting
+     *         Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getAdministrationRoleARN() {
@@ -786,8 +785,8 @@ public class StackSet implements Serializable, Cloneable {
      * <p>
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting Permissions
+     * for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param administrationRoleARN
@@ -795,8 +794,8 @@ public class StackSet implements Serializable, Cloneable {
      *        <p>
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     *        Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/stacksets-prereqs.html">Prerequisites: Granting
+     *        Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

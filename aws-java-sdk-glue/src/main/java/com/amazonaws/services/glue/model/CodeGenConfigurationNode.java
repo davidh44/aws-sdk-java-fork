@@ -437,6 +437,12 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private EvaluateDataQualityMultiFrame evaluateDataQualityMultiFrame;
+    /**
+     * <p>
+     * Specifies a Glue DataBrew recipe node.
+     * </p>
+     */
+    private Recipe recipe;
 
     /**
      * <p>
@@ -3167,6 +3173,46 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a Glue DataBrew recipe node.
+     * </p>
+     * 
+     * @param recipe
+     *        Specifies a Glue DataBrew recipe node.
+     */
+
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
+    }
+
+    /**
+     * <p>
+     * Specifies a Glue DataBrew recipe node.
+     * </p>
+     * 
+     * @return Specifies a Glue DataBrew recipe node.
+     */
+
+    public Recipe getRecipe() {
+        return this.recipe;
+    }
+
+    /**
+     * <p>
+     * Specifies a Glue DataBrew recipe node.
+     * </p>
+     * 
+     * @param recipe
+     *        Specifies a Glue DataBrew recipe node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withRecipe(Recipe recipe) {
+        setRecipe(recipe);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3309,7 +3355,9 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getAmazonRedshiftTarget() != null)
             sb.append("AmazonRedshiftTarget: ").append(getAmazonRedshiftTarget()).append(",");
         if (getEvaluateDataQualityMultiFrame() != null)
-            sb.append("EvaluateDataQualityMultiFrame: ").append(getEvaluateDataQualityMultiFrame());
+            sb.append("EvaluateDataQualityMultiFrame: ").append(getEvaluateDataQualityMultiFrame()).append(",");
+        if (getRecipe() != null)
+            sb.append("Recipe: ").append(getRecipe());
         sb.append("}");
         return sb.toString();
     }
@@ -3591,6 +3639,10 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (other.getEvaluateDataQualityMultiFrame() != null
                 && other.getEvaluateDataQualityMultiFrame().equals(this.getEvaluateDataQualityMultiFrame()) == false)
             return false;
+        if (other.getRecipe() == null ^ this.getRecipe() == null)
+            return false;
+        if (other.getRecipe() != null && other.getRecipe().equals(this.getRecipe()) == false)
+            return false;
         return true;
     }
 
@@ -3665,6 +3717,7 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getAmazonRedshiftSource() == null) ? 0 : getAmazonRedshiftSource().hashCode());
         hashCode = prime * hashCode + ((getAmazonRedshiftTarget() == null) ? 0 : getAmazonRedshiftTarget().hashCode());
         hashCode = prime * hashCode + ((getEvaluateDataQualityMultiFrame() == null) ? 0 : getEvaluateDataQualityMultiFrame().hashCode());
+        hashCode = prime * hashCode + ((getRecipe() == null) ? 0 : getRecipe().hashCode());
         return hashCode;
     }
 

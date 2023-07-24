@@ -308,6 +308,16 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DescribeDashboardSnapshotJobResult describeDashboardSnapshotJob(DescribeDashboardSnapshotJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDashboardSnapshotJobResultResult describeDashboardSnapshotJobResult(DescribeDashboardSnapshotJobResultRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDataSetResult describeDataSet(DescribeDataSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -659,6 +669,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public StartAssetBundleImportJobResult startAssetBundleImportJob(StartAssetBundleImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartDashboardSnapshotJobResult startDashboardSnapshotJob(StartDashboardSnapshotJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

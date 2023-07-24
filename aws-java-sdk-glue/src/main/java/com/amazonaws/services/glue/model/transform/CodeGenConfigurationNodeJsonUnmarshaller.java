@@ -314,6 +314,10 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setEvaluateDataQualityMultiFrame(EvaluateDataQualityMultiFrameJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Recipe", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setRecipe(RecipeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

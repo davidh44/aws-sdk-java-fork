@@ -1804,6 +1804,41 @@ public class AmazonCloudFormationAsyncClient extends AmazonCloudFormationClient 
     }
 
     @Override
+    public java.util.concurrent.Future<ListStackInstanceResourceDriftsResult> listStackInstanceResourceDriftsAsync(
+            ListStackInstanceResourceDriftsRequest request) {
+
+        return listStackInstanceResourceDriftsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStackInstanceResourceDriftsResult> listStackInstanceResourceDriftsAsync(
+            final ListStackInstanceResourceDriftsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListStackInstanceResourceDriftsRequest, ListStackInstanceResourceDriftsResult> asyncHandler) {
+        final ListStackInstanceResourceDriftsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListStackInstanceResourceDriftsResult>() {
+            @Override
+            public ListStackInstanceResourceDriftsResult call() throws Exception {
+                ListStackInstanceResourceDriftsResult result = null;
+
+                try {
+                    result = executeListStackInstanceResourceDrifts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListStackInstancesResult> listStackInstancesAsync(ListStackInstancesRequest request) {
 
         return listStackInstancesAsync(request, null);

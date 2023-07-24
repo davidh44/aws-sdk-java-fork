@@ -1237,6 +1237,31 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Returns drift information for resources in a stack instance.
+     * </p>
+     * <note>
+     * <p>
+     * <code>ListStackInstanceResourceDrifts</code> returns drift information for the most recent drift detection
+     * operation. If an operation is in progress, it may only return partial results.
+     * </p>
+     * </note>
+     * 
+     * @param listStackInstanceResourceDriftsRequest
+     * @return Result of the ListStackInstanceResourceDrifts operation returned by the service.
+     * @throws StackSetNotFoundException
+     *         The specified stack set doesn't exist.
+     * @throws StackInstanceNotFoundException
+     *         The specified stack instance doesn't exist.
+     * @throws OperationNotFoundException
+     *         The specified ID refers to an operation that doesn't exist.
+     * @sample AmazonCloudFormation.ListStackInstanceResourceDrifts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackInstanceResourceDrifts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListStackInstanceResourceDriftsResult listStackInstanceResourceDrifts(ListStackInstanceResourceDriftsRequest listStackInstanceResourceDriftsRequest);
+
+    /**
+     * <p>
      * Returns summary information about stack instances that are associated with the specified stack set. You can
      * filter for stack instances that are associated with a specific Amazon Web Services account name or Region, or
      * that have a specific status.

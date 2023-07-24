@@ -195,7 +195,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
@@ -210,9 +210,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * macros before actually creating the stack. If your stack template contains one or more macros, and you choose to
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
-     * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
@@ -231,7 +231,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
      * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
@@ -330,12 +330,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      */
@@ -1013,7 +1013,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
@@ -1028,9 +1028,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * macros before actually creating the stack. If your stack template contains one or more macros, and you choose to
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
-     * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
@@ -1049,7 +1049,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
      * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
@@ -1142,7 +1142,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </ul>
      *         <p>
      *         For more information, see <a href=
-     *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      *         >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *         </p>
      *         </li>
@@ -1158,9 +1158,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         one or more macros, and you choose to create a stack directly from the processed template, without first
      *         reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *         <a href=
-     *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *         >AWS::Include</a> and <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      *         >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *         </p>
      *         <p>
@@ -1179,7 +1179,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </important>
      *         <p>
      *         For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *         CloudFormation macros to perform custom processing on templates</a>.
      *         </p>
      *         </li>
@@ -1281,7 +1281,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
@@ -1296,9 +1296,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * macros before actually creating the stack. If your stack template contains one or more macros, and you choose to
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
-     * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
@@ -1317,7 +1317,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
      * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
@@ -1411,7 +1411,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
@@ -1427,9 +1427,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        one or more macros, and you choose to create a stack directly from the processed template, without first
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
@@ -1448,7 +1448,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
@@ -1552,7 +1552,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
@@ -1567,9 +1567,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * macros before actually creating the stack. If your stack template contains one or more macros, and you choose to
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
-     * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
@@ -1588,7 +1588,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
      * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
@@ -1687,7 +1687,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
@@ -1703,9 +1703,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        one or more macros, and you choose to create a stack directly from the processed template, without first
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
@@ -1724,7 +1724,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
@@ -1830,7 +1830,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
@@ -1845,9 +1845,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * macros before actually creating the stack. If your stack template contains one or more macros, and you choose to
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
-     * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
@@ -1866,7 +1866,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
      * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
@@ -1960,7 +1960,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
@@ -1976,9 +1976,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        one or more macros, and you choose to create a stack directly from the processed template, without first
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
@@ -1997,7 +1997,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
@@ -2098,7 +2098,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
@@ -2113,9 +2113,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * macros before actually creating the stack. If your stack template contains one or more macros, and you choose to
      * create a stack directly from the processed template, without first reviewing the resulting changes in a change
      * set, you must acknowledge this capability. This includes the <a href=
-     * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
@@ -2134,7 +2134,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
      * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
@@ -2228,7 +2228,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
      *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
@@ -2244,9 +2244,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        one or more macros, and you choose to create a stack directly from the processed template, without first
      *        reviewing the resulting changes in a change set, you must acknowledge this capability. This includes the
      *        <a href=
-     *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
      *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
@@ -2265,7 +2265,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
@@ -2991,26 +2991,26 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @param enableTerminationProtection
      *        Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      *        termination protection enabled, the operation fails and the stack remains unchanged. For more information,
-     *        see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
+     *        see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
      *        Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection
      *        is deactivated on stacks by default.</p>
      *        <p>
-     *        For <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     *        stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
-     *        stack.
+     *        For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
+     *        nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
+     *        nested stack.
      */
 
     public void setEnableTerminationProtection(Boolean enableTerminationProtection) {
@@ -3021,25 +3021,26 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @return Whether to enable termination protection on the specified stack. If a user attempts to delete a stack
      *         with termination protection enabled, the operation fails and the stack remains unchanged. For more
      *         information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination
      *         protection is deactivated on stacks by default.</p>
      *         <p>
-     *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
-     *         nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
-     *         nested stack.
+     *         For <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     *         stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
+     *         stack.
      */
 
     public Boolean getEnableTerminationProtection() {
@@ -3050,26 +3051,26 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @param enableTerminationProtection
      *        Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      *        termination protection enabled, the operation fails and the stack remains unchanged. For more information,
-     *        see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
+     *        see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
      *        Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection
      *        is deactivated on stacks by default.</p>
      *        <p>
-     *        For <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     *        stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
-     *        stack.
+     *        For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
+     *        nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
+     *        nested stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3082,25 +3083,26 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @return Whether to enable termination protection on the specified stack. If a user attempts to delete a stack
      *         with termination protection enabled, the operation fails and the stack remains unchanged. For more
      *         information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination
      *         protection is deactivated on stacks by default.</p>
      *         <p>
-     *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
-     *         nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
-     *         nested stack.
+     *         For <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     *         stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
+     *         stack.
      */
 
     public Boolean isEnableTerminationProtection() {

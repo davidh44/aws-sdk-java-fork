@@ -2204,6 +2204,53 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
 
     /**
      * <p>
+     * Returns drift information for resources in a stack instance.
+     * </p>
+     * <note>
+     * <p>
+     * <code>ListStackInstanceResourceDrifts</code> returns drift information for the most recent drift detection
+     * operation. If an operation is in progress, it may only return partial results.
+     * </p>
+     * </note>
+     * 
+     * @param listStackInstanceResourceDriftsRequest
+     * @return A Java Future containing the result of the ListStackInstanceResourceDrifts operation returned by the
+     *         service.
+     * @sample AmazonCloudFormationAsync.ListStackInstanceResourceDrifts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackInstanceResourceDrifts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStackInstanceResourceDriftsResult> listStackInstanceResourceDriftsAsync(
+            ListStackInstanceResourceDriftsRequest listStackInstanceResourceDriftsRequest);
+
+    /**
+     * <p>
+     * Returns drift information for resources in a stack instance.
+     * </p>
+     * <note>
+     * <p>
+     * <code>ListStackInstanceResourceDrifts</code> returns drift information for the most recent drift detection
+     * operation. If an operation is in progress, it may only return partial results.
+     * </p>
+     * </note>
+     * 
+     * @param listStackInstanceResourceDriftsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStackInstanceResourceDrifts operation returned by the
+     *         service.
+     * @sample AmazonCloudFormationAsyncHandler.ListStackInstanceResourceDrifts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListStackInstanceResourceDrifts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStackInstanceResourceDriftsResult> listStackInstanceResourceDriftsAsync(
+            ListStackInstanceResourceDriftsRequest listStackInstanceResourceDriftsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStackInstanceResourceDriftsRequest, ListStackInstanceResourceDriftsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns summary information about stack instances that are associated with the specified stack set. You can
      * filter for stack instances that are associated with a specific Amazon Web Services account name or Region, or
      * that have a specific status.

@@ -1521,7 +1521,7 @@ public class AmazonApiGatewayV2Client extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Deletes a route request parameter.
+     * Deletes a route request parameter. Supported only for WebSocket APIs.
      * </p>
      * 
      * @param deleteRouteRequestParameterRequest

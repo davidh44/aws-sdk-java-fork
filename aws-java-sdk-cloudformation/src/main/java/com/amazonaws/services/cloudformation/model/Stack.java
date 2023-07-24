@@ -154,10 +154,10 @@ public class Stack implements Serializable, Cloneable {
      * Whether termination protection is enabled for the stack.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
@@ -169,7 +169,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
@@ -181,7 +181,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
@@ -191,7 +191,7 @@ public class Stack implements Serializable, Cloneable {
      * Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its expected
      * configuration, as defined in the stack template and any values specified as template parameters. For more
      * information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      * Unregulated Configuration Changes to Stacks and Resources</a>.
      * </p>
      */
@@ -1271,21 +1271,20 @@ public class Stack implements Serializable, Cloneable {
      * Whether termination protection is enabled for the stack.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param enableTerminationProtection
      *        Whether termination protection is enabled for the stack.</p>
      *        <p>
-     *        For <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     *        stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
-     *        stack. For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
+     *        For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
+     *        nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
+     *        nested stack. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *        >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -1298,19 +1297,20 @@ public class Stack implements Serializable, Cloneable {
      * Whether termination protection is enabled for the stack.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return Whether termination protection is enabled for the stack.</p>
      *         <p>
-     *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
-     *         nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
-     *         nested stack. For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
+     *         For <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     *         stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
+     *         stack. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -1323,21 +1323,20 @@ public class Stack implements Serializable, Cloneable {
      * Whether termination protection is enabled for the stack.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param enableTerminationProtection
      *        Whether termination protection is enabled for the stack.</p>
      *        <p>
-     *        For <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     *        stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
-     *        stack. For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
+     *        For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
+     *        nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
+     *        nested stack. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *        >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1352,19 +1351,20 @@ public class Stack implements Serializable, Cloneable {
      * Whether termination protection is enabled for the stack.
      * </p>
      * <p>
-     * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
      * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
      * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return Whether termination protection is enabled for the stack.</p>
      *         <p>
-     *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
-     *         nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
-     *         nested stack. For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
+     *         For <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+     *         stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
+     *         stack. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -1379,7 +1379,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1388,7 +1388,7 @@ public class Stack implements Serializable, Cloneable {
      *        this stack. For the first level of nested stacks, the root stack is also the parent stack.</p>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
      *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -1403,7 +1403,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1411,8 +1411,8 @@ public class Stack implements Serializable, Cloneable {
      *         this stack. For the first level of nested stacks, the root stack is also the parent stack.</p>
      *         <p>
      *         For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *         with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html"
+     *         >Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getParentId() {
@@ -1426,7 +1426,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1435,7 +1435,7 @@ public class Stack implements Serializable, Cloneable {
      *        this stack. For the first level of nested stacks, the root stack is also the parent stack.</p>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
      *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1452,7 +1452,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1461,7 +1461,7 @@ public class Stack implements Serializable, Cloneable {
      *        which the nested stack ultimately belongs.</p>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
      *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -1476,7 +1476,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1484,8 +1484,8 @@ public class Stack implements Serializable, Cloneable {
      *         which the nested stack ultimately belongs.</p>
      *         <p>
      *         For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *         with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html"
+     *         >Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getRootId() {
@@ -1499,7 +1499,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
      * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1508,7 +1508,7 @@ public class Stack implements Serializable, Cloneable {
      *        which the nested stack ultimately belongs.</p>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
      *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1523,7 +1523,7 @@ public class Stack implements Serializable, Cloneable {
      * Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its expected
      * configuration, as defined in the stack template and any values specified as template parameters. For more
      * information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      * Unregulated Configuration Changes to Stacks and Resources</a>.
      * </p>
      * 
@@ -1531,7 +1531,7 @@ public class Stack implements Serializable, Cloneable {
      *        Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its expected
      *        configuration, as defined in the stack template and any values specified as template parameters. For more
      *        information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      *        Unregulated Configuration Changes to Stacks and Resources</a>.
      */
 
@@ -1544,15 +1544,15 @@ public class Stack implements Serializable, Cloneable {
      * Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its expected
      * configuration, as defined in the stack template and any values specified as template parameters. For more
      * information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      * Unregulated Configuration Changes to Stacks and Resources</a>.
      * </p>
      * 
      * @return Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its
      *         expected configuration, as defined in the stack template and any values specified as template parameters.
      *         For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
-     *         Unregulated Configuration Changes to Stacks and Resources</a>.
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html"
+     *         >Detecting Unregulated Configuration Changes to Stacks and Resources</a>.
      */
 
     public StackDriftInformation getDriftInformation() {
@@ -1564,7 +1564,7 @@ public class Stack implements Serializable, Cloneable {
      * Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its expected
      * configuration, as defined in the stack template and any values specified as template parameters. For more
      * information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      * Unregulated Configuration Changes to Stacks and Resources</a>.
      * </p>
      * 
@@ -1572,7 +1572,7 @@ public class Stack implements Serializable, Cloneable {
      *        Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from its expected
      *        configuration, as defined in the stack template and any values specified as template parameters. For more
      *        information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      *        Unregulated Configuration Changes to Stacks and Resources</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

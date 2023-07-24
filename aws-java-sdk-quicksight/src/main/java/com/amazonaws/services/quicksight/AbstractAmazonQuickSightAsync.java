@@ -756,6 +756,34 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResult> describeDashboardSnapshotJobAsync(DescribeDashboardSnapshotJobRequest request) {
+
+        return describeDashboardSnapshotJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResult> describeDashboardSnapshotJobAsync(DescribeDashboardSnapshotJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeDashboardSnapshotJobRequest, DescribeDashboardSnapshotJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResultResult> describeDashboardSnapshotJobResultAsync(
+            DescribeDashboardSnapshotJobResultRequest request) {
+
+        return describeDashboardSnapshotJobResultAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResultResult> describeDashboardSnapshotJobResultAsync(
+            DescribeDashboardSnapshotJobResultRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeDashboardSnapshotJobResultRequest, DescribeDashboardSnapshotJobResultResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDataSetResult> describeDataSetAsync(DescribeDataSetRequest request) {
 
         return describeDataSetAsync(request, null);
@@ -1684,6 +1712,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(StartAssetBundleImportJobRequest request,
             com.amazonaws.handlers.AsyncHandler<StartAssetBundleImportJobRequest, StartAssetBundleImportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDashboardSnapshotJobResult> startDashboardSnapshotJobAsync(StartDashboardSnapshotJobRequest request) {
+
+        return startDashboardSnapshotJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDashboardSnapshotJobResult> startDashboardSnapshotJobAsync(StartDashboardSnapshotJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartDashboardSnapshotJobRequest, StartDashboardSnapshotJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

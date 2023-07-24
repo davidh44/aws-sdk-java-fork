@@ -1928,6 +1928,74 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResult> describeDashboardSnapshotJobAsync(DescribeDashboardSnapshotJobRequest request) {
+
+        return describeDashboardSnapshotJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResult> describeDashboardSnapshotJobAsync(final DescribeDashboardSnapshotJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDashboardSnapshotJobRequest, DescribeDashboardSnapshotJobResult> asyncHandler) {
+        final DescribeDashboardSnapshotJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDashboardSnapshotJobResult>() {
+            @Override
+            public DescribeDashboardSnapshotJobResult call() throws Exception {
+                DescribeDashboardSnapshotJobResult result = null;
+
+                try {
+                    result = executeDescribeDashboardSnapshotJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResultResult> describeDashboardSnapshotJobResultAsync(
+            DescribeDashboardSnapshotJobResultRequest request) {
+
+        return describeDashboardSnapshotJobResultAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDashboardSnapshotJobResultResult> describeDashboardSnapshotJobResultAsync(
+            final DescribeDashboardSnapshotJobResultRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDashboardSnapshotJobResultRequest, DescribeDashboardSnapshotJobResultResult> asyncHandler) {
+        final DescribeDashboardSnapshotJobResultRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDashboardSnapshotJobResultResult>() {
+            @Override
+            public DescribeDashboardSnapshotJobResultResult call() throws Exception {
+                DescribeDashboardSnapshotJobResultResult result = null;
+
+                try {
+                    result = executeDescribeDashboardSnapshotJobResult(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDataSetResult> describeDataSetAsync(DescribeDataSetRequest request) {
 
         return describeDataSetAsync(request, null);
@@ -4266,6 +4334,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeStartAssetBundleImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDashboardSnapshotJobResult> startDashboardSnapshotJobAsync(StartDashboardSnapshotJobRequest request) {
+
+        return startDashboardSnapshotJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDashboardSnapshotJobResult> startDashboardSnapshotJobAsync(final StartDashboardSnapshotJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartDashboardSnapshotJobRequest, StartDashboardSnapshotJobResult> asyncHandler) {
+        final StartDashboardSnapshotJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartDashboardSnapshotJobResult>() {
+            @Override
+            public StartDashboardSnapshotJobResult call() throws Exception {
+                StartDashboardSnapshotJobResult result = null;
+
+                try {
+                    result = executeStartDashboardSnapshotJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

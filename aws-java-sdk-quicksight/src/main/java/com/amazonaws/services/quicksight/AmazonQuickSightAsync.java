@@ -2269,6 +2269,100 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Describes an existing snapshot job.
+     * </p>
+     * <p>
+     * Poll job descriptions after a job starts to know the status of the job. For information on available status
+     * codes, see <code>JobStatus</code>.
+     * </p>
+     * 
+     * @param describeDashboardSnapshotJobRequest
+     * @return A Java Future containing the result of the DescribeDashboardSnapshotJob operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.DescribeDashboardSnapshotJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardSnapshotJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDashboardSnapshotJobResult> describeDashboardSnapshotJobAsync(
+            DescribeDashboardSnapshotJobRequest describeDashboardSnapshotJobRequest);
+
+    /**
+     * <p>
+     * Describes an existing snapshot job.
+     * </p>
+     * <p>
+     * Poll job descriptions after a job starts to know the status of the job. For information on available status
+     * codes, see <code>JobStatus</code>.
+     * </p>
+     * 
+     * @param describeDashboardSnapshotJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDashboardSnapshotJob operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeDashboardSnapshotJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardSnapshotJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDashboardSnapshotJobResult> describeDashboardSnapshotJobAsync(
+            DescribeDashboardSnapshotJobRequest describeDashboardSnapshotJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDashboardSnapshotJobRequest, DescribeDashboardSnapshotJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the result of an existing snapshot job that has finished running.
+     * </p>
+     * <p>
+     * A finished snapshot job will return a <code>COMPLETED</code> or <code>FAILED</code> status when you poll the job
+     * with a <code>DescribeDashboardSnapshotJob</code> API call.
+     * </p>
+     * <p>
+     * If the job has not finished running, this operation returns a message that says
+     * <code>Dashboard Snapshot Job with id &lt;SnapshotjobId&gt; has not reached a terminal state.</code>.
+     * </p>
+     * 
+     * @param describeDashboardSnapshotJobResultRequest
+     * @return A Java Future containing the result of the DescribeDashboardSnapshotJobResult operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.DescribeDashboardSnapshotJobResult
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardSnapshotJobResult"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDashboardSnapshotJobResultResult> describeDashboardSnapshotJobResultAsync(
+            DescribeDashboardSnapshotJobResultRequest describeDashboardSnapshotJobResultRequest);
+
+    /**
+     * <p>
+     * Describes the result of an existing snapshot job that has finished running.
+     * </p>
+     * <p>
+     * A finished snapshot job will return a <code>COMPLETED</code> or <code>FAILED</code> status when you poll the job
+     * with a <code>DescribeDashboardSnapshotJob</code> API call.
+     * </p>
+     * <p>
+     * If the job has not finished running, this operation returns a message that says
+     * <code>Dashboard Snapshot Job with id &lt;SnapshotjobId&gt; has not reached a terminal state.</code>.
+     * </p>
+     * 
+     * @param describeDashboardSnapshotJobResultRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDashboardSnapshotJobResult operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeDashboardSnapshotJobResult
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeDashboardSnapshotJobResult"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDashboardSnapshotJobResultResult> describeDashboardSnapshotJobResultAsync(
+            DescribeDashboardSnapshotJobResultRequest describeDashboardSnapshotJobResultRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDashboardSnapshotJobResultRequest, DescribeDashboardSnapshotJobResultResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes a dataset. This operation doesn't support datasets that include uploaded files as a source.
      * </p>
      * 
@@ -4939,6 +5033,49 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
     java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(
             StartAssetBundleImportJobRequest startAssetBundleImportJobRequest,
             com.amazonaws.handlers.AsyncHandler<StartAssetBundleImportJobRequest, StartAssetBundleImportJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts an asynchronous job that generates a dashboard snapshot. You can request up to one paginated PDF and up to
+     * five CSVs per API call.
+     * </p>
+     * <p>
+     * Poll job descriptions with a <code>DescribeDashboardSnapshotJob</code> API call. Once the job succeeds, use the
+     * <code>DescribeDashboardSnapshotJobResult</code> API to obtain the download URIs that the job generates.
+     * </p>
+     * 
+     * @param startDashboardSnapshotJobRequest
+     * @return A Java Future containing the result of the StartDashboardSnapshotJob operation returned by the service.
+     * @sample AmazonQuickSightAsync.StartDashboardSnapshotJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartDashboardSnapshotJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartDashboardSnapshotJobResult> startDashboardSnapshotJobAsync(
+            StartDashboardSnapshotJobRequest startDashboardSnapshotJobRequest);
+
+    /**
+     * <p>
+     * Starts an asynchronous job that generates a dashboard snapshot. You can request up to one paginated PDF and up to
+     * five CSVs per API call.
+     * </p>
+     * <p>
+     * Poll job descriptions with a <code>DescribeDashboardSnapshotJob</code> API call. Once the job succeeds, use the
+     * <code>DescribeDashboardSnapshotJobResult</code> API to obtain the download URIs that the job generates.
+     * </p>
+     * 
+     * @param startDashboardSnapshotJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartDashboardSnapshotJob operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.StartDashboardSnapshotJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartDashboardSnapshotJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartDashboardSnapshotJobResult> startDashboardSnapshotJobAsync(
+            StartDashboardSnapshotJobRequest startDashboardSnapshotJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartDashboardSnapshotJobRequest, StartDashboardSnapshotJobResult> asyncHandler);
 
     /**
      * <p>
