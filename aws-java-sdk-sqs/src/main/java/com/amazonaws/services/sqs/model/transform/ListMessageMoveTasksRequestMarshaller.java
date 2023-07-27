@@ -15,40 +15,44 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * ListMessageMoveTasksRequest Marshaller
+ * ListMessageMoveTasksRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListMessageMoveTasksRequestMarshaller implements Marshaller<Request<ListMessageMoveTasksRequest>, ListMessageMoveTasksRequest> {
+@SdkInternalApi
+public class ListMessageMoveTasksRequestMarshaller {
 
-    public Request<ListMessageMoveTasksRequest> marshall(ListMessageMoveTasksRequest listMessageMoveTasksRequest) {
+    private static final MarshallingInfo<String> SOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SourceArn").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+
+    private static final ListMessageMoveTasksRequestMarshaller instance = new ListMessageMoveTasksRequestMarshaller();
+
+    public static ListMessageMoveTasksRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(ListMessageMoveTasksRequest listMessageMoveTasksRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (listMessageMoveTasksRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<ListMessageMoveTasksRequest> request = new DefaultRequest<ListMessageMoveTasksRequest>(listMessageMoveTasksRequest, "AmazonSQS");
-        request.addParameter("Action", "ListMessageMoveTasks");
-        request.addParameter("Version", "2012-11-05");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (listMessageMoveTasksRequest.getSourceArn() != null) {
-            request.addParameter("SourceArn", StringUtils.fromString(listMessageMoveTasksRequest.getSourceArn()));
+        try {
+            protocolMarshaller.marshall(listMessageMoveTasksRequest.getSourceArn(), SOURCEARN_BINDING);
+            protocolMarshaller.marshall(listMessageMoveTasksRequest.getMaxResults(), MAXRESULTS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
-
-        if (listMessageMoveTasksRequest.getMaxResults() != null) {
-            request.addParameter("MaxResults", StringUtils.fromInteger(listMessageMoveTasksRequest.getMaxResults()));
-        }
-
-        return request;
     }
 
 }

@@ -14,6 +14,8 @@ package com.amazonaws.services.sqs.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -24,7 +26,7 @@ import javax.annotation.Generated;
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable {
+public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -143,6 +145,7 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable 
      * @param status
      *        The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
      *        and FAILED.
+     * @see TaskStatus
      */
 
     public void setStatus(String status) {
@@ -157,6 +160,7 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable 
      * 
      * @return The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
      *         and FAILED.
+     * @see TaskStatus
      */
 
     public String getStatus() {
@@ -173,10 +177,29 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable 
      *        The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
      *        and FAILED.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TaskStatus
      */
 
     public ListMessageMoveTasksResultEntry withStatus(String status) {
         setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED, and
+     * FAILED.
+     * </p>
+     * 
+     * @param status
+     *        The status of the message movement task. Possible values are: RUNNING, COMPLETED, CANCELLING, CANCELLED,
+     *        and FAILED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TaskStatus
+     */
+
+    public ListMessageMoveTasksResultEntry withStatus(TaskStatus status) {
+        this.status = status.toString();
         return this;
     }
 
@@ -601,4 +624,9 @@ public class ListMessageMoveTasksResultEntry implements Serializable, Cloneable 
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.sqs.model.transform.ListMessageMoveTasksResultEntryMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }

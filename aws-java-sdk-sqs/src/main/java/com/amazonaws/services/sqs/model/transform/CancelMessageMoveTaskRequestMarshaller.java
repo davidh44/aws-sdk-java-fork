@@ -15,36 +15,41 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * CancelMessageMoveTaskRequest Marshaller
+ * CancelMessageMoveTaskRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class CancelMessageMoveTaskRequestMarshaller implements Marshaller<Request<CancelMessageMoveTaskRequest>, CancelMessageMoveTaskRequest> {
+@SdkInternalApi
+public class CancelMessageMoveTaskRequestMarshaller {
 
-    public Request<CancelMessageMoveTaskRequest> marshall(CancelMessageMoveTaskRequest cancelMessageMoveTaskRequest) {
+    private static final MarshallingInfo<String> TASKHANDLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskHandle").build();
+
+    private static final CancelMessageMoveTaskRequestMarshaller instance = new CancelMessageMoveTaskRequestMarshaller();
+
+    public static CancelMessageMoveTaskRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(CancelMessageMoveTaskRequest cancelMessageMoveTaskRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (cancelMessageMoveTaskRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<CancelMessageMoveTaskRequest> request = new DefaultRequest<CancelMessageMoveTaskRequest>(cancelMessageMoveTaskRequest, "AmazonSQS");
-        request.addParameter("Action", "CancelMessageMoveTask");
-        request.addParameter("Version", "2012-11-05");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (cancelMessageMoveTaskRequest.getTaskHandle() != null) {
-            request.addParameter("TaskHandle", StringUtils.fromString(cancelMessageMoveTaskRequest.getTaskHandle()));
+        try {
+            protocolMarshaller.marshall(cancelMessageMoveTaskRequest.getTaskHandle(), TASKHANDLE_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

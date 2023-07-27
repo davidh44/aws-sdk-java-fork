@@ -15,44 +15,47 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * StartMessageMoveTaskRequest Marshaller
+ * StartMessageMoveTaskRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class StartMessageMoveTaskRequestMarshaller implements Marshaller<Request<StartMessageMoveTaskRequest>, StartMessageMoveTaskRequest> {
+@SdkInternalApi
+public class StartMessageMoveTaskRequestMarshaller {
 
-    public Request<StartMessageMoveTaskRequest> marshall(StartMessageMoveTaskRequest startMessageMoveTaskRequest) {
+    private static final MarshallingInfo<String> SOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SourceArn").build();
+    private static final MarshallingInfo<String> DESTINATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DestinationArn").build();
+    private static final MarshallingInfo<Integer> MAXNUMBEROFMESSAGESPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxNumberOfMessagesPerSecond").build();
+
+    private static final StartMessageMoveTaskRequestMarshaller instance = new StartMessageMoveTaskRequestMarshaller();
+
+    public static StartMessageMoveTaskRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(StartMessageMoveTaskRequest startMessageMoveTaskRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (startMessageMoveTaskRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<StartMessageMoveTaskRequest> request = new DefaultRequest<StartMessageMoveTaskRequest>(startMessageMoveTaskRequest, "AmazonSQS");
-        request.addParameter("Action", "StartMessageMoveTask");
-        request.addParameter("Version", "2012-11-05");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (startMessageMoveTaskRequest.getSourceArn() != null) {
-            request.addParameter("SourceArn", StringUtils.fromString(startMessageMoveTaskRequest.getSourceArn()));
+        try {
+            protocolMarshaller.marshall(startMessageMoveTaskRequest.getSourceArn(), SOURCEARN_BINDING);
+            protocolMarshaller.marshall(startMessageMoveTaskRequest.getDestinationArn(), DESTINATIONARN_BINDING);
+            protocolMarshaller.marshall(startMessageMoveTaskRequest.getMaxNumberOfMessagesPerSecond(), MAXNUMBEROFMESSAGESPERSECOND_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
-
-        if (startMessageMoveTaskRequest.getDestinationArn() != null) {
-            request.addParameter("DestinationArn", StringUtils.fromString(startMessageMoveTaskRequest.getDestinationArn()));
-        }
-
-        if (startMessageMoveTaskRequest.getMaxNumberOfMessagesPerSecond() != null) {
-            request.addParameter("MaxNumberOfMessagesPerSecond", StringUtils.fromInteger(startMessageMoveTaskRequest.getMaxNumberOfMessagesPerSecond()));
-        }
-
-        return request;
     }
 
 }

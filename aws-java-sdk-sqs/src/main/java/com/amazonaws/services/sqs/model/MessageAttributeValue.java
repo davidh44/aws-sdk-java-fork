@@ -14,6 +14,8 @@ package com.amazonaws.services.sqs.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -30,7 +32,7 @@ import javax.annotation.Generated;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class MessageAttributeValue implements Serializable, Cloneable {
+public class MessageAttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -483,4 +485,9 @@ public class MessageAttributeValue implements Serializable, Cloneable {
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.sqs.model.transform.MessageAttributeValueMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }
