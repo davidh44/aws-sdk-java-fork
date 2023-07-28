@@ -15,41 +15,36 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
+import com.amazonaws.Request;
+import com.amazonaws.DefaultRequest;
+import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-
-import com.amazonaws.protocol.*;
-import com.amazonaws.annotation.SdkInternalApi;
+import com.amazonaws.transform.Marshaller;
+import com.amazonaws.util.StringUtils;
 
 /**
- * CancelMessageMoveTaskRequestMarshaller
+ * CancelMessageMoveTaskRequest Marshaller
  */
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-@SdkInternalApi
-public class CancelMessageMoveTaskRequestMarshaller {
+public class CancelMessageMoveTaskRequestMarshaller implements Marshaller<Request<CancelMessageMoveTaskRequest>, CancelMessageMoveTaskRequest> {
 
-    private static final MarshallingInfo<String> TASKHANDLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskHandle").build();
-
-    private static final CancelMessageMoveTaskRequestMarshaller instance = new CancelMessageMoveTaskRequestMarshaller();
-
-    public static CancelMessageMoveTaskRequestMarshaller getInstance() {
-        return instance;
-    }
-
-    /**
-     * Marshall the given parameter object.
-     */
-    public void marshall(CancelMessageMoveTaskRequest cancelMessageMoveTaskRequest, ProtocolMarshaller protocolMarshaller) {
+    public Request<CancelMessageMoveTaskRequest> marshall(CancelMessageMoveTaskRequest cancelMessageMoveTaskRequest) {
 
         if (cancelMessageMoveTaskRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        try {
-            protocolMarshaller.marshall(cancelMessageMoveTaskRequest.getTaskHandle(), TASKHANDLE_BINDING);
-        } catch (Exception e) {
-            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
+        Request<CancelMessageMoveTaskRequest> request = new DefaultRequest<CancelMessageMoveTaskRequest>(cancelMessageMoveTaskRequest, "AmazonSQS");
+        request.addParameter("Action", "CancelMessageMoveTask");
+        request.addParameter("Version", "2012-11-05");
+        request.setHttpMethod(HttpMethodName.POST);
+
+        if (cancelMessageMoveTaskRequest.getTaskHandle() != null) {
+            request.addParameter("TaskHandle", StringUtils.fromString(cancelMessageMoveTaskRequest.getTaskHandle()));
         }
+
+        return request;
     }
 
 }

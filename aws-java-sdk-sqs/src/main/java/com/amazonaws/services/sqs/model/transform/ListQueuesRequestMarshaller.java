@@ -15,47 +15,44 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
+import com.amazonaws.Request;
+import com.amazonaws.DefaultRequest;
+import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-
-import com.amazonaws.protocol.*;
-import com.amazonaws.annotation.SdkInternalApi;
+import com.amazonaws.transform.Marshaller;
+import com.amazonaws.util.StringUtils;
 
 /**
- * ListQueuesRequestMarshaller
+ * ListQueuesRequest Marshaller
  */
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-@SdkInternalApi
-public class ListQueuesRequestMarshaller {
+public class ListQueuesRequestMarshaller implements Marshaller<Request<ListQueuesRequest>, ListQueuesRequest> {
 
-    private static final MarshallingInfo<String> QUEUENAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueueNamePrefix").build();
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("NextToken").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
-
-    private static final ListQueuesRequestMarshaller instance = new ListQueuesRequestMarshaller();
-
-    public static ListQueuesRequestMarshaller getInstance() {
-        return instance;
-    }
-
-    /**
-     * Marshall the given parameter object.
-     */
-    public void marshall(ListQueuesRequest listQueuesRequest, ProtocolMarshaller protocolMarshaller) {
+    public Request<ListQueuesRequest> marshall(ListQueuesRequest listQueuesRequest) {
 
         if (listQueuesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        try {
-            protocolMarshaller.marshall(listQueuesRequest.getQueueNamePrefix(), QUEUENAMEPREFIX_BINDING);
-            protocolMarshaller.marshall(listQueuesRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listQueuesRequest.getMaxResults(), MAXRESULTS_BINDING);
-        } catch (Exception e) {
-            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
+        Request<ListQueuesRequest> request = new DefaultRequest<ListQueuesRequest>(listQueuesRequest, "AmazonSQS");
+        request.addParameter("Action", "ListQueues");
+        request.addParameter("Version", "2012-11-05");
+        request.setHttpMethod(HttpMethodName.POST);
+
+        if (listQueuesRequest.getQueueNamePrefix() != null) {
+            request.addParameter("QueueNamePrefix", StringUtils.fromString(listQueuesRequest.getQueueNamePrefix()));
         }
+
+        if (listQueuesRequest.getNextToken() != null) {
+            request.addParameter("NextToken", StringUtils.fromString(listQueuesRequest.getNextToken()));
+        }
+
+        if (listQueuesRequest.getMaxResults() != null) {
+            request.addParameter("MaxResults", StringUtils.fromInteger(listQueuesRequest.getMaxResults()));
+        }
+
+        return request;
     }
 
 }

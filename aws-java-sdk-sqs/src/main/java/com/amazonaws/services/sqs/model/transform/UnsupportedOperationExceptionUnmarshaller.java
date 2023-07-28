@@ -12,63 +12,32 @@
  */
 package com.amazonaws.services.sqs.model.transform;
 
-import java.math.*;
-
+import org.w3c.dom.Node;
 import javax.annotation.Generated;
 
-import com.amazonaws.services.sqs.model.*;
-import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
-import com.amazonaws.transform.*;
+import com.amazonaws.AmazonServiceException;
 
-import com.fasterxml.jackson.core.JsonToken;
-import static com.fasterxml.jackson.core.JsonToken.*;
+import com.amazonaws.transform.StandardErrorUnmarshaller;
 
-/**
- * UnsupportedOperationException JSON Unmarshaller
- */
+import com.amazonaws.services.sqs.model.UnsupportedOperationException;
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class UnsupportedOperationExceptionUnmarshaller extends EnhancedJsonErrorUnmarshaller {
-    private UnsupportedOperationExceptionUnmarshaller() {
-        super(com.amazonaws.services.sqs.model.UnsupportedOperationException.class, "UnsupportedOperation");
+public class UnsupportedOperationExceptionUnmarshaller extends StandardErrorUnmarshaller {
+
+    public UnsupportedOperationExceptionUnmarshaller() {
+        super(UnsupportedOperationException.class);
     }
 
     @Override
-    public com.amazonaws.services.sqs.model.UnsupportedOperationException unmarshallFromContext(JsonUnmarshallerContext context) throws Exception {
-        com.amazonaws.services.sqs.model.UnsupportedOperationException unsupportedOperationException = new com.amazonaws.services.sqs.model.UnsupportedOperationException(
-                null);
-
-        int originalDepth = context.getCurrentDepth();
-        String currentParentElement = context.getCurrentParentElement();
-        int targetDepth = originalDepth + 1;
-
-        JsonToken token = context.getCurrentToken();
-        if (token == null)
-            token = context.nextToken();
-        if (token == VALUE_NULL) {
+    public AmazonServiceException unmarshall(Node node) throws Exception {
+        // Bail out if this isn't the right error code that this
+        // marshaller understands
+        String errorCode = parseErrorCode(node);
+        if (errorCode == null || !errorCode.equals("AWS.SimpleQueueService.UnsupportedOperation"))
             return null;
-        }
 
-        while (true) {
-            if (token == null)
-                break;
+        UnsupportedOperationException e = (UnsupportedOperationException) super.unmarshall(node);
 
-            if (token == FIELD_NAME || token == START_OBJECT) {
-            } else if (token == END_ARRAY || token == END_OBJECT) {
-                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
-                    if (context.getCurrentDepth() <= originalDepth)
-                        break;
-                }
-            }
-            token = context.nextToken();
-        }
-        return unsupportedOperationException;
-    }
-
-    private static UnsupportedOperationExceptionUnmarshaller instance;
-
-    public static UnsupportedOperationExceptionUnmarshaller getInstance() {
-        if (instance == null)
-            instance = new UnsupportedOperationExceptionUnmarshaller();
-        return instance;
+        return e;
     }
 }

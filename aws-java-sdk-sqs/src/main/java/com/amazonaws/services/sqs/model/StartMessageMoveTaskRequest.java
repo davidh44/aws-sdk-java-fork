@@ -27,8 +27,9 @@ public class StartMessageMoveTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter queue
-     * (DLQ) ARNs are accepted.
+     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of dead-letter
+     * queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are non-SQS queues, such
+     * as Lambda or Amazon SNS topics, are not currently supported.
      * </p>
      */
     private String sourceArn;
@@ -52,13 +53,15 @@ public class StartMessageMoveTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter queue
-     * (DLQ) ARNs are accepted.
+     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of dead-letter
+     * queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are non-SQS queues, such
+     * as Lambda or Amazon SNS topics, are not currently supported.
      * </p>
      * 
      * @param sourceArn
-     *        The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter
-     *        queue (DLQ) ARNs are accepted.
+     *        The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of
+     *        dead-letter queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are
+     *        non-SQS queues, such as Lambda or Amazon SNS topics, are not currently supported.
      */
 
     public void setSourceArn(String sourceArn) {
@@ -67,12 +70,14 @@ public class StartMessageMoveTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter queue
-     * (DLQ) ARNs are accepted.
+     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of dead-letter
+     * queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are non-SQS queues, such
+     * as Lambda or Amazon SNS topics, are not currently supported.
      * </p>
      * 
-     * @return The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter
-     *         queue (DLQ) ARNs are accepted.
+     * @return The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of
+     *         dead-letter queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are
+     *         non-SQS queues, such as Lambda or Amazon SNS topics, are not currently supported.
      */
 
     public String getSourceArn() {
@@ -81,13 +86,15 @@ public class StartMessageMoveTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter queue
-     * (DLQ) ARNs are accepted.
+     * The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of dead-letter
+     * queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are non-SQS queues, such
+     * as Lambda or Amazon SNS topics, are not currently supported.
      * </p>
      * 
      * @param sourceArn
-     *        The ARN of the queue that contains the messages to be moved to another queue. Currently, only dead-letter
-     *        queue (DLQ) ARNs are accepted.
+     *        The ARN of the queue that contains the messages to be moved to another queue. Currently, only ARNs of
+     *        dead-letter queues (DLQs) whose sources are other Amazon SQS queues are accepted. DLQs whose sources are
+     *        non-SQS queues, such as Lambda or Amazon SNS topics, are not currently supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

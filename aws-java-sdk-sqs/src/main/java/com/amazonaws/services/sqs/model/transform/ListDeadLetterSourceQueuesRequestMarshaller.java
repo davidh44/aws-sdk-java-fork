@@ -15,47 +15,45 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
+import com.amazonaws.Request;
+import com.amazonaws.DefaultRequest;
+import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-
-import com.amazonaws.protocol.*;
-import com.amazonaws.annotation.SdkInternalApi;
+import com.amazonaws.transform.Marshaller;
+import com.amazonaws.util.StringUtils;
 
 /**
- * ListDeadLetterSourceQueuesRequestMarshaller
+ * ListDeadLetterSourceQueuesRequest Marshaller
  */
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-@SdkInternalApi
-public class ListDeadLetterSourceQueuesRequestMarshaller {
+public class ListDeadLetterSourceQueuesRequestMarshaller implements Marshaller<Request<ListDeadLetterSourceQueuesRequest>, ListDeadLetterSourceQueuesRequest> {
 
-    private static final MarshallingInfo<String> QUEUEURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("QueueUrl").build();
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("NextToken").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
-
-    private static final ListDeadLetterSourceQueuesRequestMarshaller instance = new ListDeadLetterSourceQueuesRequestMarshaller();
-
-    public static ListDeadLetterSourceQueuesRequestMarshaller getInstance() {
-        return instance;
-    }
-
-    /**
-     * Marshall the given parameter object.
-     */
-    public void marshall(ListDeadLetterSourceQueuesRequest listDeadLetterSourceQueuesRequest, ProtocolMarshaller protocolMarshaller) {
+    public Request<ListDeadLetterSourceQueuesRequest> marshall(ListDeadLetterSourceQueuesRequest listDeadLetterSourceQueuesRequest) {
 
         if (listDeadLetterSourceQueuesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        try {
-            protocolMarshaller.marshall(listDeadLetterSourceQueuesRequest.getQueueUrl(), QUEUEURL_BINDING);
-            protocolMarshaller.marshall(listDeadLetterSourceQueuesRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listDeadLetterSourceQueuesRequest.getMaxResults(), MAXRESULTS_BINDING);
-        } catch (Exception e) {
-            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
+        Request<ListDeadLetterSourceQueuesRequest> request = new DefaultRequest<ListDeadLetterSourceQueuesRequest>(listDeadLetterSourceQueuesRequest,
+                "AmazonSQS");
+        request.addParameter("Action", "ListDeadLetterSourceQueues");
+        request.addParameter("Version", "2012-11-05");
+        request.setHttpMethod(HttpMethodName.POST);
+
+        if (listDeadLetterSourceQueuesRequest.getQueueUrl() != null) {
+            request.addParameter("QueueUrl", StringUtils.fromString(listDeadLetterSourceQueuesRequest.getQueueUrl()));
         }
+
+        if (listDeadLetterSourceQueuesRequest.getNextToken() != null) {
+            request.addParameter("NextToken", StringUtils.fromString(listDeadLetterSourceQueuesRequest.getNextToken()));
+        }
+
+        if (listDeadLetterSourceQueuesRequest.getMaxResults() != null) {
+            request.addParameter("MaxResults", StringUtils.fromInteger(listDeadLetterSourceQueuesRequest.getMaxResults()));
+        }
+
+        return request;
     }
 
 }

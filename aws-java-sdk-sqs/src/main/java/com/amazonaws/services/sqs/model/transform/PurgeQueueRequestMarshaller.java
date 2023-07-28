@@ -15,41 +15,36 @@ package com.amazonaws.services.sqs.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
+import com.amazonaws.Request;
+import com.amazonaws.DefaultRequest;
+import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.sqs.model.*;
-
-import com.amazonaws.protocol.*;
-import com.amazonaws.annotation.SdkInternalApi;
+import com.amazonaws.transform.Marshaller;
+import com.amazonaws.util.StringUtils;
 
 /**
- * PurgeQueueRequestMarshaller
+ * PurgeQueueRequest Marshaller
  */
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-@SdkInternalApi
-public class PurgeQueueRequestMarshaller {
+public class PurgeQueueRequestMarshaller implements Marshaller<Request<PurgeQueueRequest>, PurgeQueueRequest> {
 
-    private static final MarshallingInfo<String> QUEUEURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("QueueUrl").build();
-
-    private static final PurgeQueueRequestMarshaller instance = new PurgeQueueRequestMarshaller();
-
-    public static PurgeQueueRequestMarshaller getInstance() {
-        return instance;
-    }
-
-    /**
-     * Marshall the given parameter object.
-     */
-    public void marshall(PurgeQueueRequest purgeQueueRequest, ProtocolMarshaller protocolMarshaller) {
+    public Request<PurgeQueueRequest> marshall(PurgeQueueRequest purgeQueueRequest) {
 
         if (purgeQueueRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        try {
-            protocolMarshaller.marshall(purgeQueueRequest.getQueueUrl(), QUEUEURL_BINDING);
-        } catch (Exception e) {
-            throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
+        Request<PurgeQueueRequest> request = new DefaultRequest<PurgeQueueRequest>(purgeQueueRequest, "AmazonSQS");
+        request.addParameter("Action", "PurgeQueue");
+        request.addParameter("Version", "2012-11-05");
+        request.setHttpMethod(HttpMethodName.POST);
+
+        if (purgeQueueRequest.getQueueUrl() != null) {
+            request.addParameter("QueueUrl", StringUtils.fromString(purgeQueueRequest.getQueueUrl()));
         }
+
+        return request;
     }
 
 }

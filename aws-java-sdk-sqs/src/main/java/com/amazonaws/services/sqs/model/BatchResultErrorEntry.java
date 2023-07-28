@@ -14,8 +14,6 @@ package com.amazonaws.services.sqs.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
-import com.amazonaws.protocol.StructuredPojo;
-import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -26,7 +24,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class BatchResultErrorEntry implements Serializable, Cloneable, StructuredPojo {
+public class BatchResultErrorEntry implements Serializable, Cloneable {
 
     /**
      * <p>
@@ -299,9 +297,4 @@ public class BatchResultErrorEntry implements Serializable, Cloneable, Structure
         }
     }
 
-    @com.amazonaws.annotation.SdkInternalApi
-    @Override
-    public void marshall(ProtocolMarshaller protocolMarshaller) {
-        com.amazonaws.services.sqs.model.transform.BatchResultErrorEntryMarshaller.getInstance().marshall(this, protocolMarshaller);
-    }
 }

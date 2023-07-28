@@ -12,63 +12,32 @@
  */
 package com.amazonaws.services.sqs.model.transform;
 
-import java.math.*;
-
+import org.w3c.dom.Node;
 import javax.annotation.Generated;
 
-import com.amazonaws.services.sqs.model.*;
-import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
-import com.amazonaws.transform.*;
+import com.amazonaws.AmazonServiceException;
 
-import com.fasterxml.jackson.core.JsonToken;
-import static com.fasterxml.jackson.core.JsonToken.*;
+import com.amazonaws.transform.StandardErrorUnmarshaller;
 
-/**
- * BatchRequestTooLongException JSON Unmarshaller
- */
+import com.amazonaws.services.sqs.model.BatchRequestTooLongException;
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class BatchRequestTooLongExceptionUnmarshaller extends EnhancedJsonErrorUnmarshaller {
-    private BatchRequestTooLongExceptionUnmarshaller() {
-        super(com.amazonaws.services.sqs.model.BatchRequestTooLongException.class, "BatchRequestTooLong");
+public class BatchRequestTooLongExceptionUnmarshaller extends StandardErrorUnmarshaller {
+
+    public BatchRequestTooLongExceptionUnmarshaller() {
+        super(BatchRequestTooLongException.class);
     }
 
     @Override
-    public com.amazonaws.services.sqs.model.BatchRequestTooLongException unmarshallFromContext(JsonUnmarshallerContext context) throws Exception {
-        com.amazonaws.services.sqs.model.BatchRequestTooLongException batchRequestTooLongException = new com.amazonaws.services.sqs.model.BatchRequestTooLongException(
-                null);
-
-        int originalDepth = context.getCurrentDepth();
-        String currentParentElement = context.getCurrentParentElement();
-        int targetDepth = originalDepth + 1;
-
-        JsonToken token = context.getCurrentToken();
-        if (token == null)
-            token = context.nextToken();
-        if (token == VALUE_NULL) {
+    public AmazonServiceException unmarshall(Node node) throws Exception {
+        // Bail out if this isn't the right error code that this
+        // marshaller understands
+        String errorCode = parseErrorCode(node);
+        if (errorCode == null || !errorCode.equals("AWS.SimpleQueueService.BatchRequestTooLong"))
             return null;
-        }
 
-        while (true) {
-            if (token == null)
-                break;
+        BatchRequestTooLongException e = (BatchRequestTooLongException) super.unmarshall(node);
 
-            if (token == FIELD_NAME || token == START_OBJECT) {
-            } else if (token == END_ARRAY || token == END_OBJECT) {
-                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
-                    if (context.getCurrentDepth() <= originalDepth)
-                        break;
-                }
-            }
-            token = context.nextToken();
-        }
-        return batchRequestTooLongException;
-    }
-
-    private static BatchRequestTooLongExceptionUnmarshaller instance;
-
-    public static BatchRequestTooLongExceptionUnmarshaller getInstance() {
-        if (instance == null)
-            instance = new BatchRequestTooLongExceptionUnmarshaller();
-        return instance;
+        return e;
     }
 }

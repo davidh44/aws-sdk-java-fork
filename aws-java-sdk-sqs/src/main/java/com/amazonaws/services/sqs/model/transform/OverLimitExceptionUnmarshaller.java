@@ -12,62 +12,32 @@
  */
 package com.amazonaws.services.sqs.model.transform;
 
-import java.math.*;
-
+import org.w3c.dom.Node;
 import javax.annotation.Generated;
 
-import com.amazonaws.services.sqs.model.*;
-import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
-import com.amazonaws.transform.*;
+import com.amazonaws.AmazonServiceException;
 
-import com.fasterxml.jackson.core.JsonToken;
-import static com.fasterxml.jackson.core.JsonToken.*;
+import com.amazonaws.transform.StandardErrorUnmarshaller;
 
-/**
- * OverLimitException JSON Unmarshaller
- */
+import com.amazonaws.services.sqs.model.OverLimitException;
+
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class OverLimitExceptionUnmarshaller extends EnhancedJsonErrorUnmarshaller {
-    private OverLimitExceptionUnmarshaller() {
-        super(com.amazonaws.services.sqs.model.OverLimitException.class, "OverLimit");
+public class OverLimitExceptionUnmarshaller extends StandardErrorUnmarshaller {
+
+    public OverLimitExceptionUnmarshaller() {
+        super(OverLimitException.class);
     }
 
     @Override
-    public com.amazonaws.services.sqs.model.OverLimitException unmarshallFromContext(JsonUnmarshallerContext context) throws Exception {
-        com.amazonaws.services.sqs.model.OverLimitException overLimitException = new com.amazonaws.services.sqs.model.OverLimitException(null);
-
-        int originalDepth = context.getCurrentDepth();
-        String currentParentElement = context.getCurrentParentElement();
-        int targetDepth = originalDepth + 1;
-
-        JsonToken token = context.getCurrentToken();
-        if (token == null)
-            token = context.nextToken();
-        if (token == VALUE_NULL) {
+    public AmazonServiceException unmarshall(Node node) throws Exception {
+        // Bail out if this isn't the right error code that this
+        // marshaller understands
+        String errorCode = parseErrorCode(node);
+        if (errorCode == null || !errorCode.equals("OverLimit"))
             return null;
-        }
 
-        while (true) {
-            if (token == null)
-                break;
+        OverLimitException e = (OverLimitException) super.unmarshall(node);
 
-            if (token == FIELD_NAME || token == START_OBJECT) {
-            } else if (token == END_ARRAY || token == END_OBJECT) {
-                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
-                    if (context.getCurrentDepth() <= originalDepth)
-                        break;
-                }
-            }
-            token = context.nextToken();
-        }
-        return overLimitException;
-    }
-
-    private static OverLimitExceptionUnmarshaller instance;
-
-    public static OverLimitExceptionUnmarshaller getInstance() {
-        if (instance == null)
-            instance = new OverLimitExceptionUnmarshaller();
-        return instance;
+        return e;
     }
 }
