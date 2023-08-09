@@ -59,7 +59,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
+     * following Amazon Web Services Regions:
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -114,6 +121,30 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </p>
      */
     private OpenZFSCreateRootVolumeConfiguration rootVolumeConfiguration;
+    /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     */
+    private String preferredSubnetId;
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP address range for
+     * you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses for file systems deployed
+     * in the same VPC/route tables.
+     * </p>
+     */
+    private String endpointIpAddressRange;
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
+     * </p>
+     */
+    private java.util.List<String> routeTableIds;
 
     /**
      * @param automaticBackupRetentionDays
@@ -347,7 +378,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
+     * following Amazon Web Services Regions:
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -374,7 +412,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     *        <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
+     *        redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
+     *        available in the following Amazon Web Services Regions:
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *        <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *        available.
      *        </p>
@@ -408,7 +453,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
+     * following Amazon Web Services Regions:
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -434,7 +486,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     *         <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
+     *         redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
+     *         available in the following Amazon Web Services Regions:
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *         <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *         available.
      *         </p>
@@ -468,7 +527,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
+     * following Amazon Web Services Regions:
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -495,7 +561,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     *        <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
+     *        redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
+     *        available in the following Amazon Web Services Regions:
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *        <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *        available.
      *        </p>
@@ -531,7 +604,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
+     * following Amazon Web Services Regions:
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -558,7 +638,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MBps.
+     *        <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
+     *        redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
+     *        available in the following Amazon Web Services Regions:
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *        <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *        available.
      *        </p>
@@ -819,6 +906,196 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     * 
+     * @param preferredSubnetId
+     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
+     *        which you want the preferred file server to be located.
+     */
+
+    public void setPreferredSubnetId(String preferredSubnetId) {
+        this.preferredSubnetId = preferredSubnetId;
+    }
+
+    /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     * 
+     * @return Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
+     *         which you want the preferred file server to be located.
+     */
+
+    public String getPreferredSubnetId() {
+        return this.preferredSubnetId;
+    }
+
+    /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     * 
+     * @param preferredSubnetId
+     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
+     *        which you want the preferred file server to be located.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemOpenZFSConfiguration withPreferredSubnetId(String preferredSubnetId) {
+        setPreferredSubnetId(preferredSubnetId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP address range for
+     * you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses for file systems deployed
+     * in the same VPC/route tables.
+     * </p>
+     * 
+     * @param endpointIpAddressRange
+     *        (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be
+     *        created. By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP
+     *        address range for you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses
+     *        for file systems deployed in the same VPC/route tables.
+     */
+
+    public void setEndpointIpAddressRange(String endpointIpAddressRange) {
+        this.endpointIpAddressRange = endpointIpAddressRange;
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP address range for
+     * you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses for file systems deployed
+     * in the same VPC/route tables.
+     * </p>
+     * 
+     * @return (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be
+     *         created. By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP
+     *         address range for you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses
+     *         for file systems deployed in the same VPC/route tables.
+     */
+
+    public String getEndpointIpAddressRange() {
+        return this.endpointIpAddressRange;
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP address range for
+     * you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses for file systems deployed
+     * in the same VPC/route tables.
+     * </p>
+     * 
+     * @param endpointIpAddressRange
+     *        (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be
+     *        created. By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28 IP
+     *        address range for you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP addresses
+     *        for file systems deployed in the same VPC/route tables.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemOpenZFSConfiguration withEndpointIpAddressRange(String endpointIpAddressRange) {
+        setEndpointIpAddressRange(endpointIpAddressRange);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
+     * </p>
+     * 
+     * @return (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *         endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *         your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     */
+
+    public java.util.List<String> getRouteTableIds() {
+        return routeTableIds;
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
+     * </p>
+     * 
+     * @param routeTableIds
+     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     */
+
+    public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
+        if (routeTableIds == null) {
+            this.routeTableIds = null;
+            return;
+        }
+
+        this.routeTableIds = new java.util.ArrayList<String>(routeTableIds);
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRouteTableIds(java.util.Collection)} or {@link #withRouteTableIds(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param routeTableIds
+     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemOpenZFSConfiguration withRouteTableIds(String... routeTableIds) {
+        if (this.routeTableIds == null) {
+            setRouteTableIds(new java.util.ArrayList<String>(routeTableIds.length));
+        }
+        for (String ele : routeTableIds) {
+            this.routeTableIds.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
+     * </p>
+     * 
+     * @param routeTableIds
+     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemOpenZFSConfiguration withRouteTableIds(java.util.Collection<String> routeTableIds) {
+        setRouteTableIds(routeTableIds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -847,7 +1124,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
         if (getDiskIopsConfiguration() != null)
             sb.append("DiskIopsConfiguration: ").append(getDiskIopsConfiguration()).append(",");
         if (getRootVolumeConfiguration() != null)
-            sb.append("RootVolumeConfiguration: ").append(getRootVolumeConfiguration());
+            sb.append("RootVolumeConfiguration: ").append(getRootVolumeConfiguration()).append(",");
+        if (getPreferredSubnetId() != null)
+            sb.append("PreferredSubnetId: ").append(getPreferredSubnetId()).append(",");
+        if (getEndpointIpAddressRange() != null)
+            sb.append("EndpointIpAddressRange: ").append(getEndpointIpAddressRange()).append(",");
+        if (getRouteTableIds() != null)
+            sb.append("RouteTableIds: ").append(getRouteTableIds());
         sb.append("}");
         return sb.toString();
     }
@@ -899,6 +1182,18 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
             return false;
         if (other.getRootVolumeConfiguration() != null && other.getRootVolumeConfiguration().equals(this.getRootVolumeConfiguration()) == false)
             return false;
+        if (other.getPreferredSubnetId() == null ^ this.getPreferredSubnetId() == null)
+            return false;
+        if (other.getPreferredSubnetId() != null && other.getPreferredSubnetId().equals(this.getPreferredSubnetId()) == false)
+            return false;
+        if (other.getEndpointIpAddressRange() == null ^ this.getEndpointIpAddressRange() == null)
+            return false;
+        if (other.getEndpointIpAddressRange() != null && other.getEndpointIpAddressRange().equals(this.getEndpointIpAddressRange()) == false)
+            return false;
+        if (other.getRouteTableIds() == null ^ this.getRouteTableIds() == null)
+            return false;
+        if (other.getRouteTableIds() != null && other.getRouteTableIds().equals(this.getRouteTableIds()) == false)
+            return false;
         return true;
     }
 
@@ -916,6 +1211,9 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
         hashCode = prime * hashCode + ((getWeeklyMaintenanceStartTime() == null) ? 0 : getWeeklyMaintenanceStartTime().hashCode());
         hashCode = prime * hashCode + ((getDiskIopsConfiguration() == null) ? 0 : getDiskIopsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRootVolumeConfiguration() == null) ? 0 : getRootVolumeConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getPreferredSubnetId() == null) ? 0 : getPreferredSubnetId().hashCode());
+        hashCode = prime * hashCode + ((getEndpointIpAddressRange() == null) ? 0 : getEndpointIpAddressRange().hashCode());
+        hashCode = prime * hashCode + ((getRouteTableIds() == null) ? 0 : getRouteTableIds().hashCode());
         return hashCode;
     }
 

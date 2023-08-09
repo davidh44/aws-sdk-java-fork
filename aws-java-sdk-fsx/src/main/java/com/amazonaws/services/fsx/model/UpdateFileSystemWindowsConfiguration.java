@@ -77,6 +77,14 @@ public class UpdateFileSystemWindowsConfiguration implements Serializable, Clone
      * </p>
      */
     private WindowsAuditLogCreateConfiguration auditLogConfiguration;
+    /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file system. By
+     * default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can provision additional
+     * IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput capacity.
+     * </p>
+     */
+    private DiskIopsConfiguration diskIopsConfiguration;
 
     /**
      * <p>
@@ -398,6 +406,61 @@ public class UpdateFileSystemWindowsConfiguration implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file system. By
+     * default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can provision additional
+     * IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput capacity.
+     * </p>
+     * 
+     * @param diskIopsConfiguration
+     *        The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file system.
+     *        By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can provision
+     *        additional IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput
+     *        capacity.
+     */
+
+    public void setDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
+        this.diskIopsConfiguration = diskIopsConfiguration;
+    }
+
+    /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file system. By
+     * default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can provision additional
+     * IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput capacity.
+     * </p>
+     * 
+     * @return The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file
+     *         system. By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can
+     *         provision additional IOPS per GiB of storage, up to the maximum limit associated with your chosen
+     *         throughput capacity.
+     */
+
+    public DiskIopsConfiguration getDiskIopsConfiguration() {
+        return this.diskIopsConfiguration;
+    }
+
+    /**
+     * <p>
+     * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file system. By
+     * default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can provision additional
+     * IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput capacity.
+     * </p>
+     * 
+     * @param diskIopsConfiguration
+     *        The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for Windows file system.
+     *        By default, Amazon FSx automatically provisions 3 IOPS per GiB of storage capacity. You can provision
+     *        additional IOPS per GiB of storage, up to the maximum limit associated with your chosen throughput
+     *        capacity.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemWindowsConfiguration withDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
+        setDiskIopsConfiguration(diskIopsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -420,7 +483,9 @@ public class UpdateFileSystemWindowsConfiguration implements Serializable, Clone
         if (getSelfManagedActiveDirectoryConfiguration() != null)
             sb.append("SelfManagedActiveDirectoryConfiguration: ").append(getSelfManagedActiveDirectoryConfiguration()).append(",");
         if (getAuditLogConfiguration() != null)
-            sb.append("AuditLogConfiguration: ").append(getAuditLogConfiguration());
+            sb.append("AuditLogConfiguration: ").append(getAuditLogConfiguration()).append(",");
+        if (getDiskIopsConfiguration() != null)
+            sb.append("DiskIopsConfiguration: ").append(getDiskIopsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -461,6 +526,10 @@ public class UpdateFileSystemWindowsConfiguration implements Serializable, Clone
             return false;
         if (other.getAuditLogConfiguration() != null && other.getAuditLogConfiguration().equals(this.getAuditLogConfiguration()) == false)
             return false;
+        if (other.getDiskIopsConfiguration() == null ^ this.getDiskIopsConfiguration() == null)
+            return false;
+        if (other.getDiskIopsConfiguration() != null && other.getDiskIopsConfiguration().equals(this.getDiskIopsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -475,6 +544,7 @@ public class UpdateFileSystemWindowsConfiguration implements Serializable, Clone
         hashCode = prime * hashCode + ((getThroughputCapacity() == null) ? 0 : getThroughputCapacity().hashCode());
         hashCode = prime * hashCode + ((getSelfManagedActiveDirectoryConfiguration() == null) ? 0 : getSelfManagedActiveDirectoryConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAuditLogConfiguration() == null) ? 0 : getAuditLogConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDiskIopsConfiguration() == null) ? 0 : getDiskIopsConfiguration().hashCode());
         return hashCode;
     }
 

@@ -3358,8 +3358,8 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Lists tags for a resource. Tagging is currently supported for detectors, finding filters, IP sets, threat intel
-     * sets, publishing destination, with a limit of 50 tags per resource. When invoked, this operation returns all
-     * assigned tags for a given resource.
+     * sets, and publishing destination, with a limit of 50 tags per each resource. When invoked, this operation returns
+     * all assigned tags for a given resource.
      * </p>
      * 
      * @param listTagsForResourceRequest

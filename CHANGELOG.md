@@ -1,3 +1,24 @@
+# __1.12.526__ __2023-08-09__
+## __AWS Global Accelerator__
+  - ### Features
+    - Documentation update for dualstack EC2 endpoint support
+
+## __Amazon Chime SDK Voice__
+  - ### Features
+    - Updating CreatePhoneNumberOrder, UpdatePhoneNumber and BatchUpdatePhoneNumbers APIs, adding phone number name
+
+## __Amazon FSx__
+  - ### Features
+    - For FSx for Lustre, add new data repository task type, RELEASE_DATA_FROM_FILESYSTEM, to release files that have been archived to S3. For FSx for Windows, enable support for configuring and updating SSD IOPS, and for updating storage type. For FSx for OpenZFS, add new deployment type, MULTI_AZ_1.
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Added autoEnable ALL to UpdateOrganizationConfiguration and DescribeOrganizationConfiguration APIs.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release adds support for cross account access for SageMaker Model Cards through AWS RAM.
+
 # __1.12.525__ __2023-08-08__
 ## __AWS Backup__
   - ### Features

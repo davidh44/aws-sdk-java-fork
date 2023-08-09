@@ -56,7 +56,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      */
@@ -87,7 +87,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * before their retention periods expire using privileged delete. This retention mode is used to advance an
      * organization's data integrity and internal compliance or to test retention settings before using SnapLock
      * Compliance. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock Enterprise</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      * </p>
      * </li>
      * </ul>
@@ -259,7 +259,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -271,7 +271,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *        value is <code>DISABLED</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *        >Privileged delete</a>.
      * @see PrivilegedDelete
      */
@@ -289,7 +289,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -300,7 +300,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *         value is <code>DISABLED</code>. </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *         >Privileged delete</a>.
      * @see PrivilegedDelete
      */
@@ -318,7 +318,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -330,7 +330,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *        value is <code>DISABLED</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *        >Privileged delete</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PrivilegedDelete
@@ -350,7 +350,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -362,7 +362,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *        value is <code>DISABLED</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *        >Privileged delete</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PrivilegedDelete
@@ -433,7 +433,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * before their retention periods expire using privileged delete. This retention mode is used to advance an
      * organization's data integrity and internal compliance or to test retention settings before using SnapLock
      * Compliance. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock Enterprise</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      * </p>
      * </li>
      * </ul>
@@ -456,8 +456,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *        users before their retention periods expire using privileged delete. This retention mode is used to
      *        advance an organization's data integrity and internal compliance or to test retention settings before
      *        using SnapLock Compliance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock
-     *        Enterprise</a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      *        </p>
      *        </li>
      * @see SnaplockType
@@ -487,7 +486,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * before their retention periods expire using privileged delete. This retention mode is used to advance an
      * organization's data integrity and internal compliance or to test retention settings before using SnapLock
      * Compliance. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock Enterprise</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      * </p>
      * </li>
      * </ul>
@@ -510,7 +509,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *         users before their retention periods expire using privileged delete. This retention mode is used to
      *         advance an organization's data integrity and internal compliance or to test retention settings before
      *         using SnapLock Compliance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock
      *         Enterprise</a>.
      *         </p>
      *         </li>
@@ -541,7 +540,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * before their retention periods expire using privileged delete. This retention mode is used to advance an
      * organization's data integrity and internal compliance or to test retention settings before using SnapLock
      * Compliance. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock Enterprise</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      * </p>
      * </li>
      * </ul>
@@ -564,8 +563,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *        users before their retention periods expire using privileged delete. This retention mode is used to
      *        advance an organization's data integrity and internal compliance or to test retention settings before
      *        using SnapLock Compliance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock
-     *        Enterprise</a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -597,7 +595,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      * before their retention periods expire using privileged delete. This retention mode is used to advance an
      * organization's data integrity and internal compliance or to test retention settings before using SnapLock
      * Compliance. For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock Enterprise</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      * </p>
      * </li>
      * </ul>
@@ -620,8 +618,7 @@ public class SnaplockConfiguration implements Serializable, Cloneable, Structure
      *        users before their retention periods expire using privileged delete. This retention mode is used to
      *        advance an organization's data integrity and internal compliance or to test retention settings before
      *        using SnapLock Compliance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.htmlFile">SnapLock
-     *        Enterprise</a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html">SnapLock Enterprise</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

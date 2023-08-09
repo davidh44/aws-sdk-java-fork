@@ -243,9 +243,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      * example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      * </p>
      * <p>
-     * For information about supported compiler options, see <a
-     * href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     * Compiler CLI</a>.
+     * For information about supported compiler options, see <a href=
+     * "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     * > Neuron Compiler CLI Reference Guide</a>.
      * </p>
      * </li>
      * <li>
@@ -1071,9 +1071,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      * example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      * </p>
      * <p>
-     * For information about supported compiler options, see <a
-     * href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     * Compiler CLI</a>.
+     * For information about supported compiler options, see <a href=
+     * "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     * > Neuron Compiler CLI Reference Guide</a>.
      * </p>
      * </li>
      * <li>
@@ -1232,9 +1232,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      *        For example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      *        </p>
      *        <p>
-     *        For information about supported compiler options, see <a
-     *        href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     *        Compiler CLI</a>.
+     *        For information about supported compiler options, see <a href=
+     *        "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     *        > Neuron Compiler CLI Reference Guide</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1400,9 +1400,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      * example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      * </p>
      * <p>
-     * For information about supported compiler options, see <a
-     * href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     * Compiler CLI</a>.
+     * For information about supported compiler options, see <a href=
+     * "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     * > Neuron Compiler CLI Reference Guide</a>.
      * </p>
      * </li>
      * <li>
@@ -1561,9 +1561,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      *         For example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      *         </p>
      *         <p>
-     *         For information about supported compiler options, see <a
-     *         href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     *         Compiler CLI</a>.
+     *         For information about supported compiler options, see <a href=
+     *         "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     *         > Neuron Compiler CLI Reference Guide</a>.
      *         </p>
      *         </li>
      *         <li>
@@ -1729,9 +1729,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      * example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      * </p>
      * <p>
-     * For information about supported compiler options, see <a
-     * href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     * Compiler CLI</a>.
+     * For information about supported compiler options, see <a href=
+     * "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     * > Neuron Compiler CLI Reference Guide</a>.
      * </p>
      * </li>
      * <li>
@@ -1890,9 +1890,9 @@ public class OutputConfig implements Serializable, Cloneable, StructuredPojo {
      *        For example, <code>"CompilerOptions": "\"--verbose 1 --num-neuroncores 2 -O2\""</code>.
      *        </p>
      *        <p>
-     *        For information about supported compiler options, see <a
-     *        href="https://github.com/aws/aws-neuron-sdk/blob/master/docs/neuron-cc/command-line-reference.md"> Neuron
-     *        Compiler CLI</a>.
+     *        For information about supported compiler options, see <a href=
+     *        "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/compiler/neuronx-cc/api-reference-guide/neuron-compiler-cli-reference-guide.html"
+     *        > Neuron Compiler CLI Reference Guide</a>.
      *        </p>
      *        </li>
      *        <li>

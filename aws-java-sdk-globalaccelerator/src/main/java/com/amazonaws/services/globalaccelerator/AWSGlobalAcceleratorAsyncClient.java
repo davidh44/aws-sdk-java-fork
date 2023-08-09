@@ -56,7 +56,7 @@ import java.util.concurrent.ExecutorService;
  * <p>
  * Global Accelerator is a global service that supports endpoints in multiple Amazon Web Services Regions but you must
  * specify the US West (Oregon) Region to create, update, or otherwise work with accelerators. That is, for example,
- * specify <code>--region us-west-2</code> on AWS CLI commands.
+ * specify <code>--region us-west-2</code> on Amazon Web Services CLI commands.
  * </p>
  * </important>
  * <p>

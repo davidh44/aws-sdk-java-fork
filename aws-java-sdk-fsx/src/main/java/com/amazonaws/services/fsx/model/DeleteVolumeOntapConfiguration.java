@@ -46,8 +46,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume"> Deleting
-     * a SnapLock volume </a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     * volume</a>.
      * </p>
      */
     private Boolean bypassSnaplockEnterpriseRetention;
@@ -165,8 +165,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume"> Deleting
-     * a SnapLock volume </a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     * volume</a>.
      * </p>
      * 
      * @param bypassSnaplockEnterpriseRetention
@@ -176,8 +176,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      *        with unexpired WORM files. The default value is <code>false</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume">
-     *        Deleting a SnapLock volume </a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     *        volume</a>.
      */
 
     public void setBypassSnaplockEnterpriseRetention(Boolean bypassSnaplockEnterpriseRetention) {
@@ -193,8 +193,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume"> Deleting
-     * a SnapLock volume </a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     * volume</a>.
      * </p>
      * 
      * @return Setting this to <code>true</code> allows a SnapLock administrator to delete an FSx for ONTAP SnapLock
@@ -203,8 +203,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      *         with unexpired WORM files. The default value is <code>false</code>. </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume">
-     *         Deleting a SnapLock volume </a>.
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     *         volume</a>.
      */
 
     public Boolean getBypassSnaplockEnterpriseRetention() {
@@ -220,8 +220,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume"> Deleting
-     * a SnapLock volume </a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     * volume</a>.
      * </p>
      * 
      * @param bypassSnaplockEnterpriseRetention
@@ -231,8 +231,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      *        with unexpired WORM files. The default value is <code>false</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume">
-     *        Deleting a SnapLock volume </a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     *        volume</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -250,8 +250,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume"> Deleting
-     * a SnapLock volume </a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     * volume</a>.
      * </p>
      * 
      * @return Setting this to <code>true</code> allows a SnapLock administrator to delete an FSx for ONTAP SnapLock
@@ -260,8 +260,8 @@ public class DeleteVolumeOntapConfiguration implements Serializable, Cloneable, 
      *         with unexpired WORM files. The default value is <code>false</code>. </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#snaplock-delete-volume">
-     *         Deleting a SnapLock volume </a>.
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-delete-volume.html"> Deleting a SnapLock
+     *         volume</a>.
      */
 
     public Boolean isBypassSnaplockEnterpriseRetention() {

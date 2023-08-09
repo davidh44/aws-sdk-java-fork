@@ -56,7 +56,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      */
@@ -233,7 +233,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -245,7 +245,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      *        value is <code>DISABLED</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *        >Privileged delete</a>.
      * @see PrivilegedDelete
      */
@@ -263,7 +263,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -274,7 +274,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      *         value is <code>DISABLED</code>. </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *         >Privileged delete</a>.
      * @see PrivilegedDelete
      */
@@ -292,7 +292,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -304,7 +304,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      *        value is <code>DISABLED</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *        >Privileged delete</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PrivilegedDelete
@@ -324,7 +324,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete">Privileged
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete">Privileged
      * delete</a>.
      * </p>
      * 
@@ -336,7 +336,7 @@ public class UpdateSnaplockConfiguration implements Serializable, Cloneable, Str
      *        value is <code>DISABLED</code>. </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html#privileged-delete"
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/snaplock-enterprise.html#privileged-delete"
      *        >Privileged delete</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PrivilegedDelete

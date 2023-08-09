@@ -119,6 +119,8 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      */
     private UpdateFileSystemOpenZFSConfiguration openZFSConfiguration;
 
+    private String storageType;
+
     /**
      * <p>
      * The ID of the file system that you are updating.
@@ -706,6 +708,46 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * @param storageType
+     * @see StorageType
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * @return
+     * @see StorageType
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * @param storageType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StorageType
+     */
+
+    public UpdateFileSystemRequest withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
+     * @param storageType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StorageType
+     */
+
+    public UpdateFileSystemRequest withStorageType(StorageType storageType) {
+        this.storageType = storageType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -730,7 +772,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         if (getOntapConfiguration() != null)
             sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
         if (getOpenZFSConfiguration() != null)
-            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -773,6 +817,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -788,6 +836,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
         hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 

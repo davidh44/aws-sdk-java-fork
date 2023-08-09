@@ -95,7 +95,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
     /**
      * <p>
      * Cancels an existing Amazon FSx for Lustre data repository task if that task is in either the <code>PENDING</code>
-     * or <code>EXECUTING</code> state. When you cancel a task, Amazon FSx does the following.
+     * or <code>EXECUTING</code> state. When you cancel am export task, Amazon FSx does the following.
      * </p>
      * <ul>
      * <li>
@@ -105,7 +105,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
-     * FSx continues to export any files that are "in-flight" when the cancel operation is received.
+     * FSx continues to export any files that are in-flight when the cancel operation is received.
      * </p>
      * </li>
      * <li>
@@ -114,6 +114,10 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For a release task, Amazon FSx will stop releasing files upon cancellation. Any files that have already been
+     * released will remain in the released state.
+     * </p>
      * 
      * @param cancelDataRepositoryTaskRequest
      *        Cancels a data repository task.
@@ -127,7 +131,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
     /**
      * <p>
      * Cancels an existing Amazon FSx for Lustre data repository task if that task is in either the <code>PENDING</code>
-     * or <code>EXECUTING</code> state. When you cancel a task, Amazon FSx does the following.
+     * or <code>EXECUTING</code> state. When you cancel am export task, Amazon FSx does the following.
      * </p>
      * <ul>
      * <li>
@@ -137,7 +141,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
-     * FSx continues to export any files that are "in-flight" when the cancel operation is received.
+     * FSx continues to export any files that are in-flight when the cancel operation is received.
      * </p>
      * </li>
      * <li>
@@ -146,6 +150,10 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For a release task, Amazon FSx will stop releasing files upon cancellation. Any files that have already been
+     * released will remain in the released state.
+     * </p>
      * 
      * @param cancelDataRepositoryTaskRequest
      *        Cancels a data repository task.
@@ -516,12 +524,22 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for Lustre data repository task. You use data repository tasks to perform bulk operations
-     * between your Amazon FSx file system and its linked data repositories. An example of a data repository task is
-     * exporting any data and metadata changes, including POSIX metadata, to files, directories, and symbolic links
-     * (symlinks) from your FSx file system to a linked data repository. A <code>CreateDataRepositoryTask</code>
-     * operation will fail if a data repository is not linked to the FSx file system. To learn more about data
-     * repository tasks, see <a
+     * Creates an Amazon FSx for Lustre data repository task. A <code>CreateDataRepositoryTask</code> operation will
+     * fail if a data repository is not linked to the FSx file system.
+     * </p>
+     * <p>
+     * You use import and export data repository tasks to perform bulk operations between your FSx for Lustre file
+     * system and its linked data repositories. An example of a data repository task is exporting any data and metadata
+     * changes, including POSIX metadata, to files, directories, and symbolic links (symlinks) from your FSx file system
+     * to a linked data repository.
+     * </p>
+     * <p>
+     * You use release data repository tasks to release data from your file system for files that are archived to S3.
+     * The metadata of released files remains on the file system so users or applications can still access released
+     * files by reading the files again, which will restore data from Amazon S3 to the FSx for Lustre file system.
+     * </p>
+     * <p>
+     * To learn more about data repository tasks, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Data Repository Tasks</a>.
      * To learn more about linking a data repository to your file system, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
@@ -538,12 +556,22 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for Lustre data repository task. You use data repository tasks to perform bulk operations
-     * between your Amazon FSx file system and its linked data repositories. An example of a data repository task is
-     * exporting any data and metadata changes, including POSIX metadata, to files, directories, and symbolic links
-     * (symlinks) from your FSx file system to a linked data repository. A <code>CreateDataRepositoryTask</code>
-     * operation will fail if a data repository is not linked to the FSx file system. To learn more about data
-     * repository tasks, see <a
+     * Creates an Amazon FSx for Lustre data repository task. A <code>CreateDataRepositoryTask</code> operation will
+     * fail if a data repository is not linked to the FSx file system.
+     * </p>
+     * <p>
+     * You use import and export data repository tasks to perform bulk operations between your FSx for Lustre file
+     * system and its linked data repositories. An example of a data repository task is exporting any data and metadata
+     * changes, including POSIX metadata, to files, directories, and symbolic links (symlinks) from your FSx file system
+     * to a linked data repository.
+     * </p>
+     * <p>
+     * You use release data repository tasks to release data from your file system for files that are archived to S3.
+     * The metadata of released files remains on the file system so users or applications can still access released
+     * files by reading the files again, which will restore data from Amazon S3 to the FSx for Lustre file system.
+     * </p>
+     * <p>
+     * To learn more about data repository tasks, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Data Repository Tasks</a>.
      * To learn more about linking a data repository to your file system, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
@@ -2440,7 +2468,17 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
+     * <code>StorageType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DiskIopsConfiguration</code>
      * </p>
      * </li>
      * <li>
@@ -2635,7 +2673,17 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
+     * <code>StorageType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DiskIopsConfiguration</code>
      * </p>
      * </li>
      * <li>
