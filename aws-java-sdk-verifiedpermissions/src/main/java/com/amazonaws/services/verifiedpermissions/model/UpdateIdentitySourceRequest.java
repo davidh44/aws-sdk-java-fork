@@ -286,7 +286,7 @@ public class UpdateIdentitySourceRequest extends com.amazonaws.AmazonWebServiceR
         if (getUpdateConfiguration() != null)
             sb.append("UpdateConfiguration: ").append(getUpdateConfiguration()).append(",");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append(getPrincipalEntityType());
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

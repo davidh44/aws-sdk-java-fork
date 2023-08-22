@@ -2569,10 +2569,29 @@ public class AmazonVerifiedPermissionsClient extends AmazonWebServiceClient impl
     /**
      * <p>
      * Makes an authorization decision about a service request described in the parameters. The principal in this
-     * request comes from an external identity source. The information in the parameters can also define additional
-     * context that Verified Permissions can include in the evaluation. The request is evaluated against all matching
-     * policies in the specified policy store. The result of the decision is either <code>Allow</code> or
-     * <code>Deny</code>, along with a list of the policies that resulted in the decision.
+     * request comes from an external identity source in the form of an identity token formatted as a <a
+     * href="https://wikipedia.org/wiki/JSON_Web_Token">JSON web token (JWT)</a>. The information in the parameters can
+     * also define additional context that Verified Permissions can include in the evaluation. The request is evaluated
+     * against all matching policies in the specified policy store. The result of the decision is either
+     * <code>Allow</code> or <code>Deny</code>, along with a list of the policies that resulted in the decision.
+     * </p>
+     * <important>
+     * <p>
+     * If you specify the <code>identityToken</code> parameter, then this operation derives the principal from that
+     * token. You must not also include that principal in the <code>entities</code> parameter or the operation fails and
+     * reports a conflict between the two entity sources.
+     * </p>
+     * <p>
+     * If you provide only an <code>accessToken</code>, then you can include the entity as part of the
+     * <code>entities</code> parameter to provide additional attributes.
+     * </p>
+     * </important>
+     * <p>
+     * At this time, Verified Permissions accepts tokens from only Amazon Cognito.
+     * </p>
+     * <p>
+     * Verified Permissions validates each token that is specified in a request by checking its expiration date and its
+     * signature.
      * </p>
      * <important>
      * <p>
@@ -3723,11 +3742,62 @@ public class AmazonVerifiedPermissionsClient extends AmazonWebServiceClient impl
      * >UpdatePolicyTemplate</a>.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * If policy validation is enabled in the policy store, then updating a static policy causes Verified Permissions to
      * validate the policy against the schema in the policy store. If the updated static policy doesn't pass validation,
      * the operation fails and the update isn't stored.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When you edit a static policy, You can change only certain elements of a static policy:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The action referenced by the policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A condition clause, such as when and unless.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't change these elements of a static policy:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Changing a policy from a static policy to a template-linked policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Changing the effect of a static policy from permit or forbid.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The principal referenced by a static policy.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The resource referenced by a static policy.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * To update a template-linked policy, you must update the template instead.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param updatePolicyRequest

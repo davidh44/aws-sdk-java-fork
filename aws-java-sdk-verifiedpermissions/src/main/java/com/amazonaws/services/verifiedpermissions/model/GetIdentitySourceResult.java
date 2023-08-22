@@ -323,7 +323,7 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append(getPrincipalEntityType());
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

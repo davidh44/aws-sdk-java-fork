@@ -1,3 +1,20 @@
+# __1.12.535__ __2023-08-22__
+## __AWS Cost Explorer Service__
+  - ### Features
+    - This release adds the LastUpdatedDate and LastUsedDate timestamps to help you manage your cost allocation tags.
+
+## __AWS Global Accelerator__
+  - ### Features
+    - Global Accelerator now supports Client Ip Preservation for Network Load Balancer endpoints.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Adding parameters to CreateCustomDbEngineVersion reserved for future use.
+
+## __Amazon Verified Permissions__
+  - ### Features
+    - Documentation updates for Amazon Verified Permissions. Increases max results per page for ListPolicyStores, ListPolicies, and ListPolicyTemplates APIs from 20 to 50.
+
 # __1.12.534__ __2023-08-21__
 ## __AWS Cloud9__
   - ### Features

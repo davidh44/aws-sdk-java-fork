@@ -100,7 +100,7 @@ public class IdentitySourceFilter implements Serializable, Cloneable, Structured
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append(getPrincipalEntityType());
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

@@ -95,7 +95,7 @@ public class StaticPolicyDefinitionItem implements Serializable, Cloneable, Stru
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

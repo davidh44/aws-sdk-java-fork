@@ -141,9 +141,9 @@ public class StaticPolicyDefinitionDetail implements Serializable, Cloneable, St
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getStatement() != null)
-            sb.append("Statement: ").append(getStatement());
+            sb.append("Statement: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

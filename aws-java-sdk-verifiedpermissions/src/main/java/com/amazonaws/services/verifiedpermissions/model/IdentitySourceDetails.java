@@ -358,7 +358,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getClientIds() != null)
-            sb.append("ClientIds: ").append(getClientIds()).append(",");
+            sb.append("ClientIds: ").append("***Sensitive Data Redacted***").append(",");
         if (getUserPoolArn() != null)
             sb.append("UserPoolArn: ").append(getUserPoolArn()).append(",");
         if (getDiscoveryUrl() != null)

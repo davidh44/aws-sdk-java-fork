@@ -223,7 +223,7 @@ public class GetSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getSchema() != null)
-            sb.append("Schema: ").append(getSchema()).append(",");
+            sb.append("Schema: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)

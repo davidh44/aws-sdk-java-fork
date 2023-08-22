@@ -139,6 +139,18 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
     private String manifest;
 
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private String sourceCustomDbEngineVersionIdentifier;
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private Boolean useAwsProvidedLatestImage;
 
     /**
      * <p>
@@ -897,6 +909,98 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param sourceCustomDbEngineVersionIdentifier
+     *        Reserved for future use.
+     */
+
+    public void setSourceCustomDbEngineVersionIdentifier(String sourceCustomDbEngineVersionIdentifier) {
+        this.sourceCustomDbEngineVersionIdentifier = sourceCustomDbEngineVersionIdentifier;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public String getSourceCustomDbEngineVersionIdentifier() {
+        return this.sourceCustomDbEngineVersionIdentifier;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param sourceCustomDbEngineVersionIdentifier
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCustomDBEngineVersionRequest withSourceCustomDbEngineVersionIdentifier(String sourceCustomDbEngineVersionIdentifier) {
+        setSourceCustomDbEngineVersionIdentifier(sourceCustomDbEngineVersionIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param useAwsProvidedLatestImage
+     *        Reserved for future use.
+     */
+
+    public void setUseAwsProvidedLatestImage(Boolean useAwsProvidedLatestImage) {
+        this.useAwsProvidedLatestImage = useAwsProvidedLatestImage;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public Boolean getUseAwsProvidedLatestImage() {
+        return this.useAwsProvidedLatestImage;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param useAwsProvidedLatestImage
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCustomDBEngineVersionRequest withUseAwsProvidedLatestImage(Boolean useAwsProvidedLatestImage) {
+        setUseAwsProvidedLatestImage(useAwsProvidedLatestImage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public Boolean isUseAwsProvidedLatestImage() {
+        return this.useAwsProvidedLatestImage;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -925,7 +1029,11 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
         if (getManifest() != null)
             sb.append("Manifest: ").append(getManifest()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getSourceCustomDbEngineVersionIdentifier() != null)
+            sb.append("SourceCustomDbEngineVersionIdentifier: ").append(getSourceCustomDbEngineVersionIdentifier()).append(",");
+        if (getUseAwsProvidedLatestImage() != null)
+            sb.append("UseAwsProvidedLatestImage: ").append(getUseAwsProvidedLatestImage());
         sb.append("}");
         return sb.toString();
     }
@@ -978,6 +1086,15 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getSourceCustomDbEngineVersionIdentifier() == null ^ this.getSourceCustomDbEngineVersionIdentifier() == null)
+            return false;
+        if (other.getSourceCustomDbEngineVersionIdentifier() != null
+                && other.getSourceCustomDbEngineVersionIdentifier().equals(this.getSourceCustomDbEngineVersionIdentifier()) == false)
+            return false;
+        if (other.getUseAwsProvidedLatestImage() == null ^ this.getUseAwsProvidedLatestImage() == null)
+            return false;
+        if (other.getUseAwsProvidedLatestImage() != null && other.getUseAwsProvidedLatestImage().equals(this.getUseAwsProvidedLatestImage()) == false)
+            return false;
         return true;
     }
 
@@ -995,6 +1112,8 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getManifest() == null) ? 0 : getManifest().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getSourceCustomDbEngineVersionIdentifier() == null) ? 0 : getSourceCustomDbEngineVersionIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getUseAwsProvidedLatestImage() == null) ? 0 : getUseAwsProvidedLatestImage().hashCode());
         return hashCode;
     }
 

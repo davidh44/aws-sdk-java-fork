@@ -228,7 +228,7 @@ public class CognitoUserPoolConfiguration implements Serializable, Cloneable, St
         if (getUserPoolArn() != null)
             sb.append("UserPoolArn: ").append(getUserPoolArn()).append(",");
         if (getClientIds() != null)
-            sb.append("ClientIds: ").append(getClientIds());
+            sb.append("ClientIds: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

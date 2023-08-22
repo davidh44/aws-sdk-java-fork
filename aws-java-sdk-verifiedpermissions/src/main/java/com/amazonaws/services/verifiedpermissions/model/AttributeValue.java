@@ -543,13 +543,13 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getBoolean() != null)
-            sb.append("Boolean: ").append(getBoolean()).append(",");
+            sb.append("Boolean: ").append("***Sensitive Data Redacted***").append(",");
         if (getEntityIdentifier() != null)
             sb.append("EntityIdentifier: ").append(getEntityIdentifier()).append(",");
         if (getLong() != null)
-            sb.append("Long: ").append(getLong()).append(",");
+            sb.append("Long: ").append("***Sensitive Data Redacted***").append(",");
         if (getString() != null)
-            sb.append("String: ").append(getString()).append(",");
+            sb.append("String: ").append("***Sensitive Data Redacted***").append(",");
         if (getSet() != null)
             sb.append("Set: ").append(getSet()).append(",");
         if (getRecord() != null)

@@ -107,7 +107,7 @@ public class SchemaDefinition implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCedarJson() != null)
-            sb.append("CedarJson: ").append(getCedarJson());
+            sb.append("CedarJson: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

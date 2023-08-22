@@ -476,9 +476,9 @@ public class UpdatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
         if (getPolicyTemplateId() != null)
             sb.append("PolicyTemplateId: ").append(getPolicyTemplateId()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getStatement() != null)
-            sb.append("Statement: ").append(getStatement());
+            sb.append("Statement: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

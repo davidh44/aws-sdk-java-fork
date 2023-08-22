@@ -333,7 +333,7 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append(getPrincipalEntityType());
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

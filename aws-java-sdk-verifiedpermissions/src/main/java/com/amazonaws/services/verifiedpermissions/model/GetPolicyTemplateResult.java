@@ -317,9 +317,9 @@ public class GetPolicyTemplateResult extends com.amazonaws.AmazonWebServiceResul
         if (getPolicyTemplateId() != null)
             sb.append("PolicyTemplateId: ").append(getPolicyTemplateId()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getStatement() != null)
-            sb.append("Statement: ").append(getStatement()).append(",");
+            sb.append("Statement: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)

@@ -1500,7 +1500,7 @@ public class AWSCostExplorerClient extends AmazonWebServiceClient implements AWS
     /**
      * <p>
      * Retrieves the details for a Savings Plan recommendation. These details include the hourly data-points that
-     * construct the new cost, coverage, and utilization charts.
+     * construct the cost, coverage, and utilization charts.
      * </p>
      * 
      * @param getSavingsPlanPurchaseRecommendationDetailsRequest

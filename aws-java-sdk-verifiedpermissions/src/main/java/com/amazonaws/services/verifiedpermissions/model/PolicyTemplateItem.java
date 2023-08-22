@@ -281,7 +281,7 @@ public class PolicyTemplateItem implements Serializable, Cloneable, StructuredPo
         if (getPolicyTemplateId() != null)
             sb.append("PolicyTemplateId: ").append(getPolicyTemplateId()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)

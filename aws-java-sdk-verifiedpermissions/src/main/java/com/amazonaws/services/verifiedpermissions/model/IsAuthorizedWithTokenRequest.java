@@ -36,7 +36,7 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * or an <code>IdentityToken</code>, or both.
      * </p>
      */
     private String identityToken;
@@ -44,7 +44,7 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * , or an <code>IdentityToken</code>, or both.
      * </p>
      */
     private String accessToken;
@@ -70,14 +70,26 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     private ContextDefinition context;
     /**
      * <p>
-     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
-     * examine when evaluating the policies.
+     * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
+     * evaluating the policies.
      * </p>
      * <note>
      * <p>
-     * You can include only principal and resource entities in this parameter; you can't include actions. You must
-     * specify actions in the schema.
+     * You can include only resource and action entities in this parameter; you can't include principals.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     * <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      */
     private EntitiesDefinition entities;
@@ -132,13 +144,13 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * or an <code>IdentityToken</code>, or both.
      * </p>
      * 
      * @param identityToken
      *        Specifies an identity token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code> or an <code>IdentityToken</code>, but not both.
+     *        <code>AccessToken</code> or an <code>IdentityToken</code>, or both.
      */
 
     public void setIdentityToken(String identityToken) {
@@ -149,12 +161,12 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * or an <code>IdentityToken</code>, or both.
      * </p>
      * 
      * @return Specifies an identity token for the principal to be authorized. This token is provided to you by the
      *         identity provider (IdP) associated with the specified identity source. You must specify either an
-     *         <code>AccessToken</code> or an <code>IdentityToken</code>, but not both.
+     *         <code>AccessToken</code> or an <code>IdentityToken</code>, or both.
      */
 
     public String getIdentityToken() {
@@ -165,13 +177,13 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * or an <code>IdentityToken</code>, or both.
      * </p>
      * 
      * @param identityToken
      *        Specifies an identity token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code> or an <code>IdentityToken</code>, but not both.
+     *        <code>AccessToken</code> or an <code>IdentityToken</code>, or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,13 +196,13 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * , or an <code>IdentityToken</code>, or both.
      * </p>
      * 
      * @param accessToken
      *        Specifies an access token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code> or an <code>IdentityToken</code>, but not both.
+     *        <code>AccessToken</code>, or an <code>IdentityToken</code>, or both.
      */
 
     public void setAccessToken(String accessToken) {
@@ -201,12 +213,12 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * , or an <code>IdentityToken</code>, or both.
      * </p>
      * 
      * @return Specifies an access token for the principal to be authorized. This token is provided to you by the
      *         identity provider (IdP) associated with the specified identity source. You must specify either an
-     *         <code>AccessToken</code> or an <code>IdentityToken</code>, but not both.
+     *         <code>AccessToken</code>, or an <code>IdentityToken</code>, or both.
      */
 
     public String getAccessToken() {
@@ -217,13 +229,13 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
      * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, but not both.
+     * , or an <code>IdentityToken</code>, or both.
      * </p>
      * 
      * @param accessToken
      *        Specifies an access token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code> or an <code>IdentityToken</code>, but not both.
+     *        <code>AccessToken</code>, or an <code>IdentityToken</code>, or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -366,23 +378,47 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
-     * examine when evaluating the policies.
+     * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
+     * evaluating the policies.
      * </p>
      * <note>
      * <p>
-     * You can include only principal and resource entities in this parameter; you can't include actions. You must
-     * specify actions in the schema.
+     * You can include only resource and action entities in this parameter; you can't include principals.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     * <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param entities
-     *        Specifies the list of resources and principals and their associated attributes that Verified Permissions
-     *        can examine when evaluating the policies. </p> <note>
+     *        Specifies the list of resources and their associated attributes that Verified Permissions can examine when
+     *        evaluating the policies. </p> <note>
      *        <p>
-     *        You can include only principal and resource entities in this parameter; you can't include actions. You
-     *        must specify actions in the schema.
+     *        You can include only resource and action entities in this parameter; you can't include principals.
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     *        <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
      */
 
     public void setEntities(EntitiesDefinition entities) {
@@ -391,22 +427,46 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
-     * examine when evaluating the policies.
+     * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
+     * evaluating the policies.
      * </p>
      * <note>
      * <p>
-     * You can include only principal and resource entities in this parameter; you can't include actions. You must
-     * specify actions in the schema.
+     * You can include only resource and action entities in this parameter; you can't include principals.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     * <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
-     * @return Specifies the list of resources and principals and their associated attributes that Verified Permissions
-     *         can examine when evaluating the policies. </p> <note>
+     * @return Specifies the list of resources and their associated attributes that Verified Permissions can examine
+     *         when evaluating the policies. </p> <note>
      *         <p>
-     *         You can include only principal and resource entities in this parameter; you can't include actions. You
-     *         must specify actions in the schema.
+     *         You can include only resource and action entities in this parameter; you can't include principals.
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     *         <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
      */
 
     public EntitiesDefinition getEntities() {
@@ -415,23 +475,47 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Specifies the list of resources and principals and their associated attributes that Verified Permissions can
-     * examine when evaluating the policies.
+     * Specifies the list of resources and their associated attributes that Verified Permissions can examine when
+     * evaluating the policies.
      * </p>
      * <note>
      * <p>
-     * You can include only principal and resource entities in this parameter; you can't include actions. You must
-     * specify actions in the schema.
+     * You can include only resource and action entities in this parameter; you can't include principals.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     * <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param entities
-     *        Specifies the list of resources and principals and their associated attributes that Verified Permissions
-     *        can examine when evaluating the policies. </p> <note>
+     *        Specifies the list of resources and their associated attributes that Verified Permissions can examine when
+     *        evaluating the policies. </p> <note>
      *        <p>
-     *        You can include only principal and resource entities in this parameter; you can't include actions. You
-     *        must specify actions in the schema.
+     *        You can include only resource and action entities in this parameter; you can't include principals.
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>IsAuthorizedWithToken</code> operation takes principal attributes from <b> <i>only</i> </b> the
+     *        <code>identityToken</code> or <code>accessToken</code> passed to the operation.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For action entities, you can include only their <code>Identifier</code> and <code>EntityType</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -455,9 +539,9 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getIdentityToken() != null)
-            sb.append("IdentityToken: ").append(getIdentityToken()).append(",");
+            sb.append("IdentityToken: ").append("***Sensitive Data Redacted***").append(",");
         if (getAccessToken() != null)
-            sb.append("AccessToken: ").append(getAccessToken()).append(",");
+            sb.append("AccessToken: ").append("***Sensitive Data Redacted***").append(",");
         if (getAction() != null)
             sb.append("Action: ").append(getAction()).append(",");
         if (getResource() != null)

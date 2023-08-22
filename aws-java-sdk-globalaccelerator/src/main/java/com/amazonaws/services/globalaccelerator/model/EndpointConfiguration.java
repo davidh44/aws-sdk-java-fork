@@ -62,7 +62,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are
-     * Application Load Balancers and Amazon EC2 instances.
+     * Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups. IMPORTANT: You
+     * cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      * </p>
      * <p>
      * For more information, see <a
@@ -229,7 +230,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are
-     * Application Load Balancers and Amazon EC2 instances.
+     * Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups. IMPORTANT: You
+     * cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      * </p>
      * <p>
      * For more information, see <a
@@ -246,7 +248,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *        </p>
      *        <p>
      *        Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that
-     *        are Application Load Balancers and Amazon EC2 instances.
+     *        are Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups.
+     *        IMPORTANT: You cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -269,7 +272,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are
-     * Application Load Balancers and Amazon EC2 instances.
+     * Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups. IMPORTANT: You
+     * cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      * </p>
      * <p>
      * For more information, see <a
@@ -285,7 +289,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *         </p>
      *         <p>
      *         Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that
-     *         are Application Load Balancers and Amazon EC2 instances.
+     *         are Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups.
+     *         IMPORTANT: You cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -308,7 +313,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are
-     * Application Load Balancers and Amazon EC2 instances.
+     * Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups. IMPORTANT: You
+     * cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      * </p>
      * <p>
      * For more information, see <a
@@ -325,7 +331,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *        </p>
      *        <p>
      *        Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that
-     *        are Application Load Balancers and Amazon EC2 instances.
+     *        are Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups.
+     *        IMPORTANT: You cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -350,7 +357,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <p>
      * Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that are
-     * Application Load Balancers and Amazon EC2 instances.
+     * Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups. IMPORTANT: You
+     * cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      * </p>
      * <p>
      * For more information, see <a
@@ -366,7 +374,8 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *         </p>
      *         <p>
      *         Client IP address preservation is supported, in specific Amazon Web Services Regions, for endpoints that
-     *         are Application Load Balancers and Amazon EC2 instances.
+     *         are Application Load Balancers, Amazon EC2 instances, and Network Load Balancers with Security Groups.
+     *         IMPORTANT: You cannot use client IP address preservation with Network Load Balancers with TLS listeners.
      *         </p>
      *         <p>
      *         For more information, see <a

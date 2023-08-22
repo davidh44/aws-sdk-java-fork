@@ -253,7 +253,7 @@ public class PutSchemaResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getNamespaces() != null)
-            sb.append("Namespaces: ").append(getNamespaces()).append(",");
+            sb.append("Namespaces: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getLastUpdatedDate() != null)

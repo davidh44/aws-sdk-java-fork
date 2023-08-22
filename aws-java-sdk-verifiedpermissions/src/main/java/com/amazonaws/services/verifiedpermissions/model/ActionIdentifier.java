@@ -143,9 +143,9 @@ public class ActionIdentifier implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getActionType() != null)
-            sb.append("ActionType: ").append(getActionType()).append(",");
+            sb.append("ActionType: ").append("***Sensitive Data Redacted***").append(",");
         if (getActionId() != null)
-            sb.append("ActionId: ").append(getActionId());
+            sb.append("ActionId: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

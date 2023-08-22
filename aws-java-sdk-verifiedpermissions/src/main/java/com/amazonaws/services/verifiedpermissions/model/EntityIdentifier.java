@@ -182,9 +182,9 @@ public class EntityIdentifier implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEntityType() != null)
-            sb.append("EntityType: ").append(getEntityType()).append(",");
+            sb.append("EntityType: ").append("***Sensitive Data Redacted***").append(",");
         if (getEntityId() != null)
-            sb.append("EntityId: ").append(getEntityId());
+            sb.append("EntityId: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

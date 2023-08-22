@@ -298,7 +298,7 @@ public class IsAuthorizedResult extends com.amazonaws.AmazonWebServiceResult<com
         if (getDeterminingPolicies() != null)
             sb.append("DeterminingPolicies: ").append(getDeterminingPolicies()).append(",");
         if (getErrors() != null)
-            sb.append("Errors: ").append(getErrors());
+            sb.append("Errors: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

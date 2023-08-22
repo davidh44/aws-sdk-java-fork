@@ -377,7 +377,7 @@ public class CreateIdentitySourceRequest extends com.amazonaws.AmazonWebServiceR
         if (getConfiguration() != null)
             sb.append("Configuration: ").append(getConfiguration()).append(",");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append(getPrincipalEntityType());
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
