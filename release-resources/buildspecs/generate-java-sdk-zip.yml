@@ -12,7 +12,7 @@ phases:
 
   build:
     commands:
-    - mvn -s resources/release-settings.xml compile
+    - mvn -s release-resources/buildspecs/resources/release-settings.xml compile
 artifacts:
   files:
     - aws-java-sdk-osgi/target/aws-java-sdk.zip
