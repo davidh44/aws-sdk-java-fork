@@ -595,4 +595,10 @@
         </build>
     </profile>
   </profiles>
+  <repositories>
+        <repository>
+            <id>amazon-shared</id>
+            <url>https://amazon-149122183214.d.codeartifact.us-west-2.amazonaws.com/maven/shared/</url>
+        </repository>
+    </repositories>  
 </project>
