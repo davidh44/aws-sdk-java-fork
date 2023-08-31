@@ -20,5 +20,12 @@
             </repositories>
         </profile>
     </profiles>
-
+    <mirrors>
+        <mirror>
+            <id>amazon-shared</id>
+            <name>amazon-shared</name>
+            <url>https://amazon-149122183214.d.codeartifact.us-west-2.amazonaws.com/maven/shared/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
 </settings>
