@@ -9,10 +9,12 @@ phases:
   pre_build:
     commands:
     - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain amazon --domain-owner 149122183214 --region us-west-2 --query authorizationToken --output text`
+    - echo `print settings.xml`
+    - cat ~/.m2/settings.xml
 
   build:
     commands:
-      - mvn clean package -s release-resources/buildspecs/resources/generate-zip-settings.xml -pl :aws-java-sdk-osgi -Ppublishing,staging -Dfindbugs.skip -DskipTests -Dcheckstyle.skip -DadditionalJOption=-Xdoclint:none -DadditionalJOption=--allow-script-in-comments  -DuseAgent=false -Dzip.generation.additional.files.sources=/var/sdk/additional-files-to-copy -e
+      - mvn clean package -s release-resources/buildspecs/resources/generate-zip-settings.xml -Ppublishing,staging -Dfindbugs.skip -DskipTests -Dcheckstyle.skip -DadditionalJOption=-Xdoclint:none -DadditionalJOption=--allow-script-in-comments  -DuseAgent=false -Dzip.generation.additional.files.sources=/var/sdk/additional-files-to-copy -e
 artifacts:
   files:
     - aws-java-sdk-osgi/target/aws-java-sdk.zip
